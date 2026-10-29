@@ -83,6 +83,17 @@ then `Past paper practice|My own topic`, then `⚙️ Change year / topic`).
 - Wrong → `❌ Not quite. <where it went wrong, kindly>. Correct answer: ...`
   then an easier problem on the same idea.
 - One problem per message, numbered; bot language: English.
+- `/start` keyboard removal: pass `-` as the buttons arg to send.py.
+
+### English bot (@Asteraenglish_bot)
+Token in `.env` as `TELEGRAM_BOT_TOKEN_ENGLISH`; run everything with `BOT=english`.
+State `relay/state_english.json`, codes `relay/.codes_english`.
+Topic keyboards (send.py arg):
+- Year 1–6: `"Phonics & spelling|Grammar & punctuation;Reading comprehension|Creative writing;Past paper practice|My own topic;⚙️ Change year / topic"`
+- Year 7–9: `"Grammar & punctuation|Vocabulary & spelling;Reading comprehension|Creative writing;Poetry analysis|Shakespeare & drama;Past paper practice|My own topic;⚙️ Change year / topic"`
+- Year 10–11: `"GCSE Language: reading & analysis|GCSE Language: writing;GCSE Literature: Shakespeare & novels|GCSE Literature: poetry & drama;Past paper practice|My own topic;⚙️ Change year / topic"`
+- Year 12–13: `"A-level Language: analysis|A-level Literature: prose & drama;A-level: poetry & unseen texts|A-level: essay writing;Past paper practice|My own topic;⚙️ Change year / topic"`
+Lesson "problems" are short tasks (e.g. correct the sentence, identify the technique, write a 2-sentence opening); judge answers kindly and adapt difficulty the same way.
 
 ## For a new subject
 Copy the flow above, swap the topic lists per year for that subject
