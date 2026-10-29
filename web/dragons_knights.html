@@ -1,0 +1,1162 @@
+<title>Пепел и Сталь</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Alegreya+Sans:wght@400;500;700;800&display=swap">
+<style>
+  /* Layout: одна колонка «за столом» — шапка со счётом баз, очередь ходов, поле 7×9, карточка героя с кнопками.
+     Единая тёмная тема: ночное поле боя, геральдические цвета команд. */
+  :root {
+    color-scheme: dark;
+    --night: #10171a;
+    --panel: #18232a;
+    --panel-2: #213039;
+    --line: #2e414c;
+    --text: #ece7da;
+    --muted: #9aa8ae;
+    --gold: #d8b25c;
+    --knight: #5b9cff;
+    --knight-deep: #1d3560;
+    --dragon: #ef5a4c;
+    --dragon-deep: #5c1f1c;
+    --heal: #6fd08c;
+    --plain: #2a3b2f;
+    --plain-2: #2f4334;
+    --forest: #1c4128;
+    --mount: #4b4640;
+    --lake: #1d3f5c;
+    --font-display: "Ruslan Display", "Georgia", serif;
+    --font-ui: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; }
+  body {
+    background: radial-gradient(120% 80% at 50% 0%, #1a2a2c 0%, var(--night) 60%) fixed, var(--night);
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  button { font-family: inherit; }
+  .app {
+    max-width: 540px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-block: 10px 20px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Шапка */
+  .top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; }
+  .base-hp { display: flex; flex-direction: column; gap: 3px; font-variant-numeric: tabular-nums; min-width: 0; }
+  .base-hp.right { text-align: right; align-items: flex-end; }
+  .base-hp .lbl { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .base-hp .num { font-weight: 800; font-size: 1.15rem; }
+  .bar { width: 100%; max-width: 140px; height: 6px; border-radius: 3px; background: var(--panel-2); overflow: hidden; }
+  .bar i { display: block; height: 100%; border-radius: 3px; transition: width 0.4s; }
+  .k .num { color: var(--knight); } .k .bar i { background: var(--knight); }
+  .d .num { color: var(--dragon); } .d .bar i { background: var(--dragon); }
+  .round { text-align: center; }
+  .round .r { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold); line-height: 1; }
+  .round .s { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+  .icon-btn {
+    appearance: none; border: 1px solid var(--line); background: var(--panel); color: var(--text);
+    border-radius: 999px; padding: 4px 10px; font-size: 0.8rem; cursor: pointer; margin-top: 4px;
+  }
+
+  .order { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+  .order span {
+    width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: 15px;
+    border: 2px solid var(--line); background: var(--panel); opacity: 0.9;
+  }
+  .order span.K { border-color: var(--knight); }
+  .order span.D { border-color: var(--dragon); }
+  .order span.done { opacity: 0.35; }
+  .order span.now { box-shadow: 0 0 0 3px var(--gold); opacity: 1; }
+  .order span.dead { filter: grayscale(1); opacity: 0.3; }
+
+  /* Поле */
+  .board-wrap {
+    position: relative;
+    width: min(100%, max(270px, calc((100dvh - 330px) * 0.7778)));
+    max-width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 7 / 9;
+  }
+  .board {
+    position: absolute; inset: 0;
+    display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(9, 1fr);
+    gap: 2px; padding: 2px; border-radius: 10px; background: var(--night);
+    border: 2px solid var(--line);
+    container-type: inline-size;
+  }
+  .cell {
+    position: relative; appearance: none; border: 0; padding: 0; margin: 0; border-radius: 4px;
+    display: grid; place-items: center; cursor: pointer; font-size: 7.5cqw; line-height: 1;
+    background: var(--plain); color: var(--text); overflow: visible; touch-action: manipulation;
+  }
+  .cell:nth-child(odd) { background: var(--plain-2); }
+  .cell.t-forest { background: var(--forest); }
+  .cell.t-mount { background: var(--mount); }
+  .cell.t-lake { background: repeating-linear-gradient(160deg, var(--lake) 0 6px, #22486a 6px 9px); }
+  .cell.t-castle { background: var(--knight-deep); box-shadow: inset 0 0 0 2px var(--knight); }
+  .cell.t-nest { background: var(--dragon-deep); box-shadow: inset 0 0 0 2px var(--dragon); }
+  .cell:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; z-index: 2; }
+  .terr { position: absolute; font-size: 5.5cqw; opacity: 0.55; pointer-events: none; }
+  .chest { position: absolute; font-size: 6cqw; pointer-events: none; animation: bob 2s ease-in-out infinite; }
+  @keyframes bob { 50% { transform: translateY(-8%); } }
+  .basebox { display: flex; flex-direction: column; align-items: center; gap: 1px; pointer-events: none; }
+  .basebox small { font-size: 3.2cqw; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+  .token {
+    position: relative; width: 82%; height: 82%; border-radius: 50%; display: grid; place-items: center;
+    background: var(--night); border: 0.7cqw solid var(--knight); font-size: 6.2cqw; pointer-events: none;
+    box-sizing: border-box;
+  }
+  .token.D { border-color: var(--dragon); }
+  .token .hp { position: absolute; left: 8%; right: 8%; bottom: -6%; height: 1cqw; min-height: 3px; background: var(--panel-2); border-radius: 2px; overflow: hidden; }
+  .token .hp i { display: block; height: 100%; background: var(--heal); }
+  .token.low .hp i { background: var(--dragon); }
+  .token .frz { position: absolute; top: -12%; right: -12%; font-size: 3.6cqw; }
+  .cell.active .token { box-shadow: 0 0 0 0.8cqw var(--gold); animation: pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 1.6cqw rgb(216 178 92 / 0.35); } }
+
+  .cell.hl-move::after {
+    content: ""; position: absolute; width: 30%; height: 30%; border-radius: 50%;
+    background: var(--gold); opacity: 0.85; pointer-events: none;
+  }
+  .cell.hl-move.has-chest::after { width: 100%; height: 100%; border-radius: 4px; background: transparent; box-shadow: inset 0 0 0 2px var(--gold); }
+  .cell.hl-target { box-shadow: inset 0 0 0 3px var(--dragon); animation: tgt 0.9s ease-in-out infinite; }
+  .cell.hl-target.ally { box-shadow: inset 0 0 0 3px var(--gold); }
+  @keyframes tgt { 50% { filter: brightness(1.35); } }
+  .cell.flash { animation: flash 0.6s ease-in-out 3; }
+  @keyframes flash { 50% { filter: brightness(2) saturate(2); } }
+
+  .fx { position: absolute; inset: 0; pointer-events: none; }
+  .fx span {
+    position: absolute; transform: translate(-50%, -50%); font-weight: 800; font-size: 1.15rem;
+    color: var(--dragon); text-shadow: 0 1px 0 #000, 0 0 6px #000; animation: rise 1.1s ease-out forwards;
+    white-space: nowrap;
+  }
+  .fx span.heal { color: var(--heal); }
+  .fx span.miss { color: var(--muted); }
+  .fx span.gold { color: var(--gold); }
+  @keyframes rise { from { opacity: 1; margin-top: 0; } to { opacity: 0; margin-top: -34px; } }
+
+  /* Панель героя */
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .panel.K { border-color: var(--knight-deep); }
+  .panel.D { border-color: var(--dragon-deep); }
+  .hero-row { display: flex; gap: 12px; align-items: center; }
+  .avatar { width: 46px; height: 46px; flex: none; border-radius: 50%; display: grid; place-items: center; font-size: 24px; background: var(--night); border: 3px solid var(--knight); }
+  .avatar.D { border-color: var(--dragon); }
+  .who { min-width: 0; }
+  .who b { font-size: 1.15rem; }
+  .who .pn { color: var(--muted); }
+  .stats { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.92rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .stats b { color: var(--text); }
+  .ability { font-size: 0.92rem; line-height: 1.35; color: var(--muted); }
+  .ability b { color: var(--gold); }
+  .ability .cd { color: var(--text); font-weight: 700; }
+  .acts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .acts button {
+    appearance: none; border: 1px solid var(--line); background: var(--panel-2); color: var(--text);
+    border-radius: 10px; padding: 10px 4px; font-size: 0.9rem; font-weight: 700; cursor: pointer; min-width: 0;
+    overflow-wrap: anywhere; line-height: 1.1;
+  }
+  .acts button.on { background: var(--gold); color: var(--night); border-color: var(--gold); }
+  .acts button.end { background: transparent; border-color: var(--muted); }
+  .acts button:disabled { opacity: 0.35; cursor: default; }
+  .acts button:focus-visible, .big:focus-visible, .seg button:focus-visible, .pick:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .hint { font-size: 0.9rem; color: var(--gold); min-height: 1.2em; }
+  .log { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 3px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; }
+  .log li:first-child { color: var(--text); }
+
+  /* Оверлеи */
+  .overlay {
+    position: fixed; inset: 0; z-index: 20; overflow-y: auto;
+    background: rgb(8 12 14 / 0.88); backdrop-filter: blur(3px);
+    display: flex; align-items: flex-start; justify-content: center;
+    padding-top: max(20px, env(safe-area-inset-top, 0px));
+    padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    box-sizing: border-box;
+  }
+  .overlay.center { align-items: center; }
+  .card {
+    width: 100%; max-width: 480px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;
+  }
+  .card h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; margin: 0; line-height: 1.15; text-wrap: balance; }
+  .card p { margin: 0; line-height: 1.45; color: var(--muted); }
+  .eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .big {
+    appearance: none; border: 0; border-radius: 12px; padding: 14px; font-size: 1.1rem; font-weight: 800;
+    background: var(--gold); color: var(--night); cursor: pointer;
+  }
+  .big.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); font-weight: 700; }
+
+  .title-hero { text-align: center; display: flex; flex-direction: column; gap: 6px; }
+  .title-hero h1 { font-family: var(--font-display); font-weight: 400; font-size: 2.6rem; margin: 0; line-height: 1; }
+  .title-hero h1 .a { color: var(--dragon); }
+  .title-hero h1 .s { color: var(--knight); }
+  .title-hero p { color: var(--muted); margin: 0; }
+
+  .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: var(--night); padding: 4px; border-radius: 12px; }
+  .seg button { appearance: none; border: 0; background: transparent; color: var(--muted); padding: 10px; border-radius: 9px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--panel-2); color: var(--text); }
+  .team { display: flex; flex-direction: column; gap: 8px; }
+  .team h3 { margin: 0; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .team.K h3 { color: var(--knight); }
+  .team.D h3 { color: var(--dragon); }
+  .pick-row { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center; }
+  .pick {
+    appearance: none; display: flex; align-items: center; gap: 10px; text-align: left;
+    border: 2px solid var(--line); background: var(--night); color: var(--text); border-radius: 12px;
+    padding: 8px 10px; cursor: pointer; width: 150px; max-width: 42vw;
+  }
+  .pick .ic { font-size: 22px; }
+  .pick small { display: block; color: var(--muted); font-size: 0.75rem; }
+  .K .pick[aria-pressed="true"] { border-color: var(--knight); }
+  .D .pick[aria-pressed="true"] { border-color: var(--dragon); }
+  .pick[aria-pressed="false"] { opacity: 0.45; }
+  .pick-row input {
+    min-width: 0; width: 100%; box-sizing: border-box; background: var(--night); color: var(--text);
+    border: 1px solid var(--line); border-radius: 10px; padding: 10px; font: 500 1rem var(--font-ui);
+  }
+  .pick-row input:disabled { opacity: 0.35; }
+  .note { font-size: 0.9rem; color: var(--muted); }
+
+  .handoff.K h2 { color: var(--knight); }
+  .handoff.D h2 { color: var(--dragon); }
+  .handoff .player { font-family: var(--font-display); font-size: 2.2rem; line-height: 1.1; color: var(--text); overflow-wrap: anywhere; }
+  .handoff .heroline { display: flex; align-items: center; gap: 12px; }
+
+  .rules h3 { margin: 4px 0 0; font-size: 1rem; color: var(--gold); }
+  .rules ul { margin: 0; padding-left: 20px; color: var(--muted); line-height: 1.45; display: flex; flex-direction: column; gap: 4px; }
+  .rules b { color: var(--text); }
+
+  .dice { z-index: 30; }
+  .die {
+    width: 110px; height: 110px; border-radius: 22px; background: var(--text); color: var(--night);
+    display: grid; place-items: center; font-family: var(--font-display); font-size: 3.6rem;
+    box-shadow: 0 10px 40px rgb(0 0 0 / 0.6);
+  }
+  .die.roll { animation: spin 0.6s ease-out; }
+  .die.crit { background: var(--gold); }
+  .die.miss { background: var(--muted); }
+  @keyframes spin { from { transform: rotate(-200deg) scale(0.6); } to { transform: rotate(0) scale(1); } }
+  .dice-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .dice-wrap .cap { font-weight: 800; font-size: 1.2rem; min-height: 1.4em; }
+
+  .toast {
+    position: fixed; left: 50%; transform: translateX(-50%); z-index: 40;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    width: min(440px, calc(100% - 32px)); box-sizing: border-box;
+    background: var(--panel-2); border: 1px solid var(--gold); color: var(--text);
+    padding: 12px 14px; border-radius: 12px; font-size: 0.95rem; line-height: 1.35;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.5);
+  }
+  .event-list { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.92rem; line-height: 1.4; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01s !important; animation-iteration-count: 1 !important; transition: none !important; }
+  }
+</style>
+
+<div class="app" id="app">
+  <header class="top">
+    <div class="base-hp k">
+      <span class="lbl">🏰 Замок</span>
+      <span class="num" id="hp-castle">20</span>
+      <div class="bar"><i id="bar-castle" style="width:100%"></i></div>
+    </div>
+    <div class="round">
+      <div class="r" id="round">1</div>
+      <div class="s">раунд из 20</div>
+      <button type="button" class="icon-btn" id="rules-btn">Правила</button>
+    </div>
+    <div class="base-hp d right">
+      <span class="lbl">Гнездо 🥚</span>
+      <span class="num" id="hp-nest">20</span>
+      <div class="bar"><i id="bar-nest" style="width:100%"></i></div>
+    </div>
+  </header>
+  <div class="order" id="order" aria-label="Очередь ходов"></div>
+  <div class="board-wrap">
+    <div class="board" id="board"></div>
+    <div class="fx" id="fx"></div>
+  </div>
+  <section class="panel" id="panel"></section>
+</div>
+
+<!-- Подготовка -->
+<div class="overlay" id="setup">
+  <div class="card">
+    <div class="title-hero">
+      <div class="eyebrow">Игра для 4–6 человек на одном телефоне</div>
+      <h1><span class="a">Пепел</span> и <span class="s">Сталь</span></h1>
+      <p>Рыцари защищают замок и идут разбить драконье гнездо. Драконы летят сжечь замок.</p>
+    </div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:6px">Сколько игроков</div>
+      <div class="seg" role="group" aria-label="Количество игроков">
+        <button type="button" id="cnt-4" data-cnt="4">4</button>
+        <button type="button" id="cnt-5" data-cnt="5">5</button>
+        <button type="button" id="cnt-6" data-cnt="6">6</button>
+      </div>
+    </div>
+    <p class="note" id="setup-note"></p>
+    <div class="team K" id="team-K"><h3>Рыцари</h3></div>
+    <div class="team D" id="team-D"><h3>Драконы</h3></div>
+    <button type="button" class="big" id="start-btn">В бой</button>
+    <button type="button" class="big ghost" id="rules-btn-2">Как играть</button>
+  </div>
+</div>
+
+<!-- Передача хода -->
+<div class="overlay center" id="handoff" hidden>
+  <div class="card handoff" id="handoff-card"></div>
+</div>
+
+<!-- Событие раунда -->
+<div class="overlay center" id="event" hidden>
+  <div class="card" id="event-card"></div>
+</div>
+
+<!-- Конец игры -->
+<div class="overlay center" id="over" hidden>
+  <div class="card" id="over-card"></div>
+</div>
+
+<!-- Правила -->
+<div class="overlay" id="rules" hidden>
+  <div class="card rules">
+    <h2>Как играть</h2>
+    <p>Две команды по 2–3 героя. Каждый игрок управляет своим героем. Телефон передаётся по кругу: ходят по очереди, рыцарь, дракон, рыцарь, дракон.</p>
+    <h3>Цель</h3>
+    <ul>
+      <li><b>Рыцари</b> побеждают, если разрушат гнездо драконов 🥚 (20 прочности).</li>
+      <li><b>Драконы</b> побеждают, если сожгут замок 🏰 (20 прочности).</li>
+      <li>Если после 20 раундов обе базы стоят, побеждает команда, у чьей базы больше прочности.</li>
+    </ul>
+    <h3>Ход героя</h3>
+    <ul>
+      <li>За ход можно <b>один раз пойти</b> и <b>один раз действовать</b> (атака или способность), в любом порядке.</li>
+      <li>Ходят и бьют как шахматный король: в 8 сторон. Расстояние считается так же.</li>
+      <li>Рыцари не проходят через горы ⛰️, озёра и врагов. Драконы летают над чем угодно.</li>
+      <li>Рыцарь в лесу 🌲 получает на 1 урона меньше.</li>
+    </ul>
+    <h3>Кубик</h3>
+    <ul>
+      <li>Каждая атака бросает кубик: <b>1</b> промах, <b>2–5</b> обычный удар, <b>6</b> критический, урон ×2.</li>
+      <li>Способности бьют без броска, но потом перезаряжаются 3 хода.</li>
+    </ul>
+    <h3>Поле</h3>
+    <ul>
+      <li>💰 Сундук: встаньте на него и получите зелье, оружие, крылья, свиток или ловушку.</li>
+      <li>Базы стреляют: в конце раунда замок бьёт на 2 каждого дракона рядом (до 2 клеток), гнездо так же бьёт рыцарей.</li>
+      <li>Павший герой пропускает один ход и возвращается у своей базы с полным здоровьем.</li>
+      <li>После каждого раунда тянется карта события: метеорит, землетрясение, ветер, новые сундуки…</li>
+    </ul>
+    <h3>Герои</h3>
+    <ul id="rules-heroes"></ul>
+    <button type="button" class="big" id="rules-close">Понятно</button>
+  </div>
+</div>
+
+<div class="overlay center dice" id="dice" hidden>
+  <div class="dice-wrap">
+    <div class="die" id="die">?</div>
+    <div class="cap" id="die-cap"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(() => {
+  const W = 7, H = 9;
+  const MAP = [
+    "...N...",
+    ".^...^.",
+    "..f.f..",
+    "f..~..f",
+    ".^.~.^.",
+    "f..~..f",
+    "..f.f..",
+    ".^...^.",
+    "...C...",
+  ];
+  const TERR = { ".": "plain", f: "forest", "^": "mount", "~": "lake", N: "nest", C: "castle" };
+  const BASES = { castle: { x: 3, y: 8 }, nest: { x: 3, y: 0 } };
+  const SPAWN = {
+    K: [[2, 8], [4, 8], [3, 7], [2, 7], [4, 7], [1, 8], [5, 8]],
+    D: [[2, 0], [4, 0], [3, 1], [2, 1], [4, 1], [1, 0], [5, 0]],
+  };
+  const DIRS = [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [1, -1], [-1, 1], [-1, -1]];
+  const BASE_MAX = 20, ROUNDS = 20, CD = 3;
+
+  const HEROES = {
+    paladin: { team: "K", name: "Паладин", icon: "🛡️", hp: 12, atk: 3, move: 2, range: 1,
+      ab: "Святой свет", abDesc: "лечит себя и союзников рядом на 4", kind: "self" },
+    archer: { team: "K", name: "Лучница", icon: "🏹", hp: 8, atk: 2, move: 3, range: 3,
+      ab: "Залп", abDesc: "2 урона всем врагам и гнезду в радиусе 2, без броска", kind: "self" },
+    lancer: { team: "K", name: "Копейщик", icon: "⚔️", hp: 10, atk: 3, move: 3, range: 1,
+      ab: "Натиск", abDesc: "рывок по прямой до 4 клеток к врагу и 5 урона", kind: "target" },
+    fire: { team: "D", name: "Огненный", icon: "🔥", hp: 13, atk: 3, move: 3, range: 1,
+      ab: "Пламя", abDesc: "огонь на 3 клетки по прямой: 4 урона, сжигает лес", kind: "target" },
+    ice: { team: "D", name: "Ледяной", icon: "❄️", hp: 11, atk: 2, move: 3, range: 1,
+      ab: "Ледяное дыхание", abDesc: "враг до 2 клеток: 3 урона и пропуск хода", kind: "target" },
+    shadow: { team: "D", name: "Теневой", icon: "🌑", hp: 9, atk: 3, move: 3, range: 1,
+      ab: "Удар из тени", abDesc: "прыжок к врагу до 5 клеток и атака +2", kind: "target" },
+  };
+  const ORDER_K = ["paladin", "archer", "lancer"], ORDER_D = ["fire", "ice", "shadow"];
+
+  const ITEMS = [
+    { n: "Зелье", d: "+5 здоровья", w: 3, f: h => heal(h, 5) },
+    { n: "Точильный камень", d: "+1 к атаке навсегда", w: 2, f: h => { h.atk++; } },
+    { n: "Крылья ветра", d: "+1 к движению навсегда", w: 2, f: h => { h.move++; } },
+    { n: "Древний свиток", d: "способность снова готова", w: 2, f: h => { h.cd = 0; } },
+    { n: "Амулет жизни", d: "+3 к максимуму здоровья и +3 здоровья", w: 2, f: h => { h.maxHp += 3; heal(h, 3); } },
+    { n: "Ловушка!", d: "3 урона", w: 1, f: h => hurt({ hero: h }, 3) },
+  ];
+
+  const EVENTS = [
+    { t: "Сундуки с неба", d: "На поле падают два новых сундука.", w: 3, f: () => { spawnChest(2, 6); spawnChest(2, 6); } },
+    { t: "Землетрясение", d: "Две пустые клетки вздымаются горами, две горы рушатся.", w: 2, f: quake },
+    { t: "Попутный ветер", d: "В этом раунде драконы летят на 1 клетку дальше.", w: 2, f: () => { S.wind = 1; } },
+    { t: "Гроза", d: "В этом раунде драконы летят на 1 клетку меньше.", w: 2, f: () => { S.wind = -1; } },
+    { t: "Благословение", d: "Все рыцари восстанавливают 3 здоровья.", w: 2, f: () => team("K").forEach(h => heal(h, 3)) },
+    { t: "Драконья ярость", d: "Все драконы восстанавливают 3 здоровья.", w: 2, f: () => team("D").forEach(h => heal(h, 3)) },
+    { t: "Метеорит", d: "Камень с неба бьёт по квадрату 3×3: 3 урона всем внутри.", w: 2, f: meteor },
+    { t: "Каменщики", d: "Замок чинится: +3 прочности.", w: 1, f: () => { S.bases.castle = Math.min(BASE_MAX, S.bases.castle + 3); } },
+    { t: "Тёплая кладка", d: "Гнездо восстанавливает 3 прочности.", w: 1, f: () => { S.bases.nest = Math.min(BASE_MAX, S.bases.nest + 3); } },
+    { t: "Тихая ночь", d: "Ничего не происходит. Пока что.", w: 1, f: () => {} },
+  ];
+
+  let S = null;
+  let busy = false;
+  const $ = id => document.getElementById(id);
+  const rnd = n => Math.floor(Math.random() * n);
+  const pickW = arr => { let t = arr.reduce((a, x) => a + x.w, 0), r = Math.random() * t; for (const x of arr) { if ((r -= x.w) < 0) return x; } return arr[0]; };
+  const key = (x, y) => y * W + x;
+  const inB = (x, y) => x >= 0 && y >= 0 && x < W && y < H;
+  const dist = (a, b) => Math.max(Math.abs(a.x - b.x), Math.abs(a.y - b.y));
+  const terrain = (x, y) => S.terr[y][x];
+  const isBase = (x, y) => terrain(x, y) === "castle" || terrain(x, y) === "nest";
+  const heroAt = (x, y) => S.heroes.find(h => !h.dead && h.x === x && h.y === y);
+  const team = t => S.heroes.filter(h => h.team === t && !h.dead);
+  const cur = () => S.heroes[S.order[S.turnIdx]];
+  const def = h => HEROES[h.type];
+  const nm = h => `${def(h).name} (${h.pname})`;
+  const enemyBaseKey = h => (h.team === "K" ? "nest" : "castle");
+  const baseName = k => (k === "castle" ? "замок" : "гнездо");
+
+  function log(text) {
+    S.log.unshift(text);
+    S.log.length = Math.min(S.log.length, 40);
+  }
+
+  let toastTimer;
+  function toast(text) {
+    const t = $("toast");
+    t.textContent = text;
+    t.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { t.hidden = true; }, 2600);
+  }
+
+  function float(x, y, text, cls = "") {
+    const s = document.createElement("span");
+    s.textContent = text;
+    if (cls) s.className = cls;
+    s.style.left = ((x + 0.5) / W) * 100 + "%";
+    s.style.top = ((y + 0.35) / H) * 100 + "%";
+    $("fx").appendChild(s);
+    setTimeout(() => s.remove(), 1150);
+  }
+
+  /* ---------- Состояние ---------- */
+
+  function newGame(chosen) {
+    const terr = MAP.map(r => r.split("").map(c => TERR[c]));
+    const used = { K: 0, D: 0 };
+    const heroes = chosen.map((c, i) => {
+      const d = HEROES[c.type];
+      const sp = SPAWN[d.team][used[d.team]++];
+      return { id: i, type: c.type, team: d.team, pname: c.name, x: sp[0], y: sp[1],
+        hp: d.hp, maxHp: d.hp, atk: d.atk, move: d.move, range: d.range,
+        cd: 0, dead: false, respawn: 0, frozen: false };
+    });
+    S = { phase: "play", terr, heroes, chests: [], bases: { castle: BASE_MAX, nest: BASE_MAX },
+      round: 1, order: [], turnIdx: 0, moved: false, acted: false, mode: null,
+      handoff: false, wind: 0, log: [], event: null, over: null };
+    for (let i = 0; i < 4; i++) spawnChest(3, 5);
+    log("Битва начинается!");
+    buildOrder();
+    beginTurn();
+  }
+
+  function buildOrder() {
+    const k = S.heroes.filter(h => h.team === "K").map(h => h.id);
+    const d = S.heroes.filter(h => h.team === "D").map(h => h.id);
+    const [a, b] = S.round % 2 ? [k, d] : [d, k];
+    S.order = [];
+    for (let i = 0; i < Math.max(a.length, b.length); i++) {
+      if (a[i] !== undefined) S.order.push(a[i]);
+      if (b[i] !== undefined) S.order.push(b[i]);
+    }
+  }
+
+  function spawnChest(ymin, ymax) {
+    const opts = [];
+    for (let y = ymin; y <= ymax; y++) for (let x = 0; x < W; x++) {
+      const t = terrain(x, y);
+      if ((t === "plain" || t === "forest") && !heroAt(x, y) && !S.chests.includes(key(x, y))) opts.push(key(x, y));
+    }
+    if (opts.length) S.chests.push(opts[rnd(opts.length)]);
+  }
+
+  function quake() {
+    const empty = [], mounts = [];
+    for (let y = 2; y <= 6; y++) for (let x = 0; x < W; x++) {
+      if (terrain(x, y) === "plain" && !heroAt(x, y) && !S.chests.includes(key(x, y))) empty.push([x, y]);
+    }
+    for (let y = 1; y <= 7; y++) for (let x = 0; x < W; x++) {
+      if (terrain(x, y) === "mount" && !heroAt(x, y)) mounts.push([x, y]);
+    }
+    const cells = [];
+    for (let i = 0; i < 2 && mounts.length; i++) { const [x, y] = mounts.splice(rnd(mounts.length), 1)[0]; S.terr[y][x] = "plain"; cells.push([x, y]); }
+    for (let i = 0; i < 2 && empty.length; i++) { const [x, y] = empty.splice(rnd(empty.length), 1)[0]; S.terr[y][x] = "mount"; cells.push([x, y]); }
+    S.event.cells = cells;
+  }
+
+  function meteor() {
+    const cx = 1 + rnd(5), cy = 2 + rnd(5);
+    const cells = [];
+    for (let y = cy - 1; y <= cy + 1; y++) for (let x = cx - 1; x <= cx + 1; x++) {
+      cells.push([x, y]);
+      const h = heroAt(x, y);
+      if (h) { hurt({ hero: h }, 3); S.event.extra.push(`${nm(h)} задет метеоритом.`); }
+    }
+    S.event.cells = cells;
+  }
+
+  /* ---------- Урон и лечение ---------- */
+
+  function heal(h, n) {
+    const before = h.hp;
+    h.hp = Math.min(h.maxHp, h.hp + n);
+    if (h.hp > before) float(h.x, h.y, "+" + (h.hp - before), "heal");
+  }
+
+  function hurt(t, amt) {
+    if (t.hero) {
+      const h = t.hero;
+      if (h.dead) return 0;
+      if (h.team === "K" && terrain(h.x, h.y) === "forest" && amt > 1) amt -= 1;
+      h.hp -= amt;
+      float(h.x, h.y, "−" + amt);
+      if (h.hp <= 0) {
+        h.hp = 0; h.dead = true; h.respawn = 1; h.frozen = false;
+        float(h.x, h.y, "☠", "miss");
+        log(`${nm(h)} пал! Вернётся через ход.`);
+      }
+      return amt;
+    }
+    const b = BASES[t.base];
+    S.bases[t.base] = Math.max(0, S.bases[t.base] - amt);
+    float(b.x, b.y, "−" + amt);
+    if (S.bases[t.base] === 0 && !S.over) {
+      S.over = t.base === "nest"
+        ? { winner: "K", text: "Гнездо разбито. Рыцари спасли королевство!" }
+        : { winner: "D", text: "Замок пылает. Драконы победили!" };
+    }
+    return amt;
+  }
+
+  function targetName(t) {
+    return t.hero ? nm(t.hero) : baseName(t.base);
+  }
+
+  /* ---------- Цели ---------- */
+
+  function canStand(h, x, y) {
+    if (!inB(x, y) || isBase(x, y) || heroAt(x, y)) return false;
+    return h.team === "D" || terrain(x, y) === "plain" || terrain(x, y) === "forest";
+  }
+  function canPass(h, x, y) {
+    if (!inB(x, y) || isBase(x, y)) return false;
+    if (h.team === "D") return true;
+    const t = terrain(x, y);
+    if (t !== "plain" && t !== "forest") return false;
+    const o = heroAt(x, y);
+    return !o || o.team === h.team;
+  }
+
+  function moveRange(h) {
+    return Math.max(1, h.move + (h.team === "D" ? S.wind : 0));
+  }
+
+  function moveTargets(h) {
+    const mp = moveRange(h);
+    const seen = new Map([[key(h.x, h.y), 0]]);
+    const q = [[h.x, h.y]], res = [];
+    while (q.length) {
+      const [x, y] = q.shift();
+      const s = seen.get(key(x, y));
+      if (s >= mp) continue;
+      for (const [dx, dy] of DIRS) {
+        const nx = x + dx, ny = y + dy, k = key(nx, ny);
+        if (seen.has(k) || !canPass(h, nx, ny)) continue;
+        seen.set(k, s + 1);
+        q.push([nx, ny]);
+        if (canStand(h, nx, ny)) res.push({ x: nx, y: ny });
+      }
+    }
+    return res;
+  }
+
+  function enemiesWithin(h, r) {
+    const out = S.heroes.filter(e => !e.dead && e.team !== h.team && dist(h, e) <= r).map(e => ({ x: e.x, y: e.y, hero: e }));
+    const bk = enemyBaseKey(h), b = BASES[bk];
+    if (dist(h, b) <= r) out.push({ x: b.x, y: b.y, base: bk });
+    return out;
+  }
+
+  function attackTargets(h) {
+    return enemiesWithin(h, h.range);
+  }
+
+  function abilityTargets(h) {
+    switch (h.type) {
+      case "paladin": return [];
+      case "archer": return enemiesWithin(h, 2);
+      case "lancer": {
+        const res = [];
+        for (const [dx, dy] of DIRS) {
+          for (let k = 1; k <= 4; k++) {
+            const x = h.x + dx * k, y = h.y + dy * k;
+            if (!inB(x, y)) break;
+            const land = k > 1 ? { x: h.x + dx * (k - 1), y: h.y + dy * (k - 1) } : null;
+            const o = heroAt(x, y);
+            if (o) { if (o.team !== h.team) res.push({ x, y, hero: o, land }); break; }
+            if (isBase(x, y)) { if (terrain(x, y) === enemyBaseKey(h)) res.push({ x, y, base: enemyBaseKey(h), land }); break; }
+            const t = terrain(x, y);
+            if (t !== "plain" && t !== "forest") break;
+          }
+        }
+        return res;
+      }
+      case "fire":
+        return DIRS.filter(([dx, dy]) => inB(h.x + dx, h.y + dy)).map(([dx, dy]) => ({ x: h.x + dx, y: h.y + dy, dx, dy }));
+      case "ice":
+        return enemiesWithin(h, 2).filter(t => t.hero);
+      case "shadow":
+        return enemiesWithin(h, 5).filter(t => DIRS.some(([dx, dy]) => {
+          const x = t.x + dx, y = t.y + dy;
+          return canStand(h, x, y) || (x === h.x && y === h.y);
+        }));
+    }
+    return [];
+  }
+
+  function abilityReady(h) {
+    if (S.acted || h.cd > 0) return false;
+    if (h.type === "paladin") return true;
+    return abilityTargets(h).length > 0;
+  }
+
+  /* ---------- Кубик ---------- */
+
+  function rollDice() {
+    return new Promise(resolve => {
+      const die = $("die"), cap = $("die-cap");
+      $("dice").hidden = false;
+      die.className = "die roll";
+      cap.textContent = "";
+      const r = 1 + rnd(6);
+      let n = 0;
+      const iv = setInterval(() => {
+        die.textContent = 1 + rnd(6);
+        if (++n >= 8) {
+          clearInterval(iv);
+          die.textContent = r;
+          die.className = "die" + (r === 6 ? " crit" : r === 1 ? " miss" : "");
+          cap.textContent = r === 6 ? "Критический удар!" : r === 1 ? "Промах" : "Попадание";
+          setTimeout(() => { $("dice").hidden = true; resolve(r); }, 650);
+        }
+      }, 70);
+    });
+  }
+
+  /* ---------- Ход ---------- */
+
+  function beginTurn() {
+    if (S.over) return render();
+    if (S.turnIdx >= S.order.length) return endRound();
+    const h = cur();
+    if (h.cd > 0) h.cd--;
+    if (h.dead) {
+      if (h.respawn > 0) {
+        h.respawn--;
+        log(`${nm(h)} пропускает ход: восстанавливается.`);
+        S.turnIdx++;
+        return beginTurn();
+      }
+      const sp = SPAWN[h.team].find(([x, y]) => !heroAt(x, y));
+      h.x = sp[0]; h.y = sp[1]; h.hp = h.maxHp; h.dead = false;
+      log(`${nm(h)} возвращается в бой!`);
+    }
+    if (h.frozen) {
+      h.frozen = false;
+      log(`${nm(h)} заморожен и пропускает ход.`);
+      toast(`${nm(h)} заморожен и пропускает ход ❄️`);
+      S.turnIdx++;
+      return beginTurn();
+    }
+    S.moved = false; S.acted = false; S.mode = null; S.handoff = true;
+    render();
+  }
+
+  function endTurn() {
+    S.mode = null;
+    S.turnIdx++;
+    beginTurn();
+  }
+
+  function endRound() {
+    const pre = [];
+    for (const h of team("D")) if (dist(h, BASES.castle) <= 2) { hurt({ hero: h }, 2); pre.push(`Башни замка бьют ${nm(h)}: −2.`); }
+    for (const h of team("K")) if (dist(h, BASES.nest) <= 2) { hurt({ hero: h }, 2); pre.push(`Драконья мать в гнезде жжёт ${nm(h)}: −2.`); }
+    S.wind = 0;
+    const ev = pickW(EVENTS);
+    S.event = { t: ev.t, d: ev.d, pre, extra: [], cells: [] };
+    ev.f();
+    log(`Событие: ${ev.t}.`);
+    render();
+  }
+
+  function closeEvent() {
+    S.event = null;
+    if (S.round >= ROUNDS) {
+      const c = S.bases.castle, n = S.bases.nest;
+      S.over = c > n ? { winner: "K", text: `Время вышло. У замка ${c} прочности против ${n} у гнезда: рыцари выстояли!` }
+        : n > c ? { winner: "D", text: `Время вышло. У гнезда ${n} прочности против ${c} у замка: драконы сильнее!` }
+        : { winner: null, text: `Время вышло. У обеих баз по ${c} прочности: ничья.` };
+      return render();
+    }
+    S.round++;
+    buildOrder();
+    S.turnIdx = 0;
+    beginTurn();
+  }
+
+  function afterAction() {
+    S.acted = true;
+    S.mode = S.moved ? null : "move";
+    if (!moveTargets(cur()).length) S.mode = null;
+    render();
+  }
+
+  function checkChest(h) {
+    const i = S.chests.indexOf(key(h.x, h.y));
+    if (i < 0) return;
+    S.chests.splice(i, 1);
+    const it = pickW(ITEMS);
+    it.f(h);
+    float(h.x, h.y, "💰", "gold");
+    log(`${nm(h)} открывает сундук: ${it.n} (${it.d}).`);
+    toast(`Сундук! ${it.n}: ${it.d}`);
+  }
+
+  async function attack(h, t, bonus, verb) {
+    busy = true;
+    render();
+    const r = await rollDice();
+    if (r === 1) {
+      float(t.x, t.y, "мимо", "miss");
+      log(`${nm(h)} промахивается по цели ${targetName(t)} (🎲 1).`);
+    } else {
+      let dmg = h.atk + bonus;
+      if (r === 6) dmg *= 2;
+      const done = hurt(t.hero ? { hero: t.hero } : { base: t.base }, dmg);
+      log(`${nm(h)} ${verb} ${targetName(t)}: ${done} урона${r === 6 ? ", крит!" : ""} (🎲 ${r}).`);
+    }
+    busy = false;
+  }
+
+  async function useAbility(h, t) {
+    const d = def(h);
+    switch (h.type) {
+      case "paladin": {
+        const allies = S.heroes.filter(a => !a.dead && a.team === h.team && dist(a, h) <= 1);
+        allies.forEach(a => heal(a, 4));
+        log(`${nm(h)}: ${d.ab}. Лечение +4 для ${allies.length} героев.`);
+        break;
+      }
+      case "archer": {
+        const ts = enemiesWithin(h, 2);
+        ts.forEach(x => hurt(x.hero ? { hero: x.hero } : { base: x.base }, 2));
+        log(`${nm(h)}: ${d.ab}! Задеты: ${ts.map(targetName).join(", ")}.`);
+        break;
+      }
+      case "lancer": {
+        if (t.land) { h.x = t.land.x; h.y = t.land.y; checkChest(h); }
+        if (!h.dead) {
+          const done = hurt(t.hero ? { hero: t.hero } : { base: t.base }, 5);
+          log(`${nm(h)}: ${d.ab} по цели ${targetName(t)}, ${done} урона.`);
+        }
+        break;
+      }
+      case "fire": {
+        const hit = [];
+        for (let k = 1; k <= 3; k++) {
+          const x = h.x + t.dx * k, y = h.y + t.dy * k;
+          if (!inB(x, y)) break;
+          float(x, y, "🔥", "gold");
+          if (terrain(x, y) === "forest") S.terr[y][x] = "plain";
+          const o = heroAt(x, y);
+          if (o && o.team !== h.team) { hurt({ hero: o }, 4); hit.push(nm(o)); }
+          if (terrain(x, y) === "castle") { hurt({ base: "castle" }, 4); hit.push("замок"); }
+        }
+        log(`${nm(h)}: ${d.ab}!${hit.length ? " Задеты: " + hit.join(", ") + "." : " Только выжженная земля."}`);
+        break;
+      }
+      case "ice": {
+        hurt({ hero: t.hero }, 3);
+        if (!t.hero.dead) { t.hero.frozen = true; float(t.x, t.y, "❄️", "gold"); }
+        log(`${nm(h)}: ${d.ab}. ${nm(t.hero)} получает 3 урона и замерзает.`);
+        break;
+      }
+      case "shadow": {
+        const spots = DIRS.map(([dx, dy]) => ({ x: t.x + dx, y: t.y + dy }))
+          .filter(p => canStand(h, p.x, p.y) || (p.x === h.x && p.y === h.y))
+          .sort((a, b) => dist(a, h) - dist(b, h));
+        h.x = spots[0].x; h.y = spots[0].y;
+        checkChest(h);
+        h.cd = CD;
+        await attack(h, t, 2, "бьёт из тени по цели");
+        break;
+      }
+    }
+    h.cd = CD;
+    afterAction();
+  }
+
+  async function onCell(x, y) {
+    if (busy || !S || S.phase !== "play" || S.handoff || S.event || S.over) return;
+    const h = cur();
+    const list = targetsFor(h, S.mode);
+    const t = list.find(c => c.x === x && c.y === y);
+    if (t && S.mode === "move") {
+      h.x = x; h.y = y; S.moved = true;
+      checkChest(h);
+      if (h.dead) { render(); setTimeout(endTurn, 900); return; }
+      S.mode = !S.acted && attackTargets(h).length ? "attack" : null;
+      return render();
+    }
+    if (t && S.mode === "attack") {
+      await attack(h, t, 0, "атакует");
+      return afterAction();
+    }
+    if (t && S.mode === "ability") {
+      return useAbility(h, t);
+    }
+    inspect(x, y);
+  }
+
+  function inspect(x, y) {
+    const o = heroAt(x, y);
+    if (o) {
+      const d = def(o);
+      toast(`${d.icon} ${nm(o)}: ❤ ${o.hp}/${o.maxHp}, атака ${o.atk}, шаг ${o.move}, дальность ${o.range}. ${d.ab}: ${d.abDesc}.${o.cd ? ` Перезарядка: ${o.cd}.` : ""}`);
+      return;
+    }
+    const t = terrain(x, y);
+    if (t === "castle") return toast(`🏰 Замок рыцарей: ${S.bases.castle} из ${BASE_MAX}. Бьёт драконов рядом на 2 в конце раунда.`);
+    if (t === "nest") return toast(`🥚 Гнездо драконов: ${S.bases.nest} из ${BASE_MAX}. Жжёт рыцарей рядом на 2 в конце раунда.`);
+    if (S.chests.includes(key(x, y))) return toast("💰 Сундук. Встаньте на клетку, чтобы открыть.");
+    const names = { plain: "Равнина", forest: "Лес: рыцарь здесь получает на 1 урона меньше. Огонь его сжигает.", mount: "Горы: рыцари не пройдут, драконы перелетят.", lake: "Озеро: рыцари не пройдут, драконы перелетят." };
+    if (S.mode) toast(names[t] + " Сюда сейчас нельзя.");
+  }
+
+  function targetsFor(h, mode) {
+    if (mode === "move") return S.moved ? [] : moveTargets(h);
+    if (mode === "attack") return S.acted ? [] : attackTargets(h);
+    if (mode === "ability") return abilityReady(h) ? abilityTargets(h) : [];
+    return [];
+  }
+
+  function onAct(act) {
+    if (busy || S.handoff || S.event || S.over) return;
+    const h = cur();
+    if (act === "end") return endTurn();
+    if (act === "ability" && h.type === "paladin") {
+      if (abilityReady(h)) useAbility(h, null);
+      return;
+    }
+    if (act === "ability" && h.type === "archer") {
+      if (abilityReady(h)) useAbility(h, null);
+      return;
+    }
+    S.mode = S.mode === act ? null : act;
+    render();
+  }
+
+  /* ---------- Отрисовка ---------- */
+
+  const cellEls = [];
+  function buildBoard() {
+    const b = $("board");
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+      const c = document.createElement("button");
+      c.type = "button";
+      c.className = "cell";
+      c.id = `cell-${x}-${y}`;
+      c.addEventListener("click", () => onCell(x, y));
+      b.appendChild(c);
+      cellEls.push(c);
+    }
+  }
+
+  const GLYPH = { forest: "🌲", mount: "⛰️" };
+
+  function render() {
+    if (!S || S.phase === "setup") {
+      $("setup").hidden = false;
+      ["handoff", "event", "over"].forEach(id => ($(id).hidden = true));
+      return;
+    }
+    $("setup").hidden = true;
+    const h = cur();
+
+    $("round").textContent = S.round;
+    $("hp-castle").textContent = S.bases.castle;
+    $("hp-nest").textContent = S.bases.nest;
+    $("bar-castle").style.width = (S.bases.castle / BASE_MAX) * 100 + "%";
+    $("bar-nest").style.width = (S.bases.nest / BASE_MAX) * 100 + "%";
+
+    $("order").innerHTML = S.order.map((id, i) => {
+      const o = S.heroes[id];
+      const cls = [o.team, i < S.turnIdx ? "done" : "", i === S.turnIdx ? "now" : "", o.dead ? "dead" : ""].join(" ");
+      return `<span class="${cls}" title="${nm(o)}">${def(o).icon}</span>`;
+    }).join("");
+
+    const list = h ? targetsFor(h, S.mode) : [];
+    const tk = new Set(list.map(t => key(t.x, t.y)));
+    const flash = new Set((S.event?.cells || []).map(([x, y]) => key(x, y)));
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+      const k = key(x, y), el = cellEls[k], t = terrain(x, y);
+      const o = heroAt(x, y);
+      const chest = S.chests.includes(k);
+      let cls = "cell t-" + t;
+      if (tk.has(k)) cls += S.mode === "move" ? " hl-move" : " hl-target";
+      if (chest) cls += " has-chest";
+      if (o && h && o === h && !S.handoff) cls += " active";
+      if (flash.has(k)) cls += " flash";
+      el.className = cls;
+      let html = "";
+      if (GLYPH[t] && !o) html += `<span class="terr">${GLYPH[t]}</span>`;
+      if (chest && !o) html += `<span class="chest">💰</span>`;
+      if (t === "castle") html += `<span class="basebox">🏰<small>${S.bases.castle}</small></span>`;
+      if (t === "nest") html += `<span class="basebox">🥚<small>${S.bases.nest}</small></span>`;
+      if (o) {
+        const pct = Math.round((o.hp / o.maxHp) * 100);
+        html += `<span class="token ${o.team}${pct <= 34 ? " low" : ""}">${def(o).icon}<span class="hp"><i style="width:${pct}%"></i></span>${o.frozen ? '<span class="frz">❄️</span>' : ""}</span>`;
+      }
+      el.innerHTML = html;
+      el.setAttribute("aria-label", cellLabel(x, y, o, chest));
+    }
+
+    renderPanel(h);
+    renderOverlays(h);
+  }
+
+  function cellLabel(x, y, o, chest) {
+    const t = terrain(x, y);
+    const names = { plain: "равнина", forest: "лес", mount: "горы", lake: "озеро", castle: "замок", nest: "гнездо" };
+    let s = `Клетка ${x + 1}, ${y + 1}: ${names[t]}`;
+    if (o) s += `, ${nm(o)}, здоровье ${o.hp}`;
+    if (chest) s += ", сундук";
+    return s;
+  }
+
+  function renderPanel(h) {
+    const p = $("panel");
+    if (!h) { p.innerHTML = ""; return; }
+    const d = def(h);
+    p.className = "panel " + h.team;
+    const canMove = !S.moved && moveTargets(h).length > 0;
+    const canAtk = !S.acted && attackTargets(h).length > 0;
+    const canAb = abilityReady(h);
+    const hint = busy ? "Бросаем кубик…"
+      : S.mode === "move" ? "Нажмите на золотую точку, чтобы пойти."
+      : S.mode === "attack" ? "Нажмите на подсвеченного врага."
+      : S.mode === "ability" ? (h.type === "fire" ? "Выберите направление огня: соседнюю клетку." : "Выберите подсвеченную цель.")
+      : S.moved && S.acted ? "Ход сделан. Завершите его."
+      : "Выберите действие.";
+    const cdTxt = h.cd > 0 ? `<span class="cd">через ${h.cd} ход.</span>` : `<span class="cd">готово</span>`;
+    const wind = h.team === "D" && S.wind ? ` (${S.wind > 0 ? "ветер +1" : "гроза −1"})` : "";
+    p.innerHTML = `
+      <div class="hero-row">
+        <div class="avatar ${h.team}">${d.icon}</div>
+        <div class="who">
+          <div><b>${d.name}</b> <span class="pn">· ${esc(h.pname)}</span></div>
+          <div class="stats">
+            <span>❤ <b>${h.hp}/${h.maxHp}</b></span>
+            <span>Атака <b>${h.atk}</b></span>
+            <span>Шаг <b>${moveRange(h)}</b>${wind}</span>
+            <span>Дальность <b>${h.range}</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="ability"><b>${d.ab}</b>: ${d.abDesc}. ${cdTxt}</div>
+      <div class="acts">
+        <button type="button" id="act-move" data-act="move" class="${S.mode === "move" ? "on" : ""}" ${canMove && !busy ? "" : "disabled"}>Идти</button>
+        <button type="button" id="act-attack" data-act="attack" class="${S.mode === "attack" ? "on" : ""}" ${canAtk && !busy ? "" : "disabled"}>Атака</button>
+        <button type="button" id="act-ability" data-act="ability" class="${S.mode === "ability" ? "on" : ""}" ${canAb && !busy ? "" : "disabled"}>${d.ab}</button>
+        <button type="button" id="act-end" data-act="end" class="end" ${busy ? "disabled" : ""}>Конец хода</button>
+      </div>
+      <div class="hint">${hint}</div>
+      <ul class="log">${S.log.slice(0, 4).map(l => `<li>${esc(l)}</li>`).join("")}</ul>`;
+  }
+
+  function renderOverlays(h) {
+    $("handoff").hidden = !(S.handoff && h && !S.over && !S.event);
+    if (!$("handoff").hidden) {
+      const d = def(h);
+      $("handoff-card").className = "card handoff " + h.team;
+      $("handoff-card").innerHTML = `
+        <div class="eyebrow">Раунд ${S.round} · ход ${S.turnIdx + 1} из ${S.order.length}</div>
+        <h2>${h.team === "K" ? "Ходят рыцари" : "Ходят драконы"}</h2>
+        <p>Передайте телефон игроку</p>
+        <div class="player">${esc(h.pname)}</div>
+        <div class="heroline"><div class="avatar ${h.team}">${d.icon}</div><div><b>${d.name}</b><br><span style="color:var(--muted)">❤ ${h.hp}/${h.maxHp} · ${d.ab} ${h.cd ? "через " + h.cd + " ход." : "готово"}</span></div></div>
+        ${S.log[0] ? `<p>Последнее: ${esc(S.log[0])}</p>` : ""}
+        <button type="button" class="big" id="go-btn">Начать ход</button>`;
+      $("go-btn").onclick = () => { S.handoff = false; S.mode = moveTargets(h).length ? "move" : null; render(); };
+    }
+
+    $("event").hidden = !(S.event && !S.over);
+    if (S.event && !S.over) {
+      const e = S.event;
+      const lines = [...e.pre, ...e.extra];
+      $("event-card").innerHTML = `
+        <div class="eyebrow">Конец раунда ${S.round}</div>
+        <h2>${e.t}</h2>
+        <p>${e.d}</p>
+        ${lines.length ? `<ul class="event-list">${lines.map(l => `<li>${esc(l)}</li>`).join("")}</ul>` : ""}
+        <button type="button" class="big" id="ev-btn">${S.round >= ROUNDS ? "Подвести итоги" : `Раунд ${S.round + 1}`}</button>`;
+      $("ev-btn").onclick = closeEvent;
+    }
+
+    $("over").hidden = !S.over;
+    if (S.over) {
+      const w = S.over.winner;
+      $("over-card").innerHTML = `
+        <div class="eyebrow">Конец битвы · раунд ${S.round}</div>
+        <h2 style="color:${w === "K" ? "var(--knight)" : w === "D" ? "var(--dragon)" : "var(--gold)"}">${w === "K" ? "Победа рыцарей" : w === "D" ? "Победа драконов" : "Ничья"}</h2>
+        <p>${S.over.text}</p>
+        <p>Герои: ${S.heroes.filter(x => x.team === w).map(x => esc(x.pname)).join(", ") || "все"}.</p>
+        <button type="button" class="big" id="again-btn">Новая игра</button>`;
+      $("again-btn").onclick = () => { S = { phase: "setup" }; render(); };
+    }
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  }
+
+  /* ---------- Подготовка ---------- */
+
+  const setup = { count: 4, on: { paladin: true, archer: true, lancer: false, fire: true, ice: true, shadow: false } };
+  const DEFAULT_NAMES = { paladin: "Игрок 1", fire: "Игрок 2", archer: "Игрок 3", ice: "Игрок 4", lancer: "Игрок 5", shadow: "Игрок 6" };
+
+  function buildSetup() {
+    for (const [tid, types] of [["team-K", ORDER_K], ["team-D", ORDER_D]]) {
+      const box = $(tid);
+      for (const type of types) {
+        const d = HEROES[type];
+        const row = document.createElement("div");
+        row.className = "pick-row";
+        row.innerHTML = `
+          <button type="button" class="pick" id="pick-${type}" data-type="${type}">
+            <span class="ic">${d.icon}</span><span><b>${d.name}</b><small>❤${d.hp} · атака ${d.atk}${d.range > 1 ? " · дальн. " + d.range : ""}</small></span>
+          </button>
+          <input id="name-${type}" type="text" maxlength="16" placeholder="Имя игрока" value="${DEFAULT_NAMES[type]}" aria-label="Имя игрока за героя ${d.name}">`;
+        box.appendChild(row);
+        row.querySelector(".pick").addEventListener("click", () => {
+          setup.on[type] = !setup.on[type];
+          renderSetup();
+        });
+      }
+    }
+    document.querySelectorAll("[data-cnt]").forEach(b => b.addEventListener("click", () => {
+      setup.count = +b.dataset.cnt;
+      const all = setup.count > 4;
+      Object.assign(setup.on, all
+        ? { paladin: true, archer: true, lancer: true, fire: true, ice: true, shadow: true }
+        : { paladin: true, archer: true, lancer: false, fire: true, ice: true, shadow: false });
+      if (setup.count === 5) $("name-shadow").value = $("name-fire").value;
+      renderSetup();
+    }));
+    $("start-btn").addEventListener("click", startFromSetup);
+    $("rules-heroes").innerHTML = [...ORDER_K, ...ORDER_D].map(t => {
+      const d = HEROES[t];
+      return `<li>${d.icon} <b>${d.name}</b> (${d.team === "K" ? "рыцарь" : "дракон"}): ❤${d.hp}, атака ${d.atk}, шаг ${d.move}${d.range > 1 ? ", дальность " + d.range : ""}. <b>${d.ab}</b>: ${d.abDesc}.</li>`;
+    }).join("");
+    renderSetup();
+  }
+
+  function perSide() { return setup.count === 4 ? 2 : 3; }
+
+  function renderSetup() {
+    document.querySelectorAll("[data-cnt]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.cnt === setup.count));
+    for (const t of [...ORDER_K, ...ORDER_D]) {
+      $("pick-" + t).setAttribute("aria-pressed", setup.on[t]);
+      $("name-" + t).disabled = !setup.on[t];
+    }
+    $("setup-note").textContent = {
+      4: "Два на два. Нажмите на героя, чтобы взять или убрать его: каждой команде нужно ровно два.",
+      5: "Три на три. Один игрок ведёт двух героев: впишите его имя дважды. Сейчас это Огненный и Теневой.",
+      6: "Три на три. У каждого игрока свой герой.",
+    }[setup.count];
+  }
+
+  function startFromSetup() {
+    const n = perSide();
+    const k = ORDER_K.filter(t => setup.on[t]), d = ORDER_D.filter(t => setup.on[t]);
+    if (k.length !== n) return toast(`Выберите ровно ${n} рыцар${n === 2 ? "я" : "ей"}. Сейчас: ${k.length}.`);
+    if (d.length !== n) return toast(`Выберите ровно ${n} дракон${n === 2 ? "а" : "ов"}. Сейчас: ${d.length}.`);
+    const chosen = [...k, ...d].map((t, i) => ({ type: t, name: ($("name-" + t).value || "").trim() || "Игрок " + (i + 1) }));
+    newGame(chosen);
+  }
+
+  /* ---------- Запуск ---------- */
+
+  $("panel").addEventListener("click", e => {
+    const b = e.target.closest("[data-act]");
+    if (b && !b.disabled) onAct(b.dataset.act);
+  });
+  const openRules = () => { $("rules").hidden = false; };
+  $("rules-btn").addEventListener("click", openRules);
+  $("rules-btn-2").addEventListener("click", openRules);
+  $("rules-close").addEventListener("click", () => { $("rules").hidden = true; });
+
+  window.claude?.hot?.snapshot?.(() => ({ S }));
+
+  function start(data) {
+    buildBoard();
+    buildSetup();
+    S = data && data.S && data.S.phase === "play" ? data.S : { phase: "setup" };
+    render();
+  }
+  window.claude?.hot?.ready ? window.claude.hot.ready(start) : start(window.claude?.hot?.data ?? {});
+})();
+</script>
