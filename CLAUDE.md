@@ -1,4 +1,8 @@
-# Teacher bots (Telegram) — how they work
+# tutor bot programming cycle
+
+Name used by the user for this whole recipe: **"tutor bot programming cycle"**.
+When they mention it, follow everything below (also available as the skill
+`/tutor-bot-programming-cycle`).
 
 This repo hosts Telegram "teacher" bots. The first one is the GCSE Maths tutor
 @Asterabasicmaths_bot. More bots for other subjects will follow the same recipe.
