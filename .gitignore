@@ -1,4 +1,4 @@
 .env
 __pycache__/
-relay/.codes
-relay/state.json
+relay/.codes*
+relay/state*.json

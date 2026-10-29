@@ -16,4 +16,4 @@ while True:
         if m:
             who = m["from"].get("username") or m["from"].get("first_name")
             text = m.get("text") or "[non-text message]"
-            print(json.dumps({"chat": m["chat"]["id"], "from": who, "text": text}, ensure_ascii=False), flush=True)
+            print(json.dumps({"bot": os.environ.get("BOT", "maths"), "chat": m["chat"]["id"], "from": who, "text": text}, ensure_ascii=False), flush=True)

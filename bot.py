@@ -14,16 +14,20 @@ import urllib.request
 API = "https://api.telegram.org/bot{token}/{method}"
 
 
-def load_token():
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    if not token and os.path.exists(".env"):
-        with open(".env", encoding="utf-8") as f:
+def load_token(bot=None):
+    """Token for the default bot, or TELEGRAM_BOT_TOKEN_<BOT> for a named one (e.g. english)."""
+    bot = bot or os.environ.get("BOT")
+    name = "TELEGRAM_BOT_TOKEN" + (f"_{bot.upper()}" if bot else "")
+    token = os.environ.get(name)
+    env = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    if not token and os.path.exists(env):
+        with open(env, encoding="utf-8") as f:
             for line in f:
                 key, _, value = line.strip().partition("=")
-                if key == "TELEGRAM_BOT_TOKEN":
+                if key == name:
                     token = value.strip().strip('"').strip("'")
     if not token:
-        sys.exit("Set TELEGRAM_BOT_TOKEN (env var or .env file)")
+        sys.exit(f"Set {name} (env var or .env file)")
     return token
 
 
