@@ -1,0 +1,315 @@
+<title>Крестики-нолики</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Neucha&family=Rubik:wght@400;500;600&display=swap">
+<style>
+  /* Layout: одна колонка-тетрадный лист — заголовок, счёт, поле 3×3, кнопки. */
+  :root {
+    --paper: #fbfcff;
+    --grid: #d6e2f3;
+    --margin: #e9a3a3;
+    --ink: #1f2a44;
+    --muted: #66708a;
+    --x: #2457c5;
+    --o: #c8343f;
+    --cell: #ffffff;
+    --chip: #eef3fb;
+    --font-hand: "Neucha", "Comic Sans MS", cursive;
+    --font-ui: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #151a26; --grid: #232c3e; --margin: #6e3a40; --ink: #e6eaf4; --muted: #98a2bb;
+      --x: #7aa5ff; --o: #ff7b84; --cell: #1b2131; --chip: #222a3c; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #151a26; --grid: #232c3e; --margin: #6e3a40; --ink: #e6eaf4; --muted: #98a2bb;
+    --x: #7aa5ff; --o: #ff7b84; --cell: #1b2131; --chip: #222a3c; color-scheme: dark;
+  }
+
+  html, body { height: 100%; }
+  body {
+    background-color: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: var(--ink);
+    font-family: var(--font-ui);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .sheet {
+    min-height: 100%;
+    box-sizing: border-box;
+    max-width: 460px;
+    margin: 0 auto;
+    padding-block: 20px 28px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  h1 {
+    font-family: var(--font-hand);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1 .x { color: var(--x); }
+  h1 .o { color: var(--o); }
+
+  .score {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    font-variant-numeric: tabular-nums;
+  }
+  .score div {
+    background: var(--chip);
+    border-radius: 10px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+  .score b { display: block; font-size: 1.5rem; font-weight: 600; }
+  .score span { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .score .you b { color: var(--x); }
+  .score .bot b { color: var(--o); }
+
+  .status {
+    font-family: var(--font-hand);
+    font-size: 1.6rem;
+    min-height: 2rem;
+    text-align: center;
+  }
+
+  .board-wrap { position: relative; width: 100%; max-width: 100%; aspect-ratio: 1; }
+  .board {
+    position: absolute; inset: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .cell {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    touch-action: manipulation;
+  }
+  .cell:nth-child(-n+6) { border-bottom: 3px solid var(--ink); }
+  .cell:not(:nth-child(3n)) { border-right: 3px solid var(--ink); }
+  .cell:focus-visible { outline: 3px solid var(--x); outline-offset: -6px; border-radius: 8px; }
+  .cell:disabled { cursor: default; }
+  .cell svg { position: absolute; inset: 16%; width: 68%; height: 68%; overflow: visible; }
+  .cell path, .cell circle {
+    fill: none;
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 0.35s ease-out forwards;
+  }
+  .cell .mx { stroke: var(--x); }
+  .cell .mo { stroke: var(--o); }
+  .cell .mx:nth-child(2) { animation-delay: 0.15s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  .strike { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  .strike line {
+    stroke: var(--ink); stroke-width: 2.2; stroke-linecap: round; opacity: 0.85;
+    stroke-dasharray: 160; stroke-dashoffset: 160;
+    animation: draw 0.45s ease-out 0.3s forwards;
+  }
+
+  .controls { display: flex; flex-direction: column; gap: 10px; }
+  .seg {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+    background: var(--chip); border-radius: 12px; padding: 4px;
+  }
+  .seg button {
+    appearance: none; border: 0; border-radius: 9px; padding: 10px 6px;
+    font: 500 0.95rem var(--font-ui); color: var(--muted); background: transparent; cursor: pointer;
+  }
+  .seg button[aria-pressed="true"] { background: var(--cell); color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+  .seg button:focus-visible, .primary:focus-visible { outline: 3px solid var(--x); outline-offset: 2px; }
+  .primary {
+    appearance: none; border: 0; border-radius: 12px; padding: 14px;
+    font: 600 1.05rem var(--font-ui); color: var(--paper); background: var(--ink); cursor: pointer;
+  }
+  .hint { margin: 0; text-align: center; font-size: 0.85rem; color: var(--muted); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cell path, .cell circle, .strike line { animation-duration: 0.01s; animation-delay: 0s; }
+  }
+</style>
+
+<main class="sheet">
+  <h1>Крестики-<span class="x">×</span>нолики<span class="o">○</span></h1>
+
+  <div class="score" aria-label="Счёт">
+    <div class="you"><b id="s-you">0</b><span>Вы · X</span></div>
+    <div><b id="s-draw">0</b><span>Ничьи</span></div>
+    <div class="bot"><b id="s-bot">0</b><span>Телефон · O</span></div>
+  </div>
+
+  <div class="status" id="status" role="status" aria-live="polite">Ваш ход</div>
+
+  <div class="board-wrap">
+    <div class="board" id="board"></div>
+    <svg class="strike" id="strike" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+  </div>
+
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Сложность">
+      <button type="button" id="lvl-easy" data-level="easy">Лёгкий</button>
+      <button type="button" id="lvl-hard" data-level="hard">Непобедимый</button>
+    </div>
+    <div class="seg" role="group" aria-label="Кто ходит первым">
+      <button type="button" id="first-you" data-first="X">Я первый</button>
+      <button type="button" id="first-bot" data-first="O">Телефон первый</button>
+    </div>
+    <button type="button" class="primary" id="restart">Новая партия</button>
+    <p class="hint">На «Непобедимом» лучшее, что можно сделать, — ничья.</p>
+  </div>
+</main>
+
+<script>
+(() => {
+  const LINES = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  const boardEl = document.getElementById("board");
+  const strikeEl = document.getElementById("strike");
+  const statusEl = document.getElementById("status");
+
+  const load = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } };
+  const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+
+  const settings = load("ttt-settings", { level: "hard", first: "X" });
+  const score = load("ttt-score", { you: 0, bot: 0, draw: 0 });
+  let board, over, busy;
+
+  const cells = Array.from({ length: 9 }, (_, i) => {
+    const b = document.createElement("button");
+    b.className = "cell";
+    b.type = "button";
+    b.id = "cell-" + i;
+    b.setAttribute("aria-label", "Клетка " + (i + 1));
+    b.addEventListener("click", () => humanMove(i));
+    boardEl.appendChild(b);
+    return b;
+  });
+
+  function winLine(b) {
+    for (const l of LINES) if (b[l[0]] && b[l[0]] === b[l[1]] && b[l[1]] === b[l[2]]) return l;
+    return null;
+  }
+  const free = b => b.reduce((a, c, i) => (c ? a : a.concat(i)), []);
+
+  // Минимакс: +10 победа O, -10 победа X; глубина учитывается, чтобы побеждать быстрее.
+  function minimax(b, player, depth) {
+    const w = winLine(b);
+    if (w) return { score: b[w[0]] === "O" ? 10 - depth : depth - 10 };
+    const moves = free(b);
+    if (!moves.length) return { score: 0 };
+    let best = { score: player === "O" ? -Infinity : Infinity };
+    for (const m of moves) {
+      b[m] = player;
+      const s = minimax(b, player === "O" ? "X" : "O", depth + 1).score;
+      b[m] = null;
+      if (player === "O" ? s > best.score : s < best.score) best = { score: s, move: m };
+    }
+    return best;
+  }
+
+  function botChoice() {
+    const moves = free(board);
+    if (settings.level === "easy" && Math.random() < 0.55) return moves[Math.floor(Math.random() * moves.length)];
+    return minimax(board.slice(), "O", 0).move;
+  }
+
+  function mark(i, p) {
+    board[i] = p;
+    const c = cells[i];
+    c.disabled = true;
+    c.setAttribute("aria-label", "Клетка " + (i + 1) + ": " + (p === "X" ? "крестик" : "нолик"));
+    c.innerHTML = p === "X"
+      ? '<svg viewBox="0 0 100 100"><path class="mx" d="M14 14 L86 86"/><path class="mx" d="M86 14 L14 86"/></svg>'
+      : '<svg viewBox="0 0 100 100"><circle class="mo" cx="50" cy="50" r="38" transform="rotate(-90 50 50)"/></svg>';
+  }
+
+  function finish() {
+    const w = winLine(board);
+    if (!w && free(board).length) return false;
+    over = true;
+    cells.forEach(c => (c.disabled = true));
+    if (w) {
+      const pos = i => [((i % 3) + 0.5) * 33.33, (Math.floor(i / 3) + 0.5) * 33.33];
+      const [a, b] = [pos(w[0]), pos(w[2])];
+      const dx = (b[0] - a[0]) * 0.22, dy = (b[1] - a[1]) * 0.22;
+      strikeEl.innerHTML = `<line x1="${a[0] - dx}" y1="${a[1] - dy}" x2="${b[0] + dx}" y2="${b[1] + dy}"/>`;
+      if (board[w[0]] === "X") { score.you++; statusEl.textContent = "Вы победили!"; }
+      else { score.bot++; statusEl.textContent = "Телефон победил"; }
+    } else {
+      score.draw++;
+      statusEl.textContent = "Ничья";
+    }
+    save("ttt-score", score);
+    renderScore();
+    return true;
+  }
+
+  function botMove() {
+    busy = true;
+    statusEl.textContent = "Телефон думает…";
+    setTimeout(() => {
+      mark(botChoice(), "O");
+      busy = false;
+      if (!finish()) statusEl.textContent = "Ваш ход";
+    }, 450);
+  }
+
+  function humanMove(i) {
+    if (over || busy || board[i]) return;
+    mark(i, "X");
+    if (!finish()) botMove();
+  }
+
+  function renderScore() {
+    document.getElementById("s-you").textContent = score.you;
+    document.getElementById("s-bot").textContent = score.bot;
+    document.getElementById("s-draw").textContent = score.draw;
+  }
+
+  function renderSettings() {
+    document.querySelectorAll("[data-level]").forEach(b => b.setAttribute("aria-pressed", b.dataset.level === settings.level));
+    document.querySelectorAll("[data-first]").forEach(b => b.setAttribute("aria-pressed", b.dataset.first === settings.first));
+  }
+
+  function newGame() {
+    board = Array(9).fill(null);
+    over = false;
+    busy = false;
+    strikeEl.innerHTML = "";
+    cells.forEach((c, i) => { c.innerHTML = ""; c.disabled = false; c.setAttribute("aria-label", "Клетка " + (i + 1)); });
+    statusEl.textContent = "Ваш ход";
+    if (settings.first === "O") botMove();
+  }
+
+  document.querySelectorAll("[data-level]").forEach(b => b.addEventListener("click", () => {
+    settings.level = b.dataset.level; save("ttt-settings", settings); renderSettings(); newGame();
+  }));
+  document.querySelectorAll("[data-first]").forEach(b => b.addEventListener("click", () => {
+    settings.first = b.dataset.first; save("ttt-settings", settings); renderSettings(); newGame();
+  }));
+  document.getElementById("restart").addEventListener("click", newGame);
+
+  renderSettings();
+  renderScore();
+  newGame();
+})();
+</script>
