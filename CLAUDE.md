@@ -25,7 +25,8 @@ This repo hosts Telegram "teacher" bots. The first one is the GCSE Maths tutor
 - Per-student state is kept in `relay/state.json`; access codes in `relay/.codes`
   (both gitignored).
 - Do NOT write anything to the user in the Claude chat about bot activity —
-  no reports at all (not per message, not on monitor restarts). Answer students
+  no reports at all (not per message, not on monitor restarts, not even
+  "ok"/"done"/"хорошо"). Answer students
   silently in Telegram. Speak in the Claude chat only when the user asks.
 - Limitation: works only while a session is open. Permanent option: a hosted
   bot that calls the Claude API.
