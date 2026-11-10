@@ -71,7 +71,7 @@
 
 Результат:
 - полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS: отправь Алану по правилам README (файлом в чат или через черновик GitHub Release);
-- `ForbiddenEarth/video01/render/review_720p.mp4` — сжатая копия для проверки, до 90 МБ;
+- `ForbiddenEarth/video01/render/review_720p.mp4` — сжатая копия для проверки, до 45 МБ;
 - `ForbiddenEarth/video01/render/contact_sheet_full.jpg` — все использованные кадры;
 - `ForbiddenEarth/video01/visuals/credits.txt` — полный список по всему видео;
 - `ForbiddenEarth/video01/visuals/credits_compact.txt` — тот же список коротко, одна строка на кадр: «Название — Автор (лицензия)». В отчёте укажи, сколько в нём символов: у описания YouTube лимит 5000.
