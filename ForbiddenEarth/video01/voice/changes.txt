@@ -1,0 +1,76 @@
+Forbidden Earth - video01 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, UNITS, SYMBOLS -> WORDS
+1,746        one thousand seven hundred and forty-six   (00_hook, 09_nyos)
+1962         nineteen sixty-two                         (00_hook, 05_centralia)
+48           forty-eight                                (00_hook, 01_gruinard)
+1942         nineteen forty-two
+1980s        nineteen-eighties
+April 24th   April twenty-fourth
+1990         nineteen ninety                            (01, 08)
+£500         five hundred pounds
+150          one hundred and fifty
+pH           p H
+1976         nineteen seventy-six
+49           forty-nine
+1,200        one thousand two hundred
+170          one hundred and seventy
+99 percent   ninety-nine percent
+300 / 700    three hundred / seven hundred              (03, 10)
+1995         nineteen ninety-five
+1997         nineteen ninety-seven
+1980         nineteen eighty
+1,000        one thousand                               (05, 07)
+2020         twenty twenty                              (05, 10)
+250          two hundred and fifty
+1950s        nineteen-fifties
+1966         nineteen sixty-six
+2,000        two thousand                               (06, 10)
+2007         two thousand and seven
+47,000       forty-seven thousand
+1946         nineteen forty-six
+1958         nineteen fifty-eight
+23           twenty-three
+1954         nineteen fifty-four
+1.5          one point five
+1960s        nineteen-sixties
+2016         twenty sixteen
+1951         nineteen fifty-one
+600          six hundred
+10,000       ten thousand
+1978         nineteen seventy-eight
+1986         nineteen eighty-six                        (08, 09)
+mid-2010s    mid twenty-tens
+August 21st  August twenty-first
+100,000      one hundred thousand
+300,000      three hundred thousand
+50           fifty                                      (09, twice)
+3,500        three thousand five hundred
+800          eight hundred
+60           sixty
+2021         twenty twenty-one
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Gruinard     /ɡɹˈɪnjəɹd/     GRIN-yard          (Kokoro did not know the word)
+Kawah Ijen   /kˈɑwɑ ˈiʤɛn/   KAH-wah EE-jen     (unknown)
+Soufrière    /sˌufɹiˈɛɹ/     soo-free-AIR       (unknown)
+Montserrat   /mˌɑntsəɹˈæt/   mont-se-RAT        (default ended in "-raht")
+Centralia    /sɛntɹˈAliə/    sen-TRAY-lee-a     (unknown)
+Wittenoom    /wˈɪtᵊnˌum/     WIT-e-noom         (unknown)
+Pilbara      /pˈɪlbəɹə/      PIL-ba-ra          (unknown)
+Karachay     /kˌɑɹəʧˈI/      ka-ra-CHAI         (unknown)
+Mayak        /mɑjˈɑk/        ma-YAHK            (unknown)
+Nyos         /nˈiOs/         NEE-ohs            (unknown)
+Kivu         /kˈivu/         KEE-voo            (unknown)
+Nyiragongo   /nˌɪɹəɡˈɑŋɡO/   neer-a-GONG-go     (unknown)
+Extra, not on your list but also unknown to Kokoro:
+Ural         /jˈʊɹəl/        YOOR-al
+Guinness     /ɡˈɪnɪs/        GIN-iss
+
+3) CHECKED, LEFT AS IS (Kokoro already pronounces them correctly)
+Zone Rouge   zohn ROOZH
+Plymouth     PLIM-uth
+Bikini       bi-KEE-nee
+Castle Bravo KAS-ul BRAH-voh
+Also OK: Rwanda, Congo, Cameroon, Hiroshima, pyroclastic, formaldehyde, roentgens, cesium, ZIP code.

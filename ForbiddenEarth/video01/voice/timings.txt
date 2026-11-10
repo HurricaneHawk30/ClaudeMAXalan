@@ -1,0 +1,16 @@
+Forbidden Earth - video01 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:28.250   28.250s
+01_gruinard      00:29.050  01:32.450   63.400s
+02_kawah_ijen    01:33.250  02:26.600   53.350s
+03_zone_rouge    02:27.400  03:22.950   55.550s
+04_plymouth      03:23.750  04:15.100   51.350s
+05_centralia     04:15.900  05:09.825   53.925s
+06_wittenoom     05:10.625  06:05.425   54.800s
+07_bikini        06:06.225  07:12.275   66.050s
+08_karachay      07:13.075  08:10.275   57.200s
+09_nyos          08:11.075  09:15.325   64.250s
+10_kivu          09:16.125  10:18.675   62.550s
+11_outro         10:19.475  10:37.600   18.125s
+
+TOTAL            10:37.600  (637.600s)

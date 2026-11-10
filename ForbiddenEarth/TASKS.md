@@ -2,13 +2,18 @@
 
 Порядок работы описан в `README.md`. Берётся первая задача со статусом `TODO`.
 
-## 1. Сохранить готовую озвучку video01 — TODO
+## 1. Сохранить готовую озвучку video01 — DONE
 
 Всё, что уже сделано для первого видео (озвучка из 12 разделов, `full.mp3`, `timings.txt`, `changes.txt`, `script_original.txt`, `script_tts.txt`, `voice_build.py`), перенеси в эту ветку:
 - `ForbiddenEarth/video01/voice/` — mp3, `timings.txt`, `changes.txt`, `script_tts.txt`;
 - `ForbiddenEarth/video01/script/` — `script_original.txt`, `voice_build.py`.
 
 Если файлы лежат в другой папке или на другой ветке, просто скопируй их сюда. Закоммить и запушь.
+
+**Отчёт.** Перенесено из облачной папки `~/ForbiddenEarth/video01`:
+- `video01/voice/` — 12 разделов `00_hook.mp3`…`11_outro.mp3` и `full.mp3` (Kokoro `am_michael`, 0.95, 192 kbps, 44.1 кГц), `timings.txt` (общая длина 10:37.6), `changes.txt` (числа → слова и фонемы имён), `script_tts.txt`.
+- `video01/script/` — `script_original.txt`, `voice_build.py`. Пересборка: `python voice_build.py script_original.txt ../voice` (нужны `kokoro`, `soundfile`, ffmpeg, Python 3.10–3.12).
+- Проверить на слух: 08:10 «600 roentgens» — Kokoro читает «RENT-gens», Whisper распознал как «retcons».
 
 ## 2. Пробный фрагмент видео: вступление и №10 — TODO
 
