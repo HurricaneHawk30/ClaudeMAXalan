@@ -199,3 +199,17 @@
 - скопируй скрипты сборки video02 в `video03/visuals/`, чтобы после озвучки сразу монтировать.
 
 В отчёте — по каким местам кадров мало или они слабые.
+
+## 7. Озвучка и полное видео video03 — TODO
+
+Делается после задачи 6. Название: **10 Beautiful Places You're Not Allowed to Visit**. Текст: `ForbiddenEarth/video03/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров и произношение: `ForbiddenEarth/video03/script/visuals_plan.md`.
+
+Озвучка — как в задаче 4 (video02): `voice_build.py` со словарями под этот текст (все числа и годы → слова; «Kamehameha the Fifth», «210 BC», «6,638», «$10,000»), фонемы новых имён по списку, Kokoro `am_michael`, 0.95, проверка Whisper. Результат в `video03/voice/`.
+
+Видео — как в задаче 5 (video02), из кадров задачи 6: карточка с номером → карта → кадры по смыслу фраз, подпись внизу, без музыки, конечная заставка в `11_outro`. Результат:
+- полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS — Алану файлом в чат (до 400 МиБ);
+- `video03/render/review_720p.mp4` (до 45 МБ), `video03/render/contact_sheet_full.jpg`;
+- `video03/visuals/credits.txt` и `video03/visuals/credits_youtube.txt` (не больше 3800 символов);
+- `video03/youtube/chapters.txt` — главы по `timings.txt`: `0:00 Intro`, `#10 The Wave, Arizona` … `#1 Tomb of Qin Shi Huang, China`, `Outro`.
+
+В отчёте — длина, что стоит послушать и проверить глазами.
