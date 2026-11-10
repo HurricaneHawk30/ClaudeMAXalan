@@ -1,0 +1,28 @@
+IMAGE CREDITS - Forbidden Earth, episode 1 (preview: #10 Gruinard Island)
+
+1. "Nyos Lake" by Jack Lockwood, USGS. Public domain. Source: https://commons.wikimedia.org/wiki/File:Nyos_Lake.jpg
+2. "Lake Nyos 1986 001" by Jack Lockwood. Public domain. Source: https://commons.wikimedia.org/wiki/File:Lake_Nyos_1986_001.jpg
+3. "Fire under Centralia, Pennsylvania in December 2006" by Scott Drzyzga. CC BY 2.0 (https://creativecommons.org/licenses/by/2.0). Source: https://commons.wikimedia.org/wiki/File:Fire_under_Centralia,_Pennsylvania_in_December_2006.jpg
+4. "Gruinard Island - geograph.org.uk - 6728419" by Sandy Gerrard. CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0). Source: https://commons.wikimedia.org/wiki/File:Gruinard_Island_-_geograph.org.uk_-_6728419.jpg
+5. "The blue fire of Kawah Ijen 1" by Thomas Fuhrmann. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Source: https://commons.wikimedia.org/wiki/File:The_blue_fire_of_Kawah_Ijen_1.jpg
+6. "VerdunLandscapeForest" by F. Lamiot. CC BY-SA 2.5 (https://creativecommons.org/licenses/by-sa/2.5). Source: https://commons.wikimedia.org/wiki/File:VerdunLandscapeForest.jpg
+7. "Buried city of Plymouth (12124498933)" by Leonora (Ellie) Enking from East Preston, United Kingdom. CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0). Source: https://commons.wikimedia.org/wiki/File:Buried_city_of_Plymouth_(12124498933).jpg
+8. "Govt Warning - Wittenoom WA" by Five Years. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Source: https://commons.wikimedia.org/wiki/File:Govt_Warning_-_Wittenoom_WA.JPG
+9. "Castle Bravo Blast" by United States Department of Energy. Public domain. Source: https://commons.wikimedia.org/wiki/File:Castle_Bravo_Blast.jpg
+10. "Lava Lake of Mount Nyiragongo in DR Congo - 2018" by Matti Barthel (https://imaggeo.egu.eu/user/matti/). CC BY 3.0 (https://creativecommons.org/licenses/by/3.0). Source: https://commons.wikimedia.org/wiki/File:Lava_Lake_of_Mount_Nyiragongo_in_DR_Congo_-_2018.jpg
+11. "Kivu,Goma and Rubavu On Rwanda Side" by Ericnkurunziza. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Source: https://commons.wikimedia.org/wiki/File:Kivu,Goma_and_Rubavu_On_Rwanda_Side.jpg
+12. "Gruinard Island" by Kevin Walsh from Oxford, England. CC BY 2.0 (https://creativecommons.org/licenses/by/2.0). Source: https://commons.wikimedia.org/wiki/File:Gruinard_Island.jpg
+13. "Scottish Blackface on Horgabost beach, Harris isle" by Catriona Savage. CC BY 2.0 (https://creativecommons.org/licenses/by/2.0). Source: https://commons.wikimedia.org/wiki/File:Scottish_Blackface_on_Horgabost_beach,_Harris_isle.jpg
+14. "Bacillus anthracis" by CDC, uploaded by en:User:MarcoTolo. Public domain. Source: https://commons.wikimedia.org/wiki/File:Bacillus_anthracis.png
+15. "An Eilid, Gruinard Island - geograph.org.uk - 4026042" by Rude Health. CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0). Source: https://commons.wikimedia.org/wiki/File:An_Eilid,_Gruinard_Island_-_geograph.org.uk_-_4026042.jpg
+16. "Porton Down boundary fence by railway - geograph.org.uk - 7467959" by Oscar Taylor. CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0). Source: https://commons.wikimedia.org/wiki/File:Porton_Down_boundary_fence_by_railway_-_geograph.org.uk_-_7467959.jpg
+17. "Anthrax bacillus spores (5940428555)" by National Institute of Standards and Technology. Public domain. Source: https://commons.wikimedia.org/wiki/File:Anthrax_bacillus_spores_(5940428555).jpg
+18. "Gruinard Island - 1981 - geograph.org.uk - 2252447" by Helmut Zozmann. CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0). Source: https://commons.wikimedia.org/wiki/File:Gruinard_Island_-_1981_-_geograph.org.uk_-_2252447.jpg
+19. "Gruinard island (48106907357)" by Mike McBey. CC BY 2.0 (https://creativecommons.org/licenses/by/2.0). Source: https://commons.wikimedia.org/wiki/File:Gruinard_island_(48106907357).jpg
+20. "Gruinard Bay Panorama - October 15th 2012" by Synchronium. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Source: https://commons.wikimedia.org/wiki/File:Gruinard_Bay_Panorama_-_October_15th_2012.jpg
+21. "Beach on Gruinard Bay - geograph.org.uk - 5997689" by Martin Dawes. CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0). Source: https://commons.wikimedia.org/wiki/File:Beach_on_Gruinard_Bay_-_geograph.org.uk_-_5997689.jpg
+
+Changes: images were cropped, color-graded and animated (zoom/pan).
+Maps: made with Natural Earth data (public domain), naturalearthdata.com.
+Fonts: Oswald and Inter (SIL Open Font License).
+Narration: Kokoro TTS (Apache 2.0).

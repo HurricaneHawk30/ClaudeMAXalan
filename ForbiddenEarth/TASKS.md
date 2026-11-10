@@ -15,7 +15,7 @@
 - `video01/script/` — `script_original.txt`, `voice_build.py`. Пересборка: `python voice_build.py script_original.txt ../voice` (нужны `kokoro`, `soundfile`, ffmpeg, Python 3.10–3.12).
 - Проверить на слух: 08:10 «600 roentgens» — Kokoro читает «RENT-gens», Whisper распознал как «retcons».
 
-## 2. Пробный фрагмент видео: вступление и №10 — TODO
+## 2. Пробный фрагмент видео: вступление и №10 — DONE
 
 Разделы `00_hook` и `01_gruinard` (00:00–01:32.5 по `timings.txt`) под готовую озвучку. Рабочая папка: `ForbiddenEarth/video01/visuals/`.
 
@@ -42,3 +42,12 @@
 - `ForbiddenEarth/video01/render/contact_sheet.jpg` — сетка со всеми использованными кадрами;
 - `ForbiddenEarth/video01/visuals/credits.txt` — название, автор, лицензия и ссылка для каждого кадра;
 - скрипт сборки, чтобы потом собрать остальные разделы так же.
+
+**Отчёт.**
+- `video01/render/preview.mp4` — 1:32.5, 1920×1080, 30 fps, H.264 High + AAC стерео, громкость −16 LUFS, 67 МБ.
+- `video01/render/contact_sheet.jpg` — 21 кадр + карта, номера совпадают с `credits.txt`.
+- `video01/visuals/credits.txt` — 21 изображение с Wikimedia Commons: 6 общественное достояние (USGS, CDC, NIST, Минэнерго США), остальные CC BY / CC BY-SA. Плюс Natural Earth, шрифты Oswald и Inter (OFL), Kokoro.
+- Скрипты сборки: `visuals/BUILD.md`, `render.py`, `edl_build.py`, `maps/globe_zoom.py`, `make_credits.py`, `contact.py`. Кадры с метаданными лицензий — `visuals/src/`.
+- Исключено: фото с погибшей коровой (Ниос), фото Портон-Дауна от Минобороны (лицензия OGL), граффити-шоссе Сентрейлии.
+- Сеть облака: разрешены `commons.wikimedia.org`, `upload.wikimedia.org`, `thumb.wikimedia.org` (с подтверждения Алана).
+- Проверить: кадры вступления короче 5–8 с (быстрая смена по заданию); снимок острова с людьми на пляже (1:16) — автор называет его Груинардом, но остров выглядит скалистее, чем на остальных кадрах; два снимка Ниоса маленькие (640–770 px), чуть мягче.
