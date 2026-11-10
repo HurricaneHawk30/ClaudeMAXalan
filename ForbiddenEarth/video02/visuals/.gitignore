@@ -1,0 +1,4 @@
+fonts/
+maps/*.geojson
+maps/frames_*/
+work/seg/
