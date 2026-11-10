@@ -1,0 +1,17 @@
+Forbidden Earth - video01 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:25.175   25.175s
+01_skara_brae    00:25.975  01:24.850   58.875s
+02_cliff_palace  01:25.650  02:26.175   60.525s
+03_derinkuyu     02:26.975  03:26.325   59.350s
+04_mohenjo_daro  03:27.125  04:33.250   66.125s
+05_petra         04:34.050  05:32.125   58.075s
+06_pompeii       05:32.925  06:37.875   64.950s
+07_machu_picchu  06:38.675  07:40.675   62.000s
+08_ubar          07:41.475  08:43.625   62.150s
+09_valeriana     08:44.425  09:49.100   64.675s
+10_troy          09:49.900  10:57.825   67.925s
+11_atlantis      10:58.625  12:43.125  104.500s
+12_outro         12:43.925  12:58.225   14.300s
+
+TOTAL            12:58.225  (778.225s)

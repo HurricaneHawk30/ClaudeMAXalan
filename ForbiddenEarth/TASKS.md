@@ -103,7 +103,7 @@
 - 7:05: кораллы сняты на атолле Роз (тот же Тихий океан), не на Бикини — в подписи кадра место не указано.
 - `render/preview.mp4` (67 МБ) остался в ветке с прошлой задачи и больше правила 45 МБ; я его не удалял — решение за Аланом.
 
-## 4. Озвучка video02 — TODO
+## 4. Озвучка video02 — DONE
 
 Второе видео: **10 Lost Cities That Were Found Again (And One That Never Was)**. Текст: `ForbiddenEarth/video02/script/script_original.txt` (13 разделов `00_hook` … `12_outro`). План кадров и произношение: `ForbiddenEarth/video02/script/visuals_plan.md`.
 
@@ -114,6 +114,18 @@
 4. Проверь распознаванием (Whisper), что имена и числа звучат правильно, особенно Skara Brae, Derinkuyu, Mohenjo-daro, Burckhardt, Lizárraga, Pachacuti, Shisr, Auld-Thomas, Hisarlik, Schliemann, Timaeus, Akrotiri.
 
 В отчёте: общая длина, длина каждого раздела, что пришлось поправить в произношении, что стоит послушать Алану.
+
+**Отчёт.**
+- Голос Kokoro `am_michael`, скорость 0.95, паузы как в video01 (0.4 с между абзацами, 0.8 с между разделами), mp3 192 kbps / 44.1 кГц.
+- Общая длина `full.mp3` — **12:58.2**. Разделы: 00_hook 25.2 с · 01_skara_brae 58.9 · 02_cliff_palace 60.5 · 03_derinkuyu 59.4 · 04_mohenjo_daro 66.1 · 05_petra 58.1 · 06_pompeii 65.0 · 07_machu_picchu 62.0 · 08_ubar 62.2 · 09_valeriana 64.7 · 10_troy 67.9 · 11_atlantis 104.5 · 12_outro 14.3. Начала и концы — в `voice/timings.txt`.
+- `script/voice_build.py` — словари video02: 49 чисел, годов и порядковых → слова (1590s → fifteen-nineties, 1400s → fourteen hundreds, 1902 → nineteen oh-two, «the year 79» → seventy-nine); BC → «B C»; R. D., T. E., A., U.S., PhD — по буквам; «Mohenjo-daro» без дефиса.
+- Фонемы для 45 слов: все имена из списка `visuals_plan.md`, Kokoro их не знал или читал неверно. Сверх списка: Wetherill, Calvert, Clapp, Ibrahim, Johann, Donnelly, Ignatius, Hiram, Bingham, Melchor, ballcourt. Исправлены и известные Kokoro слова, которые он читал неправильно: Verde (было «верд»), Fontana, Campeche, Minoan (было два слога). Полный список — `voice/changes.txt`.
+- Проверка Whisper (`small.en`): все числа, годы и сокращения распознаны верно. Имена: Skara Brae, Derinkuyu, Mohenjo-daro, Burckhardt, Lizárraga (вместе с «A.»), Pachacuti, Shisr, Auld-Thomas, Hisarlik, Schliemann, Akrotiri — распознаны по звучанию верно; Timaeus Whisper записал как «Tiamius», Kircher как «Kierke» — это его попытки написать незнакомые слова, ударения как в плане.
+
+Стоит послушать Алану:
+- 6:08 «for almost one hundred and fifty more years» — Whisper услышал «one hundred in fifty»: «and» проглатывается.
+- 11:45 Kircher — сейчас «KEER-ker», без немецкого «х».
+- 11:10 Timaeus и 11:12 Critias — редкие имена, проверить ударение.
 
 ## 5. Полное видео video02 — TODO
 

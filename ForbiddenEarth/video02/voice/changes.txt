@@ -1,0 +1,114 @@
+Forbidden Earth - video02 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, ORDINALS -> WORDS
+1850         eighteen fifty
+5,000        five thousand
+2,500        two thousand five hundred
+18th         eighteenth
+1888         eighteen eighty-eight
+800          eight hundred
+150          one hundred and fifty
+23           twenty-three
+100          one hundred
+1300         thirteen hundred
+600          six hundred
+1963         nineteen sixty-three
+85           eighty-five
+18           eighteen
+20,000       twenty thousand
+50           fifty
+8th          eighth
+19th         nineteenth
+4,000        four thousand
+1922         nineteen twenty-two
+1924         nineteen twenty-four
+4,500        four thousand five hundred
+1812         eighteen twelve
+22nd         twenty-second
+79           seventy-nine
+1590s        fifteen-nineties
+1748         seventeen forty-eight
+24th         twenty-fourth
+1911         nineteen eleven
+1902         nineteen oh-two
+1400s        fourteen hundreds
+1984         nineteen eighty-four
+1992         nineteen ninety-two
+2024         twenty twenty-four
+2013         twenty thirteen
+6,600        six thousand six hundred
+2,000        two thousand
+1800s        eighteen hundreds
+1870         eighteen seventy
+160          one hundred and sixty
+1873         eighteen seventy-three
+1,000        one thousand
+360          three hundred and sixty
+9,000        nine thousand
+1669         sixteen sixty-nine
+1882         eighteen eighty-two
+1600         sixteen hundred
+
+2) ABBREVIATIONS (read letter by letter)
+R. D. Banerji      -> R D Banerji
+T. E. Lawrence     -> T E Lawrence
+A. Lizárraga       -> A Lizárraga
+U.S. congressman   -> U S congressman
+PhD                -> P H D
+ BC                ->  B C
+Mohenjo-daro       -> Mohenjo daro
+
+3) PRONUNCIATION FIXED WITH KOKORO PHONEMES (word -> /phonemes/)
+Skara        /skˈɑɹə/
+Orkney       /ˈɔɹkni/
+Verde        /vˈɜɹdi/
+Puebloan     /pwˈɛblOən/
+Derinkuyu    /dˌɛɹɪnkˈuju/
+Mohenjo      /mOhˈɛnʤO/
+daro         /dˈɑɹO/
+Banerji      /bˈænəɹʤi/
+Burckhardt   /bˈɜɹkhɑɹt/
+Domenico     /dəmˈɛnikO/
+Fontana      /fɑntˈɑnə/
+Sarno        /sˈɑɹnO/
+Machu        /mˈɑʧu/
+Picchu       /pˈikʧu/
+Urubamba     /ˌuɹubˈɑmbə/
+Arteaga      /ˌɑɹtAˈɑɡə/
+Lizárraga    /lisˈɑɹəɡə/
+Pachacuti    /pˌɑʧəkˈuti/
+Ubar         /ˈubɑɹ/
+Iram         /ˈiɹɑm/
+Shisr        /ʃˈɪsəɹ/
+Tulane       /tulˈAn/
+Campeche     /kæmpˈɛʧA/
+Valeriana    /vəlˌɛɹiˈɑnə/
+Hisarlik     /hˌɪsɑɹlˈɪk/
+Schliemann   /ʃlˈimɑn/
+Pushkin      /pˈʊʃkɪn/
+Timaeus      /tIˈmiəs/
+Critias      /kɹˈɪtiəs/
+Athanasius   /ˌæθənˈAʃəs/
+Kircher      /kˈiɹkəɹ/
+Akrotiri     /ˌækɹOtˈɪɹi/
+Minoan       /mɪnˈOən/
+Wetherill    /wˈɛðəɹɪl/
+Calvert      /kˈælvəɹt/
+Clapp        /klˈæp/
+Ibrahim      /ˈɪbɹəhˌim/
+Johann       /jˈOhɑn/
+ballcourt    /bˈɔlkˌɔɹt/
+Donnelly     /dˈɑnəli/
+Ignatius     /ɪɡnˈAʃəs/
+Hiram        /hˈIɹəm/
+Bingham      /bˈɪŋəm/
+Melchor      /mˈɛlkɔɹ/
+
+4) CHECKED, LEFT AS IS (Kokoro already reads them well)
+Brae, Mesa, kivas, Harappa, Lahore, Multan, Nabataeans, Vesuvius, Auld, Thomas, Priam, Solon, Heracles,
+Santorini, Achilles, Trojan, Inca, Gibraltar, Crete, Athenian, Pompeii, Petra, Jordan, Oman, Maya, lidar, stupa, Indus.
+
+5) WHISPER CHECK (small.en): all numbers, years and abbreviations recognised correctly.
+Names recognised as: Skarabrae, Derinkuyu, Mohenjo-daro, Burkhardt, Elisarraga (= A. Lizarraga), Pachacuti,
+Schisser (= Shisr), Auld Thomas, Hisarlik, Schliemann, Akrotiri, Tiamius (= Timaeus), Kierke (= Kircher).
