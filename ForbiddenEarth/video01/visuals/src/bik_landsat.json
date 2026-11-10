@@ -1,0 +1,14 @@
+{
+ "key": "bik_landsat",
+ "source": "Wikimedia Commons",
+ "title": "Bikini Atoll 2001-01-14, Landsat 7 ETM+, bands 3-2-1-8, rev2.png",
+ "author": "NASA",
+ "credit": "NASA Landsat satellite image GeoTIFF archive, http://glovis.usgs.gov",
+ "license": "Public domain",
+ "license_url": "",
+ "url": "https://commons.wikimedia.org/wiki/File:Bikini_Atoll_2001-01-14,_Landsat_7_ETM%2B,_bands_3-2-1-8,_rev2.png",
+ "description": "Composite \"true color\" multispectral satellite image of Bikini Atoll, Marshall Islands. NASA Landsat 7 ETM+ bands used were 3 (red), 2 (green) and 1 (blue), and the image was pan-sharpened to 15m resolution. Imagery courtesy of NASA/USGS.",
+ "restrictions": "",
+ "size": "3063x1944",
+ "license_ok": true
+}

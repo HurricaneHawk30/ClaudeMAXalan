@@ -18,7 +18,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = os.path.join(HERE, "..", "fonts")
 R = 6371000.0
 W, H, DPI = 1920, 1080, 100
-OCEAN, LAND, BORDER, HIL, ACCENT = "#070b0f", "#20272a", "#3a4448", "#47301f", "#e0a84a"
+OCEAN, LAND, BORDER, HIL, ACCENT = "#070b0f", "#56676c", "#93a3a7", "#8a5a30", "#e0a84a"
+SEA = "#132632"
 
 def load(path, keep=None, clip=None):
     feats = json.load(open(path))["features"]
@@ -42,14 +43,19 @@ def main():
     a.add_argument("--sub", default=""); a.add_argument("--out", required=True)
     a.add_argument("--secs", type=float, default=3.5); a.add_argument("--end_km", type=float, default=120)
     a.add_argument("--start_lon", type=float, default=None)
+    a.add_argument("--country_label", default=None)
     o = a.parse_args()
     os.makedirs(o.out, exist_ok=True)
+    countries = [c.strip() for c in o.country.split(",")]
+
     oswald = font_manager.FontProperties(fname=os.path.join(FONTS, "Oswald-Bold.ttf"))
     inter = font_manager.FontProperties(fname=os.path.join(FONTS, "Inter-Bold.ttf"))
     coarse = load(os.path.join(HERE, "ne_50m_admin_0_countries.geojson"))
     region = box(o.lon - 25, o.lat - 15, o.lon + 25, o.lat + 15)
     fine = load(os.path.join(HERE, "ne_10m_admin_0_countries.geojson"), clip=region)
     pc = ccrs.PlateCarree()
+    lakes = [shape(f["geometry"]) for f in json.load(open(os.path.join(HERE, "ne_10m_lakes.geojson")))["features"]
+             if (f["properties"].get("scalerank") or 9) <= 6 or shape(f["geometry"]).intersects(region)]
     outside = [(nm, g.difference(region)) for nm, g in coarse]
     outside = [(nm, g) for nm, g in outside if not g.is_empty]
     n = int(round(o.secs * 30))
@@ -71,28 +77,32 @@ def main():
         proj = ccrs.Orthographic(central_longitude=clon, central_latitude=clat)
         fig = plt.figure(figsize=(W / DPI, H / DPI), dpi=DPI, facecolor=OCEAN)
         ax = fig.add_axes([0, 0, 1, 1], projection=proj)
-        ax.set_facecolor(OCEAN)
+        ax.set_facecolor(OCEAN if hh > 0.5 * R else SEA)
         ax.spines["geo"].set_visible(False)
         hw = hh * W / H
         ax.set_xlim(-hw, hw); ax.set_ylim(-hh, hh)
         if hh > 0.5 * R:  # globe disc + atmosphere glow
-            for k, al in [(1.06, .05), (1.035, .08), (1.015, .12)]:
-                ax.add_patch(plt.Circle((0, 0), R * k, transform=proj, color="#3b5566", alpha=al, zorder=0))
-            ax.add_patch(plt.Circle((0, 0), R, transform=proj, color="#0d151b", zorder=0.5))
-        ax.gridlines(color="#18232b", linewidth=0.6, alpha=0.8 if hh > 2e6 else 0.3)
+            ga = smooth((hh / R - 0.5) / 0.5)
+            for k, al in [(1.07, .07), (1.04, .11), (1.018, .16)]:
+                ax.add_patch(plt.Circle((0, 0), R * k, transform=proj, color="#4d7085", alpha=al * ga, zorder=0))
+            ax.add_patch(plt.Circle((0, 0), R, transform=proj, color=SEA, zorder=0.5))
+            ax.add_patch(plt.Circle((0, 0), R, transform=proj, fill=False, edgecolor=ACCENT, linewidth=2.2,
+                                    alpha=0.9 * ga, zorder=3))
+        ax.gridlines(color="#2a4150", linewidth=0.7, alpha=0.8 if hh > 2e6 else 0.3)
         geoms = coarse if hh > 2.5e6 else outside + fine
         hl_alpha = smooth((0.75 - (hh / R)) / 0.5) if hh < R else 0.0
         for name, g in geoms:
-            is_hl = name == o.country
+            is_hl = name in countries
             col = HIL if is_hl and hl_alpha > 0 else LAND
-            ax.add_geometries([g], pc, facecolor=col, edgecolor=BORDER, linewidth=0.5, zorder=1)
+            ax.add_geometries([g], pc, facecolor=col, edgecolor=BORDER, linewidth=0.8, zorder=1)
             if is_hl and hl_alpha > 0:
                 ax.add_geometries([g], pc, facecolor="none", edgecolor=ACCENT, linewidth=1.4,
                                   alpha=hl_alpha, zorder=2)
+        ax.add_geometries(lakes, pc, facecolor=SEA, edgecolor=BORDER, linewidth=0.5, zorder=1.5)
         # country label while at country scale
         cl = smooth((t - 0.55) / 0.12) * (1 - smooth((t - 0.86) / 0.08))
         if cl > 0.01:
-            ax.text(0.5, 0.86, o.country.upper(), transform=ax.transAxes, ha="center",
+            ax.text(0.5, 0.86, (o.country_label or o.country).upper(), transform=ax.transAxes, ha="center",
                     fontproperties=inter, fontsize=26, color="#cfd6d8", alpha=cl, path_effects=STROKE)
         # point marker + label in final phase
         pl = smooth((t - 0.72) / 0.12)

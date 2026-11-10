@@ -110,6 +110,20 @@ def lower_layer(num, text):
     L = Image.alpha_composite(sh, L)
     return np.asarray(L).astype(np.float32) / 255
 
+@functools.lru_cache(maxsize=1)
+def endcard_layer():
+    """Logo + Subscribe in the LEFT half; centre and right stay clear for YouTube end screen elements."""
+    L = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(L)
+    cx = W * 0.24
+    draw_tracked(d, (cx, 370), "FORBIDDEN", font("Oswald-Bold.ttf", 128), (245, 245, 242, 255), 10, True)
+    draw_tracked(d, (cx, 520), "EARTH", font("Oswald-Bold.ttf", 128), (245, 245, 242, 255), 10, True)
+    d.rectangle([cx - 120, 712, cx + 120, 716], fill=AMBER + (255,))
+    fb = font("Inter-Bold.ttf", 38)
+    tw = sum(d.textlength(c, font=fb) for c in "SUBSCRIBE") + 8 * 8
+    d.rounded_rectangle([cx - tw / 2 - 34, 760, cx + tw / 2 + 34, 836], radius=10, outline=AMBER + (255,), width=3)
+    draw_tracked(d, (cx, 776), "SUBSCRIBE", fb, AMBER + (255,), 8, True)
+    return np.asarray(L).astype(np.float32) / 255
+
 def over(base, layer, a):
     al = layer[..., 3:4] * a
     return base * (1 - al) + layer[..., :3] * al
@@ -120,14 +134,51 @@ def shot_image(s, t):
     u = min(max(u, 0), 1)
     if "frames" in s: return seq_frame(s, t) * VIGNETTE
     if s.get("card"):
-        bg = still_frame({**s, "move": s.get("move", {"s0": 1.12, "s1": 1.18})}, u)
-        bg = cv2.GaussianBlur(bg, (0, 0), 9) * 0.38
+        if s.get("bg_map"):
+            bg = map_bg(s["bg_map"])
+        else:
+            bg = still_frame({**s, "move": s.get("move", {"s0": 1.12, "s1": 1.18})}, u)
+            bg = cv2.GaussianBlur(bg, (0, 0), 9) * 0.38
         lay = card_layer(s["num"], s["name"], s["sub"])
         a = smooth((t - s["t0"] - 0.15) / 0.5)
         sh = int(round(18 * (1 - a)))
         if sh: lay = np.roll(lay, sh, axis=0)
         return over(bg * VIGNETTE, lay, a)
+    if s.get("inset"):
+        return inset_frame(s, u) * VIGNETTE
     return still_frame(s, u) * VIGNETTE
+
+@functools.lru_cache(maxsize=12)
+def map_bg(d):
+    d = os.path.join(HERE, d); f = sorted(os.listdir(d))[0]
+    im = cv2.cvtColor(cv2.imread(os.path.join(d, f)), cv2.COLOR_BGR2RGB).astype(np.float32) / 255
+    return cv2.GaussianBlur(im, (0, 0), 14) * 0.55
+
+@functools.lru_cache(maxsize=6)
+def load_inset(path, crop):
+    im = cv2.cvtColor(cv2.imread(os.path.join(HERE, path), cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
+    if crop:
+        h, w = im.shape[:2]; x0, y0, x1, y1 = crop
+        im = im[int(y0 * h):int(y1 * h), int(x0 * w):int(x1 * w)]
+    return grade(im)
+
+def inset_frame(s, u):
+    """Small source: sharp image at moderate size, centred on a blurred, darkened cover of itself."""
+    crop = tuple(s["crop"]) if s.get("crop") else None
+    bg = still_frame({**s, "move": {"s0": 1.15, "s1": 1.22}}, u)
+    bg = cv2.GaussianBlur(bg, (0, 0), 22) * 0.42
+    fg = load_inset(s["src"], crop)
+    h, w = fg.shape[:2]
+    k = min(W * 0.66 / w, H * 0.74 / h, s.get("max_up", 1.35))
+    k *= 1.0 + 0.04 * (0.55 * u + 0.45 * smooth(u))
+    nw, nh = int(w * k), int(h * k)
+    fgr = cv2.resize(fg, (nw, nh), interpolation=cv2.INTER_LANCZOS4 if k > 1 else cv2.INTER_AREA)
+    x0, y0 = (W - nw) // 2, (H - nh) // 2
+    sh = np.zeros((H, W), np.float32); sh[y0 + 10:y0 + nh + 10, x0 + 6:x0 + nw + 6] = 1
+    sh = cv2.GaussianBlur(sh, (0, 0), 18)[..., None] * 0.65
+    out = bg * (1 - sh)
+    out[y0:y0 + nh, x0:x0 + nw] = np.clip(fgr, 0, 1)
+    return out
 
 def weight(s, t):
     xi, xo = s.get("xin", 0.5), s.get("xout", 0.5)
@@ -148,6 +199,9 @@ def frame(edl, t):
         if o["type"] == "brand":
             out = out * (1 - 0.45 * a)
             out = over(out, brand_layer(), a)
+        elif o["type"] == "endcard":
+            out = out * (1 - 0.35 * a)
+            out = over(out, endcard_layer(), a)
         elif o["type"] == "lower":
             out = over(out, lower_layer(o["num"], o["text"]), a)
     fade_in = smooth(t / 0.4); fade_out = 1 - smooth((t - (edl["duration"] - 0.6)) / 0.6)
@@ -166,7 +220,12 @@ def main():
     t_to = float(args[args.index("--to") + 1]) if "--to" in args else edl["duration"]
     n = int(round((t_to - t_from) * FPS))
     audio = os.path.join(HERE, edl["audio"])
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
+    if "--noaudio" in args:
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
+               "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "slow", "-crf", "18",
+               "-pix_fmt", "yuv420p", "-profile:v", "high", "-an", out]
+    else:
+      cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
            "-r", str(FPS), "-i", "-", "-ss", str(t_from), "-t", str(t_to - t_from), "-i", audio,
            "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "slow", "-crf", "18",
            "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
