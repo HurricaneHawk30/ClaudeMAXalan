@@ -306,7 +306,7 @@
 - Фонемы для 28 слов по списку из `visuals_plan.md`; полный список — `voice/changes.txt`.
 - Whisper: все числа, годы и имена распознаны верно, ошибок не найдено.
 
-Видео: **11:07.6**, 1920×1080, 30 fps, H.264 + AAC, **−16.1 LUFS**. Алану отправлен файлом в чат `ForbiddenEarth_video04_1080p.mp4` (373 МиБ, ≈4.7 Мбит/с); мастер `full_1080p.mp4` (428 МиБ) — в облаке. `render/review_720p.mp4` — 41 МБ (−16.1 LUFS); `render/contact_sheet_full.jpg`; `visuals/credits.txt` (102 изображения; схемы глубины нарисованы кодом и в титрах не указаны), `visuals/credits_youtube.txt` — **2611 символов** (одинаковые автор + лицензия теперь одной строкой «×N»); `youtube/chapters.txt` — 12 глав (0:00 Intro … 9:42 #1 Point Nemo, South Pacific, 10:54 Outro). Схемы глубины — 7:45 (Кола) и 8:52 (Бездна Челленджера).
+Видео: **11:07.6**, 1920×1080, 30 fps, H.264 + AAC, **−16.1 LUFS**. Алану отправлен файлом в чат `ForbiddenEarth_video04_1080p.mp4` (373 МиБ, ≈4.7 Мбит/с); мастер `full_1080p.mp4` (428 МиБ) — в облаке. `render/review_720p.mp4` — 41 МБ (−16.0 LUFS); `render/contact_sheet_full.jpg`; `visuals/credits.txt` (102 изображения; схемы глубины нарисованы кодом и в титрах не указаны), `visuals/credits_youtube.txt` — **2611 символов** (одинаковые автор + лицензия теперь одной строкой «×N»); `youtube/chapters.txt` — 12 глав (0:00 Intro … 9:42 #1 Point Nemo, South Pacific, 10:54 Outro). Схемы глубины — 7:45 (Кола) и 8:52 (Бездна Челленджера).
 
 Стоит послушать:
 - 0:26 Mawsynram (MAW-sin-rum), 1:29 Maracaibo / Catatumbo.
