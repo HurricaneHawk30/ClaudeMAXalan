@@ -1,0 +1,75 @@
+=== 00_hook ===
+The hottest. The coldest. The wettest. The deepest. Our planet has places where the numbers stop making sense. Some of them have people living in them. Others are so remote that almost no one has ever been there. From a village that gets almost twelve meters of rain a year, to a spot in the ocean where the closest humans are in space, these are the most extreme places on Earth.
+
+=== 01_mawsynram ===
+Number ten. Mawsynram, India.
+
+In the hills of Meghalaya, in northeast India, sits a village of about 4,000 people that gets more rain than almost anywhere else on the planet. According to Guinness World Records, Mawsynram receives about 11,873 millimeters of rain a year. That's almost twelve meters of water, nearly twenty times as much as falls on London. In June 2022, it got more than a meter of rain in a single day.
+
+Most of it falls during the monsoon, from June to September. Life here is built around the rain. People cover their roofs with grass to muffle the noise. They stock up on food before the wettest months. Rivers are crossed on living bridges, grown from the roots of trees. And many locals wear a knup: a turtle-shaped shield of bamboo and broom grass that covers the body from the head to the knees, so both hands stay free for work.
+
+=== 02_catatumbo ===
+Number nine. Lake Maracaibo, Venezuela.
+
+At night, the sky over this lake almost never stays dark. Where the Catatumbo River flows into Lake Maracaibo, in northwestern Venezuela, thunderstorms break out on nearly 300 nights a year. Using 16 years of data from a lightning sensor in orbit, NASA scientists found that this is the most lightning-struck place on Earth: about 233 flashes per square kilometer, every year.
+
+The reason is the landscape. The lake is warm and humid, and the Andes mountains rise around it. At night, cool breezes slide down the slopes and collide with the warm, wet air over the water. The air is pushed upward, and storms explode, sometimes lasting for hours. The flashes are so frequent and so bright that sailors have used them to find their way. Locals call it the Lighthouse of Maracaibo.
+
+=== 03_death_valley ===
+Number eight. Death Valley, California.
+
+On July 10th, 1913, a thermometer at Furnace Creek, in Death Valley, recorded 134 degrees Fahrenheit, about 57 degrees Celsius. More than a century later, it is still the official record for the hottest air temperature ever measured on Earth. In 1972, the ground itself reached 201 degrees Fahrenheit, not far from the temperature of boiling water.
+
+Death Valley is a long, narrow basin, walled in by high mountains, and its lowest point lies 86 meters below sea level. Sunlight heats the bare rock and sand, and the heat has nowhere to go. Hot air rises, cools, sinks back down, and gets compressed and heated even more on the way. In the summer of 2001, the temperature here reached at least 100 degrees Fahrenheit, about 38 Celsius, for 154 days in a row.
+
+=== 04_atacama ===
+Number seven. The Atacama Desert, Chile.
+
+Along the Pacific coast of South America stretches the driest non-polar desert on Earth. In parts of the Atacama, the average rainfall is about one millimeter a year, and some weather stations here have never recorded a single drop. Two mountain ranges, the Andes and the Chilean Coast Range, block moisture from both sides.
+
+The soil is so dry and lifeless that NASA has used the Atacama to test instruments built for Mars. But the empty skies have one huge advantage. With more than 300 clear days a year, high altitude and almost no light pollution, the Atacama is one of the best places on the planet to study the universe. It is home to ALMA, a giant observatory of 66 radio antennas, standing on a plateau about 5,000 meters above sea level.
+
+=== 05_la_rinconada ===
+Number six. La Rinconada, Peru.
+
+High in the Andes, at about 5,000 meters above sea level, sits the highest permanent settlement in the world. Every breath here holds only about half the oxygen of a breath at sea level. Above the town hangs a glacier called La Bella Durmiente, the Sleeping Beauty.
+
+Tens of thousands of people live in La Rinconada, and almost all of them came for the same reason: gold. The town has no running water, no sewage system and no proper garbage collection. Electricity only arrived in the 2000s. Many miners work under an old system called cachorreo: thirty days of work without pay, and then one day when they can keep as much ore as they can carry out of the mine. Often, that ore holds very little gold. It is the highest town on Earth, and one of the hardest places to live.
+
+=== 06_oymyakon ===
+Number five. Oymyakon, Russia.
+
+On February 6th, 1933, the thermometer in this Siberian village dropped to about minus 68 degrees Celsius, minus 90 Fahrenheit. That makes Oymyakon the coldest permanently inhabited place on Earth, and the coldest place in the entire Northern Hemisphere. Only a few hundred people live here.
+
+The village has a single school, and it only closes when the temperature drops below about minus 52 degrees Celsius. Visitors are warned not to wear glasses outside, because they can freeze to the face. The nearest big city, Yakutsk, is a drive of about three days away, and it's called the coldest city on Earth: in winter, people there often leave their car engines running all day, so they will start again.
+
+=== 07_tristan ===
+Number four. Tristan da Cunha.
+
+In the middle of the South Atlantic Ocean rises a volcano with a village at its foot. Tristan da Cunha is the most remote inhabited island on Earth. Its nearest inhabited neighbor, the island of Saint Helena, is about 2,400 kilometers away. Cape Town, in South Africa, is nearly 2,800 kilometers away.
+
+Around 250 people live here, in a settlement called Edinburgh of the Seven Seas. There is no airport, and no harbor for big ships. The only way in is by sea: about six days from Cape Town, on one of roughly ten ships a year. In 1961, the volcano erupted near the village. The islanders fled in fishing boats, and the whole population was evacuated. Two years later, most of them came back, to the most isolated home on the planet.
+
+=== 08_kola ===
+Number three. The Kola Superdeep Borehole, Russia.
+
+In 1970, Soviet scientists in the far north of Russia started drilling a hole straight down into the Earth's crust. They kept going for nearly twenty years. In 1989, the hole reached 12,262 meters, more than twelve kilometers. It is still the deepest point humans have ever reached below the surface of the Earth, deeper than the bottom of the ocean.
+
+The hole is only 23 centimeters wide. At the bottom, the rock was 180 degrees Celsius, almost twice as hot as expected, and so hot that it started to behave like plastic and creep back into the hole. On the way down, scientists found hot water flowing through cracked rock, and tiny fossils from 24 species, two billion years old, nearly seven kilometers underground. After all that work, they had drilled only about a third of the way through the crust. Today, the borehole is sealed under a rusty metal cap.
+
+=== 09_challenger_deep ===
+Number two. Challenger Deep, Pacific Ocean.
+
+At the southern end of the Mariana Trench lies the deepest known point of the ocean. Challenger Deep is about 10,935 meters deep. If you dropped Mount Everest into it, its peak would still be more than two kilometers underwater. The pressure at the bottom is more than 1,000 times what we feel at the surface.
+
+On January 23rd, 1960, Jacques Piccard and US Navy lieutenant Don Walsh climbed into a bathyscaphe called Trieste and sank into the dark. The descent took almost five hours. At around 9,000 meters, one of the windows cracked. They kept going. At the bottom, they stayed only about 20 minutes, long enough for Piccard to report something nobody expected: a flat, white fish, alive at the very bottom of the world. No one went back down until 2012, when filmmaker James Cameron made the dive alone.
+
+=== 10_point_nemo ===
+Number one. Point Nemo, South Pacific.
+
+Somewhere in the South Pacific is the place on Earth that is farthest from any land. It was calculated in 1992 by a survey engineer named Hrvoje Lukatela, and it's named after Captain Nemo, from Jules Verne's novel. In Latin, nemo means no one. The nearest land is 2,688 kilometers away: three tiny islands, none of them inhabited.
+
+It's so remote that when the International Space Station passes overhead, about 400 kilometers up, the closest human beings to you are the astronauts in orbit. And because ships almost never come this way, space agencies use it as a graveyard for spacecraft. Old satellites and cargo ships are steered down to burn up in the atmosphere, and what's left falls into the ocean here. In 2001, the Russian space station Mir came down in this region. And in the early 2030s, the International Space Station itself is planned to end its journey here, at the loneliest place on Earth.
+
+=== 11_outro ===
+Those are the most extreme places on Earth. Which one do you think you could survive in? Tell us in the comments. And subscribe, so you don't miss the next story from Forbidden Earth.

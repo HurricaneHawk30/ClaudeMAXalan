@@ -269,3 +269,17 @@
 Правила — как в README и задачах 2–3: Wikimedia Commons (PD, CC0, CC BY, CC BY-SA, OGL v3.0), NASA, NOAA, NPS, USGS, ESA только с CC BY-SA 3.0 IGO; без NC/ND, без водяных знаков, без портретов и крупных лиц, без тел.
 
 Результат — как в задаче 6: `ForbiddenEarth/video04/visuals/src/<папка>/` (12–15 кандидатов с JSON), `video04/visuals/maps/` (карты для 10 мест), `video04/render/candidates_<папка>.jpg`, скрипты сборки скопированы в `video04/visuals/`. В отчёте — где кадров мало.
+
+## 9. Озвучка и полное видео video04 — TODO
+
+Делается после задачи 8. Название: **The Most Extreme Places on Earth**. Текст: `ForbiddenEarth/video04/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, схемы глубины и произношение: `ForbiddenEarth/video04/script/visuals_plan.md`.
+
+Озвучка — как в задаче 7: `voice_build.py` со словарями под этот текст (числа и годы → слова: «11,873 millimeters», «134 degrees Fahrenheit», «minus 68 degrees Celsius», «12,262 meters», «10,935 meters», «2,688 kilometers», «July 10th, 1913», «January 23rd, 1960», «early 2030s»; «US Navy» → «U S Navy»; «ALMA» — как слово), фонемы по списку, Kokoro `am_michael`, 0.95, проверка Whisper. Результат в `video04/voice/`.
+
+Видео — как в задаче 7, из кадров задачи 8, плюс две схемы глубины (раздел 08 и 09). Результат:
+- полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS — Алану файлом в чат (до 400 МиБ);
+- `video04/render/review_720p.mp4` (до 45 МБ), `video04/render/contact_sheet_full.jpg`;
+- `video04/visuals/credits.txt` и `video04/visuals/credits_youtube.txt` (не больше 3800 символов);
+- `video04/youtube/chapters.txt`: `0:00 Intro`, `#10 Mawsynram, India` … `#1 Point Nemo, South Pacific`, `Outro`.
+
+Срок: видео нужно Алану 16 ноября (выход 17 ноября). В отчёте — длина, что послушать и проверить глазами.
