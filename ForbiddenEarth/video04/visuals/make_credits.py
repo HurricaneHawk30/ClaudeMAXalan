@@ -84,10 +84,13 @@ if len(sys.argv) > 4:
         parts.append(item); used_len += len(item) + 2
     pd_line = f"Public domain / CC0 ({sum(cnt.values())} images): " + ", ".join(parts) + "."
     LIMIT = int(os.environ.get("YT_LIMIT", "3800"))
-    raw_attrib = [(m_t, m_a, m_l) for (m_t, m_a, m_l) in attrib_raw]
+    groups = {}
+    for (m_t, m_a, m_l) in attrib_raw:            # one line per author + licence, "×N" when several images
+        groups.setdefault((m_a, m_l), []).append(m_t)
+    raw_attrib = [(ts[0], a, l, len(ts)) for (a, l), ts in groups.items()]
     for TL, AL, SHORT in [(24, 21, False), (22, 18, True), (20, 16, True), (18, 15, True), (16, 14, True), (14, 12, True), (12, 11, True)]:
         globals().update(TL=TL, AL=AL, SHORT=SHORT)
-        lines_a = [compact_line(*x) for x in raw_attrib]
+        lines_a = [compact_line(t, a, l) + (f" ×{n}" if n > 1 else "") for t, a, l, n in raw_attrib]
         head = ["Images (BY = CC BY, BY-SA = CC BY-SA, creativecommons.org/licenses):"] if SHORT else []
         yt = head + lines_a + [pd_line, "Maps: Natural Earth (public domain). Full list with links: credits.txt."]
         ytxt = "\n".join(yt) + "\n"

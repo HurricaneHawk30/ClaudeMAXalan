@@ -1,0 +1,16 @@
+Forbidden Earth - video04 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:25.125   25.125s
+01_mawsynram     00:25.925  01:28.600   62.675s
+02_catatumbo     01:29.400  02:30.100   60.700s
+03_death_valley  02:30.900  03:34.450   63.550s
+04_atacama       03:35.250  04:34.525   59.275s
+05_la_rinconada  04:35.325  05:33.900   58.575s
+06_oymyakon      05:34.700  06:28.800   54.100s
+07_tristan       06:29.600  07:28.525   58.925s
+08_kola          07:29.325  08:36.350   67.025s
+09_challenger_deep 08:37.150  09:41.325   64.175s
+10_point_nemo    09:42.125  10:53.225   71.100s
+11_outro         10:54.025  11:06.400   12.375s
+
+TOTAL            11:06.400  (666.400s)

@@ -1,0 +1,88 @@
+Forbidden Earth - video04 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS -> WORDS
+4,000      four thousand
+11,873     eleven thousand eight hundred and seventy-three
+2022       twenty twenty-two
+300        three hundred
+16         sixteen
+233        two hundred and thirty-three
+10th       tenth
+1913       nineteen thirteen
+134        one hundred and thirty-four
+57         fifty-seven
+1972       nineteen seventy-two
+201        two hundred and one
+86         eighty-six
+2001       two thousand and one
+100        one hundred
+38         thirty-eight
+154        one hundred and fifty-four
+66         sixty-six
+5,000      five thousand
+2000s      two thousands
+6th        sixth
+1933       nineteen thirty-three
+68         sixty-eight
+90         ninety
+52         fifty-two
+2,400      two thousand four hundred
+2,800      two thousand eight hundred
+250        two hundred and fifty
+1961       nineteen sixty-one
+1970       nineteen seventy
+1989       nineteen eighty-nine
+12,262     twelve thousand two hundred and sixty-two
+23         twenty-three
+180        one hundred and eighty
+24         twenty-four
+10,935     ten thousand nine hundred and thirty-five
+1,000      one thousand
+23rd       twenty-third
+1960       nineteen sixty
+9,000      nine thousand
+20         twenty
+2012       twenty twelve
+1992       nineteen ninety-two
+2,688      two thousand six hundred and eighty-eight
+400        four hundred
+2030s      twenty-thirties
+
+2) SYMBOLS AND ABBREVIATIONS
+US Navy      -> U S Navy
+
+3) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Mawsynram    /mˈɔsɪnɹˌʌm/
+Meghalaya    /mAɡˈɑlAə/
+Guinness     /ɡˈɪnɪs/
+knup         /nˈʌp/
+Maracaibo    /mˌɑɹɑkˈIbO/
+Catatumbo    /kˌɑtɑtˈumbO/
+Atacama      /ˌɑtɑkˈɑmə/
+ALMA         /ˈɑlmə/
+Rinconada    /ɹˌinkOnˈɑdə/
+Bella        /bˈAjə/
+Durmiente    /dˌʊɹmiˈɛntA/
+cachorreo    /kˌɑʧOɹˈAO/
+Oymyakon     /ˌYmjɑkˈɑn/
+Yakutsk      /jɑkˈutsk/
+Cunha        /kˈunjə/
+Helena       /həlˈinə/
+Kola         /kˈOlə/
+Mariana      /mˌɑɹiˈɑnə/
+Jacques      /ʒˈɑk/
+Piccard      /pikˈɑɹ/
+Walsh        /wˈɔlʃ/
+Cameron      /kˈæməɹən/
+nemo         /nˈimO/
+Nemo         /nˈimO/
+Hrvoje       /hˈɜɹvOjɛ/
+Lukatela     /lˌukɑtˈɛlə/
+Jules        /ʤˈulz/
+Verne        /vˈɜɹn/
+Mir          /mˈiɹ/
+
+Checked with Whisper (faster-whisper small.en): all names and numbers read correctly.
+Names heard as: Maasenram (Mawsynram), Omyakon (Oymyakon), La Baya Dormiente (La Bella Durmiente), Cachareo (cachorreo),
+Hervoia Lucatella (Hrvoje Lukatela), Piquard/Picard (Piccard) - all are close to the correct pronunciation.

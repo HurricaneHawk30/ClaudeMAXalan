@@ -19,8 +19,8 @@ ITEMS = [("everest", "MOUNT EVEREST", "8,849 m", 8849), ("challenger", "CHALLENG
 
 def draw(highlight, out):
     fig = plt.figure(figsize=(19.2, 10.8), dpi=100, facecolor=BG)
-    ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(0, 1920); ax.set_ylim(-14200, 2200); ax.axis("off")
-    ax.add_patch(Rectangle((0, -14200), 1920, 14200, color=DEEP, zorder=0))
+    ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(0, 1920); ax.set_ylim(-17600, 2200); ax.axis("off")
+    ax.add_patch(Rectangle((0, -17600), 1920, 17600, color=DEEP, zorder=0))
     ax.add_patch(Rectangle((0, -11500), 1920, 11500, color=SEA, zorder=0.5))
     ax.plot([0, 1920], [0, 0], color=LINE, lw=2, zorder=3)
     ax.text(60, 300, "SEA LEVEL", fontproperties=INT, fontsize=20, color=DIM, zorder=4)

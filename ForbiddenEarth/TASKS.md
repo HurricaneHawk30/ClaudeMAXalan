@@ -285,7 +285,7 @@
 - **kola** — люк «12262», руины станции, геологический разрез (CC0); вышка только маленьким снимком (500 px) — пойдёт «окном» на размытом фоне.
 - Остальные (catatumbo, deathvalley, atacama, tristan, nemo) — кадров достаточно.
 
-## 9. Озвучка и полное видео video04 — TODO
+## 9. Озвучка и полное видео video04 — DONE
 
 Делается после задачи 8. Название: **The Most Extreme Places on Earth**. Текст: `ForbiddenEarth/video04/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, схемы глубины и произношение: `ForbiddenEarth/video04/script/visuals_plan.md`.
 
@@ -298,3 +298,25 @@
 - `video04/youtube/chapters.txt`: `0:00 Intro`, `#10 Mawsynram, India` … `#1 Point Nemo, South Pacific`, `Outro`.
 
 Срок: видео нужно Алану 16 ноября (выход 17 ноября). В отчёте — длина, что послушать и проверить глазами.
+
+**Отчёт.**
+
+Озвучка (`video04/voice/`): Kokoro `am_michael`, 0.95, 12 разделов + `full.mp3`, **11:06.4**. Разделы: 00_hook 25.1 с · 01_mawsynram 62.7 · 02_catatumbo 60.7 · 03_death_valley 63.6 · 04_atacama 59.3 · 05_la_rinconada 58.6 · 06_oymyakon 54.1 · 07_tristan 58.9 · 08_kola 67.0 · 09_challenger_deep 64.2 · 10_point_nemo 71.1 · 11_outro 12.4.
+- Числа и годы → слова (46 штук, в т. ч. «eleven thousand eight hundred and seventy-three», «July tenth, nineteen thirteen», «January twenty-third, nineteen sixty», «early twenty-thirties»); «US Navy» → «U S Navy»; ALMA читается как слово.
+- Фонемы для 28 слов по списку из `visuals_plan.md`; полный список — `voice/changes.txt`.
+- Whisper: все числа, годы и имена распознаны верно, ошибок не найдено.
+
+Видео: **11:07.6**, 1920×1080, 30 fps, H.264 + AAC, **−16.1 LUFS**. Алану отправлен файлом в чат `ForbiddenEarth_video04_1080p.mp4` (373 МиБ, ≈4.7 Мбит/с); мастер `full_1080p.mp4` (428 МиБ) — в облаке. `render/review_720p.mp4` — 41 МБ (−16.1 LUFS); `render/contact_sheet_full.jpg`; `visuals/credits.txt` (102 изображения; схемы глубины нарисованы кодом и в титрах не указаны), `visuals/credits_youtube.txt` — **2611 символов** (одинаковые автор + лицензия теперь одной строкой «×N»); `youtube/chapters.txt` — 12 глав (0:00 Intro … 9:42 #1 Point Nemo, South Pacific, 10:54 Outro). Схемы глубины — 7:45 (Кола) и 8:52 (Бездна Челленджера).
+
+Стоит послушать:
+- 0:26 Mawsynram (MAW-sin-rum), 1:29 Maracaibo / Catatumbo.
+- 4:52 «La Bella Durmiente» и 5:15 «cachorreo» — испанские слова, Kokoro читает по фонемам, но с английским акцентом.
+- 5:36 Oymyakon (oy-mya-KON), 9:05 Piccard (pee-KAR), 9:51 Hrvoje Lukatela.
+
+Проверить глазами:
+- 4:47–5:30 Ла-Ринконада — самое слабое место: снимков города всего три, поэтому 5:06 и 5:15 — крупные планы тех же фото; 4:47 и 5:20 — Анды и район Титикаки с МКС; 4:59 и 5:24 — золотые самородки (музейные, не из Ринконады); 5:29 — ледник Келькайя (тоже Перу).
+- 9:26 — на фразе про «плоскую белую рыбу» глубоководный источник с креветками (NOAA): снимка той рыбы нет.
+- 9:34 — на фразе про Джеймса Кэмерона (2012) музейная копия «Триеста» в Триесте.
+- 2:43 — термометр показывает около 120 °F, а не 134 °F (это иллюстрация жары, не рекордный прибор).
+- 0:00–0:25 вступление: 10 быстрых кадров, логотип на 0:22.
+
