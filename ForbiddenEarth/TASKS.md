@@ -235,11 +235,11 @@
 - Whisper: числа, годы и сокращения распознаны верно. Найдена и исправлена ошибка: «dives» Kokoro читал «DIVE-eez» — дана фонема, озвучка пересобрана.
 - В `timings.txt` video02 и video03 исправлен заголовок (было «video01» из шаблона).
 
-Видео: 10:57.6, 1920×1080, 30 fps, H.264 + AAC, −16.1 LUFS. Алану отправлен файлом в чат `ForbiddenEarth_video03_1080p.mp4` (360 МиБ, ≈4.4 Мбит/с); мастер CRF 18 (472 МиБ) — в облаке. `render/review_720p.mp4` — 42.1 МБ; `render/contact_sheet_full.jpg`; `visuals/credits.txt` (96 изображений), `visuals/credits_youtube.txt` — **3699 символов**; `youtube/chapters.txt` — 12 глав (0:00 Intro … 9:34 #1 Tomb of Qin Shi Huang, China, 10:45 Outro).
+Видео: 10:57.6, 1920×1080, 30 fps, H.264 + AAC, −16.1 LUFS. Алану отправлен файлом в чат `ForbiddenEarth_video03_1080p.mp4` (360 МиБ, ≈4.4 Мбит/с); мастер CRF 18 (472 МиБ) — в облаке. `render/review_720p.mp4` — 42.1 МБ; `render/contact_sheet_full.jpg`; `visuals/credits.txt` (106 изображений), `visuals/credits_youtube.txt` — **3699 символов**; `youtube/chapters.txt` — 12 глав (0:00 Intro … 9:34 #1 Tomb of Qin Shi Huang, China, 10:45 Outro).
 
 Стоит послушать:
 - 0:23 и далее «The Wave» — нормально; 2:13 Niihau (Kokoro: NEE-ee-how), 3:12 Surtsey, 5:22 Ise (EE-say) — Whisper записывал их по-своему, но звучание по плану.
-- 8:57 Bön — сейчас «бёрн»-подобное «bɜn» без «р» в британском смысле; Whisper услышал «Bern». Если нужно ближе к «бён» — скажите, поменяю.
+- 9:08 Bön — сейчас звучит близко к «бён» (фонема «bɜn»), Whisper услышал «Bern». Если нужно ближе к «бён» — скажите, поменяю.
 - 9:56 Sima Qian — «suh-MAH CHYEN».
 
 Проверить глазами:
