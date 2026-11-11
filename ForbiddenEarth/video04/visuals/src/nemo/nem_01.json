@@ -1,0 +1,14 @@
+{
+ "key": "nem_01",
+ "source": "Wikimedia Commons",
+ "title": "Distancia a la costa.png",
+ "author": "Gaianauta",
+ "credit": "self-made using the technique described in Garcia-Castellanos, D., &amp; U. Lombardo, 2007. Poles of Inaccessibility: a calculation algorithm for the remotest places on Earth. Scott. Geogr. J., 123, 227-233. Based on the coastline database of Wessel, P. &amp; Smith, W. H. F. (1996) A global self-consistent, hierarchical, high-resolution shoreline database, Journal of Geophysical Research, 101, B4, 8741 – 8743. Lake shores are excluded.",
+ "license": "CC BY-SA 4.0",
+ "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+ "url": "https://commons.wikimedia.org/wiki/File:Distancia_a_la_costa.png",
+ "description": "Map of great-circle distance to the coastline.",
+ "restrictions": "",
+ "size": "1278x619",
+ "license_ok": true
+}
