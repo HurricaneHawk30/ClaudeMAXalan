@@ -102,7 +102,7 @@ def main():
     enc(np.concatenate(full), os.path.join(out, "full.mp3"))
     fmt = lambda s: f"{int(s//60):02d}:{s%60:06.3f}"
     with open(os.path.join(out, "timings.txt"), "w", encoding="utf-8") as f:
-        f.write("Forbidden Earth - video01 - full.mp3 (Kokoro am_michael, speed 0.95)\n")
+        f.write("Forbidden Earth - video02 - full.mp3 (Kokoro am_michael, speed 0.95)\n")
         f.write("section          start        end          length\n")
         for n, a, b in timings:
             f.write(f"{n:<16} {fmt(a)}  {fmt(b)}  {b-a:7.3f}s\n")

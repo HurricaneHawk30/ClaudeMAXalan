@@ -11,7 +11,7 @@ for s in sorted(edl["shots"], key=lambda s: s["t0"]):
         seen.add(src); used.append((s["t0"], src))
 
 def tc(t): return f"{int(t // 60)}:{t % 60:04.1f}"
-lines = ["IMAGE CREDITS - Forbidden Earth, episode 2: 10 Lost Cities That Were Found Again (And One That Never Was)", ""]
+lines = ["IMAGE CREDITS - Forbidden Earth, episode 3: 10 Beautiful Places You're Not Allowed to Visit", ""]
 compact, attrib, pd_auth, pd_src, attrib_raw = [], [], [], [], []
 bad = []
 OGL = "Contains public sector information licensed under the Open Government Licence v3.0"

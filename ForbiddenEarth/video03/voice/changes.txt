@@ -1,0 +1,78 @@
+Forbidden Earth - video03 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS -> WORDS
+64         sixty-four
+200,000    two hundred thousand
+20         twenty
+1964       nineteen sixty-four
+2016       twenty sixteen
+17         seventeen
+1864       eighteen sixty-four
+70         seventy
+160        one hundred and sixty
+1963       nineteen sixty-three
+40         forty
+1965       nineteen sixty-five
+90         ninety
+1940       nineteen forty
+17,000     seventeen thousand
+1948       nineteen forty-eight
+1960s      nineteen-sixties
+1,500      one thousand five hundred
+125        one hundred and twenty-five
+1,300      one thousand three hundred
+690        six hundred and ninety
+2033       twenty thirty-three
+35         thirty-five
+11,000     eleven thousand
+43         forty-three
+2000       two thousand
+300        three hundred
+11         eleven
+58         fifty-eight
+2015       twenty fifteen
+6,638      six thousand six hundred and thirty-eight
+1974       nineteen seventy-four
+8,000      eight thousand
+210        two hundred and ten
+2,000      two thousand
+700,000    seven hundred thousand
+
+2) SYMBOLS AND ABBREVIATIONS
+$10,000      -> ten thousand dollars
+US Bureau    -> U S Bureau
+ BC          ->  B C
+
+3) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Kauai        /kɑwˈɑi/
+Kamehameha   /kəmˌAhəmˈAhə/
+Sinclair     /sˈɪnklɛɹ/
+Surtr        /sˈɜɹtəɹ/
+Naiku        /nˈIku/
+Amaterasu    /ˌɑmɑtɛɹˈɑsu/
+Ilha         /ˈiljə/
+da           /dɑ/
+Queimada     /kAmˈɑdə/
+Grande       /ɡɹˈɑnʤi/
+São          /sˈW/
+Paulo        /pˈWlO/
+Naica        /nˈIkə/
+Kailash      /kIlˈɑʃ/
+Bön          /bˈɜn/
+Meru         /mˈAɹu/
+Shi          /ʃˈɜɹ/
+Huang        /hwˈɑŋ/
+Xi'an        /ʃiˈɑn/
+Sima         /səmˈɑ/
+Qian         /ʧjˈɛn/
+Yangtze      /jˈæŋsi/
+Robinson     /ɹˈɑbɪnsən/
+lancehead    /lˈænshˌɛd/
+Terracotta   /tˌɛɹəkˈɑtə/
+dives        /dˈIvz/
+
+4) CHECKED, LEFT AS IS: Niihau, Surtsey, Lascaux, Ise, Shinto, Sistine, Jainism, Shiva, Qin, Utah, Norse, Everest, Celsius, gypsum.
+
+5) WHISPER CHECK: numbers, years, $10,000, US, BC recognised correctly. 'dives' was read DIVE-eez -> fixed with phonemes.
+Names heard as: Nihau, Cersei/Sertse (Surtsey), Lasco (Lascaux), Issei/East at (Ise), Chemada Grande, Nica (Naica), Bern (Bon), Samachian (Sima Qian).

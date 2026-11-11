@@ -1,4 +1,4 @@
-Forbidden Earth - video01 - full.mp3 (Kokoro am_michael, speed 0.95)
+Forbidden Earth - video02 - full.mp3 (Kokoro am_michael, speed 0.95)
 section          start        end          length
 00_hook          00:00.000  00:25.175   25.175s
 01_skara_brae    00:25.975  01:24.850   58.875s
