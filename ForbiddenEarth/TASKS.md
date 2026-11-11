@@ -213,7 +213,7 @@
 - **ise** — на многих кадрах толпы паломников (мелко, без крупных лиц). Есть ценный архивный аэроснимок 1953 года со старым и новым участками рядом.
 - Остальные места (wave, flygeyser, lascaux, snake_island, kailash, qin) — кадров достаточно.
 
-## 7. Озвучка и полное видео video03 — TODO
+## 7. Озвучка и полное видео video03 — DONE
 
 Делается после задачи 6. Название: **10 Beautiful Places You're Not Allowed to Visit**. Текст: `ForbiddenEarth/video03/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров и произношение: `ForbiddenEarth/video03/script/visuals_plan.md`.
 
@@ -226,3 +226,24 @@
 - `video03/youtube/chapters.txt` — главы по `timings.txt`: `0:00 Intro`, `#10 The Wave, Arizona` … `#1 Tomb of Qin Shi Huang, China`, `Outro`.
 
 В отчёте — длина, что стоит послушать и проверить глазами.
+
+**Отчёт.**
+
+Озвучка (`video03/voice/`): Kokoro `am_michael`, 0.95, 12 разделов + `full.mp3`, **10:57.6**. Разделы: 00_hook 21.2 с · 01_the_wave 52.7 · 02_fly_geyser 56.3 · 03_niihau 57.7 · 04_surtsey 67.6 · 05_lascaux 61.3 · 06_ise 66.9 · 07_snake_island 58.3 · 08_naica 65.7 · 09_kailash 57.7 · 10_qin 70.5 · 11_outro 12.9.
+- Числа и годы → слова (36 штук), $10,000 → «ten thousand dollars», US → «U S», 210 BC → «B C»; «Kamehameha the Fifth» читается как написано.
+- Фонемы для 25 слов (Kauai, Kamehameha, Sinclair, Surtr, Naiku, Amaterasu, Ilha da Queimada Grande, São Paulo, Naica, Kailash, Bön, Meru, Shi Huang, Xi'an, Sima Qian, Yangtze и др.); список — `voice/changes.txt`.
+- Whisper: числа, годы и сокращения распознаны верно. Найдена и исправлена ошибка: «dives» Kokoro читал «DIVE-eez» — дана фонема, озвучка пересобрана.
+- В `timings.txt` video02 и video03 исправлен заголовок (было «video01» из шаблона).
+
+Видео: 10:57.6, 1920×1080, 30 fps, H.264 + AAC, −16.1 LUFS. Алану отправлен файлом в чат `ForbiddenEarth_video03_1080p.mp4` (360 МиБ, ≈4.4 Мбит/с); мастер CRF 18 (472 МиБ) — в облаке. `render/review_720p.mp4` — 42.1 МБ; `render/contact_sheet_full.jpg`; `visuals/credits.txt` (96 изображений), `visuals/credits_youtube.txt` — **3699 символов**; `youtube/chapters.txt` — 12 глав (0:00 Intro … 9:34 #1 Tomb of Qin Shi Huang, China, 10:45 Outro).
+
+Стоит послушать:
+- 0:23 и далее «The Wave» — нормально; 2:13 Niihau (Kokoro: NEE-ee-how), 3:12 Surtsey, 5:22 Ise (EE-say) — Whisper записывал их по-своему, но звучание по плану.
+- 8:57 Bön — сейчас «бёрн»-подобное «bɜn» без «р» в британском смысле; Whisper услышал «Bern». Если нужно ближе к «бён» — скажите, поменяю.
+- 9:56 Sima Qian — «suh-MAH CHYEN».
+
+Проверить глазами:
+- 7:35–8:34 Найка — один настоящий снимок пещеры, остальное — образцы гипса и схема размеров (см. отчёт задачи 6).
+- 3:17–3:22 Суртсей — схема туфового конуса вместо архивного кадра извержения.
+- 2:24–2:28 Ниихау — карта острова 1833 года на фразе о покупке 1864 года (на ней нет даты покупки — просто старая карта).
+- 0:50 — гребни Coyote Buttes North рядом с The Wave, а не сама The Wave.
