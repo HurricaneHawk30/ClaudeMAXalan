@@ -490,7 +490,8 @@
      "text": "Complete with the future tense of «avoir»: «Demain, j'___ beaucoup de devoirs.» Type the missing verb only.",
      "short": {
       "accept": [
-       "aurai"
+       "aurai",
+       "j'aurai"
       ],
       "reject": [
        "aurais",
@@ -920,7 +921,7 @@
      "text": "What does «Mon père est plus grand que ma mère» mean?",
      "choice": {
       "options": [
-       "My father is older than my mother",
+       "My father is younger than my mother",
        "My mother is taller than my father",
        "My father is as tall as my mother",
        "My father is taller than my mother"
@@ -1095,7 +1096,8 @@
      "text": "Complete with the imperfect of «être»: «Quand j'___ petit, j'habitais à Paris.» Type the verb only.",
      "short": {
       "accept": [
-       "étais"
+       "étais",
+       "j'étais"
       ],
       "reject": [
        "été",
@@ -1232,7 +1234,8 @@
      "text": "Translate into French: «my brothers are lazy»",
      "short": {
       "accept": [
-       "mes frères sont paresseux"
+       "mes frères sont paresseux",
+       "mes frères sont fainéants"
       ],
       "reject": [
        "mes frères sont paresseuses",
@@ -1478,7 +1481,8 @@
        "soap",
        "serial",
        "series",
-       "TV series"
+       "TV series",
+       "TV serial"
       ],
       "form": "any"
      },

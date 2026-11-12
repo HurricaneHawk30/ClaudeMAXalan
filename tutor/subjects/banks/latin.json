@@ -815,7 +815,10 @@
        "he slept",
        "she slept",
        "he was asleep",
-       "she was asleep"
+       "she was asleep",
+       "he/she was sleeping",
+       "he/she used to sleep",
+       "he/she slept"
       ],
       "form": "any"
      },
@@ -1020,7 +1023,9 @@
        "she wanted",
        "he wished",
        "she wished",
-       "it wanted"
+       "it wanted",
+       "he/she wanted",
+       "he/she wished"
       ],
       "form": "any"
      },
@@ -1091,7 +1096,11 @@
        "they were taken by the enemy",
        "they have been captured by the enemy",
        "they were caught by the enemy",
-       "they have been taken by the enemy"
+       "they have been taken by the enemy",
+       "they were captured by the enemies",
+       "they were captured by enemies",
+       "they were taken by the enemies",
+       "they have been captured by the enemies"
       ],
       "form": "any"
      },
@@ -1352,7 +1361,7 @@
       }
      },
      "solution": "et = and (also atque or ac)",
-     "hint": "It is used in the abbreviation 'etc.'"
+     "hint": "The ending -que on a word has the same meaning; the separate word has two letters"
     },
     {
      "id": "x13",
@@ -1450,7 +1459,7 @@
       }
      },
      "solution": "video = I see (videre = to see)",
-     "hint": "The same word is used in English for a recording you watch"
+     "hint": "Start from videre (to see) and give the 'I' form of the present tense"
     },
     {
      "id": "x19",
@@ -1620,7 +1629,11 @@
        "they did not remain long",
        "they didn't remain long",
        "they did not wait long",
-       "they didn't wait long"
+       "they didn't wait long",
+       "they did not stay for a long time",
+       "they didn't stay for a long time",
+       "they were not staying for long",
+       "they did not remain for long"
       ],
       "form": "any"
      },
@@ -1869,7 +1882,8 @@
      "text": "What was the hot room in Roman baths called? Give the Latin term.",
      "short": {
       "accept": [
-       "caldarium"
+       "caldarium",
+       "calidarium"
       ],
       "reject": [
        "tepidarium",
@@ -1881,7 +1895,7 @@
        "frigidarium": "The frigidarium was the cold room"
       }
      },
-     "solution": "caldarium = hot room; tepidarium = warm room; frigidarium = cold room",
+     "solution": "caldarium (also spelt calidarium) = hot room; tepidarium = warm room; frigidarium = cold room",
      "hint": "The Latin word calidus means 'hot'"
     },
     {

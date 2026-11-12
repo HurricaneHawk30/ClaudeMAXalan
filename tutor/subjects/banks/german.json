@@ -943,7 +943,7 @@
      "text": "What does «Mein Vater ist größer als meine Mutter» mean?",
      "choice": {
       "options": [
-       "My father is older than my mother",
+       "My father is younger than my mother",
        "My mother is taller than my father",
        "My father is as tall as my mother",
        "My father is taller than my mother"
@@ -976,7 +976,8 @@
        "lawyer",
        "solicitor",
        "attorney",
-       "barrister"
+       "barrister",
+       "advocate"
       ],
       "form": "any"
      },
@@ -1225,7 +1226,8 @@
      "text": "Translate into German: «she is tall and intelligent»",
      "short": {
       "accept": [
-       "sie ist groß und intelligent"
+       "sie ist groß und intelligent",
+       "sie ist groß und klug"
       ],
       "reject": [
        "sie ist große und intelligente",

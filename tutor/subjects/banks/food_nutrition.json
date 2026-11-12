@@ -130,7 +130,7 @@
      "level": 1,
      "text": "How many main food groups are shown on the Eatwell Guide?",
      "solution": "The Eatwell Guide has five main food groups, with fluids and foods to eat less often shown outside them",
-     "hint": "Count: fruit and veg, starchy foods, proteins, dairy, and oils and spreads",
+     "hint": "Picture the Eatwell plate and count its coloured sections; drinks and foods to eat less often sit outside it",
      "choice": {
       "options": [
        "Three",
@@ -601,7 +601,7 @@
      "level": 5,
      "text": "Which statement about eating too much salt (sodium) is accurate?",
      "solution": "A high salt intake is linked to high blood pressure, which increases the risk of stroke and heart disease",
-     "hint": "Think about blood pressure",
+     "hint": "Think about the effect of salt on the circulatory system",
      "choice": {
       "options": [
        "Too much salt strengthens bones",
@@ -916,7 +916,7 @@
      "level": 2,
      "text": "Which flour is most suitable for making bread?",
      "solution": "Strong flour has more protein, forming more gluten to trap carbon dioxide and give a good rise",
-     "hint": "Bread needs a stretchy gluten network",
+     "hint": "Bread needs a stretchy protein network that can trap gas",
      "choice": {
       "options": [
        "Strong flour, which has a high protein content for gluten",
@@ -992,7 +992,7 @@
      "level": 3,
      "text": "When making shortcrust pastry, fat is rubbed into flour. What does this do?",
      "solution": "Fat coats the flour, waterproofing it so less gluten forms: this is called shortening",
-     "hint": "The pastry is called 'short' for a reason",
+     "hint": "Think about why shortcrust pastry crumbles instead of stretching like bread dough",
      "choice": {
       "options": [
        "Coats the flour particles, limiting gluten development so the pastry is short and crumbly",
@@ -1072,7 +1072,7 @@
      "level": 4,
      "text": "A white sauce has lumps in it. What is the most likely cause?",
      "solution": "Starch must be kept moving while it heats; otherwise granules stick together into lumps",
-     "hint": "Think about what stirring does to the starch granules",
+     "hint": "Think about what stirring does while the sauce heats up",
      "choice": {
       "options": [
        "The sauce was stirred all the time",
@@ -1104,7 +1104,7 @@
      "level": 4,
      "text": "Baking powder is bicarbonate of soda mixed with an acid such as cream of tartar. Why is the acid added?",
      "solution": "Acid plus bicarbonate releases carbon dioxide, and no soapy-tasting washing soda is left behind",
-     "hint": "Bicarbonate on its own leaves a soapy taste",
+     "hint": "Think about what is left behind when bicarbonate of soda is heated with no acid",
      "choice": {
       "options": [
        "The acid makes the mixture sweeter",
@@ -1295,7 +1295,7 @@
      "level": 5,
      "text": "Why is a small amount of salt added to bread dough?",
      "solution": "Salt adds flavour, strengthens gluten and slows the yeast so the dough rises evenly",
-     "hint": "Think about flavour, the yeast and the gluten",
+     "hint": "Salt does more than one job in a dough: think about the living raising agent and the protein network",
      "choice": {
       "options": [
        "Salt is the raising agent",
@@ -1784,7 +1784,7 @@
      "level": 4,
      "text": "Which practice helps prevent cross-contamination in a kitchen?",
      "solution": "Colour-coded equipment keeps raw and ready-to-eat foods apart",
-     "hint": "Think about keeping raw and ready-to-eat food apart",
+     "hint": "Think about how bacteria could travel from raw meat to food that will not be cooked",
      "choice": {
       "options": [
        "Using separate colour-coded boards and knives for raw and ready-to-eat foods",
@@ -1846,7 +1846,7 @@
      "level": 4,
      "text": "Cooked food is going to be stored. Why should it be cooled quickly before it goes in the fridge?",
      "solution": "Cooling quickly limits the time bacteria have to multiply in the danger zone",
-     "hint": "Think about time in the danger zone",
+     "hint": "Think about what bacteria do between 5 °C and 63 °C",
      "choice": {
       "options": [
        "To make it taste better",
@@ -1970,7 +1970,7 @@
      "level": 5,
      "text": "Raw chicken should not be washed because splashing water can spread which bacterium, found on much raw chicken?",
      "solution": "Campylobacter is found on much raw chicken; washing it splashes the bacteria around the kitchen",
-     "hint": "Its name begins with 'C' and it is linked with raw poultry",
+     "hint": "It is the most common cause of bacterial food poisoning in the UK",
      "choice": {
       "options": [
        "Listeria",
@@ -2071,7 +2071,7 @@
      "level": 1,
      "text": "How many major allergens must be emphasised in the ingredients list on UK pre-packed food labels?",
      "solution": "UK law lists 14 major allergens, such as peanuts, milk, eggs and gluten, which must be emphasised on labels",
-     "hint": "It is more than ten and less than twenty",
+     "hint": "As well as nuts, milk and eggs, the list includes celery, mustard, sesame and lupin",
      "choice": {
       "options": [
        "4",
@@ -2516,7 +2516,7 @@
      "level": 5,
      "text": "A person with coeliac disease is eating out. Which choice is suitable?",
      "solution": "Wheat pasta, bread and batter contain gluten; plain fish, potatoes and vegetables do not",
-     "hint": "Look for the meal with no wheat flour",
+     "hint": "Which ingredients in each meal contain gluten?",
      "choice": {
       "options": [
        "Pasta with tomato sauce",
@@ -2611,12 +2611,18 @@
      "hint": "Think about which food groups are kept apart",
      "choice": {
       "options": [
-       "Eating pork only on Fridays",
+       "Not eating meat on Fridays",
        "Not eating meat and dairy foods together",
        "Avoiding all vegetables",
-       "Eating shellfish at every meal"
+       "Avoiding beef because the cow is sacred"
       ],
-      "correct": 1
+      "correct": 1,
+      "feedback": [
+       "Some Christians avoid meat on Fridays; this is not a kosher rule",
+       null,
+       null,
+       "Many Hindus avoid beef; kosher laws allow beef from animals slaughtered in the kosher way"
+      ]
      }
     }
    ]

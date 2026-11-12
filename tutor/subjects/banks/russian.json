@@ -248,11 +248,16 @@
        "he doesn't work",
        "he is not working",
        "he isn't working",
-       "he's not working"
+       "he's not working",
+       "it does not work",
+       "it doesn't work",
+       "it is not working",
+       "it isn't working",
+       "it's not working"
       ],
       "form": "any"
      },
-     "solution": "не + работает: he does not work / he isn't working",
+     "solution": "не + работает: he does not work / he isn't working (about a machine: it doesn't work)",
      "hint": "работать means 'to work'; не makes it negative"
     },
     {
@@ -325,7 +330,9 @@
        "I used to play football",
        "I played soccer",
        "I was playing soccer",
-       "I used to play soccer"
+       "I used to play soccer",
+       "I have played football",
+       "I've played football"
       ],
       "form": "any"
      },
@@ -470,7 +477,9 @@
        "we will be living in Moscow",
        "we'll be living in Moscow",
        "we are going to live in Moscow",
-       "we're going to live in Moscow"
+       "we're going to live in Moscow",
+       "we shall live in Moscow",
+       "we shall be living in Moscow"
       ],
       "form": "any"
      },
@@ -943,7 +952,10 @@
        "water",
        "I drink water",
        "he drinks water",
-       "she drinks water"
+       "she drinks water",
+       "drinks water every day",
+       "drink water every day",
+       "I drink water every day"
       ],
       "form": "any"
      },
@@ -1078,7 +1090,9 @@
        "rarely",
        "seldom",
        "not often",
-       "hardly ever"
+       "hardly ever",
+       "not very often",
+       "almost never"
       ],
       "reject": [
        "often"
@@ -1261,7 +1275,11 @@
        "watching TV",
        "watching television",
        "to watch the TV",
-       "watch the TV"
+       "watch the TV",
+       "watching the TV",
+       "watching the television",
+       "to watch the television",
+       "watch the television"
       ],
       "form": "any"
      },
@@ -2004,7 +2022,8 @@
        "in the mountains",
        "the mountains",
        "mountains",
-       "in mountains"
+       "in mountains",
+       "to the mountains"
       ],
       "form": "any"
      },

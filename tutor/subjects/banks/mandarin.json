@@ -1372,7 +1372,11 @@
        "going online",
        "get online",
        "surf the web",
-       "browse the internet"
+       "browse the internet",
+       "surfs the web",
+       "go on the internet",
+       "goes on the internet",
+       "browses the internet"
       ],
       "form": "any"
      },
@@ -1873,7 +1877,11 @@
        "how much the clothes cost",
        "the cost",
        "cost",
-       "how much"
+       "how much",
+       "how much does it cost",
+       "how much it is",
+       "how much they cost",
+       "how much the clothes are"
       ],
       "form": "any"
      },
@@ -2087,7 +2095,11 @@
        "inexpensive and tasty",
        "inexpensive and delicious",
        "both cheap and tasty",
-       "both cheap and delicious"
+       "both cheap and delicious",
+       "cheap and yummy",
+       "cheap and nice",
+       "tasty and inexpensive",
+       "delicious and inexpensive"
       ],
       "form": "any"
      },

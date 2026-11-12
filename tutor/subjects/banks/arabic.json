@@ -720,7 +720,7 @@
       "correct": 2
      },
      "solution": "أخ = brother; أب = father; ابن = son; جد = grandfather",
-     "hint": "Remove the ending ت from أخت (sister)"
+     "hint": "It is the masculine partner of أخت (sister)"
     },
     {
      "id": "p05",
@@ -1014,7 +1014,9 @@
        "3",
        "three",
        "3 times",
-       "three times"
+       "three times",
+       "three times a week",
+       "3 times a week"
       ],
       "reject": [
        "2",
@@ -1103,7 +1105,14 @@
        "teacher is very strict",
        "a strict teacher",
        "a very strict teacher",
-       "the teacher"
+       "the teacher is too strict",
+       "teacher is too strict",
+       "strict",
+       "very strict",
+       "too strict",
+       "the teacher is really strict",
+       "the teacher is harsh",
+       "the teacher is stern"
       ],
       "form": "any"
      },
@@ -1477,7 +1486,9 @@
        "2",
        "two",
        "2 hours",
-       "two hours"
+       "two hours",
+       "two hours a day",
+       "2 hours a day"
       ],
       "reject": [
        "1",
@@ -1592,7 +1603,9 @@
        "if it rains",
        "raining",
        "rainy weather",
-       "the rain"
+       "the rain",
+       "if it rained",
+       "if it is raining"
       ],
       "form": "any"
      },
@@ -1982,12 +1995,14 @@
       "accept": [
        "a week",
        "one week",
-       "1 week"
+       "1 week",
+       "seven days",
+       "7 days"
       ],
       "form": "any"
      },
      "solution": "أسبوعًا = a week",
-     "hint": "أسبوع is seven days"
+     "hint": "يوم is one day; أسبوع is a longer period, from one Monday to the next"
     },
     {
      "id": "w22",
@@ -2098,7 +2113,15 @@
        "the hotel was amazing",
        "the hotel was fantastic",
        "the hotel was excellent",
-       "the hotel was brilliant"
+       "the hotel was brilliant",
+       "the hotel was good",
+       "the hotel was very good",
+       "the hotel was nice",
+       "the hotel was lovely",
+       "the hotel was superb",
+       "the hotel was really good",
+       "a great hotel",
+       "a wonderful hotel"
       ],
       "form": "any"
      },

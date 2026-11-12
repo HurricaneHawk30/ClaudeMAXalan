@@ -215,7 +215,7 @@
      "level": 2,
      "text": "What is the focal point of a composition?",
      "solution": "The focal point is the centre of interest that the viewer notices first",
-     "hint": "Think about where your eye goes first when you look at a picture",
+     "hint": "Which part of a painting grabs your attention straight away?",
      "choice": {
       "options": [
        "The edge of the paper",
@@ -292,7 +292,7 @@
      "level": 3,
      "text": "An artist divides a picture into thirds both across and down and places the subject on one of the lines. Which guideline is this?",
      "solution": "The rule of thirds places key subjects along the third lines or where they cross, for a balanced composition",
-     "hint": "The answer is named after the fraction in the question",
+     "hint": "Photographers often use this guideline, imagining a noughts-and-crosses grid over the view",
      "choice": {
       "options": [
        "Two-point perspective",
@@ -442,7 +442,7 @@
      "level": 4,
      "text": "An artist draws a vase by shading only the background around it, leaving the vase as blank paper. Which element are they using to show the vase?",
      "solution": "Drawing the space around an object (negative space) makes the object's shape appear",
-     "hint": "The artist draws the space around the object rather than the object itself",
+     "hint": "The vase shows up only because of the shaded area that surrounds it",
      "choice": {
       "options": [
        "Foreshortening",
@@ -737,7 +737,7 @@
      "level": 1,
      "text": "What does 'hue' mean?",
      "solution": "Hue is the pure colour itself, such as red, blue or yellow",
-     "hint": "It is the basic name of a colour",
+     "hint": "Red, blue and yellow are each an example of one",
      "choice": {
       "options": [
        "A colour with white added",
@@ -918,7 +918,7 @@
      "level": 3,
      "text": "A painter wants a light pink. What should they do?",
      "solution": "Pink is a tint of red, made by adding white",
-     "hint": "Making a colour lighter with white makes a tint",
+     "hint": "Which option would make red lighter, rather than darker or a different colour?",
      "choice": {
       "options": [
        "Add black to red",
@@ -1110,7 +1110,7 @@
      "level": 4,
      "text": "Which word describes how bright and pure a colour is, rather than dull and greyish? Give the term.",
      "solution": "Saturation (intensity or chroma) is how pure and vivid a colour is",
-     "hint": "A very vivid colour is described as highly ______ (it begins with 's')",
+     "hint": "Photo-editing apps have a slider with this name that makes colours more vivid or more grey",
      "short": {
       "accept": [
        "saturation",
@@ -1290,7 +1290,7 @@
      "level": 1,
      "text": "Which printmaking method involves cutting away parts of a surface so that the raised parts print?",
      "solution": "In relief printing (lino or woodcut), the parts left standing take the ink and print",
-     "hint": "Think about cutting into a block of lino",
+     "hint": "Think about what happens to the parts of the block that you do not cut away",
      "choice": {
       "options": [
        "Relief printing, such as lino printing",
@@ -1627,7 +1627,7 @@
      "level": 3,
      "text": "Which tool is used to roll ink evenly onto a printing block?",
      "solution": "A brayer is a hand roller that spreads ink evenly over the block",
-     "hint": "It is shaped like a small paint roller",
+     "hint": "You push it back and forth over a slab of ink, then over the block",
      "choice": {
       "options": [
        "Baren",
@@ -1862,7 +1862,7 @@
      "level": 5,
      "text": "A sculptor wants to make several identical bronze copies of a clay sculpture. Which process is used?",
      "solution": "Bronze sculptures are made by casting molten metal in a mould taken from the original",
-     "hint": "Molten metal is poured into a mould",
+     "hint": "Think about how one original shape can be copied many times in metal",
      "choice": {
       "options": [
        "Casting, using a mould",
@@ -2027,7 +2027,7 @@
      "level": 2,
      "text": "Which feature is typical of Impressionism?",
      "solution": "Impressionists used quick, visible brushstrokes to capture light and atmosphere, often outdoors",
-     "hint": "Think of Monet painting outdoors at different times of day",
+     "hint": "Think of Monet painting the same haystacks at different times of day",
      "choice": {
       "options": [
        "Melting, dreamlike objects",
@@ -2227,7 +2227,7 @@
      "level": 3,
      "text": "Which Japanese artist made the woodblock print The Great Wave off Kanagawa? Give the name.",
      "solution": "Katsushika Hokusai made The Great Wave off Kanagawa in about 1831",
-     "hint": "His family name is Katsushika",
+     "hint": "He was a Japanese printmaker famous for his views of Mount Fuji",
      "short": {
       "accept": [
        "Hokusai",
@@ -2272,7 +2272,7 @@
      "level": 4,
      "text": "A painting by Monet gave its name to Impressionism. What was it called?",
      "solution": "Monet's Impression, Sunrise (1872) led a critic to call the group 'Impressionists'",
-     "hint": "The painting's title includes the name of the movement",
+     "hint": "It shows the harbour at Le Havre in hazy early-morning light",
      "choice": {
       "options": [
        "Water Lilies",

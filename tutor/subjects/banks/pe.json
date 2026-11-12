@@ -115,7 +115,7 @@
      "level": 1,
      "text": "Which blood vessels carry blood away from the heart?",
      "solution": "Arteries carry blood away from the heart at high pressure",
-     "hint": "The first letter of these vessels matches the first letter of 'away'",
+     "hint": "These vessels have thick, muscular walls to cope with high pressure",
      "choice": {
       "options": [
        "Veins",
@@ -202,7 +202,7 @@
      "level": 2,
      "text": "Which movement takes a limb away from the midline of the body? Give the term.",
      "solution": "Abduction moves a limb away from the midline, as in the outward phase of a star jump",
-     "hint": "When someone is taken away, they are 'abducted'",
+     "hint": "The prefix 'ab-' means 'away from', as in 'absent'",
      "short": {
       "accept": [
        "abduction"
@@ -912,7 +912,7 @@
      "level": 2,
      "text": "What does progressive overload mean?",
      "solution": "Progressive overload gradually increases the demands on the body so fitness keeps improving",
-     "hint": "The key word is 'gradually'",
+     "hint": "Think about what 'progressive' means, and why training too hard too soon is risky",
      "choice": {
       "options": [
        "Training as hard as possible every day",
@@ -1246,7 +1246,8 @@
        "third class lever",
        "3rd",
        "3rd class",
-       "class 3"
+       "class 3",
+       "3"
       ],
       "reject": [
        "first",
@@ -1312,7 +1313,7 @@
      "level": 5,
      "text": "Why is a cool down useful after intense exercise?",
      "solution": "Light exercise and stretching after activity help remove lactic acid and bring heart rate down gradually",
-     "hint": "Think about what happens to heart rate and lactic acid after exercise",
+     "hint": "Think about what has built up in the muscles during intense exercise",
      "choice": {
       "options": [
        "A cool down helps remove lactic acid and gradually returns the heart rate to resting levels",
@@ -1618,7 +1619,7 @@
      "level": 2,
      "text": "Which type of feedback is given during the performance?",
      "solution": "Concurrent feedback is given during the performance; terminal feedback is given afterwards",
-     "hint": "'Concurrent' means happening at the same time",
+     "hint": "Rule out any feedback that comes after the performance has finished",
      "choice": {
       "options": [
        "Terminal feedback",
@@ -1720,14 +1721,17 @@
      "short": {
       "accept": [
        "knowledge of results",
-       "KR"
+       "KR",
+       "results"
       ],
       "reject": [
        "knowledge of performance",
-       "KP"
+       "KP",
+       "performance"
       ],
       "feedback": {
-       "knowledge of performance": "Knowledge of performance is about technique, not the outcome"
+       "knowledge of performance": "Knowledge of performance is about technique, not the outcome",
+       "performance": "Knowledge of performance is about technique, not the outcome"
       }
      }
     },

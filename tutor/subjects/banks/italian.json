@@ -453,7 +453,7 @@
     {
      "id": "g23",
      "level": 4,
-     "text": "Choose the correct verb: «Quando ero piccolo, ___ al parco ogni giorno.»",
+     "text": "Choose the correct verb: «Quando ero piccolo, ___ al parco ogni giorno.» (io)",
      "choice": {
       "options": [
        "giocavano",
@@ -1513,7 +1513,8 @@
        "news",
        "TV news",
        "news programme",
-       "news bulletin"
+       "news bulletin",
+       "news program"
       ],
       "form": "any"
      },
@@ -1878,7 +1879,9 @@
      "short": {
       "accept": [
        "andiamo al ristorante",
-       "noi andiamo al ristorante"
+       "noi andiamo al ristorante",
+       "stiamo andando al ristorante",
+       "noi stiamo andando al ristorante"
       ],
       "reject": [
        "andiamo a il ristorante",
@@ -2495,7 +2498,8 @@
      "text": "Translate into Italian: «there is a lot of traffic»",
      "short": {
       "accept": [
-       "c'è molto traffico"
+       "c'è molto traffico",
+       "c'è tanto traffico"
       ],
       "reject": [
        "c'è molta traffico",

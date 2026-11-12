@@ -411,7 +411,7 @@
     {
      "id": "e19",
      "level": 3,
-     "text": "Folk music has two notes, the tonic and the dominant, held throughout like the bagpipes. Give the one-word term.",
+     "text": "A folk tune is accompanied by two notes, the tonic and the dominant, held throughout like the bagpipes. Give the one-word term for these held notes.",
      "solution": "Held notes, often the tonic and dominant as on bagpipes, form a drone",
      "hint": "Think of the low, steady sound of the bagpipes under the tune",
      "short": {
@@ -639,7 +639,7 @@
      "level": 5,
      "text": "Which harmonic feature is most likely to make music sound tense and unsettled?",
      "solution": "Dissonance (notes that clash) creates tension; consonant chords and perfect cadences sound stable",
-     "hint": "Think about which chords sound 'clashing' rather than restful",
+     "hint": "Tension comes from notes that do not sit comfortably together",
      "choice": {
       "options": [
        "Consonant major chords",
@@ -1747,11 +1747,14 @@
      "id": "i13",
      "level": 2,
      "text": "Which Baroque keyboard instrument plucks its strings? Give the instrument.",
-     "solution": "The harpsichord plucks its strings, so it cannot make gradual changes in volume",
+     "solution": "The harpsichord (like its smaller relatives, the virginal and spinet) plucks its strings, so it cannot make gradual changes in volume",
      "hint": "It often played the continuo part in Baroque music",
      "short": {
       "accept": [
-       "harpsichord"
+       "harpsichord",
+       "virginal",
+       "virginals",
+       "spinet"
       ],
       "reject": [
        "piano",
@@ -1806,7 +1809,7 @@
      "level": 3,
      "text": "A string player moves the bow very quickly back and forth on one note to make a trembling sound. Which technique is this?",
      "solution": "Rapid bowing back and forth on one note is (bowed) tremolo",
-     "hint": "The name comes from the Italian for 'trembling'",
+     "hint": "It is often heard in film music to build suspense, with the bow moving as fast as possible",
      "choice": {
       "options": [
        "Vibrato",
@@ -2115,7 +2118,7 @@
      "level": 5,
      "text": "Which marking would a composer write to make the violins sound muted and distant?",
      "solution": "Con sordino means with a mute, which softens the string sound",
-     "hint": "Sordino is the Italian word for a mute",
+     "hint": "A small clip fitted onto the bridge softens the sound of the strings",
      "choice": {
       "options": [
        "Pizzicato",
@@ -2137,7 +2140,7 @@
      "level": 5,
      "text": "Which statement about how brass instruments make their sound is accurate?",
      "solution": "Brass players buzz their lips; valves or a slide change the length of tube and so the pitch",
-     "hint": "Try making a sound by pressing your lips together and blowing",
+     "hint": "Think about what a trumpet player does with their mouth",
      "choice": {
       "options": [
        "The player blows across an open hole",
@@ -2742,7 +2745,7 @@
      "hint": "They sound slightly lower than the notes of the major scale",
      "choice": {
       "options": [
-       "They are sharpened notes, such as the 4th and 6th",
+       "They are sharpened notes, such as the 2nd and 6th",
        "They are notes played only by the trumpet",
        "They are notes held for a whole bar",
        "They are flattened notes, such as the 3rd and 7th of the scale"

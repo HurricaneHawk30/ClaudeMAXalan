@@ -451,7 +451,7 @@
     {
      "id": "g23",
      "level": 4,
-     "text": "Choose the correct verb: «Cuando era pequeño, ___ en el parque todos los días.»",
+     "text": "Choose the correct verb: «Cuando era pequeño, ___ en el parque todos los días.» (yo)",
      "choice": {
       "options": [
        "jugaban",
@@ -910,7 +910,7 @@
     {
      "id": "p13",
      "level": 2,
-     "text": "Choose the correct verb: «Mi padre ___ alto y delgado.»",
+     "text": "Choose the correct verb: «Mi padre ___ alto e inteligente.»",
      "choice": {
       "options": [
        "está",
@@ -926,7 +926,7 @@
        null
       ]
      },
-     "solution": "Permanent physical description uses ser: mi padre es alto y delgado",
+     "solution": "Descriptions of looks and character use ser: mi padre es alto e inteligente",
      "hint": "Ser or estar? Height is a permanent characteristic"
     },
     {
@@ -1225,7 +1225,13 @@
      "short": {
       "accept": [
        "es alta y simpática",
-       "ella es alta y simpática"
+       "ella es alta y simpática",
+       "es alta y amable",
+       "ella es alta y amable",
+       "es alta y maja",
+       "ella es alta y maja",
+       "es alta y agradable",
+       "ella es alta y agradable"
       ],
       "reject": [
        "es alto y simpático",
@@ -1273,7 +1279,8 @@
      "text": "Translate into Spanish: «my brothers are lazy»",
      "short": {
       "accept": [
-       "mis hermanos son perezosos"
+       "mis hermanos son perezosos",
+       "mis hermanos son vagos"
       ],
       "reject": [
        "mis hermanos son perezosas",
@@ -2456,7 +2463,9 @@
      "short": {
       "accept": [
        "fui a la playa",
-       "yo fui a la playa"
+       "yo fui a la playa",
+       "me fui a la playa",
+       "yo me fui a la playa"
       ],
       "reject": [
        "iba a la playa",
@@ -2503,7 +2512,8 @@
      "text": "Translate into Spanish: «there is a lot of traffic»",
      "short": {
       "accept": [
-       "hay mucho tráfico"
+       "hay mucho tráfico",
+       "hay mucha circulación"
       ],
       "reject": [
        "hay mucha tráfico",
