@@ -824,3 +824,12 @@ R14 Before handing in: "python3 -m tutor audit --file <your file>" (or "--subjec
 - **`/reset`** also clears the student's `seen` rows.
 - **Audit:** shipped-content rules (L1–L4, L6, L8, L9, L11, kind mixes, the §4 table) apply only to `banks/`, `packs/` and subject modules, not to test fixtures. Audit WARNs on short items whose stem starts with "Why".
 - **Known contract limit:** options or accept/reject pairs that differ only by an apostrophe (its / it's) cannot coexist.
+
+### 10.1 Engine fixes after content review (12 Nov 2026)
+
+- **Choice line reading order (§2.3):** (1) the whole line is compared with option texts WITHOUT article stripping (as typed → without fillers → option without fillers); two matches → names nothing; (2) then the letter rules (a), (b), (b′); (3) only at the end, article stripping, and only if it yields exactly one option and the remainder is not a letter answer. Invariant (checked by audit and tests for every shipped item): typing an option's text names that option, so a wrong option's text is never correct.
+- **Minus signs:** `−` (U+2212), `‒`, `–` are normalised to `-`; `−18` = `-18`, while `−5 °C` and `5 °C` are different options. In `any` normalisation a `-` at the start of a word or after `=` before a letter is kept (`y = -x` ≠ `y = x`); hyphens inside words are unchanged.
+- **Units (v1 §2.3 number kind):** added µm/um, nm, dm³, mol/dm³, mol/l, mol/m³, g/dm³, g/l, kJ/mol, J/mol; AU, ly, pc, kpc, Mpc are distinct units and never converted into each other. A different prefix of the same quantity is converted (`0.025 mm` = `25 µm`; `25 mm` ≠ `25 µm`). `per` reads as `/` (`245 people per km²`).
+- **Number formats:** a leading `×`/`x` is accepted for plain numbers (`×200`); a space as thousands separator in groups of 3 (`5 040`) for number kinds and digit-only short answers.
+- **fmt:** `fix_articles` only changes `a`→`an` before a real word (≥ 2 letters, not all caps, not is/and/or/of…); `build` drops a hint only if a display of ≥ 2 chars occurs in it as a token, or one of ≥ 3 chars occurs anywhere.
+- **`sample`** loads the registry non-strictly and prints broken sources to stderr.
