@@ -26,6 +26,7 @@ from .base import CHOICE_LETTERS, MY_OWN_TOPIC_LABEL, PAST_PAPER_LABEL, Problem,
     problem_from_json, problem_to_json
 from .bank import BANKS_DIR, PACKS_DIR, BankError, parse_bank_data, parse_pack_data, _read_json
 from .checker import FORM_CASE, NOTE_ACCENTS, NOTE_SPELLING, check, short_typo_eligible
+from .fmt import _hint_leaks             # the same rule fmt.build applies (2+ chars as a token, 3+ anywhere)
 from .registry import (RESERVED_LABELS, Registry, _norm_label, _subject_modules, bank_files, load_registry,
                        match_skill_ids, register_module)
 from . import words
@@ -346,7 +347,7 @@ def _audit_generator(rep: Report, sk: Skill) -> list[Problem]:
                 rep.error(key, f"{where}: header {(p.skill_id, p.level, p.seed)}")
             _check_problem(rep, key, where, p, again)
             disp = p.answer.display
-            if p.answer.kind not in ("rubric", "choice") and disp and disp in p.hint:
+            if p.answer.kind not in ("rubric", "choice") and _hint_leaks(disp, p.hint):
                 rep.error(key, f"{where}: the hint contains the answer {disp!r}")
     return problems
 
