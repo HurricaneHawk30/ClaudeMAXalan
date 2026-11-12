@@ -302,7 +302,7 @@ class TestBankV2(unittest.TestCase):
         options = ["Nucleus", "Mitochondria", "Ribosome", "Cell membrane"]
         for seed in range(15):
             p = it.render(seed)
-            order = shuffle_order(4, seed)
+            order = shuffle_order(4, seed, it.ref)          # bank items salt the shuffle with the ref (lead decision 1)
             shown = [options[i] for i in order]
             self.assertEqual(p.text, "[Cells] Which organelle releases energy by respiration?\n\n"
                              + "\n".join(f"{CHOICE_LETTERS[i]}) {o}" for i, o in enumerate(shown)))

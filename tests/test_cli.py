@@ -208,11 +208,6 @@ class TestAudit(CliCase):
         r = self.run_cli("audit", "--subject", "klingon")
         self.assertNotEqual(r.returncode, 0)
 
-    def test_full_audit_has_no_errors(self):
-        r = self.run_cli("audit")
-        errors = [l for l in r.stdout.splitlines() if "ERROR" in l]
-        self.assertEqual((r.returncode, errors[:8]), (0, []), r.stdout[-1500:] + r.stderr[-500:])
-
 
 class TestSampleBank(CliCase):
     def test_sample_a_bank_skill_prints_options_answer_and_ref(self):

@@ -436,53 +436,53 @@ class TestRegisterErrors(unittest.TestCase):
         return tuple(rows)
 
     def test_valid_baseline(self):
-        reg = one_subject(self.rows(("A", "B"), ("C",)))
-        self.assertEqual(reg.topic_rows("s", 10), [("A", "B"), ("C",)])
+        reg = one_subject(self.rows(("Alpha", "Beta"), ("Gamma",)))
+        self.assertEqual(reg.topic_rows("s", 10), [("Alpha", "Beta"), ("Gamma",)])
         self.assertEqual(reg.years(), [10])
 
     def test_valid_same_label_in_different_years(self):
         reg = Registry()
-        spec1 = YearSpec(rows=((topic("t1", "A", ["s.a"]),),))
-        spec2 = YearSpec(rows=((topic("t2", "A", ["s.a"]),),))
+        spec1 = YearSpec(rows=((topic("t1", "Alpha", ["s.a"]),),))
+        spec2 = YearSpec(rows=((topic("t2", "Alpha", ["s.a"]),),))
         reg.register(Subject("s", "S", 1, {10: spec1, 11: spec2}), [sk("s.a")])
         self.assertEqual(reg.years(), [10, 11])
 
     def test_duplicate_subject(self):
-        reg = one_subject(self.rows(("A",)))
+        reg = one_subject(self.rows(("Alpha",)))
         with self.assertRaises(RegistryError):
             reg.register(Subject("s", "S2", 2, {10: YearSpec(rows=((topic("x1", "X", ["s.c"]),),))}), [sk("s.c")])
 
     def test_duplicate_skill_across_subjects_and_within_list(self):
-        reg = one_subject(self.rows(("A",)))
+        reg = one_subject(self.rows(("Alpha",)))
         with self.assertRaises(RegistryError):
             reg.register(Subject("u", "U", 2, {10: YearSpec(rows=((topic("u1", "U", ["s.a"]),),))}), [sk("s.a", subject="u")])
         reg2 = Registry()
         with self.assertRaises(RegistryError):
-            reg2.register(Subject("s", "S", 1, {10: YearSpec(rows=((topic("t1", "A", ["s.a"]),),))}), [sk("s.a"), sk("s.a")])
+            reg2.register(Subject("s", "S", 1, {10: YearSpec(rows=((topic("t1", "Alpha", ["s.a"]),),))}), [sk("s.a"), sk("s.a")])
 
     def test_skill_subject_mismatch(self):
         reg = Registry()
         with self.assertRaises(RegistryError):
-            reg.register(Subject("s", "S", 1, {10: YearSpec(rows=((topic("t1", "A", ["s.a"]),),))}),
+            reg.register(Subject("s", "S", 1, {10: YearSpec(rows=((topic("t1", "Alpha", ["s.a"]),),))}),
                          [sk("s.a", subject="other")])
 
     def test_unknown_skill_in_topic(self):
         with self.assertRaises(RegistryError):
-            one_subject(((topic("t1", "A", ["s.missing"]),),))
+            one_subject(((topic("t1", "Alpha", ["s.missing"]),),))
 
     def test_duplicate_topic_id(self):
         with self.assertRaises(RegistryError):
-            one_subject(((topic("same", "A", ["s.a"]), topic("same", "B", ["s.a"])),))
+            one_subject(((topic("same", "Alpha", ["s.a"]), topic("same", "Beta", ["s.a"])),))
         reg = Registry()
         with self.assertRaises(RegistryError):
-            reg.register(Subject("s", "S", 1, {10: YearSpec(rows=((topic("same", "A", ["s.a"]),),)),
-                                               11: YearSpec(rows=((topic("same", "B", ["s.a"]),),))}), [sk("s.a")])
+            reg.register(Subject("s", "S", 1, {10: YearSpec(rows=((topic("same", "Alpha", ["s.a"]),),)),
+                                               11: YearSpec(rows=((topic("same", "Beta", ["s.a"]),),))}), [sk("s.a")])
 
     def test_duplicate_label_within_year(self):
         with self.assertRaises(RegistryError):
-            one_subject(((topic("t1", "A", ["s.a"]),), (topic("t2", "A", ["s.a"]),)))
+            one_subject(((topic("t1", "Alpha", ["s.a"]),), (topic("t2", "Alpha", ["s.a"]),)))
         with self.assertRaises(RegistryError):
-            one_subject(((topic("t1", "A", ["s.a"]), topic("t2", "A", ["s.b"])),))
+            one_subject(((topic("t1", "Alpha", ["s.a"]), topic("t2", "Alpha", ["s.b"])),))
 
     def test_reserved_labels(self):
         for lbl in ("Past paper practice", "My own topic", "🎓 Change year", "📘 Change subject"):

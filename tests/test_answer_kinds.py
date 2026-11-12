@@ -414,6 +414,12 @@ class TestBuildChoice(unittest.TestCase):
                 self.assertEqual(shuffle_order(n, seed), exp)
                 self.assertEqual(sorted(shuffle_order(n, seed)), list(range(n)))
 
+    def test_shuffle_order_salt(self):
+        self.assertEqual(shuffle_order(4, 3, ""), shuffle_order(4, 3))
+        self.assertEqual(shuffle_order(4, 3, "a.b#c1"), shuffle_order(4, 3, "a.b#c1"))
+        self.assertEqual(sorted(shuffle_order(5, 3, "a.b#c1")), list(range(5)))
+        self.assertGreater(len({tuple(shuffle_order(4, 3, f"a.b#c{i}")) for i in range(30)}), 5)
+
     def test_shuffle_order_deterministic_and_varied(self):
         self.assertEqual(shuffle_order(4, 3), shuffle_order(4, 3))
         self.assertGreater(len({tuple(shuffle_order(4, s)) for s in range(30)}), 5)
