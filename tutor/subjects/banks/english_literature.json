@@ -72,7 +72,7 @@
       ],
       "correct": 2,
       "feedback": [
-       "Malcolm is the king's son; he is crowned at the end",
+       "Malcolm is the king's son; he becomes king at the end of the play",
        "Edward is the King of England in the play",
        null,
        null
@@ -174,7 +174,7 @@
        "He will become Thane of Cawdor and then king",
        "He will be killed by Macduff in a battle",
        "His descendants will be kings, but he will not be king",
-       "He will become King of England after Edward"
+       "He will become King of England after the death of King Edward"
       ],
       "correct": 2
      },
@@ -280,7 +280,7 @@
      "choice": {
       "options": [
        "Because they had attacked Lady Macbeth in the night",
-       "Because Banquo ordered him to do it straight away",
+       "Because Banquo ordered him to do it straight away, before dawn",
        "To silence them, while pretending he acted out of loyal fury",
        "Because he discovered they were spies from Norway"
       ],
@@ -296,7 +296,7 @@
      "text": "The apparitions in Act 4 Scene 1 say that no man born of a woman can harm Macbeth, and that he will not be defeated until Birnam Wood comes to Dunsinane. How does this make Macbeth feel?",
      "choice": {
       "options": [
-       "Terrified, so he surrenders to Malcolm at once",
+       "Terrified, so he surrenders to Malcolm at once and flees Scotland",
        "Guilty, so he confesses everything to Macduff",
        "Uninterested, so he ignores the witches' words",
        "Overconfident, because he thinks he cannot be defeated"
@@ -361,7 +361,7 @@
       "options": [
        "She becomes calmer, colder and even more ruthless",
        "She moves from confident control to being overwhelmed by guilt",
-       "She forgets the murder completely by the final act",
+       "She forgets the murder completely and sleeps peacefully by the final act",
        "She confesses publicly to Malcolm and the lords"
       ],
       "correct": 1
@@ -490,7 +490,7 @@
      "choice": {
       "options": [
        "His relief at finally being free",
-       "His plan to win the battle using magic",
+       "His plan to win the final battle by using the witches' magic",
        "His joy at becoming king",
        "His despair: life now seems meaningless to him"
       ],
@@ -550,7 +550,7 @@
        "Scrooge's dead business partner",
        "Scrooge's nephew",
        "Scrooge's clerk",
-       "Scrooge's old schoolteacher"
+       "Scrooge's old schoolteacher from his boarding school"
       ],
       "correct": 0
      },
@@ -719,7 +719,7 @@
       "options": [
        "A wreath of holly decorated with shining icicles",
        "A deep green robe bordered with soft white fur",
-       "A black hooded garment that hides his whole body",
+       "A black hooded garment that hides his whole body and face",
        "A long chain of cash-boxes, keys, padlocks and ledgers"
       ],
       "correct": 3,
@@ -978,7 +978,7 @@
        "The 1834 Poor Law Amendment Act sent many poor people to harsh workhouses",
        "Victorian Britain gave free healthcare to everyone",
        "Workhouses had been abolished before 1843",
-       "Dickens wrote the novella to praise wealthy factory owners"
+       "Dickens wrote the novella to praise wealthy factory owners and their profits"
       ],
       "correct": 0
      },
@@ -994,7 +994,7 @@
       "options": [
        "To add some comedy to a sad and serious stave",
        "To warn that neglecting poor children will ruin society",
-       "To show what Scrooge was like as a lonely child",
+       "To show what Scrooge was like as a lonely child at boarding school",
        "To reveal the secret of how Marley really died"
       ],
       "correct": 1
@@ -1107,7 +1107,7 @@
        "Mr Birling's knighthood",
        "Sheila's engagement to Gerald Croft",
        "Eric's birthday",
-       "Mrs Birling's charity award"
+       "Mrs Birling's award from the women's charity committee"
       ],
       "correct": 1,
       "feedback": [
@@ -1348,7 +1348,7 @@
      "text": "When the Inspector arrives, how do Priestley's stage directions say the lighting should change?",
      "choice": {
       "options": [
-       "From bright to complete darkness",
+       "From bright to complete darkness for the rest of the play",
        "From white to flashing red",
        "It stays the same all evening",
        "From soft and warm to bright and harsh"
@@ -1394,7 +1394,7 @@
      "choice": {
       "options": [
        "So the audience could see how wrong Birling's predictions were",
-       "Because the law required all plays to be set in the past",
+       "Because the law at the time required all plays to be set in the past",
        "Because he knew nothing about events after 1912",
        "To make the costumes and the set cheaper to produce"
       ],
@@ -1410,7 +1410,7 @@
      "text": "How do Sheila and Eric differ from their parents by the end of the play?",
      "choice": {
       "options": [
-       "The parents feel far more guilty than their children",
+       "The parents feel far more guilty than their children by the end",
        "The children accept responsibility; the parents mostly do not",
        "Everyone in the family changes equally by the end",
        "Sheila and Eric decide that nothing really happened"
@@ -1427,7 +1427,7 @@
      "text": "What news does the final phone call of the play bring?",
      "choice": {
       "options": [
-       "News that Eva Smith is alive and working at Milwards",
+       "News that Eva Smith is alive and well and working at Milwards again",
        "News that Gerald has been arrested by the police",
        "News of another young woman's death and a real inspector coming",
        "News that Mr Birling has been given his knighthood"
@@ -1446,7 +1446,7 @@
       "options": [
        "Five acts set over several years",
        "Many short scenes in different cities",
-       "Two acts separated by a ten-year gap",
+       "Two acts, set ten years apart in two different houses in Brumley",
        "Three acts with continuous action in one room on one evening"
       ],
       "correct": 3
@@ -1490,7 +1490,7 @@
      "choice": {
       "options": [
        "He was a socialist who believed in collective responsibility",
-       "He was a capitalist who shared Mr Birling's views",
+       "He was a capitalist who shared Mr Birling's views about business",
        "He believed the class system should never change",
        "He thought women should stay at home and not work"
       ],
@@ -1523,7 +1523,7 @@
      "text": "After Gerald learns there is no Inspector Goole in the local police, how do Mr and Mrs Birling react?",
      "choice": {
       "options": [
-       "They confess everything to the newspapers",
+       "They confess everything to the local newspapers the following morning",
        "They give all their money to charity",
        "They feel relieved and act as if nothing has changed",
        "They thank Sheila for her honesty"
@@ -1728,7 +1728,7 @@
       "options": [
        "A complete statue sitting on a golden throne",
        "Two huge stone legs and a broken face in the sand",
-       "Only an empty pedestal with no words on it",
+       "Only an empty pedestal with no words carved on it at all",
        "A ruined palace still full of gold treasure"
       ],
       "correct": 1
@@ -2005,7 +2005,7 @@
      "choice": {
       "options": [
        "It contrasts suffering in war zones with indifference at home",
-       "It is spoken by a soldier fighting in the trenches",
+       "It is spoken by a soldier fighting in the trenches of the First World War",
        "It celebrates the excitement and glory of war",
        "It is set in the streets of Victorian London"
       ],
@@ -2442,7 +2442,7 @@
        "Passionate, hasty love may end in disaster",
        "Romeo should take up fencing",
        "The wedding will be cancelled",
-       "Juliet is secretly in love with Paris"
+       "Juliet is secretly still in love with Paris, not Romeo"
       ],
       "correct": 0
      },
@@ -2456,7 +2456,7 @@
      "text": "How does the Prologue shape the audience's response to the play?",
      "choice": {
       "options": [
-       "It hides the ending to create a big surprise at the end",
+       "It hides the ending so that the deaths come as a big surprise to the audience",
        "It reveals the ending, creating dramatic irony and a sense of fate",
        "It introduces a comic subplot about the servants",
        "It lists the actors and characters in order of appearance"
@@ -2491,7 +2491,7 @@
      "choice": {
       "options": [
        "He believes he is very lucky",
-       "He is joking with Mercutio",
+       "He is joking with Mercutio, who is still alive and well",
        "He wants to become a court jester",
        "He feels controlled by fate and bad luck"
       ],
@@ -2545,7 +2545,7 @@
      "choice": {
       "options": [
        "The Prologue calls them 'star-cross'd lovers', suggesting fate",
-       "Fate and the stars are never mentioned in the play",
+       "Fate and the stars are never once mentioned anywhere in the play",
        "Romeo always accepts his fate calmly and quietly",
        "The ending is caused only by the Nurse's lies"
       ],
@@ -2578,7 +2578,7 @@
      "text": "How is the feud resolved at the end of the play?",
      "choice": {
       "options": [
-       "The Prince banishes both families from Verona for ever",
+       "The Prince banishes both families from Verona for ever as punishment",
        "Paris marries Juliet's cousin to unite the families",
        "The fathers make peace and promise golden statues of the lovers",
        "The feud continues and becomes worse than before"
@@ -2596,7 +2596,7 @@
      "choice": {
       "options": [
        "He is a gentle peacemaker, just like Benvolio",
-       "He is secretly in love with his cousin Juliet",
+       "He is secretly in love with his cousin Juliet and wants to marry her",
        "He is Romeo's closest friend and loyal ally",
        "He is proud and aggressive, and says he hates peace"
       ],
@@ -2829,7 +2829,7 @@
       "options": [
        "Everything goes to Utterson",
        "Everything goes to charity",
-       "His house goes to Poole",
+       "His house and his money go to his butler, Poole",
        "Everything goes to Edward Hyde"
       ],
       "correct": 3
@@ -3020,7 +3020,7 @@
       "options": [
        "Poole hides the potion and refuses to give it back",
        "Utterson destroys his laboratory to protect him",
-       "Lanyon steals his notes and the recipe for the potion",
+       "Lanyon steals his notebooks and the secret recipe for the potion",
        "He transforms without the potion, and his special salt runs out"
       ],
       "correct": 3
@@ -3066,7 +3066,7 @@
      "choice": {
       "options": [
        "Victorian gentlemen were expected to keep a respectable public reputation",
-       "Victorian society encouraged people to share their secrets openly",
+       "Victorian society encouraged people to share all their secrets openly in public",
        "The novella was written after the First World War",
        "Stevenson wrote it to celebrate science without question"
       ],
@@ -3082,7 +3082,7 @@
      "text": "Hyde is described as 'ape-like'. Which Victorian fear does this reflect?",
      "choice": {
       "options": [
-       "That apes were escaping from London Zoo at night",
+       "That apes were escaping from London Zoo and roaming the streets at night",
        "That humans might slide back into a primitive, animal state",
        "That electricity would make cities too dangerous",
        "That machines would soon replace all workers"

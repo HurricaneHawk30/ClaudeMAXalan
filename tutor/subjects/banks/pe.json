@@ -1,0 +1,2686 @@
+{
+ "subject": {
+  "id": "pe",
+  "title": "PE",
+  "order": 76
+ },
+ "skills": [
+  {
+   "id": "pe.anatomy",
+   "title": "Anatomy & physiology",
+   "aliases": [
+    "skeletal system",
+    "anatomy",
+    "joints",
+    "muscles",
+    "antagonistic pairs",
+    "cardiovascular system",
+    "respiratory system",
+    "aerobic",
+    "anaerobic",
+    "epoc",
+    "cardiac output"
+   ],
+   "questions": [
+    {
+     "id": "a01",
+     "level": 1,
+     "text": "Which bone is the longest in the human body?",
+     "solution": "The femur (thigh bone) is the longest and strongest bone in the body",
+     "hint": "It is in the upper leg",
+     "choice": {
+      "options": [
+       "Femur",
+       "Humerus",
+       "Tibia",
+       "Radius"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The humerus is the upper arm bone",
+       "The tibia is the shin bone, below the femur",
+       null
+      ]
+     }
+    },
+    {
+     "id": "a02",
+     "level": 1,
+     "text": "Which type of joint is the shoulder?",
+     "solution": "The shoulder (like the hip) is a ball and socket joint, allowing movement in many directions",
+     "hint": "The shoulder can move in almost every direction, including in a circle",
+     "choice": {
+      "options": [
+       "Hinge",
+       "Ball and socket",
+       "Pivot",
+       "Condyloid"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Hinge joints, such as the elbow and knee, mainly allow flexion and extension",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a03",
+     "level": 1,
+     "text": "What connects a muscle to a bone? Give the term.",
+     "solution": "Tendons attach muscles to bones; ligaments join bone to bone",
+     "hint": "The Achilles is a famous example at the back of the ankle",
+     "short": {
+      "accept": [
+       "tendon",
+       "tendons"
+      ],
+      "reject": [
+       "ligament",
+       "ligaments",
+       "cartilage"
+      ],
+      "feedback": {
+       "ligament": "Ligaments join bone to bone",
+       "ligaments": "Ligaments join bone to bone"
+      }
+     }
+    },
+    {
+     "id": "a04",
+     "level": 1,
+     "text": "What connects bone to bone at a joint? Give the term.",
+     "solution": "Ligaments are tough bands that join bone to bone and keep joints stable",
+     "hint": "Footballers can damage one called the ACL in the knee",
+     "short": {
+      "accept": [
+       "ligament",
+       "ligaments"
+      ],
+      "reject": [
+       "tendon",
+       "tendons",
+       "cartilage"
+      ],
+      "feedback": {
+       "tendon": "Tendons attach muscle to bone",
+       "tendons": "Tendons attach muscle to bone"
+      }
+     }
+    },
+    {
+     "id": "a05",
+     "level": 1,
+     "text": "Which blood vessels carry blood away from the heart?",
+     "solution": "Arteries carry blood away from the heart at high pressure",
+     "hint": "The first letter of these vessels matches the first letter of 'away'",
+     "choice": {
+      "options": [
+       "Veins",
+       "Capillaries",
+       "Arteries",
+       "Venules"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Veins carry blood back towards the heart",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a06",
+     "level": 1,
+     "text": "Give the name of the tiny air sacs in the lungs where gas exchange takes place.",
+     "solution": "Oxygen and carbon dioxide are exchanged across the thin walls of the alveoli (air sacs)",
+     "hint": "They are at the very end of the bronchioles",
+     "short": {
+      "accept": [
+       "alveoli",
+       "alveolus"
+      ],
+      "reject": [
+       "bronchioles",
+       "bronchi",
+       "bronchiole"
+      ],
+      "feedback": {
+       "bronchioles": "Bronchioles are the small tubes that lead to the air sacs"
+      }
+     }
+    },
+    {
+     "id": "a07",
+     "level": 1,
+     "text": "Which of these is a function of the skeleton?",
+     "solution": "The skeleton gives support, protection, movement, blood cell production and mineral storage",
+     "hint": "Think about what the skull does for the brain",
+     "choice": {
+      "options": [
+       "Digesting food",
+       "Producing insulin",
+       "Pumping blood",
+       "Protection of vital organs"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "That is the job of the heart",
+       null
+      ]
+     }
+    },
+    {
+     "id": "a08",
+     "level": 2,
+     "text": "Which statement about flexion and extension is accurate?",
+     "solution": "Bending a joint (flexion) decreases the angle; straightening it (extension) increases the angle",
+     "hint": "Think about bending your elbow: does the angle get bigger or smaller?",
+     "choice": {
+      "options": [
+       "Flexion decreases the angle at a joint; extension increases it",
+       "Flexion increases the angle at a joint; extension decreases it",
+       "Flexion moves a limb away from the midline; extension moves it towards the midline",
+       "Flexion is turning around; extension is moving in a circle"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That describes abduction and adduction",
+       null
+      ]
+     }
+    },
+    {
+     "id": "a09",
+     "level": 2,
+     "text": "Which movement takes a limb away from the midline of the body? Give the term.",
+     "solution": "Abduction moves a limb away from the midline, as in the outward phase of a star jump",
+     "hint": "When someone is taken away, they are 'abducted'",
+     "short": {
+      "accept": [
+       "abduction"
+      ],
+      "reject": [
+       "adduction"
+      ],
+      "feedback": {
+       "adduction": "Adduction moves a limb towards the midline"
+      }
+     }
+    },
+    {
+     "id": "a10",
+     "level": 2,
+     "text": "At the elbow, which muscle is the agonist when the arm bends during a bicep curl?",
+     "solution": "During elbow flexion the biceps contract as the agonist and the triceps relax as the antagonist",
+     "hint": "The muscle that shortens to bend the elbow is at the front of the upper arm",
+     "choice": {
+      "options": [
+       "Triceps",
+       "Biceps",
+       "Deltoid",
+       "Hamstrings"
+      ],
+      "correct": 1,
+      "feedback": [
+       "The triceps is the antagonist during flexion; it is the agonist when the elbow extends",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a11",
+     "level": 2,
+     "text": "Which statement about veins is accurate?",
+     "solution": "Veins return blood to the heart at low pressure and contain valves to prevent backflow",
+     "hint": "Blood in veins is at low pressure, so something must stop it flowing backwards",
+     "choice": {
+      "options": [
+       "Veins carry blood away from the heart at high pressure",
+       "Veins are one cell thick for gas exchange",
+       "Veins carry blood towards the heart and have valves to stop backflow",
+       "Veins have the thickest, most muscular walls"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That describes arteries",
+       "That describes capillaries",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a12",
+     "level": 2,
+     "text": "Give the type of respiration that takes place without oxygen and produces lactic acid.",
+     "solution": "Anaerobic respiration releases energy without oxygen and produces lactic acid",
+     "hint": "'An' at the start of a word means 'without'",
+     "short": {
+      "accept": [
+       "anaerobic",
+       "anaerobic respiration"
+      ],
+      "reject": [
+       "aerobic",
+       "aerobic respiration"
+      ],
+      "feedback": {
+       "aerobic": "Aerobic respiration uses oxygen and produces no lactic acid"
+      }
+     }
+    },
+    {
+     "id": "a13",
+     "level": 2,
+     "text": "Which type of bone are the vertebrae?",
+     "solution": "Vertebrae are irregular bones: their complex shape protects the spinal cord",
+     "hint": "Their shape does not fit the other groups",
+     "choice": {
+      "options": [
+       "Long",
+       "Short",
+       "Flat",
+       "Irregular"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Long bones include the femur and humerus",
+       null,
+       "Flat bones include the cranium, ribs and sternum",
+       null
+      ]
+     }
+    },
+    {
+     "id": "a14",
+     "level": 2,
+     "text": "Which chamber of the heart pumps oxygenated blood to the body through the aorta?",
+     "solution": "The left ventricle pumps oxygenated blood out through the aorta to the body",
+     "hint": "Ventricles pump blood out of the heart; which side carries oxygenated blood?",
+     "choice": {
+      "options": [
+       "Left ventricle",
+       "Right ventricle",
+       "Left atrium",
+       "Right atrium"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The right ventricle pumps deoxygenated blood to the lungs",
+       "The left atrium receives blood from the lungs",
+       null
+      ]
+     }
+    },
+    {
+     "id": "a15",
+     "level": 3,
+     "text": "A footballer kicks a ball. As the leg straightens at the knee, which movement happens?",
+     "solution": "Straightening the knee to kick increases the angle at the joint: extension",
+     "hint": "Is the angle at the knee getting bigger or smaller?",
+     "choice": {
+      "options": [
+       "Flexion",
+       "Extension",
+       "Abduction",
+       "Rotation"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Flexion is bending the knee, as in the back-swing before the kick",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a16",
+     "level": 3,
+     "text": "A sprinter pushes off onto their toes from the blocks. Which movement happens at the ankle?",
+     "solution": "Pointing the toes or pushing onto the toes is plantar flexion",
+     "hint": "Is the foot pointing down or pulling up towards the shin?",
+     "choice": {
+      "options": [
+       "Dorsiflexion",
+       "Abduction",
+       "Plantar flexion",
+       "Circumduction"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Dorsiflexion pulls the toes up towards the shin",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a17",
+     "level": 3,
+     "text": "Which type of joint lets the head turn from side to side, between the atlas and axis vertebrae?",
+     "solution": "The joint between the atlas and axis in the neck is a pivot joint, allowing rotation",
+     "hint": "This joint allows rotation, like shaking your head to say 'no'",
+     "choice": {
+      "options": [
+       "Hinge",
+       "Ball and socket",
+       "Condyloid",
+       "Pivot"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "a18",
+     "level": 3,
+     "text": "A cricket bowler swings their arm in a full circle at the shoulder. Give the term for this movement.",
+     "solution": "Moving a limb so that it draws a circle is circumduction",
+     "hint": "It begins with 'circum', meaning around",
+     "short": {
+      "accept": [
+       "circumduction"
+      ],
+      "reject": [
+       "rotation"
+      ],
+      "feedback": {
+       "rotation": "Rotation is turning a limb around its own long axis; drawing a circle is circumduction"
+      }
+     }
+    },
+    {
+     "id": "a19",
+     "level": 3,
+     "text": "During exercise, what happens to heart rate and stroke volume?",
+     "solution": "Heart rate and stroke volume both rise during exercise, so cardiac output (HR × SV) increases",
+     "hint": "Cardiac output = heart rate × stroke volume",
+     "choice": {
+      "options": [
+       "Both increase, so cardiac output increases",
+       "Both decrease, so cardiac output decreases",
+       "Heart rate increases, but cardiac output falls",
+       "Stroke volume falls to zero"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "a20",
+     "level": 3,
+     "text": "Name the dome-shaped muscle under the lungs that contracts and flattens when you breathe in.",
+     "solution": "The diaphragm contracts and flattens when you inhale, making the chest cavity bigger",
+     "hint": "It separates the chest from the abdomen",
+     "short": {
+      "accept": [
+       "diaphragm"
+      ]
+     }
+    },
+    {
+     "id": "a21",
+     "level": 3,
+     "text": "A long-distance runner's legs feel heavy near the end of a race, and they have to slow down. Which substance has built up in their muscles?",
+     "solution": "Working anaerobically at high intensity produces lactic acid, which causes muscle fatigue",
+     "hint": "This substance is produced when muscles work without enough oxygen",
+     "choice": {
+      "options": [
+       "Glucose",
+       "Lactic acid",
+       "Oxygen",
+       "Water"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "a22",
+     "level": 4,
+     "text": "A performer's heart rate is 150 bpm and their stroke volume is 100 ml. What is their cardiac output? Give the answer in litres per minute (1 litre = 1000 ml).",
+     "solution": "Cardiac output = HR × SV = 150 × 100 = 15 000 ml/min = 15 litres per minute",
+     "hint": "Multiply heart rate by stroke volume, then convert ml to litres",
+     "answer": {
+      "kind": "number",
+      "display": "15 L/min",
+      "value": 15
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "15000",
+        "value": 15000
+       },
+       "feedback": "That is in ml per minute; divide by 1000 to get litres"
+      }
+     ]
+    },
+    {
+     "id": "a23",
+     "level": 4,
+     "text": "A student's tidal volume is 0.5 litres and they take 12 breaths per minute. Minute ventilation = tidal volume × breathing rate. What is their minute ventilation in litres per minute?",
+     "solution": "Minute ventilation = 0.5 × 12 = 6 litres per minute",
+     "hint": "Multiply the volume of one breath by the number of breaths per minute",
+     "answer": {
+      "kind": "number",
+      "display": "6 L/min",
+      "value": 6
+     }
+    },
+    {
+     "id": "a24",
+     "level": 4,
+     "text": "Which list shows the path of air into the lungs in the correct order?",
+     "solution": "Air passes through the mouth or nose, trachea, bronchi, bronchioles and finally the alveoli",
+     "hint": "The tubes get narrower and narrower until they reach the air sacs",
+     "choice": {
+      "options": [
+       "Mouth or nose, bronchi, trachea, alveoli, bronchioles",
+       "Trachea, mouth or nose, bronchioles, bronchi, alveoli",
+       "Mouth or nose, trachea, bronchi, bronchioles, alveoli",
+       "Mouth or nose, trachea, alveoli, bronchioles, bronchi"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "a25",
+     "level": 4,
+     "text": "Why do arteries have thick, elastic, muscular walls?",
+     "solution": "Arteries carry blood at high pressure straight from the heart, so they need thick, elastic walls",
+     "hint": "Think about the pressure of blood leaving the heart",
+     "choice": {
+      "options": [
+       "To let gases diffuse through them",
+       "To slow blood down so it can return to the heart",
+       "To store oxygen for later use",
+       "To cope with the high pressure of blood pumped from the heart"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Gas exchange happens through thin-walled capillaries",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a26",
+     "level": 4,
+     "text": "Which short-term effect of exercise on the respiratory system is accurate?",
+     "solution": "During exercise we breathe faster and more deeply to take in more oxygen and remove carbon dioxide",
+     "hint": "The muscles need more oxygen during exercise",
+     "choice": {
+      "options": [
+       "Breathing rate and depth of breathing (tidal volume) both increase",
+       "Tidal volume decreases to save energy",
+       "Breathing rate falls during a sprint",
+       "The diaphragm stops contracting"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "a27",
+     "level": 4,
+     "text": "Give the term (or its abbreviation) for the extra oxygen used after exercise to recover, for example to remove lactic acid.",
+     "solution": "EPOC (excess post-exercise oxygen consumption), sometimes called oxygen debt, is used to recover after exercise",
+     "hint": "It is the reason you keep breathing hard after a sprint finishes",
+     "short": {
+      "accept": [
+       "EPOC",
+       "excess post-exercise oxygen consumption",
+       "oxygen debt"
+      ]
+     }
+    },
+    {
+     "id": "a28",
+     "level": 4,
+     "text": "Which muscle fibre type is best suited to a marathon runner?",
+     "solution": "Slow twitch (type I) fibres contract slowly, use oxygen well and resist fatigue, so they suit endurance events",
+     "hint": "Marathons need fibres that resist fatigue for a long time",
+     "choice": {
+      "options": [
+       "Fast twitch (type IIx)",
+       "Slow twitch (type I)",
+       "Fast twitch (type IIa)",
+       "Cardiac muscle"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Type IIx fibres are powerful but tire very quickly, suiting sprints",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a29",
+     "level": 5,
+     "text": "Why does a long-distance runner develop more capillaries around their muscles after months of training?",
+     "solution": "More capillaries mean more oxygen can reach the muscles and more waste can be removed, improving endurance",
+     "hint": "Capillaries are where gases are exchanged with the muscles",
+     "choice": {
+      "options": [
+       "Capillarisation makes the heart beat faster at rest",
+       "Capillarisation reduces the amount of blood in the body",
+       "Capillarisation increases oxygen delivery to the muscles and the removal of carbon dioxide",
+       "Capillarisation stops lactic acid forming at any intensity"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "a30",
+     "level": 5,
+     "text": "Why is the wall of the left ventricle thicker than the wall of the right ventricle?",
+     "solution": "The left ventricle must pump blood around the whole body, so it has a thicker muscular wall",
+     "hint": "Compare where each ventricle sends its blood",
+     "choice": {
+      "options": [
+       "The left ventricle pumps blood only to the lungs",
+       "The left ventricle receives blood from the body",
+       "The left ventricle contains more valves",
+       "The left ventricle pumps blood all around the body, which needs more force than pumping to the lungs"
+      ],
+      "correct": 3,
+      "feedback": [
+       "The right ventricle pumps blood to the lungs",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a31",
+     "level": 5,
+     "text": "During a 400 m race at maximum effort, which type of respiration mainly supplies energy, and what is a by-product?",
+     "solution": "High-intensity work like a flat-out 400 m relies mainly on anaerobic respiration, which produces lactic acid",
+     "hint": "At maximum intensity, the muscles cannot get enough oxygen",
+     "choice": {
+      "options": [
+       "Anaerobic, producing lactic acid",
+       "Aerobic, producing lactic acid",
+       "Aerobic, producing only water",
+       "Anaerobic, producing oxygen"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Aerobic respiration produces carbon dioxide and water, not lactic acid",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "a32",
+     "level": 5,
+     "text": "Which long-term effect of regular aerobic training is accurate?",
+     "solution": "Training enlarges and strengthens the heart, so stroke volume rises and resting heart rate falls (bradycardia)",
+     "hint": "A stronger heart pumps more blood with each beat",
+     "choice": {
+      "options": [
+       "A higher resting heart rate, as the heart becomes weaker",
+       "A lower resting heart rate, as stroke volume increases",
+       "A smaller heart and lower stroke volume",
+       "Fewer red blood cells"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "a33",
+     "level": 5,
+     "text": "As a weight is lowered slowly in a bicep curl, which type of contraction happens in the biceps?",
+     "solution": "The biceps lengthen under tension to control the weight on the way down: an eccentric contraction",
+     "hint": "The muscle is getting longer but is still working to control the weight",
+     "choice": {
+      "options": [
+       "Concentric",
+       "Isometric",
+       "Eccentric",
+       "No contraction at all"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Concentric contraction is when the muscle shortens, as when lifting the weight",
+       null,
+       null,
+       "The biceps must still work, or the weight would drop"
+      ]
+     }
+    },
+    {
+     "id": "a34",
+     "level": 5,
+     "text": "Which type of muscle contraction keeps the muscle the same length, for example when holding a plank? Give the term.",
+     "solution": "In an isometric (static) contraction the muscle is under tension but does not change length",
+     "hint": "'Iso' means same and 'metric' means length",
+     "short": {
+      "accept": [
+       "isometric",
+       "isometric contraction",
+       "static",
+       "static contraction"
+      ],
+      "reject": [
+       "isotonic",
+       "concentric",
+       "eccentric"
+      ],
+      "feedback": {
+       "isotonic": "Isotonic contractions change the muscle's length"
+      }
+     }
+    },
+    {
+     "id": "a35",
+     "level": 5,
+     "text": "Which statement about gas exchange at the alveoli is accurate?",
+     "solution": "Gases diffuse from high to low concentration: oxygen into the blood, carbon dioxide out into the alveoli",
+     "hint": "Gases move from a high concentration to a low concentration",
+     "choice": {
+      "options": [
+       "Carbon dioxide diffuses from the alveoli into the blood; oxygen diffuses from the blood into the alveoli",
+       "Both gases are pumped by the heart into the alveoli",
+       "Gases only pass through the trachea wall",
+       "Oxygen diffuses from the alveoli into the blood; carbon dioxide diffuses from the blood into the alveoli"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "pe.training",
+   "title": "Movement & training",
+   "aliases": [
+    "components of fitness",
+    "fitness tests",
+    "principles of training",
+    "fitt",
+    "interval training",
+    "circuit training",
+    "fartlek",
+    "plyometrics",
+    "training zones",
+    "warm up",
+    "levers",
+    "planes and axes"
+   ],
+   "questions": [
+    {
+     "id": "t01",
+     "level": 1,
+     "text": "Which fitness test measures flexibility?",
+     "solution": "The sit and reach test measures flexibility of the lower back and hamstrings",
+     "hint": "The test involves reaching forwards along a box",
+     "choice": {
+      "options": [
+       "Sit and reach test",
+       "Multi-stage fitness test",
+       "30 m sprint test",
+       "Handgrip dynamometer test"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "The handgrip dynamometer measures strength"
+      ]
+     }
+    },
+    {
+     "id": "t02",
+     "level": 1,
+     "text": "Which fitness test measures cardiovascular (aerobic) endurance?",
+     "solution": "The multi-stage fitness (bleep) test measures cardiovascular endurance",
+     "hint": "This test gets harder as the bleeps get faster",
+     "choice": {
+      "options": [
+       "Sit and reach test",
+       "Multi-stage fitness test (bleep test)",
+       "Ruler drop test",
+       "Stork stand test"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "The ruler drop test measures reaction time",
+       "The stork stand measures balance"
+      ]
+     }
+    },
+    {
+     "id": "t03",
+     "level": 1,
+     "text": "In the FITT principle, what does the F stand for? Give the word.",
+     "solution": "FITT stands for frequency, intensity, time and type",
+     "hint": "It is about how often you train",
+     "short": {
+      "accept": [
+       "frequency"
+      ]
+     }
+    },
+    {
+     "id": "t04",
+     "level": 1,
+     "text": "Which component of fitness is the ability to change direction quickly while staying in control? Give the component.",
+     "solution": "Agility is the ability to change body position or direction quickly with control",
+     "hint": "It is tested by the Illinois run",
+     "short": {
+      "accept": [
+       "agility"
+      ],
+      "reject": [
+       "balance",
+       "speed",
+       "coordination"
+      ],
+      "feedback": {
+       "balance": "Balance is keeping the body's centre of mass over the base of support"
+      }
+     }
+    },
+    {
+     "id": "t05",
+     "level": 1,
+     "text": "Which type of training uses a series of different exercises at different stations? Give the type.",
+     "solution": "Circuit training uses a series of exercise stations",
+     "hint": "You move round the stations in a loop",
+     "short": {
+      "accept": [
+       "circuit training",
+       "circuit",
+       "circuits"
+      ]
+     }
+    },
+    {
+     "id": "t06",
+     "level": 1,
+     "text": "What is the first phase of a warm-up?",
+     "solution": "A warm-up starts with a pulse raiser (gentle jogging), then stretching, then skill-based practice",
+     "hint": "The first phase gradually increases heart rate",
+     "choice": {
+      "options": [
+       "Static stretching",
+       "Cool down",
+       "Pulse raiser",
+       "Competition"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "t07",
+     "level": 1,
+     "text": "Which type of training, whose name means 'speed play', involves changes of pace and terrain? Give the Swedish term.",
+     "solution": "Fartlek ('speed play') mixes changes of speed and terrain in continuous running",
+     "hint": "It is a Swedish word",
+     "short": {
+      "accept": [
+       "fartlek",
+       "fartlek training"
+      ]
+     }
+    },
+    {
+     "id": "t08",
+     "level": 2,
+     "text": "Which statement about strength and power is accurate?",
+     "solution": "Strength is the force a muscle can apply; power = strength × speed",
+     "hint": "Which one involves doing something quickly as well as forcefully?",
+     "choice": {
+      "options": [
+       "Power is the maximum force a muscle can apply; strength is power combined with speed",
+       "Power is the ability to keep going for a long time",
+       "Strength and power mean exactly the same thing",
+       "Strength is the maximum force a muscle can apply; power is strength combined with speed"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "That is endurance",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t09",
+     "level": 2,
+     "text": "Which fitness test measures reaction time?",
+     "solution": "In the ruler drop test, you catch a falling ruler as quickly as possible, measuring reaction time",
+     "hint": "Someone drops an object and you must catch it",
+     "choice": {
+      "options": [
+       "Ruler drop test",
+       "Illinois agility run",
+       "Harvard step test",
+       "Vertical jump test"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "The Harvard step test measures cardiovascular fitness",
+       "The vertical jump measures power"
+      ]
+     }
+    },
+    {
+     "id": "t10",
+     "level": 2,
+     "text": "Which principle of training says that fitness is lost when training stops? Give the term.",
+     "solution": "Reversibility means fitness gains are lost if training stops",
+     "hint": "The gains are 'reversed'",
+     "short": {
+      "accept": [
+       "reversibility"
+      ]
+     }
+    },
+    {
+     "id": "t11",
+     "level": 2,
+     "text": "What does progressive overload mean?",
+     "solution": "Progressive overload gradually increases the demands on the body so fitness keeps improving",
+     "hint": "The key word is 'gradually'",
+     "choice": {
+      "options": [
+       "Training as hard as possible every day",
+       "Gradually increasing the training load so the body keeps adapting",
+       "Training in the same way every session",
+       "Stopping training to recover"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That risks overtraining and injury",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t12",
+     "level": 2,
+     "text": "Which fitness test measures power?",
+     "solution": "The vertical jump test measures (leg) power",
+     "hint": "Power is strength combined with speed: which test is explosive?",
+     "choice": {
+      "options": [
+       "Sit and reach test",
+       "Stork stand test",
+       "Vertical jump test",
+       "Cooper 12-minute run"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "The Cooper run measures cardiovascular endurance"
+      ]
+     }
+    },
+    {
+     "id": "t13",
+     "level": 2,
+     "text": "Which component of fitness is measured by the stork stand test? Give the component.",
+     "solution": "The stork stand test measures (static) balance",
+     "hint": "You stand on one leg for as long as possible",
+     "short": {
+      "accept": [
+       "balance",
+       "static balance"
+      ]
+     }
+    },
+    {
+     "id": "t14",
+     "level": 2,
+     "text": "Which type of training uses bounding, hopping and depth jumps to develop power?",
+     "solution": "Plyometrics uses explosive jumps and bounds to develop power",
+     "hint": "This training involves a quick stretch of the muscle followed by an explosive movement",
+     "choice": {
+      "options": [
+       "Continuous training",
+       "Static stretching",
+       "Fartlek training",
+       "Plyometrics"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "t15",
+     "level": 3,
+     "text": "Using maximum heart rate = 220 − age, what is the maximum heart rate of a 16-year-old? Give the answer in bpm.",
+     "solution": "220 − 16 = 204 bpm",
+     "hint": "Subtract the age from 220",
+     "answer": {
+      "kind": "number",
+      "display": "204 bpm",
+      "value": 204
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "236 bpm",
+        "value": 236
+       },
+       "feedback": "Subtract the age from 220; do not add it"
+      }
+     ]
+    },
+    {
+     "id": "t16",
+     "level": 3,
+     "text": "A 20-year-old's maximum heart rate is 200 bpm. The aerobic training zone is 60–80% of maximum heart rate. What is the lower limit of the zone in bpm?",
+     "solution": "60% of 200 = 0.6 × 200 = 120 bpm",
+     "hint": "Find 60% of 200",
+     "answer": {
+      "kind": "number",
+      "display": "120 bpm",
+      "value": 120
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "160 bpm",
+        "value": 160
+       },
+       "feedback": "160 bpm is 80%, the upper limit of the aerobic zone"
+      }
+     ]
+    },
+    {
+     "id": "t17",
+     "level": 3,
+     "text": "A rower trains at a steady, moderate pace for 40 minutes without any rest. Which type of training is this?",
+     "solution": "Steady exercise for a long time without rest is continuous training, which develops aerobic endurance",
+     "hint": "The pace does not change and there are no rest periods",
+     "choice": {
+      "options": [
+       "Continuous training",
+       "Interval training",
+       "Plyometric training",
+       "Fartlek training"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Fartlek involves changes of pace"
+      ]
+     }
+    },
+    {
+     "id": "t18",
+     "level": 3,
+     "text": "A sprinter runs 6 × 50 m flat out with 2 minutes of rest between each run. Which type of training is this?",
+     "solution": "Periods of hard work separated by rest periods is interval training",
+     "hint": "Work periods are separated by planned rest",
+     "choice": {
+      "options": [
+       "Continuous training",
+       "Interval training",
+       "Fartlek training",
+       "Circuit training"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "t19",
+     "level": 3,
+     "text": "A rugby player wants to improve strength. Which type of weight training is most suitable?",
+     "solution": "High loads with low repetitions develop strength; light loads with many repetitions develop muscular endurance",
+     "hint": "Strength is about maximum force",
+     "choice": {
+      "options": [
+       "Light weights with many repetitions",
+       "No weights and long-distance running",
+       "Heavy weights with few repetitions",
+       "Static stretching only"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Light weights with many repetitions develop muscular endurance",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t20",
+     "level": 3,
+     "text": "Which principle of training means matching training to the demands of the sport or activity? Give the term.",
+     "solution": "Specificity means training should match the demands of the activity",
+     "hint": "A swimmer should train mainly by swimming",
+     "short": {
+      "accept": [
+       "specificity"
+      ]
+     }
+    },
+    {
+     "id": "t21",
+     "level": 3,
+     "text": "In which plane of movement does a forward roll take place?",
+     "solution": "Forward rolls, somersaults and running happen in the sagittal plane, which divides the body into left and right",
+     "hint": "This plane divides the body into left and right sides",
+     "choice": {
+      "options": [
+       "Frontal plane",
+       "Transverse plane",
+       "Longitudinal plane",
+       "Sagittal plane"
+      ],
+      "correct": 3,
+      "feedback": [
+       "The frontal plane is for sideways movements such as a cartwheel",
+       "The transverse plane is for turning movements such as a full twist",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t22",
+     "level": 4,
+     "text": "An 18-year-old's maximum heart rate is 202 bpm. What is 80% of their maximum heart rate, the top of the aerobic training zone? Give the answer to the nearest whole number in bpm.",
+     "solution": "80% of 202 = 0.8 × 202 = 161.6, which rounds to 162 bpm",
+     "hint": "Multiply 202 by 0.8, then round",
+     "answer": {
+      "kind": "number",
+      "display": "162 bpm",
+      "value": 161.6,
+      "dp": 0
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "121 bpm",
+        "value": 121
+       },
+       "feedback": "121 bpm is about 60%, the lower limit of the aerobic zone"
+      }
+     ]
+    },
+    {
+     "id": "t23",
+     "level": 4,
+     "text": "A student trains at 85% of their maximum heart rate. Which training zone is this?",
+     "solution": "85% is between 80% and 90%, so it is in the anaerobic training zone",
+     "hint": "Compare 85% with the limits of each zone",
+     "choice": {
+      "options": [
+       "Anaerobic training zone (80–90%)",
+       "Aerobic training zone (60–80%)",
+       "Below the training threshold",
+       "Resting zone"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "t24",
+     "level": 4,
+     "text": "A footballer's plan changes from 2 to 3 training sessions a week. Which part of FITT has changed?",
+     "solution": "The number of sessions per week is frequency",
+     "hint": "This part of FITT is about how often",
+     "choice": {
+      "options": [
+       "Intensity",
+       "Frequency",
+       "Time",
+       "Type"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Intensity is how hard you work",
+       null,
+       "Time is how long each session lasts",
+       null
+      ]
+     }
+    },
+    {
+     "id": "t25",
+     "level": 4,
+     "text": "A swimmer cannot train for six weeks because of an injury, and their fitness falls. Which principle explains this?",
+     "solution": "When training stops, fitness gains are lost: reversibility",
+     "hint": "The gains go into reverse",
+     "choice": {
+      "options": [
+       "Specificity",
+       "Progressive overload",
+       "Reversibility",
+       "Tedium"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "t26",
+     "level": 4,
+     "text": "In which plane of movement does a cartwheel mainly take place?",
+     "solution": "Sideways movements such as cartwheels and star jumps happen in the frontal plane, which divides the body front and back",
+     "hint": "The movement is sideways",
+     "choice": {
+      "options": [
+       "Sagittal plane",
+       "Transverse plane",
+       "Longitudinal plane",
+       "Frontal plane"
+      ],
+      "correct": 3,
+      "feedback": [
+       "The sagittal plane is for forward and backward movements such as a forward roll",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t27",
+     "level": 4,
+     "text": "A hockey player scores poorly on the sit and reach test (8 cm) but well on the multi-stage fitness test (level 11). Which training should they add?",
+     "solution": "The weak area is flexibility (sit and reach), so stretching would target it",
+     "hint": "Find the weaker test result and the component it measures",
+     "choice": {
+      "options": [
+       "Regular stretching to improve flexibility",
+       "More continuous running",
+       "Heavy weight training only",
+       "More bleep tests"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "t28",
+     "level": 4,
+     "text": "During a bicep curl, the effort from the biceps is between the fulcrum (elbow) and the load (hand). Which class of lever is this? Give the class (first, second or third).",
+     "solution": "Effort in the middle makes a third-class lever, the most common lever in the body",
+     "hint": "Remember 1-2-3, F-L-E: what is in the middle for each class?",
+     "short": {
+      "accept": [
+       "third",
+       "third class",
+       "third class lever",
+       "3rd",
+       "3rd class",
+       "class 3"
+      ],
+      "reject": [
+       "first",
+       "second",
+       "first class",
+       "second class"
+      ],
+      "feedback": {
+       "second": "In a second-class lever the load is in the middle"
+      }
+     }
+    },
+    {
+     "id": "t29",
+     "level": 5,
+     "text": "Why should a long-distance runner not rely only on heavy weight training with few repetitions?",
+     "solution": "Training must match the activity (specificity); distance runners need aerobic and muscular endurance",
+     "hint": "Which principle is about matching training to the activity?",
+     "choice": {
+      "options": [
+       "Heavy weights build aerobic endurance too quickly",
+       "Heavy, low-repetition work does not match the demands of their event, so it breaks the principle of specificity",
+       "Heavy weights cause immediate reversibility",
+       "Heavy weights improve only flexibility"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "t30",
+     "level": 5,
+     "text": "Which statement about plyometrics is accurate?",
+     "solution": "Plyometrics stretches the muscle (eccentric) then contracts it explosively (concentric), developing power",
+     "hint": "Think about landing from a box and immediately jumping up",
+     "choice": {
+      "options": [
+       "Plyometrics is steady, low-intensity work for 30 minutes",
+       "Plyometrics only develops flexibility",
+       "An eccentric contraction is followed quickly by a concentric contraction to develop power",
+       "Plyometrics uses isometric holds only"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "t31",
+     "level": 5,
+     "text": "Going up onto your toes (plantar flexion at the ankle) uses which class of lever, and what is its advantage?",
+     "solution": "With the ball of the foot as the fulcrum, the load (body weight) is in the middle: a second-class lever, which has a mechanical advantage",
+     "hint": "The fulcrum is the ball of the foot and the effort comes from the calf muscle",
+     "choice": {
+      "options": [
+       "First class, with a large range of movement",
+       "Third class, with a mechanical advantage",
+       "Second class, with a large range of movement but no mechanical advantage",
+       "Second class, with a mechanical advantage so a large load can be moved with little effort"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "t32",
+     "level": 5,
+     "text": "Why is a cool down useful after intense exercise?",
+     "solution": "Light exercise and stretching after activity help remove lactic acid and bring heart rate down gradually",
+     "hint": "Think about what happens to heart rate and lactic acid after exercise",
+     "choice": {
+      "options": [
+       "A cool down helps remove lactic acid and gradually returns the heart rate to resting levels",
+       "A cool down increases lactic acid",
+       "A cool down raises body temperature before exercise",
+       "A cool down makes the next session unnecessary"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "t33",
+     "level": 5,
+     "text": "Why might an endurance athlete train at high altitude?",
+     "solution": "At altitude there is less oxygen available, so the body adapts by making more red blood cells",
+     "hint": "Is there more or less oxygen available high up?",
+     "choice": {
+      "options": [
+       "There is more oxygen at high altitude",
+       "Lower oxygen levels make the body produce more red blood cells, improving oxygen-carrying capacity",
+       "Altitude training mainly improves flexibility",
+       "Altitude training reduces the number of red blood cells"
+      ],
+      "correct": 1,
+      "feedback": [
+       "There is less oxygen available at high altitude",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t34",
+     "level": 5,
+     "text": "Which component of fitness combines strength and speed? Give the component.",
+     "solution": "Power = strength × speed, as in a long jump take-off",
+     "hint": "It is tested by the vertical jump",
+     "short": {
+      "accept": [
+       "power",
+       "explosive strength"
+      ],
+      "reject": [
+       "agility",
+       "strength",
+       "speed"
+      ]
+     }
+    },
+    {
+     "id": "t35",
+     "level": 5,
+     "text": "A gymnast's sessions are varied with new exercises and venues to prevent boredom. Which principle does this apply?",
+     "solution": "Avoiding tedium means varying training so the performer stays motivated",
+     "hint": "The principle is named after boredom itself",
+     "choice": {
+      "options": [
+       "Reversibility",
+       "Specificity",
+       "Tedium",
+       "Overtraining"
+      ],
+      "correct": 2
+     }
+    }
+   ]
+  },
+  {
+   "id": "pe.psychology",
+   "title": "Sport psychology",
+   "aliases": [
+    "skill classification",
+    "sport psychology",
+    "open skills",
+    "closed skills",
+    "smart targets",
+    "guidance",
+    "feedback",
+    "arousal",
+    "inverted u",
+    "motivation"
+   ],
+   "questions": [
+    {
+     "id": "y01",
+     "level": 1,
+     "text": "What is an open skill?",
+     "solution": "Open skills are affected by the environment (opponents, teammates, conditions), so the performer must adapt",
+     "hint": "Think about a pass when defenders are moving around you",
+     "choice": {
+      "options": [
+       "A skill affected by a changing environment, such as passing in football",
+       "A skill not affected by the environment, such as a basketball free throw",
+       "A skill that uses only small muscles",
+       "A skill performed only indoors"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is a closed skill",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y02",
+     "level": 1,
+     "text": "Which of these is an example of a closed skill?",
+     "solution": "A vault is performed in a stable, predictable environment, so it is closed",
+     "hint": "Look for the skill that is not affected by opponents or teammates",
+     "choice": {
+      "options": [
+       "A tackle in rugby",
+       "A gymnastics vault",
+       "Dribbling past a defender in hockey",
+       "Receiving a pass in netball"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "y03",
+     "level": 1,
+     "text": "Which type of guidance involves the coach physically moving the performer's body through the movement? Give the type.",
+     "solution": "Manual guidance is when the coach physically guides the performer",
+     "hint": "The coach uses their hands",
+     "short": {
+      "accept": [
+       "manual",
+       "manual guidance"
+      ],
+      "reject": [
+       "mechanical",
+       "mechanical guidance",
+       "visual",
+       "verbal"
+      ],
+      "feedback": {
+       "mechanical": "Mechanical guidance uses equipment such as floats or harnesses"
+      }
+     }
+    },
+    {
+     "id": "y04",
+     "level": 1,
+     "text": "In SMART targets, what does the M stand for? Give the word.",
+     "solution": "M stands for measurable: progress towards the target can be measured",
+     "hint": "You need to be able to check whether the target has been reached",
+     "short": {
+      "accept": [
+       "measurable"
+      ]
+     }
+    },
+    {
+     "id": "y05",
+     "level": 1,
+     "text": "What is a gross skill?",
+     "solution": "Gross skills use large muscle groups and are powerful; fine skills use small muscles and precision",
+     "hint": "Think of big, powerful movements",
+     "choice": {
+      "options": [
+       "A skill that uses small muscle groups for precision, such as a dart throw",
+       "A skill that needs no decisions",
+       "A skill that uses large muscle groups, such as the shot put",
+       "A skill performed alone"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is a fine skill",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y06",
+     "level": 1,
+     "text": "Which type of motivation comes from within the performer, such as enjoyment and pride? Give the type.",
+     "solution": "Intrinsic motivation comes from inside, such as enjoyment or satisfaction",
+     "hint": "'In' means inside",
+     "short": {
+      "accept": [
+       "intrinsic",
+       "intrinsic motivation"
+      ],
+      "reject": [
+       "extrinsic",
+       "extrinsic motivation"
+      ],
+      "feedback": {
+       "extrinsic": "Extrinsic motivation comes from outside, such as trophies or praise"
+      }
+     }
+    },
+    {
+     "id": "y07",
+     "level": 1,
+     "text": "Which type of guidance uses demonstrations, videos or diagrams?",
+     "solution": "Visual guidance shows the performer what to do, through demonstrations, videos or diagrams",
+     "hint": "You use your eyes to take it in",
+     "choice": {
+      "options": [
+       "Verbal guidance",
+       "Manual guidance",
+       "Mechanical guidance",
+       "Visual guidance"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Verbal guidance uses spoken instructions",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y08",
+     "level": 2,
+     "text": "Which statement about intrinsic and extrinsic feedback is accurate?",
+     "solution": "Intrinsic feedback is what the performer feels; extrinsic feedback comes from others, such as a coach or video",
+     "hint": "'Intrinsic' means coming from within",
+     "choice": {
+      "options": [
+       "Intrinsic feedback comes from the performer's own senses; extrinsic feedback comes from outside, such as a coach",
+       "Extrinsic feedback comes from the performer's own senses; intrinsic feedback comes from a coach",
+       "Both come only from a scoreboard",
+       "Both are only given before a performance"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the wrong way round",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y09",
+     "level": 2,
+     "text": "Which statement about a skill and an ability is accurate?",
+     "solution": "Skills are learned through practice; abilities are inherited traits that help us learn skills",
+     "hint": "Which one can you be born with?",
+     "choice": {
+      "options": [
+       "An ability is learned; a skill is inherited",
+       "A skill is learned; an ability is inherited",
+       "Skills are only physical; abilities are only mental",
+       "Skills and abilities mean exactly the same thing"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y10",
+     "level": 2,
+     "text": "Which type of guidance uses equipment such as a float or a harness to support the performer? Give the type.",
+     "solution": "Mechanical guidance uses equipment to support the performer",
+     "hint": "Equipment is used instead of the coach's hands",
+     "short": {
+      "accept": [
+       "mechanical",
+       "mechanical guidance"
+      ],
+      "reject": [
+       "manual",
+       "manual guidance"
+      ],
+      "feedback": {
+       "manual": "Manual guidance is when the coach physically moves the performer"
+      }
+     }
+    },
+    {
+     "id": "y11",
+     "level": 2,
+     "text": "Which of these is an example of extrinsic motivation?",
+     "solution": "Extrinsic motivation comes from outside rewards such as trophies, money or praise",
+     "hint": "Look for a reward given by someone else",
+     "choice": {
+      "options": [
+       "Playing for enjoyment",
+       "Playing for a sense of achievement",
+       "Playing to win a trophy",
+       "Playing for the love of the sport"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "y12",
+     "level": 2,
+     "text": "Which type of feedback is given during the performance?",
+     "solution": "Concurrent feedback is given during the performance; terminal feedback is given afterwards",
+     "hint": "'Concurrent' means happening at the same time",
+     "choice": {
+      "options": [
+       "Terminal feedback",
+       "Post-match feedback",
+       "End-of-season feedback",
+       "Concurrent feedback"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Terminal feedback is given after the performance",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y13",
+     "level": 2,
+     "text": "In SMART targets, what does the S stand for? Give the word.",
+     "solution": "S stands for specific: the target is clear and focused on one thing",
+     "hint": "The target must be clear and focused",
+     "short": {
+      "accept": [
+       "specific"
+      ]
+     }
+    },
+    {
+     "id": "y14",
+     "level": 2,
+     "text": "Which of these skills is self-paced?",
+     "solution": "The server decides when to start, so a serve is self-paced; the others depend on an opponent or teammate",
+     "hint": "Who decides when the skill starts?",
+     "choice": {
+      "options": [
+       "A tennis serve",
+       "Returning a serve in tennis",
+       "Receiving a pass in rugby",
+       "Hitting a bowled ball in cricket"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "y15",
+     "level": 3,
+     "text": "A coach tells a beginner: 'Keep your elbow high when you swim front crawl.' Which type of guidance is this?",
+     "solution": "Spoken instructions are verbal guidance",
+     "hint": "The coach is speaking to the swimmer",
+     "choice": {
+      "options": [
+       "Visual guidance",
+       "Verbal guidance",
+       "Manual guidance",
+       "Mechanical guidance"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "y16",
+     "level": 3,
+     "text": "A golfer feels that a putt was hit too hard as soon as they strike the ball. Which type of feedback is this?",
+     "solution": "Feeling the movement through your own senses is intrinsic feedback",
+     "hint": "Nobody else has told the golfer anything",
+     "choice": {
+      "options": [
+       "Extrinsic feedback",
+       "Visual guidance",
+       "Intrinsic feedback",
+       "Manual guidance"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "y17",
+     "level": 3,
+     "text": "A rugby player is too anxious before a match. Which technique could lower their arousal?",
+     "solution": "Deep breathing, mental rehearsal and positive self-talk are stress management techniques that lower arousal",
+     "hint": "Which option would make the player calmer?",
+     "choice": {
+      "options": [
+       "Shouting and fist-pumping",
+       "Drinking an energy drink",
+       "Watching aggressive videos",
+       "Deep breathing and mental rehearsal"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "y18",
+     "level": 3,
+     "text": "A swimmer's coach says: 'Your time was 1 minute 5 seconds.' Give the type of feedback that tells a performer the outcome (knowledge of …).",
+     "solution": "Feedback about the outcome, such as a time or score, is knowledge of results",
+     "hint": "It is about the outcome, not the technique",
+     "short": {
+      "accept": [
+       "knowledge of results",
+       "KR"
+      ],
+      "reject": [
+       "knowledge of performance",
+       "KP"
+      ],
+      "feedback": {
+       "knowledge of performance": "Knowledge of performance is about technique, not the outcome"
+      }
+     }
+    },
+    {
+     "id": "y19",
+     "level": 3,
+     "text": "An archer needs a steady hand and calm focus. According to the inverted-U theory, which arousal level suits archery best?",
+     "solution": "Fine, precise skills such as archery are best performed at a low level of arousal",
+     "hint": "Fine skills need a calm performer",
+     "choice": {
+      "options": [
+       "Low arousal",
+       "Very high arousal",
+       "Moderate to high arousal",
+       "No arousal at all"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "y20",
+     "level": 3,
+     "text": "A target says: 'I will run 5 km in under 25 minutes by the end of June.' Which part of SMART is shown by 'by the end of June'?",
+     "solution": "A deadline makes the target time-bound",
+     "hint": "Which part of SMART sets a deadline?",
+     "choice": {
+      "options": [
+       "Specific",
+       "Time-bound",
+       "Measurable",
+       "Achievable"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "y21",
+     "level": 3,
+     "text": "Which skill classification describes a skill that uses small muscle groups for precise movements, such as a snooker shot? Give the term.",
+     "solution": "Fine skills use small muscle groups and need precision",
+     "hint": "It is the opposite of gross",
+     "short": {
+      "accept": [
+       "fine",
+       "fine skill",
+       "fine motor skill"
+      ],
+      "reject": [
+       "gross",
+       "gross skill"
+      ],
+      "feedback": {
+       "gross": "Gross skills use large muscle groups"
+      }
+     }
+    },
+    {
+     "id": "y22",
+     "level": 4,
+     "text": "A beginner gymnast is learning a handspring. Which combination of guidance is most suitable at first?",
+     "solution": "Beginners learn well from demonstrations, and manual support keeps them safe in a risky skill",
+     "hint": "Beginners need to see the skill and be kept safe",
+     "choice": {
+      "options": [
+       "Only verbal guidance with lots of technical detail",
+       "No guidance, so they discover it themselves",
+       "A visual demonstration with manual support from the coach",
+       "Video analysis of their own elite performances"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Too much detail can overload a beginner",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y23",
+     "level": 4,
+     "text": "Which statement about the inverted-U theory is accurate?",
+     "solution": "The inverted-U theory says there is an optimum (moderate) level of arousal; too little or too much harms performance",
+     "hint": "Picture the shape of an upside-down U on a graph",
+     "choice": {
+      "options": [
+       "Performance always improves as arousal rises",
+       "Performance is best when arousal is lowest",
+       "Arousal has no effect on performance",
+       "Performance improves as arousal rises up to an optimum point, then gets worse"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "y24",
+     "level": 4,
+     "text": "Where is a penalty kick in football on the open–closed continuum?",
+     "solution": "A penalty is mostly closed: the ball is still and the taker chooses when to start, though the goalkeeper adds some unpredictability",
+     "hint": "Is the ball moving, and who decides when to start?",
+     "choice": {
+      "options": [
+       "Towards closed, as the environment is mostly stable and the taker starts when ready",
+       "Completely open, as the environment changes constantly",
+       "Completely open, as teammates are moving",
+       "Exactly in the middle, as it has no environment"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "y25",
+     "level": 4,
+     "text": "Which of these is an example of knowledge of performance?",
+     "solution": "Knowledge of performance is feedback about technique, not the outcome",
+     "hint": "Look for feedback about how the skill was performed",
+     "choice": {
+      "options": [
+       "The scoreboard shows the throw went 30 m",
+       "A coach explains that the arm action in a throw was too low",
+       "A medal is awarded",
+       "The race time is 12.4 seconds"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "y26",
+     "level": 4,
+     "text": "Which stress management technique involves picturing yourself performing a skill successfully in your mind? Give the term.",
+     "solution": "Mental rehearsal (visualisation or imagery) means picturing a successful performance in your mind",
+     "hint": "You 'see' the performance in your head",
+     "short": {
+      "accept": [
+       "mental rehearsal",
+       "visualisation",
+       "visualization",
+       "imagery",
+       "mental imagery"
+      ]
+     }
+    },
+    {
+     "id": "y27",
+     "level": 4,
+     "text": "Which list shows the stages of the information processing model in the correct order?",
+     "solution": "Information comes in (input), a decision is made, the movement is performed (output) and feedback follows",
+     "hint": "What must happen before a decision can be made?",
+     "choice": {
+      "options": [
+       "Output, input, feedback, decision making",
+       "Decision making, input, output, feedback",
+       "Input, decision making, output, feedback",
+       "Input, output, decision making, feedback"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "y28",
+     "level": 4,
+     "text": "A footballer receives constant shouted instructions from the touchline while playing. Which type of feedback is this?",
+     "solution": "It is given during play (concurrent) by someone else (extrinsic)",
+     "hint": "Decide when it is given and who it comes from",
+     "choice": {
+      "options": [
+       "Terminal, intrinsic feedback",
+       "Terminal, extrinsic feedback",
+       "Concurrent, intrinsic feedback",
+       "Concurrent, extrinsic feedback"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "y29",
+     "level": 5,
+     "text": "A beginner receives only negative feedback. What is the most likely effect?",
+     "solution": "Beginners need encouragement; too much negative feedback can lower motivation and confidence",
+     "hint": "Think about how constant criticism affects confidence",
+     "choice": {
+      "options": [
+       "Their motivation may drop, so beginners usually need mainly positive feedback",
+       "They will always improve faster",
+       "Feedback has no effect on beginners",
+       "They will become experts sooner"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "y30",
+     "level": 5,
+     "text": "Why can experienced performers make better use of intrinsic feedback than beginners?",
+     "solution": "Experienced performers have a clear feel for the correct technique, so their own senses tell them about errors",
+     "hint": "Think about what a performer needs to know to judge their own movement",
+     "choice": {
+      "options": [
+       "Beginners can always tell when a movement is wrong",
+       "Experts know what a correct movement feels like, so they can detect their own errors",
+       "Intrinsic feedback comes from the coach",
+       "Experts never make mistakes"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Feedback from a coach is extrinsic",
+       null
+      ]
+     }
+    },
+    {
+     "id": "y31",
+     "level": 5,
+     "text": "A boxer becomes over-aroused just before a bout. According to the inverted-U theory, what is likely?",
+     "solution": "Past the optimum, extra arousal causes performance to fall, even in sports that need high arousal",
+     "hint": "Where is 'over-aroused' on the inverted-U curve?",
+     "choice": {
+      "options": [
+       "Performance will be at its best, as arousal is as high as possible",
+       "Arousal does not affect boxing",
+       "Performance may get worse, as arousal has gone past the optimum point",
+       "Performance will keep improving without limit"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "y32",
+     "level": 5,
+     "text": "Which of these targets is SMART?",
+     "solution": "A SMART target is specific, measurable, achievable, realistic and time-bound",
+     "hint": "Look for a target with a measurement and a deadline",
+     "choice": {
+      "options": [
+       "Get better at running",
+       "Run faster than everyone in the world this year",
+       "Train more often",
+       "Improve my 100 m time from 14.0 s to 13.5 s within 8 weeks"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "y33",
+     "level": 5,
+     "text": "Why might a coach use mental rehearsal with a nervous high jumper?",
+     "solution": "Mental rehearsal lowers anxiety, builds confidence and helps focus on the key parts of the skill",
+     "hint": "Think about what mental rehearsal does to nerves",
+     "choice": {
+      "options": [
+       "Picturing a successful jump can lower anxiety and improve focus",
+       "Mental rehearsal raises arousal to the highest level",
+       "Mental rehearsal replaces physical training completely",
+       "Mental rehearsal improves cardiovascular fitness"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "y34",
+     "level": 5,
+     "text": "Which type of feedback is given after the performance has finished? Give the term.",
+     "solution": "Terminal feedback is given after the performance has finished",
+     "hint": "It comes at the end, like the last stop of a bus route",
+     "short": {
+      "accept": [
+       "terminal",
+       "terminal feedback"
+      ],
+      "reject": [
+       "concurrent",
+       "concurrent feedback"
+      ],
+      "feedback": {
+       "concurrent": "Concurrent feedback is given during the performance"
+      }
+     }
+    },
+    {
+     "id": "y35",
+     "level": 5,
+     "text": "Which statement about a complex skill is accurate?",
+     "solution": "Complex skills need many decisions and high concentration; basic skills need few decisions",
+     "hint": "Think about how many decisions the performer has to make",
+     "choice": {
+      "options": [
+       "A complex skill needs few decisions and is simple to learn",
+       "A complex skill needs many decisions and a lot of attention, such as passing under pressure in rugby",
+       "A complex skill is always a closed skill",
+       "A complex skill uses only small muscle groups"
+      ],
+      "correct": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "pe.society",
+   "title": "Health & sport in society",
+   "aliases": [
+    "commercialisation of sport",
+    "participation",
+    "sponsorship",
+    "the media",
+    "sportsmanship",
+    "gamesmanship",
+    "performance-enhancing drugs",
+    "hydration",
+    "energy balance",
+    "well-being"
+   ],
+   "questions": [
+    {
+     "id": "s01",
+     "level": 1,
+     "text": "What is the commercialisation of sport?",
+     "solution": "Commercialisation means sport being managed and promoted for profit, through sponsorship, media and merchandise",
+     "hint": "The word comes from 'commerce', meaning business",
+     "choice": {
+      "options": [
+       "Managing and promoting sport to make a profit",
+       "Playing sport only for fun",
+       "Banning advertising in sport",
+       "Training in a sports centre"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "s02",
+     "level": 1,
+     "text": "What is sportsmanship?",
+     "solution": "Sportsmanship means fair play and respect, such as shaking hands with opponents",
+     "hint": "Think about shaking hands after a match",
+     "choice": {
+      "options": [
+       "Bending the rules to gain an advantage",
+       "Playing fairly and showing respect to opponents and officials",
+       "Taking performance-enhancing drugs",
+       "Winning at all costs"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is gamesmanship",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s03",
+     "level": 1,
+     "text": "What term means bending the rules to gain an advantage without actually breaking them, such as wasting time? Give the term.",
+     "solution": "Gamesmanship is bending the rules, such as time-wasting, without breaking them",
+     "hint": "It sounds like sportsmanship but begins with a different word",
+     "short": {
+      "accept": [
+       "gamesmanship"
+      ],
+      "reject": [
+       "sportsmanship",
+       "deviance"
+      ],
+      "feedback": {
+       "sportsmanship": "Sportsmanship is fair play, the opposite of this"
+      }
+     }
+    },
+    {
+     "id": "s04",
+     "level": 1,
+     "text": "What is a sponsor in sport?",
+     "solution": "Sponsors give money, equipment or services in exchange for advertising and publicity",
+     "hint": "Think about logos on football shirts",
+     "choice": {
+      "options": [
+       "An official who enforces the rules",
+       "A coach who trains the team",
+       "A company or person that provides money, kit or services in return for publicity",
+       "A fan who buys a ticket"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "s05",
+     "level": 1,
+     "text": "Which groups make up the 'golden triangle' in sport?",
+     "solution": "The golden triangle is the link between sport, sponsorship and the media",
+     "hint": "Think about money, publicity and the sport itself",
+     "choice": {
+      "options": [
+       "Players, coaches and fans",
+       "Schools, clubs and parents",
+       "Referees, players and managers",
+       "Sport, sponsorship and the media"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "s06",
+     "level": 1,
+     "text": "Give the abbreviation for the organisation that leads the worldwide fight against drugs in sport.",
+     "solution": "WADA is the World Anti-Doping Agency",
+     "hint": "It is a four-letter abbreviation; the first word is 'World'",
+     "short": {
+      "accept": [
+       "WADA",
+       "World Anti-Doping Agency"
+      ]
+     }
+    },
+    {
+     "id": "s07",
+     "level": 1,
+     "text": "Which of these is a physical health benefit of regular exercise?",
+     "solution": "Regular exercise strengthens the heart and lowers the risk of heart disease",
+     "hint": "Which option is a benefit, not a problem?",
+     "choice": {
+      "options": [
+       "A lower risk of heart disease",
+       "More stress",
+       "Less sleep",
+       "Higher blood pressure"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "s08",
+     "level": 2,
+     "text": "Which type of performance-enhancing drug increases muscle size and strength?",
+     "solution": "Anabolic steroids increase muscle mass and strength and speed up recovery, but have serious side effects",
+     "hint": "These drugs are copies of the hormone testosterone",
+     "choice": {
+      "options": [
+       "Beta blockers",
+       "Anabolic steroids",
+       "Diuretics",
+       "Narcotic analgesics"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Beta blockers calm nerves and steady the hands",
+       null,
+       null,
+       "Narcotic analgesics mask pain"
+      ]
+     }
+    },
+    {
+     "id": "s09",
+     "level": 2,
+     "text": "Which performance-enhancing drug is used to calm nerves and steady the hands, for example in archery or shooting?",
+     "solution": "Beta blockers lower heart rate and reduce shaking, helping in precision sports",
+     "hint": "These drugs slow the heart rate down",
+     "choice": {
+      "options": [
+       "Anabolic steroids",
+       "Stimulants",
+       "Beta blockers",
+       "EPO"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Stimulants increase alertness and heart rate",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s10",
+     "level": 2,
+     "text": "EPO is a hormone that increases red blood cell production. Give its full name.",
+     "solution": "EPO is erythropoietin, which increases red blood cells and oxygen-carrying capacity",
+     "hint": "It begins with 'erythro', meaning red",
+     "short": {
+      "accept": [
+       "erythropoietin"
+      ]
+     }
+    },
+    {
+     "id": "s11",
+     "level": 2,
+     "text": "Which of these is a mental (emotional) health benefit of exercise?",
+     "solution": "Exercise releases chemicals such as serotonin and endorphins, which reduce stress and improve mood",
+     "hint": "Mental benefits are about how you feel",
+     "choice": {
+      "options": [
+       "Stronger bones",
+       "Better posture",
+       "Lower blood pressure",
+       "Reduced stress and a better mood"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Stronger bones is a physical benefit",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s12",
+     "level": 2,
+     "text": "Which of these is a social health benefit of exercise?",
+     "solution": "Social benefits include making friends, teamwork and a sense of belonging",
+     "hint": "Social benefits involve other people",
+     "choice": {
+      "options": [
+       "Making friends and working with others",
+       "Improved cardiovascular fitness",
+       "Lower stress levels",
+       "Stronger muscles"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Lower stress is a mental (emotional) benefit",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s13",
+     "level": 2,
+     "text": "Which type of drug increases alertness and reduces tiredness and is banned in competition? Give the drug type.",
+     "solution": "Stimulants increase alertness and reduce tiredness; they are banned in competition",
+     "hint": "These drugs 'stimulate' the nervous system",
+     "short": {
+      "accept": [
+       "stimulants",
+       "stimulant"
+      ]
+     }
+    },
+    {
+     "id": "s14",
+     "level": 2,
+     "text": "Which of these is a disadvantage of media coverage for a sport?",
+     "solution": "TV companies may change event times, which can be inconvenient for players and fans",
+     "hint": "Look for the option that causes a problem",
+     "choice": {
+      "options": [
+       "More people learn about the sport",
+       "Kick-off times may be changed to suit TV schedules",
+       "More sponsorship money comes in",
+       "Players become role models"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "s15",
+     "level": 3,
+     "text": "A cyclist has some of their own blood removed, stored, and then put back before a race. What is this called?",
+     "solution": "Re-injecting stored blood increases red blood cells and oxygen-carrying capacity: blood doping, which is banned",
+     "hint": "It increases the number of red blood cells illegally",
+     "choice": {
+      "options": [
+       "Beta blocking",
+       "Carbohydrate loading",
+       "Blood doping",
+       "Altitude training"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "s16",
+     "level": 3,
+     "text": "A tennis player takes a long time between points to upset their opponent's rhythm. What is this an example of?",
+     "solution": "Deliberately wasting time to unsettle an opponent bends the rules: gamesmanship",
+     "hint": "The player is not breaking a rule, but is not being fair either",
+     "choice": {
+      "options": [
+       "Sportsmanship",
+       "Commercialisation",
+       "Sponsorship",
+       "Gamesmanship"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "s17",
+     "level": 3,
+     "text": "A team kicks the ball out of play so that an injured opponent can get treatment. Give the term for this kind of behaviour.",
+     "solution": "Stopping play for an injured opponent shows fair play and respect: sportsmanship",
+     "hint": "The team gives up an advantage for the sake of an opponent",
+     "short": {
+      "accept": [
+       "sportsmanship",
+       "fair play",
+       "sporting behaviour"
+      ],
+      "reject": [
+       "gamesmanship",
+       "deviance"
+      ],
+      "feedback": {
+       "gamesmanship": "Gamesmanship is bending the rules to gain an advantage"
+      }
+     }
+    },
+    {
+     "id": "s18",
+     "level": 3,
+     "text": "A tennis player trains in hot weather without drinking. They feel dizzy and tired and have a headache. What is the most likely cause?",
+     "solution": "Losing water through sweat without replacing it leads to dehydration, causing dizziness, headaches and fatigue",
+     "hint": "Think about what was lost through sweating",
+     "choice": {
+      "options": [
+       "Dehydration",
+       "Overhydration",
+       "Carbohydrate loading",
+       "Altitude training"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "s19",
+     "level": 3,
+     "text": "Endurance athletes eat extra carbohydrate in the days before a long race to fill their glycogen stores. Give the name of this practice.",
+     "solution": "Carbohydrate loading increases glycogen stores in muscles before endurance events",
+     "hint": "Think of 'loading up' with a type of nutrient",
+     "short": {
+      "accept": [
+       "carbohydrate loading",
+       "carb loading",
+       "carbo loading",
+       "carbohydrate-loading",
+       "carb-loading"
+      ]
+     }
+    },
+    {
+     "id": "s20",
+     "level": 3,
+     "text": "Which of these is an effect of dehydration on performance?",
+     "solution": "Dehydration thickens the blood, raises heart rate, slows reactions and makes overheating more likely",
+     "hint": "Think about what happens to the blood when the body loses water",
+     "choice": {
+      "options": [
+       "Faster reactions",
+       "A higher heart rate and slower reactions",
+       "A lower body temperature",
+       "Thinner blood that flows more easily"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Dehydration makes the blood thicker, not thinner"
+      ]
+     }
+    },
+    {
+     "id": "s21",
+     "level": 3,
+     "text": "A company pays to have its logo on a team's shirts. What is this an example of? Give the term.",
+     "solution": "This is sponsorship: money in return for publicity",
+     "hint": "Think about logos on football shirts and what the company gets in return",
+     "short": {
+      "accept": [
+       "sponsorship",
+       "sponsoring",
+       "sponsor"
+      ]
+     }
+    },
+    {
+     "id": "s22",
+     "level": 4,
+     "text": "A gym costs £40 a month and the nearest swimming pool is 20 miles away. Which factors are most likely to reduce a teenager's participation?",
+     "solution": "The information given is about price and distance, so cost and access are the barriers",
+     "hint": "Look at what the information in the question tells you",
+     "choice": {
+      "options": [
+       "Gender and age",
+       "Role models and the media",
+       "Cost and access",
+       "Ability and personality"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "s23",
+     "level": 4,
+     "text": "Which statement about the effect of sponsorship on a sport is accurate?",
+     "solution": "Sponsorship brings in money, but sponsors may want a say, for example in kit or event timing",
+     "hint": "Think about both an advantage and a disadvantage",
+     "choice": {
+      "options": [
+       "Sponsorship always reduces the money available to the sport",
+       "Sponsorship has no effect on performers",
+       "Only amateur sports can be sponsored",
+       "Sponsorship can fund facilities and events, but the sponsor may try to influence decisions"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "s24",
+     "level": 4,
+     "text": "An athlete tests positive for a banned substance. Which consequence is likely?",
+     "solution": "Doping leads to bans, stripped medals, lost sponsorship and a damaged reputation",
+     "hint": "Think about the punishments for cheating",
+     "choice": {
+      "options": [
+       "A ban from competition and the loss of medals or titles",
+       "A larger sponsorship deal",
+       "Automatic selection for the next event",
+       "A world record being confirmed"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "s25",
+     "level": 4,
+     "text": "Why might a sponsor end its deal with an athlete who has been banned for doping?",
+     "solution": "Sponsors want positive publicity; being linked to a drug cheat could harm their image and sales",
+     "hint": "What does a sponsor want in return for its money?",
+     "choice": {
+      "options": [
+       "The sponsor wants more coverage of doping",
+       "Negative publicity could damage the sponsor's reputation",
+       "Sponsors only ever sponsor teams",
+       "The athlete has become too successful"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "s26",
+     "level": 4,
+     "text": "Why are diuretics banned in sport?",
+     "solution": "Diuretics increase urine production, which can dilute or hide other banned substances",
+     "hint": "They make the body produce more urine",
+     "choice": {
+      "options": [
+       "Diuretics increase muscle size",
+       "Diuretics steady the hands",
+       "Diuretics can be used to mask (hide) other banned drugs",
+       "Diuretics increase the red blood cell count"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That describes anabolic steroids",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s27",
+     "level": 4,
+     "text": "Which statement about the World Health Organization definition of health is accurate?",
+     "solution": "The WHO defines health as a state of complete physical, mental and social well-being, not merely the absence of disease",
+     "hint": "The definition has three parts",
+     "choice": {
+      "options": [
+       "Health means only being free from illness",
+       "Health is only physical fitness",
+       "Health is the same as fitness",
+       "Health is complete physical, mental and social well-being, not just the absence of disease"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "s28",
+     "level": 4,
+     "text": "Give the term for a lifestyle with little or no physical activity.",
+     "solution": "A sedentary lifestyle involves little or no physical activity",
+     "hint": "It comes from the Latin word for 'sitting'",
+     "short": {
+      "accept": [
+       "sedentary",
+       "sedentary lifestyle"
+      ]
+     }
+    },
+    {
+     "id": "s29",
+     "level": 5,
+     "text": "Which statement about the 'golden triangle' is accurate?",
+     "solution": "The three parts depend on each other: each one helps the other two",
+     "hint": "Think about how each corner helps the other two",
+     "choice": {
+      "options": [
+       "Media coverage attracts sponsors, sponsorship funds sport, and successful sport attracts more media",
+       "The media, sport and sponsors are completely independent",
+       "Sponsors pay the media to stop showing sport",
+       "Only amateur sport is part of the golden triangle"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "s30",
+     "level": 5,
+     "text": "Why might a talented performer from a low-income family take part less in some sports?",
+     "solution": "The cost of kit, fees and travel can be a barrier to participation",
+     "hint": "Think about the costs involved in taking part",
+     "choice": {
+      "options": [
+       "Income has no effect on participation",
+       "Costs of equipment, travel and membership can be a barrier",
+       "Low-income families are not allowed to join clubs",
+       "All sports are free"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "s31",
+     "level": 5,
+     "text": "Which statement about beta blockers is accurate?",
+     "solution": "Beta blockers reduce heart rate and tremors, which could help in archery, shooting or snooker, so they are banned",
+     "hint": "Think about which sports need a very steady hand",
+     "choice": {
+      "options": [
+       "Beta blockers raise heart rate to improve endurance",
+       "Beta blockers build muscle mass",
+       "Beta blockers lower heart rate and reduce shaking, so they are banned in sports needing precision",
+       "Beta blockers are allowed in all sports"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "s32",
+     "level": 5,
+     "text": "Which statement about anabolic steroids is accurate?",
+     "solution": "Anabolic steroids increase muscle mass and recovery but have serious health risks and are banned",
+     "hint": "Consider both the effect and the health risks",
+     "choice": {
+      "options": [
+       "Steroids have no side effects",
+       "Steroids calm nerves for precision sports",
+       "Steroids are allowed for performers under 18",
+       "Steroids increase muscle growth and speed up recovery, but can cause serious side effects such as heart and liver damage"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "s33",
+     "level": 5,
+     "text": "Why is hydration especially important when exercising in hot weather?",
+     "solution": "In heat we sweat more; without replacing fluid, blood becomes thicker and body temperature control suffers",
+     "hint": "Think about how the body cools itself down",
+     "choice": {
+      "options": [
+       "More water is lost in sweat, so without drinking the blood thickens and the body overheats more easily",
+       "The body needs less water in hot weather",
+       "Drinking water makes muscles weaker",
+       "Sweating adds water to the blood"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "s34",
+     "level": 5,
+     "text": "How can the media have a positive effect on participation in sport?",
+     "solution": "Media coverage of successful role models can inspire people to try a sport",
+     "hint": "Think about the effect of watching a star perform well",
+     "choice": {
+      "options": [
+       "Moving events to pay-TV makes them easier for everyone to watch",
+       "Showing role models can inspire people to take up a sport",
+       "Showing only a few sports makes all sports popular",
+       "Reporting only scandals encourages young people to join clubs"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "s35",
+     "level": 5,
+     "text": "Which term describes behaviour that goes against the rules and norms of sport, such as violence or doping? Give the term.",
+     "solution": "Deviance is behaviour that breaks the rules or norms of sport, such as violence or doping",
+     "hint": "It comes from 'deviate', meaning to move away from what is expected",
+     "short": {
+      "accept": [
+       "deviance",
+       "deviant behaviour",
+       "deviant behavior",
+       "deviancy"
+      ],
+      "reject": [
+       "gamesmanship"
+      ],
+      "feedback": {
+       "gamesmanship": "Gamesmanship bends the rules; doping and violence break them"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "pe.y{year}.anatomy",
+      "label": "Anatomy & physiology",
+      "skills": [
+       "pe.anatomy"
+      ]
+     },
+     {
+      "id": "pe.y{year}.training",
+      "label": "Movement & training",
+      "skills": [
+       "pe.training"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "pe.y{year}.psychology",
+      "label": "Sport psychology",
+      "skills": [
+       "pe.psychology"
+      ]
+     },
+     {
+      "id": "pe.y{year}.society",
+      "label": "Health & sport in society",
+      "skills": [
+       "pe.society"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

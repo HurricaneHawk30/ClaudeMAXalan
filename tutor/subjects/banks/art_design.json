@@ -1,0 +1,2544 @@
+{
+ "subject": {
+  "id": "art_design",
+  "title": "Art & Design",
+  "order": 78
+ },
+ "skills": [
+  {
+   "id": "art_design.formal",
+   "title": "Formal elements",
+   "aliases": [
+    "formal elements",
+    "line",
+    "tone",
+    "shape",
+    "form",
+    "texture",
+    "pattern",
+    "composition",
+    "perspective",
+    "proportion",
+    "negative space"
+   ],
+   "questions": [
+    {
+     "id": "f01",
+     "level": 1,
+     "text": "Which formal element describes how light or dark something is?",
+     "solution": "Tone is the lightness or darkness of a colour or shade",
+     "hint": "Shading with a pencil changes this element",
+     "choice": {
+      "options": [
+       "Tone",
+       "Line",
+       "Pattern",
+       "Texture"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Texture is how something feels or looks like it would feel"
+      ]
+     }
+    },
+    {
+     "id": "f02",
+     "level": 1,
+     "text": "Which formal element describes how a surface feels, or looks as if it would feel? Give the element.",
+     "solution": "Texture is the surface quality of something: rough, smooth, bumpy and so on",
+     "hint": "Think of the difference between sandpaper and silk",
+     "short": {
+      "accept": [
+       "texture"
+      ],
+      "reject": [
+       "tone",
+       "pattern"
+      ]
+     }
+    },
+    {
+     "id": "f03",
+     "level": 1,
+     "text": "What is a design or motif that is repeated called?",
+     "solution": "A pattern is a repeated design, shape or motif, as in wallpaper or fabric",
+     "hint": "Think of wallpaper or a tartan scarf",
+     "choice": {
+      "options": [
+       "Tone",
+       "Pattern",
+       "Form",
+       "Line"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f04",
+     "level": 1,
+     "text": "What is the empty space around and between objects in an artwork called? Give the term.",
+     "solution": "Negative space is the space around and between the subjects of an image",
+     "hint": "The objects themselves are the positive space",
+     "short": {
+      "accept": [
+       "negative space",
+       "negative"
+      ],
+      "reject": [
+       "positive space",
+       "positive"
+      ],
+      "feedback": {
+       "positive space": "Positive space is the area taken up by the objects themselves"
+      }
+     }
+    },
+    {
+     "id": "f05",
+     "level": 1,
+     "text": "In a perspective drawing, which line shows the viewer's eye level?",
+     "solution": "The horizon line shows eye level; vanishing points sit on it",
+     "hint": "At the seaside, it is where the sea seems to meet the sky",
+     "choice": {
+      "options": [
+       "Contour line",
+       "Hatching line",
+       "Horizon line",
+       "Grid line"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f06",
+     "level": 1,
+     "text": "In one-point perspective, where do the parallel lines that go away from the viewer meet?",
+     "solution": "In one-point perspective, receding parallel lines meet at one vanishing point on the horizon line",
+     "hint": "Think about railway lines going into the distance",
+     "choice": {
+      "options": [
+       "At the bottom of the page",
+       "At two points off the page",
+       "Nowhere; they never meet",
+       "At a single vanishing point on the horizon line"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f07",
+     "level": 1,
+     "text": "Which statement about shape and form is accurate?",
+     "solution": "A shape is flat (2D), such as a circle; a form has volume (3D), such as a sphere",
+     "hint": "Compare a circle with a ball",
+     "choice": {
+      "options": [
+       "Shape is two-dimensional; form is three-dimensional",
+       "Shape is three-dimensional; form is two-dimensional",
+       "Shape and form both mean colour",
+       "Form is always a circle"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the wrong way round",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f08",
+     "level": 2,
+     "text": "Which statement about actual texture and implied (visual) texture is accurate?",
+     "solution": "Actual texture is real and can be touched; implied texture is drawn or painted to look textured",
+     "hint": "Could you feel the texture of fur drawn in pencil?",
+     "choice": {
+      "options": [
+       "Implied texture can be felt; actual texture only looks textured",
+       "Actual texture can be felt; implied texture only looks textured",
+       "Both can only be seen in sculpture",
+       "Both mean the same as tone"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f09",
+     "level": 2,
+     "text": "Which statement about one-point and two-point perspective is accurate?",
+     "solution": "One-point has a single vanishing point; two-point has two vanishing points on the horizon line",
+     "hint": "The number in the name gives a clue",
+     "choice": {
+      "options": [
+       "One-point uses two vanishing points; two-point uses one",
+       "Two-point perspective has no horizon line",
+       "One-point uses one vanishing point; two-point uses two, often for drawing the corner of a building",
+       "One-point perspective is only used for portraits"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f10",
+     "level": 2,
+     "text": "Which type of perspective makes distant objects look paler, bluer and less detailed? Give the term.",
+     "solution": "Aerial (atmospheric) perspective shows distance by making far objects paler, bluer and less detailed",
+     "hint": "It is caused by the air between the viewer and distant hills",
+     "short": {
+      "accept": [
+       "aerial perspective",
+       "atmospheric perspective",
+       "aerial",
+       "atmospheric"
+      ],
+      "reject": [
+       "linear perspective",
+       "one-point perspective"
+      ],
+      "feedback": {
+       "linear perspective": "Linear perspective uses lines and vanishing points, not colour and detail"
+      }
+     }
+    },
+    {
+     "id": "f11",
+     "level": 2,
+     "text": "What is the focal point of a composition?",
+     "solution": "The focal point is the centre of interest that the viewer notices first",
+     "hint": "Think about where your eye goes first when you look at a picture",
+     "choice": {
+      "options": [
+       "The edge of the paper",
+       "The lightest colour in the picture",
+       "The artist's signature",
+       "The area that draws the viewer's eye first"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f12",
+     "level": 2,
+     "text": "Which drawing technique shortens an object that points towards the viewer, such as an outstretched arm, to create depth? Give the term.",
+     "solution": "Foreshortening shortens objects that point towards or away from the viewer",
+     "hint": "The object looks 'shortened' at the front",
+     "short": {
+      "accept": [
+       "foreshortening",
+       "foreshortened"
+      ]
+     }
+    },
+    {
+     "id": "f13",
+     "level": 2,
+     "text": "Which term describes the size of parts compared with each other, such as the head compared with the body?",
+     "solution": "Proportion is the relationship in size between parts of a whole",
+     "hint": "Think about getting the size of the head right in a figure drawing",
+     "choice": {
+      "options": [
+       "Proportion",
+       "Pattern",
+       "Texture",
+       "Tone"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "f14",
+     "level": 2,
+     "text": "What does 'composition' mean in art?",
+     "solution": "Composition is the arrangement of the elements within an artwork",
+     "hint": "Think about where things are placed in the picture",
+     "choice": {
+      "options": [
+       "The materials used",
+       "How the parts of an artwork are arranged",
+       "The price of the artwork",
+       "The colours mixed on the palette"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f15",
+     "level": 3,
+     "text": "In a portrait drawing of a face looking straight ahead, where are the eyes usually placed?",
+     "solution": "The eyes are roughly halfway between the top of the head and the chin",
+     "hint": "Measure from the top of the head to the chin",
+     "choice": {
+      "options": [
+       "About a quarter of the way down from the top",
+       "Near the very top of the head",
+       "About halfway down the head",
+       "About three quarters of the way down"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f16",
+     "level": 3,
+     "text": "An artist divides a picture into thirds both across and down and places the subject on one of the lines. Which guideline is this?",
+     "solution": "The rule of thirds places key subjects along the third lines or where they cross, for a balanced composition",
+     "hint": "The answer is named after the fraction in the question",
+     "choice": {
+      "options": [
+       "Two-point perspective",
+       "Negative space",
+       "Foreshortening",
+       "The rule of thirds"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f17",
+     "level": 3,
+     "text": "A drawing of a street has the lines of all the buildings heading towards one point in the distance. Which technique is this?",
+     "solution": "Lines meeting at a single point on the horizon is one-point perspective",
+     "hint": "How many points do the lines meet at?",
+     "choice": {
+      "options": [
+       "One-point perspective",
+       "Two-point perspective",
+       "Aerial perspective",
+       "Foreshortening"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "f18",
+     "level": 3,
+     "text": "An artist draws an object with one unbroken line, without lifting the pencil from the paper. Give the term for this kind of drawing.",
+     "solution": "A continuous line drawing is made without lifting the pen or pencil",
+     "hint": "The line never stops",
+     "short": {
+      "accept": [
+       "continuous line drawing",
+       "continuous line",
+       "continuous-line drawing",
+       "single line drawing"
+      ]
+     }
+    },
+    {
+     "id": "f19",
+     "level": 3,
+     "text": "A painting uses strong contrast between very light and very dark areas, as in Caravaggio's work. What is this called?",
+     "solution": "Chiaroscuro (Italian for 'light-dark') is strong contrast between light and shadow",
+     "hint": "The Italian word joins 'light' and 'dark'",
+     "choice": {
+      "options": [
+       "Sfumato",
+       "Chiaroscuro",
+       "Impasto",
+       "Pointillism"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Sfumato is soft, smoky blending, as in the Mona Lisa",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f20",
+     "level": 3,
+     "text": "In a still life of a shiny apple, what is the brightest spot where light hits it directly called? Give the term.",
+     "solution": "A highlight is the brightest area, where light hits a surface most directly",
+     "hint": "It is the opposite of a shadow",
+     "short": {
+      "accept": [
+       "highlight",
+       "highlights"
+      ],
+      "reject": [
+       "shadow",
+       "shade"
+      ]
+     }
+    },
+    {
+     "id": "f21",
+     "level": 3,
+     "text": "Which of these is a geometric shape?",
+     "solution": "Geometric shapes are regular, such as squares and circles; organic shapes are irregular, like leaves",
+     "hint": "Geometric shapes can be drawn with a ruler or compass",
+     "choice": {
+      "options": [
+       "Leaf shape",
+       "Cloud shape",
+       "Square",
+       "Puddle shape"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f22",
+     "level": 4,
+     "text": "Which arrangement creates symmetrical balance in a composition?",
+     "solution": "Symmetrical balance mirrors elements on either side of a central axis",
+     "hint": "Think about a mirror image",
+     "choice": {
+      "options": [
+       "All the objects grouped in one corner",
+       "Random sizes scattered with no plan",
+       "One large object off-centre with nothing to balance it",
+       "Matching elements placed equally on either side of a central line"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f23",
+     "level": 4,
+     "text": "In a two-point perspective drawing of a box, which statement is accurate?",
+     "solution": "In two-point perspective, verticals stay vertical and horizontal edges recede to two vanishing points",
+     "hint": "What happens to the upright edges?",
+     "choice": {
+      "options": [
+       "Vertical edges stay vertical, and the other edges go towards two vanishing points on the horizon",
+       "All the edges go towards one vanishing point",
+       "Vertical edges go towards a third vanishing point",
+       "No edges go towards vanishing points"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "f24",
+     "level": 4,
+     "text": "A drawing of a mountain range shows the near hills dark and detailed and the far hills pale and blue. Which technique creates depth here?",
+     "solution": "Changes in colour, tone and detail with distance are aerial (atmospheric) perspective",
+     "hint": "Depth is shown by colour and detail, not by lines meeting",
+     "choice": {
+      "options": [
+       "One-point linear perspective",
+       "Aerial (atmospheric) perspective",
+       "Foreshortening",
+       "Negative space"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f25",
+     "level": 4,
+     "text": "An artist draws a vase by shading only the background around it, leaving the vase as blank paper. Which element are they using to show the vase?",
+     "solution": "Drawing the space around an object (negative space) makes the object's shape appear",
+     "hint": "The artist draws the space around the object rather than the object itself",
+     "choice": {
+      "options": [
+       "Foreshortening",
+       "Pattern",
+       "Negative space",
+       "Highlight"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f26",
+     "level": 4,
+     "text": "Which shading technique changes gradually from light to dark with no hard edges? Give the term.",
+     "solution": "Blending (gradation) moves smoothly from light to dark",
+     "hint": "Think about a smooth change of tone, often smudged with a finger or a paper stump",
+     "short": {
+      "accept": [
+       "blending",
+       "gradation",
+       "graduated tone",
+       "tonal gradation",
+       "gradient",
+       "graded tone"
+      ]
+     }
+    },
+    {
+     "id": "f27",
+     "level": 4,
+     "text": "Which statement about tone is accurate?",
+     "solution": "Shading with light and dark tones gives the illusion of form (3D)",
+     "hint": "Think about shading a circle so that it looks like a ball",
+     "choice": {
+      "options": [
+       "Tone is only used in colour paintings",
+       "Tone means the outline of a shape",
+       "Tone makes objects look flatter",
+       "Adding tone can make a flat shape look three-dimensional"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f28",
+     "level": 4,
+     "text": "An artist draws squares over a photo and matching squares on the paper to copy and enlarge it accurately. Give the name of this method.",
+     "solution": "The grid method (squaring up) helps copy and scale an image accurately, one square at a time",
+     "hint": "The squares form a network across the image",
+     "short": {
+      "accept": [
+       "grid method",
+       "gridding",
+       "grid",
+       "squaring up",
+       "grid technique"
+      ]
+     }
+    },
+    {
+     "id": "f29",
+     "level": 5,
+     "text": "Why do artists use aerial perspective in landscapes?",
+     "solution": "Aerial perspective imitates how air makes distant things look paler and bluer, creating depth",
+     "hint": "Think about how distant hills look on a hazy day",
+     "choice": {
+      "options": [
+       "To create depth: distant objects are shown paler, cooler and less detailed",
+       "To make the foreground look flat",
+       "To show the view from an aeroplane",
+       "To make all objects the same size"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "'Aerial' here refers to the air between the viewer and the distance",
+       null
+      ]
+     }
+    },
+    {
+     "id": "f30",
+     "level": 5,
+     "text": "Which statement about line is accurate?",
+     "solution": "Line is versatile: it can describe edges, suggest movement and build tone through hatching",
+     "hint": "Think of all the ways you use lines in a drawing",
+     "choice": {
+      "options": [
+       "Line can only show outlines",
+       "Line can show outline, movement, direction and tone, for example through hatching",
+       "Line is always straight",
+       "Line is never used in painting"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f31",
+     "level": 5,
+     "text": "Why might an artist place the main subject off-centre?",
+     "solution": "Placing the subject off-centre (often using the rule of thirds) can make a composition more dynamic",
+     "hint": "Think about the rule of thirds",
+     "choice": {
+      "options": [
+       "An off-centre subject cannot be seen",
+       "Every artwork must follow this rule",
+       "An off-centre subject can create a more dynamic, interesting image than one in the middle",
+       "An off-centre subject removes the need for a focal point"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f32",
+     "level": 5,
+     "text": "Why does foreshortening make a drawing look more realistic?",
+     "solution": "Our eyes see objects that point towards us as shortened; drawing them this way shows depth",
+     "hint": "Hold a pencil pointing at your eye: how long does it look?",
+     "choice": {
+      "options": [
+       "All parts are drawn the same length",
+       "Foreshortening removes perspective",
+       "Foreshortening adds pattern to shapes",
+       "Parts pointing towards the viewer appear shorter, which matches how we see depth"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f33",
+     "level": 5,
+     "text": "Which statement about organic and geometric shapes is accurate?",
+     "solution": "Organic shapes are free-flowing, like leaves; geometric shapes are regular and mathematical",
+     "hint": "Compare a leaf with a square",
+     "choice": {
+      "options": [
+       "Organic shapes are irregular and found in nature; geometric shapes are regular, such as circles and squares",
+       "Geometric shapes are irregular and found in nature; organic shapes are regular",
+       "Organic shapes are always three-dimensional",
+       "Geometric shapes cannot be used in art"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the wrong way round",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f34",
+     "level": 5,
+     "text": "Which principle of art is created by repeating lines, shapes or colours to suggest a visual beat? Give the term.",
+     "solution": "Repeating elements creates visual rhythm, which leads the eye through the work",
+     "hint": "The same word is used for the beat in music",
+     "short": {
+      "accept": [
+       "rhythm",
+       "visual rhythm",
+       "repetition"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "art_design.colour",
+   "title": "Colour theory",
+   "aliases": [
+    "colour wheel",
+    "colour theory",
+    "primary colours",
+    "secondary colours",
+    "complementary colours",
+    "warm colours",
+    "tint",
+    "shade",
+    "hue"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "On the traditional painter's colour wheel, which are the primary colours?",
+     "solution": "On the traditional colour wheel used for paint, the primaries are red, yellow and blue",
+     "hint": "These colours cannot be made by mixing other paints",
+     "choice": {
+      "options": [
+       "Red, yellow and blue",
+       "Red, green and blue",
+       "Orange, green and purple",
+       "Black, white and grey"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Red, green and blue are the primary colours of light (on screens)",
+       "These are the secondary colours",
+       null
+      ]
+     }
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "Which colour is made by mixing blue and yellow paint?",
+     "solution": "Blue + yellow = green",
+     "hint": "Think of grass and leaves",
+     "choice": {
+      "options": [
+       "Purple",
+       "Green",
+       "Orange",
+       "Brown"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Purple is red + blue",
+       null,
+       "Orange is red + yellow",
+       null
+      ]
+     }
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "What do you get when you add white to a colour? Give the term.",
+     "solution": "Adding white to a colour makes a tint, such as pink from red",
+     "hint": "Pastel colours are made this way",
+     "short": {
+      "accept": [
+       "tint",
+       "tints"
+      ],
+      "reject": [
+       "shade",
+       "tone"
+      ],
+      "feedback": {
+       "shade": "A shade is made by adding black",
+       "tone": "A tone is made by adding grey"
+      }
+     }
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "What do you get when you add black to a colour? Give the term.",
+     "solution": "Adding black to a colour makes a shade",
+     "hint": "It makes the colour darker",
+     "short": {
+      "accept": [
+       "shade",
+       "shades"
+      ],
+      "reject": [
+       "tint",
+       "tone"
+      ],
+      "feedback": {
+       "tint": "A tint is made by adding white",
+       "tone": "A tone is made by adding grey"
+      }
+     }
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "Which colours are warm colours?",
+     "solution": "Red, orange and yellow are warm colours, linked with fire and the sun",
+     "hint": "Think of fire and sunshine",
+     "choice": {
+      "options": [
+       "Blue, green and purple",
+       "Black, white and grey",
+       "Red, orange and yellow",
+       "Blue, purple and grey"
+      ],
+      "correct": 2,
+      "feedback": [
+       "These are cool colours",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "What does 'hue' mean?",
+     "solution": "Hue is the pure colour itself, such as red, blue or yellow",
+     "hint": "It is the basic name of a colour",
+     "choice": {
+      "options": [
+       "A colour with white added",
+       "How light or dark a colour is",
+       "A colour with black added",
+       "The name of a pure colour, such as red or blue"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is a tint",
+       null,
+       "That is a shade",
+       null
+      ]
+     }
+    },
+    {
+     "id": "c07",
+     "level": 1,
+     "text": "Which colour is opposite red on the colour wheel?",
+     "solution": "Red and green are complementary colours, opposite each other on the colour wheel",
+     "hint": "The opposite of a primary is the secondary made from the other two primaries",
+     "choice": {
+      "options": [
+       "Green",
+       "Orange",
+       "Blue",
+       "Yellow"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "Which statement about primary and secondary colours is accurate?",
+     "solution": "Primaries (red, yellow, blue) cannot be mixed; secondaries (orange, green, purple) are two primaries mixed",
+     "hint": "Can you mix red from other paints?",
+     "choice": {
+      "options": [
+       "Secondary colours cannot be mixed from other colours; primaries are made by mixing two secondaries",
+       "Primary colours cannot be mixed from other colours; secondary colours are made by mixing two primaries",
+       "Primary and secondary colours are the same",
+       "Secondary colours are made by adding white"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Adding white makes a tint"
+      ]
+     }
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "What are colours that are opposite each other on the colour wheel called? Give the term.",
+     "solution": "Colours opposite each other on the wheel, such as red and green, are complementary",
+     "hint": "Each one 'completes' the other",
+     "short": {
+      "accept": [
+       "complementary",
+       "complementary colours",
+       "complementary colors",
+       "complements"
+      ],
+      "reject": [
+       "analogous",
+       "harmonious"
+      ],
+      "feedback": {
+       "analogous": "Analogous colours are next to each other"
+      }
+     }
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "Which pair are complementary colours?",
+     "solution": "Blue and orange are opposite each other on the colour wheel",
+     "hint": "Find the colour directly opposite blue on the wheel",
+     "choice": {
+      "options": [
+       "Blue and green",
+       "Red and orange",
+       "Blue and orange",
+       "Yellow and green"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Blue and green are next to each other, so they are analogous",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "What are colours that sit next to each other on the colour wheel, such as yellow, yellow-green and green, called? Give the term.",
+     "solution": "Colours next to each other on the wheel are analogous (harmonious) colours",
+     "hint": "They sit side by side and look calm together",
+     "short": {
+      "accept": [
+       "analogous",
+       "analogous colours",
+       "analogous colors",
+       "harmonious",
+       "harmonious colours",
+       "harmonious colors"
+      ],
+      "reject": [
+       "complementary"
+      ],
+      "feedback": {
+       "complementary": "Complementary colours are opposite each other"
+      }
+     }
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "Which of these is a tertiary colour?",
+     "solution": "A tertiary colour mixes a primary with a neighbouring secondary, such as blue-green",
+     "hint": "Tertiary colours often have two colour names joined by a hyphen",
+     "choice": {
+      "options": [
+       "Green",
+       "Blue",
+       "Purple",
+       "Blue-green"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Green is a secondary colour",
+       "Blue is a primary colour",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c13",
+     "level": 2,
+     "text": "Which of these is a cool colour?",
+     "solution": "Blue, green and purple are cool colours",
+     "hint": "Think of ice and water",
+     "choice": {
+      "options": [
+       "Blue",
+       "Orange",
+       "Red",
+       "Yellow"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c14",
+     "level": 2,
+     "text": "What happens when complementary colours are placed side by side?",
+     "solution": "Complementary colours side by side create strong contrast and make each other look more vivid",
+     "hint": "Think about red and green on a Christmas card",
+     "choice": {
+      "options": [
+       "They make each other look duller",
+       "They make each other look brighter and stronger",
+       "They blend into grey",
+       "They become the same colour"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "A painter wants a light pink. What should they do?",
+     "solution": "Pink is a tint of red, made by adding white",
+     "hint": "Making a colour lighter with white makes a tint",
+     "choice": {
+      "options": [
+       "Add black to red",
+       "Add blue to red",
+       "Add white to red",
+       "Add green to red"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Adding black makes a darker shade, not pink",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "A painting uses only tints and shades of blue. Which colour scheme is this?",
+     "solution": "A monochromatic scheme uses one hue with its tints and shades",
+     "hint": "'Mono' means one",
+     "choice": {
+      "options": [
+       "Complementary",
+       "Analogous",
+       "Triadic",
+       "Monochromatic"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Analogous schemes use several neighbouring colours",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "An artist wants a background to seem to go back into the distance. Which colours would help?",
+     "solution": "Cool and pale colours appear to recede, while warm, bright colours come forward",
+     "hint": "Think about distant hills on a hazy day",
+     "choice": {
+      "options": [
+       "Cool, pale colours such as light blues",
+       "Bright, warm colours such as red and orange",
+       "Pure black",
+       "Bright neon yellow"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "Mixing red and yellow paint makes which secondary colour? Give the colour.",
+     "solution": "Red + yellow = orange",
+     "hint": "Think of the colour of a sunset or a fruit",
+     "short": {
+      "accept": [
+       "orange"
+      ]
+     }
+    },
+    {
+     "id": "c19",
+     "level": 3,
+     "text": "Which kind of colour is made by mixing a primary colour with a neighbouring secondary colour, such as yellow with orange?",
+     "solution": "Primary + neighbouring secondary = tertiary colour, such as yellow-orange",
+     "hint": "It is the third type of colour on the wheel",
+     "choice": {
+      "options": [
+       "A primary colour",
+       "A tertiary colour",
+       "A complementary colour",
+       "A tint"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c20",
+     "level": 3,
+     "text": "A poster designer wants text that contrasts strongly in colour with a purple background. Which colour gives the strongest colour contrast?",
+     "solution": "Yellow is opposite purple on the colour wheel, so it gives the strongest colour contrast",
+     "hint": "Find the complementary colour of purple",
+     "choice": {
+      "options": [
+       "Blue",
+       "Violet",
+       "Yellow",
+       "Red-purple"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "c21",
+     "level": 3,
+     "text": "Mixing two complementary colours, such as red and green paint, usually makes a dull colour. Give the colour.",
+     "solution": "Mixing complementary colours neutralises them, giving a brown or grey",
+     "hint": "The result is a dull, neutral colour",
+     "short": {
+      "accept": [
+       "brown",
+       "grey",
+       "gray",
+       "brownish",
+       "dark brown",
+       "muddy brown",
+       "grey brown"
+      ]
+     }
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Which colour scheme uses three colours evenly spaced around the colour wheel, such as red, yellow and blue?",
+     "solution": "A triadic scheme uses three colours evenly spaced around the wheel",
+     "hint": "'Tri' means three",
+     "choice": {
+      "options": [
+       "Analogous",
+       "Monochromatic",
+       "Complementary",
+       "Triadic"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "A colour wheel has 12 colours: 3 primary, 3 secondary and the rest tertiary. How many tertiary colours are there?",
+     "solution": "12 − 3 primary − 3 secondary = 6 tertiary colours",
+     "hint": "Subtract the primaries and secondaries from 12",
+     "choice": {
+      "options": [
+       "Six",
+       "Three",
+       "Four",
+       "Twelve"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Which statement about tints, shades and tones is accurate?",
+     "solution": "Tint = colour + white; shade = colour + black; tone = colour + grey",
+     "hint": "Remember pink is a tint of red",
+     "choice": {
+      "options": [
+       "A tint adds black, a shade adds white and a tone adds grey",
+       "A tint adds white, a shade adds black and a tone adds grey",
+       "A tint adds grey, a shade adds white and a tone adds black",
+       "Tints, shades and tones all add water"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c25",
+     "level": 4,
+     "text": "On screens, colours are made by mixing light. Which are the primary colours of light?",
+     "solution": "Screens mix red, green and blue (RGB) light; all three together make white",
+     "hint": "Think of the letters RGB",
+     "choice": {
+      "options": [
+       "Red, yellow and blue",
+       "Cyan, magenta and yellow",
+       "Red, green and blue",
+       "Orange, green and purple"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Red, yellow and blue are the traditional primaries for mixing paint",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c26",
+     "level": 4,
+     "text": "Which word describes how bright and pure a colour is, rather than dull and greyish? Give the term.",
+     "solution": "Saturation (intensity or chroma) is how pure and vivid a colour is",
+     "hint": "A very vivid colour is described as highly ______ (it begins with 's')",
+     "short": {
+      "accept": [
+       "saturation",
+       "intensity",
+       "chroma",
+       "saturated"
+      ]
+     }
+    },
+    {
+     "id": "c27",
+     "level": 4,
+     "text": "A painting shows orange flowers against a deep blue background. Why does this look so vibrant?",
+     "solution": "Complementary pairs placed together create the strongest colour contrast",
+     "hint": "Where are blue and orange on the colour wheel?",
+     "choice": {
+      "options": [
+       "Blue and orange are analogous colours",
+       "Blue and orange are both warm colours",
+       "Blue and orange are both secondary colours",
+       "Blue and orange are complementary, so they intensify each other"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "Blue is a primary colour; orange is secondary",
+       null
+      ]
+     }
+    },
+    {
+     "id": "c28",
+     "level": 4,
+     "text": "Which secondary colour is the complementary colour of yellow? Give the colour.",
+     "solution": "Purple (violet) is opposite yellow on the colour wheel",
+     "hint": "Mix the two primaries that are not yellow",
+     "short": {
+      "accept": [
+       "purple",
+       "violet"
+      ],
+      "reject": [
+       "orange",
+       "green"
+      ]
+     }
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Which statement about warm and cool colours is accurate?",
+     "solution": "Warm colours (reds, oranges) seem to advance; cool colours (blues, greens) seem to recede",
+     "hint": "Think about distant hills looking blue",
+     "choice": {
+      "options": [
+       "Warm colours tend to come forward and cool colours tend to recede",
+       "Cool colours tend to come forward and warm colours tend to recede",
+       "Warm colours are always darker",
+       "Cool colours cannot be mixed"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the wrong way round",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Why do printers use cyan, magenta, yellow and black inks (CMYK) instead of red, green and blue?",
+     "solution": "Printed inks subtract (absorb) light, so printing uses CMYK; screens add light, so they use RGB",
+     "hint": "Compare light coming from a screen with light bouncing off paper",
+     "choice": {
+      "options": [
+       "Red, green and blue inks are banned",
+       "Inks absorb light (subtractive mixing), while screens add light together",
+       "CMYK uses fewer colours than RGB",
+       "Screens also use CMYK"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c31",
+     "level": 5,
+     "text": "How did many Impressionist painters show shadows?",
+     "solution": "Many Impressionists avoided black and painted coloured shadows, often blue or violet",
+     "hint": "They noticed that shadows outdoors are often coloured",
+     "choice": {
+      "options": [
+       "With pure black paint only",
+       "With grey pencil over the paint",
+       "With colours such as blues and violets instead of black",
+       "By leaving shadows out completely"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "c32",
+     "level": 5,
+     "text": "Which statement about mixing paint is accurate?",
+     "solution": "Paint mixing is subtractive: mixing all the primaries gives a dark, muddy brown or near black",
+     "hint": "Think about what happens to a palette when every colour gets mixed",
+     "choice": {
+      "options": [
+       "Mixing all three primary paints makes white",
+       "Mixing complementary colours makes a brighter colour",
+       "Adding white to a colour makes a shade",
+       "Mixing all three primary paints together tends to make a dark brown or near black"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Mixing red, green and blue light makes white, but paint is different",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c33",
+     "level": 5,
+     "text": "Black, white, grey and many browns are not strong hues on the colour wheel. What are these colours called? Give the term.",
+     "solution": "Neutral colours (black, white, grey, many browns and beiges) are not strong hues",
+     "hint": "Switzerland is often described with the same word, as it takes no side",
+     "short": {
+      "accept": [
+       "neutral",
+       "neutrals",
+       "neutral colours",
+       "neutral colors"
+      ]
+     }
+    },
+    {
+     "id": "c34",
+     "level": 5,
+     "text": "Which pair of colours gives the strongest tonal contrast?",
+     "solution": "Tonal contrast is the difference between light and dark; black and white are the extremes",
+     "hint": "Tonal contrast is about light and dark, not hue",
+     "choice": {
+      "options": [
+       "Black and white",
+       "Light blue and light green",
+       "Pink and pale yellow",
+       "Grey and silver"
+      ],
+      "correct": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "art_design.media",
+   "title": "Media & techniques",
+   "aliases": [
+    "printmaking",
+    "drawing techniques",
+    "watercolour",
+    "acrylic",
+    "lino print",
+    "collage",
+    "sculpture",
+    "ceramics",
+    "hatching",
+    "impasto",
+    "sgraffito"
+   ],
+   "questions": [
+    {
+     "id": "m01",
+     "level": 1,
+     "text": "Which printmaking method involves cutting away parts of a surface so that the raised parts print?",
+     "solution": "In relief printing (lino or woodcut), the parts left standing take the ink and print",
+     "hint": "Think about cutting into a block of lino",
+     "choice": {
+      "options": [
+       "Relief printing, such as lino printing",
+       "Screen printing",
+       "Monoprinting",
+       "Etching"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "In etching, ink sits in lines below the surface (intaglio)"
+      ]
+     }
+    },
+    {
+     "id": "m02",
+     "level": 1,
+     "text": "Which drawing technique uses closely spaced parallel lines to build up tone? Give the term.",
+     "solution": "Hatching uses parallel lines; the closer together they are, the darker the tone",
+     "hint": "The lines all go in the same direction and do not cross",
+     "short": {
+      "accept": [
+       "hatching"
+      ],
+      "reject": [
+       "cross-hatching",
+       "crosshatching",
+       "stippling"
+      ],
+      "feedback": {
+       "cross-hatching": "Cross-hatching adds lines that cross the first set"
+      }
+     }
+    },
+    {
+     "id": "m03",
+     "level": 1,
+     "text": "What is collage?",
+     "solution": "Collage comes from the French 'coller', to stick: materials are glued onto a surface",
+     "hint": "The name comes from the French word for glue",
+     "choice": {
+      "options": [
+       "Painting with very thick layers",
+       "Artwork made by sticking materials such as paper and fabric onto a surface",
+       "Carving stone",
+       "Printing with a lino block"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "m04",
+     "level": 1,
+     "text": "Which pencil grade is the softest and makes the darkest marks?",
+     "solution": "B pencils are soft and dark; the higher the B number, the softer and darker: 6B is softer than 2B",
+     "hint": "B stands for black; the higher the number, the darker",
+     "choice": {
+      "options": [
+       "2H",
+       "HB",
+       "6B",
+       "2B"
+      ],
+      "correct": 2,
+      "feedback": [
+       "H pencils are hard and make light marks",
+       "HB is in the middle",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m05",
+     "level": 1,
+     "text": "Which drawing technique uses lots of small dots to build up tone? Give the term.",
+     "solution": "Stippling builds tone with dots: more dots close together give darker tone",
+     "hint": "It is done with the tip of a pen, dot by dot",
+     "short": {
+      "accept": [
+       "stippling",
+       "stipple",
+       "stippled"
+      ],
+      "reject": [
+       "hatching"
+      ]
+     }
+    },
+    {
+     "id": "m06",
+     "level": 1,
+     "text": "What is a kiln used for?",
+     "solution": "A kiln is a very hot oven that fires clay to make it hard and permanent",
+     "hint": "It is a very hot oven",
+     "choice": {
+      "options": [
+       "Mixing paint",
+       "Printing lino",
+       "Stretching canvas",
+       "Firing clay at very high temperatures"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "m07",
+     "level": 1,
+     "text": "Which paint is water-based, dries quickly and becomes waterproof when dry?",
+     "solution": "Acrylic is water-based, dries quickly and is waterproof once dry",
+     "hint": "It is a modern paint made with a plastic binder",
+     "choice": {
+      "options": [
+       "Acrylic paint",
+       "Oil paint",
+       "Watercolour paint",
+       "Gouache paint"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Oil paint dries slowly and is not water-based",
+       "Watercolour can be re-wetted after drying",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m08",
+     "level": 2,
+     "text": "Which statement about hatching and cross-hatching is accurate?",
+     "solution": "Hatching is parallel lines; cross-hatching layers crossing lines to build darker tones",
+     "hint": "The word 'cross' gives a clue",
+     "choice": {
+      "options": [
+       "Cross-hatching uses parallel lines; hatching adds lines that cross over them",
+       "Hatching uses parallel lines; cross-hatching adds more lines that cross over them",
+       "Both use dots only",
+       "Both mean blending with a finger"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Dots are stippling",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m09",
+     "level": 2,
+     "text": "Which painting technique applies paint so thickly that brush or knife marks stand out from the surface? Give the term.",
+     "solution": "Impasto is very thick paint that keeps the marks of the brush or knife, as in Van Gogh's work",
+     "hint": "Van Gogh used it in his skies",
+     "short": {
+      "accept": [
+       "impasto"
+      ]
+     }
+    },
+    {
+     "id": "m10",
+     "level": 2,
+     "text": "Which technique scratches through a top layer to reveal a different colour underneath?",
+     "solution": "Sgraffito (Italian for 'scratched') scratches through one layer to show the layer below",
+     "hint": "The name comes from the Italian for 'scratched'",
+     "choice": {
+      "options": [
+       "Impasto",
+       "Stippling",
+       "Sgraffito",
+       "Frottage"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Frottage is taking a rubbing of a textured surface"
+      ]
+     }
+    },
+    {
+     "id": "m11",
+     "level": 2,
+     "text": "Which technique involves placing paper over a textured surface and rubbing with a crayon or pencil? Give the term.",
+     "solution": "Frottage (from the French for 'rubbing') was used by Max Ernst",
+     "hint": "It comes from the French for 'to rub'",
+     "short": {
+      "accept": [
+       "frottage",
+       "rubbing",
+       "rubbings"
+      ]
+     }
+    },
+    {
+     "id": "m12",
+     "level": 2,
+     "text": "Which statement about additive and subtractive sculpture is accurate?",
+     "solution": "Additive means adding material (modelling, construction); subtractive means taking it away (carving)",
+     "hint": "Think about adding and subtracting",
+     "choice": {
+      "options": [
+       "Subtractive sculpture builds up material; additive sculpture removes material",
+       "Both always use bronze",
+       "Both are types of printmaking",
+       "Additive sculpture builds up material, such as modelling clay; subtractive sculpture removes material, such as carving"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m13",
+     "level": 2,
+     "text": "Which watercolour technique adds wet paint onto wet paper so that colours spread and blend?",
+     "solution": "Wet-on-wet lets colours flow into each other with soft edges",
+     "hint": "Both the paper and the paint are wet",
+     "choice": {
+      "options": [
+       "Wet-on-wet",
+       "Wet-on-dry",
+       "Dry brush",
+       "Impasto"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "m14",
+     "level": 2,
+     "text": "What is the liquid clay used like glue to join pieces of clay together called? Give the term.",
+     "solution": "Slip is clay mixed with water to a creamy liquid, used with scoring to join clay",
+     "hint": "It is used after scoring both surfaces",
+     "short": {
+      "accept": [
+       "slip"
+      ]
+     }
+    },
+    {
+     "id": "m15",
+     "level": 3,
+     "text": "An artist cuts some lettering into a lino block. When it is printed, how will the lettering appear?",
+     "solution": "Printing flips the image, so lettering must be cut in reverse to read correctly",
+     "hint": "Think about stamping a rubber stamp onto paper",
+     "choice": {
+      "options": [
+       "Exactly the same way round",
+       "Reversed, as a mirror image",
+       "Upside down only",
+       "Twice as large"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "m16",
+     "level": 3,
+     "text": "A student wants a soft, smudgy drawing with rich blacks that can be blended with a finger. Which medium is most suitable?",
+     "solution": "Charcoal gives rich, dark marks that blend and smudge easily",
+     "hint": "It is made from burnt wood",
+     "choice": {
+      "options": [
+       "Fineliner pen",
+       "2H pencil",
+       "Charcoal",
+       "Ballpoint pen"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "2H is a hard pencil that makes light marks",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m17",
+     "level": 3,
+     "text": "A student paints a sky by laying a smooth, even layer of thinned watercolour across the paper. What is this technique called?",
+     "solution": "An even layer of thinned watercolour is a flat wash",
+     "hint": "The paint is thinned with lots of water and spread evenly",
+     "choice": {
+      "options": [
+       "Impasto",
+       "Sgraffito",
+       "Stippling",
+       "A flat wash"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "m18",
+     "level": 3,
+     "text": "Before using clay, potters knead it to remove air bubbles that could make it crack or explode in the kiln. Give the term for this process.",
+     "solution": "Wedging removes air bubbles and makes the clay even",
+     "hint": "It is a special word for kneading clay, beginning with 'w'",
+     "short": {
+      "accept": [
+       "wedging"
+      ]
+     }
+    },
+    {
+     "id": "m19",
+     "level": 3,
+     "text": "A student prints several colours from one lino block, cutting away more of it after each colour. What is this called?",
+     "solution": "In a reduction print, the same block is cut away further for each colour",
+     "hint": "The block gets smaller (reduced) each time",
+     "choice": {
+      "options": [
+       "A reduction print",
+       "A monoprint",
+       "A collagraph",
+       "A screen print"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "m20",
+     "level": 3,
+     "text": "Which tool is used to roll ink evenly onto a printing block?",
+     "solution": "A brayer is a hand roller that spreads ink evenly over the block",
+     "hint": "It is shaped like a small paint roller",
+     "choice": {
+      "options": [
+       "Baren",
+       "Brayer (roller)",
+       "Gouge",
+       "Easel"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A baren is used to rub the back of the paper to transfer the ink",
+       null,
+       "A gouge is used to cut the lino",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m21",
+     "level": 3,
+     "text": "What is the name of the internal frame, often made of wire, that supports a clay or papier-mâché sculpture? Give the term.",
+     "solution": "An armature is an internal support frame for a sculpture",
+     "hint": "It works like a skeleton inside the sculpture",
+     "short": {
+      "accept": [
+       "armature",
+       "armatures"
+      ]
+     }
+    },
+    {
+     "id": "m22",
+     "level": 4,
+     "text": "A student wants to keep pure white highlights in a watercolour painting. What should they do?",
+     "solution": "In watercolour the white comes from the paper, so highlights are left unpainted or protected with masking fluid",
+     "hint": "Watercolour is transparent, so the whites come from the paper",
+     "choice": {
+      "options": [
+       "Paint over them with black first",
+       "Add white acrylic to every colour",
+       "Leave the paper unpainted in those areas or use masking fluid",
+       "Use more water everywhere"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "m23",
+     "level": 4,
+     "text": "Two clay pieces are joined but fall apart when they dry. Which step was most likely missed?",
+     "solution": "Clay joins need scoring and slip to bond properly",
+     "hint": "Think about how clay pieces are glued together",
+     "choice": {
+      "options": [
+       "Firing it twice before joining",
+       "Glazing it before joining",
+       "Adding water to the kiln",
+       "Scoring both surfaces and using slip"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "m24",
+     "level": 4,
+     "text": "Which list shows the stages of making a glazed ceramic pot in the correct order?",
+     "solution": "Clay is shaped, dried, bisque (biscuit) fired, glazed and then fired again",
+     "hint": "The clay must be shaped and dried before it goes in the kiln",
+     "choice": {
+      "options": [
+       "Shape the clay, dry to bone dry, bisque fire, glaze, glaze fire",
+       "Glaze, shape the clay, bisque fire, dry, glaze fire",
+       "Bisque fire, shape the clay, glaze, dry, glaze fire",
+       "Shape the clay, glaze fire, dry, bisque fire, glaze"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "m25",
+     "level": 4,
+     "text": "An artist pushes ink through a fine mesh with a stencil blocking some areas. Which process is this, famously used by Andy Warhol?",
+     "solution": "Screen printing pushes ink through a mesh screen; a stencil blocks some areas",
+     "hint": "Warhol used it to repeat images of celebrities",
+     "choice": {
+      "options": [
+       "Lino printing",
+       "Screen printing",
+       "Etching",
+       "Monoprinting"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "m26",
+     "level": 4,
+     "text": "Which group of printmaking processes holds the ink in lines cut or scratched into a metal plate, such as etching? Give the term.",
+     "solution": "In intaglio printing (etching, engraving, drypoint), ink is held in lines below the surface",
+     "hint": "The word is Italian and begins with 'in'",
+     "short": {
+      "accept": [
+       "intaglio"
+      ],
+      "reject": [
+       "relief",
+       "lithography"
+      ],
+      "feedback": {
+       "relief": "Relief prints from the raised surface, not from cut lines"
+      }
+     }
+    },
+    {
+     "id": "m27",
+     "level": 4,
+     "text": "Why is fixative sprayed on charcoal and pastel drawings?",
+     "solution": "Fixative holds loose charcoal or pastel dust in place so the drawing does not smudge",
+     "hint": "Charcoal and pastel rub off easily",
+     "choice": {
+      "options": [
+       "To make the colours brighter",
+       "To make the paper waterproof for painting",
+       "To stop the drawing smudging",
+       "To remove mistakes"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "m28",
+     "level": 4,
+     "text": "Which statement about oil paint compared with acrylic paint is accurate?",
+     "solution": "Oil paint dries slowly, allowing long blending time; acrylic dries quickly and cleans up with water",
+     "hint": "Think about drying time",
+     "choice": {
+      "options": [
+       "Oil paint dries faster than acrylic",
+       "Oil paint is cleaned up with water",
+       "Acrylic can never be used thickly",
+       "Oil paint dries much more slowly, so it can be blended for longer"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Oil paint needs solvents such as white spirit",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m29",
+     "level": 5,
+     "text": "Why might a student choose acrylic rather than oil paint for a project with a short deadline?",
+     "solution": "Acrylic dries fast, so layers can be added quickly, and brushes clean with water",
+     "hint": "Think about drying time and cleaning up",
+     "choice": {
+      "options": [
+       "Acrylic dries quickly and cleans up with water",
+       "Acrylic cannot be mixed",
+       "Acrylic is always transparent",
+       "Oil paint dries in seconds"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "m30",
+     "level": 5,
+     "text": "Which statement about monoprinting is accurate?",
+     "solution": "'Mono' means one: monoprinting usually makes a single, unique print",
+     "hint": "'Mono' means one",
+     "choice": {
+      "options": [
+       "A monoprint always produces hundreds of identical prints",
+       "A monoprint usually produces one unique print rather than identical copies",
+       "A monoprint needs a kiln",
+       "A monoprint is a type of sculpture"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "m31",
+     "level": 5,
+     "text": "Why do potters fire clay in a kiln?",
+     "solution": "Firing permanently changes clay into hard ceramic that cannot be softened with water again",
+     "hint": "Think about what happens to unfired clay if it gets wet",
+     "choice": {
+      "options": [
+       "The heat makes the clay soft for reshaping",
+       "The heat removes the glaze",
+       "The high heat changes the clay permanently so it becomes hard and durable",
+       "The heat turns clay into metal"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "m32",
+     "level": 5,
+     "text": "Why might an artist use mixed media in an artwork?",
+     "solution": "Mixed media combines different materials to create richer textures and effects",
+     "hint": "Think about combining collage, paint and drawing",
+     "choice": {
+      "options": [
+       "Mixed media is the only way to show perspective",
+       "Mixed media stops the work being judged",
+       "Mixed media makes every artwork waterproof",
+       "Combining materials can add texture and variety that one medium alone cannot"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "m33",
+     "level": 5,
+     "text": "Which fabric technique uses melted wax to stop dye soaking into parts of the cloth and is traditional in Indonesia? Give the name.",
+     "solution": "Batik uses wax as a resist so that dye cannot reach the waxed areas",
+     "hint": "The name is an Indonesian word",
+     "short": {
+      "accept": [
+       "batik",
+       "wax resist",
+       "wax resist dyeing",
+       "resist dyeing"
+      ]
+     }
+    },
+    {
+     "id": "m34",
+     "level": 5,
+     "text": "A sculptor wants to make several identical bronze copies of a clay sculpture. Which process is used?",
+     "solution": "Bronze sculptures are made by casting molten metal in a mould taken from the original",
+     "hint": "Molten metal is poured into a mould",
+     "choice": {
+      "options": [
+       "Casting, using a mould",
+       "Carving",
+       "Wedging",
+       "Coil building"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "m35",
+     "level": 5,
+     "text": "Which term describes paint that lets light pass through it so the layers underneath show, as with watercolour? Give the term.",
+     "solution": "Watercolour is transparent, so earlier layers and the white paper show through",
+     "hint": "It is the opposite of opaque",
+     "short": {
+      "accept": [
+       "transparent",
+       "translucent"
+      ],
+      "reject": [
+       "opaque"
+      ],
+      "feedback": {
+       "opaque": "Opaque paint covers what is underneath, like gouache"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "art_design.history",
+   "title": "Art history & movements",
+   "aliases": [
+    "art movements",
+    "art history",
+    "renaissance",
+    "impressionism",
+    "cubism",
+    "surrealism",
+    "expressionism",
+    "pop art",
+    "abstract expressionism",
+    "famous artists"
+   ],
+   "questions": [
+    {
+     "id": "h01",
+     "level": 1,
+     "text": "Who painted the Mona Lisa?",
+     "solution": "Leonardo da Vinci painted the Mona Lisa in the early 1500s, during the Italian Renaissance",
+     "hint": "He was an Italian Renaissance artist who was also an inventor",
+     "choice": {
+      "options": [
+       "Leonardo da Vinci",
+       "Michelangelo",
+       "Vincent van Gogh",
+       "Pablo Picasso"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "h02",
+     "level": 1,
+     "text": "Which art movement is Claude Monet linked with?",
+     "solution": "Monet was a leading Impressionist; his painting Impression, Sunrise gave the movement its name",
+     "hint": "One of his paintings gave the movement its name",
+     "choice": {
+      "options": [
+       "Cubism",
+       "Impressionism",
+       "Surrealism",
+       "Pop Art"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "h03",
+     "level": 1,
+     "text": "Which Spanish artist developed Cubism with Georges Braque? Give the surname.",
+     "solution": "Pablo Picasso and Georges Braque developed Cubism from about 1907",
+     "hint": "His first name is Pablo",
+     "short": {
+      "accept": [
+       "Picasso",
+       "Pablo Picasso"
+      ]
+     }
+    },
+    {
+     "id": "h04",
+     "level": 1,
+     "text": "Which artist painted The Persistence of Memory, with its melting clocks?",
+     "solution": "Salvador Dalí, a Surrealist, painted The Persistence of Memory (1931)",
+     "hint": "He was a Spanish Surrealist with a famous curled moustache",
+     "choice": {
+      "options": [
+       "René Magritte",
+       "Andy Warhol",
+       "Salvador Dalí",
+       "Claude Monet"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Magritte was also a Surrealist, but he did not paint the melting clocks",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "h05",
+     "level": 1,
+     "text": "Which Pop artist made famous prints of Campbell's soup cans? Give the surname.",
+     "solution": "Andy Warhol made Campbell's Soup Cans (1962) and many screen prints",
+     "hint": "His first name is Andy",
+     "short": {
+      "accept": [
+       "Warhol",
+       "Andy Warhol"
+      ]
+     }
+    },
+    {
+     "id": "h06",
+     "level": 1,
+     "text": "Who painted the ceiling of the Sistine Chapel?",
+     "solution": "Michelangelo painted the Sistine Chapel ceiling between 1508 and 1512",
+     "hint": "He also carved the famous statue of David",
+     "choice": {
+      "options": [
+       "Leonardo da Vinci",
+       "Raphael",
+       "Caravaggio",
+       "Michelangelo"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "h07",
+     "level": 1,
+     "text": "Which artist painted The Starry Night?",
+     "solution": "Vincent van Gogh painted The Starry Night in 1889",
+     "hint": "This Dutch artist also painted Sunflowers",
+     "choice": {
+      "options": [
+       "Vincent van Gogh",
+       "Claude Monet",
+       "Paul Cézanne",
+       "Edvard Munch"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "h08",
+     "level": 2,
+     "text": "Which feature is typical of Impressionism?",
+     "solution": "Impressionists used quick, visible brushstrokes to capture light and atmosphere, often outdoors",
+     "hint": "Think of Monet painting outdoors at different times of day",
+     "choice": {
+      "options": [
+       "Melting, dreamlike objects",
+       "Visible brushstrokes capturing changing light, often painted outdoors",
+       "Comic-strip images with printed dots",
+       "Geometric shapes showing several viewpoints at once"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That describes Surrealism",
+       null,
+       "That describes Pop Art",
+       "That describes Cubism"
+      ]
+     }
+    },
+    {
+     "id": "h09",
+     "level": 2,
+     "text": "Which feature is typical of Cubism?",
+     "solution": "Cubism breaks subjects into geometric planes and shows several viewpoints at the same time",
+     "hint": "The name comes from 'cubes'",
+     "choice": {
+      "options": [
+       "Soft brushstrokes capturing sunlight",
+       "Drips and splashes of paint",
+       "Objects broken into geometric shapes and shown from several viewpoints at once",
+       "Realistic portraits of royalty"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That describes Jackson Pollock's Abstract Expressionism",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "h10",
+     "level": 2,
+     "text": "Which art movement of the 1920s explored dreams and the unconscious mind, with artists such as Dalí and Magritte? Give the movement.",
+     "solution": "Surrealism explored dreams and the unconscious from the 1920s",
+     "hint": "The name means 'beyond realism'",
+     "short": {
+      "accept": [
+       "Surrealism",
+       "Surrealist",
+       "Surrealists"
+      ]
+     }
+    },
+    {
+     "id": "h11",
+     "level": 2,
+     "text": "Which Pop artist used comic-strip images and Ben-Day dots?",
+     "solution": "Roy Lichtenstein painted large comic-strip images with Ben-Day dots, such as Whaam! (1963)",
+     "hint": "His most famous painting is called Whaam!",
+     "choice": {
+      "options": [
+       "Jackson Pollock",
+       "Claude Monet",
+       "Henri Matisse",
+       "Roy Lichtenstein"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "h12",
+     "level": 2,
+     "text": "Which American painter is famous for 'drip' paintings and is linked with Abstract Expressionism? Give the surname.",
+     "solution": "Jackson Pollock dripped and poured paint onto canvases laid on the floor",
+     "hint": "His first name is Jackson",
+     "short": {
+      "accept": [
+       "Pollock",
+       "Jackson Pollock"
+      ]
+     }
+    },
+    {
+     "id": "h13",
+     "level": 2,
+     "text": "Which Norwegian artist painted The Scream? Give the surname.",
+     "solution": "Edvard Munch painted The Scream (1893), an important influence on Expressionism",
+     "hint": "His surname has five letters and sounds like 'monk'",
+     "short": {
+      "accept": [
+       "Munch",
+       "Edvard Munch"
+      ]
+     }
+    },
+    {
+     "id": "h14",
+     "level": 2,
+     "text": "Which period saw a 'rebirth' of classical art and learning in Italy, with artists such as Leonardo and Raphael?",
+     "solution": "The Renaissance (French for 'rebirth') began in Italy in the 14th–15th centuries",
+     "hint": "The name is French for 'rebirth'",
+     "choice": {
+      "options": [
+       "The Renaissance",
+       "Impressionism",
+       "Pop Art",
+       "Cubism"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "h15",
+     "level": 3,
+     "text": "A painting shows everyday consumer products in bright, flat colours and was made by screen printing. Which movement is it most likely from?",
+     "solution": "Images of consumer products, bright flat colour and screen printing are typical of Pop Art",
+     "hint": "Think of Andy Warhol",
+     "choice": {
+      "options": [
+       "Renaissance",
+       "Pop Art",
+       "Impressionism",
+       "Surrealism"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "h16",
+     "level": 3,
+     "text": "A painting is made of tiny dots of pure colour placed side by side, which blend when seen from a distance. Which technique is this?",
+     "solution": "Pointillism, developed by Georges Seurat, uses dots of pure colour that mix in the viewer's eye",
+     "hint": "Georges Seurat developed this technique",
+     "choice": {
+      "options": [
+       "Impasto",
+       "Sgraffito",
+       "Pointillism",
+       "Chiaroscuro"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "h17",
+     "level": 3,
+     "text": "A painting uses strong, unnatural colours and distorted shapes to express feelings rather than show reality. Which movement is it most likely from?",
+     "solution": "Expressionism distorts colour and form to express emotion",
+     "hint": "The name of the movement is about expressing feelings",
+     "choice": {
+      "options": [
+       "Renaissance",
+       "Impressionism",
+       "Pop Art",
+       "Expressionism"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "h18",
+     "level": 3,
+     "text": "Which British sculptor made the Angel of the North? Give the surname.",
+     "solution": "Antony Gormley's Angel of the North (1998) stands in Gateshead",
+     "hint": "His first name is Antony",
+     "short": {
+      "accept": [
+       "Gormley",
+       "Antony Gormley",
+       "Anthony Gormley"
+      ]
+     }
+    },
+    {
+     "id": "h19",
+     "level": 3,
+     "text": "Which artist is known for large, smooth sculptures of reclining figures with holes through them?",
+     "solution": "Henry Moore is famous for his reclining figures with hollows and holes",
+     "hint": "He was a British sculptor from Yorkshire",
+     "choice": {
+      "options": [
+       "Henry Moore",
+       "Antony Gormley",
+       "Auguste Rodin",
+       "Michelangelo"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Rodin is famous for The Thinker",
+       null
+      ]
+     }
+    },
+    {
+     "id": "h20",
+     "level": 3,
+     "text": "Which Japanese artist made the woodblock print The Great Wave off Kanagawa? Give the name.",
+     "solution": "Katsushika Hokusai made The Great Wave off Kanagawa in about 1831",
+     "hint": "His family name is Katsushika",
+     "short": {
+      "accept": [
+       "Hokusai",
+       "Katsushika Hokusai"
+      ]
+     }
+    },
+    {
+     "id": "h21",
+     "level": 3,
+     "text": "Which art movement of the 1910s rejected traditional art, using nonsense and everyday 'readymade' objects?",
+     "solution": "Dada began during the First World War and rejected traditional ideas of art",
+     "hint": "Its name is a nonsense word",
+     "choice": {
+      "options": [
+       "Renaissance",
+       "Dada",
+       "Impressionism",
+       "Baroque"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "h22",
+     "level": 4,
+     "text": "Which list puts these art movements in time order, earliest first?",
+     "solution": "Renaissance (1400s–1500s), Impressionism (1870s), Cubism (from about 1907), Pop Art (1950s–60s)",
+     "hint": "Start with the oldest, which was in Italy hundreds of years ago",
+     "choice": {
+      "options": [
+       "Impressionism, Renaissance, Pop Art, Cubism",
+       "Cubism, Renaissance, Impressionism, Pop Art",
+       "Renaissance, Impressionism, Cubism, Pop Art",
+       "Renaissance, Cubism, Impressionism, Pop Art"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "h23",
+     "level": 4,
+     "text": "A painting by Monet gave its name to Impressionism. What was it called?",
+     "solution": "Monet's Impression, Sunrise (1872) led a critic to call the group 'Impressionists'",
+     "hint": "The painting's title includes the name of the movement",
+     "choice": {
+      "options": [
+       "Water Lilies",
+       "The Starry Night",
+       "Sunflowers",
+       "Impression, Sunrise"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Water Lilies is a later series by Monet",
+       "The Starry Night is by Van Gogh",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "h24",
+     "level": 4,
+     "text": "Which statement about the Renaissance is accurate?",
+     "solution": "Renaissance artists studied the human body and used linear perspective for realism",
+     "hint": "Think about Leonardo's drawings of the human body",
+     "choice": {
+      "options": [
+       "Artists studied anatomy and used linear perspective to create realistic space",
+       "Artists rejected realism for flat geometric shapes",
+       "The Renaissance began in 1950s America",
+       "Renaissance artists mainly used screen printing"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "h25",
+     "level": 4,
+     "text": "Which statement correctly compares Impressionism and Expressionism?",
+     "solution": "Impressionism captured light and atmosphere; Expressionism distorted colour and form to show feelings",
+     "hint": "Look at the words 'impression' and 'expression'",
+     "choice": {
+      "options": [
+       "Expressionists focused on capturing light; Impressionists focused on showing emotion",
+       "Impressionists focused on capturing light and the moment; Expressionists focused on showing emotion",
+       "Both movements only made sculpture",
+       "Both movements began in the Renaissance"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "h26",
+     "level": 4,
+     "text": "Which Dutch artist painted grids of black lines with blocks of primary colour and is linked with De Stijl? Give the surname.",
+     "solution": "Piet Mondrian used black grids and red, yellow and blue blocks",
+     "hint": "His first name is Piet",
+     "short": {
+      "accept": [
+       "Mondrian",
+       "Piet Mondrian",
+       "Mondriaan"
+      ]
+     }
+    },
+    {
+     "id": "h27",
+     "level": 4,
+     "text": "Which movement includes Mark Rothko's large fields of colour and Jackson Pollock's action painting?",
+     "solution": "Rothko and Pollock were Abstract Expressionists working in New York in the 1940s and 1950s",
+     "hint": "Both artists worked in New York after the Second World War",
+     "choice": {
+      "options": [
+       "Impressionism",
+       "Pop Art",
+       "Abstract Expressionism",
+       "Renaissance"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "h28",
+     "level": 4,
+     "text": "Which artist painted The Kiss, using gold leaf?",
+     "solution": "Gustav Klimt painted The Kiss (1907–1908) in Vienna, using gold leaf",
+     "hint": "He worked in Vienna, Austria",
+     "choice": {
+      "options": [
+       "Edvard Munch",
+       "Henri Matisse",
+       "Claude Monet",
+       "Gustav Klimt"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "h29",
+     "level": 5,
+     "text": "Why is Picasso's Les Demoiselles d'Avignon (1907) seen as important?",
+     "solution": "Its flattened, angular figures broke with traditional perspective and paved the way for Cubism",
+     "hint": "Which movement did Picasso develop soon afterwards?",
+     "choice": {
+      "options": [
+       "The painting broke with traditional perspective and led towards Cubism",
+       "The painting was the first Impressionist work",
+       "The painting started the Renaissance",
+       "The painting was the first Pop Art screen print"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "h30",
+     "level": 5,
+     "text": "Which statement about Pop Art is accurate?",
+     "solution": "Pop Art (1950s–60s, Britain and the USA) drew on advertising, comics and celebrity",
+     "hint": "'Pop' is short for 'popular'",
+     "choice": {
+      "options": [
+       "Pop Art began in Renaissance Italy",
+       "Pop Art used images from advertising, comics and mass media and began in Britain and the USA in the 1950s",
+       "Pop Art avoided popular culture completely",
+       "Pop Art only used marble sculpture"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "h31",
+     "level": 5,
+     "text": "Why did the Impressionists often paint outdoors (en plein air)?",
+     "solution": "Painting outdoors let them record light and atmosphere as it changed",
+     "hint": "What were the Impressionists most interested in?",
+     "choice": {
+      "options": [
+       "Studios were banned in France",
+       "To avoid using colour",
+       "To capture the changing effects of natural light directly",
+       "Paint could only dry outdoors"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "h32",
+     "level": 5,
+     "text": "Which statement about Surrealism is accurate?",
+     "solution": "Surrealists painted dreamlike, illogical scenes, often in a very realistic style",
+     "hint": "Think of Dalí's melting clocks",
+     "choice": {
+      "options": [
+       "Surrealists painted only realistic portraits of royalty",
+       "Surrealism was mainly about capturing light outdoors",
+       "Surrealism used only geometric grids of primary colours",
+       "Surrealists explored dreams and the unconscious, often combining realistic detail with strange, illogical scenes"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "That describes Mondrian and De Stijl",
+       null
+      ]
+     }
+    },
+    {
+     "id": "h33",
+     "level": 5,
+     "text": "Which statement about Andy Goldsworthy's work is accurate?",
+     "solution": "Goldsworthy creates temporary sculptures from natural materials outdoors and photographs them",
+     "hint": "His works are often outdoors and do not last long",
+     "choice": {
+      "options": [
+       "He makes land art from natural materials such as leaves, stones and ice, often recorded in photographs",
+       "He makes comic-strip paintings with Ben-Day dots",
+       "He paints large drip paintings",
+       "He makes bronze reclining figures"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "h34",
+     "level": 5,
+     "text": "Which technique, whose name comes from the Italian for 'smoke', blends tones softly without hard outlines, as in the Mona Lisa? Give the term.",
+     "solution": "Sfumato (from the Italian for 'smoke') blends tones softly, as Leonardo did in the Mona Lisa",
+     "hint": "Leonardo da Vinci was famous for this soft blending",
+     "short": {
+      "accept": [
+       "sfumato"
+      ],
+      "reject": [
+       "chiaroscuro"
+      ],
+      "feedback": {
+       "chiaroscuro": "Chiaroscuro is strong contrast between light and dark"
+      }
+     }
+    },
+    {
+     "id": "h35",
+     "level": 5,
+     "text": "Why did Cubist artists show objects from several viewpoints at once?",
+     "solution": "Cubists wanted to show more of an object than a single viewpoint allows, rethinking traditional perspective",
+     "hint": "Think about seeing the front and side of a face at the same time",
+     "choice": {
+      "options": [
+       "To make paintings look exactly like photographs",
+       "To represent the whole object on a flat surface rather than copying a single view",
+       "To hide the subject completely",
+       "To show the effect of light at different times of day"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "That was the aim of Impressionists such as Monet"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "art_design.y{year}.formal",
+      "label": "Formal elements",
+      "skills": [
+       "art_design.formal"
+      ]
+     },
+     {
+      "id": "art_design.y{year}.colour",
+      "label": "Colour theory",
+      "skills": [
+       "art_design.colour"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "art_design.y{year}.media",
+      "label": "Media & techniques",
+      "skills": [
+       "art_design.media"
+      ]
+     },
+     {
+      "id": "art_design.y{year}.history",
+      "label": "Art history & movements",
+      "skills": [
+       "art_design.history"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

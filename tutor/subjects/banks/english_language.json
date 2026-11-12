@@ -194,7 +194,7 @@
      "text": "Which sentence uses sibilance?",
      "choice": {
       "options": [
-       "The big brown bear bounded by",
+       "The big brown bear bounded boldly beyond the bridge",
        "The clock went tick-tock all night",
        "Her eyes were deep, dark pools",
        "The silent snake slid slowly across the sand"
@@ -437,7 +437,7 @@
      "choice": {
       "options": [
        "It is a metaphor presenting the sea as dangerous and predatory",
-       "It is a simile because it compares the sea to a wolf",
+       "It is a simile, because it compares the sea to a hungry, snapping wolf",
        "It is onomatopoeia because 'hungry' imitates a sound",
        "It is pathetic fallacy showing that the sea is happy"
       ],
@@ -458,7 +458,7 @@
      "text": "Which statement about pathetic fallacy is accurate?",
      "choice": {
       "options": [
-       "It is any description of the weather, whatever its effect",
+       "It is any description of the weather in a story, whatever its effect on the mood",
        "It uses weather or nature to reflect a character's mood or the atmosphere",
        "It means giving animals the power of speech",
        "It is a weak, illogical argument in persuasive writing"
@@ -584,7 +584,7 @@
       "options": [
        "A scene that goes back to events in the past",
        "A clue early in a text about something that happens later",
-       "A story told by a narrator who uses 'I' and 'me'",
+       "A story told by a narrator who uses 'I', 'me' and 'my' throughout",
        "A detailed description of the setting of a story"
       ],
       "correct": 1,
@@ -706,7 +706,7 @@
      "choice": {
       "options": [
        "A character who tells the story using 'I'",
-       "A narrator who knows only one character's thoughts",
+       "A narrator who knows only one character's thoughts and feelings, never anyone else's",
        "An all-knowing narrator who can reveal any character's thoughts",
        "A narrator who speaks directly to 'you'"
       ],
@@ -892,7 +892,7 @@
       "options": [
        "To list the people in the room",
        "To create a pause that builds anticipation",
-       "To describe the teacher's appearance",
+       "To describe the new teacher's appearance and clothes in detail",
        "To show what time of day it is"
       ],
       "correct": 1
@@ -907,7 +907,7 @@
      "choice": {
       "options": [
        "It shows the soldiers are friendly visitors",
-       "It moves the story back to the founding of the village",
+       "It moves the story back hundreds of years to the founding of the village",
        "It signals a contrast and creates suspense about what will happen",
        "It brings the story to an end"
       ],
@@ -992,7 +992,7 @@
      "text": "'Mr Hale was always first at the office. He hung his coat on the same hook, sharpened the same pencil and ate the same cheese sandwich at exactly one o'clock.' Which inference is supported by the text?",
      "choice": {
       "options": [
-       "He is reckless and spontaneous",
+       "He is reckless and spontaneous, never doing the same thing twice",
        "He follows a fixed, careful routine",
        "He has just started the job",
        "He dislikes cheese"
@@ -1008,7 +1008,7 @@
      "text": "A story opens with a lonely boy ignoring a knock at his door. It ends with him answering the same knock. What is the effect of this structure?",
      "choice": {
       "options": [
-       "It shows that nothing in the story has mattered",
+       "It shows that nothing in the story has really mattered at all",
        "It introduces a new main character at the end",
        "It mirrors the opening to show how the boy has changed",
        "It is a flashback to the boy's early life"
@@ -1024,7 +1024,7 @@
      "text": "A novel's first chapter is set in 2020. Chapter two begins: 'Thirty years earlier...' Which statement about this structure is accurate?",
      "choice": {
       "options": [
-       "Chapter two foreshadows events in the far future",
+       "Chapter two foreshadows events that will happen in the far future of the story",
        "The novel must have a cyclical structure overall",
        "Chapter two must be told in the second person",
        "Chapter two is a flashback that may shed light on the present"
@@ -1287,7 +1287,7 @@
       "options": [
        "When the alarm rang, everyone left the building.",
        "Everyone left the building.",
-       "The alarm rang and everyone left.",
+       "The alarm rang loudly and everyone left the building at once.",
        "Out, now!"
       ],
       "correct": 0
@@ -1525,7 +1525,7 @@
       "options": [
        "It introduces a list",
        "It shows possession",
-       "It marks off a subordinate clause",
+       "It marks off a subordinate clause from the main clause",
        "It links two closely related main clauses"
       ],
       "correct": 3
@@ -1601,7 +1601,7 @@
        "A question asked for effect, not to get an answer",
        "A question with a single factual answer",
        "A question answered with a statistic",
-       "A question asked by a character in dialogue"
+       "A question asked by one character to another in dialogue"
       ],
       "correct": 0
      },
@@ -1905,7 +1905,7 @@
      "choice": {
       "options": [
        "Emotive language and direct address",
-       "Statistics and factual evidence",
+       "Statistics and factual evidence from a survey",
        "Expert opinion and a quotation",
        "Counter-argument and rebuttal"
       ],
@@ -1936,7 +1936,7 @@
      "text": "A student writes a speech for Year 7 pupils to encourage them to join school clubs. Which sentence suits this audience and purpose?",
      "choice": {
       "options": [
-       "Pursuant to school regulations, extracurricular participation is advisable.",
+       "Pursuant to school regulations, participation in extracurricular activities is strongly advisable.",
        "Clubs. Whatever.",
        "Joining a club is a brilliant way to make new friends, so why not try one this week?",
        "In 1987 the first club was formed at this school."
@@ -1952,7 +1952,7 @@
      "text": "Read: 'Our town needs a new skate park. Young people have nowhere to go. In a survey of local teenagers, eight out of ten said they were bored at weekends.' What is the purpose of the final sentence?",
      "choice": {
       "options": [
-       "To introduce a counter-argument",
+       "To introduce a counter-argument that the writer will then rebut",
        "To describe the setting",
        "To entertain with a story",
        "To support the argument with evidence"
@@ -2030,7 +2030,7 @@
        "To change their mind halfway through the argument",
        "To make the writing longer without adding new ideas",
        "To show they have considered other views before rebutting them",
-       "To agree completely with the people on the other side"
+       "To agree completely with the people on the other side of the debate"
       ],
       "correct": 2
      },

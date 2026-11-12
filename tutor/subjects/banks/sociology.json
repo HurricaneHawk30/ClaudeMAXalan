@@ -1,0 +1,2256 @@
+{
+ "subject": {
+  "id": "sociology",
+  "title": "Sociology",
+  "order": 42
+ },
+ "skills": [
+  {
+   "id": "sociology.families",
+   "title": "Families",
+   "aliases": [
+    "family types",
+    "families",
+    "nuclear family",
+    "reconstituted family",
+    "conjugal roles",
+    "divorce",
+    "functionalist view of the family",
+    "feminist view",
+    "extended family",
+    "lone-parent family",
+    "murdock",
+    "parsons"
+   ],
+   "questions": [
+    {
+     "id": "f01",
+     "level": 1,
+     "text": "What is a nuclear family?",
+     "choice": {
+      "options": [
+       "Two parents and their dependent children living together",
+       "Three or more generations living together",
+       "One parent living with their children",
+       "A couple where one partner has children from a previous relationship"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That describes an extended family",
+       "That describes a lone-parent family",
+       "That describes a reconstituted family"
+      ]
+     },
+     "solution": "A nuclear family is two parents (adults) and their dependent children in one household",
+     "hint": "It is the 'core' family of parents and children only"
+    },
+    {
+     "id": "f02",
+     "level": 1,
+     "text": "What is the term for a family in which one or both partners have children from a previous relationship? Give the term.",
+     "short": {
+      "accept": [
+       "reconstituted family",
+       "reconstituted",
+       "blended family",
+       "step-family",
+       "stepfamily"
+      ]
+     },
+     "solution": "A reconstituted (blended or step-) family forms when partners bring children from earlier relationships",
+     "hint": "The family has been 'put back together' in a new form"
+    },
+    {
+     "id": "f03",
+     "level": 1,
+     "text": "What term describes a family that includes relatives beyond parents and children, such as grandparents, living together or close by? Give the term.",
+     "short": {
+      "accept": [
+       "extended family",
+       "extended",
+       "the extended family"
+      ]
+     },
+     "solution": "An extended family includes wider relatives such as grandparents, aunts or uncles",
+     "hint": "The family is 'stretched' beyond parents and children"
+    },
+    {
+     "id": "f04",
+     "level": 1,
+     "text": "Which sociologist identified four 'universal' functions of the family: sexual, reproductive, economic and educational?",
+     "choice": {
+      "options": [
+       "Parsons",
+       "Murdock",
+       "Oakley",
+       "Willis"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Parsons named two functions: primary socialisation and stabilisation of adult personalities",
+       null,
+       "Oakley was a feminist who studied housework",
+       "Willis studied working-class boys at school"
+      ]
+     },
+     "solution": "George Murdock (1949) studied around 250 societies and identified these four functions",
+     "hint": "He was a functionalist who studied hundreds of societies in the 1940s"
+    },
+    {
+     "id": "f05",
+     "level": 1,
+     "text": "What is the term for a couple living together without being married or in a civil partnership? Give the term.",
+     "short": {
+      "accept": [
+       "cohabitation",
+       "cohabiting",
+       "cohabit",
+       "cohabiting couple"
+      ]
+     },
+     "solution": "Cohabitation is a couple living together in a relationship without marrying; it has become much more common",
+     "hint": "The word means 'living together'"
+    },
+    {
+     "id": "f06",
+     "level": 1,
+     "text": "What are conjugal roles?",
+     "choice": {
+      "options": [
+       "The roles children play at school",
+       "The jobs people do in the workplace",
+       "The roles of partners in a couple, such as housework, childcare and paid work",
+       "The roles of grandparents in an extended family"
+      ],
+      "correct": 2
+     },
+     "solution": "Conjugal roles are the roles of husband and wife (or partners) in the home; they can be joint or segregated",
+     "hint": "'Conjugal' refers to marriage or a couple"
+    },
+    {
+     "id": "f07",
+     "level": 2,
+     "text": "According to Parsons, what are the two 'basic and irreducible' functions of the modern family?",
+     "choice": {
+      "options": [
+       "Reproduction and economic production",
+       "Education and religious teaching",
+       "Social control and political influence",
+       "Primary socialisation of children and stabilisation of adult personalities"
+      ],
+      "correct": 3
+     },
+     "solution": "Parsons said the modern family has two key functions: primary socialisation and the stabilisation of adult personalities",
+     "hint": "One function is about children and one is about adults"
+    },
+    {
+     "id": "f08",
+     "level": 2,
+     "text": "Which of these describes segregated conjugal roles?",
+     "choice": {
+      "options": [
+       "Partners have separate roles, such as one earning money and the other doing the housework",
+       "Partners share housework, childcare and decision-making",
+       "Partners live in separate homes",
+       "Partners both do the same paid job"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That describes joint conjugal roles",
+       null,
+       null
+      ]
+     },
+     "solution": "Segregated roles are separate, often split into male breadwinner and female homemaker; joint roles are shared",
+     "hint": "'Segregated' means kept apart"
+    },
+    {
+     "id": "f09",
+     "level": 2,
+     "text": "Which sociologist studied joint and segregated conjugal roles in London families in the 1950s?",
+     "choice": {
+      "options": [
+       "George Murdock",
+       "Elizabeth Bott",
+       "Ann Oakley",
+       "Talcott Parsons"
+      ],
+      "correct": 1
+     },
+     "solution": "Elizabeth Bott (1957) linked joint and segregated conjugal roles to couples' social networks",
+     "hint": "She is known for 'Family and Social Network'"
+    },
+    {
+     "id": "f10",
+     "level": 2,
+     "text": "Which of these is a household but NOT a family?",
+     "choice": {
+      "options": [
+       "A married couple with children",
+       "A lone parent and their child",
+       "A person living alone",
+       "A cohabiting couple with their baby"
+      ],
+      "correct": 2
+     },
+     "solution": "A household is a person or group living at the same address; a family needs people related by kinship, so one person alone is a household only",
+     "hint": "A family needs more than one person"
+    },
+    {
+     "id": "f11",
+     "level": 2,
+     "text": "Which feminist sociologist studied housewives in the 1970s and found that few husbands did a large share of the housework? Give the surname.",
+     "short": {
+      "accept": [
+       "Oakley",
+       "Ann Oakley"
+      ]
+     },
+     "solution": "Ann Oakley (1974) found that housework was still mainly done by women, challenging claims of equal 'symmetrical' families",
+     "hint": "She wrote 'The Sociology of Housework'"
+    },
+    {
+     "id": "f12",
+     "level": 2,
+     "text": "What term describes the family teaching children the basic norms and values of society in their early years? Give the term.",
+     "short": {
+      "accept": [
+       "primary socialisation",
+       "primary socialization",
+       "socialisation",
+       "socialization"
+      ],
+      "reject": [
+       "secondary socialisation",
+       "secondary socialization"
+      ],
+      "feedback": {
+       "secondary socialisation": "Secondary socialisation happens later, through school, peers and the media",
+       "secondary socialization": "Secondary socialisation happens later, through school, peers and the media"
+      }
+     },
+     "solution": "Primary socialisation happens in the family in early childhood; secondary socialisation comes later through school, peers and the media",
+     "hint": "It is the first stage of learning society's ways, and it happens at home"
+    },
+    {
+     "id": "f13",
+     "level": 3,
+     "text": "Sam lives with his mum, his stepdad and his stepdad's daughter. What type of family is this?",
+     "choice": {
+      "options": [
+       "Nuclear family",
+       "Extended family",
+       "Lone-parent family",
+       "Reconstituted family"
+      ],
+      "correct": 3
+     },
+     "solution": "Sam's stepdad has brought his daughter from a previous relationship, so this is a reconstituted family",
+     "hint": "Look for children from a previous relationship"
+    },
+    {
+     "id": "f14",
+     "level": 3,
+     "text": "In the Khan household, both partners work full-time and share cooking, cleaning and childcare equally. Which term describes their roles?",
+     "choice": {
+      "options": [
+       "Joint conjugal roles",
+       "Segregated conjugal roles",
+       "Instrumental roles",
+       "Expressive roles"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Parsons' instrumental role is the breadwinner role, not sharing tasks equally",
+       null
+      ]
+     },
+     "solution": "Sharing tasks equally is an example of joint conjugal roles",
+     "hint": "Are the tasks shared or separated?"
+    },
+    {
+     "id": "f15",
+     "level": 3,
+     "text": "A grandmother, her daughter and her granddaughter all live in the same house. What type of family is this?",
+     "choice": {
+      "options": [
+       "Horizontally extended family",
+       "Vertically extended family",
+       "Reconstituted family",
+       "Nuclear family"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A horizontally extended family adds relatives of the same generation, such as aunts or cousins",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Three generations living together is a vertically extended family; horizontal extension adds aunts, uncles or cousins",
+     "hint": "Count the generations: are they stacked up or side by side?"
+    },
+    {
+     "id": "f16",
+     "level": 3,
+     "text": "Parsons said that in the traditional nuclear family the husband has the 'instrumental' role. What does this mean?",
+     "choice": {
+      "options": [
+       "Caring for the children and the home",
+       "Teaching the children at school",
+       "Being the breadwinner who provides for the family financially",
+       "Looking after elderly relatives"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Parsons called this the expressive role",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Parsons' instrumental role is the breadwinner role; the expressive role is caring for the family's emotional needs",
+     "hint": "'Instrumental' is about getting things done for the family in the outside world"
+    },
+    {
+     "id": "f17",
+     "level": 3,
+     "text": "A person has several marriages or long-term partners, one after another, but only one at a time. What is this called? Give the term.",
+     "short": {
+      "accept": [
+       "serial monogamy",
+       "serial monogamous"
+      ],
+      "reject": [
+       "polygamy"
+      ],
+      "feedback": {
+       "polygamy": "Polygamy means more than one partner at the SAME time"
+      }
+     },
+     "solution": "Serial monogamy: a series of partners, one at a time, often linked to divorce and remarriage",
+     "hint": "'Serial' means one after another"
+    },
+    {
+     "id": "f18",
+     "level": 3,
+     "text": "Many families today have four generations alive at once but few children in each generation, so the family tree is long and thin. What is this type of family called? Give the term.",
+     "short": {
+      "accept": [
+       "beanpole family",
+       "beanpole",
+       "bean pole family",
+       "beanpole families"
+      ]
+     },
+     "solution": "The beanpole family (Brannen): many generations but few members in each, so it is tall and thin",
+     "hint": "Think of the shape of a tall, thin garden cane"
+    },
+    {
+     "id": "f19",
+     "level": 4,
+     "text": "A survey of households found: married couples 45%, cohabiting couples 18%, lone-parent families 15%, one-person households 22%. What percentage of these households were couples (married or cohabiting)?",
+     "choice": {
+      "options": [
+       "45%",
+       "33%",
+       "85%",
+       "63%"
+      ],
+      "correct": 3
+     },
+     "solution": "Married couples 45% + cohabiting couples 18% = 63%",
+     "hint": "Add the two types of couple together"
+    },
+    {
+     "id": "f20",
+     "level": 4,
+     "text": "Divorce rates rose sharply after the Divorce Reform Act 1969 came into force in England and Wales. What change did the Act make?",
+     "choice": {
+      "options": [
+       "It allowed divorce on the grounds of 'irretrievable breakdown' of the marriage",
+       "It made divorce illegal",
+       "It allowed only husbands to start a divorce",
+       "It made couples wait 20 years before divorcing"
+      ],
+      "correct": 0
+     },
+     "solution": "The Act made 'irretrievable breakdown' the only ground for divorce, so couples could divorce after a period of separation without proving fault such as adultery",
+     "hint": "The Act made divorce easier, not harder"
+    },
+    {
+     "id": "f21",
+     "level": 4,
+     "text": "Fletcher, a functionalist, argued that rising divorce rates do not show that marriage is less valued. What was his reasoning?",
+     "choice": {
+      "options": [
+       "People no longer marry at all",
+       "People now expect more from marriage, so they divorce if it does not meet their high expectations",
+       "Divorce has become more expensive",
+       "Religion now encourages divorce"
+      ],
+      "correct": 1
+     },
+     "solution": "Fletcher argued that higher expectations of marriage lead to more divorce, but most divorced people remarry, showing marriage is still valued",
+     "hint": "Think about what people hope to get from marriage today"
+    },
+    {
+     "id": "f22",
+     "level": 4,
+     "text": "Which reason for the rise in divorce is linked to changes in women's position in society?",
+     "choice": {
+      "options": [
+       "People now marry younger than in 1900",
+       "Divorce has become harder to obtain",
+       "More women are in paid work, so fewer are financially dependent on a husband",
+       "Religious belief has become stronger"
+      ],
+      "correct": 2
+     },
+     "solution": "Women's growing financial independence means they are less likely to stay in an unhappy marriage for financial reasons",
+     "hint": "Think about women's financial independence"
+    },
+    {
+     "id": "f23",
+     "level": 4,
+     "text": "Which two feminist sociologists argued in 'Familiar Exploitation' (1992) that men benefit from women's unpaid work in the family? Give the surnames.",
+     "short": {
+      "accept": [
+       "Delphy and Leonard",
+       "Delphy & Leonard",
+       "Delphy",
+       "Leonard and Delphy",
+       "Delphy Leonard"
+      ]
+     },
+     "solution": "Christine Delphy and Diana Leonard argued the family is a patriarchal institution in which men exploit women's labour",
+     "hint": "One was a French sociologist whose surname begins with D"
+    },
+    {
+     "id": "f24",
+     "level": 4,
+     "text": "Describe the functionalist view of the family.",
+     "rubric": {
+      "model_answer": "Functionalists see the family as a positive institution that meets the needs of society and its members. Murdock said the family performs four universal functions: sexual, reproductive, economic and educational. Parsons argued that the modern nuclear family has two key functions: primary socialisation of children, so they learn society's norms and values, and stabilisation of adult personalities. Parsons also said the isolated nuclear family fits industrial society because it is small and can move to where work is.",
+      "mark_scheme": "1 mark: the family is seen as positive and beneficial for society\n1 mark: Murdock's four functions (at least two named)\n1 mark: Parsons' primary socialisation\n1 mark: Parsons' stabilisation of adult personalities or the nuclear family fitting industrial society\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Functionalists: the family benefits society — Murdock's four functions; Parsons' primary socialisation and stabilisation of adult personalities",
+     "hint": "Start with the general view, then use Murdock and Parsons"
+    },
+    {
+     "id": "f25",
+     "level": 5,
+     "text": "Which statement is a feminist criticism of the functionalist view of the family?",
+     "choice": {
+      "options": [
+       "It pays too much attention to conflict and inequality",
+       "It says the family is always harmful to everyone",
+       "It focuses only on extended families",
+       "It ignores how the family can benefit men at women's expense"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Functionalists are usually criticised for ignoring conflict, not for focusing on it",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Feminists argue functionalists present the family as good for everyone, ignoring inequality such as women's unpaid domestic work",
+     "hint": "Feminists focus on inequality between men and women"
+    },
+    {
+     "id": "f26",
+     "level": 5,
+     "text": "Which statement about Murdock's research on the family is accurate?",
+     "choice": {
+      "options": [
+       "He studied around 250 societies and claimed the nuclear family was universal",
+       "He found that the nuclear family existed in no society",
+       "He studied only British families in the 1990s",
+       "He argued that the family's main role was to support capitalism"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Supporting capitalism is a Marxist idea, not Murdock's"
+      ]
+     },
+     "solution": "Murdock (1949) looked at around 250 societies and claimed the nuclear family was found in all of them",
+     "hint": "His study was published in the 1940s"
+    },
+    {
+     "id": "f27",
+     "level": 5,
+     "text": "Willmott and Young argued that the 'symmetrical family' was becoming more common. Which feature describes it?",
+     "choice": {
+      "options": [
+       "The husband makes every decision alone",
+       "Partners' roles are more similar and they spend more leisure time at home together",
+       "Several generations share one house",
+       "Children leave school early to work for the family"
+      ],
+      "correct": 1
+     },
+     "solution": "In the symmetrical family, roles are more equal (though not identical), and the family is home-centred and nuclear",
+     "hint": "'Symmetrical' means both sides are similar"
+    },
+    {
+     "id": "f28",
+     "level": 5,
+     "text": "According to Marxist sociologists, who mainly benefits from the family?",
+     "choice": {
+      "options": [
+       "Women more than men",
+       "Everyone in society equally",
+       "Capitalism and the ruling class",
+       "Children more than adults"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Benefiting everyone equally is closer to the functionalist view",
+       null,
+       null
+      ]
+     },
+     "solution": "Marxists argue the family serves capitalism, e.g. by raising the next generation of workers and acting as a unit of consumption",
+     "hint": "Marxists link most institutions to the economic system"
+    },
+    {
+     "id": "f29",
+     "level": 5,
+     "text": "Which sociological perspective argues that the family benefits men at the expense of women, for example through unpaid housework? Give the perspective.",
+     "short": {
+      "accept": [
+       "feminist",
+       "feminism",
+       "feminists",
+       "feminist perspective"
+      ],
+      "reject": [
+       "functionalist",
+       "functionalism",
+       "marxist",
+       "marxism"
+      ],
+      "feedback": {
+       "functionalist": "Functionalists see the family as good for everyone",
+       "functionalism": "Functionalists see the family as good for everyone",
+       "marxist": "Marxists focus on how the family benefits capitalism",
+       "marxism": "Marxists focus on how the family benefits capitalism"
+      }
+     },
+     "solution": "Feminists such as Oakley and Delphy and Leonard see the family as patriarchal, benefiting men",
+     "hint": "This perspective focuses on gender inequality"
+    },
+    {
+     "id": "f30",
+     "level": 5,
+     "text": "Explain two reasons why divorce rates in the UK rose after the 1960s.",
+     "rubric": {
+      "model_answer": "First, changes in the law made divorce easier and cheaper. The Divorce Reform Act 1969 allowed divorce for irretrievable breakdown, so couples did not have to prove a fault such as adultery, and legal aid helped people afford it. Second, women's position changed. More women went into paid work, so fewer were financially dependent on a husband and could leave an unhappy marriage. Feminism also raised women's expectations. Other reasons include less stigma (changing attitudes) and secularisation.",
+      "mark_scheme": "1 mark: first reason identified (e.g. legal changes)\n2 marks: first reason explained with detail (e.g. Divorce Reform Act 1969, irretrievable breakdown)\n1 mark: second reason identified (e.g. women's financial independence, less stigma, secularisation)\n2 marks: second reason explained with detail\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Easier divorce laws (Divorce Reform Act 1969) and women's greater financial independence; also less stigma and secularisation",
+     "hint": "Pick two reasons, and explain HOW each one made divorce more likely"
+    }
+   ]
+  },
+  {
+   "id": "sociology.education",
+   "title": "Education",
+   "aliases": [
+    "hidden curriculum",
+    "education",
+    "labelling",
+    "self-fulfilling prophecy",
+    "streaming",
+    "cultural capital",
+    "material deprivation",
+    "marketisation",
+    "correspondence principle",
+    "setting"
+   ],
+   "questions": [
+    {
+     "id": "e01",
+     "level": 1,
+     "text": "What term describes the unofficial lessons pupils learn at school, such as obeying authority and being punctual? Give the term.",
+     "short": {
+      "accept": [
+       "hidden curriculum",
+       "the hidden curriculum"
+      ],
+      "reject": [
+       "formal curriculum",
+       "national curriculum"
+      ],
+      "feedback": {
+       "formal curriculum": "The formal curriculum is the subjects that are officially taught",
+       "national curriculum": "The National Curriculum is the official list of subjects and content"
+      }
+     },
+     "solution": "The hidden curriculum is the norms and values taught through the way school is organised, not through lessons",
+     "hint": "These lessons are not on the timetable"
+    },
+    {
+     "id": "e02",
+     "level": 1,
+     "text": "What is meant by 'material deprivation' in education?",
+     "choice": {
+      "options": [
+       "Lacking money and resources, such as books, a computer or a quiet place to study",
+       "Lacking the values and language that schools reward",
+       "Being placed in a low set at school",
+       "Being labelled as a troublemaker"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That describes cultural deprivation",
+       null,
+       null
+      ]
+     },
+     "solution": "Material deprivation is lacking the physical and financial resources that help with learning",
+     "hint": "'Material' means physical things and money"
+    },
+    {
+     "id": "e03",
+     "level": 1,
+     "text": "What term describes the knowledge, values, language and tastes that give middle-class pupils an advantage at school? Give the term.",
+     "short": {
+      "accept": [
+       "cultural capital"
+      ],
+      "reject": [
+       "social capital",
+       "economic capital"
+      ],
+      "feedback": {
+       "social capital": "Social capital means useful contacts and networks",
+       "economic capital": "Economic capital means wealth and income"
+      }
+     },
+     "solution": "Cultural capital (Bourdieu) is the middle-class knowledge, tastes and attitudes that schools value",
+     "hint": "It is a kind of 'wealth' made of culture rather than money"
+    },
+    {
+     "id": "e04",
+     "level": 1,
+     "text": "Which sociologist argued that education creates social solidarity by passing on society's shared norms and values?",
+     "choice": {
+      "options": [
+       "Willis",
+       "Durkheim",
+       "Becker",
+       "Bowles"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Willis studied working-class 'lads' and their counter-school culture",
+       null,
+       "Becker studied labelling and the 'ideal pupil'",
+       "Bowles (with Gintis) was a Marxist critic of education"
+      ]
+     },
+     "solution": "Émile Durkheim, a functionalist, saw education as passing on shared culture and creating social solidarity",
+     "hint": "He was a French functionalist writing over a century ago"
+    },
+    {
+     "id": "e05",
+     "level": 1,
+     "text": "What is the term for placing pupils in classes by ability for ALL of their subjects? Give the term.",
+     "short": {
+      "accept": [
+       "streaming",
+       "streamed",
+       "stream"
+      ],
+      "reject": [
+       "setting",
+       "banding",
+       "mixed ability"
+      ],
+      "feedback": {
+       "setting": "Setting groups pupils by ability separately for each subject",
+       "banding": "Banding puts pupils into broad ability bands, usually containing several classes",
+       "mixed ability": "Mixed-ability teaching puts pupils of all abilities together"
+      }
+     },
+     "solution": "Streaming puts pupils in one ability group for every subject; setting groups them subject by subject",
+     "hint": "It is like a river with separate channels"
+    },
+    {
+     "id": "e06",
+     "level": 1,
+     "text": "What is a self-fulfilling prophecy?",
+     "choice": {
+      "options": [
+       "A prediction that is always proved wrong",
+       "A school rule that pupils must follow",
+       "A prediction that comes true because people act as if it were true",
+       "A test that measures intelligence"
+      ],
+      "correct": 2
+     },
+     "solution": "A self-fulfilling prophecy happens when a label or prediction changes behaviour so that it comes true",
+     "hint": "The prediction itself causes the result"
+    },
+    {
+     "id": "e07",
+     "level": 2,
+     "text": "Which pair of Marxist sociologists put forward the 'correspondence principle'?",
+     "choice": {
+      "options": [
+       "Rosenthal and Jacobson",
+       "Willmott and Young",
+       "Delphy and Leonard",
+       "Bowles and Gintis"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Rosenthal and Jacobson studied the self-fulfilling prophecy",
+       "Willmott and Young studied the family",
+       null,
+       null
+      ]
+     },
+     "solution": "Bowles and Gintis (1976) argued that school mirrors (corresponds to) the workplace in capitalist society",
+     "hint": "Their book was called 'Schooling in Capitalist America'"
+    },
+    {
+     "id": "e08",
+     "level": 2,
+     "text": "Which statement describes setting?",
+     "choice": {
+      "options": [
+       "Pupils are grouped by ability separately for each subject",
+       "Pupils are grouped by ability for every subject",
+       "Pupils of all abilities are taught together",
+       "Pupils are grouped only by age"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That describes streaming",
+       "That describes mixed-ability teaching",
+       null
+      ]
+     },
+     "solution": "Setting groups pupils by ability in each subject, so a pupil could be in a top set for maths and a lower set for French",
+     "hint": "Think about whether a pupil could be in different groups for different subjects"
+    },
+    {
+     "id": "e09",
+     "level": 2,
+     "text": "Which of these is a feature of marketisation in education?",
+     "choice": {
+      "options": [
+       "Parents being banned from choosing schools",
+       "Schools competing for pupils, with results published so parents can compare them",
+       "Every school being made exactly the same size",
+       "All exams being removed"
+      ],
+      "correct": 1
+     },
+     "solution": "Marketisation brings market forces into education: competition between schools, published results and parental choice",
+     "hint": "Think of schools behaving like businesses in a market"
+    },
+    {
+     "id": "e10",
+     "level": 2,
+     "text": "Which law introduced the National Curriculum and national testing, and gave parents more choice of school, in England and Wales?",
+     "choice": {
+      "options": [
+       "The Education Act 1944",
+       "The Divorce Reform Act 1969",
+       "The Education Reform Act 1988",
+       "The Equal Pay Act 1970"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The 1944 Act set up the tripartite system and the 11-plus",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The Education Reform Act 1988 brought in the National Curriculum, national testing and more parental choice",
+     "hint": "It was passed in the late 1980s"
+    },
+    {
+     "id": "e11",
+     "level": 2,
+     "text": "What term describes a system in which people achieve their position in society through their own talent and effort? Give the term.",
+     "short": {
+      "accept": [
+       "meritocracy",
+       "meritocratic",
+       "a meritocracy"
+      ]
+     },
+     "solution": "In a meritocracy, rewards are based on merit (ability and effort), not on background",
+     "hint": "The word comes from 'merit'"
+    },
+    {
+     "id": "e12",
+     "level": 2,
+     "text": "What name is given to the process of a teacher attaching a definition to a pupil, such as 'bright' or 'troublemaker'? Give the term.",
+     "short": {
+      "accept": [
+       "labelling",
+       "labeling",
+       "label",
+       "labels"
+      ]
+     },
+     "solution": "Labelling is attaching a definition to someone; interactionists say labels can affect how pupils see themselves",
+     "hint": "Think of putting a tag on someone"
+    },
+    {
+     "id": "e13",
+     "level": 3,
+     "text": "Ali's teacher believes he is not very clever and gives him easier work. Over time Ali stops trying and his grades fall. What does this example show?",
+     "choice": {
+      "options": [
+       "Cultural capital",
+       "Marketisation",
+       "Material deprivation",
+       "A self-fulfilling prophecy"
+      ],
+      "correct": 3
+     },
+     "solution": "The teacher's low expectation changed how Ali was treated and how he behaved, so the prediction came true",
+     "hint": "The teacher's belief came true because of how everyone acted"
+    },
+    {
+     "id": "e14",
+     "level": 3,
+     "text": "A pupil cannot afford the internet at home and has nowhere quiet to do homework. Which factor affecting achievement is this?",
+     "choice": {
+      "options": [
+       "Material deprivation",
+       "Cultural capital",
+       "Labelling",
+       "The hidden curriculum"
+      ],
+      "correct": 0
+     },
+     "solution": "Lacking money and resources such as the internet or a quiet space is material deprivation",
+     "hint": "These are physical and financial problems"
+    },
+    {
+     "id": "e15",
+     "level": 3,
+     "text": "At a school, pupils must stand when a teacher enters and must not question the head teacher's decisions. Bowles and Gintis would say this teaches what?",
+     "choice": {
+      "options": [
+       "Creativity and independent thinking",
+       "Obedience to authority, which prepares pupils for work",
+       "Exam technique",
+       "Equal opportunities for all"
+      ],
+      "correct": 1
+     },
+     "solution": "Bowles and Gintis argued the hidden curriculum teaches obedience and acceptance of hierarchy, preparing pupils for work in capitalism",
+     "hint": "Think of the correspondence principle: school mirrors the workplace"
+    },
+    {
+     "id": "e16",
+     "level": 3,
+     "text": "A middle-class family takes their children to museums and theatres and discusses books at home. These children often do well at school. Which concept does this show?",
+     "choice": {
+      "options": [
+       "Material deprivation",
+       "Streaming",
+       "Cultural capital",
+       "Marketisation"
+      ],
+      "correct": 2
+     },
+     "solution": "These experiences give the children cultural capital: knowledge and tastes that schools value and reward",
+     "hint": "These children have gained knowledge and tastes that schools value"
+    },
+    {
+     "id": "e17",
+     "level": 3,
+     "text": "Pupils placed in a low stream reject the school's values and gain status from their friends by misbehaving. What is the term for such a group? Give the term.",
+     "short": {
+      "accept": [
+       "anti-school subculture",
+       "anti school subculture",
+       "counter-school culture",
+       "counter school culture",
+       "anti-school subcultures",
+       "subculture",
+       "pupil subculture"
+      ]
+     },
+     "solution": "An anti-school subculture rejects school values; Hargreaves linked them to streaming and Willis studied a 'counter-school culture'",
+     "hint": "It is a group within the school with its own norms, against the school's"
+    },
+    {
+     "id": "e18",
+     "level": 3,
+     "text": "A head teacher wants her school to rise in the league tables, so she tries to attract high-achieving pupils. Which trend in education does this show? Give the term.",
+     "short": {
+      "accept": [
+       "marketisation",
+       "marketization",
+       "marketisation of education",
+       "competition"
+      ]
+     },
+     "solution": "League tables and competition for pupils are features of marketisation",
+     "hint": "Schools are behaving like businesses competing for customers"
+    },
+    {
+     "id": "e19",
+     "level": 4,
+     "text": "In one area, 45% of pupils eligible for free school meals achieved grade 4 or above in English and maths, compared with 72% of other pupils. What does this suggest?",
+     "choice": {
+      "options": [
+       "Free school meals cause higher grades",
+       "There was no link between family income and achievement",
+       "Every pupil on free school meals failed",
+       "Pupils from poorer backgrounds achieved less well, on average"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "45% of these pupils DID achieve grade 4 or above",
+       null
+      ]
+     },
+     "solution": "Free school meals are a sign of low income; the gap (45% vs 72%) suggests a link between poverty and lower achievement",
+     "hint": "Free school meals are given to pupils from low-income families"
+    },
+    {
+     "id": "e20",
+     "level": 4,
+     "text": "Rosenthal and Jacobson told teachers that some pupils, who were really chosen at random, were 'spurters' who would make rapid progress. A year later many of them had made greater gains in IQ. What does this support?",
+     "choice": {
+      "options": [
+       "The self-fulfilling prophecy",
+       "Material deprivation",
+       "The correspondence principle",
+       "Marketisation"
+      ],
+      "correct": 0
+     },
+     "solution": "Teachers' raised expectations seem to have changed how they treated the pupils, so the prediction came true",
+     "hint": "The pupils were chosen at random, so what made the difference?"
+    },
+    {
+     "id": "e21",
+     "level": 4,
+     "text": "Becker found that teachers judged pupils against an image of the 'ideal pupil'. Which pupils were seen as closest to this ideal?",
+     "choice": {
+      "options": [
+       "Working-class pupils",
+       "Middle-class pupils",
+       "Pupils in the lowest sets",
+       "Pupils who often missed school"
+      ],
+      "correct": 1
+     },
+     "solution": "Becker found teachers saw middle-class pupils as closest to the ideal pupil, and labelled working-class pupils less favourably",
+     "hint": "Think about whose behaviour and language matched what teachers expected"
+    },
+    {
+     "id": "e22",
+     "level": 4,
+     "text": "Willis studied 12 working-class 'lads' at a secondary school. What did he conclude?",
+     "choice": {
+      "options": [
+       "They were all labelled as gifted",
+       "They all went on to university",
+       "Their counter-school culture prepared them for working-class jobs",
+       "They were the most obedient pupils in the school"
+      ],
+      "correct": 2
+     },
+     "solution": "Willis found the lads rejected school ('having a laff'), which ironically prepared them for manual, working-class jobs",
+     "hint": "The lads rejected school, and Willis linked this to their future work"
+    },
+    {
+     "id": "e23",
+     "level": 4,
+     "text": "Which Marxist idea says that the way schools are organised mirrors the workplace, for example hierarchy and following rules? Give the term.",
+     "short": {
+      "accept": [
+       "correspondence principle",
+       "correspondence theory",
+       "the correspondence principle",
+       "correspondence"
+      ]
+     },
+     "solution": "Bowles and Gintis's correspondence principle: school relationships correspond to those at work",
+     "hint": "School and work 'match' each other"
+    },
+    {
+     "id": "e24",
+     "level": 4,
+     "text": "Explain two ways in which material deprivation can affect a pupil's achievement.",
+     "rubric": {
+      "model_answer": "First, a poor diet or cold, damp, overcrowded housing can lead to illness and tiredness, so the pupil misses school or finds it hard to concentrate. Second, low-income families may not afford resources such as a computer, internet access, books, uniform or school trips. Without a quiet place or the right equipment, homework is harder and the pupil may fall behind or feel embarrassed. Older pupils may need part-time jobs, leaving less time to study.",
+      "mark_scheme": "1 mark: first way identified (e.g. poor housing or diet)\n1 mark: first way explained (e.g. illness or absence leads to lower achievement)\n1 mark: second way identified (e.g. cannot afford resources)\n1 mark: second way explained (e.g. homework is harder, pupil falls behind)\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Poor diet or housing causes illness and absence; lack of resources such as a computer or quiet space makes study harder",
+     "hint": "Think about health and home conditions, and about money for resources"
+    },
+    {
+     "id": "e25",
+     "level": 5,
+     "text": "Which statement is a Marxist criticism of the functionalist view of education?",
+     "choice": {
+      "options": [
+       "Education creates social solidarity",
+       "Education allocates people to the jobs that best suit their talents",
+       "Education teaches the skills needed by the economy",
+       "Education reproduces class inequality rather than giving everyone an equal chance"
+      ],
+      "correct": 3,
+      "feedback": [
+       "This is a functionalist claim, not a criticism of it",
+       "This is a functionalist claim (role allocation)",
+       null,
+       null
+      ]
+     },
+     "solution": "Marxists argue education is not meritocratic: it passes on class inequality from one generation to the next",
+     "hint": "Marxists focus on social class and inequality"
+    },
+    {
+     "id": "e26",
+     "level": 5,
+     "text": "Which statement about streaming is supported by studies such as Hargreaves and Ball?",
+     "choice": {
+      "options": [
+       "Pupils in lower streams or bands were more likely to form anti-school subcultures",
+       "Streaming always raises the achievement of every pupil",
+       "Streaming has no effect on how teachers treat pupils",
+       "Pupils in the top stream usually rejected school values"
+      ],
+      "correct": 0
+     },
+     "solution": "Hargreaves and Ball found that pupils placed in lower streams or bands were labelled and often formed anti-school subcultures",
+     "hint": "Think about how pupils react to being placed at the bottom"
+    },
+    {
+     "id": "e27",
+     "level": 5,
+     "text": "Which statement about labelling theory is accurate?",
+     "choice": {
+      "options": [
+       "It focuses on how society's large-scale structures are organised",
+       "It focuses on small-scale interactions, such as those between teachers and pupils",
+       "It argues that teachers' expectations never affect pupils",
+       "It was developed by functionalists such as Durkheim"
+      ],
+      "correct": 1
+     },
+     "solution": "Labelling theory is interactionist: it studies face-to-face interactions and the meanings people give them",
+     "hint": "Labelling theory comes from the interactionist approach"
+    },
+    {
+     "id": "e28",
+     "level": 5,
+     "text": "Which is a criticism of the idea that labelling always leads to a self-fulfilling prophecy?",
+     "choice": {
+      "options": [
+       "It explains every pupil's results perfectly",
+       "It ignores teachers completely",
+       "Some pupils reject a negative label and work harder to prove the teacher wrong",
+       "It has never been studied in schools"
+      ],
+      "correct": 2
+     },
+     "solution": "Labels are not always accepted: some pupils resist them (for example in Fuller's study), so the outcome is not fixed",
+     "hint": "Do pupils always accept the label they are given?"
+    },
+    {
+     "id": "e29",
+     "level": 5,
+     "text": "Which sociological perspective, linked to Durkheim and Parsons, sees education as performing positive functions for society as a whole? Give the perspective.",
+     "short": {
+      "accept": [
+       "functionalist",
+       "functionalism",
+       "functionalists",
+       "functionalist perspective"
+      ],
+      "reject": [
+       "marxist",
+       "marxism",
+       "feminist",
+       "feminism"
+      ],
+      "feedback": {
+       "marxist": "Marxists see education as reproducing class inequality",
+       "marxism": "Marxists see education as reproducing class inequality",
+       "feminist": "Feminists focus on gender inequality in education",
+       "feminism": "Feminists focus on gender inequality in education"
+      }
+     },
+     "solution": "Functionalists see education as positive: it passes on shared values, teaches skills and allocates roles",
+     "hint": "This perspective looks at the 'functions' institutions perform"
+    },
+    {
+     "id": "e30",
+     "level": 5,
+     "text": "Evaluate the view that the education system in the UK is meritocratic.",
+     "rubric": {
+      "model_answer": "Functionalists such as Parsons argue education is meritocratic: everyone sits the same exams and is judged by the same standards, and qualifications allocate people to suitable jobs. However, Marxists such as Bowles and Gintis call this a myth: middle-class pupils gain from cultural capital and material advantages, and private schools give extra advantages. Interactionists add that labelling and streaming can hold back working-class pupils. Overall, education rewards achievement, but background still strongly affects who achieves.",
+      "mark_scheme": "1 mark: meritocracy explained\n1 mark: functionalist argument for the view (e.g. Parsons, same standards)\n1 mark: Marxist argument against (e.g. Bowles and Gintis, myth of meritocracy)\n1 mark: evidence of class inequality (e.g. cultural capital, material deprivation, private schools)\n1 mark: interactionist point (e.g. labelling, streaming)\n1 mark: a reasoned conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "For: same exams and qualifications (functionalists). Against: class inequality, cultural capital, labelling (Marxists, interactionists)",
+     "hint": "Give arguments on both sides, then reach a conclusion"
+    }
+   ]
+  },
+  {
+   "id": "sociology.crime",
+   "title": "Crime & deviance",
+   "aliases": [
+    "crime and deviance",
+    "social control",
+    "strain theory",
+    "subcultures",
+    "labelling theory",
+    "moral panic",
+    "official statistics",
+    "victim surveys",
+    "deviance",
+    "merton",
+    "dark figure of crime"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What is deviance?",
+     "choice": {
+      "options": [
+       "Behaviour that goes against the norms of a society or group",
+       "Behaviour that breaks the law of a country",
+       "Behaviour that is always violent",
+       "Behaviour that most people approve of"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the definition of crime",
+       null,
+       null
+      ]
+     },
+     "solution": "Deviance is breaking social norms; crime is breaking the law. Some acts are both",
+     "hint": "Deviance is about norms, not only laws"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What term describes the ways a society makes sure people follow its norms, for example through laws, the police or disapproval from family? Give the term.",
+     "short": {
+      "accept": [
+       "social control"
+      ]
+     },
+     "solution": "Social control can be formal (police, courts, laws) or informal (family, friends, gossip, disapproval)",
+     "hint": "Society 'controls' behaviour in these ways"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "What term describes an exaggerated reaction by the media and the public to a group that is seen as a threat to society? Give the term.",
+     "short": {
+      "accept": [
+       "moral panic",
+       "a moral panic",
+       "moral panics"
+      ]
+     },
+     "solution": "A moral panic: the media exaggerate a threat, creating 'folk devils' and public concern (Stanley Cohen)",
+     "hint": "Stanley Cohen studied this using the Mods and Rockers"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "Which of these is an example of FORMAL social control?",
+     "choice": {
+      "options": [
+       "Being ignored by friends",
+       "Being arrested by the police",
+       "Being told off by a parent",
+       "Being gossiped about by neighbours"
+      ],
+      "correct": 1
+     },
+     "solution": "Formal social control is carried out by official agencies such as the police and courts; the others are informal",
+     "hint": "Formal control comes from official organisations with written rules"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "What is the term for crime that is not reported to the police or not recorded by them? Give the term.",
+     "short": {
+      "accept": [
+       "dark figure of crime",
+       "dark figure",
+       "the dark figure",
+       "hidden crime",
+       "unrecorded crime",
+       "unreported crime"
+      ]
+     },
+     "solution": "The 'dark figure of crime' is the crime that never appears in police statistics",
+     "hint": "It is crime we cannot 'see' in the official figures"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "Which sociologist developed strain theory, linking crime to the gap between society's goals and the legitimate means of reaching them?",
+     "choice": {
+      "options": [
+       "Stanley Cohen",
+       "Howard Becker",
+       "Robert Merton",
+       "Talcott Parsons"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Stanley Cohen studied moral panics",
+       "Howard Becker developed labelling theory",
+       null,
+       null
+      ]
+     },
+     "solution": "Robert Merton (1938) argued that strain between goals (such as wealth) and legitimate means can lead to crime",
+     "hint": "He wrote about the 'American Dream'"
+    },
+    {
+     "id": "c07",
+     "level": 2,
+     "text": "In Merton's strain theory, which 'adaptation' describes someone who accepts the goal of wealth but uses illegal means, such as theft, to get it?",
+     "choice": {
+      "options": [
+       "Ritualism",
+       "Retreatism",
+       "Rebellion",
+       "Innovation"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Ritualists give up on the goals but keep following the rules",
+       "Retreatists reject both the goals and the means",
+       "Rebels replace the goals and means with new ones",
+       null
+      ]
+     },
+     "solution": "Innovators accept the goals but reject legitimate means, turning to crime such as theft",
+     "hint": "This person finds a new (illegal) way to reach the goal"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "In Merton's strain theory, which adaptation describes someone who rejects both society's goals and the legitimate means, and drops out of society?",
+     "choice": {
+      "options": [
+       "Retreatism",
+       "Innovation",
+       "Conformity",
+       "Ritualism"
+      ],
+      "correct": 0
+     },
+     "solution": "Retreatists reject both goals and means and withdraw from society",
+     "hint": "This person 'retreats' from society altogether"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "Which of these is a victim survey that asks people about crimes they have experienced?",
+     "choice": {
+      "options": [
+       "Police recorded crime figures",
+       "The Crime Survey for England and Wales",
+       "The national population census",
+       "Court records of convictions"
+      ],
+      "correct": 1
+     },
+     "solution": "The Crime Survey for England and Wales asks a large sample of people about crimes they have experienced, reported or not",
+     "hint": "This source asks members of the public directly"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "What is a self-report study?",
+     "choice": {
+      "options": [
+       "A survey that asks people which crimes they have suffered",
+       "Police records of arrests",
+       "A survey that asks people which crimes they have committed",
+       "A study of crime stories in newspapers"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is a victim survey",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Self-report studies ask people to admit offences they have committed, often anonymously",
+     "hint": "The people answering are reporting on themselves"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "Which sociologist wrote 'Folk Devils and Moral Panics' (1972), a study of the Mods and Rockers? Give the surname.",
+     "short": {
+      "accept": [
+       "Cohen",
+       "Stanley Cohen",
+       "Stan Cohen"
+      ]
+     },
+     "solution": "Stanley Cohen showed how media reporting of the Mods and Rockers created a moral panic",
+     "hint": "His first name was Stanley"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "In labelling theory, what is the term for a label, such as 'criminal', that overrides all of a person's other identities? Give the term.",
+     "short": {
+      "accept": [
+       "master status",
+       "a master status"
+      ]
+     },
+     "solution": "In labelling theory (Becker), a label such as 'criminal' can become a master status that others see before anything else about the person",
+     "hint": "It is the 'main' status that dominates the others"
+    },
+    {
+     "id": "c13",
+     "level": 3,
+     "text": "A teenager sprays graffiti on a wall without the owner's permission. Is this crime, deviance, or both?",
+     "choice": {
+      "options": [
+       "Deviance only, because no law is broken",
+       "Crime only, because nobody disapproves of it",
+       "Neither, because it is art",
+       "Both crime and deviance, because it breaks the law and social norms"
+      ],
+      "correct": 3
+     },
+     "solution": "Graffiti without permission is criminal damage (a crime) and also breaks social norms (deviance)",
+     "hint": "Does it break the law? Does it break social norms?"
+    },
+    {
+     "id": "c14",
+     "level": 3,
+     "text": "Which of these is deviant but NOT a crime in the UK?",
+     "choice": {
+      "options": [
+       "Pushing in at the front of a queue",
+       "Shoplifting",
+       "Driving without insurance",
+       "Breaking into a car"
+      ],
+      "correct": 0
+     },
+     "solution": "Queue-jumping breaks a social norm, but it is not against the law; the others are crimes",
+     "hint": "Look for something people disapprove of that is not illegal"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "Newspapers print many stories about 'out-of-control' teenagers after a few fights in a town centre, and politicians call for new laws. Which concept does this show?",
+     "choice": {
+      "options": [
+       "Strain theory",
+       "Moral panic",
+       "Retreatism",
+       "White-collar crime"
+      ],
+      "correct": 1
+     },
+     "solution": "Exaggerated media coverage leading to public concern and calls for action is a moral panic",
+     "hint": "The reaction is much bigger than the events themselves"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "A company director falsifies the company's accounts to avoid paying tax. What type of crime is this?",
+     "choice": {
+      "options": [
+       "Juvenile delinquency",
+       "Hate crime",
+       "White-collar crime",
+       "Street crime"
+      ],
+      "correct": 2
+     },
+     "solution": "White-collar crime is committed by people in professional or managerial jobs, often through their work",
+     "hint": "Think about the kind of job the offender has"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "A young person is caught shoplifting once. Police and teachers then treat them as a 'thief'; they start to see themselves that way and commit more crime. Which theory explains this? Give the theory.",
+     "short": {
+      "accept": [
+       "labelling theory",
+       "labelling",
+       "labeling theory",
+       "labeling",
+       "interactionism",
+       "interactionist"
+      ]
+     },
+     "solution": "Labelling theory: being labelled can change a person's self-image and lead to more deviance (a deviant career)",
+     "hint": "The young person was given a name that changed how they saw themselves"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "Which sociologist argued that crime is 'normal' and can be functional for society, for example by reminding people of shared values? Give the surname.",
+     "short": {
+      "accept": [
+       "Durkheim",
+       "Émile Durkheim"
+      ]
+     },
+     "solution": "Émile Durkheim, a functionalist, said a certain amount of crime is normal and helps maintain boundaries and allow change",
+     "hint": "He was a French functionalist who also wrote about education and social solidarity"
+    },
+    {
+     "id": "c19",
+     "level": 4,
+     "text": "Police recorded 1,200 burglaries in a town, but a victim survey estimated that 2,000 burglaries happened. What percentage of the estimated burglaries did the police record?",
+     "choice": {
+      "options": [
+       "40%",
+       "167%",
+       "80%",
+       "60%"
+      ],
+      "correct": 3,
+      "feedback": [
+       "40% is the share that was NOT recorded (the dark figure)",
+       "Divide the smaller number by the larger one",
+       null,
+       null
+      ]
+     },
+     "solution": "1,200 ÷ 2,000 × 100 = 60%; the other 40% is part of the dark figure",
+     "hint": "Divide the recorded figure by the estimated total, then multiply by 100"
+    },
+    {
+     "id": "c20",
+     "level": 4,
+     "text": "Why might official crime statistics underestimate the true amount of crime?",
+     "choice": {
+      "options": [
+       "Many crimes are never reported to the police or are not recorded by them",
+       "The police record every crime that happens",
+       "Victims always report crimes straight away",
+       "Courts add extra crimes to the figures"
+      ],
+      "correct": 0
+     },
+     "solution": "Victims may not report crimes (too trivial, fear, distrust) and police may not record them, creating a dark figure",
+     "hint": "Think about the steps a crime goes through before it appears in the figures"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "Heidensohn argued that women commit less crime than men. Which explanation did she give?",
+     "choice": {
+      "options": [
+       "Women are naturally more law-abiding for biological reasons",
+       "Women face more social control at home, in public and at work",
+       "Women are never caught by the police",
+       "Women have more legitimate opportunities than men"
+      ],
+      "correct": 1
+     },
+     "solution": "Heidensohn, a feminist, argued patriarchal social control at home, in public and at work limits women's opportunities to offend",
+     "hint": "Heidensohn focused on how women's behaviour is controlled"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Albert Cohen argued that working-class boys who fail at school feel 'status frustration'. What did he say many of them do?",
+     "choice": {
+      "options": [
+       "Work harder to gain qualifications",
+       "Join the police to gain status",
+       "Form delinquent subcultures that give them status in other ways",
+       "Move abroad to find better jobs"
+      ],
+      "correct": 2
+     },
+     "solution": "Cohen said these boys form delinquent subcultures with their own values, gaining status through deviance",
+     "hint": "They find status in a group with different values"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Which type of study asks people about crimes they have experienced, whether or not they reported them to the police? Give the term.",
+     "short": {
+      "accept": [
+       "victim survey",
+       "victim surveys",
+       "victimisation survey",
+       "victimization survey",
+       "crime survey"
+      ],
+      "reject": [
+       "self-report study",
+       "self-report",
+       "self report study"
+      ],
+      "feedback": {
+       "self-report study": "Self-report studies ask people about crimes they have COMMITTED",
+       "self-report": "Self-report studies ask people about crimes they have COMMITTED",
+       "self report study": "Self-report studies ask people about crimes they have COMMITTED"
+      }
+     },
+     "solution": "Victim surveys, such as the Crime Survey for England and Wales, uncover crime that was never reported",
+     "hint": "The people asked are those who have suffered crimes"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Describe Merton's strain theory of crime.",
+     "rubric": {
+      "model_answer": "Merton, a functionalist, argued that American society sets everyone the same cultural goal of material success (the American Dream), but not everyone has the same legitimate means, such as education and good jobs, to reach it. This creates strain, or anomie. People adapt in five ways: conformity (accept goals and means), innovation (accept goals but use illegal means, such as theft), ritualism (give up the goals but keep to the rules), retreatism (reject both and drop out) and rebellion (replace goals and means with new ones).",
+      "mark_scheme": "1 mark: society sets shared goals such as wealth\n1 mark: not everyone has legitimate means, which creates strain (anomie)\n1 mark: innovation explained as the main route to crime\n1 mark: at least two other adaptations named or described\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Merton: strain between cultural goals (wealth) and legitimate means leads to five adaptations, including innovation (crime)",
+     "hint": "Start with goals and means, then list the adaptations"
+    },
+    {
+     "id": "c25",
+     "level": 5,
+     "text": "Which is a Marxist explanation of crime?",
+     "choice": {
+      "options": [
+       "Crime is caused mainly by biological differences",
+       "Crime is functional because it strengthens shared values",
+       "Crime happens because women are more controlled than men",
+       "Laws are made and enforced in the interests of the ruling class, so working-class crime is targeted more"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "That is Durkheim's functionalist view",
+       "That is a feminist explanation of women's lower crime rates",
+       null
+      ]
+     },
+     "solution": "Marxists argue the law reflects ruling-class interests, and enforcement focuses on working-class crime more than crimes of the powerful",
+     "hint": "Marxists focus on social class and capitalism"
+    },
+    {
+     "id": "c26",
+     "level": 5,
+     "text": "Which is a strength of victim surveys compared with police recorded crime?",
+     "choice": {
+      "options": [
+       "They include crimes that victims did not report to the police",
+       "They include murders and crimes against businesses",
+       "They are completely free from memory errors",
+       "They record every crime committed in the country"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Murder victims cannot be surveyed, and household surveys mostly miss crimes against businesses",
+       null,
+       null
+      ]
+     },
+     "solution": "Victim surveys reveal unreported crime; but they cannot include murders, and people may forget or exaggerate",
+     "hint": "What can a survey of the public find that the police never hear about?"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "Which statement about labelling theory of crime is accurate?",
+     "choice": {
+      "options": [
+       "It argues that crime is caused by poverty alone",
+       "It argues that an act becomes deviant when others label it as deviant",
+       "It focuses on how the economy creates crime",
+       "It argues that labels have no effect on behaviour"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "That is closer to a Marxist approach",
+       null
+      ]
+     },
+     "solution": "Becker argued deviance is not a quality of the act itself but of how others react and label it",
+     "hint": "Labelling theory looks at reactions to behaviour"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "Which statement about Stanley Cohen's study of the Mods and Rockers is accurate?",
+     "choice": {
+      "options": [
+       "The media ignored the Mods and Rockers completely",
+       "It found that the police caused all of the trouble",
+       "Media exaggeration helped create a moral panic and may have increased the deviance it described",
+       "It showed that the Mods and Rockers never existed"
+      ],
+      "correct": 2
+     },
+     "solution": "Cohen found exaggerated reporting created 'folk devils' and may have amplified the behaviour (deviancy amplification)",
+     "hint": "Think about the effect of media coverage on the groups"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Which sociological perspective links crime to inequality in capitalist society and argues that the law mainly protects the interests of the powerful? Give the perspective.",
+     "short": {
+      "accept": [
+       "Marxist",
+       "Marxism",
+       "Marxists",
+       "Marxist perspective"
+      ],
+      "reject": [
+       "functionalist",
+       "functionalism",
+       "feminist",
+       "feminism"
+      ],
+      "feedback": {
+       "functionalist": "Functionalists see some crime as normal and useful for society",
+       "functionalism": "Functionalists see some crime as normal and useful for society",
+       "feminist": "Feminists focus on gender and crime",
+       "feminism": "Feminists focus on gender and crime"
+      }
+     },
+     "solution": "Marxists see the law and its enforcement as serving the ruling class",
+     "hint": "This perspective focuses on capitalism and social class"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Evaluate the usefulness of official crime statistics.",
+     "rubric": {
+      "model_answer": "Official statistics are useful because they are collected regularly, cover the whole country and allow trends over time and comparisons between areas to be studied cheaply. However, they miss the dark figure of crime: many crimes are not reported (too trivial, fear, distrust of police) or not recorded. Police priorities and recording rules can change the figures. Interactionists say they are socially constructed and may reflect police targeting of certain groups. Victim surveys and self-report studies help fill the gaps.",
+      "mark_scheme": "1 mark: a strength identified (e.g. large scale, trends over time)\n1 mark: the strength explained\n1 mark: the dark figure of crime / under-reporting\n1 mark: under-recording or police discretion\n1 mark: socially constructed (interactionist or Marxist view)\n1 mark: a judgement, e.g. useful when combined with victim surveys\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Useful for trends and comparisons, but miss the dark figure and are socially constructed; best used with victim surveys",
+     "hint": "Give strengths first, then weaknesses, then a judgement"
+    }
+   ]
+  },
+  {
+   "id": "sociology.methods",
+   "title": "Research methods",
+   "aliases": [
+    "participant observation",
+    "research methods",
+    "primary data",
+    "secondary data",
+    "questionnaires",
+    "interviews",
+    "sampling",
+    "positivism",
+    "interpretivism"
+   ],
+   "questions": [
+    {
+     "id": "sm01",
+     "level": 1,
+     "text": "What term describes data that a sociologist collects for themselves, for example through their own interviews? Give the term.",
+     "short": {
+      "accept": [
+       "primary data",
+       "primary"
+      ],
+      "reject": [
+       "secondary data",
+       "secondary"
+      ],
+      "feedback": {
+       "secondary data": "Secondary data already exists and was collected by someone else",
+       "secondary": "Secondary data already exists and was collected by someone else"
+      }
+     },
+     "solution": "Primary data is collected first-hand by the researcher, for example through questionnaires, interviews or observation",
+     "hint": "It is collected first-hand"
+    },
+    {
+     "id": "sm02",
+     "level": 1,
+     "text": "What term describes data that already exists and was collected by someone else, such as government statistics? Give the term.",
+     "short": {
+      "accept": [
+       "secondary data",
+       "secondary"
+      ],
+      "reject": [
+       "primary data",
+       "primary"
+      ],
+      "feedback": {
+       "primary data": "Primary data is collected by the researcher themselves",
+       "primary": "Primary data is collected by the researcher themselves"
+      }
+     },
+     "solution": "Secondary data comes from existing sources such as official statistics, documents or other researchers' studies",
+     "hint": "The researcher did not collect it first-hand"
+    },
+    {
+     "id": "sm03",
+     "level": 1,
+     "text": "What is quantitative data?",
+     "choice": {
+      "options": [
+       "Data in the form of numbers or statistics",
+       "Data in the form of words and descriptions",
+       "Data that can only be collected by observation",
+       "Data that can never come from a questionnaire"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is qualitative data",
+       null,
+       null
+      ]
+     },
+     "solution": "Quantitative data is numerical; qualitative data is in words and gives detail and meaning",
+     "hint": "'Quantity' means amount"
+    },
+    {
+     "id": "sm04",
+     "level": 1,
+     "text": "What is participant observation?",
+     "choice": {
+      "options": [
+       "The researcher watches a group from a distance without joining in",
+       "The researcher joins in with the group they are studying",
+       "Participants fill in a written questionnaire",
+       "The researcher studies official statistics"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is non-participant observation",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "In participant observation the researcher takes part in the group's activities while observing them",
+     "hint": "The researcher becomes one of the 'participants'"
+    },
+    {
+     "id": "sm05",
+     "level": 1,
+     "text": "What is the name for a list of all the members of a target population, from which a sample can be chosen? Give the term.",
+     "short": {
+      "accept": [
+       "sampling frame",
+       "a sampling frame",
+       "sample frame"
+      ]
+     },
+     "solution": "A sampling frame is a list of the population, such as a school register or the electoral register",
+     "hint": "It is a list that 'frames' who could be picked"
+    },
+    {
+     "id": "sm06",
+     "level": 1,
+     "text": "What does 'covert' mean in covert participant observation?",
+     "choice": {
+      "options": [
+       "The group knows they are being studied",
+       "The researcher never meets the group",
+       "The group does not know they are being studied",
+       "The study uses only numbers"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is overt observation",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Covert means secret: the researcher's identity and purpose are hidden from the group",
+     "hint": "Covert means hidden or secret"
+    },
+    {
+     "id": "sm07",
+     "level": 2,
+     "text": "Which of these is a closed question?",
+     "choice": {
+      "options": [
+       "How do you feel about school uniform?",
+       "Describe your ideal school day.",
+       "Why did you choose your GCSE options?",
+       "Do you agree that school uniform should be compulsory? (Yes or No)"
+      ],
+      "correct": 3
+     },
+     "solution": "Closed questions give a fixed choice of answers, producing quantitative data; open questions let people answer in their own words",
+     "hint": "A closed question limits the possible answers"
+    },
+    {
+     "id": "sm08",
+     "level": 2,
+     "text": "Which type of interview uses a fixed list of questions asked in the same order to every respondent?",
+     "choice": {
+      "options": [
+       "Structured interview",
+       "Unstructured interview",
+       "Informal interview",
+       "Group discussion"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Unstructured interviews are flexible, like a guided conversation",
+       null,
+       null
+      ]
+     },
+     "solution": "Structured interviews are standardised, so they are reliable and easy to compare",
+     "hint": "The questions follow a set 'structure'"
+    },
+    {
+     "id": "sm09",
+     "level": 2,
+     "text": "Which kind of methods do positivist sociologists prefer?",
+     "choice": {
+      "options": [
+       "Methods that produce rich qualitative data, such as unstructured interviews",
+       "Scientific methods that produce quantitative data, such as questionnaires",
+       "Only covert participant observation",
+       "Methods that collect no data at all"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Interpretivists prefer rich qualitative data",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Positivists want sociology to be scientific, using reliable quantitative methods such as questionnaires and official statistics",
+     "hint": "Positivists want sociology to be like a science"
+    },
+    {
+     "id": "sm10",
+     "level": 2,
+     "text": "What do interpretivist sociologists mainly aim to do?",
+     "choice": {
+      "options": [
+       "Measure behaviour with statistics alone",
+       "Find laws of society in the way physics finds laws of nature",
+       "Understand the meanings people give to their actions",
+       "Avoid talking to people"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That is the positivist aim",
+       null,
+       null
+      ]
+     },
+     "solution": "Interpretivists aim for 'verstehen': understanding meanings, using qualitative methods such as unstructured interviews",
+     "hint": "Think about the word 'interpret'"
+    },
+    {
+     "id": "sm11",
+     "level": 2,
+     "text": "What is the name of a sampling method where the researcher sets how many people of each type to include (for example 50 men and 50 women) and selects people until each group is filled? Give the term.",
+     "short": {
+      "accept": [
+       "quota sampling",
+       "quota sample",
+       "quota"
+      ]
+     },
+     "solution": "Quota sampling fills set numbers (quotas) of each type of person; it is quick but not random",
+     "hint": "Each group has a fixed number, called a ..."
+    },
+    {
+     "id": "sm12",
+     "level": 2,
+     "text": "What name is given to a study of the same group of people over a long period of time, collecting data at intervals? Give the term.",
+     "short": {
+      "accept": [
+       "longitudinal study",
+       "longitudinal",
+       "longitudinal research",
+       "panel study"
+      ]
+     },
+     "solution": "A longitudinal study follows the same people over years, showing changes over time",
+     "hint": "The study is 'long' in time"
+    },
+    {
+     "id": "sm13",
+     "level": 3,
+     "text": "A sociologist wants to study a gang's daily life in detail, and believes the gang would act differently if they knew they were being studied. Which method suits this aim?",
+     "choice": {
+      "options": [
+       "A postal questionnaire",
+       "Official statistics",
+       "A structured interview",
+       "Covert participant observation"
+      ],
+      "correct": 3
+     },
+     "solution": "Joining the gang secretly gives rich, valid data about real behaviour (though it raises ethical issues)",
+     "hint": "The gang must not know about the research"
+    },
+    {
+     "id": "sm14",
+     "level": 3,
+     "text": "A researcher wants to compare the views of 2,000 parents across the UK quickly and cheaply. Which method suits this aim?",
+     "choice": {
+      "options": [
+       "An online or postal questionnaire with closed questions",
+       "Covert participant observation",
+       "Unstructured interviews with each parent",
+       "A life-history case study"
+      ],
+      "correct": 0
+     },
+     "solution": "Questionnaires can reach large samples cheaply and give quantitative data that is easy to compare",
+     "hint": "Which method works for a large number of people at low cost?"
+    },
+    {
+     "id": "sm15",
+     "level": 3,
+     "text": "A researcher chooses every 10th name from a school register. Which sampling method is this?",
+     "choice": {
+      "options": [
+       "Random sampling",
+       "Systematic sampling",
+       "Snowball sampling",
+       "Quota sampling"
+      ],
+      "correct": 1
+     },
+     "solution": "Systematic sampling picks every nth person from a sampling frame",
+     "hint": "There is a fixed pattern to the selection"
+    },
+    {
+     "id": "sm16",
+     "level": 3,
+     "text": "A researcher studying graffiti artists who do not want to be identified interviews one artist, who introduces the researcher to others, who introduce more. Which sampling method is this?",
+     "choice": {
+      "options": [
+       "Systematic sampling",
+       "Quota sampling",
+       "Snowball sampling",
+       "Stratified sampling"
+      ],
+      "correct": 2
+     },
+     "solution": "Snowball sampling uses contacts to reach hard-to-find groups; the sample grows like a rolling snowball",
+     "hint": "The sample grows bigger as it 'rolls' from one person to the next"
+    },
+    {
+     "id": "sm17",
+     "level": 3,
+     "text": "People being interviewed sometimes give answers that make them look good rather than true answers. What is this called? Give the term.",
+     "short": {
+      "accept": [
+       "social desirability",
+       "social desirability bias",
+       "social desirability effect"
+      ]
+     },
+     "solution": "Social desirability bias: respondents give answers they think are acceptable, which reduces validity",
+     "hint": "People want to seem 'desirable' to society"
+    },
+    {
+     "id": "sm18",
+     "level": 3,
+     "text": "A researcher divides a population into groups, such as age groups, and then randomly samples from each group in proportion to its size. Which sampling method is this? Give the term.",
+     "short": {
+      "accept": [
+       "stratified sampling",
+       "stratified random sampling",
+       "stratified sample",
+       "stratified"
+      ]
+     },
+     "solution": "Stratified sampling divides the population into layers (strata) and samples each in proportion, making the sample representative",
+     "hint": "The population is divided into layers, called strata"
+    },
+    {
+     "id": "sm19",
+     "level": 4,
+     "text": "A questionnaire was sent to 1,000 people and 150 replied. What is the response rate, and what is the main problem?",
+     "choice": {
+      "options": [
+       "85% — the sample is too large",
+       "150% — too many people replied",
+       "15% — the data is all qualitative",
+       "15% — the people who replied may not be representative"
+      ],
+      "correct": 3
+     },
+     "solution": "150 ÷ 1,000 = 15%. With a low response rate, those who reply may differ from those who don't, so the sample may be unrepresentative",
+     "hint": "Divide the replies by the number sent out, then think about who replied"
+    },
+    {
+     "id": "sm20",
+     "level": 4,
+     "text": "Which is a disadvantage of covert participant observation?",
+     "choice": {
+      "options": [
+       "It raises ethical problems because the group has not given informed consent",
+       "The group knows it is being watched, so it changes its behaviour",
+       "It produces only quantitative data",
+       "It is cheap and quick to carry out"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is a problem with OVERT observation",
+       null,
+       "Being cheap and quick would be an advantage"
+      ]
+     },
+     "solution": "Covert research deceives the group, who cannot give informed consent; it can also be risky for the researcher",
+     "hint": "Think about ethics when the group does not know"
+    },
+    {
+     "id": "sm21",
+     "level": 4,
+     "text": "Factory workers became more productive whenever researchers changed their working conditions, even when the conditions got worse, because they knew they were being studied. Which effect does this describe?",
+     "choice": {
+      "options": [
+       "The halo effect",
+       "The Hawthorne effect",
+       "Triangulation",
+       "A self-fulfilling prophecy"
+      ],
+      "correct": 1
+     },
+     "solution": "The Hawthorne effect: people change their behaviour because they know they are being observed",
+     "hint": "It is named after the factory where it was first noticed"
+    },
+    {
+     "id": "sm22",
+     "level": 4,
+     "text": "A researcher uses questionnaires AND interviews in the same study to check the findings against each other. What is this called?",
+     "choice": {
+      "options": [
+       "Positivism",
+       "Covert research",
+       "Triangulation",
+       "A pilot study"
+      ],
+      "correct": 2
+     },
+     "solution": "Triangulation uses more than one method so that the results can be cross-checked",
+     "hint": "Think of checking a position from more than one direction"
+    },
+    {
+     "id": "sm23",
+     "level": 4,
+     "text": "Which ethical principle means that participants' names and personal details must be kept private? Give the term.",
+     "short": {
+      "accept": [
+       "confidentiality",
+       "anonymity",
+       "privacy"
+      ]
+     },
+     "solution": "Confidentiality (and anonymity) protects participants' identities and personal information",
+     "hint": "Information is kept secret, or 'confidential'"
+    },
+    {
+     "id": "sm24",
+     "level": 4,
+     "text": "Explain one advantage and one disadvantage of using unstructured interviews in sociological research.",
+     "rubric": {
+      "model_answer": "Advantage: unstructured interviews are flexible, like a guided conversation, so the interviewer can follow up interesting points and build rapport. This produces rich, detailed qualitative data with high validity, showing how people really see their lives. Disadvantage: each interview is different, so they are hard to repeat and compare, making them less reliable. They are also time-consuming, so samples are small and may not be representative, and the interviewer's presence may influence answers (interviewer bias).",
+      "mark_scheme": "1 mark: advantage identified (e.g. flexible, rapport)\n1 mark: advantage explained (e.g. rich, valid qualitative data)\n1 mark: disadvantage identified (e.g. hard to compare, time-consuming)\n1 mark: disadvantage explained (e.g. low reliability, small samples, interviewer bias)\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Advantage: flexible, rich valid data. Disadvantage: hard to repeat or compare (less reliable) and time-consuming",
+     "hint": "Think about validity for the advantage and reliability for the disadvantage"
+    },
+    {
+     "id": "sm25",
+     "level": 5,
+     "text": "Which statement explains why positivists prefer questionnaires?",
+     "choice": {
+      "options": [
+       "They allow the researcher to join in with the group",
+       "They produce rich, detailed qualitative data",
+       "They need no sampling at all",
+       "They produce standardised, quantitative data that can be checked for reliability"
+      ],
+      "correct": 3
+     },
+     "solution": "Questionnaires ask everyone the same questions, giving reliable, comparable numbers, which fits the positivist scientific approach",
+     "hint": "Positivists value reliability and numbers"
+    },
+    {
+     "id": "sm26",
+     "level": 5,
+     "text": "Why do interpretivists often criticise official statistics?",
+     "choice": {
+      "options": [
+       "Statistics are socially constructed and may not show the meanings behind people's actions",
+       "Statistics are always completely accurate",
+       "Statistics are too detailed and qualitative",
+       "Statistics are collected by the researcher personally"
+      ],
+      "correct": 0
+     },
+     "solution": "Interpretivists say statistics are products of decisions by officials and do not reveal the meanings people give to events",
+     "hint": "Interpretivists care about meanings, not just numbers"
+    },
+    {
+     "id": "sm27",
+     "level": 5,
+     "text": "Which statement about reliability and validity is accurate?",
+     "choice": {
+      "options": [
+       "Reliable research gives a true picture; valid research gives similar results when repeated",
+       "Reliable research gives similar results when repeated; valid research gives a true picture of what is studied",
+       "Reliability and validity mean exactly the same thing",
+       "Qualitative research is always more reliable than quantitative research"
+      ],
+      "correct": 1,
+      "feedback": [
+       "This has the two definitions the wrong way round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Reliability = consistency when repeated; validity = truthfulness or accuracy of the picture",
+     "hint": "One is about consistency, the other is about truth"
+    },
+    {
+     "id": "sm28",
+     "level": 5,
+     "text": "A researcher studies 20 pupils at one school and concludes that all UK teenagers think the same way. What is the main problem?",
+     "choice": {
+      "options": [
+       "The research is too reliable",
+       "The study used too many methods",
+       "The sample is small and unrepresentative, so the results cannot be generalised",
+       "The pupils gave informed consent"
+      ],
+      "correct": 2
+     },
+     "solution": "20 pupils from one school are unlikely to represent all UK teenagers, so the findings cannot be generalised",
+     "hint": "Think about how many people were studied and where they came from"
+    },
+    {
+     "id": "sm29",
+     "level": 5,
+     "text": "What term describes how far research findings from a sample can be applied to the wider population? Give the term.",
+     "short": {
+      "accept": [
+       "generalisability",
+       "generalizability",
+       "generalisation",
+       "generalization",
+       "generalise",
+       "generalisable"
+      ],
+      "reject": [
+       "representativeness"
+      ],
+      "feedback": {
+       "representativeness": "Representativeness is whether the SAMPLE reflects the population — applying findings more widely is a related but different idea"
+      }
+     },
+     "solution": "Generalisability depends on a large, representative sample",
+     "hint": "The word describes being able to apply results 'in general'"
+    },
+    {
+     "id": "sm30",
+     "level": 5,
+     "text": "Evaluate the use of participant observation in sociological research.",
+     "rubric": {
+      "model_answer": "Participant observation lets the researcher see behaviour in its natural setting and understand the group's meanings, giving rich, valid qualitative data. Interpretivists favour it for this reason, and covert observation can reach hidden groups such as gangs. However, it is time-consuming, and usually only one small group is studied, so it is hard to generalise and impossible to repeat exactly (low reliability). The researcher may 'go native' and lose objectivity, and covert research raises ethical problems such as lack of informed consent and possible danger.",
+      "mark_scheme": "1 mark: strength identified (e.g. high validity, natural setting)\n1 mark: strength explained (e.g. understands meanings, interpretivist view)\n1 mark: weakness: low reliability or representativeness\n1 mark: weakness: time, cost or going native\n1 mark: ethical issues of covert observation\n1 mark: a balanced judgement\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Strengths: valid, detailed data about real behaviour. Weaknesses: unreliable, unrepresentative, time-consuming, ethical problems if covert",
+     "hint": "Weigh validity against reliability, representativeness and ethics"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "sociology.y{year}.families",
+      "label": "Families",
+      "skills": [
+       "sociology.families"
+      ]
+     },
+     {
+      "id": "sociology.y{year}.education",
+      "label": "Education",
+      "skills": [
+       "sociology.education"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "sociology.y{year}.crime",
+      "label": "Crime & deviance",
+      "skills": [
+       "sociology.crime"
+      ]
+     },
+     {
+      "id": "sociology.y{year}.methods",
+      "label": "Research methods",
+      "skills": [
+       "sociology.methods"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}
