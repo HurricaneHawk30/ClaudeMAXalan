@@ -266,9 +266,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "That is the fly tower (the flies)",
-       null
+       "That describes raked audience seating, not part of the stage",
+       "That is a revolve"
       ]
      },
      "solution": "The apron extends in front of the curtain line or proscenium arch, nearest the audience",
@@ -526,10 +526,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Traverse staging has no back wall; scenery can stand at the open ends",
+       "That describes promenade staging",
        null,
-       "That describes promenade staging"
+       "Traverse staging has no proscenium arch"
       ]
      },
      "solution": "This is traverse staging: with audience on two sides, actors must keep turning so neither side sees only their backs",
@@ -584,8 +584,8 @@
       "feedback": [
        "That describes a thrust stage",
        null,
-       null,
-       "Tall scenery is easy to place at the back of a proscenium stage"
+       "Tall scenery is easy to place at the back of a proscenium stage",
+       "Ancient Greek open-air theatres had no proscenium arch; it came much later"
       ]
      },
      "solution": "The proscenium arch frames the stage like a picture; with the audience on one side it suits the illusion of a 'fourth wall'",
@@ -642,9 +642,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "Being surrounded by the audience makes an invisible wall hard to imagine",
-       null,
+       "When the audience walks among the actors, there is no wall between them",
+       "The two halves of the audience see each other across the stage, which breaks the illusion",
        null
       ]
      },
@@ -715,10 +715,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Stanislavski is linked with naturalism and truthful acting",
+       "Artaud is linked with the Theatre of Cruelty",
        null,
-       "Artaud is linked with the Theatre of Cruelty"
+       "Augusto Boal is linked with Forum Theatre and the Theatre of the Oppressed"
       ]
      },
      "solution": "Bertolt Brecht developed epic theatre to make audiences think critically about society",
@@ -774,10 +774,10 @@
       ],
       "correct": 1,
       "feedback": [
+       "Complicité is also a physical theatre company, but these exercises come from another company",
        null,
-       null,
-       null,
-       "The Berliner Ensemble was Brecht's company"
+       "The Berliner Ensemble was Brecht's company",
+       "The Moscow Art Theatre was Stanislavski's company"
       ]
      },
      "solution": "Frantic Assembly, a British physical theatre company, uses exercises such as Chair Duets and Hymn Hands",
@@ -796,10 +796,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "Pantalone is the greedy old merchant",
-       "Il Dottore is the pompous doctor or scholar"
+       null,
+       "Il Dottore is the pompous doctor or scholar",
+       "Il Capitano is the boastful, cowardly soldier"
       ]
      },
      "solution": "Arlecchino (Harlequin) is the nimble, mischievous servant in a patched, diamond-patterned costume",
@@ -833,9 +833,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "That describes Brecht's epic theatre",
-       "That describes commedia dell'arte"
+       "That describes commedia dell'arte",
+       "That describes Artaud's Theatre of Cruelty"
       ]
      },
      "solution": "Naturalism tries to recreate real life on stage as believably as possible",
@@ -927,9 +927,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "That describes verbatim theatre",
-       null
+       "That describes a rehearsed reading, where movement is kept to a minimum",
+       "That describes naturalism"
       ]
      },
      "solution": "Physical theatre puts movement and the body at the centre of storytelling",
@@ -983,10 +983,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "Gestus is a Brechtian gesture that shows social attitude",
-       null
+       null,
+       "Lazzi are comic routines from commedia dell'arte",
+       "The alienation effect is Brecht's way of stopping the audience feeling with a character"
       ]
      },
      "solution": "Emotion memory means using a real memory of a similar feeling to make the emotion truthful",
@@ -1038,10 +1038,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "Epic theatre deliberately reminds the audience they are in a theatre",
-       null
+       null,
+       "Theatre of Cruelty attacks the senses rather than recreating real life",
+       "Commedia dell'arte uses masks and stock characters, not realistic rooms"
       ]
      },
      "solution": "Realistic sets and a firm 'fourth wall' are features of naturalism",
@@ -1144,9 +1144,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "The super-objective is the character's overall aim, not the facts of their situation",
-       null
+       "The alienation effect is Brecht's technique, not part of Stanislavski's system",
+       "Gestus is Brecht's term for a gesture that shows social attitude"
       ]
      },
      "solution": "The given circumstances are the facts of the character's world set by the script",
@@ -1177,9 +1177,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "That describes verbatim theatre",
-       null,
+       "For Artaud, 'cruelty' meant an intense assault on the senses, not simply violence",
+       "That describes Brecht's aims",
        null
       ]
      },
@@ -1300,9 +1300,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "Pace is the speed of speech",
-       "A pause is a silence or break"
+       "A pause is a silence or break",
+       "Projection is making the voice carry to the back of the audience"
       ]
      },
      "solution": "Pitch is how high or low the voice sounds",
@@ -1398,9 +1398,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "A gesture is a movement of part of the body, such as the hands",
-       "Posture is how the body is held"
+       "Posture is how the body is held",
+       "Proxemics is the use of space between characters"
       ]
      },
      "solution": "Gait is the way a person walks, for example limping, striding or shuffling",
@@ -1509,9 +1509,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "A soliloquy is a longer speech by a character alone on stage",
-       null,
+       "A monologue is a long speech by one character, often heard by others on stage",
+       "Dialogue is conversation between characters",
        null
       ]
      },
@@ -1588,9 +1588,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "Projection is a vocal skill",
        "Pitch is a vocal skill",
+       "Pace is a vocal skill",
        null
       ]
      },
@@ -1759,9 +1759,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "Hot seating is questioning a character, usually in rehearsal",
-       null
+       "Proxemics is about the space between characters, not their thoughts",
+       "Projection is a vocal skill, not a way to reveal thoughts"
       ]
      },
      "solution": "Thought tracking lets each character in a freeze speak their private thoughts to the audience",
@@ -1792,9 +1792,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "That describes pace",
-       null,
+       "Projection matters most in large spaces, where the voice must reach the back row",
+       "Changing accent is a separate vocal choice",
        null
       ]
      },
@@ -1926,9 +1926,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "That is a gobo",
-       "That is a revolve"
+       "That is a revolve",
+       "That is a cyclorama"
       ]
      },
      "solution": "A gel is a sheet of coloured filter that changes the colour of a lantern's light",
@@ -2152,9 +2152,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "A gel changes colour, not pattern",
        "Barn doors are flaps that shape the edge of a fresnel's beam",
+       "A gauze is a fabric screen, not something placed in a lantern",
        null
       ]
      },

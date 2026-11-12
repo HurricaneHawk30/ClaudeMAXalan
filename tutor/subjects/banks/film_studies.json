@@ -33,9 +33,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "A long shot shows the whole body and some of the setting",
-       null,
+       "An establishing shot shows the location of a scene",
+       "A two-shot frames two characters together",
        null
       ]
      },
@@ -117,10 +117,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "That is match on action",
+       "That is a dissolve",
        null,
-       "That is a dissolve"
+       "That is an aerial shot"
       ]
      },
      "solution": "A jump cut is a sudden, noticeable cut within a scene that makes time appear to jump",
@@ -237,9 +237,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "That is shot reverse shot",
-       null
+       "That is a fade",
+       "That is a cutaway or insert shot"
       ]
      },
      "solution": "Cross-cutting (parallel editing) switches between actions in different places, often to build tension",
@@ -314,9 +314,9 @@
       ],
       "correct": 1,
       "feedback": [
+       "A low angle makes a character seem stronger; a high angle would make him seem weak",
        null,
        null,
-       "A high angle would make him seem weak",
        null
       ]
      },
@@ -637,10 +637,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "That is editing",
-       null
+       null,
+       "That is the soundtrack, which is not part of mise-en-scène",
+       "That is camera movement, part of cinematography"
       ]
      },
      "solution": "Mise-en-scène is everything in front of the camera: setting, props, costume, lighting and performance",
@@ -680,9 +680,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "Low-key lighting creates strong shadows",
-       null,
+       "Chiaroscuro uses strong contrasts of light and shadow",
+       "Underlighting comes from below and creates sinister shadows",
        null
       ]
      },
@@ -717,10 +717,10 @@
       ],
       "correct": 1,
       "feedback": [
+       "The characters can hear the dialogue, so it is diegetic",
        null,
-       null,
-       null,
-       "The characters can hear the radio, so it is diegetic"
+       "The characters can hear the radio, so it is diegetic",
+       "The characters can hear the footsteps, so they are diegetic"
       ]
      },
      "solution": "Non-diegetic sound, such as the film score, comes from outside the story world",
@@ -785,9 +785,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "The fill light is weaker and softens shadows",
        "The back light separates the subject from the background",
+       "A practical is a light that can be seen in the scene, such as a lamp",
        null
       ]
      },
@@ -925,8 +925,8 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Foley is recreated sound effects such as footsteps",
+       "A jump cut is an abrupt cut in the picture, not a sound link",
        null,
        null
       ]
@@ -1175,8 +1175,8 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "Matching the mood is parallel sound, not contrapuntal",
+       null,
        null,
        null
       ]
@@ -1325,10 +1325,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "That is science fiction iconography",
-       "That is horror iconography"
+       null,
+       "That is horror iconography",
+       "That is spy film iconography"
       ]
      },
      "solution": "Stetsons, horses, saloons and deserts are classic Western iconography",
@@ -1419,10 +1419,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "Todorov is known for narrative theory",
-       "Steve Neale is known for genre theory"
+       null,
+       "Steve Neale is known for genre theory",
+       "Propp is known for character types in folk tales"
       ]
      },
      "solution": "Laura Mulvey introduced the male gaze in 1975",
@@ -1499,10 +1499,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "A red herring is a misleading clue",
+       "An open ending leaves questions unanswered at the end",
        null,
-       null
+       "A MacGuffin is an object that drives the plot"
       ]
      },
      "solution": "Dramatic irony is when the audience knows something a character does not",
@@ -1534,8 +1534,8 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Unrestricted narration lets the audience know more than any one character",
+       "Parallel editing is cross-cutting between places, not a type of narration",
        null,
        null
       ]
@@ -1649,8 +1649,8 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "Iconography is about visual objects and settings, not story patterns",
+       null,
        null,
        null
       ]
@@ -1821,10 +1821,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Metropolis (1927) was a silent German film",
+       "The Wizard of Oz came out in 1939",
        null,
-       "The Wizard of Oz came out in 1939"
+       "Citizen Kane came out in 1941"
       ]
      },
      "solution": "The Jazz Singer (1927) used synchronised songs and some dialogue, launching the era of sound films",
@@ -2023,8 +2023,8 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "A saturation release opens on as many screens as possible at once",
+       "Day-and-date means releasing in cinemas and at home on the same day",
        null,
        null
       ]
@@ -2120,8 +2120,8 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Synchronised sound arrived in 1927 with The Jazz Singer",
+       "The BBFC is a British body, set up long before 1948",
        null,
        null
       ]
@@ -2189,9 +2189,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "Synchronised sound arrived in the late 1920s",
        "Streaming arrived in the 21st century",
+       "The First World War ended in 1918, decades earlier",
        null
       ]
      },

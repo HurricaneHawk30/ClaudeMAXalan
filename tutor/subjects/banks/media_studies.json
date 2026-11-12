@@ -56,9 +56,9 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "That is connotation",
+       null,
+       null,
        null
       ]
      },
@@ -79,9 +79,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "Propp identified character types in folk tales",
-       "Lévi-Strauss is known for binary oppositions"
+       "Lévi-Strauss is known for binary oppositions",
+       "Stuart Hall is known for representation and reception theory"
       ]
      },
      "solution": "Tzvetan Todorov's narrative theory moves from equilibrium through disruption to a new equilibrium",
@@ -199,10 +199,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "That is the dispatcher",
+       "That is the villain",
        null,
-       "That is the villain"
+       "That is the false hero"
       ]
      },
      "solution": "Propp's donor prepares the hero or gives them a magical object or advice",
@@ -271,8 +271,8 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "That is the masthead",
+       null,
        null,
        null
       ]
@@ -338,10 +338,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "The action code is about actions that lead to further action",
-       null
+       null,
+       "The semantic code is about the connotations of words and images",
+       "The symbolic code is about deeper meanings such as binary oppositions"
       ]
      },
      "solution": "The enigma (hermeneutic) code sets up a mystery or question that makes the audience want to find out more",
@@ -429,9 +429,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "The disruption is the dragon's attack",
-       null,
+       "The recognition is when the farmer realises what is happening",
+       "The attempt to repair is when the farmer sets out to defeat the dragon",
        null
       ]
      },
@@ -533,10 +533,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Character types come from Propp",
+       "Three readings come from Stuart Hall",
        null,
-       "Three readings come from Stuart Hall"
+       "Todorov's new equilibrium is stable again but different from the start"
       ]
      },
      "solution": "Todorov's pattern ends in a new equilibrium: the situation is stable again but changed",
@@ -571,9 +571,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
-       null,
+       "That is the idea of the hypodermic needle (effects) model",
        "That is Todorov's theory",
+       null,
        null
       ]
      },
@@ -679,10 +679,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Stuart Hall is known for representation and reception theory",
+       "David Gauntlett is known for identity theory",
        null,
-       "David Gauntlett is known for identity theory"
+       "Propp is known for character types in folk tales"
       ]
      },
      "solution": "Laura Mulvey introduced the male gaze in her 1975 essay on narrative cinema",
@@ -879,8 +879,8 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "A countertype would go against the stereotype",
+       "Self-representation is when people represent themselves",
        null,
        null
       ]
@@ -1001,10 +1001,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "80% is the share showing women at home",
+       "10 is the number of adverts, not the percentage",
        null,
-       "10 is the number of adverts, not the percentage"
+       "10 out of 40 would be 25%, but the total is 50 adverts"
       ]
      },
      "solution": "10 out of 50 is 20%, so 80% showed women at home: a mainly domestic representation",
@@ -1087,8 +1087,8 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "Documentary makers still choose what to film, include and leave out",
+       "News and documentaries contain representations too",
        null,
        null
       ]
@@ -1127,8 +1127,8 @@
       "feedback": [
        null,
        null,
-       null,
-       "The male gaze comes from Laura Mulvey"
+       "The male gaze comes from Laura Mulvey",
+       null
       ]
      },
      "solution": "Perkins (1979) argued that stereotypes are not always negative, not always about minorities and not always false",
@@ -1147,9 +1147,9 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "People still select, edit and filter what they post, so it is still mediated",
+       null,
+       null,
        null
       ]
      },
@@ -1268,9 +1268,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "The BBFC classifies films and videos",
-       "Ofcom regulates broadcasting"
+       "Ofcom regulates broadcasting",
+       "IPSO regulates newspapers and magazines"
       ]
      },
      "solution": "PEGI (Pan European Game Information) gives age ratings to video games",
@@ -1471,8 +1471,8 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Horizontal integration means owning several businesses at the same stage",
+       null,
        null,
        null
       ]
@@ -1561,9 +1561,9 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "The BBFC classifies films and videos, not TV broadcasts",
-       null,
+       "PEGI rates video games",
+       "The ASA regulates adverts, not programmes",
        null
       ]
      },
@@ -1705,10 +1705,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "That is IPSO",
+       "That is PEGI",
        null,
-       "That is PEGI"
+       "The BBFC is an independent body, not part of the BBC"
       ]
      },
      "solution": "The BBFC classifies films and videos with age ratings and short content advice",
@@ -1825,10 +1825,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Uses and gratifications sees the audience as active",
+       "The two-step flow model says messages pass through opinion leaders",
        null,
-       null
+       "Reception theory says audiences decode texts in different ways"
       ]
      },
      "solution": "The hypodermic needle model sees the audience as passive, with messages 'injected' directly",
@@ -1886,9 +1886,9 @@
       "correct": 0,
       "feedback": [
        null,
-       null,
        "Stuart Hall is linked with reception theory",
-       null
+       "Propp is linked with character types in folk tales",
+       "Laura Mulvey is linked with the male gaze"
       ]
      },
      "solution": "George Gerbner developed cultivation theory about the long-term effects of heavy TV viewing",
@@ -1942,10 +1942,10 @@
       ],
       "correct": 1,
       "feedback": [
-       null,
-       null,
        "That is the information (surveillance) need",
-       "That is the personal identity need"
+       null,
+       "That is the personal identity need",
+       "That is the social interaction (personal relationships) need"
       ]
      },
      "solution": "Diversion is using media for escapism, entertainment and relaxation",
@@ -1991,9 +1991,9 @@
       "correct": 2,
       "feedback": [
        null,
+       "That describes a passive audience",
        null,
-       null,
-       "That describes a passive audience"
+       null
       ]
      },
      "solution": "An active audience makes choices and interprets texts rather than simply absorbing them",
@@ -2192,8 +2192,8 @@
       ],
       "correct": 3,
       "feedback": [
-       null,
        "The hypodermic needle model says media affect people directly",
+       "Cultivation theory is about the long-term effects of heavy TV viewing",
        null,
        null
       ]
@@ -2291,10 +2291,10 @@
       ],
       "correct": 2,
       "feedback": [
-       null,
        "Instant, direct effects are the idea of the hypodermic needle model",
        null,
-       null
+       null,
+       "Story structure is narrative theory, such as Todorov's"
       ]
      },
      "solution": "Cultivation theory is about slow, cumulative effects of heavy viewing on beliefs about the world",
