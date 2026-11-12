@@ -1,6 +1,7 @@
 """Pure text-classification helpers."""
 from __future__ import annotations
 
+import functools
 import re
 
 from .db import CODE_ALPHABET, CODE_LENGTH
@@ -151,8 +152,13 @@ _HINT_WORDS = ("hint", "help", "stuck", "don't get", "dont get", "don't understa
 _SKIP_WORDS = ("skip", "don't know", "dont know", "idk", "give up", "no idea")
 
 
+@functools.lru_cache(maxsize=4096)
+def _phrase_rx(phrase: str) -> re.Pattern:
+    return re.compile(r"(?<![a-z0-9])" + re.escape(phrase) + r"(?![a-z0-9])")
+
+
 def _contains(norm: str, phrase: str) -> bool:
-    return re.search(r"(?<![a-z0-9])" + re.escape(phrase) + r"(?![a-z0-9])", norm) is not None
+    return _phrase_rx(phrase).search(norm) is not None
 
 
 def _safety_text(text: str) -> str:

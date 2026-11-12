@@ -1,0 +1,2129 @@
+{
+ "subject": {
+  "id": "english_language",
+  "title": "English Language",
+  "order": 12
+ },
+ "skills": [
+  {
+   "id": "english_language.techniques",
+   "title": "Language techniques",
+   "aliases": [
+    "language techniques",
+    "metaphor",
+    "simile",
+    "personification",
+    "alliteration",
+    "pathetic fallacy",
+    "semantic field",
+    "hyperbole",
+    "onomatopoeia",
+    "oxymoron",
+    "sibilance"
+   ],
+   "questions": [
+    {
+     "id": "t01",
+     "level": 1,
+     "text": "Which technique describes something as if it IS something else, without using 'like' or 'as'?",
+     "choice": {
+      "options": [
+       "Metaphor",
+       "Simile",
+       "Personification",
+       "Onomatopoeia"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A simile compares using 'like' or 'as'",
+       null,
+       null
+      ]
+     },
+     "solution": "A metaphor says one thing is another, e.g. 'The classroom was a zoo'",
+     "hint": "Similes use 'like' or 'as', and this technique does not"
+    },
+    {
+     "id": "t02",
+     "level": 1,
+     "text": "What is personification?",
+     "choice": {
+      "options": [
+       "Repeating the same consonant sound at the start of nearby words",
+       "Giving human qualities or actions to something that is not human",
+       "Exaggerating for effect",
+       "Using a word that imitates a sound"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is alliteration",
+       null,
+       "That is hyperbole",
+       "That is onomatopoeia"
+      ]
+     },
+     "solution": "Personification gives human qualities to objects, animals or ideas, e.g. 'The wind whispered'",
+     "hint": "Look inside the word: it contains 'person'"
+    },
+    {
+     "id": "t03",
+     "level": 1,
+     "text": "Which technique is a word that imitates the sound it describes, such as 'buzz' or 'crash'?",
+     "choice": {
+      "options": [
+       "Alliteration",
+       "Assonance",
+       "Onomatopoeia",
+       "Sibilance"
+      ],
+      "correct": 2
+     },
+     "solution": "Onomatopoeia: words such as buzz, crash, sizzle and hiss sound like what they describe",
+     "hint": "Say 'buzz' aloud: what does the word itself sound like?"
+    },
+    {
+     "id": "t04",
+     "level": 1,
+     "text": "What is hyperbole?",
+     "choice": {
+      "options": [
+       "A mild word used in place of a harsh one",
+       "Placing two contrasting ideas side by side",
+       "A question asked for effect rather than for an answer",
+       "Deliberate exaggeration for effect"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is a euphemism",
+       "That is juxtaposition",
+       "That is a rhetorical question",
+       null
+      ]
+     },
+     "solution": "Hyperbole is deliberate exaggeration, e.g. 'I've told you a million times'",
+     "hint": "Think of 'I'm so hungry I could eat a horse'"
+    },
+    {
+     "id": "t05",
+     "level": 1,
+     "text": "Give the term for a comparison that uses 'like' or 'as', such as 'as brave as a lion'.",
+     "short": {
+      "accept": [
+       "simile"
+      ],
+      "reject": [
+       "metaphor"
+      ],
+      "feedback": {
+       "metaphor": "A metaphor does not use 'like' or 'as'"
+      }
+     },
+     "solution": "A simile compares two things using 'like' or 'as'",
+     "hint": "It is not a metaphor, because it uses a linking word"
+    },
+    {
+     "id": "t06",
+     "level": 1,
+     "text": "Give the term for repeating the same consonant sound at the start of words close together, as in 'big bad bear'.",
+     "short": {
+      "accept": [
+       "alliteration"
+      ],
+      "reject": [
+       "assonance"
+      ],
+      "feedback": {
+       "assonance": "Assonance repeats vowel sounds, not the first consonant of each word"
+      }
+     },
+     "solution": "Alliteration repeats the opening consonant sound: big, bad, bear",
+     "hint": "Listen to the first sound of each word"
+    },
+    {
+     "id": "t07",
+     "level": 2,
+     "text": "'The wind howled angrily at the door.' Which technique is used?",
+     "choice": {
+      "options": [
+       "Personification",
+       "Simile",
+       "Hyperbole",
+       "Oxymoron"
+      ],
+      "correct": 0
+     },
+     "solution": "Personification: the wind is given a human emotion ('angrily')",
+     "hint": "Can the wind really feel angry?"
+    },
+    {
+     "id": "t08",
+     "level": 2,
+     "text": "What is the difference between a simile and a metaphor?",
+     "choice": {
+      "options": [
+       "A metaphor compares using 'like' or 'as'; a simile says one thing is another",
+       "A simile compares using 'like' or 'as'; a metaphor says one thing is another",
+       "A simile is always about the weather; a metaphor is always about people",
+       "A simile exaggerates; a metaphor imitates a sound"
+      ],
+      "correct": 1
+     },
+     "solution": "Simile: 'as brave as a lion'. Metaphor: 'he was a lion in battle'",
+     "hint": "Which of the two contains the linking word 'like' or 'as'?"
+    },
+    {
+     "id": "t09",
+     "level": 2,
+     "text": "Which phrase is an oxymoron?",
+     "choice": {
+      "options": [
+       "cold winter",
+       "loud thunder",
+       "deafening silence",
+       "quiet whisper"
+      ],
+      "correct": 2
+     },
+     "solution": "An oxymoron joins two contradictory words: silence cannot really be deafening",
+     "hint": "Look for two words that contradict each other"
+    },
+    {
+     "id": "t10",
+     "level": 2,
+     "text": "Which sentence uses sibilance?",
+     "choice": {
+      "options": [
+       "The big brown bear bounded by",
+       "The clock went tick-tock all night",
+       "Her eyes were deep, dark pools",
+       "The silent snake slid slowly across the sand"
+      ],
+      "correct": 3
+     },
+     "solution": "Sibilance repeats soft 's' sounds: silent, snake, slid, slowly, sand",
+     "hint": "Listen for a hissing sound"
+    },
+    {
+     "id": "t11",
+     "level": 2,
+     "text": "'The classroom was a zoo.' Name the technique. Give the term.",
+     "short": {
+      "accept": [
+       "metaphor"
+      ],
+      "reject": [
+       "simile"
+      ],
+      "feedback": {
+       "simile": "There is no 'like' or 'as', so it is not a simile"
+      }
+     },
+     "solution": "It is a metaphor: the classroom is described as if it really were a zoo",
+     "hint": "Is there a 'like' or 'as' in the sentence?"
+    },
+    {
+     "id": "t12",
+     "level": 2,
+     "text": "'I've told you a million times!' Name the technique. Give the term.",
+     "short": {
+      "accept": [
+       "hyperbole",
+       "exaggeration"
+      ]
+     },
+     "solution": "Hyperbole: the speaker exaggerates to show frustration",
+     "hint": "Has the speaker really said it a million times?"
+    },
+    {
+     "id": "t13",
+     "level": 3,
+     "text": "'The thunder grumbled like a hungry giant.' Which technique is 'like a hungry giant'?",
+     "choice": {
+      "options": [
+       "Simile",
+       "Metaphor",
+       "Oxymoron",
+       "Alliteration"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A metaphor would not use 'like'",
+       null,
+       null
+      ]
+     },
+     "solution": "It is a simile because it compares the thunder to a giant using 'like'",
+     "hint": "Look at the word that links the thunder to the giant"
+    },
+    {
+     "id": "t14",
+     "level": 3,
+     "text": "In a story, the sky turns black and rain lashes down just as the hero hears terrible news. Which technique is the writer using?",
+     "choice": {
+      "options": [
+       "Onomatopoeia",
+       "Pathetic fallacy",
+       "Hyperbole",
+       "Oxymoron"
+      ],
+      "correct": 1
+     },
+     "solution": "Pathetic fallacy: the weather reflects the character's feelings and the mood",
+     "hint": "The weather matches what the character feels"
+    },
+    {
+     "id": "t15",
+     "level": 3,
+     "text": "'The pitch was a battlefield: the players launched attacks, defended their trenches and fought for every inch.' What links 'battlefield', 'attacks', 'trenches' and 'fought'?",
+     "choice": {
+      "options": [
+       "Semantic field of nature",
+       "Sibilance",
+       "Semantic field of war",
+       "Onomatopoeia"
+      ],
+      "correct": 2
+     },
+     "solution": "They form a semantic field of war, making the match seem fierce and serious",
+     "hint": "What topic do all four words belong to?"
+    },
+    {
+     "id": "t16",
+     "level": 3,
+     "text": "'The fire crackled and hissed in the grate.' Which technique is used in 'crackled' and 'hissed'?",
+     "choice": {
+      "options": [
+       "Oxymoron",
+       "Simile",
+       "Hyperbole",
+       "Onomatopoeia"
+      ],
+      "correct": 3
+     },
+     "solution": "Onomatopoeia: 'crackled' and 'hissed' imitate the sounds of the fire",
+     "hint": "Say the two words aloud"
+    },
+    {
+     "id": "t17",
+     "level": 3,
+     "text": "'The old house groaned and sighed as the family drove away.' Which technique is used to describe the house? Give the term.",
+     "short": {
+      "accept": [
+       "personification"
+      ]
+     },
+     "solution": "Personification: the house groans and sighs like a sad person",
+     "hint": "Houses cannot really feel sad, so who usually groans and sighs?"
+    },
+    {
+     "id": "t18",
+     "level": 3,
+     "text": "'It was an open secret that the shop would close.' Which technique is 'open secret'? Give the term.",
+     "short": {
+      "accept": [
+       "oxymoron"
+      ],
+      "reject": [
+       "juxtaposition"
+      ],
+      "feedback": {
+       "juxtaposition": "Close, but two contradictory words joined in one phrase form an oxymoron"
+      }
+     },
+     "solution": "'Open secret' is an oxymoron: a secret cannot be open, yet everyone knows it",
+     "hint": "Can a secret really be open?"
+    },
+    {
+     "id": "t19",
+     "level": 4,
+     "text": "Read: 'The corridor stretched ahead, cold and silent. Somewhere, a door creaked. Then nothing. Then footsteps.' What is the main effect of the short sentences 'Then nothing. Then footsteps.'?",
+     "choice": {
+      "options": [
+       "They build tension and suspense",
+       "They show the narrator is bored and relaxed",
+       "They give a detailed description of the corridor",
+       "They introduce a flashback to the narrator's childhood"
+      ],
+      "correct": 0
+     },
+     "solution": "The very short sentences create pauses: the reader waits in silence, then hears footsteps, so tension builds",
+     "hint": "How do you feel as you read each tiny sentence?"
+    },
+    {
+     "id": "t20",
+     "level": 4,
+     "text": "'The city was a beast that never slept, its streets roaring with traffic.' What does the metaphor suggest about the city?",
+     "choice": {
+      "options": [
+       "It is peaceful and calm",
+       "It is noisy, restless and slightly threatening",
+       "It is empty and abandoned",
+       "It is small and old-fashioned"
+      ],
+      "correct": 1
+     },
+     "solution": "A beast that never sleeps and roars suggests a noisy, restless, even dangerous place",
+     "hint": "Think about what a beast is like and what 'roaring' suggests"
+    },
+    {
+     "id": "t21",
+     "level": 4,
+     "text": "A writer describes a storm with the words 'invaded', 'attacked', 'retreated' and 'battered'. What does this semantic field suggest about the storm?",
+     "choice": {
+      "options": [
+       "It is gentle and soothing",
+       "It is a joyful celebration",
+       "It is like an army: powerful and hostile",
+       "It is dull and ordinary"
+      ],
+      "correct": 2
+     },
+     "solution": "The war words present the storm as an attacking army, powerful and hostile",
+     "hint": "Where would you usually find these four words?"
+    },
+    {
+     "id": "t22",
+     "level": 4,
+     "text": "'As Maya walked away from the argument, grey clouds gathered and a cold drizzle began.' What does the weather suggest about Maya's feelings?",
+     "choice": {
+      "options": [
+       "She feels excited and joyful",
+       "She feels proud of winning",
+       "She feels calm and content",
+       "She feels gloomy and upset"
+      ],
+      "correct": 3
+     },
+     "solution": "The grey clouds and cold drizzle (pathetic fallacy) reflect her gloomy, upset mood",
+     "hint": "What mood do grey clouds and cold rain usually create?"
+    },
+    {
+     "id": "t23",
+     "level": 4,
+     "text": "'The moon smiled down at the lonely sailor.' Which word in this sentence personifies the moon? Give the word.",
+     "short": {
+      "accept": [
+       "smiled",
+       "smiled down"
+      ],
+      "reject": [
+       "lonely"
+      ],
+      "feedback": {
+       "lonely": "'Lonely' describes the sailor, who is human, so it is not personification"
+      }
+     },
+     "solution": "'Smiled' gives the moon a human action, so it personifies it",
+     "hint": "Find the verb: what does the moon do?"
+    },
+    {
+     "id": "t24",
+     "level": 4,
+     "text": "Read: 'The wind screamed through the broken windows, and the old house shuddered as if it knew what was coming.' How does the writer use language to create a sense of fear?",
+     "rubric": {
+      "model_answer": "The writer personifies the wind with the verb 'screamed', which suggests terror and pain, so even the setting seems frightened. The house 'shuddered', another human reaction, implying it is afraid. The phrase 'as if it knew what was coming' hints that something terrible is about to happen, building suspense. The 'broken windows' suggest damage and neglect, making the house seem exposed and threatening.",
+      "mark_scheme": "1 mark: identifies a relevant technique (e.g. personification of the wind or the house)\n1 mark: supports it with a quotation from the extract\n1 mark: explains how the language creates fear or tension\n1 mark: analyses a second detail (e.g. 'as if it knew what was coming', 'broken')",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: personification ('screamed', 'shuddered'), the hint of danger ('as if it knew what was coming') and the damaged setting",
+     "hint": "Which verbs make the wind and the house seem alive?"
+    },
+    {
+     "id": "t25",
+     "level": 5,
+     "text": "Which statement about 'The sea was a hungry wolf, snapping at the cliffs' is accurate?",
+     "choice": {
+      "options": [
+       "It is a metaphor presenting the sea as dangerous and predatory",
+       "It is a simile because it compares the sea to a wolf",
+       "It is onomatopoeia because 'hungry' imitates a sound",
+       "It is pathetic fallacy showing that the sea is happy"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "There is no 'like' or 'as', so it is a metaphor, not a simile",
+       null,
+       null
+      ]
+     },
+     "solution": "It is a metaphor: the sea IS a hungry wolf, which suggests danger and a predator's attack",
+     "hint": "Check for 'like' or 'as' first"
+    },
+    {
+     "id": "t26",
+     "level": 5,
+     "text": "Which statement about pathetic fallacy is accurate?",
+     "choice": {
+      "options": [
+       "It is any description of the weather, whatever its effect",
+       "It uses weather or nature to reflect a character's mood or the atmosphere",
+       "It means giving animals the power of speech",
+       "It is a weak, illogical argument in persuasive writing"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Weather only counts as pathetic fallacy when it reflects feelings or mood",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Pathetic fallacy links weather or nature to human feelings, e.g. a storm during an argument",
+     "hint": "The word 'pathetic' comes from the Greek word for feeling"
+    },
+    {
+     "id": "t27",
+     "level": 5,
+     "text": "In 'The crowd was a sea of faces', why is the word 'sea' effective?",
+     "choice": {
+      "options": [
+       "It suggests the crowd is wet from the rain",
+       "It shows the crowd is standing on a beach",
+       "It suggests the crowd is huge and moves together like waves",
+       "It shows the crowd is silent and still"
+      ],
+      "correct": 2
+     },
+     "solution": "'Sea' suggests a vast mass that moves and surges like waves",
+     "hint": "Think about the size and movement of the sea"
+    },
+    {
+     "id": "t28",
+     "level": 5,
+     "text": "'Her laugh tinkled like a tiny silver bell.' Which comment on this simile is accurate?",
+     "choice": {
+      "options": [
+       "It suggests her laugh is loud and aggressive",
+       "It is really a metaphor because nothing is compared",
+       "It suggests she is sad and lonely",
+       "It suggests her laugh is light, delicate and pleasant"
+      ],
+      "correct": 3
+     },
+     "solution": "A tiny silver bell sounds light, delicate and sweet, so her laugh does too",
+     "hint": "What does a tiny silver bell sound like?"
+    },
+    {
+     "id": "t29",
+     "level": 5,
+     "text": "'It was the best of times, it was the worst of times' (Dickens). Give the term for placing two opposite ideas side by side like this.",
+     "short": {
+      "accept": [
+       "juxtaposition",
+       "antithesis",
+       "contrast"
+      ],
+      "reject": [
+       "oxymoron"
+      ],
+      "feedback": {
+       "oxymoron": "An oxymoron joins two contradictory words in one phrase; here the opposites are in separate clauses"
+      }
+     },
+     "solution": "Juxtaposition (antithesis): 'best' and 'worst' are set side by side",
+     "hint": "It is not an oxymoron: the opposites are in two separate clauses"
+    },
+    {
+     "id": "t30",
+     "level": 5,
+     "text": "Read: 'The city never sleeps. Its neon eyes blink all night, its streets hum with restless engines, and its towers stare down at the people hurrying below.' How does the writer use language to describe the city?",
+     "rubric": {
+      "model_answer": "The writer personifies the city throughout. 'Never sleeps' and 'neon eyes blink' make it seem like a living creature that is always awake and watching. The verb 'stare' suggests the towers are cold and judging, while 'people hurrying below' makes humans seem small and powerless. 'Hum with restless engines' combines sound and movement to show constant energy. Overall the city feels alive, powerful and a little unsettling.",
+      "mark_scheme": "1 mark: identifies the personification of the city\n1 mark: supports with a relevant quotation\n1 mark: analyses a single word (e.g. 'stare', 'blink', 'restless')\n1 mark: comments on the contrast between the towers and the people\n1 mark: comments on the overall impression of the city\n1 mark: uses subject terminology accurately",
+      "max_marks": 6
+     },
+     "solution": "Key ideas: personification ('eyes blink', 'stare'), constant activity ('never sleeps', 'restless') and people made to seem small",
+     "hint": "Find every verb that makes the city seem alive"
+    }
+   ]
+  },
+  {
+   "id": "english_language.reading",
+   "title": "Reading & structure",
+   "aliases": [
+    "structural features",
+    "foreshadowing",
+    "flashback",
+    "cyclical structure",
+    "narrative perspective",
+    "inference",
+    "cliffhanger",
+    "narrator"
+   ],
+   "questions": [
+    {
+     "id": "r01",
+     "level": 1,
+     "text": "What is a flashback?",
+     "choice": {
+      "options": [
+       "A scene that moves back in time to earlier events",
+       "A clue early in a text about something that happens later",
+       "An ending that returns to the opening scene",
+       "A sudden twist in the final line"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is foreshadowing",
+       null,
+       null
+      ]
+     },
+     "solution": "A flashback interrupts the present story to show earlier events",
+     "hint": "Think of 'flash' plus 'back'"
+    },
+    {
+     "id": "r02",
+     "level": 1,
+     "text": "What is foreshadowing?",
+     "choice": {
+      "options": [
+       "A scene set in the past",
+       "A clue early in a text about something that happens later",
+       "A story told by a narrator who uses 'I'",
+       "A detailed description of a setting"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is a flashback",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Foreshadowing hints at future events and builds suspense",
+     "hint": "A shadow can appear before the person arrives"
+    },
+    {
+     "id": "r03",
+     "level": 1,
+     "text": "A story is told by one of its characters, using 'I' and 'me'. Which narrative perspective is this?",
+     "choice": {
+      "options": [
+       "Second person",
+       "Third person omniscient",
+       "First person",
+       "Third person limited"
+      ],
+      "correct": 2
+     },
+     "solution": "'I' and 'me' show a first-person narrator who is a character in the story",
+     "hint": "Which person is 'I' in grammar?"
+    },
+    {
+     "id": "r04",
+     "level": 1,
+     "text": "What is a cyclical structure?",
+     "choice": {
+      "options": [
+       "The events are told in strict time order",
+       "The story is told by several narrators in turn",
+       "The story stops at a tense, unresolved moment",
+       "The text ends where it began, returning to the opening idea or setting"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "That is a cliffhanger",
+       null
+      ]
+     },
+     "solution": "A cyclical structure ends by returning to the opening, like a circle",
+     "hint": "Think of a cycle or a circle"
+    },
+    {
+     "id": "r05",
+     "level": 1,
+     "text": "Give the term for an ending that leaves the reader in suspense, often at the end of a chapter or episode.",
+     "short": {
+      "accept": [
+       "cliffhanger",
+       "cliff hanger",
+       "cliff-hanger"
+      ]
+     },
+     "solution": "A cliffhanger ends at a tense moment so the reader wants to know what happens next",
+     "hint": "Picture a hero dangling over a steep drop as the episode ends"
+    },
+    {
+     "id": "r06",
+     "level": 1,
+     "text": "Give the term for working out what a text suggests but does not state directly.",
+     "short": {
+      "accept": [
+       "inference",
+       "inferring",
+       "infer",
+       "making inferences",
+       "making an inference",
+       "reading between the lines"
+      ]
+     },
+     "solution": "Inference means reading between the lines to work out implicit meaning",
+     "hint": "You use clues in the text, like a detective"
+    },
+    {
+     "id": "r07",
+     "level": 2,
+     "text": "Which sentence is written in the second person?",
+     "choice": {
+      "options": [
+       "You open the door and step into the darkness.",
+       "I opened the door and stepped into the darkness.",
+       "She opened the door and stepped into the darkness.",
+       "They opened the door and stepped into the darkness."
+      ],
+      "correct": 0
+     },
+     "solution": "Second person addresses the reader as 'you'",
+     "hint": "Look at the pronoun in each sentence"
+    },
+    {
+     "id": "r08",
+     "level": 2,
+     "text": "What is the difference between explicit and implicit information?",
+     "choice": {
+      "options": [
+       "Implicit is stated directly; explicit is suggested and must be inferred",
+       "Explicit is stated directly; implicit is suggested and must be inferred",
+       "Explicit is found only in titles; implicit only in endings",
+       "Explicit is about characters; implicit is about settings"
+      ],
+      "correct": 1
+     },
+     "solution": "Explicit = stated openly; implicit = hinted at, so the reader has to infer it",
+     "hint": "'Ex-' suggests something that is out in the open"
+    },
+    {
+     "id": "r09",
+     "level": 2,
+     "text": "Which describes a third-person omniscient narrator?",
+     "choice": {
+      "options": [
+       "A character who tells the story using 'I'",
+       "A narrator who knows only one character's thoughts",
+       "An all-knowing narrator who can reveal any character's thoughts",
+       "A narrator who speaks directly to 'you'"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is a first-person narrator",
+       "That is a third-person limited narrator",
+       null,
+       null
+      ]
+     },
+     "solution": "'Omniscient' means all-knowing: the narrator can enter any character's mind",
+     "hint": "'Omni' means all"
+    },
+    {
+     "id": "r10",
+     "level": 2,
+     "text": "What does it mean if a story opens 'in medias res'?",
+     "choice": {
+      "options": [
+       "It starts with a long description of the setting",
+       "It starts at the end and goes backwards",
+       "It starts with a list of the characters",
+       "It starts in the middle of the action"
+      ],
+      "correct": 3
+     },
+     "solution": "In medias res is Latin for 'into the middle of things'",
+     "hint": "Translate the Latin: 'res' means things"
+    },
+    {
+     "id": "r11",
+     "level": 2,
+     "text": "A story opens with a funeral, then jumps back ten years to show the characters as children. Give the term for this jump back in time.",
+     "short": {
+      "accept": [
+       "flashback",
+       "flash back",
+       "flash-back"
+      ],
+      "reject": [
+       "foreshadowing"
+      ],
+      "feedback": {
+       "foreshadowing": "Foreshadowing hints at the future; this scene shows the past"
+      }
+     },
+     "solution": "A flashback shows events from earlier in time",
+     "hint": "The story moves to earlier events, then returns to the present"
+    },
+    {
+     "id": "r12",
+     "level": 2,
+     "text": "Give the term for the turning point of highest tension in a story, usually near the end.",
+     "short": {
+      "accept": [
+       "climax"
+      ]
+     },
+     "solution": "The climax is the moment of greatest tension, just before the resolution",
+     "hint": "It comes just before the resolution"
+    },
+    {
+     "id": "r13",
+     "level": 3,
+     "text": "'Years later, Sam would remember that morning: the frost on the window, the empty kitchen, the note on the table.' What does this opening suggest?",
+     "choice": {
+      "options": [
+       "That morning was important and something significant happened",
+       "Sam has forgotten everything about that morning",
+       "The story is set on another planet",
+       "Sam is speaking directly to the reader as 'you'"
+      ],
+      "correct": 0
+     },
+     "solution": "'Would remember' looks ahead, hinting that the morning was significant (foreshadowing)",
+     "hint": "Why would someone remember one morning for years?"
+    },
+    {
+     "id": "r14",
+     "level": 3,
+     "text": "A story begins with a girl watching the sea from her window and ends with her, now an old woman, watching the same sea. Which structural feature is this?",
+     "choice": {
+      "options": [
+       "Flashback",
+       "Cyclical structure",
+       "In medias res",
+       "Cliffhanger"
+      ],
+      "correct": 1
+     },
+     "solution": "The ending mirrors the opening, so it is a cyclical structure",
+     "hint": "Compare the first and last scenes"
+    },
+    {
+     "id": "r15",
+     "level": 3,
+     "text": "Which of these openings moves the reader's focus from a wide setting to a small detail?",
+     "choice": {
+      "options": [
+       "A candle flickered. It stood in a window of the town.",
+       "The town was cold. The town was quiet. The town was asleep.",
+       "The whole town lay under snow. In one window, a candle flickered.",
+       "She lit a candle and smiled at her brother."
+      ],
+      "correct": 2
+     },
+     "solution": "It starts with the whole town, then zooms in on one candle",
+     "hint": "Think of a camera starting wide, then zooming in"
+    },
+    {
+     "id": "r16",
+     "level": 3,
+     "text": "'Tom slammed his bag down, ignored his mother's greeting and stomped upstairs.' What can you infer about Tom?",
+     "choice": {
+      "options": [
+       "He is excited about his day",
+       "He is very sleepy",
+       "He is ill with a cold",
+       "He is angry or upset"
+      ],
+      "correct": 3
+     },
+     "solution": "'Slammed', 'ignored' and 'stomped' suggest anger or upset",
+     "hint": "Look closely at the three verbs"
+    },
+    {
+     "id": "r17",
+     "level": 3,
+     "text": "'Jess counted the coins in her purse twice, then put the cake back on the shelf.' What can you infer she does not have enough of? Give one word.",
+     "short": {
+      "accept": [
+       "money",
+       "cash",
+       "coins"
+      ]
+     },
+     "solution": "She checks her purse and puts the cake back, so she cannot afford it: she lacks money",
+     "hint": "Why might someone put a cake back after checking their purse?"
+    },
+    {
+     "id": "r18",
+     "level": 3,
+     "text": "A story is narrated by Ellie, who uses 'I' and 'my'. Which narrative perspective is this? Give the term.",
+     "short": {
+      "accept": [
+       "first person",
+       "first-person",
+       "1st person",
+       "first person narrative",
+       "first person narrator",
+       "first person perspective"
+      ],
+      "reject": [
+       "third person",
+       "second person"
+      ]
+     },
+     "solution": "The narrator uses 'I', so it is first person",
+     "hint": "Ellie is a character telling her own story"
+    },
+    {
+     "id": "r19",
+     "level": 4,
+     "text": "Read: 'The house had been empty for years. Ivy crept over the windows. Inside, dust lay thick on every surface. Ellie pushed open the nursery door. In the corner, a rocking chair was moving.' How does the final sentence change the mood?",
+     "choice": {
+      "options": [
+       "It adds sudden tension by suggesting someone or something is there",
+       "It calms the reader by showing nothing is wrong",
+       "It reveals how the whole story ends",
+       "It makes the extract light-hearted and funny"
+      ],
+      "correct": 0
+     },
+     "solution": "After stillness and emptiness, a moving chair suggests a hidden presence, creating sudden tension",
+     "hint": "Why should a chair be moving in an empty house?"
+    },
+    {
+     "id": "r20",
+     "level": 4,
+     "text": "Read: 'The bell rang. Silence. Thirty faces turned towards the door. It opened slowly, and the new teacher walked in.' Why does the writer use the one-word sentence 'Silence.'?",
+     "choice": {
+      "options": [
+       "To list the people in the room",
+       "To create a pause that builds anticipation",
+       "To describe the teacher's appearance",
+       "To show what time of day it is"
+      ],
+      "correct": 1
+     },
+     "solution": "The one-word sentence creates a pause, so the reader waits with the class",
+     "hint": "How does a very short sentence affect the pace?"
+    },
+    {
+     "id": "r21",
+     "level": 4,
+     "text": "A story opens by describing a peaceful village in summer. The second paragraph begins: 'That was before the soldiers came.' What is the main effect of this shift?",
+     "choice": {
+      "options": [
+       "It shows the soldiers are friendly visitors",
+       "It moves the story back to the founding of the village",
+       "It signals a contrast and creates suspense about what will happen",
+       "It brings the story to an end"
+      ],
+      "correct": 2
+     },
+     "solution": "The sentence turns the peaceful opening into a threat, creating contrast and suspense",
+     "hint": "How does the word 'before' change the way you read the first paragraph?"
+    },
+    {
+     "id": "r22",
+     "level": 4,
+     "text": "'I never lie. Well, almost never. And the vase was already cracked before I touched it, honestly.' What does this suggest about the narrator?",
+     "choice": {
+      "options": [
+       "They are an omniscient narrator",
+       "They are writing in the second person",
+       "They are a completely trustworthy narrator",
+       "They may be an unreliable narrator"
+      ],
+      "correct": 3
+     },
+     "solution": "The narrator contradicts themselves and protests too much, so they may be unreliable",
+     "hint": "Do you believe the narrator about the vase?"
+    },
+    {
+     "id": "r23",
+     "level": 4,
+     "text": "Early in a story, a character notices a small crack in a dam. In the final chapter, the dam bursts and floods the town. Give the term for the writer's early mention of the crack.",
+     "short": {
+      "accept": [
+       "foreshadowing",
+       "foreshadow",
+       "chekhov's gun"
+      ],
+      "reject": [
+       "flashback"
+      ],
+      "feedback": {
+       "flashback": "A flashback goes back in time; this detail points forward to a later event"
+      }
+     },
+     "solution": "The crack foreshadows the disaster: an early hint of a later event",
+     "hint": "The early detail prepares the reader for what happens later"
+    },
+    {
+     "id": "r24",
+     "level": 4,
+     "text": "Read: 'At first the beach was perfect: golden sand, children laughing, gulls circling overhead. Mia lay back and closed her eyes. When she opened them, the laughter had stopped. Everyone was staring at the sea. A long, dark shape was moving beneath the waves, heading for the shore.' How has the writer structured this extract to interest the reader?",
+     "rubric": {
+      "model_answer": "The writer opens with a calm, happy scene ('golden sand, children laughing') that makes the reader relax. The turning point comes when Mia opens her eyes: 'the laughter had stopped', a sudden shift in mood. The focus then narrows from the whole beach to the sea and finally to 'a long, dark shape', creating mystery. Ending with the shape 'heading for the shore' leaves the threat unresolved, so suspense builds.",
+      "mark_scheme": "1 mark: identifies the shift from calm to threat\n1 mark: comments on the narrowing focus (beach, then sea, then the shape)\n1 mark: supports points with references to the extract\n1 mark: explains the effect on the reader (tension, suspense, mystery)",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: a calm opening, a sudden shift when the laughter stops, focus narrowing to the dark shape and an unresolved ending",
+     "hint": "Compare the first sentence with the last one"
+    },
+    {
+     "id": "r25",
+     "level": 5,
+     "text": "Which statement about a third-person limited narrator is accurate?",
+     "choice": {
+      "options": [
+       "The reader follows events through one character's thoughts and feelings",
+       "The narrator uses 'I' throughout",
+       "The narrator reveals every character's private thoughts",
+       "The story is told entirely through dialogue"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That describes an omniscient narrator",
+       null
+      ]
+     },
+     "solution": "Third-person limited uses 'he' or 'she' but stays close to one character's mind",
+     "hint": "'Limited' tells you how much the narrator reveals"
+    },
+    {
+     "id": "r26",
+     "level": 5,
+     "text": "'Mr Hale was always first at the office. He hung his coat on the same hook, sharpened the same pencil and ate the same cheese sandwich at exactly one o'clock.' Which inference is supported by the text?",
+     "choice": {
+      "options": [
+       "He is reckless and spontaneous",
+       "He follows a fixed, careful routine",
+       "He has just started the job",
+       "He dislikes cheese"
+      ],
+      "correct": 1
+     },
+     "solution": "The repetition of 'the same' and the word 'exactly' show a fixed, careful routine",
+     "hint": "Notice which words are repeated"
+    },
+    {
+     "id": "r27",
+     "level": 5,
+     "text": "A story opens with a lonely boy ignoring a knock at his door. It ends with him answering the same knock. What is the effect of this structure?",
+     "choice": {
+      "options": [
+       "It shows that nothing in the story has mattered",
+       "It introduces a new main character at the end",
+       "It mirrors the opening to show how the boy has changed",
+       "It is a flashback to the boy's early life"
+      ],
+      "correct": 2
+     },
+     "solution": "The echo of the opening (a cyclical structure) highlights the boy's change: now he opens the door",
+     "hint": "Compare what the boy does at the start and at the end"
+    },
+    {
+     "id": "r28",
+     "level": 5,
+     "text": "A novel's first chapter is set in 2020. Chapter two begins: 'Thirty years earlier...' Which statement about this structure is accurate?",
+     "choice": {
+      "options": [
+       "Chapter two foreshadows the future",
+       "The novel must have a cyclical structure",
+       "Chapter two must be told in the second person",
+       "Chapter two is a flashback that may shed light on events in chapter one"
+      ],
+      "correct": 3
+     },
+     "solution": "Moving thirty years back is a flashback, often used to explain the present",
+     "hint": "Which direction in time does 'earlier' take us?"
+    },
+    {
+     "id": "r29",
+     "level": 5,
+     "text": "A narrator knows what every character is thinking and can describe events that no single character could see. Give the term for this kind of narrator (one word).",
+     "short": {
+      "accept": [
+       "omniscient",
+       "omniscient narrator",
+       "third person omniscient",
+       "all-knowing",
+       "all knowing"
+      ]
+     },
+     "solution": "An omniscient (all-knowing) narrator can enter any character's mind",
+     "hint": "The word starts with 'omni', meaning all"
+    },
+    {
+     "id": "r30",
+     "level": 5,
+     "text": "Read: 'Rosa sat at the bus stop. The bus was late again. She thought of her grandmother's kitchen: the smell of bread, the radio murmuring in the corner. That kitchen was gone now, sold with the house. The bus arrived and opened its doors. Rosa stayed where she was, holding the old key.' A student said: 'Nothing happens here, so the reader learns nothing about Rosa.' To what extent do you agree?",
+     "rubric": {
+      "model_answer": "I disagree. Although there is little action, the writer reveals Rosa's feelings through her thoughts. The memory of 'the smell of bread' and the radio suggests warmth and comfort, but 'That kitchen was gone now' shows loss. The ending is powerful: she lets the bus go and holds 'the old key', implying she cannot let go of the past. The structure moves from the present into memory and back, so the quiet scene makes us focus on her grief.",
+      "mark_scheme": "1 mark: gives a clear view on the statement\n1 mark: comments on what Rosa's memories reveal\n1 mark: analyses language with a quotation (e.g. 'gone now')\n1 mark: comments on the ending (the bus, 'the old key')\n1 mark: comments on structure (present, memory, back to the present)\n1 mark: explains the effect on the reader",
+      "max_marks": 6
+     },
+     "solution": "Key ideas: Rosa's memories reveal warmth and loss; letting the bus go and holding the key suggest she cannot move on",
+     "hint": "Look at what Rosa thinks about and what she does at the end"
+    }
+   ]
+  },
+  {
+   "id": "english_language.spag",
+   "title": "Grammar & punctuation",
+   "aliases": [
+    "spag",
+    "word classes",
+    "sentence types",
+    "clauses",
+    "apostrophes",
+    "homophones",
+    "punctuation",
+    "grammar",
+    "semicolons"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which word is a noun in this sentence? 'The happy dog ran quickly.'",
+     "choice": {
+      "options": [
+       "dog",
+       "happy",
+       "ran",
+       "quickly"
+      ],
+      "correct": 0
+     },
+     "solution": "'Dog' is a noun: it names a thing (an animal)",
+     "hint": "A noun names a person, place, thing or idea"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "Which word is a verb in this sentence? 'Maya carefully painted the old fence.'",
+     "choice": {
+      "options": [
+       "carefully",
+       "painted",
+       "old",
+       "fence"
+      ],
+      "correct": 1
+     },
+     "solution": "'Painted' is the verb: it is the action",
+     "hint": "Find the action word"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "Which punctuation mark shows possession, as in 'the cat's bowl'?",
+     "choice": {
+      "options": [
+       "Comma",
+       "Colon",
+       "Apostrophe",
+       "Hyphen"
+      ],
+      "correct": 2
+     },
+     "solution": "An apostrophe shows possession: the bowl belongs to the cat",
+     "hint": "Look at the mark between the 't' and the 's'"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Which word is an adverb in this sentence? 'She whispered softly to the frightened child.'",
+     "choice": {
+      "options": [
+       "whispered",
+       "frightened",
+       "child",
+       "softly"
+      ],
+      "correct": 3
+     },
+     "solution": "'Softly' is an adverb: it describes how she whispered",
+     "hint": "Adverbs often end in -ly and describe a verb"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "What is the word class of 'beautiful' in 'a beautiful garden'? Give the term.",
+     "short": {
+      "accept": [
+       "adjective"
+      ],
+      "reject": [
+       "adverb"
+      ],
+      "feedback": {
+       "adverb": "An adverb describes a verb; 'beautiful' describes the noun 'garden'"
+      }
+     },
+     "solution": "'Beautiful' describes the noun 'garden', so it is an adjective",
+     "hint": "It describes the noun 'garden'"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "Give the name of the punctuation mark made of three dots (...) that shows a pause or that words have been left out.",
+     "short": {
+      "accept": [
+       "ellipsis",
+       "ellipses",
+       "dot dot dot"
+      ]
+     },
+     "solution": "An ellipsis (...) shows a pause, a trailing off or words left out",
+     "hint": "Its name comes from a Greek word meaning 'leaving out'"
+    },
+    {
+     "id": "g07",
+     "level": 2,
+     "text": "Which sentence uses 'their' correctly?",
+     "choice": {
+      "options": [
+       "The players lifted their trophy.",
+       "Their is a shop on the corner.",
+       "Their going to be late.",
+       "Put the box over their, by the door."
+      ],
+      "correct": 0
+     },
+     "solution": "'Their' means 'belonging to them': the players' trophy",
+     "hint": "'Their' shows that something belongs to people"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "One of these sentences is missing an apostrophe. Which one?",
+     "choice": {
+      "options": [
+       "The dog wagged its tail.",
+       "Its raining again today.",
+       "The bird built its nest in the tree.",
+       "The company lost its money."
+      ],
+      "correct": 1
+     },
+     "solution": "'Its raining' should be 'It's raining' (it is raining); 'its' without an apostrophe means 'belonging to it'",
+     "hint": "Try replacing 'its' with 'it is' in each sentence"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "Which is a compound sentence?",
+     "choice": {
+      "options": [
+       "Because the pool was closed, I went home.",
+       "The pool was closed.",
+       "I wanted to swim, but the pool was closed.",
+       "Closed again!"
+      ],
+      "correct": 2,
+      "feedback": [
+       "This is complex: 'Because the pool was closed' is a subordinate clause",
+       "This is a simple sentence",
+       null,
+       "This is a minor sentence"
+      ]
+     },
+     "solution": "A compound sentence joins two main clauses with a conjunction such as 'but'",
+     "hint": "Look for two main clauses joined by 'and', 'but' or 'or'"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Which sentence uses a semicolon correctly?",
+     "choice": {
+      "options": [
+       "The rain; stopped and the sun came out.",
+       "I bought; apples, pears and plums.",
+       "Although the rain stopped; we stayed inside.",
+       "The rain stopped; the sun came out."
+      ],
+      "correct": 3
+     },
+     "solution": "A semicolon joins two closely related main clauses: both halves could stand alone",
+     "hint": "Check that the words on both sides could be sentences on their own"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Fill the gap with 'affect' or 'effect': 'The cold weather will ___ our plans for the picnic.' Type the word.",
+     "short": {
+      "accept": [
+       "affect"
+      ],
+      "reject": [
+       "effect"
+      ],
+      "feedback": {
+       "effect": "'Effect' is usually a noun (a result). Here you need the verb"
+      }
+     },
+     "solution": "'Affect' is the verb (to influence); 'effect' is usually the noun (the result)",
+     "hint": "Is the missing word a verb or a noun?"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "Fill the gap with 'to', 'too' or 'two': 'We were ___ late to catch the bus.' Type the word.",
+     "short": {
+      "accept": [
+       "too"
+      ],
+      "reject": [
+       "to",
+       "two"
+      ]
+     },
+     "solution": "'Too' means 'more than enough' or 'also': we were too late",
+     "hint": "Which spelling means 'more than enough'?"
+    },
+    {
+     "id": "g13",
+     "level": 3,
+     "text": "Which sentence is complex (it contains a subordinate clause)?",
+     "choice": {
+      "options": [
+       "When the alarm rang, everyone left the building.",
+       "Everyone left the building.",
+       "The alarm rang and everyone left.",
+       "Out, now!"
+      ],
+      "correct": 0
+     },
+     "solution": "'When the alarm rang' is a subordinate clause: it cannot stand alone",
+     "hint": "Look for a clause starting with a word such as 'when', 'because' or 'although'"
+    },
+    {
+     "id": "g14",
+     "level": 3,
+     "text": "Which sentence is in the passive voice?",
+     "choice": {
+      "options": [
+       "The ball broke the window.",
+       "The window was broken by the ball.",
+       "The children kicked the ball.",
+       "The ball flew towards the window."
+      ],
+      "correct": 1
+     },
+     "solution": "In the passive, the thing affected comes first and the doer follows 'by': 'was broken by the ball'",
+     "hint": "Look for 'was' + a past participle + 'by'"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "Which sentence uses a colon correctly?",
+     "choice": {
+      "options": [
+       "You will: need a pen.",
+       "My favourite: colour is blue.",
+       "You will need three things: a pen, a ruler and a calculator.",
+       "She ran: quickly home."
+      ],
+      "correct": 2
+     },
+     "solution": "A colon can introduce a list after a complete clause",
+     "hint": "A colon should come after a complete clause"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "Several girls share one changing room. Where should the apostrophe go in 'the girls changing room'?",
+     "choice": {
+      "options": [
+       "Before the s: girl's",
+       "No apostrophe is needed",
+       "After changing: changing's",
+       "After the s: girls'"
+      ],
+      "correct": 3
+     },
+     "solution": "For a plural noun ending in s, the apostrophe goes after the s: the girls' changing room",
+     "hint": "First decide whether there is one girl or many"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "What is the word class of 'and', 'but' and 'because'? Give the term.",
+     "short": {
+      "accept": [
+       "conjunction",
+       "conjunctions",
+       "connective",
+       "connectives"
+      ]
+     },
+     "solution": "They are conjunctions: they join words, phrases or clauses",
+     "hint": "These words join clauses together"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "Give the term for a shortened word in which an apostrophe replaces missing letters, such as 'can't' or 'we'll'.",
+     "short": {
+      "accept": [
+       "contraction",
+       "contractions",
+       "omission",
+       "apostrophe of omission"
+      ]
+     },
+     "solution": "A contraction (apostrophe of omission): can't = cannot, we'll = we will",
+     "hint": "Two words are squeezed together into one"
+    },
+    {
+     "id": "g19",
+     "level": 4,
+     "text": "How many apostrophes are missing from this sentence? 'Its Sams turn to choose, but hes gone home.'",
+     "choice": {
+      "options": [
+       "Three",
+       "One",
+       "Two",
+       "Four"
+      ],
+      "correct": 0
+     },
+     "solution": "Three: It's (it is), Sam's (belonging to Sam) and he's (he has)",
+     "hint": "Check each word for a missing letter or for ownership"
+    },
+    {
+     "id": "g20",
+     "level": 4,
+     "text": "Which sentence contains a comma splice (two main clauses joined only by a comma)?",
+     "choice": {
+      "options": [
+       "It was cold, so we stayed indoors.",
+       "It was cold, we stayed indoors.",
+       "Because it was cold, we stayed indoors.",
+       "It was so cold that we stayed indoors."
+      ],
+      "correct": 1
+     },
+     "solution": "'It was cold, we stayed indoors' joins two main clauses with only a comma; it needs a full stop, a semicolon or a conjunction",
+     "hint": "Find the sentence where both halves could stand alone and only a comma joins them"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "In 'The boy who lives next door plays the drums', what is 'who lives next door'?",
+     "choice": {
+      "options": [
+       "Main clause",
+       "Minor sentence",
+       "Relative clause",
+       "Rhetorical question"
+      ],
+      "correct": 2
+     },
+     "solution": "'Who lives next door' is a relative clause: it starts with 'who' and adds information about the boy",
+     "hint": "It begins with a relative pronoun and describes the noun before it"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "Which part of this sentence is the subordinate clause? 'Although it was raining, we walked to school.'",
+     "choice": {
+      "options": [
+       "we walked to school",
+       "to school",
+       "we walked",
+       "Although it was raining"
+      ],
+      "correct": 3
+     },
+     "solution": "'Although it was raining' cannot stand alone, so it is the subordinate clause",
+     "hint": "Which part would not make sense as a sentence on its own?"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "Rewrite 'The chef cooked the meal.' in the passive voice. Send the whole sentence.",
+     "short": {
+      "accept": [
+       "The meal was cooked by the chef",
+       "The meal was cooked"
+      ]
+     },
+     "solution": "Passive: The meal was cooked by the chef (the thing affected becomes the subject)",
+     "hint": "Start with what was cooked, then use 'was' and 'by'"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "One word is spelt wrongly: 'The weather was definately better on Wednesday.' Type the correct spelling of that word.",
+     "short": {
+      "accept": [
+       "definitely"
+      ],
+      "reject": [
+       "definately"
+      ],
+      "form": "strict",
+      "feedback": {
+       "definately": "That is the misspelling. Remember that the word 'finite' is inside it"
+      }
+     },
+     "solution": "Definitely: think de-FINITE-ly",
+     "hint": "Look for the word ending in -ly"
+    },
+    {
+     "id": "g25",
+     "level": 5,
+     "text": "Which sentence is in standard English?",
+     "choice": {
+      "options": [
+       "We were going to the match.",
+       "We was going to the match.",
+       "Me and him was going to the match.",
+       "We been going to the match yesterday."
+      ],
+      "correct": 0
+     },
+     "solution": "Standard English uses 'we were'; 'we was' is a non-standard verb form",
+     "hint": "Check that the verb agrees with 'we'"
+    },
+    {
+     "id": "g26",
+     "level": 5,
+     "text": "Which sentence is written correctly?",
+     "choice": {
+      "options": [
+       "I could of won the race.",
+       "I could have won the race.",
+       "I could off won the race.",
+       "I could has won the race."
+      ],
+      "correct": 1
+     },
+     "solution": "'Could have' (shortened to 'could've') is correct; 'could of' is a common error",
+     "hint": "Say 'could've' slowly: which two words is it made of?"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "What is the function of the commas in 'My brother, who is a chef, cooked dinner.'?",
+     "choice": {
+      "options": [
+       "They separate items in a list",
+       "They show where speech begins",
+       "They mark off extra information (parenthesis)",
+       "They join two main clauses"
+      ],
+      "correct": 2
+     },
+     "solution": "The pair of commas marks off extra information; the sentence still works without it",
+     "hint": "Try reading the sentence without the words between the commas"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "Why is a semicolon used in 'Some people love winter; others long for summer.'?",
+     "choice": {
+      "options": [
+       "It introduces a list",
+       "It shows possession",
+       "It marks off a subordinate clause",
+       "It links two closely related main clauses"
+      ],
+      "correct": 3
+     },
+     "solution": "Both halves are main clauses with a close link (a contrast), so a semicolon joins them",
+     "hint": "Could each half stand alone as a sentence?"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "One word is spelt wrongly: 'The hotel offered cheap accomodation near the beach.' Type the correct spelling of that word.",
+     "short": {
+      "accept": [
+       "accommodation"
+      ],
+      "reject": [
+       "accomodation"
+      ],
+      "form": "strict",
+      "feedback": {
+       "accomodation": "That is the misspelling: the word has a double c and a double m"
+      }
+     },
+     "solution": "Accommodation has a double c and a double m",
+     "hint": "Count the c's and the m's"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "Give the term for a clause that cannot stand alone as a sentence, such as 'because it was late'.",
+     "short": {
+      "accept": [
+       "subordinate clause",
+       "dependent clause",
+       "subordinate",
+       "subordinate clauses",
+       "sub clause",
+       "sub-clause",
+       "adverbial clause"
+      ],
+      "reject": [
+       "main clause"
+      ],
+      "feedback": {
+       "main clause": "A main clause can stand alone; this one cannot"
+      }
+     },
+     "solution": "A subordinate (dependent) clause needs a main clause to make sense",
+     "hint": "It relies on the main clause to make sense"
+    }
+   ]
+  },
+  {
+   "id": "english_language.writing",
+   "title": "Writing skills",
+   "aliases": [
+    "persuasive devices",
+    "writing to argue",
+    "audience and purpose",
+    "form",
+    "discourse markers",
+    "paragraphing",
+    "persuasive writing",
+    "letter writing"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What is a rhetorical question?",
+     "choice": {
+      "options": [
+       "A question asked for effect, not to get an answer",
+       "A question with a single factual answer",
+       "A question answered with a statistic",
+       "A question asked by a character in dialogue"
+      ],
+      "correct": 0
+     },
+     "solution": "A rhetorical question makes the reader think, e.g. 'Who wouldn't want a cleaner town?'",
+     "hint": "Does the writer expect the reader to reply?"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "What is a discourse marker?",
+     "choice": {
+      "options": [
+       "A punctuation mark that ends a sentence",
+       "A word or phrase that links ideas and guides the reader, such as 'however'",
+       "The headline at the top of an article",
+       "A word that describes a noun"
+      ],
+      "correct": 1
+     },
+     "solution": "Discourse markers (however, furthermore, finally) link and order ideas",
+     "hint": "Think of words that often start paragraphs, such as 'Firstly' or 'In contrast'"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "A formal letter begins 'Dear Sir or Madam'. How should it end?",
+     "choice": {
+      "options": [
+       "Yours sincerely",
+       "Love from",
+       "Yours faithfully",
+       "Cheers"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Use 'Yours sincerely' when you have named the person, e.g. 'Dear Mr Khan'",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "If you do not know the person's name, end with 'Yours faithfully'",
+     "hint": "Do you know the name of the person you are writing to?"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "What does 'audience' mean when you plan a piece of writing?",
+     "choice": {
+      "options": [
+       "The reason the writing is produced",
+       "The type of text, such as a letter or speech",
+       "The attitude or feeling of the writing",
+       "The people the writing is aimed at"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is purpose",
+       "That is form",
+       "That is tone",
+       null
+      ]
+     },
+     "solution": "Audience = who the writing is for, e.g. teenagers, parents or a council",
+     "hint": "Think of who listens at a concert"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "Give the term for using three words or ideas in a row for impact, as in 'fast, simple and cheap'.",
+     "short": {
+      "accept": [
+       "rule of three",
+       "tricolon",
+       "triplet",
+       "tripling",
+       "list of three",
+       "triad",
+       "triple"
+      ]
+     },
+     "solution": "The rule of three (tricolon) makes ideas memorable and persuasive",
+     "hint": "Count the adjectives"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "Give the term for the reason a text is written, for example to argue, inform or persuade.",
+     "short": {
+      "accept": [
+       "purpose"
+      ]
+     },
+     "solution": "Purpose = why the text is written: to argue, persuade, inform, explain, advise or describe",
+     "hint": "Writers plan this together with their audience and form"
+    },
+    {
+     "id": "w07",
+     "level": 2,
+     "text": "Which sentence is written in a formal register?",
+     "choice": {
+      "options": [
+       "I am writing to express my concern about the proposed changes.",
+       "Hey, just wanted to say the changes are rubbish.",
+       "OMG, these changes are so annoying!",
+       "Gonna tell you why these changes are a joke."
+      ],
+      "correct": 0
+     },
+     "solution": "A formal register avoids slang and uses full, polite sentences",
+     "hint": "Which one would you write to a head teacher?"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "Which discourse marker introduces a contrasting idea?",
+     "choice": {
+      "options": [
+       "Furthermore",
+       "However",
+       "Firstly",
+       "Similarly"
+      ],
+      "correct": 1,
+      "feedback": [
+       "'Furthermore' adds a similar point",
+       null,
+       null,
+       "'Similarly' shows a comparison, not a contrast"
+      ]
+     },
+     "solution": "'However' signals a contrast or a counter-point",
+     "hint": "Which word warns the reader that the next idea goes the other way?"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "Which of these is a statistic rather than an opinion?",
+     "choice": {
+      "options": [
+       "Walking to school is the best way to start the day.",
+       "Shouldn't we all walk more?",
+       "Seven out of ten students walk to school.",
+       "Walk, talk and wake up your brain!"
+      ],
+      "correct": 2
+     },
+     "solution": "A statistic gives numerical data: seven out of ten",
+     "hint": "Look for numbers or data"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "Which sentence uses direct address?",
+     "choice": {
+      "options": [
+       "The park is dirty.",
+       "Parks are important to many people.",
+       "The council has ignored the park.",
+       "You deserve a cleaner, greener park."
+      ],
+      "correct": 3
+     },
+     "solution": "Direct address speaks to the reader as 'you'",
+     "hint": "Which sentence speaks straight to the reader?"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "'Firstly', 'In addition' and 'In conclusion' are examples of what? Give the term.",
+     "short": {
+      "accept": [
+       "discourse markers",
+       "discourse marker",
+       "connectives",
+       "connective",
+       "linking words",
+       "linking phrases",
+       "adverbials"
+      ]
+     },
+     "solution": "They are discourse markers, which guide the reader through an argument",
+     "hint": "They signpost the order and structure of ideas"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "Give the term for a short personal story used to support an argument.",
+     "short": {
+      "accept": [
+       "anecdote",
+       "anecdotes",
+       "personal anecdote"
+      ],
+      "reject": [
+       "antidote"
+      ],
+      "feedback": {
+       "antidote": "An antidote cures a poison; the word you need is different"
+      }
+     },
+     "solution": "An anecdote makes an argument feel real and relatable",
+     "hint": "It is a little story from real life"
+    },
+    {
+     "id": "w13",
+     "level": 3,
+     "text": "A student is writing to the head teacher to argue for a longer lunch break. Which opening suits this audience and purpose?",
+     "choice": {
+      "options": [
+       "Dear Mrs Patel, I am writing to propose a longer lunch break for all students.",
+       "Yo Mrs Patel, lunch is way too short lol.",
+       "Once upon a time, there was a very short lunch break.",
+       "LUNCH BREAK SHOCK!"
+      ],
+      "correct": 0
+     },
+     "solution": "A letter to a head teacher needs a formal greeting and a clear, polite statement of purpose",
+     "hint": "The audience is a head teacher and the form is a letter"
+    },
+    {
+     "id": "w14",
+     "level": 3,
+     "text": "Which feature would you expect in a newspaper article but NOT in a formal letter?",
+     "choice": {
+      "options": [
+       "Paragraphs",
+       "A headline",
+       "Formal vocabulary",
+       "Full sentences"
+      ],
+      "correct": 1
+     },
+     "solution": "Articles have headlines (and often subheadings); letters do not",
+     "hint": "What is printed in large type at the top of a news story?"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "'Do you really want your children breathing polluted air every day?' Which persuasive technique is this sentence?",
+     "choice": {
+      "options": [
+       "Statistic",
+       "Anecdote",
+       "Rhetorical question",
+       "Expert opinion"
+      ],
+      "correct": 2
+     },
+     "solution": "It is a rhetorical question: no answer is expected, but the reader is pushed to agree",
+     "hint": "Look at the punctuation at the end"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "'Dr Lee, a heart specialist, says regular exercise is one of the best things you can do for your health.' Which persuasive technique is this?",
+     "choice": {
+      "options": [
+       "Anecdote",
+       "Rhetorical question",
+       "Hyperbole",
+       "Expert opinion"
+      ],
+      "correct": 3
+     },
+     "solution": "Quoting a specialist is expert opinion, which makes the argument seem more trustworthy",
+     "hint": "Who is being quoted, and why should we trust them?"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "Which word is the imperative (command) verb in 'Stop wasting water now!'? Type the word.",
+     "short": {
+      "accept": [
+       "stop"
+      ]
+     },
+     "solution": "'Stop' is an imperative verb: it gives a command",
+     "hint": "Which word tells the reader what to do?"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "Letters, speeches, articles and leaflets are different types of text. What is the term for the type of text you are asked to write? Give the term.",
+     "short": {
+      "accept": [
+       "form",
+       "text type",
+       "type of text",
+       "format",
+       "genre"
+      ]
+     },
+     "solution": "Form is the type of text, such as a letter, speech, article or leaflet",
+     "hint": "Writers think about this together with audience and purpose"
+    },
+    {
+     "id": "w19",
+     "level": 4,
+     "text": "Read: 'Every day, plastic pours into our oceans. Imagine a baby turtle tangled in your rubbish. Is that the world you want? We must act now.' Which technique is 'Imagine a baby turtle tangled in your rubbish'?",
+     "choice": {
+      "options": [
+       "Emotive language with direct address",
+       "Statistic",
+       "Expert opinion",
+       "Counter-argument"
+      ],
+      "correct": 0
+     },
+     "solution": "It uses emotive language (a helpless baby turtle) and direct address ('your rubbish') to make the reader feel responsible",
+     "hint": "How is the reader meant to feel, and who is 'your'?"
+    },
+    {
+     "id": "w20",
+     "level": 4,
+     "text": "A speech argues that school uniform should be scrapped. Which sentence is a counter-argument?",
+     "choice": {
+      "options": [
+       "Uniform is uncomfortable and expensive.",
+       "Some people claim uniform stops students judging each other's clothes.",
+       "Students should be free to express themselves.",
+       "Scrapping uniform would save families money."
+      ],
+      "correct": 1
+     },
+     "solution": "A counter-argument presents the opposing view, ready to be rebutted",
+     "hint": "Which sentence gives the other side's view?"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "A student writes a speech for Year 7 pupils to encourage them to join school clubs. Which sentence suits this audience and purpose?",
+     "choice": {
+      "options": [
+       "Pursuant to school regulations, extracurricular participation is advisable.",
+       "Clubs. Whatever.",
+       "Joining a club is a brilliant way to make new friends, so why not try one this week?",
+       "In 1987 the first club was formed at this school."
+      ],
+      "correct": 2
+     },
+     "solution": "It is friendly and encouraging, and speaks directly to young listeners",
+     "hint": "Think about the age of the listeners and what the speech wants them to do"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "Read: 'Our town needs a new skate park. Young people have nowhere to go. In a survey of local teenagers, eight out of ten said they were bored at weekends.' What is the purpose of the final sentence?",
+     "choice": {
+      "options": [
+       "To introduce a counter-argument",
+       "To describe the setting",
+       "To entertain with a story",
+       "To support the argument with evidence"
+      ],
+      "correct": 3
+     },
+     "solution": "The survey figure gives evidence for the claim that young people need somewhere to go",
+     "hint": "What kind of information does the last sentence give?"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "A text begins: 'Good morning, everyone. Thank you all for coming today.' Which form of writing is this? Give one word.",
+     "short": {
+      "accept": [
+       "speech",
+       "talk",
+       "address",
+       "presentation"
+      ]
+     },
+     "solution": "Greeting a live audience shows that it is a speech",
+     "hint": "How would you begin if you were standing in front of an audience?"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "Write the opening paragraph of a letter to your local council arguing that your town needs more litter bins.",
+     "rubric": {
+      "model_answer": "Dear Sir or Madam, I am writing to urge the council to install more litter bins in our town centre. At present there are only two bins along the whole high street, and by Saturday evening they overflow. Have you seen the crisp packets blowing across the market square? Litter is not only ugly; it harms wildlife and costs the council money to clear. More bins would make our town cleaner, healthier and more welcoming for everyone.",
+      "mark_scheme": "1 mark: formal greeting and register suitable for a council\n1 mark: clear viewpoint stated at the start\n1 mark: at least one persuasive device used well (e.g. rhetorical question, rule of three)\n1 mark: accurate spelling, punctuation and sentences",
+      "max_marks": 4
+     },
+     "solution": "A strong opening has a formal greeting, a clear viewpoint, a persuasive device and accurate spelling and punctuation",
+     "hint": "Start with the correct greeting, then say exactly what you want the council to do"
+    },
+    {
+     "id": "w25",
+     "level": 5,
+     "text": "Which statement about the conventions of a formal letter is accurate?",
+     "choice": {
+      "options": [
+       "If you begin with the person's name, you usually end with 'Yours sincerely'",
+       "You must always end with 'Yours faithfully'",
+       "You should never use paragraphs",
+       "Slang makes a formal letter more convincing"
+      ],
+      "correct": 0
+     },
+     "solution": "Named person (Dear Ms Ali): Yours sincerely. Unnamed (Dear Sir or Madam): Yours faithfully",
+     "hint": "Think about the difference between 'Dear Ms Ali' and 'Dear Sir or Madam'"
+    },
+    {
+     "id": "w26",
+     "level": 5,
+     "text": "A student writes '100% of people agree with me' in an argument. Why would an examiner see this as weak?",
+     "choice": {
+      "options": [
+       "Statistics are never allowed in argument writing",
+       "It is not believable and has no source",
+       "It is a rhetorical question",
+       "It is written in the past tense"
+      ],
+      "correct": 1
+     },
+     "solution": "Invented, unrealistic figures weaken an argument; good evidence is believable and has a source",
+     "hint": "Would a doubtful reader believe the figure?"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "Why do writers include a counter-argument in persuasive writing?",
+     "choice": {
+      "options": [
+       "To change their mind halfway through",
+       "To make the writing longer without adding ideas",
+       "To show they have considered other views, so their case seems stronger when they rebut them",
+       "To agree completely with the opposing side"
+      ],
+      "correct": 2
+     },
+     "solution": "Raising and then rebutting an opposing view makes the writer seem fair and the argument stronger",
+     "hint": "What happens to an opposing view after the writer mentions it?"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "An article moves from a personal story about one family's flooded home to national figures about flooding. What is the main effect of this structure?",
+     "choice": {
+      "options": [
+       "It confuses the reader by changing the topic",
+       "It turns the article into a fictional story",
+       "It removes all emotion from the article",
+       "It moves from a human example to the bigger picture, so the issue feels personal and widespread"
+      ],
+      "correct": 3
+     },
+     "solution": "Zooming out from one family to national figures makes the issue both relatable and serious",
+     "hint": "Think about why a writer might start small and then widen the focus"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "Give the term for the level of formality you choose to suit your audience and situation, for example formal language in a letter to a council.",
+     "short": {
+      "accept": [
+       "register",
+       "formal register",
+       "appropriate register"
+      ],
+      "reject": [
+       "tone"
+      ],
+      "feedback": {
+       "tone": "Tone is the writer's attitude or feeling; the level of formality has another name"
+      }
+     },
+     "solution": "Register is the level of formality, from formal to informal, chosen to suit audience and purpose",
+     "hint": "The same word means the list of names a teacher reads out"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "Write a paragraph for a magazine article arguing that teenagers should spend less time on their phones. Use at least two persuasive devices.",
+     "rubric": {
+      "model_answer": "How many hours did you spend scrolling yesterday? For many of us, the honest answer is 'too many'. Our phones promise connection, yet they often leave us tired and distracted. Imagine what you could do with that time instead: learn a skill, see friends face to face, or simply sleep properly. Some argue that phones keep us informed, and they do, but nobody needs to check the news at midnight. Put your phone down for one evening this week and see how much better you feel.",
+      "mark_scheme": "1 mark: clear viewpoint\n1 mark: register suits a magazine for young readers\n1 mark: first persuasive device used well (e.g. rhetorical question)\n1 mark: second persuasive device used well (e.g. rule of three, direct address)\n1 mark: counter-argument raised and rebutted\n1 mark: accurate spelling and punctuation, varied sentences",
+      "max_marks": 6
+     },
+     "solution": "A strong answer has a clear viewpoint, devices such as a rhetorical question and the rule of three, a rebutted counter-argument and accurate writing",
+     "hint": "Open with a question to the reader, then build your argument"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "english_language.y{year}.techniques",
+      "label": "Language techniques",
+      "skills": [
+       "english_language.techniques"
+      ]
+     },
+     {
+      "id": "english_language.y{year}.reading",
+      "label": "Reading & structure",
+      "skills": [
+       "english_language.reading"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "english_language.y{year}.spag",
+      "label": "Grammar & punctuation",
+      "skills": [
+       "english_language.spag"
+      ]
+     },
+     {
+      "id": "english_language.y{year}.writing",
+      "label": "Writing skills",
+      "skills": [
+       "english_language.writing"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

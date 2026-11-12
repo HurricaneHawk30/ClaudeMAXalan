@@ -1,0 +1,2663 @@
+{
+ "subject": {
+  "id": "food_nutrition",
+  "title": "Food & Nutrition",
+  "order": 74
+ },
+ "skills": [
+  {
+   "id": "food_nutrition.nutrients",
+   "title": "Nutrients & health",
+   "aliases": [
+    "macronutrients",
+    "nutrients",
+    "micronutrients",
+    "protein",
+    "carbohydrates",
+    "fats",
+    "vitamins",
+    "minerals",
+    "fibre",
+    "eatwell guide",
+    "life stages"
+   ],
+   "questions": [
+    {
+     "id": "n01",
+     "level": 1,
+     "text": "What is the main function of protein in the body?",
+     "solution": "Protein is needed for growth, repair and maintenance of body cells and tissues; it can also give energy",
+     "hint": "Think about what a growing teenager or an injured athlete needs to build",
+     "choice": {
+      "options": [
+       "Growth and repair of body cells and tissues",
+       "Providing the main source of energy",
+       "Forming strong bones and teeth",
+       "Helping the body absorb iron"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The main source of energy is carbohydrate",
+       "That is the job of calcium (with vitamin D)",
+       "That is a function of vitamin C"
+      ]
+     }
+    },
+    {
+     "id": "n02",
+     "level": 1,
+     "text": "Name the mineral needed for strong bones and teeth that is found in milk and cheese.",
+     "solution": "Calcium builds strong bones and teeth; dairy foods are a good source",
+     "hint": "Its name begins with 'cal'",
+     "short": {
+      "accept": [
+       "calcium"
+      ],
+      "reject": [
+       "iron",
+       "sodium"
+      ],
+      "feedback": {
+       "iron": "Iron is needed for red blood cells"
+      }
+     }
+    },
+    {
+     "id": "n03",
+     "level": 1,
+     "text": "Which vitamin is mainly made in the skin by the action of sunlight?",
+     "solution": "Vitamin D is made in the skin when it is exposed to sunlight; it helps the body absorb calcium",
+     "hint": "This vitamin is sometimes called the 'sunshine vitamin'",
+     "choice": {
+      "options": [
+       "Vitamin C",
+       "Vitamin D",
+       "Vitamin A",
+       "Vitamin B12"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Vitamin C comes from fruit and vegetables, not from sunlight",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n04",
+     "level": 1,
+     "text": "Which mineral is needed to make haemoglobin in red blood cells?",
+     "solution": "Iron is needed to make haemoglobin, which carries oxygen in red blood cells",
+     "hint": "A lack of this mineral can cause anaemia",
+     "choice": {
+      "options": [
+       "Calcium",
+       "Sodium",
+       "Iron",
+       "Fluoride"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Calcium is for bones and teeth",
+       "Sodium controls water balance in the body",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n05",
+     "level": 1,
+     "text": "Which nutrient, found in wholegrain foods, fruit and vegetables, keeps the digestive system healthy and prevents constipation? Give the nutrient.",
+     "solution": "Fibre (NSP) adds bulk and keeps food moving through the digestive system",
+     "hint": "Wholemeal bread has more of it than white bread",
+     "short": {
+      "accept": [
+       "fibre",
+       "fiber",
+       "dietary fibre",
+       "dietary fiber",
+       "NSP",
+       "non-starch polysaccharide",
+       "roughage"
+      ]
+     }
+    },
+    {
+     "id": "n06",
+     "level": 1,
+     "text": "How many main food groups are shown on the Eatwell Guide?",
+     "solution": "The Eatwell Guide has five main food groups, with fluids and foods to eat less often shown outside them",
+     "hint": "Count: fruit and veg, starchy foods, proteins, dairy, and oils and spreads",
+     "choice": {
+      "options": [
+       "Three",
+       "Seven",
+       "Ten",
+       "Five"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "n07",
+     "level": 1,
+     "text": "Which nutrient provides the most energy per gram?",
+     "solution": "Fat provides about 9 kcal per gram, more than twice as much as carbohydrate or protein",
+     "hint": "Compare the energy in a gram of oil with a gram of sugar",
+     "choice": {
+      "options": [
+       "Fat",
+       "Carbohydrate",
+       "Protein",
+       "Fibre"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Carbohydrate is the main energy source, but fat gives more energy per gram",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n08",
+     "level": 2,
+     "text": "Which pair contains only fat-soluble vitamins?",
+     "solution": "The fat-soluble vitamins are A, D, E and K; the B vitamins and vitamin C are water-soluble",
+     "hint": "Vitamin C and the B group dissolve in water",
+     "choice": {
+      "options": [
+       "Vitamin C and vitamin B12",
+       "Vitamin A and vitamin D",
+       "Vitamin C and vitamin D",
+       "Vitamin B1 and vitamin C"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Vitamin D is fat-soluble, but vitamin C is water-soluble",
+       null
+      ]
+     }
+    },
+    {
+     "id": "n09",
+     "level": 2,
+     "text": "Which deficiency disease, which causes bleeding gums, is caused by a lack of vitamin C? Give the disease.",
+     "solution": "A lack of vitamin C causes scurvy, with bleeding gums and slow wound healing",
+     "hint": "Sailors on long voyages used to get it until they took citrus fruit with them",
+     "short": {
+      "accept": [
+       "scurvy"
+      ],
+      "reject": [
+       "rickets",
+       "anaemia"
+      ],
+      "feedback": {
+       "rickets": "Rickets is caused by a lack of vitamin D or calcium",
+       "anaemia": "Anaemia is caused by a lack of iron"
+      }
+     }
+    },
+    {
+     "id": "n10",
+     "level": 2,
+     "text": "Which statement about high biological value (HBV) and low biological value (LBV) protein is accurate?",
+     "solution": "HBV proteins (such as meat, fish, eggs, soya and quinoa) contain all the essential amino acids; LBV proteins lack at least one",
+     "hint": "Think about which type has the complete set of essential amino acids",
+     "choice": {
+      "options": [
+       "LBV protein contains all the essential amino acids; HBV protein lacks one or more",
+       "HBV protein comes only from plants; LBV only from animals",
+       "HBV protein contains all the essential amino acids; LBV protein lacks one or more",
+       "HBV protein contains more fat than LBV protein"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is the wrong way round",
+       "Most HBV proteins come from animals, though soya and quinoa are HBV",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n11",
+     "level": 2,
+     "text": "Which food group on the Eatwell Guide should make up just over a third of what we eat, along with fruit and vegetables?",
+     "solution": "Starchy carbohydrates make up just over a third of the Eatwell Guide; fruit and vegetables make up just over another third",
+     "hint": "This group provides most of our energy",
+     "choice": {
+      "options": [
+       "Dairy and alternatives",
+       "Oil and spreads",
+       "Beans, pulses, fish, eggs, meat and other proteins",
+       "Potatoes, bread, rice, pasta and other starchy carbohydrates"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Oil and spreads are the smallest section of the Eatwell Guide",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n12",
+     "level": 2,
+     "text": "Which water-soluble vitamin, found in citrus fruits, helps the body absorb iron? Give the vitamin, for example 'vitamin K'.",
+     "solution": "Vitamin C (ascorbic acid) helps the body absorb iron, especially from plant foods",
+     "hint": "Oranges and kiwi fruit are rich in it",
+     "short": {
+      "accept": [
+       "vitamin C",
+       "vit C",
+       "ascorbic acid"
+      ]
+     }
+    },
+    {
+     "id": "n13",
+     "level": 2,
+     "text": "Which type of fat is found mainly in plant oils and oily fish and is usually liquid at room temperature?",
+     "solution": "Unsaturated fats come mainly from plants and oily fish and are usually liquid (oils) at room temperature",
+     "hint": "Olive oil is a good example",
+     "choice": {
+      "options": [
+       "Unsaturated fat",
+       "Saturated fat",
+       "Trans fat",
+       "Cholesterol"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Saturated fats come mainly from animals and are usually solid at room temperature",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n14",
+     "level": 2,
+     "text": "Which mineral, added to toothpaste and some water supplies, helps to strengthen tooth enamel? Give the mineral.",
+     "solution": "Fluoride strengthens tooth enamel and helps prevent tooth decay",
+     "hint": "Check the ingredients list on a tube of toothpaste",
+     "short": {
+      "accept": [
+       "fluoride",
+       "fluorine"
+      ]
+     }
+    },
+    {
+     "id": "n15",
+     "level": 3,
+     "text": "A vegan wants to get all the essential amino acids from two LBV proteins eaten together. Which meal does this?",
+     "solution": "Beans and wheat are LBV proteins that complement each other, giving all the essential amino acids (protein complementation)",
+     "hint": "Look for a meal combining a pulse and a cereal",
+     "choice": {
+      "options": [
+       "A plain apple",
+       "Beans on wholemeal toast",
+       "Butter on crackers",
+       "A glass of orange juice"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Butter is an animal product, so it is not vegan, and it is mostly fat",
+       null
+      ]
+     }
+    },
+    {
+     "id": "n16",
+     "level": 3,
+     "text": "A teenage girl often feels tired and looks pale. A lack of which mineral is a common cause of this?",
+     "solution": "Tiredness and pale skin are signs of iron deficiency anaemia; teenage girls need more iron because of menstruation",
+     "hint": "Think about the mineral needed for red blood cells",
+     "choice": {
+      "options": [
+       "Calcium",
+       "Sodium",
+       "Iron",
+       "Fluoride"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "n17",
+     "level": 3,
+     "text": "Which group of people is advised to take folic acid?",
+     "solution": "Folic acid (a B vitamin) reduces the risk of neural tube defects such as spina bifida in the developing baby",
+     "hint": "Folic acid helps the baby's spine and nervous system develop",
+     "choice": {
+      "options": [
+       "Toddlers under 2",
+       "People over 80 only",
+       "Athletes before a race",
+       "Women who are trying to get pregnant or are in early pregnancy"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "n18",
+     "level": 3,
+     "text": "Which vitamin is lost most easily when vegetables are boiled for a long time?",
+     "solution": "Vitamin C is water-soluble and damaged by heat, so it leaches into cooking water",
+     "hint": "Which vitamin dissolves in water and is easily destroyed by heat?",
+     "choice": {
+      "options": [
+       "Vitamin C",
+       "Vitamin D",
+       "Vitamin A",
+       "Vitamin K"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Vitamin D is fat-soluble, so it is not lost into cooking water",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n19",
+     "level": 3,
+     "text": "Older people are advised to take a supplement of which vitamin to keep bones healthy, especially in autumn and winter? Give the vitamin, for example 'vitamin K'.",
+     "solution": "Vitamin D helps absorb calcium; older people may make less of it from sunlight",
+     "hint": "The body makes it when skin is in sunlight, and there is less sunlight in winter",
+     "short": {
+      "accept": [
+       "vitamin D",
+       "vit D"
+      ]
+     }
+    },
+    {
+     "id": "n20",
+     "level": 3,
+     "text": "A person eats very few dairy foods. Which nutrient might they be short of?",
+     "solution": "Milk, cheese and yoghurt are major sources of calcium",
+     "hint": "Which mineral are milk and cheese famous for?",
+     "choice": {
+      "options": [
+       "Vitamin C",
+       "Calcium",
+       "Fibre",
+       "Starch"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "n21",
+     "level": 3,
+     "text": "Which deficiency disease causes soft, weak bones and bowed legs in children because of a lack of vitamin D or calcium? Give the disease.",
+     "solution": "Rickets is caused by a lack of vitamin D or calcium in children",
+     "hint": "In adults the same problem is called osteomalacia",
+     "short": {
+      "accept": [
+       "rickets"
+      ],
+      "reject": [
+       "scurvy"
+      ],
+      "feedback": {
+       "scurvy": "Scurvy is caused by a lack of vitamin C"
+      }
+     }
+    },
+    {
+     "id": "n22",
+     "level": 4,
+     "text": "Food A has 10 g of fibre per 100 g and food B has 2 g per 100 g. Adults are advised to eat 30 g of fibre a day. Which statement is accurate?",
+     "solution": "200 g of food A gives 2 × 10 = 20 g, and 20 g is two thirds of 30 g",
+     "hint": "Work out the fibre in 200 g of food A, then compare it with 30 g",
+     "choice": {
+      "options": [
+       "100 g of food B gives a third of the daily fibre advice",
+       "100 g of food A gives all of the daily fibre advice",
+       "200 g of food A would provide two thirds of the daily fibre advice",
+       "Food B has more fibre than food A"
+      ],
+      "correct": 2,
+      "feedback": [
+       "100 g of food B gives 2 g, which is only a fifteenth of 30 g",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n23",
+     "level": 4,
+     "text": "A meal is a burger, chips and a cola. Which change would bring it closer to the Eatwell Guide?",
+     "solution": "Adding vegetables and replacing a sugary drink with water moves the meal towards the Eatwell Guide",
+     "hint": "Which food group is missing, and which item is high in sugar?",
+     "choice": {
+      "options": [
+       "Adding extra salt to the chips",
+       "Swapping the cola for a milkshake with cream",
+       "Adding a second burger",
+       "Adding a side salad and swapping the cola for water"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "n24",
+     "level": 4,
+     "text": "Which vitamin is most likely to be lacking in a vegan diet that has no fortified foods or supplements?",
+     "solution": "Vitamin B12 is found naturally almost only in animal foods, so vegans need fortified foods or supplements",
+     "hint": "This vitamin is found naturally almost only in animal products",
+     "choice": {
+      "options": [
+       "Vitamin B12",
+       "Vitamin C",
+       "Vitamin A",
+       "Vitamin K"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Vitamin C is plentiful in fruit and vegetables",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n25",
+     "level": 4,
+     "text": "Which type of fatty acid, found in oily fish such as salmon and mackerel, helps keep the heart healthy? Give the name (omega-…).",
+     "solution": "Omega-3 fatty acids in oily fish help keep the heart healthy",
+     "hint": "Its number is lower than omega-6",
+     "short": {
+      "accept": [
+       "omega-3",
+       "omega 3",
+       "omega3",
+       "omega three",
+       "omega-3 fatty acids",
+       "omega 3 fatty acids"
+      ]
+     }
+    },
+    {
+     "id": "n26",
+     "level": 4,
+     "text": "Which statement about saturated fat is accurate?",
+     "solution": "A diet high in saturated fat can raise blood cholesterol, increasing the risk of coronary heart disease",
+     "hint": "Think about what builds up in the arteries",
+     "choice": {
+      "options": [
+       "Saturated fat is mainly found in plant oils and is liquid at room temperature",
+       "Eating too much can raise blood cholesterol and increase the risk of heart disease",
+       "Saturated fat is needed to absorb vitamin C",
+       "Saturated fat contains no energy"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That describes unsaturated fat",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n27",
+     "level": 4,
+     "text": "A teenager is growing quickly. Which pair of nutrients is especially important for building bone at this age?",
+     "solution": "Calcium builds bone, and vitamin D helps the body absorb calcium; teenagers build most of their peak bone mass",
+     "hint": "One is a mineral in milk, and the other helps the body absorb it",
+     "choice": {
+      "options": [
+       "Sugar and salt",
+       "Vitamin C and fibre",
+       "Calcium and vitamin D",
+       "Saturated fat and sodium"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "n28",
+     "level": 4,
+     "text": "Which macronutrient is the body's main source of energy and is stored in the liver and muscles as glycogen? Give the macronutrient.",
+     "solution": "Carbohydrate is the main energy source; spare glucose is stored as glycogen in the liver and muscles",
+     "hint": "Starchy foods such as pasta and bread are rich in it",
+     "short": {
+      "accept": [
+       "carbohydrate",
+       "carbohydrates",
+       "carbs",
+       "carb"
+      ],
+      "reject": [
+       "protein",
+       "fat"
+      ],
+      "feedback": {
+       "protein": "Protein is mainly for growth and repair"
+      }
+     }
+    },
+    {
+     "id": "n29",
+     "level": 5,
+     "text": "Why is protein especially important for children?",
+     "solution": "Children are growing quickly, so they need protein for growth as well as repair and maintenance",
+     "hint": "Think about the main function of protein",
+     "choice": {
+      "options": [
+       "Protein is their only source of energy",
+       "Protein means they need no carbohydrate",
+       "Children cannot digest carbohydrates",
+       "They are growing, so they need protein to build new cells and tissues"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "n30",
+     "level": 5,
+     "text": "Why is vitamin C important when eating iron-rich plant foods such as spinach?",
+     "solution": "Iron from plants (non-haem iron) is harder to absorb; vitamin C helps the body absorb it",
+     "hint": "Think about absorption: plant iron is harder for the body to take in",
+     "choice": {
+      "options": [
+       "Vitamin C helps the body absorb non-haem iron from plant foods",
+       "Vitamin C replaces iron in red blood cells",
+       "Vitamin C stops iron being absorbed",
+       "Vitamin C turns iron into calcium"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Vitamin C helps iron absorption; tannins in tea can reduce it",
+       null
+      ]
+     }
+    },
+    {
+     "id": "n31",
+     "level": 5,
+     "text": "Which statement about eating too much salt (sodium) is accurate?",
+     "solution": "A high salt intake is linked to high blood pressure, which increases the risk of stroke and heart disease",
+     "hint": "Think about blood pressure",
+     "choice": {
+      "options": [
+       "Too much salt strengthens bones",
+       "Too much salt can raise blood pressure, increasing the risk of stroke and heart disease",
+       "Too much salt prevents dehydration in all cases",
+       "Too much salt is needed to absorb vitamin D"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "n32",
+     "level": 5,
+     "text": "Which statement about the Eatwell Guide is accurate?",
+     "solution": "The Eatwell Guide shows balance over a day or a week, not every meal; it does not apply to children under 2",
+     "hint": "Does every meal have to look like the plate?",
+     "choice": {
+      "options": [
+       "Every single meal must match the guide exactly",
+       "The guide is designed for babies under 2",
+       "The guide shows the proportions of food groups for a balanced diet over a day or a week",
+       "The guide recommends cutting out a whole food group"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "The Eatwell Guide does not apply to children under 2",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "n33",
+     "level": 5,
+     "text": "Which statement about energy balance is accurate?",
+     "solution": "Energy balance means energy in (from food and drink) matches energy out (body functions and activity)",
+     "hint": "Think of energy in compared with energy out",
+     "choice": {
+      "options": [
+       "Energy is only used when the body is asleep",
+       "Active people need less energy than inactive people",
+       "The body uses no energy at rest",
+       "Energy from food and drink should match the energy the body uses over time"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Physical activity uses extra energy",
+       "The body uses energy all the time for breathing, heartbeat and warmth",
+       null
+      ]
+     }
+    },
+    {
+     "id": "n34",
+     "level": 5,
+     "text": "Which vitamin from the B group should women take before and during early pregnancy to reduce the risk of spina bifida? Give its name.",
+     "solution": "Folic acid (folate, vitamin B9) reduces the risk of neural tube defects such as spina bifida",
+     "hint": "Its name comes from the Latin for 'leaf', as leafy greens contain it",
+     "short": {
+      "accept": [
+       "folic acid",
+       "folate",
+       "vitamin B9",
+       "B9"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "food_nutrition.science",
+   "title": "Food science",
+   "aliases": [
+    "gelatinisation",
+    "food science",
+    "cooking methods",
+    "conduction",
+    "convection",
+    "denaturation",
+    "coagulation",
+    "caramelisation",
+    "emulsification",
+    "raising agents",
+    "gluten"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What happens during gelatinisation?",
+     "solution": "In gelatinisation, starch granules absorb liquid, swell and break open when heated, which thickens sauces",
+     "hint": "This is what happens when cornflour thickens a sauce",
+     "choice": {
+      "options": [
+       "Starch granules absorb liquid, swell and burst when heated, thickening the mixture",
+       "Sugar melts and turns brown",
+       "Proteins set when they are heated",
+       "Air is trapped in a mixture"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is caramelisation",
+       "That is coagulation",
+       null
+      ]
+     }
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What is the browning of sugar when it is heated called? Give the term.",
+     "solution": "Heating sugar until it melts and turns brown is caramelisation",
+     "hint": "Think of the sweet brown sauce made by heating sugar",
+     "short": {
+      "accept": [
+       "caramelisation",
+       "caramelization"
+      ],
+      "reject": [
+       "dextrinisation",
+       "coagulation"
+      ],
+      "feedback": {
+       "dextrinisation": "Dextrinisation is the browning of starch by dry heat"
+      }
+     }
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "Which method of heat transfer happens when heat passes through a solid, such as a metal pan?",
+     "solution": "Conduction is heat passing through a solid from particle to particle, such as through a pan base",
+     "hint": "The pan handle can get hot this way",
+     "choice": {
+      "options": [
+       "Convection",
+       "Conduction",
+       "Radiation",
+       "Insulation"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Convection happens in liquids and gases",
+       null,
+       "Radiation travels as infrared waves, as in grilling",
+       null
+      ]
+     }
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "Which of these is a chemical raising agent?",
+     "solution": "Bicarbonate of soda (and baking powder) are chemical raising agents that release carbon dioxide",
+     "hint": "Look for the powder that reacts to release gas",
+     "choice": {
+      "options": [
+       "Yeast",
+       "Steam",
+       "Bicarbonate of soda",
+       "Air"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Yeast is a biological raising agent",
+       "Steam is a mechanical (physical) raising agent",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "Which protein network forms when wheat flour is mixed with water and kneaded? Give the term.",
+     "solution": "Gluten forms from the proteins glutenin and gliadin when flour is mixed with water and kneaded",
+     "hint": "People with coeliac disease must avoid it",
+     "short": {
+      "accept": [
+       "gluten"
+      ]
+     }
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "Which gas makes bread dough rise when yeast ferments?",
+     "solution": "Yeast ferments sugars and produces carbon dioxide gas, which makes the dough rise",
+     "hint": "It is the same gas we breathe out",
+     "choice": {
+      "options": [
+       "Oxygen",
+       "Nitrogen",
+       "Hydrogen",
+       "Carbon dioxide"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "c07",
+     "level": 1,
+     "text": "Which cooking method uses radiation from above to cook food?",
+     "solution": "Grilling cooks food by radiation (infrared heat) from above",
+     "hint": "Think of toasting under a hot element",
+     "choice": {
+      "options": [
+       "Grilling",
+       "Boiling",
+       "Steaming",
+       "Poaching"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Boiling uses convection in water",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "Which statement about denaturation and coagulation is accurate?",
+     "solution": "Proteins first denature (unfold) and then coagulate (join and set), as when an egg cooks",
+     "hint": "Think about the order of what happens to egg white as it cooks",
+     "choice": {
+      "options": [
+       "Coagulation is when a protein's structure unfolds; denaturation is when proteins join together and set",
+       "Denaturation is when a protein's structure unfolds; coagulation is when denatured proteins join together and set",
+       "Both mean starch thickening a sauce",
+       "Both mean sugar turning brown"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Starch thickening is gelatinisation",
+       null
+      ]
+     }
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "Which substance in egg yolk acts as the emulsifier in mayonnaise? Give its name.",
+     "solution": "Lecithin in egg yolk is an emulsifier that holds oil and vinegar together in mayonnaise",
+     "hint": "Its name starts with 'leci'",
+     "short": {
+      "accept": [
+       "lecithin"
+      ]
+     }
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "Which raising agent mainly makes choux pastry and Yorkshire puddings rise?",
+     "solution": "The high water content turns to steam in a hot oven, making choux pastry and Yorkshire puddings rise",
+     "hint": "These mixtures contain a lot of liquid and are cooked in a very hot oven",
+     "choice": {
+      "options": [
+       "Yeast",
+       "Baking powder",
+       "Steam",
+       "Bicarbonate of soda"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "Which method of heat transfer heats water in a pan by currents of hot liquid rising and cooler liquid sinking?",
+     "solution": "Convection currents move heat through liquids and gases",
+     "hint": "This method needs a liquid or gas that can move",
+     "choice": {
+      "options": [
+       "Conduction",
+       "Radiation",
+       "Insulation",
+       "Convection"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "When bread is toasted, dry heat breaks down starch into dextrins and the surface turns brown. Give the term for this.",
+     "solution": "Starch breaking down into dextrins under dry heat is dextrinisation",
+     "hint": "The term comes from 'dextrins'",
+     "short": {
+      "accept": [
+       "dextrinisation",
+       "dextrinization"
+      ],
+      "reject": [
+       "caramelisation"
+      ],
+      "feedback": {
+       "caramelisation": "Caramelisation is the browning of sugar, not starch"
+      }
+     }
+    },
+    {
+     "id": "c13",
+     "level": 2,
+     "text": "Which flour is most suitable for making bread?",
+     "solution": "Strong flour has more protein, forming more gluten to trap carbon dioxide and give a good rise",
+     "hint": "Bread needs a stretchy gluten network",
+     "choice": {
+      "options": [
+       "Strong flour, which has a high protein content for gluten",
+       "Soft flour, which has a low protein content",
+       "Cornflour, which is almost pure starch",
+       "Self-raising flour, which has baking powder added"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Soft flour suits cakes and pastry",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c14",
+     "level": 2,
+     "text": "Which water-based cooking method keeps the most water-soluble vitamins in vegetables?",
+     "solution": "Steaming keeps food out of the water, so fewer water-soluble vitamins leach out",
+     "hint": "In which method is the food not sitting in the water?",
+     "choice": {
+      "options": [
+       "Boiling",
+       "Steaming",
+       "Simmering",
+       "Poaching"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "A white sauce is made by heating flour, butter and milk while stirring until it thickens. Which process thickens it?",
+     "solution": "Starch in the flour gelatinises as it is heated in the milk, thickening the sauce",
+     "hint": "Flour contains starch",
+     "choice": {
+      "options": [
+       "Caramelisation",
+       "Coagulation",
+       "Gelatinisation",
+       "Emulsification"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "Egg white turns from clear and runny to white and firm when fried. Which process is this?",
+     "solution": "Heat denatures the egg proteins, which then coagulate (set)",
+     "hint": "Egg white is mostly protein",
+     "choice": {
+      "options": [
+       "Gelatinisation",
+       "Dextrinisation",
+       "Caramelisation",
+       "Coagulation"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Gelatinisation involves starch, not protein",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "When making shortcrust pastry, fat is rubbed into flour. What does this do?",
+     "solution": "Fat coats the flour, waterproofing it so less gluten forms: this is called shortening",
+     "hint": "The pastry is called 'short' for a reason",
+     "choice": {
+      "options": [
+       "Coats the flour particles, limiting gluten development so the pastry is short and crumbly",
+       "Develops long gluten strands for a chewy texture",
+       "Adds steam to make the pastry rise",
+       "Makes the pastry turn brown"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "A cut apple turns brown when left in the air. Give the term for this process.",
+     "solution": "Enzymes in the cut fruit react with oxygen in the air, causing enzymic browning",
+     "hint": "Enzymes in the fruit react with oxygen in the air",
+     "short": {
+      "accept": [
+       "enzymic browning",
+       "enzymatic browning",
+       "oxidation"
+      ]
+     }
+    },
+    {
+     "id": "c19",
+     "level": 3,
+     "text": "Which would slow down the browning of a cut apple?",
+     "solution": "The acid in lemon juice slows the enzymes that cause browning",
+     "hint": "Acid slows down the enzymes",
+     "choice": {
+      "options": [
+       "Leaving it uncovered in a warm room",
+       "Coating it with lemon juice",
+       "Cutting it into smaller pieces",
+       "Bruising the surface"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c20",
+     "level": 3,
+     "text": "Whisking egg whites traps tiny bubbles and stretches the proteins. Which raising agent is being added? Give the raising agent.",
+     "solution": "Whisking traps air, a mechanical raising agent",
+     "hint": "The bubbles come from the room around the bowl",
+     "short": {
+      "accept": [
+       "air"
+      ]
+     }
+    },
+    {
+     "id": "c21",
+     "level": 3,
+     "text": "A cake is made by beating fat and sugar together until light and fluffy. What is this method called?",
+     "solution": "Beating fat and sugar together traps air: this is the creaming method",
+     "hint": "The mixture becomes pale and creamy",
+     "choice": {
+      "options": [
+       "Rubbing in",
+       "Kneading",
+       "Creaming",
+       "Folding"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Rubbing in is used for pastry and scones",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "A white sauce has lumps in it. What is the most likely cause?",
+     "solution": "Starch must be kept moving while it heats; otherwise granules stick together into lumps",
+     "hint": "Think about what stirring does to the starch granules",
+     "choice": {
+      "options": [
+       "The sauce was stirred all the time",
+       "Too little flour was used",
+       "The butter was unsalted",
+       "The sauce was not stirred enough, so starch granules clumped before they gelatinised"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Scrambled eggs are overcooked and watery liquid seeps out of them. What is this called?",
+     "solution": "Overheated proteins tighten and squeeze out liquid: this is syneresis",
+     "hint": "The proteins shrink and squeeze water out",
+     "choice": {
+      "options": [
+       "Syneresis",
+       "Gelatinisation",
+       "Emulsification",
+       "Caramelisation"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Baking powder is bicarbonate of soda mixed with an acid such as cream of tartar. Why is the acid added?",
+     "solution": "Acid plus bicarbonate releases carbon dioxide, and no soapy-tasting washing soda is left behind",
+     "hint": "Bicarbonate on its own leaves a soapy taste",
+     "choice": {
+      "options": [
+       "The acid makes the mixture sweeter",
+       "The acid reacts with the bicarbonate to release carbon dioxide without leaving a soapy taste",
+       "The acid stops gluten forming",
+       "The acid turns the cake brown"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c25",
+     "level": 4,
+     "text": "A bread dough is left in a cold fridge and hardly rises. Why?",
+     "solution": "Cold slows yeast down but does not kill it; at warm temperatures it ferments faster",
+     "hint": "What conditions does yeast need to work well?",
+     "choice": {
+      "options": [
+       "Cold kills all the yeast immediately",
+       "Cold makes gluten disappear",
+       "Yeast works very slowly at low temperatures, so little carbon dioxide is produced",
+       "Cold makes the dough produce steam"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Cold slows yeast down but does not kill it; high heat kills yeast",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c26",
+     "level": 4,
+     "text": "Oil and vinegar do not normally mix, but an emulsifier can hold them together. Give the term for the mixture formed.",
+     "solution": "An emulsion is a mixture of two liquids that do not normally mix, held together by an emulsifier",
+     "hint": "Mayonnaise is an example of this type of mixture",
+     "short": {
+      "accept": [
+       "emulsion"
+      ],
+      "reject": [
+       "emulsifier"
+      ],
+      "feedback": {
+       "emulsifier": "The emulsifier is the substance that holds them together; the mixture is an emulsion"
+      }
+     }
+    },
+    {
+     "id": "c27",
+     "level": 4,
+     "text": "Which cooking method uses mainly convection, with hot air circulating around the food?",
+     "solution": "In an oven, hot air circulates around the food by convection (with conduction through the tray)",
+     "hint": "Think about where hot air moves around food",
+     "choice": {
+      "options": [
+       "Grilling",
+       "Shallow frying",
+       "Toasting under a grill",
+       "Baking in an oven"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Grilling uses radiation",
+       "Shallow frying uses conduction through hot oil and pan",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c28",
+     "level": 4,
+     "text": "Which gelling agent made from seaweed can be used instead of gelatine in vegetarian desserts? Give the name.",
+     "solution": "Agar (agar-agar) comes from seaweed and sets liquids like gelatine",
+     "hint": "It comes from the sea, not from animals",
+     "short": {
+      "accept": [
+       "agar",
+       "agar agar",
+       "agar-agar"
+      ]
+     }
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Why does kneading bread dough improve the texture of the bread?",
+     "solution": "Kneading develops a strong, stretchy gluten network that traps carbon dioxide from the yeast",
+     "hint": "Think about the protein network in the dough",
+     "choice": {
+      "options": [
+       "Kneading stretches and strengthens the gluten so it can trap carbon dioxide and rise",
+       "Kneading kills the yeast so the bread stays flat",
+       "Kneading removes all the air",
+       "Kneading gelatinises the starch before baking"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Why do vegetables lose some vitamin C when they are boiled?",
+     "solution": "Vitamin C dissolves in the cooking water and is damaged by heat; steaming or using less water reduces the loss",
+     "hint": "Is vitamin C water-soluble or fat-soluble?",
+     "choice": {
+      "options": [
+       "Vitamin C is fat-soluble and melts out",
+       "Vitamin C is water-soluble and damaged by heat, so it leaches into the water",
+       "Boiling turns vitamin C into fibre",
+       "Vitamin C is destroyed only by freezing"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "c31",
+     "level": 5,
+     "text": "Which statement about cooking meat is accurate?",
+     "solution": "Meat proteins denature and coagulate when heated, so meat becomes firmer and loses some juice",
+     "hint": "Meat is mainly protein",
+     "choice": {
+      "options": [
+       "Heat gelatinises the protein in meat into starch",
+       "Meat proteins are not affected by heat",
+       "Heat denatures and coagulates the proteins, so the meat firms up and shrinks",
+       "Heat turns the fat in meat into fibre"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "c32",
+     "level": 5,
+     "text": "Why is cornflour good at thickening a sauce?",
+     "solution": "Cornflour is nearly all starch, so it gelatinises easily and thickens without forming gluten",
+     "hint": "Which carbohydrate thickens liquids when heated?",
+     "choice": {
+      "options": [
+       "Cornflour is high in gluten, which forms a stretchy network",
+       "Cornflour contains yeast, which produces gas",
+       "Cornflour is a fat that forms an emulsion",
+       "Cornflour is almost pure starch, which gelatinises when heated with liquid"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Cornflour contains no gluten",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "c33",
+     "level": 5,
+     "text": "In a microwave oven, the microwaves make molecules of one substance in the food vibrate and heat up. Give the substance.",
+     "solution": "Microwaves make water molecules in food vibrate, producing heat",
+     "hint": "Food with more of this substance heats up quickly in a microwave",
+     "short": {
+      "accept": [
+       "water",
+       "water molecules"
+      ]
+     }
+    },
+    {
+     "id": "c34",
+     "level": 5,
+     "text": "A cake recipe uses far more bicarbonate of soda than needed. What is the most likely result?",
+     "solution": "Too much bicarbonate of soda leaves a soapy, bitter aftertaste and can give a yellow colour and coarse texture",
+     "hint": "Bicarbonate on its own leaves a residue with a strong taste",
+     "choice": {
+      "options": [
+       "A soapy, bitter taste and a yellowish, open texture",
+       "A dense cake that does not rise at all",
+       "A pale cake with no change in taste",
+       "A stronger gluten network"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "c35",
+     "level": 5,
+     "text": "Why is a small amount of salt added to bread dough?",
+     "solution": "Salt adds flavour, strengthens gluten and slows the yeast so the dough rises evenly",
+     "hint": "Think about flavour, the yeast and the gluten",
+     "choice": {
+      "options": [
+       "Salt is the raising agent",
+       "Salt controls the yeast and strengthens the gluten, as well as adding flavour",
+       "Salt makes the bread sweeter",
+       "Salt stops the starch gelatinising"
+      ],
+      "correct": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "food_nutrition.safety",
+   "title": "Food safety",
+   "aliases": [
+    "food poisoning",
+    "food safety",
+    "bacteria",
+    "danger zone",
+    "high risk foods",
+    "cross-contamination",
+    "use by",
+    "best before",
+    "food storage"
+   ],
+   "questions": [
+    {
+     "id": "f01",
+     "level": 1,
+     "text": "What is the temperature range of the 'danger zone', where bacteria multiply most quickly?",
+     "solution": "The danger zone is 5–63 °C; bacteria multiply fastest at about 37 °C",
+     "hint": "The lower number is the top of the fridge range and the upper number is the hot-holding temperature",
+     "choice": {
+      "options": [
+       "5 °C to 63 °C",
+       "0 °C to 5 °C",
+       "63 °C to 100 °C",
+       "−18 °C to 0 °C"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "0–5 °C is the correct fridge temperature, where bacteria multiply slowly",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f02",
+     "level": 1,
+     "text": "At what temperature should a fridge be kept?",
+     "solution": "A fridge should be 0–5 °C to slow the growth of bacteria",
+     "hint": "It must be below the start of the danger zone",
+     "choice": {
+      "options": [
+       "Between 5 °C and 10 °C",
+       "Between 0 °C and 5 °C",
+       "−18 °C or below",
+       "About 20 °C"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "−18 °C or below is the freezer temperature",
+       null
+      ]
+     }
+    },
+    {
+     "id": "f03",
+     "level": 1,
+     "text": "Name the food poisoning bacterium most associated with raw or undercooked eggs.",
+     "solution": "Salmonella is linked with raw or undercooked eggs and poultry",
+     "hint": "Its name begins with 'sal'",
+     "short": {
+      "accept": [
+       "salmonella"
+      ]
+     }
+    },
+    {
+     "id": "f04",
+     "level": 1,
+     "text": "At what temperature should a freezer be kept?",
+     "solution": "Freezers should be −18 °C or below; bacteria become dormant but are not killed",
+     "hint": "It is well below the freezing point of water",
+     "choice": {
+      "options": [
+       "0 °C",
+       "5 °C",
+       "−18 °C or below",
+       "10 °C"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f05",
+     "level": 1,
+     "text": "In UK kitchens, which colour of chopping board is used for raw meat? Give the colour.",
+     "solution": "Red boards are for raw meat; blue for raw fish, yellow for cooked meat and green for salad and fruit",
+     "hint": "Think of the colour of raw meat",
+     "short": {
+      "accept": [
+       "red"
+      ],
+      "reject": [
+       "blue",
+       "yellow",
+       "green",
+       "brown",
+       "white"
+      ],
+      "feedback": {
+       "blue": "Blue is for raw fish",
+       "yellow": "Yellow is for cooked meat",
+       "green": "Green is for salad and fruit"
+      }
+     }
+    },
+    {
+     "id": "f06",
+     "level": 1,
+     "text": "Food handlers must cover cuts with a plaster of a special colour so it is easy to spot if it falls into food. Give the colour.",
+     "solution": "Food handlers use blue plasters because very few foods are blue",
+     "hint": "Very few foods are this colour",
+     "short": {
+      "accept": [
+       "blue"
+      ]
+     }
+    },
+    {
+     "id": "f07",
+     "level": 1,
+     "text": "Which date mark is about food safety and is used on high-risk foods such as fresh chicken? Give the date mark.",
+     "solution": "Use by dates are about safety; food should not be eaten after this date",
+     "hint": "One date mark is about quality; the other is about safety",
+     "short": {
+      "accept": [
+       "use by",
+       "use by date",
+       "use-by"
+      ],
+      "reject": [
+       "best before",
+       "best before date",
+       "sell by",
+       "display until"
+      ],
+      "feedback": {
+       "best before": "Best before is about quality, not safety"
+      }
+     }
+    },
+    {
+     "id": "f08",
+     "level": 2,
+     "text": "Which statement about 'use by' and 'best before' dates is accurate?",
+     "solution": "Never eat food after its use by date; food may still be safe after its best before date, but quality may drop",
+     "hint": "Which one appears on fresh chicken and milk?",
+     "choice": {
+      "options": [
+       "Best before is about safety; use by is about quality",
+       "Both are only about safety",
+       "Use by is for tins; best before is for fresh meat",
+       "Use by is about safety; best before is about quality"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f09",
+     "level": 2,
+     "text": "In UK kitchens, which colour of chopping board is used for raw fish?",
+     "solution": "Blue boards are for raw fish",
+     "hint": "Think of the colour of the sea",
+     "choice": {
+      "options": [
+       "Blue",
+       "Red",
+       "Brown",
+       "White"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Red is for raw meat",
+       "Brown is for vegetables",
+       "White is for bread and dairy"
+      ]
+     }
+    },
+    {
+     "id": "f10",
+     "level": 2,
+     "text": "In GCSE Food Preparation and Nutrition, food should be cooked until its core temperature reaches at least what temperature? Give the answer in °C.",
+     "solution": "Cooking until the centre reaches at least 75 °C kills most food poisoning bacteria",
+     "hint": "It is higher than the hot-holding temperature of 63 °C",
+     "answer": {
+      "kind": "number",
+      "display": "75 °C",
+      "value": 75
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "63 °C",
+        "value": 63
+       },
+       "feedback": "63 °C is the hot-holding temperature, not the cooking target"
+      }
+     ]
+    },
+    {
+     "id": "f11",
+     "level": 2,
+     "text": "Which list contains only high-risk foods?",
+     "solution": "High-risk foods are moist, high in protein and ready to eat, such as cooked meat, cooked rice and dairy desserts",
+     "hint": "High-risk foods are usually moist, high in protein and eaten without further cooking",
+     "choice": {
+      "options": [
+       "Dry pasta, flour and sugar",
+       "Cooked chicken, cooked rice and dairy desserts",
+       "Uncooked oats, biscuits and jam",
+       "Crisps, bread and unopened tinned beans"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f12",
+     "level": 2,
+     "text": "Give the term for the transfer of bacteria from one food, surface or person to another food.",
+     "solution": "Cross-contamination is when bacteria are moved onto food from raw food, equipment, surfaces or hands",
+     "hint": "Think about raw meat juices dripping onto a salad",
+     "short": {
+      "accept": [
+       "cross-contamination",
+       "cross contamination"
+      ]
+     }
+    },
+    {
+     "id": "f13",
+     "level": 2,
+     "text": "Name the bacterium that can grow at fridge temperatures and is linked with soft cheeses and pâté.",
+     "solution": "Listeria can grow even at fridge temperatures and is linked with soft cheese and pâté",
+     "hint": "Pregnant women are advised to avoid certain foods because of it",
+     "short": {
+      "accept": [
+       "listeria",
+       "listeria monocytogenes"
+      ],
+      "reject": [
+       "salmonella"
+      ],
+      "feedback": {
+       "salmonella": "Salmonella is linked with eggs and poultry; it does not grow well in a fridge"
+      }
+     }
+    },
+    {
+     "id": "f14",
+     "level": 2,
+     "text": "Where in a fridge should raw meat be stored?",
+     "solution": "Raw meat goes at the bottom, covered, so its juices cannot drip onto ready-to-eat food",
+     "hint": "Think about which way juices drip",
+     "choice": {
+      "options": [
+       "On the top shelf",
+       "In the door",
+       "On the bottom shelf",
+       "Next to cooked meat on the middle shelf"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Juices could drip onto food below",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f15",
+     "level": 3,
+     "text": "In ideal conditions, one bacterium divides into two every 20 minutes. Starting with one bacterium, how many will there be after 1 hour? Give a number.",
+     "solution": "1 hour = 3 lots of 20 minutes: 1 → 2 → 4 → 8",
+     "hint": "Double the number once for every 20 minutes",
+     "answer": {
+      "kind": "number",
+      "display": "8",
+      "value": 8
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "6",
+        "value": 6
+       },
+       "feedback": "The number doubles each time; it does not go up by 2"
+      },
+      {
+       "answer": {
+        "kind": "number",
+        "display": "3",
+        "value": 3
+       },
+       "feedback": "There are 3 divisions, but the number doubles each time"
+      }
+     ]
+    },
+    {
+     "id": "f16",
+     "level": 3,
+     "text": "One bacterium divides into two every 20 minutes. Starting with one, how many bacteria will there be after 2 hours? Give a number.",
+     "solution": "2 hours = 6 lots of 20 minutes, so 2 × 2 × 2 × 2 × 2 × 2 = 64",
+     "hint": "Work out how many 20-minute periods are in 2 hours, then keep doubling",
+     "answer": {
+      "kind": "number",
+      "display": "64",
+      "value": 64
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "12",
+        "value": 12
+       },
+       "feedback": "The number doubles each time; it does not go up by 2"
+      },
+      {
+       "answer": {
+        "kind": "number",
+        "display": "6",
+        "value": 6
+       },
+       "feedback": "There are 6 divisions, but the number doubles each time"
+      }
+     ]
+    },
+    {
+     "id": "f17",
+     "level": 3,
+     "text": "A chef cuts raw chicken and then slices cucumber with the same knife without washing it. What is the main risk?",
+     "solution": "This is cross-contamination: bacteria from raw meat get onto food that will not be cooked",
+     "hint": "The cucumber will not be cooked before it is eaten",
+     "choice": {
+      "options": [
+       "The cucumber will go brown",
+       "The chicken will dry out",
+       "The knife will become blunt",
+       "Bacteria from the raw chicken are transferred to the ready-to-eat cucumber"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f18",
+     "level": 3,
+     "text": "Cooked rice is left at room temperature overnight. Which bacterium is the main risk?",
+     "solution": "Bacillus cereus spores survive cooking and multiply in cooked rice left warm, producing toxins",
+     "hint": "This bacterium is famous for reheated rice",
+     "choice": {
+      "options": [
+       "Bacillus cereus",
+       "Listeria",
+       "Salmonella",
+       "Campylobacter"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "f19",
+     "level": 3,
+     "text": "A food handler has a small cut on their hand. What should they do?",
+     "solution": "Cuts must be covered with a blue waterproof plaster to stop bacteria spreading and so it can be seen if it falls off",
+     "hint": "The plaster must be easy to spot in food",
+     "choice": {
+      "options": [
+       "Leave it uncovered so it heals",
+       "Cover it with a blue waterproof plaster",
+       "Cover it with a skin-coloured plaster",
+       "Wash it in the food sink"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f20",
+     "level": 3,
+     "text": "Hot food on a buffet must be held above which temperature to keep it out of the danger zone? Give the answer in °C.",
+     "solution": "Hot food must be kept above 63 °C, the top of the danger zone",
+     "hint": "It is the upper limit of the danger zone",
+     "answer": {
+      "kind": "number",
+      "display": "63 °C",
+      "value": 63
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "5 °C",
+        "value": 5
+       },
+       "feedback": "5 °C is the lower limit of the danger zone, for cold food"
+      }
+     ]
+    },
+    {
+     "id": "f21",
+     "level": 3,
+     "text": "Where is the safest place to defrost a frozen chicken? Give the kitchen appliance.",
+     "solution": "Defrost raw chicken in the fridge, in a dish on the bottom shelf, so it stays out of the danger zone",
+     "hint": "Keep the chicken out of the danger zone while it thaws",
+     "short": {
+      "accept": [
+       "fridge",
+       "refrigerator",
+       "in the fridge",
+       "the fridge",
+       "fridge bottom shelf"
+      ],
+      "reject": [
+       "freezer",
+       "oven",
+       "microwave"
+      ]
+     }
+    },
+    {
+     "id": "f22",
+     "level": 4,
+     "text": "A fridge thermometer reads 9 °C. What does this mean?",
+     "solution": "9 °C is above the 0–5 °C fridge range and inside the danger zone",
+     "hint": "Compare 9 °C with the correct fridge range",
+     "choice": {
+      "options": [
+       "The fridge is at the correct temperature",
+       "The fridge is too cold and will freeze the food",
+       "The fridge is too warm, so bacteria can multiply faster",
+       "Bacteria are killed at this temperature"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f23",
+     "level": 4,
+     "text": "A food probe shows that the centre of a chicken pie is at 68 °C. What should the cook do?",
+     "solution": "The core should reach at least 75 °C to be safe, so it needs more cooking",
+     "hint": "What core temperature should cooked food reach?",
+     "choice": {
+      "options": [
+       "Serve it, as it is above 63 °C",
+       "Put it in the fridge straight away",
+       "Serve it, as bacteria are killed above 37 °C",
+       "Keep cooking until the centre reaches at least 75 °C"
+      ],
+      "correct": 3,
+      "feedback": [
+       "63 °C is the hot-holding temperature, not the cooking target",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f24",
+     "level": 4,
+     "text": "Which practice helps prevent cross-contamination in a kitchen?",
+     "solution": "Colour-coded equipment keeps raw and ready-to-eat foods apart",
+     "hint": "Think about keeping raw and ready-to-eat food apart",
+     "choice": {
+      "options": [
+       "Using separate colour-coded boards and knives for raw and ready-to-eat foods",
+       "Storing raw meat above cooked meat",
+       "Using the same cloth for all surfaces all day",
+       "Tasting food with the stirring spoon"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "f25",
+     "level": 4,
+     "text": "Give the stock-rotation rule that means older food is used before newer food (four letters, or the phrase).",
+     "solution": "FIFO (first in, first out) means older stock is used first, before it goes out of date",
+     "hint": "The food that arrives first is used first",
+     "short": {
+      "accept": [
+       "FIFO",
+       "first in first out",
+       "first in, first out"
+      ]
+     }
+    },
+    {
+     "id": "f26",
+     "level": 4,
+     "text": "Which conditions do bacteria need in order to multiply?",
+     "solution": "Bacteria need warmth, moisture, food and time to multiply",
+     "hint": "Think about what the danger zone provides",
+     "choice": {
+      "options": [
+       "Cold, dryness, light and salt",
+       "Warmth, moisture, food and time",
+       "Acid, sugar, freezing and air",
+       "Light, cold, dryness and time"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f27",
+     "level": 4,
+     "text": "An uncooked dessert contains raw eggs. Which group is most at risk if the eggs carry Salmonella?",
+     "solution": "Vulnerable groups (pregnant women, babies and young children, older people and those who are ill) are most at risk",
+     "hint": "Think about people whose immune system is weaker",
+     "choice": {
+      "options": [
+       "Healthy teenagers only",
+       "Adults who exercise regularly",
+       "Pregnant women, babies, older people and people who are unwell",
+       "People who eat a lot of fruit"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f28",
+     "level": 4,
+     "text": "Cooked food is going to be stored. Why should it be cooled quickly before it goes in the fridge?",
+     "solution": "Cooling quickly limits the time bacteria have to multiply in the danger zone",
+     "hint": "Think about time in the danger zone",
+     "choice": {
+      "options": [
+       "To make it taste better",
+       "To kill all the bacteria",
+       "To stop it drying out",
+       "To reduce the time it spends in the danger zone"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Cooling does not kill bacteria; it slows their growth",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f29",
+     "level": 5,
+     "text": "Which statement about freezing food is accurate?",
+     "solution": "At −18 °C bacteria are dormant; they become active again as the food warms up",
+     "hint": "Are the bacteria killed or just 'asleep'?",
+     "choice": {
+      "options": [
+       "Freezing makes bacteria dormant but does not kill them, so they can multiply again once the food thaws",
+       "Freezing kills all bacteria",
+       "Freezing makes bacteria multiply faster",
+       "Freezing removes all the moisture from food permanently"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Freezing stops bacteria multiplying but does not kill them",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "f30",
+     "level": 5,
+     "text": "Which statement about reheating leftovers is accurate?",
+     "solution": "Reheat leftovers thoroughly to at least 75 °C in the centre, and only once",
+     "hint": "Think about the core temperature and how many times food is reheated",
+     "choice": {
+      "options": [
+       "Leftovers can be reheated as many times as needed",
+       "Leftovers should be reheated until steaming hot in the centre (at least 75 °C) and reheated only once",
+       "Warming leftovers to 40 °C is enough",
+       "Reheated food never needs stirring"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "f31",
+     "level": 5,
+     "text": "Why is Listeria a particular concern for pregnant women and older people?",
+     "solution": "Unlike most bacteria, Listeria multiplies at fridge temperatures; it can be very dangerous in pregnancy and for older people",
+     "hint": "Think about where Listeria can grow and who is most at risk",
+     "choice": {
+      "options": [
+       "Listeria only grows in frozen food",
+       "Listeria is killed at 5 °C",
+       "Listeria can grow at fridge temperatures and can cause serious illness in vulnerable groups",
+       "Listeria only affects healthy adults"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "f32",
+     "level": 5,
+     "text": "A takeaway keeps cooked rice at 30 °C for several hours. Which explanation is accurate?",
+     "solution": "30 °C is inside the 5–63 °C danger zone; Bacillus cereus in cooked rice can produce toxins",
+     "hint": "Is 30 °C inside the danger zone?",
+     "choice": {
+      "options": [
+       "30 °C is cold enough to stop bacteria growing",
+       "Rice is a low-risk food, so this is safe",
+       "Bacteria only grow above 63 °C",
+       "30 °C is in the danger zone, so bacteria such as Bacillus cereus can multiply and produce toxins"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "f33",
+     "level": 5,
+     "text": "Name the bacterium that comes mainly from human skin, noses and cuts and can produce toxins in food that has been handled a lot.",
+     "solution": "Staphylococcus aureus is found on skin and in noses; good personal hygiene reduces the risk",
+     "hint": "It is a round bacterium that grows in clusters like bunches of grapes",
+     "short": {
+      "accept": [
+       "Staphylococcus aureus",
+       "Staphylococcus",
+       "Staph aureus",
+       "Staph",
+       "S aureus"
+      ]
+     }
+    },
+    {
+     "id": "f34",
+     "level": 5,
+     "text": "Which statement about 'best before' dates is accurate?",
+     "solution": "Best before is about quality; food can still be safe to eat after it",
+     "hint": "Is this date mark about safety or quality?",
+     "choice": {
+      "options": [
+       "Food may still be safe after the date if stored correctly, but its quality may be lower",
+       "Food must be thrown away the day after the date",
+       "Best before is the only date mark used on raw chicken",
+       "The date shows the day the food was made"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "f35",
+     "level": 5,
+     "text": "Raw chicken should not be washed because splashing water can spread which bacterium, found on much raw chicken?",
+     "solution": "Campylobacter is found on much raw chicken; washing it splashes the bacteria around the kitchen",
+     "hint": "Its name begins with 'C' and it is linked with raw poultry",
+     "choice": {
+      "options": [
+       "Listeria",
+       "Campylobacter",
+       "Bacillus cereus",
+       "Staphylococcus aureus"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Bacillus cereus is linked with cooked rice",
+       null
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "food_nutrition.choice",
+   "title": "Food choice & provenance",
+   "aliases": [
+    "food provenance",
+    "food labelling",
+    "allergies",
+    "intolerances",
+    "food miles",
+    "organic food",
+    "seasonal food",
+    "food waste",
+    "primary processing",
+    "international cuisines"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What are 'food miles'?",
+     "solution": "Food miles measure how far food travels from field or farm to plate",
+     "hint": "Think about a mango travelling to the UK",
+     "choice": {
+      "options": [
+       "The distance food travels from where it is produced to where it is eaten",
+       "The energy content of a meal",
+       "How far a person walks to the shop",
+       "How long food can be stored"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "What does 'seasonal food' mean?",
+     "solution": "Seasonal food is eaten at the time of year it naturally grows, such as UK strawberries in summer",
+     "hint": "Think about British strawberries in June",
+     "choice": {
+      "options": [
+       "Food sold only at Christmas",
+       "Food that is grown and harvested at its natural time of year",
+       "Food grown in heated greenhouses all year",
+       "Food with added seasoning"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "What is the term for knowing where food comes from and how it was grown, reared or caught? Give the term.",
+     "solution": "Provenance means where food comes from and how it was produced",
+     "hint": "It comes from a French word meaning 'to come from'",
+     "short": {
+      "accept": [
+       "provenance",
+       "food provenance"
+      ]
+     }
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "How are ingredients listed on a UK food label?",
+     "solution": "Ingredients are listed in order of weight, with the largest amount first",
+     "hint": "Look at the first ingredient on a tin of tomato soup",
+     "choice": {
+      "options": [
+       "In alphabetical order",
+       "In order of cost",
+       "In descending order of weight, largest first",
+       "In order of colour"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "How many major allergens must be emphasised in the ingredients list on UK pre-packed food labels?",
+     "solution": "UK law lists 14 major allergens, such as peanuts, milk, eggs and gluten, which must be emphasised on labels",
+     "hint": "It is more than ten and less than twenty",
+     "choice": {
+      "options": [
+       "4",
+       "8",
+       "20",
+       "14"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "What does 'organic' mean on a food label?",
+     "solution": "Organic food is produced to strict standards that limit artificial chemicals and require high animal welfare",
+     "hint": "Think about how organic farmers control pests and feed the soil",
+     "choice": {
+      "options": [
+       "Produced under strict rules that limit artificial pesticides and fertilisers",
+       "Grown only in the UK",
+       "Containing no energy",
+       "Genetically modified"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "p07",
+     "level": 1,
+     "text": "Name the condition in which the body reacts to gluten, damaging the lining of the small intestine.",
+     "solution": "People with coeliac disease react to gluten and must avoid wheat, barley and rye",
+     "hint": "It begins with the letters 'coe'",
+     "short": {
+      "accept": [
+       "coeliac disease",
+       "coeliac",
+       "celiac disease",
+       "celiac"
+      ]
+     }
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "Which statement about a food allergy and a food intolerance is accurate?",
+     "solution": "A food allergy is an immune reaction that can cause anaphylaxis; an intolerance (such as lactose intolerance) is not an immune reaction",
+     "hint": "Which one can cause anaphylaxis?",
+     "choice": {
+      "options": [
+       "An intolerance involves the immune system; an allergy does not",
+       "An allergy involves the immune system and can be life-threatening; an intolerance does not involve the immune system",
+       "Allergies only affect adults",
+       "Both are always mild and harmless"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "Which of these is an example of primary processing?",
+     "solution": "Primary processing turns raw food into something usable, such as milling wheat into flour",
+     "hint": "Primary processing is the first change to a raw food",
+     "choice": {
+      "options": [
+       "Baking bread from flour",
+       "Making pasta from flour and eggs",
+       "Milling wheat into flour",
+       "Turning milk into yoghurt"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Making bread from flour is secondary processing",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "People with lactose intolerance find it hard to digest the sugar in which food? Give the food.",
+     "solution": "Lactose is the sugar found in milk and dairy products",
+     "hint": "Lactose comes from the Latin word for this drink",
+     "short": {
+      "accept": [
+       "milk",
+       "dairy",
+       "dairy products",
+       "milk products",
+       "cows milk"
+      ]
+     }
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "Which of these is an example of secondary processing?",
+     "solution": "Secondary processing turns primary-processed foods into other products, such as flour into bread",
+     "hint": "It uses a food that has already been processed once",
+     "choice": {
+      "options": [
+       "Milling wheat into flour",
+       "Pasteurising milk",
+       "Washing and sorting potatoes",
+       "Turning flour into bread"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Milling is primary processing",
+       "Pasteurising milk is primary processing",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "Which dish is a traditional food of Japan?",
+     "solution": "Sushi (vinegared rice, often with raw fish) is a traditional Japanese food",
+     "hint": "This dish uses vinegared rice",
+     "choice": {
+      "options": [
+       "Sushi",
+       "Paella",
+       "Moussaka",
+       "Tagine"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Paella comes from Spain",
+       "Moussaka is Greek",
+       "Tagine comes from Morocco"
+      ]
+     }
+    },
+    {
+     "id": "p13",
+     "level": 2,
+     "text": "Give the term for a severe, life-threatening allergic reaction.",
+     "solution": "Anaphylaxis is a severe allergic reaction that needs emergency treatment, often with an adrenaline auto-injector",
+     "hint": "It begins with 'ana'",
+     "short": {
+      "accept": [
+       "anaphylaxis",
+       "anaphylactic shock",
+       "anaphylactic reaction"
+      ]
+     }
+    },
+    {
+     "id": "p14",
+     "level": 2,
+     "text": "Which type of vegetarian eats no animal products at all, including eggs, milk and honey?",
+     "solution": "Vegans eat no animal products; lacto-ovo vegetarians eat dairy and eggs; pescatarians eat fish",
+     "hint": "This diet avoids every animal product",
+     "choice": {
+      "options": [
+       "Lacto-ovo vegetarian",
+       "Vegan",
+       "Lacto vegetarian",
+       "Pescatarian"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Pescatarians eat fish"
+      ]
+     }
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "A shopper in Kent wants apples with the lowest food miles. Which should they choose?",
+     "solution": "Local apples travel the shortest distance, so they have the lowest food miles",
+     "hint": "Which apples travel the shortest distance?",
+     "choice": {
+      "options": [
+       "Apples from New Zealand",
+       "Apples from South Africa",
+       "Apples from a farm in Kent",
+       "Apples from Chile"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "A customer with a peanut allergy orders food in a café. What should the café do?",
+     "solution": "Allergy safety needs accurate information and preventing cross-contact, because tiny traces can cause a reaction",
+     "hint": "Even a tiny trace of peanut can cause a reaction",
+     "choice": {
+      "options": [
+       "Pick visible peanuts off a dish just before serving",
+       "Tell the customer the food is probably fine",
+       "Serve a smaller portion",
+       "Give clear allergen information and prevent cross-contact with peanuts when preparing the food"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Traces of peanut would remain and could cause a reaction",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "A food label shows a red traffic light for salt. What does this mean?",
+     "solution": "Red means high, amber means medium and green means low",
+     "hint": "Think about traffic lights: what does red mean?",
+     "choice": {
+      "options": [
+       "The food is high in salt",
+       "The food contains no salt",
+       "The food is medium in salt",
+       "The salt has been removed"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Medium would be amber",
+       null
+      ]
+     }
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "A family wants to reduce food waste. Which action would help?",
+     "solution": "Planning meals, using leftovers and storing food correctly all reduce waste",
+     "hint": "Think about buying only what you need",
+     "choice": {
+      "options": [
+       "Buying extra food in case guests arrive",
+       "Planning meals and using up leftovers before buying more",
+       "Throwing away food on its best before date",
+       "Storing bread in a warm, damp place"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "p19",
+     "level": 3,
+     "text": "Many Muslims eat meat only if it has been prepared according to Islamic law. Give the term for food that is permitted.",
+     "solution": "Halal means permitted under Islamic law; many Muslims eat only halal meat and avoid pork",
+     "hint": "It is the opposite of haram",
+     "short": {
+      "accept": [
+       "halal"
+      ],
+      "reject": [
+       "kosher",
+       "haram"
+      ],
+      "feedback": {
+       "kosher": "Kosher is the term used in Judaism"
+      }
+     }
+    },
+    {
+     "id": "p20",
+     "level": 3,
+     "text": "Many Hindus avoid which meat in particular?",
+     "solution": "Many Hindus do not eat beef because the cow is regarded as sacred; many Hindus are vegetarian",
+     "hint": "Which animal is regarded as sacred by many Hindus?",
+     "choice": {
+      "options": [
+       "Chicken",
+       "Lamb",
+       "Beef",
+       "Fish"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "p21",
+     "level": 3,
+     "text": "Which UK farm assurance logo, shaped like a farm vehicle, shows food was produced to British standards for safety, hygiene and animal welfare? Give the name.",
+     "solution": "The Red Tractor logo shows food meets UK farm assurance standards",
+     "hint": "It is named after a colour and a farm vehicle",
+     "short": {
+      "accept": [
+       "Red Tractor",
+       "red tractor logo"
+      ]
+     }
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "A ready meal label lists: water, tomatoes, pasta (6%), cheese, salt. Which statement is accurate?",
+     "solution": "Ingredients are listed in descending order of weight, so water (listed first) is the largest ingredient",
+     "hint": "Remember the rule for the order of ingredients",
+     "choice": {
+      "options": [
+       "Salt is the main ingredient",
+       "There is more pasta than tomatoes",
+       "Cheese makes up more than half the meal",
+       "There is more water than any other ingredient"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Tomatoes are listed before pasta, so there are more tomatoes",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "Why might a chef choose UK strawberries in summer rather than imported ones in winter?",
+     "solution": "Seasonal local produce is fresher, usually cheaper and travels a shorter distance",
+     "hint": "Think about freshness, cost and distance travelled",
+     "choice": {
+      "options": [
+       "In season they are fresher, often cheaper, full of flavour and have lower food miles",
+       "UK strawberries are only legal to sell in summer",
+       "Summer strawberries contain more fat",
+       "Strawberries cannot be eaten in winter"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "A food carries the Fairtrade mark. What does this tell the shopper?",
+     "solution": "Fairtrade aims to give farmers in developing countries a fair price and better working conditions",
+     "hint": "Think about the people who grew the food",
+     "choice": {
+      "options": [
+       "The food was produced in the UK",
+       "The farmers who grew it were paid a fair price and work in better conditions",
+       "The food is organic",
+       "The food contains no allergens"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Fairtrade is about fair pay and conditions; organic is a separate label",
+       null
+      ]
+     }
+    },
+    {
+     "id": "p25",
+     "level": 4,
+     "text": "Which UK law, named after a teenager, requires food made and pre-packed on the premises to show a full ingredients list with allergens emphasised? Give the name.",
+     "solution": "Natasha's Law (from October 2021) covers food pre-packed for direct sale",
+     "hint": "It is known by a girl's first name followed by the word 'Law'",
+     "short": {
+      "accept": [
+       "Natasha's Law",
+       "Natashas Law"
+      ]
+     }
+    },
+    {
+     "id": "p26",
+     "level": 4,
+     "text": "A food label says 'May contain nuts'. What does this mean?",
+     "solution": "'May contain' warns of possible cross-contact, so people with a nut allergy should avoid the food",
+     "hint": "The warning is about traces from the factory, not the recipe",
+     "choice": {
+      "options": [
+       "Nuts are the main ingredient",
+       "The food has been tested and contains no nuts",
+       "Nuts are not an ingredient, but the food may have been in contact with nuts during production",
+       "The nuts have been cooked"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "p27",
+     "level": 4,
+     "text": "Which choice would reduce the carbon footprint of a meal?",
+     "solution": "Local, seasonal food usually needs less transport and less energy for heated greenhouses",
+     "hint": "Think about transport and energy use",
+     "choice": {
+      "options": [
+       "Buying food flown in by air",
+       "Leaving the oven on after cooking",
+       "Buying food with extra packaging",
+       "Choosing local, seasonal ingredients"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "p28",
+     "level": 4,
+     "text": "Give the name of the clay oven used in Indian cooking to make naan bread and tikka.",
+     "solution": "A tandoor is a very hot clay oven used for naan and tandoori dishes",
+     "hint": "Tandoori chicken is named after it",
+     "short": {
+      "accept": [
+       "tandoor",
+       "tandoor oven"
+      ]
+     }
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "Which statement about buying local food is accurate?",
+     "solution": "Local food usually reduces food miles and supports the local economy, but 'always' statements are not accurate",
+     "hint": "Be careful with statements that say 'always'",
+     "choice": {
+      "options": [
+       "Local food usually has fewer food miles and supports local farmers, although it may cost more",
+       "Local food always has a lower carbon footprint than any imported food",
+       "Local food always contains more vitamins",
+       "Local food is always organic"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "A person with coeliac disease is eating out. Which choice is suitable?",
+     "solution": "Wheat pasta, bread and batter contain gluten; plain fish, potatoes and vegetables do not",
+     "hint": "Look for the meal with no wheat flour",
+     "choice": {
+      "options": [
+       "Pasta with tomato sauce",
+       "Grilled fish with potatoes and vegetables, with no flour-based sauce",
+       "A sandwich made with wheat bread",
+       "Battered fish with chips"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Batter is usually made with wheat flour, which contains gluten"
+      ]
+     }
+    },
+    {
+     "id": "p31",
+     "level": 5,
+     "text": "Why is milk pasteurised?",
+     "solution": "Pasteurisation heats milk to about 72 °C for 15 seconds and then cools it quickly, killing harmful bacteria",
+     "hint": "It is named after Louis Pasteur, who studied bacteria",
+     "choice": {
+      "options": [
+       "Pasteurising removes all the fat",
+       "Pasteurised milk lasts for years without a fridge",
+       "Heating to about 72 °C for 15 seconds kills harmful bacteria and extends shelf life with little change in taste",
+       "Pasteurising adds extra vitamins"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Pasteurised milk must still be kept in the fridge",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "p32",
+     "level": 5,
+     "text": "Why might a vegetarian who eats eggs and dairy still need to plan their iron intake?",
+     "solution": "Non-haem iron from plants is less easily absorbed, so eating it with vitamin C helps",
+     "hint": "Compare iron from plants with iron from red meat",
+     "choice": {
+      "options": [
+       "Plant foods contain no iron at all",
+       "Eggs block all iron absorption",
+       "Vegetarians do not need iron",
+       "Iron from plant foods (non-haem iron) is less easily absorbed than iron from meat"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "p33",
+     "level": 5,
+     "text": "Give the name of the Middle Eastern dip made from chickpeas, tahini, lemon juice and garlic.",
+     "solution": "Hummus is made from chickpeas blended with tahini (sesame paste), lemon juice and garlic",
+     "hint": "It is often eaten with pitta bread",
+     "short": {
+      "accept": [
+       "hummus",
+       "houmous",
+       "humous",
+       "hommus",
+       "humus"
+      ]
+     }
+    },
+    {
+     "id": "p34",
+     "level": 5,
+     "text": "Which statement about seasonal food is accurate?",
+     "solution": "Food eaten in season is usually fresher and cheaper and needs less storage or transport",
+     "hint": "Watch out for 'all' and 'always'",
+     "choice": {
+      "options": [
+       "Seasonal food is often fresher, as it has not been stored or transported for long",
+       "Seasonal food can only be bought at farmers' markets",
+       "All food in UK supermarkets is seasonal",
+       "Seasonal food is always more expensive"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "p35",
+     "level": 5,
+     "text": "Many Jewish people keep kosher. Which practice is part of keeping kosher?",
+     "solution": "Kosher food laws include not mixing meat with dairy and not eating pork or shellfish",
+     "hint": "Think about which food groups are kept apart",
+     "choice": {
+      "options": [
+       "Eating pork only on Fridays",
+       "Not eating meat and dairy foods together",
+       "Avoiding all vegetables",
+       "Eating shellfish at every meal"
+      ],
+      "correct": 1
+     }
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "food_nutrition.y{year}.nutrients",
+      "label": "Nutrients & health",
+      "skills": [
+       "food_nutrition.nutrients"
+      ]
+     },
+     {
+      "id": "food_nutrition.y{year}.science",
+      "label": "Food science",
+      "skills": [
+       "food_nutrition.science"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "food_nutrition.y{year}.safety",
+      "label": "Food safety",
+      "skills": [
+       "food_nutrition.safety"
+      ]
+     },
+     {
+      "id": "food_nutrition.y{year}.choice",
+      "label": "Food choice & provenance",
+      "skills": [
+       "food_nutrition.choice"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

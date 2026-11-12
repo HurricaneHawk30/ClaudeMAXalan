@@ -411,7 +411,7 @@ def _render_fn(skill_id: str, ref: str, q: _Q, reject: tuple[str, ...]) -> Calla
         options, correct, fb = q.options, q.correct, q.cfeedback
 
         def render(seed: int) -> Problem:
-            t, ans, mistakes = build_choice(text, options, correct, seed, fb)
+            t, ans, mistakes = build_choice(text, options, correct, seed, fb, salt=ref)
             return Problem(skill_id, level, seed, t, ans, solution, hint, mistakes, ref)
     elif q.kind == "short":
         accept, form, sfb = q.accept, q.form, q.sfeedback

@@ -506,7 +506,7 @@
     {
      "id": "g25",
      "level": 4,
-     "text": "Complete with the correct form of «müssen»: «Ich ___ heute meine Hausaufgaben machen.» Type the verb only.",
+     "text": "Complete with the present tense of «müssen»: «Ich ___ heute meine Hausaufgaben machen.» Type the verb only.",
      "short": {
       "accept": [
        "muss"
@@ -743,7 +743,8 @@
      "short": {
       "accept": [
        "doctor",
-       "GP"
+       "GP",
+       "physician"
       ],
       "form": "any"
      },
@@ -804,7 +805,8 @@
        "grammar school",
        "secondary school",
        "school",
-       "high school"
+       "high school",
+       "secondary"
       ],
       "reject": [
        "gym",
@@ -887,7 +889,8 @@
      "short": {
       "accept": [
        "eine Krankenschwester",
-       "eine Krankenpflegerin"
+       "eine Krankenpflegerin",
+       "eine Pflegefachfrau"
       ],
       "reject": [
        "ein Krankenpfleger",
@@ -1306,7 +1309,8 @@
      "text": "What does «das Schwimmen» mean in English? Answer in English.",
      "short": {
       "accept": [
-       "swimming"
+       "swimming",
+       "swim"
       ],
       "form": "any"
      },
@@ -1444,7 +1448,7 @@
        null,
        "Im (dative) shows position, not movement",
        null,
-       "In den is for masculine nouns; Kino is neuter"
+       "In den is for masculine or plural nouns; Kino is neuter singular"
       ]
      },
      "solution": "Movement into a place takes the accusative; Kino is neuter: in das = ins",
@@ -2188,6 +2192,8 @@
        "by bicycle",
        "bicycle",
        "cycling",
+       "cycle",
+       "cycles",
        "on a bike",
        "on my bike",
        "by cycle"

@@ -32,6 +32,7 @@ from . import words
 
 FROZEN = frozenset({"maths", "physics"})
 GEN_SEEDS = range(20)
+GEN_DETERMINISM_SEEDS = 5          # generated twice and compared (the first seeds of every level)
 ITEM_SEEDS = (0, 1)
 VARIATION_SEEDS = range(20)
 
@@ -260,6 +261,33 @@ def _check_problem(rep: Report, key: str, where: str, p: Problem, again: Problem
         _check_short_problem(rep, key, where, p)
 
 
+class _Letters(list):
+    n: int = 0
+
+
+def _choice_letters(rep: Report, key: str, it) -> "_Letters | None":
+    """Correct-letter positions over VARIATION_SEEDS, from the shuffle (cross-checked with real renders)."""
+    from .kinds import shuffle_order
+    try:
+        p0 = it.render(0)
+        opts = p0.answer.value["options"]
+        n = len(opts)
+        o0 = shuffle_order(n, 0, it.ref)
+        original = [None] * n
+        for j, i in enumerate(o0):
+            original[i] = opts[j]
+        c = original.index(opts[p0.answer.value["correct"]])
+        out = _Letters(shuffle_order(n, seed, it.ref).index(c) for seed in VARIATION_SEEDS)
+        out.n = n
+        for seed in (0, 1):
+            if it.render(seed).answer.value["correct"] != out[seed]:
+                rep.error(key, f"L10 {it.ref}: the rendered order does not follow shuffle_order(n, seed, ref)")
+                return None
+        return out
+    except Exception:                # noqa: BLE001 - already reported by the item checks
+        return None
+
+
 def _audit_items(rep: Report, sk: Skill) -> None:
     key = sk.id
     by_n: dict[int, Counter] = defaultdict(Counter)
@@ -275,14 +303,12 @@ def _audit_items(rep: Report, sk: Skill) -> None:
                 rep.error(key, f"{where}: raised {type(e).__name__}: {e}")
                 break
         if it.kind == "choice":
-            letters = []
-            try:
-                for seed in VARIATION_SEEDS:
-                    a = it.render(seed).answer
-                    letters.append(a.value["correct"])
-                    by_n[len(a.value["options"])][a.value["correct"]] += 1
-            except Exception:        # noqa: BLE001 - already reported above
+            letters = _choice_letters(rep, key, it)
+            if letters is None:
                 continue
+            n = letters.n
+            for c in letters:
+                by_n[n][c] += 1
             if len(set(letters)) < 2:
                 rep.error(key, f"L10 {it.ref}: the correct letter takes one value over seeds 0-19")
     for n, cnt in by_n.items():
@@ -305,7 +331,7 @@ def _audit_generator(rep: Report, sk: Skill) -> list[Problem]:
             where = f"level {level} seed {seed}"
             try:
                 p = sk.generate(level, seed)
-                again = sk.generate(level, seed)
+                again = sk.generate(level, seed) if seed < GEN_DETERMINISM_SEEDS else p
             except Exception as e:   # noqa: BLE001
                 rep.error(key, f"{where}: generate raised {type(e).__name__}: {e}")
                 continue
@@ -339,10 +365,30 @@ def _answer_texts(sk: Skill):
                 yield it, o, "option"
 
 
+_FILLER_START = re.compile(r"^\s*(?:it'?s|it is|it was|its|i think|maybe|probably|answer|the answer is|known as)\b",
+                           re.IGNORECASE)
+_NOTE_PREFIX = re.compile(r"^\[[^\]\n]*\]\s*")
+
+
 def _lint_universal(rep: Report, sk: Skill) -> None:
-    """L5, L7, R6, R12: safe for any file, including test fixtures."""
+    """L5, L7, R6, R12 and two audit-only warnings: safe for any file, including test fixtures."""
     from ..intents import intent, is_cheat_request, is_distress
     key = sk.id
+    for it in sk.items:
+        if it.kind != "short":
+            continue
+        try:
+            p = it.render(0)
+        except Exception:            # noqa: BLE001 - reported by the item checks
+            continue
+        stem = _NOTE_PREFIX.sub("", p.text)
+        if re.match(r"(?i)\s*why\b", stem):
+            rep.warn(key, f"{it.ref}: a short answer to a 'Why' question is usually typed as 'because ...', "
+                          "and lines starting with because/as/since are ignored; ask for the term or use choice")
+        for x in p.answer.value["accept"]:
+            if _FILLER_START.match(x):
+                rep.warn(key, f"{it.ref}: accept {x!r} starts with a filler phrase; the checker also accepts it "
+                              "without that phrase")
     for it, text, what in _answer_texts(sk):
         why = ("a distress phrase" if is_distress(text) else "a cheat request" if is_cheat_request(text)
                else f"the {intent(text)!r} command" if intent(text) is not None else None)

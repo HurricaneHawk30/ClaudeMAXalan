@@ -23,10 +23,15 @@ _BAN_LONE = re.compile(r"^\(?[A-Ea-e]\)?$")
 _BAN_PREFIX = re.compile(r"^[A-E][).:]\s")
 
 
-def shuffle_order(n: int, seed: int) -> list[int]:
-    """Displayed order of n options for this seed (deterministic)."""
+def shuffle_order(n: int, seed: int, salt: str = "") -> list[int]:
+    """Displayed order of n options for this seed (deterministic).
+
+    Without ``salt`` this is exactly section 2.2: Random(f"choice:{seed}").  Bank items pass their ref as
+    ``salt`` (Random(f"choice:{ref}:{seed}")), so where the correct letter lands does not depend on the
+    position of the correct option in the file (lead decision, 12 Nov 2026).
+    """
     order = list(range(n))
-    random.Random(f"choice:{seed}").shuffle(order)
+    random.Random(f"choice:{salt}:{seed}" if salt else f"choice:{seed}").shuffle(order)
     return order
 
 
@@ -109,15 +114,15 @@ def choice_error(options: Sequence[str], correct: int, feedback=None) -> str | N
 
 
 def build_choice(stem: str, options: Sequence[str], correct: int, seed: int,
-                 feedback: Sequence[str | None] | None = None) -> tuple[str, Answer, tuple[Mistake, ...]]:
-    """(text, answer, mistakes) for a multiple-choice question, options shuffled by ``seed``."""
+                 feedback: Sequence[str | None] | None = None, *, salt: str = "") -> tuple[str, Answer, tuple[Mistake, ...]]:
+    """(text, answer, mistakes) for a multiple-choice question, options shuffled by ``seed`` (and ``salt``)."""
     if not isinstance(stem, str) or not stem.strip():
         raise ValueError("choice: the stem must be a non-empty string")
     msg = choice_error(options, correct, feedback)
     if msg:
         raise ValueError(f"choice: {msg}")
     n = len(options)
-    order = shuffle_order(n, seed)
+    order = shuffle_order(n, seed, salt)
     shown = [options[i] for i in order]
     c = order.index(correct)
     text = stem.rstrip() + "\n\n" + "\n".join(f"{L}) {opt}" for L, opt in zip(CHOICE_LETTERS, shown))

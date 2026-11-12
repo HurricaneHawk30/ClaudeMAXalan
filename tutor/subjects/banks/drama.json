@@ -315,7 +315,7 @@
       }
      },
      "solution": "The audience sits in the auditorium, also called the house",
-     "hint": "The word comes from the Latin word for 'hearing'"
+     "hint": "The word comes from the Latin verb meaning 'to hear'"
     },
     {
      "id": "rs15",
@@ -438,7 +438,8 @@
        "downstage left",
        "down stage left",
        "dsl",
-       "down left"
+       "down left",
+       "dl"
       ],
       "reject": [
        "downstage right",
@@ -752,7 +753,9 @@
        "verfremdungseffekt",
        "v-effekt",
        "v-effect",
-       "verfremdung"
+       "verfremdung",
+       "distancing",
+       "estrangement"
       ]
      },
      "solution": "Brecht's alienation (distancing) effect, Verfremdungseffekt in German, keeps the audience thinking rather than feeling",

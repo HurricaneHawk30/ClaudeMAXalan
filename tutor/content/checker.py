@@ -1003,6 +1003,10 @@ def _choice_line(ln: _TLine, keys: tuple[frozenset, ...], n: int):
     m = _CH_B.match(s)
     if m:
         i = CHOICE_LETTERS.index(m.group(1).upper())
+        if s[1:2] in ("-", "–"):
+            w = whole()         # "e-books", "D-Day", "B-cells": a hyphenated option, not a letter
+            if w is not None:
+                return w
         hits = _option_hits(m.group(3), keys)
         if i < n and i in hits:
             return i

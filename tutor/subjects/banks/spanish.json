@@ -277,7 +277,7 @@
     {
      "id": "g13",
      "level": 2,
-     "text": "Complete with the correct form of «ser» or «estar»: «Hoy mi madre ___ cansada.» Type the verb only.",
+     "text": "Complete with the present tense of «ser» or «estar»: «Hoy mi madre ___ cansada.» Type the verb only.",
      "short": {
       "accept": [
        "está"
@@ -454,20 +454,20 @@
      "text": "Choose the correct verb: «Cuando era pequeño, ___ en el parque todos los días.»",
      "choice": {
       "options": [
-       "jugué",
+       "jugaban",
        "jugaré",
        "jugaba",
        "juego"
       ],
       "correct": 2,
       "feedback": [
-       "Jugué is the preterite, for single completed actions",
+       "Jugaban goes with ellos/ellas; the subject here is yo",
        "Jugaré is the future",
        null,
-       null
+       "Juego is the present"
       ]
      },
-     "solution": "A repeated past habit uses the imperfect: jugaba",
+     "solution": "A repeated past habit uses the imperfect, and the subject is yo: jugaba",
      "hint": "Todos los días in the past describes a habit"
     },
     {
@@ -984,7 +984,8 @@
        "lawyer",
        "solicitor",
        "attorney",
-       "barrister"
+       "barrister",
+       "advocate"
       ],
       "form": "any"
      },
@@ -1313,7 +1314,8 @@
      "text": "What does «la natación» mean in English? Answer in English.",
      "short": {
       "accept": [
-       "swimming"
+       "swimming",
+       "swim"
       ],
       "form": "any"
      },
@@ -1664,7 +1666,7 @@
       }
      },
      "solution": "Ver in the preterite: vi, viste, vio, vimos, visteis, vieron",
-     "hint": "Ver is regular in the preterite and has no accents"
+     "hint": "In the preterite, ver has no written accents; use the nosotros ending for -er verbs"
     },
     {
      "id": "c22",
@@ -2198,6 +2200,8 @@
        "by bicycle",
        "bicycle",
        "cycling",
+       "cycle",
+       "cycles",
        "on a bike",
        "on my bike",
        "by cycle"

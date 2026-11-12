@@ -726,7 +726,8 @@
      "short": {
       "accept": [
        "doctor",
-       "GP"
+       "GP",
+       "physician"
       ],
       "form": "any"
      },
@@ -787,7 +788,8 @@
        "secondary school",
        "school",
        "high school",
-       "middle school"
+       "middle school",
+       "secondary"
       ],
       "reject": [
        "college"
@@ -1270,7 +1272,8 @@
      "text": "What does «la natation» mean in English? Answer in English.",
      "short": {
       "accept": [
-       "swimming"
+       "swimming",
+       "swim"
       ],
       "form": "any"
      },
@@ -1433,7 +1436,8 @@
      "text": "Translate into French. Include the definite article (le, la, l' or les): the newspaper",
      "short": {
       "accept": [
-       "le journal"
+       "le journal",
+       "le quotidien"
       ],
       "reject": [
        "la journal",
@@ -1445,7 +1449,7 @@
        "la journal": "Journal is masculine"
       }
      },
-     "solution": "Le journal = the newspaper (plural les journaux)",
+     "solution": "Le journal (or le quotidien) = the newspaper (plural les journaux)",
      "hint": "It is masculine and ends in -al"
     },
     {
@@ -1806,7 +1810,8 @@
      "text": "Translate into French using the passé composé: «she watched a film»",
      "short": {
       "accept": [
-       "elle a regardé un film"
+       "elle a regardé un film",
+       "elle a vu un film"
       ],
       "reject": [
        "elle est regardée un film",
@@ -1820,7 +1825,7 @@
       }
      },
      "solution": "Regarder takes avoir, so there is no agreement: elle a regardé un film",
-     "hint": "Regarder uses avoir, so the participle does not agree with elle"
+     "hint": "The verb uses avoir, so the participle does not agree with elle"
     },
     {
      "id": "c32",
@@ -2041,7 +2046,9 @@
      "text": "Translate into French. Include the definite article (le, la, l' or les): the car",
      "short": {
       "accept": [
-       "la voiture"
+       "la voiture",
+       "l'auto",
+       "l'automobile"
       ],
       "reject": [
        "le voiture"
@@ -2051,7 +2058,7 @@
        "le voiture": "Voiture is feminine, so it takes la"
       }
      },
-     "solution": "Voiture is feminine: la voiture",
+     "solution": "Voiture is feminine: la voiture (l'auto is also correct)",
      "hint": "Is voiture masculine or feminine?"
     },
     {
@@ -2145,6 +2152,8 @@
        "by bicycle",
        "bicycle",
        "cycling",
+       "cycle",
+       "cycles",
        "on a bike",
        "on my bike",
        "by cycle"

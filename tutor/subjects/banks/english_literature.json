@@ -1,0 +1,3197 @@
+{
+ "subject": {
+  "id": "english_literature",
+  "title": "English Literature",
+  "order": 14
+ },
+ "skills": [
+  {
+   "id": "english_literature.macbeth",
+   "title": "Macbeth",
+   "aliases": [
+    "macbeth",
+    "lady macbeth",
+    "banquo",
+    "the witches",
+    "duncan",
+    "macduff",
+    "birnam wood"
+   ],
+   "questions": [
+    {
+     "id": "m01",
+     "level": 1,
+     "topic_note": "Macbeth",
+     "text": "At the start of the play, Macbeth is Thane of which place?",
+     "choice": {
+      "options": [
+       "Glamis",
+       "Cawdor",
+       "Fife",
+       "Ross"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "He is given this title after the battle, when the traitor who held it is executed",
+       "Macduff is the Thane of Fife",
+       null
+      ]
+     },
+     "solution": "Macbeth is Thane of Glamis; he is then made Thane of Cawdor",
+     "hint": "The witches greet him first with the title he already has"
+    },
+    {
+     "id": "m02",
+     "level": 1,
+     "topic_note": "Macbeth",
+     "text": "How many witches meet Macbeth and Banquo on the heath?",
+     "choice": {
+      "options": [
+       "Two",
+       "Three",
+       "Four",
+       "Seven"
+      ],
+      "correct": 1
+     },
+     "solution": "There are three witches, the 'weird sisters'",
+     "hint": "It is a number often linked with magic in fairy tales"
+    },
+    {
+     "id": "m03",
+     "level": 1,
+     "topic_note": "Macbeth",
+     "text": "Who is King of Scotland at the start of the play?",
+     "choice": {
+      "options": [
+       "Malcolm",
+       "Edward",
+       "Duncan",
+       "James"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Malcolm is the king's son; he is crowned at the end",
+       "Edward is the King of England in the play",
+       null,
+       null
+      ]
+     },
+     "solution": "Duncan is king; Macbeth murders him in Act 2",
+     "hint": "He visits Macbeth's castle at Inverness"
+    },
+    {
+     "id": "m04",
+     "level": 1,
+     "topic_note": "Macbeth",
+     "text": "After Duncan's murder, which country does Malcolm flee to?",
+     "choice": {
+      "options": [
+       "Ireland",
+       "France",
+       "Norway",
+       "England"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Ireland is where his brother Donalbain goes",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Malcolm flees to England; his brother Donalbain goes to Ireland",
+     "hint": "He later returns from there with an army"
+    },
+    {
+     "id": "m05",
+     "level": 1,
+     "topic_note": "Macbeth",
+     "text": "Name Banquo's son, who escapes when Banquo is murdered. Give the name.",
+     "short": {
+      "accept": [
+       "Fleance"
+      ]
+     },
+     "solution": "Fleance escapes, so the prophecy that Banquo's descendants will be kings remains a threat to Macbeth",
+     "hint": "His name begins with F"
+    },
+    {
+     "id": "m06",
+     "level": 1,
+     "topic_note": "Macbeth",
+     "text": "Name the Thane of Fife, who discovers Duncan's body and kills Macbeth at the end. Give the name.",
+     "short": {
+      "accept": [
+       "Macduff"
+      ]
+     },
+     "solution": "Macduff discovers the murder in Act 2 and kills Macbeth in Act 5",
+     "hint": "The first apparition in Act 4 warns Macbeth to beware him"
+    },
+    {
+     "id": "m07",
+     "level": 2,
+     "topic_note": "Macbeth",
+     "text": "Who speaks the line 'Fair is foul, and foul is fair'?",
+     "choice": {
+      "options": [
+       "The witches",
+       "Lady Macbeth",
+       "Banquo",
+       "Duncan"
+      ],
+      "correct": 0
+     },
+     "solution": "The witches chant it together in Act 1 Scene 1, introducing appearance versus reality",
+     "hint": "It is spoken in the very first scene, in thunder and lightning"
+    },
+    {
+     "id": "m08",
+     "level": 2,
+     "topic_note": "Macbeth",
+     "text": "Who says 'Out, damned spot! out, I say!'?",
+     "choice": {
+      "options": [
+       "Lady Macduff",
+       "Lady Macbeth",
+       "The Gentlewoman",
+       "Hecate"
+      ],
+      "correct": 1
+     },
+     "solution": "Lady Macbeth says it while sleepwalking in Act 5 Scene 1, trying to wash away imaginary blood",
+     "hint": "The speaker is sleepwalking, watched by a doctor"
+    },
+    {
+     "id": "m09",
+     "level": 2,
+     "topic_note": "Macbeth",
+     "text": "What do the witches prophesy for Banquo?",
+     "choice": {
+      "options": [
+       "He will become Thane of Cawdor",
+       "He will be killed by Macduff",
+       "His descendants will be kings, though he will not be king himself",
+       "He will become King of England"
+      ],
+      "correct": 2
+     },
+     "solution": "They tell him 'Thou shalt get kings, though thou be none'",
+     "hint": "Think about Fleance and the line of kings shown in Act 4"
+    },
+    {
+     "id": "m10",
+     "level": 2,
+     "topic_note": "Macbeth",
+     "text": "In which act is Duncan murdered?",
+     "choice": {
+      "options": [
+       "Act 1",
+       "Act 3",
+       "Act 4",
+       "Act 2"
+      ],
+      "correct": 3
+     },
+     "solution": "Duncan is murdered offstage in Act 2 Scene 2, at Macbeth's castle",
+     "hint": "It happens straight after the dagger soliloquy"
+    },
+    {
+     "id": "m11",
+     "level": 2,
+     "topic_note": "Macbeth",
+     "text": "Duncan makes Macbeth Thane of which place as a reward for his bravery? Give the place.",
+     "short": {
+      "accept": [
+       "Cawdor",
+       "Thane of Cawdor"
+      ],
+      "reject": [
+       "Glamis"
+      ],
+      "feedback": {
+       "Glamis": "Macbeth is already Thane of Glamis at the start"
+      }
+     },
+     "solution": "Macbeth is made Thane of Cawdor, just as the witches predicted",
+     "hint": "The previous holder of this title was executed as a traitor"
+    },
+    {
+     "id": "m12",
+     "level": 2,
+     "topic_note": "Macbeth",
+     "text": "Whose ghost appears at Macbeth's banquet in Act 3? Give the name.",
+     "short": {
+      "accept": [
+       "Banquo",
+       "Banquo's ghost"
+      ],
+      "reject": [
+       "Duncan"
+      ],
+      "feedback": {
+       "Duncan": "The ghost is not the king's; it is the friend Macbeth had murdered after becoming king"
+      }
+     },
+     "solution": "Banquo's ghost sits in Macbeth's place, terrifying him in front of his guests",
+     "hint": "Macbeth had this friend murdered earlier in Act 3"
+    },
+    {
+     "id": "m13",
+     "level": 3,
+     "topic_note": "Macbeth",
+     "text": "'Stars, hide your fires; / Let not light see my black and deep desires.' What does this aside show about Macbeth?",
+     "choice": {
+      "options": [
+       "He wants to keep his dark ambitions hidden",
+       "He is afraid of the dark",
+       "He is praying for Duncan's long life",
+       "He is planning a night-time battle against Norway"
+      ],
+      "correct": 0
+     },
+     "solution": "Macbeth already has 'black and deep desires' to be king and wants them concealed",
+     "hint": "What might his 'black and deep desires' be?"
+    },
+    {
+     "id": "m14",
+     "level": 3,
+     "topic_note": "Macbeth",
+     "text": "Lady Macbeth calls on spirits to 'unsex me here'. What does she want?",
+     "choice": {
+      "options": [
+       "To be protected from the witches",
+       "To lose her feminine gentleness so she can be cruel enough to kill",
+       "To be forgiven for her sins",
+       "To become Queen of England"
+      ],
+      "correct": 1
+     },
+     "solution": "She asks to be filled with 'direst cruelty', rejecting the gentleness expected of women",
+     "hint": "What qualities did Jacobeans expect of women, and why might she want to lose them?"
+    },
+    {
+     "id": "m15",
+     "level": 3,
+     "topic_note": "Macbeth",
+     "text": "Why does Macbeth kill Duncan's guards (the chamberlains)?",
+     "choice": {
+      "options": [
+       "Because they attacked Lady Macbeth",
+       "Because Banquo ordered him to",
+       "To silence them, while claiming he acted out of fury and love for Duncan",
+       "Because they were spies from Norway"
+      ],
+      "correct": 2
+     },
+     "solution": "Killing the guards stops them denying the murder; Macbeth pretends it was loyal rage",
+     "hint": "What might the guards have said if they had lived?"
+    },
+    {
+     "id": "m16",
+     "level": 3,
+     "topic_note": "Macbeth",
+     "text": "The apparitions in Act 4 Scene 1 say that no man born of a woman can harm Macbeth, and that he will not be defeated until Birnam Wood comes to Dunsinane. How does this make Macbeth feel?",
+     "choice": {
+      "options": [
+       "Terrified, so he surrenders to Malcolm",
+       "Guilty, so he confesses to Macduff",
+       "Uninterested, so he ignores the witches",
+       "Overconfident, because he thinks he cannot be defeated"
+      ],
+      "correct": 3
+     },
+     "solution": "Both prophecies seem impossible to fulfil, so Macbeth believes he is safe",
+     "hint": "Could a wood ever move? Is every man born of a woman?"
+    },
+    {
+     "id": "m17",
+     "level": 3,
+     "topic_note": "Macbeth",
+     "text": "From which wood does Malcolm's army cut branches to hide its numbers? Give the name of the wood.",
+     "short": {
+      "accept": [
+       "Birnam Wood",
+       "Birnam",
+       "Great Birnam Wood"
+      ]
+     },
+     "solution": "Branches from Birnam Wood make it look as if the wood is moving to Dunsinane, fulfilling the prophecy",
+     "hint": "An apparition said Macbeth would not be defeated until this wood came to Dunsinane"
+    },
+    {
+     "id": "m18",
+     "level": 3,
+     "topic_note": "Macbeth",
+     "text": "In Act 2 Scene 3, a drunk servant jokes that he is the gatekeeper of hell while he answers the knocking. What is his role? Give the term.",
+     "short": {
+      "accept": [
+       "porter",
+       "the porter"
+      ]
+     },
+     "solution": "The Porter gives comic relief, but his joke reminds us that Macbeth's castle is now a place of evil",
+     "hint": "His job is to open the castle gate"
+    },
+    {
+     "id": "m19",
+     "level": 4,
+     "topic_note": "Macbeth",
+     "text": "'Will all great Neptune's ocean wash this blood / Clean from my hand?' What does this show about Macbeth just after the murder?",
+     "choice": {
+      "options": [
+       "He feels overwhelming guilt that he believes can never be washed away",
+       "He is proud of what he has done",
+       "He wants to escape by sea",
+       "He blames Banquo for the murder"
+      ],
+      "correct": 0
+     },
+     "solution": "The hyperbole shows his guilt is so great that a whole ocean could not wash it away",
+     "hint": "Is it really about the blood, or about something inside him?"
+    },
+    {
+     "id": "m20",
+     "level": 4,
+     "topic_note": "Macbeth",
+     "text": "Compare Lady Macbeth's 'A little water clears us of this deed' (Act 2) with her sleepwalking in Act 5. What change does this show?",
+     "choice": {
+      "options": [
+       "She becomes calmer and more ruthless",
+       "She moves from confident control to being overwhelmed by guilt",
+       "She forgets the murder completely",
+       "She confesses publicly to Malcolm"
+      ],
+      "correct": 1
+     },
+     "solution": "In Act 2 she thinks a little water removes guilt; in Act 5 she cannot stop scrubbing imaginary blood",
+     "hint": "In Act 5 she keeps trying to wash her hands"
+    },
+    {
+     "id": "m21",
+     "level": 4,
+     "topic_note": "Macbeth",
+     "text": "Why does Macbeth arrange Banquo's murder?",
+     "choice": {
+      "options": [
+       "Banquo tried to steal Lady Macbeth's crown",
+       "The witches told him Banquo would kill him",
+       "He fears Banquo's suspicions and the prophecy that Banquo's descendants will be kings",
+       "Duncan's ghost ordered him to"
+      ],
+      "correct": 2
+     },
+     "solution": "Banquo suspects him, and the witches promised the crown to Banquo's heirs, leaving Macbeth a 'fruitless crown'",
+     "hint": "Remember what the witches promised Banquo in Act 1"
+    },
+    {
+     "id": "m22",
+     "level": 4,
+     "topic_note": "Macbeth",
+     "text": "Why does the prophecy that 'none of woman born' shall harm Macbeth fail to protect him?",
+     "choice": {
+      "options": [
+       "Macduff is a ghost",
+       "Malcolm breaks the spell with a charm",
+       "The witches take the prophecy back",
+       "Macduff was not born in the natural way, so the prophecy does not cover him"
+      ],
+      "correct": 3
+     },
+     "solution": "Macduff reveals he was delivered early by an unnatural birth, so the prophecy's wording does not cover him",
+     "hint": "Listen to what Macduff says about his own birth in Act 5"
+    },
+    {
+     "id": "m23",
+     "level": 4,
+     "topic_note": "Macbeth",
+     "text": "Which castle and hill does Macbeth defend in Act 5, named in the Birnam Wood prophecy? Give the name.",
+     "short": {
+      "accept": [
+       "Dunsinane",
+       "Dunsinane Hill",
+       "Dunsinane Castle"
+      ]
+     },
+     "solution": "Macbeth shuts himself in Dunsinane, believing Birnam Wood can never come there",
+     "hint": "It begins with D"
+    },
+    {
+     "id": "m24",
+     "level": 4,
+     "topic_note": "Macbeth",
+     "text": "In Act 1 Scene 7, how does Lady Macbeth persuade Macbeth to go ahead with the murder of Duncan?",
+     "rubric": {
+      "model_answer": "Lady Macbeth attacks Macbeth's manhood: 'When you durst do it, then you were a man', so the murder becomes a test of masculinity. She calls him a coward and claims she would do something terrible rather than break a promise as he has, which shames him. She commands him to 'screw your courage to the sticking-place' and then gives a practical plan: drug the guards and blame them. Her mix of insults, commands and a clear plan overcomes his doubts.",
+      "mark_scheme": "1 mark: clear point about how she persuades him (e.g. questioning his manhood)\n1 mark: relevant quotation from Act 1 Scene 7\n1 mark: analysis of her language (insults, imperatives, questions)\n1 mark: explains the effect (Macbeth changes his mind and agrees)",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: she questions his manhood, calls him a coward, uses commands and gives him a practical plan",
+     "hint": "Look at what Lady Macbeth says about being 'a man'"
+    },
+    {
+     "id": "m25",
+     "level": 5,
+     "topic_note": "Macbeth",
+     "text": "Which statement about the Jacobean context of Macbeth is accurate?",
+     "choice": {
+      "options": [
+       "King James I believed in witchcraft and was thought to be descended from Banquo",
+       "The play was written for Queen Elizabeth I's coronation",
+       "King James I banned all plays about Scotland",
+       "Shakespeare wrote the play after King James I had died"
+      ],
+      "correct": 0
+     },
+     "solution": "James I wrote Daemonologie, a book on witchcraft, and traced his family line to Banquo, so Banquo is shown positively",
+     "hint": "Who became King of England in 1603, and where was he from?"
+    },
+    {
+     "id": "m26",
+     "level": 5,
+     "topic_note": "Macbeth",
+     "text": "Killing a king was seen as an especially terrible crime in Shakespeare's time. Why?",
+     "choice": {
+      "options": [
+       "Kings were elected by Parliament every year",
+       "Kings were believed to be chosen by God (the Divine Right of Kings)",
+       "Kings were believed to be immortal",
+       "Only witches were allowed to choose kings"
+      ],
+      "correct": 1
+     },
+     "solution": "Under the Divine Right of Kings, killing a king was a crime against God and the natural order",
+     "hint": "Think about where Jacobeans believed a king's power came from"
+    },
+    {
+     "id": "m27",
+     "level": 5,
+     "topic_note": "Macbeth",
+     "text": "In Act 2 Scene 4, Ross and an Old Man describe darkness in the daytime and Duncan's horses eating each other. What do these details suggest?",
+     "choice": {
+      "options": [
+       "Scotland is having an ordinary winter",
+       "The witches have started a war with England",
+       "Nature is disturbed because the natural order has been broken by the king's murder",
+       "Duncan's horses were badly trained"
+      ],
+      "correct": 2
+     },
+     "solution": "These unnatural events mirror the unnatural crime of killing a king, which upsets God's order",
+     "hint": "Jacobeans believed the king sat near the top of a God-given order"
+    },
+    {
+     "id": "m28",
+     "level": 5,
+     "topic_note": "Macbeth",
+     "text": "Macbeth's 'Life's but a walking shadow' speech comes just after he hears of his wife's death. What does the speech mainly show?",
+     "choice": {
+      "options": [
+       "His relief at finally being free",
+       "His plan to win the battle using magic",
+       "His joy at becoming king",
+       "His despair: life now seems meaningless to him"
+      ],
+      "correct": 3
+     },
+     "solution": "He calls life a tale 'Told by an idiot, full of sound and fury, / Signifying nothing', showing utter despair",
+     "hint": "What does a 'shadow' suggest about how real or important life is?"
+    },
+    {
+     "id": "m29",
+     "level": 5,
+     "topic_note": "Macbeth",
+     "text": "Give the term for the murder of a king, the crime at the centre of the play.",
+     "short": {
+      "accept": [
+       "regicide"
+      ]
+     },
+     "solution": "Regicide means killing a king: Macbeth's murder of Duncan",
+     "hint": "It ends in -cide, like 'homicide'"
+    },
+    {
+     "id": "m30",
+     "level": 5,
+     "topic_note": "Macbeth",
+     "text": "'Macbeth is a tragic hero, not simply a villain.' How far do you agree?",
+     "rubric": {
+      "model_answer": "Macbeth begins as 'brave Macbeth', a loyal soldier praised by Duncan, so he has the high status of a tragic hero. His fatal flaw, 'vaulting ambition', leads him to murder, yet his guilt ('Will all great Neptune's ocean wash this blood') shows a conscience a simple villain would lack. However, he later orders the killing of Macduff's family without hesitation, which seems villainous. By the end, his despair in 'Life's but a walking shadow' makes the audience feel pity as well as horror.",
+      "mark_scheme": "1 mark: clear argument that answers 'how far'\n1 mark: Macbeth's noble start (e.g. 'brave Macbeth')\n1 mark: his fatal flaw (ambition) and its results\n1 mark: evidence of guilt or conscience\n1 mark: his villainous acts considered (e.g. Macduff's family)\n1 mark: tragic structure or audience response (pity and fear)",
+      "max_marks": 6
+     },
+     "solution": "A balanced answer weighs his noble start, ambition, guilt and later cruelty, and the pity he provokes at the end",
+     "hint": "List what makes him admirable at the start, then what he does later"
+    }
+   ]
+  },
+  {
+   "id": "english_literature.christmas_carol",
+   "title": "A Christmas Carol",
+   "aliases": [
+    "a christmas carol",
+    "scrooge",
+    "marley",
+    "tiny tim",
+    "dickens",
+    "bob cratchit",
+    "fezziwig"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "topic_note": "A Christmas Carol",
+     "text": "Who was Jacob Marley?",
+     "choice": {
+      "options": [
+       "Scrooge's dead business partner",
+       "Scrooge's nephew",
+       "Scrooge's clerk",
+       "Scrooge's old schoolteacher"
+      ],
+      "correct": 0
+     },
+     "solution": "Marley was Scrooge's partner; he died seven years before the story begins",
+     "hint": "The firm's sign still shows both their names"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "topic_note": "A Christmas Carol",
+     "text": "How many spirits does Marley's ghost say will visit Scrooge?",
+     "choice": {
+      "options": [
+       "Two",
+       "Three",
+       "Four",
+       "Seven"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Seven is the number of years Marley has been dead"
+      ]
+     },
+     "solution": "Marley warns that three spirits will haunt Scrooge: Christmas Past, Present and Yet to Come",
+     "hint": "Count the ghosts of Christmas"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "topic_note": "A Christmas Carol",
+     "text": "What is the name of Scrooge's clerk?",
+     "choice": {
+      "options": [
+       "Fred",
+       "Fezziwig",
+       "Bob Cratchit",
+       "Dick Wilkins"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Fred is Scrooge's nephew",
+       "Fezziwig was Scrooge's old employer",
+       null,
+       null
+      ]
+     },
+     "solution": "Bob Cratchit works in Scrooge's cold counting-house for a low wage",
+     "hint": "His youngest son is Tiny Tim"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "topic_note": "A Christmas Carol",
+     "text": "What does Dickens call the five chapters of A Christmas Carol?",
+     "choice": {
+      "options": [
+       "Verses",
+       "Acts",
+       "Cantos",
+       "Staves"
+      ],
+      "correct": 3
+     },
+     "solution": "They are staves, like the verses of a song or carol",
+     "hint": "A carol is a song, so the word for a chapter here is musical"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "topic_note": "A Christmas Carol",
+     "text": "What is the name of Bob Cratchit's youngest son, who is ill? Give the name.",
+     "short": {
+      "accept": [
+       "Tiny Tim",
+       "Tim"
+      ]
+     },
+     "solution": "Tiny Tim, whose fate depends on whether Scrooge changes",
+     "hint": "His nickname describes his small size"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "topic_note": "A Christmas Carol",
+     "text": "In which year was A Christmas Carol first published? Give the year.",
+     "short": {
+      "accept": [
+       "1843"
+      ]
+     },
+     "solution": "It was published in December 1843, early in Queen Victoria's reign",
+     "hint": "It was in the early 1840s"
+    },
+    {
+     "id": "c07",
+     "level": 2,
+     "topic_note": "A Christmas Carol",
+     "text": "Who says 'Bah! Humbug!' when his nephew wishes him a merry Christmas?",
+     "choice": {
+      "options": [
+       "Scrooge",
+       "Bob Cratchit",
+       "Marley",
+       "Fezziwig"
+      ],
+      "correct": 0
+     },
+     "solution": "Scrooge dismisses Christmas as 'humbug' (nonsense)",
+     "hint": "Who hates Christmas at the start of the story?"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "topic_note": "A Christmas Carol",
+     "text": "Which spirit shows Scrooge the Cratchit family's Christmas dinner?",
+     "choice": {
+      "options": [
+       "The Ghost of Christmas Past",
+       "The Ghost of Christmas Present",
+       "The Ghost of Christmas Yet to Come",
+       "Marley's Ghost"
+      ],
+      "correct": 1,
+      "feedback": [
+       "This spirit shows Scrooge scenes from his own past",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The Ghost of Christmas Present shows Christmas Day as it is happening, including the Cratchits' dinner",
+     "hint": "The dinner is happening on this very Christmas Day"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "topic_note": "A Christmas Carol",
+     "text": "Who is Belle?",
+     "choice": {
+      "options": [
+       "Scrooge's younger sister",
+       "Bob Cratchit's wife",
+       "The young woman who ends her engagement to Scrooge because he loves money more",
+       "Fred's housekeeper"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Scrooge's sister is Fan",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Belle breaks off the engagement because another idol, gold, has replaced her",
+     "hint": "The Ghost of Christmas Past shows her with the young Scrooge"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "topic_note": "A Christmas Carol",
+     "text": "What is Marley's ghost wrapped in?",
+     "choice": {
+      "options": [
+       "A wreath of holly with icicles",
+       "A green robe bordered with white fur",
+       "A black hooded garment",
+       "A long chain of cash-boxes, keys, padlocks and ledgers"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "That is the Ghost of Christmas Present",
+       "That is the Ghost of Christmas Yet to Come",
+       null
+      ]
+     },
+     "solution": "His chain is made of the things of business, showing the greed that trapped him: 'I wear the chain I forged in life'",
+     "hint": "He says he made it himself during his working life"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "topic_note": "A Christmas Carol",
+     "text": "Name the kind, cheerful employer Scrooge worked for as a young apprentice. Give the name.",
+     "short": {
+      "accept": [
+       "Fezziwig",
+       "Mr Fezziwig",
+       "Old Fezziwig"
+      ]
+     },
+     "solution": "Fezziwig's Christmas ball shows how a generous employer can make others happy",
+     "hint": "He throws a joyful Christmas party for his workers"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "topic_note": "A Christmas Carol",
+     "text": "What is the name of Scrooge's nephew, who invites him to Christmas dinner? Give the name.",
+     "short": {
+      "accept": [
+       "Fred"
+      ]
+     },
+     "solution": "Fred keeps inviting Scrooge despite his rudeness",
+     "hint": "He is the son of Scrooge's late sister, Fan"
+    },
+    {
+     "id": "c13",
+     "level": 3,
+     "topic_note": "A Christmas Carol",
+     "text": "When the charity collectors ask for money, Scrooge asks 'Are there no prisons?' What does this show?",
+     "choice": {
+      "options": [
+       "He thinks the poor should be dealt with by harsh institutions, not charity",
+       "He wants to visit a prison",
+       "He has just been released from prison",
+       "He is worried about rising crime"
+      ],
+      "correct": 0
+     },
+     "solution": "Scrooge believes prisons and workhouses are enough for the poor, so he refuses to give",
+     "hint": "Who does he think should look after the poor?"
+    },
+    {
+     "id": "c14",
+     "level": 3,
+     "topic_note": "A Christmas Carol",
+     "text": "What are the names of the two children hidden under the robe of the Ghost of Christmas Present?",
+     "choice": {
+      "options": [
+       "Hunger and Cold",
+       "Ignorance and Want",
+       "Greed and Pride",
+       "Hope and Charity"
+      ],
+      "correct": 1
+     },
+     "solution": "'This boy is Ignorance. This girl is Want.' They stand for society's neglect of the poor",
+     "hint": "One name means lack of education; the other means poverty"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "topic_note": "A Christmas Carol",
+     "text": "At Fred's party, the guests play a guessing game called Yes and No. What is Fred thinking of?",
+     "choice": {
+      "options": [
+       "Bob Cratchit",
+       "A Christmas pudding",
+       "His Uncle Scrooge",
+       "Marley's ghost"
+      ],
+      "correct": 2
+     },
+     "solution": "The disagreeable animal that lives in London turns out to be Scrooge",
+     "hint": "The 'animal' is grumpy and lives in London"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "topic_note": "A Christmas Carol",
+     "text": "What does Scrooge do on Christmas morning in Stave 5?",
+     "choice": {
+      "options": [
+       "Sacks Bob Cratchit",
+       "Leaves London for ever",
+       "Marries Belle",
+       "Sends a prize turkey to the Cratchits without saying who sent it"
+      ],
+      "correct": 3
+     },
+     "solution": "He secretly sends the Cratchits a turkey 'twice the size of Tiny Tim'",
+     "hint": "He sends a boy to the poulterer's shop"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "topic_note": "A Christmas Carol",
+     "text": "Which spirit never speaks, but only points? Give its name.",
+     "short": {
+      "accept": [
+       "Ghost of Christmas Yet to Come",
+       "Christmas Yet to Come",
+       "Ghost of Christmas Future",
+       "Christmas Future",
+       "Yet to Come",
+       "Spirit of Christmas Yet to Come",
+       "Phantom"
+      ],
+      "reject": [
+       "Ghost of Christmas Present",
+       "Christmas Present",
+       "Ghost of Christmas Past",
+       "Christmas Past"
+      ],
+      "feedback": {
+       "Ghost of Christmas Present": "The Ghost of Christmas Present is jolly and talkative",
+       "Ghost of Christmas Past": "The Ghost of Christmas Past speaks to Scrooge"
+      }
+     },
+     "solution": "The Ghost of Christmas Yet to Come is a silent, hooded phantom that points at each scene",
+     "hint": "It is the last of the three spirits"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "topic_note": "A Christmas Carol",
+     "text": "Scrooge's sister comes to fetch him home from school. What is her name? Give the name.",
+     "short": {
+      "accept": [
+       "Fan",
+       "Little Fan"
+      ]
+     },
+     "solution": "Fan dies young; she is Fred's mother, which links Scrooge's past to his nephew",
+     "hint": "She later becomes Fred's mother"
+    },
+    {
+     "id": "c19",
+     "level": 4,
+     "topic_note": "A Christmas Carol",
+     "text": "Dickens describes Scrooge as 'solitary as an oyster' and 'hard and sharp as flint'. What do these similes suggest?",
+     "choice": {
+      "options": [
+       "He is cold, unfeeling and cut off from other people",
+       "He is warm and generous",
+       "He is fond of the sea",
+       "He is brave and adventurous"
+      ],
+      "correct": 0
+     },
+     "solution": "An oyster is shut tight in its shell and flint is hard and cold: Scrooge is closed off and unfeeling",
+     "hint": "Think about what an oyster's shell and a flint stone are like"
+    },
+    {
+     "id": "c20",
+     "level": 4,
+     "topic_note": "A Christmas Carol",
+     "text": "After watching Fezziwig's ball, Scrooge says he would like to say a word or two to his clerk. What does this show?",
+     "choice": {
+      "options": [
+       "He wants to complain about Bob's work",
+       "He is starting to regret how he treats Bob Cratchit",
+       "He wants Bob to organise a party",
+       "He is planning to sack Bob"
+      ],
+      "correct": 1
+     },
+     "solution": "Remembering Fezziwig's kindness makes Scrooge reflect on his own behaviour as an employer",
+     "hint": "Compare Fezziwig as a boss with Scrooge as a boss"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "topic_note": "A Christmas Carol",
+     "text": "When Scrooge asks if Tiny Tim will live, the Ghost of Christmas Present repeats Scrooge's words about the 'surplus population'. Why?",
+     "choice": {
+      "options": [
+       "To praise his good business sense",
+       "To remind him to pay his taxes",
+       "To make him ashamed of his cruel attitude to the poor",
+       "To show that he was right all along"
+      ],
+      "correct": 2
+     },
+     "solution": "Hearing his own words applied to Tiny Tim makes Scrooge feel ashamed and full of grief",
+     "hint": "How does Scrooge feel hearing his words used about a child he now cares about?"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "topic_note": "A Christmas Carol",
+     "text": "In Stave 4, people sell a dead man's belongings at Old Joe's shop. What does this scene show Scrooge?",
+     "choice": {
+      "options": [
+       "That Old Joe is his long-lost brother",
+       "That Tiny Tim has recovered",
+       "That Belle has become rich",
+       "How little anyone cared for the dead man, who turns out to be Scrooge himself"
+      ],
+      "correct": 3
+     },
+     "solution": "Even the dead man's bed-curtains are taken and sold, showing he died unloved: the man is Scrooge",
+     "hint": "Who does the dead man turn out to be?"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "topic_note": "A Christmas Carol",
+     "text": "In 1843 Dickens visited a free school for very poor children in London, which shaped his thinking for A Christmas Carol. What were these schools called? Give the term.",
+     "short": {
+      "accept": [
+       "Ragged Schools",
+       "Ragged School",
+       "Field Lane Ragged School"
+      ]
+     },
+     "solution": "Ragged Schools gave free education to very poor children; Dickens visited one at Field Lane in 1843",
+     "hint": "The name describes the children's torn clothes"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "topic_note": "A Christmas Carol",
+     "text": "In Stave 1, how does Dickens use cold weather and coldness to present Scrooge?",
+     "rubric": {
+      "model_answer": "Dickens links Scrooge with cold to show he is unfeeling. 'The cold within him froze his old features', suggesting his meanness comes from inside and even shapes how he looks. Dickens adds 'No warmth could warm, no wintry weather chill him', implying he is colder than winter itself. Scrooge keeps Bob's fire tiny, so his coldness makes others suffer. This prepares for the warmth of his change in Stave 5.",
+      "mark_scheme": "1 mark: clear point linking coldness to Scrooge's character\n1 mark: relevant quotation from Stave 1\n1 mark: analysis of language (e.g. 'cold within him', 'froze')\n1 mark: effect on others or link to his later change",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: coldness inside Scrooge, Dickens's cold imagery, Bob's tiny fire and the contrast with his later warmth",
+     "hint": "Find where Dickens describes Scrooge's appearance and his office fire"
+    },
+    {
+     "id": "c25",
+     "level": 5,
+     "topic_note": "A Christmas Carol",
+     "text": "Which statement about the context of A Christmas Carol is accurate?",
+     "choice": {
+      "options": [
+       "The 1834 Poor Law Amendment Act sent many poor people to harsh workhouses",
+       "Victorian Britain gave free healthcare to everyone",
+       "Workhouses had been abolished before 1843",
+       "Dickens wrote the novella to praise wealthy factory owners"
+      ],
+      "correct": 0
+     },
+     "solution": "Scrooge's 'Union workhouses' were part of the system set up by the 1834 Poor Law Amendment Act",
+     "hint": "Scrooge mentions one of these institutions in Stave 1"
+    },
+    {
+     "id": "c26",
+     "level": 5,
+     "topic_note": "A Christmas Carol",
+     "text": "What is the main purpose of Ignorance and Want in Stave 3?",
+     "choice": {
+      "options": [
+       "To add comedy to a sad stave",
+       "To warn readers that neglecting poor children will lead society to disaster",
+       "To show Scrooge's own childhood",
+       "To reveal Marley's secret"
+      ],
+      "correct": 1
+     },
+     "solution": "The Ghost warns Scrooge to beware them both, especially the boy: Dickens is warning his readers",
+     "hint": "Who is Dickens really speaking to here, Scrooge or his readers?"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "topic_note": "A Christmas Carol",
+     "text": "Why does Dickens make Scrooge's transformation so complete in Stave 5?",
+     "choice": {
+      "options": [
+       "To show that ghosts are dangerous",
+       "To prove that money is the key to happiness",
+       "To show that anyone, even the meanest person, can change and become generous",
+       "To show that Scrooge has lost his memory"
+      ],
+      "correct": 2
+     },
+     "solution": "Dickens's message is that redemption is possible for anyone, so his readers can change too",
+     "hint": "What lesson does Dickens want his wealthy readers to take from Scrooge?"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "topic_note": "A Christmas Carol",
+     "text": "Which statement about the structure of A Christmas Carol is accurate?",
+     "choice": {
+      "options": [
+       "It has three acts and is written as a play",
+       "It is narrated in the first person by Scrooge",
+       "It begins on Christmas Day and ends on New Year's Eve",
+       "It has five staves and moves through past, present and future before Scrooge's change"
+      ],
+      "correct": 3
+     },
+     "solution": "Five staves: Marley, the three spirits (past, present, future) and Scrooge's redemption",
+     "hint": "Count the chapters and think about the order of the ghosts"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "topic_note": "A Christmas Carol",
+     "text": "Scrooge's phrase 'decrease the surplus population' echoes the ideas of an economist who wrote about population growth. Give his surname.",
+     "short": {
+      "accept": [
+       "Malthus",
+       "Thomas Malthus",
+       "Thomas Robert Malthus"
+      ]
+     },
+     "solution": "Thomas Malthus argued that population growth would outstrip the food supply",
+     "hint": "He wrote An Essay on the Principle of Population (1798)"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "topic_note": "A Christmas Carol",
+     "text": "How does Dickens use the Ghost of Christmas Yet to Come to complete Scrooge's change?",
+     "rubric": {
+      "model_answer": "The silent, hooded Phantom frightens Scrooge more than any other spirit, and its silence forces him to work out the meaning of each scene himself. He sees businessmen joke about a dead man, people sell the man's belongings at Old Joe's, and the Cratchits grieving for Tiny Tim. Finally he sees his own neglected grave. These visions show that a selfish life ends unloved and that his choices affect others, so he begs for the chance to change. Dickens uses this fear to make his message urgent.",
+      "mark_scheme": "1 mark: clear argument about the Ghost's role in Scrooge's change\n1 mark: the Ghost's silence and appearance and their effect\n1 mark: the reactions to the dead man (businessmen, Old Joe's)\n1 mark: the Cratchits' grief for Tiny Tim\n1 mark: the gravestone and Scrooge's plea to change\n1 mark: Dickens's purpose or message for readers",
+      "max_marks": 6
+     },
+     "solution": "Key ideas: the frightening silence, the unloved dead man, Tiny Tim's death, the gravestone and Scrooge's plea to change",
+     "hint": "Think about each scene the Phantom shows, and how Scrooge reacts"
+    }
+   ]
+  },
+  {
+   "id": "english_literature.inspector_calls",
+   "title": "An Inspector Calls",
+   "aliases": [
+    "an inspector calls",
+    "inspector goole",
+    "birling",
+    "priestley",
+    "sheila",
+    "eric",
+    "eva smith",
+    "gerald croft"
+   ],
+   "questions": [
+    {
+     "id": "i01",
+     "level": 1,
+     "topic_note": "An Inspector Calls",
+     "text": "Who wrote An Inspector Calls?",
+     "choice": {
+      "options": [
+       "J. B. Priestley",
+       "Willy Russell",
+       "Arthur Miller",
+       "Charles Dickens"
+      ],
+      "correct": 0
+     },
+     "solution": "J. B. Priestley wrote the play in the 1940s",
+     "hint": "He was a Yorkshire-born writer with socialist views"
+    },
+    {
+     "id": "i02",
+     "level": 1,
+     "topic_note": "An Inspector Calls",
+     "text": "What is the Birling family celebrating when the Inspector arrives?",
+     "choice": {
+      "options": [
+       "Mr Birling's knighthood",
+       "Sheila's engagement to Gerald Croft",
+       "Eric's birthday",
+       "Mrs Birling's charity award"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Mr Birling only hopes he might get a knighthood",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "They are celebrating Sheila and Gerald's engagement at a family dinner",
+     "hint": "Gerald gives Sheila a ring"
+    },
+    {
+     "id": "i03",
+     "level": 1,
+     "topic_note": "An Inspector Calls",
+     "text": "What is the name of the young woman whose death the Inspector investigates?",
+     "choice": {
+      "options": [
+       "Edna",
+       "Sheila Birling",
+       "Eva Smith",
+       "Lady Croft"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Edna is the Birlings' maid",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Eva Smith, who also used the name Daisy Renton",
+     "hint": "Her surname is one of the most common in England"
+    },
+    {
+     "id": "i04",
+     "level": 1,
+     "topic_note": "An Inspector Calls",
+     "text": "In which fictional city is the play set?",
+     "choice": {
+      "options": [
+       "Coketown",
+       "Middlemarch",
+       "Casterbridge",
+       "Brumley"
+      ],
+      "correct": 3
+     },
+     "solution": "The play is set in Brumley, a fictional manufacturing city in the English Midlands",
+     "hint": "It is a fictional manufacturing city in the Midlands of England"
+    },
+    {
+     "id": "i05",
+     "level": 1,
+     "topic_note": "An Inspector Calls",
+     "text": "In which year is An Inspector Calls set? Give the year.",
+     "short": {
+      "accept": [
+       "1912"
+      ]
+     },
+     "solution": "It is set in spring 1912, just before the Titanic sank and two years before the First World War",
+     "hint": "It is two years before the First World War began"
+    },
+    {
+     "id": "i06",
+     "level": 1,
+     "topic_note": "An Inspector Calls",
+     "text": "What is the name of the Birlings' maid? Give the name.",
+     "short": {
+      "accept": [
+       "Edna"
+      ]
+     },
+     "solution": "Edna the maid lets the Inspector in",
+     "hint": "She opens the door to the Inspector"
+    },
+    {
+     "id": "i07",
+     "level": 2,
+     "topic_note": "An Inspector Calls",
+     "text": "The play is set in 1912. In which decade was it first performed?",
+     "choice": {
+      "options": [
+       "The 1940s",
+       "The 1910s",
+       "The 1920s",
+       "The 1960s"
+      ],
+      "correct": 0
+     },
+     "solution": "It was first performed in 1945 in the Soviet Union, and in London in 1946",
+     "hint": "It was first staged around the end of the Second World War"
+    },
+    {
+     "id": "i08",
+     "level": 2,
+     "topic_note": "An Inspector Calls",
+     "text": "Why did Mr Birling sack Eva Smith from his factory?",
+     "choice": {
+      "options": [
+       "She stole money from the office",
+       "She was one of the leaders of a strike for higher wages",
+       "She was rude to Sheila in a shop",
+       "She was always late for work"
+      ],
+      "correct": 1,
+      "feedback": [
+       "It is Eric who takes money from the office",
+       null,
+       "That is why she later loses her job at the department store",
+       null
+      ]
+     },
+     "solution": "Eva helped lead a strike for higher pay, so Birling sacked her as a ringleader",
+     "hint": "Think about what the workers asked for"
+    },
+    {
+     "id": "i09",
+     "level": 2,
+     "topic_note": "An Inspector Calls",
+     "text": "Why was Eva sacked from Milwards department store?",
+     "choice": {
+      "options": [
+       "She led a strike there",
+       "Gerald asked the manager to",
+       "Sheila complained about her",
+       "She was caught stealing a dress"
+      ],
+      "correct": 2
+     },
+     "solution": "Sheila, in a bad temper, complained about Eva and had her sacked",
+     "hint": "A jealous customer used her family's influence"
+    },
+    {
+     "id": "i10",
+     "level": 2,
+     "topic_note": "An Inspector Calls",
+     "text": "Which character persuades the women's charity committee to refuse to help Eva?",
+     "choice": {
+      "options": [
+       "Sheila",
+       "Lady Croft",
+       "Edna",
+       "Mrs Birling"
+      ],
+      "correct": 3
+     },
+     "solution": "Mrs Birling uses her influence on the committee to turn Eva away",
+     "hint": "She is a prominent member of the Brumley Women's Charity Organisation"
+    },
+    {
+     "id": "i11",
+     "level": 2,
+     "topic_note": "An Inspector Calls",
+     "text": "What false name was Eva using when Gerald met her? Give the name.",
+     "short": {
+      "accept": [
+       "Daisy Renton",
+       "Daisy",
+       "Renton"
+      ]
+     },
+     "solution": "She was calling herself Daisy Renton when Gerald met her",
+     "hint": "Her new first name is also the name of a flower"
+    },
+    {
+     "id": "i12",
+     "level": 2,
+     "topic_note": "An Inspector Calls",
+     "text": "Who is engaged to Sheila? Give the name.",
+     "short": {
+      "accept": [
+       "Gerald Croft",
+       "Gerald",
+       "Croft"
+      ]
+     },
+     "solution": "Gerald Croft, son of Sir George and Lady Croft",
+     "hint": "His father owns a rival company and has a title"
+    },
+    {
+     "id": "i13",
+     "level": 3,
+     "topic_note": "An Inspector Calls",
+     "text": "Mr Birling tells his guests that the Titanic cannot sink and that there will be no war. Which technique is Priestley using?",
+     "choice": {
+      "options": [
+       "Dramatic irony",
+       "Pathetic fallacy",
+       "Flashback",
+       "Cliffhanger"
+      ],
+      "correct": 0
+     },
+     "solution": "The audience knows the Titanic sank in 1912 and war came in 1914, so Birling looks foolish",
+     "hint": "The audience knows something Birling does not"
+    },
+    {
+     "id": "i14",
+     "level": 3,
+     "topic_note": "An Inspector Calls",
+     "text": "How does Sheila react when she realises her part in Eva's story?",
+     "choice": {
+      "options": [
+       "She denies everything and blames Eva",
+       "She feels genuinely guilty and accepts responsibility",
+       "She laughs and leaves the house",
+       "She insists the Inspector is lying"
+      ],
+      "correct": 1
+     },
+     "solution": "Sheila is deeply upset and admits that her jealousy caused harm",
+     "hint": "Compare her reaction with her parents' reactions"
+    },
+    {
+     "id": "i15",
+     "level": 3,
+     "topic_note": "An Inspector Calls",
+     "text": "What does Eric admit to taking from his father's office?",
+     "choice": {
+      "options": [
+       "A gold watch",
+       "Sheila's engagement ring",
+       "About fifty pounds",
+       "The firm's account books"
+      ],
+      "correct": 2
+     },
+     "solution": "Eric took about fifty pounds from the office to give to Eva",
+     "hint": "He took it so that he could give it to Eva"
+    },
+    {
+     "id": "i16",
+     "level": 3,
+     "topic_note": "An Inspector Calls",
+     "text": "When the Inspector arrives, how do Priestley's stage directions say the lighting should change?",
+     "choice": {
+      "options": [
+       "From bright to complete darkness",
+       "From white to flashing red",
+       "It stays the same all evening",
+       "From soft and warm to bright and harsh"
+      ],
+      "correct": 3
+     },
+     "solution": "The harsher lighting suggests the Inspector will expose the family's secrets",
+     "hint": "Think about why an investigator would want everything clearly lit"
+    },
+    {
+     "id": "i17",
+     "level": 3,
+     "topic_note": "An Inspector Calls",
+     "text": "Which member of the Birling family is questioned last by the Inspector? Give the name.",
+     "short": {
+      "accept": [
+       "Eric",
+       "Eric Birling"
+      ]
+     },
+     "solution": "Eric is questioned in Act 3, after his mother has blamed the father of Eva's child",
+     "hint": "He has been drinking heavily"
+    },
+    {
+     "id": "i18",
+     "level": 3,
+     "topic_note": "An Inspector Calls",
+     "text": "What is the Inspector's surname? Give the name.",
+     "short": {
+      "accept": [
+       "Goole",
+       "Inspector Goole"
+      ]
+     },
+     "solution": "Inspector Goole: the name sounds like 'ghoul', hinting he may be supernatural",
+     "hint": "It sounds like a word for a ghost-like spirit"
+    },
+    {
+     "id": "i19",
+     "level": 4,
+     "topic_note": "An Inspector Calls",
+     "text": "Why did Priestley set the play in 1912 but write it for an audience in 1945?",
+     "choice": {
+      "options": [
+       "So the audience could see how wrong Birling's confident predictions were and learn from the past",
+       "Because the law required plays to be set in the past",
+       "Because he did not know about events after 1912",
+       "To make the costumes cheaper"
+      ],
+      "correct": 0
+     },
+     "solution": "Knowing about two world wars, the 1945 audience could judge Birling's attitudes and want a fairer society",
+     "hint": "What did a 1945 audience know that the Birlings did not?"
+    },
+    {
+     "id": "i20",
+     "level": 4,
+     "topic_note": "An Inspector Calls",
+     "text": "How do Sheila and Eric differ from their parents by the end of the play?",
+     "choice": {
+      "options": [
+       "The parents feel more guilty than their children",
+       "The younger generation accepts responsibility, while the parents mostly refuse to change",
+       "Everyone in the family changes equally",
+       "Sheila and Eric decide that nothing happened"
+      ],
+      "correct": 1
+     },
+     "solution": "Sheila and Eric are changed by the evening; Mr and Mrs Birling want things to go back to normal",
+     "hint": "Who is relieved when the Inspector seems to be a hoax?"
+    },
+    {
+     "id": "i21",
+     "level": 4,
+     "topic_note": "An Inspector Calls",
+     "text": "What news does the final phone call of the play bring?",
+     "choice": {
+      "options": [
+       "Eva Smith is alive and working at Milwards",
+       "Gerald has been arrested",
+       "Another young woman's death has been reported, and a real police inspector is coming to question them",
+       "Mr Birling has been given his knighthood"
+      ],
+      "correct": 2
+     },
+     "solution": "The call reveals that a real inspector is coming, so the family must face the same questions again",
+     "hint": "It brings the play full circle"
+    },
+    {
+     "id": "i22",
+     "level": 4,
+     "topic_note": "An Inspector Calls",
+     "text": "Which description of the play's structure is accurate?",
+     "choice": {
+      "options": [
+       "Five acts set over several years",
+       "Many short scenes in different cities",
+       "Two acts separated by a ten-year gap",
+       "Three acts with continuous action in one room on one evening"
+      ],
+      "correct": 3
+     },
+     "solution": "The action is continuous, in the Birlings' dining room, across one evening",
+     "hint": "Does time ever jump forward between the acts?"
+    },
+    {
+     "id": "i23",
+     "level": 4,
+     "topic_note": "An Inspector Calls",
+     "text": "After she lost her job at Birling and Company, Eva worked in a department store. Give its name.",
+     "short": {
+      "accept": [
+       "Milwards",
+       "Milward's",
+       "Milward"
+      ]
+     },
+     "solution": "She worked at Milwards until Sheila's complaint got her sacked",
+     "hint": "Sheila is a regular customer there"
+    },
+    {
+     "id": "i24",
+     "level": 4,
+     "topic_note": "An Inspector Calls",
+     "text": "How does Priestley use the opening of Act 1, before the Inspector arrives, to present the Birlings?",
+     "rubric": {
+      "model_answer": "Priestley's stage directions describe a large, comfortable dining room and soft, warm lighting, suggesting a wealthy, self-satisfied family. Mr Birling dominates the conversation, boasting about his business, his link to the Crofts and his hopes of a knighthood. He confidently claims the Titanic cannot sink and that war will not happen, which the 1945 audience knew was wrong. This dramatic irony makes him look foolish, so the audience distrusts his selfish views before the Inspector even arrives.",
+      "mark_scheme": "1 mark: comment on the setting or lighting and what it suggests\n1 mark: Mr Birling's boasting or self-importance\n1 mark: dramatic irony (Titanic, war) and its effect\n1 mark: how the audience is led to judge the family",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: a comfortable, wealthy setting, Birling's boasting and wrong predictions, and dramatic irony",
+     "hint": "Think about the setting, the lighting and what Mr Birling talks about"
+    },
+    {
+     "id": "i25",
+     "level": 5,
+     "topic_note": "An Inspector Calls",
+     "text": "Which statement about Priestley's views is accurate?",
+     "choice": {
+      "options": [
+       "He was a socialist who believed society should take collective responsibility for its members",
+       "He was a capitalist who agreed with Mr Birling",
+       "He believed the class system should never change",
+       "He thought women should not work"
+      ],
+      "correct": 0
+     },
+     "solution": "Priestley was a socialist; the Inspector voices his belief in shared responsibility",
+     "hint": "Which character's views seem closest to Priestley's own?"
+    },
+    {
+     "id": "i26",
+     "level": 5,
+     "topic_note": "An Inspector Calls",
+     "text": "What is the main dramatic purpose of the Inspector?",
+     "choice": {
+      "options": [
+       "To arrest Eric for theft",
+       "To act as Priestley's mouthpiece, challenging the Birlings to accept responsibility",
+       "To provide comic relief",
+       "To make sure Mr Birling gets his knighthood"
+      ],
+      "correct": 1
+     },
+     "solution": "The Inspector drives the plot and voices Priestley's message of social responsibility",
+     "hint": "Whose ideas does the Inspector seem to express?"
+    },
+    {
+     "id": "i27",
+     "level": 5,
+     "topic_note": "An Inspector Calls",
+     "text": "After Gerald learns there is no Inspector Goole in the local police, how do Mr and Mrs Birling react?",
+     "choice": {
+      "options": [
+       "They confess everything to the newspapers",
+       "They give all their money to charity",
+       "They feel relieved and act as if nothing has changed",
+       "They thank Sheila for her honesty"
+      ],
+      "correct": 2
+     },
+     "solution": "They celebrate, showing they have learned nothing, unlike Sheila and Eric",
+     "hint": "Do the parents learn the Inspector's lesson?"
+    },
+    {
+     "id": "i28",
+     "level": 5,
+     "topic_note": "An Inspector Calls",
+     "text": "Why is Eva Smith important in the play beyond being a single character?",
+     "choice": {
+      "options": [
+       "She is secretly Sheila's sister",
+       "She is the Inspector in disguise",
+       "She is a famous actress the Birlings admire",
+       "She represents the many working-class people affected by the actions of the powerful"
+      ],
+      "correct": 3
+     },
+     "solution": "Her very common name suggests she stands for countless working-class people",
+     "hint": "Think about how common the surname Smith is"
+    },
+    {
+     "id": "i29",
+     "level": 5,
+     "topic_note": "An Inspector Calls",
+     "text": "Which theme, beginning with R, does the Inspector want every member of the family to accept? Give the one-word theme.",
+     "short": {
+      "accept": [
+       "responsibility",
+       "social responsibility",
+       "collective responsibility"
+      ]
+     },
+     "solution": "Responsibility: the Inspector shows that each Birling played a part in Eva's fate",
+     "hint": "Each character shares part of the blame for what happened to Eva"
+    },
+    {
+     "id": "i30",
+     "level": 5,
+     "topic_note": "An Inspector Calls",
+     "text": "How does Priestley use the ending of the play to make the audience think about responsibility?",
+     "rubric": {
+      "model_answer": "After the Inspector leaves, the family splits. Sheila and Eric still feel responsible, but Mr and Mrs Birling and Gerald celebrate when it seems there was no real inspector and no recent death. Priestley then has the phone ring with news of a young woman's death and a real inspector coming to question them. This twist denies the older characters an easy escape and suggests their actions will be judged. The audience is left questioning who the Inspector was and pushed to accept that everyone shares responsibility for others.",
+      "mark_scheme": "1 mark: clear argument about the purpose of the ending\n1 mark: the split between the generations\n1 mark: the relief of Mr and Mrs Birling and Gerald\n1 mark: the final phone call and its effect\n1 mark: the mystery of the Inspector's identity\n1 mark: link to Priestley's message or 1945 context",
+      "max_marks": 6
+     },
+     "solution": "Key ideas: the generational split, the older characters' relief, the final phone call and Priestley's message about shared responsibility",
+     "hint": "Think about who has changed by the end, and what the final phone call means"
+    }
+   ]
+  },
+  {
+   "id": "english_literature.conflict_poetry",
+   "title": "Conflict poetry",
+   "aliases": [
+    "conflict poetry",
+    "power and conflict",
+    "ozymandias",
+    "london",
+    "charge of the light brigade",
+    "exposure",
+    "my last duchess",
+    "remains",
+    "poppies",
+    "war photographer",
+    "kamikaze",
+    "bayonet charge",
+    "storm on the island",
+    "the prelude"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "topic_note": "Conflict poetry",
+     "text": "Who wrote 'Ozymandias'?",
+     "choice": {
+      "options": [
+       "Percy Bysshe Shelley",
+       "William Blake",
+       "Wilfred Owen",
+       "Lord Byron"
+      ],
+      "correct": 0
+     },
+     "solution": "Percy Bysshe Shelley published 'Ozymandias' in 1818",
+     "hint": "He was a Romantic poet married to the author of Frankenstein"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "topic_note": "Conflict poetry",
+     "text": "Who wrote 'London'?",
+     "choice": {
+      "options": [
+       "William Wordsworth",
+       "William Blake",
+       "Robert Browning",
+       "Alfred, Lord Tennyson"
+      ],
+      "correct": 1
+     },
+     "solution": "William Blake, in Songs of Experience (1794)",
+     "hint": "He was a Romantic poet and artist who wrote Songs of Innocence and of Experience"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "topic_note": "Conflict poetry",
+     "text": "Who wrote 'The Charge of the Light Brigade'?",
+     "choice": {
+      "options": [
+       "Wilfred Owen",
+       "Ted Hughes",
+       "Alfred, Lord Tennyson",
+       "Simon Armitage"
+      ],
+      "correct": 2
+     },
+     "solution": "Tennyson, then Poet Laureate, wrote it in 1854",
+     "hint": "He was Poet Laureate in the 1850s"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "topic_note": "Conflict poetry",
+     "text": "Who wrote 'War Photographer'?",
+     "choice": {
+      "options": [
+       "Jane Weir",
+       "Beatrice Garland",
+       "Imtiaz Dharker",
+       "Carol Ann Duffy"
+      ],
+      "correct": 3
+     },
+     "solution": "Carol Ann Duffy wrote it; she later became Poet Laureate",
+     "hint": "She later became the first female Poet Laureate"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "topic_note": "Conflict poetry",
+     "text": "Who wrote 'Exposure'? Give the poet's surname.",
+     "short": {
+      "accept": [
+       "Owen",
+       "Wilfred Owen"
+      ]
+     },
+     "solution": "Wilfred Owen, a First World War soldier-poet, killed one week before the Armistice",
+     "hint": "He was a soldier-poet killed in November 1918"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "topic_note": "Conflict poetry",
+     "text": "Who wrote 'My Last Duchess'? Give the poet's surname.",
+     "short": {
+      "accept": [
+       "Browning",
+       "Robert Browning"
+      ]
+     },
+     "solution": "Robert Browning published it in 1842",
+     "hint": "He was a Victorian poet married to Elizabeth Barrett"
+    },
+    {
+     "id": "p07",
+     "level": 2,
+     "topic_note": "Conflict poetry",
+     "text": "Which war is the subject of 'The Charge of the Light Brigade'?",
+     "choice": {
+      "options": [
+       "The Crimean War",
+       "The First World War",
+       "The Second World War",
+       "The Iraq War"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Owen's 'Exposure' is about the First World War",
+       null,
+       null
+      ]
+     },
+     "solution": "It describes a cavalry charge at the Battle of Balaclava (1854) in the Crimean War",
+     "hint": "The poem was written in 1854"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "topic_note": "Conflict poetry",
+     "text": "In 'Ozymandias', what remains of the king's statue?",
+     "choice": {
+      "options": [
+       "A complete statue on a golden throne",
+       "Two huge stone legs and a broken face half-buried in the sand",
+       "Only an empty pedestal with no words on it",
+       "A ruined palace full of treasure"
+      ],
+      "correct": 1
+     },
+     "solution": "'Two vast and trunkless legs of stone' and a 'shattered visage' are all that is left",
+     "hint": "Read the description the traveller gives"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "topic_note": "Conflict poetry",
+     "text": "In which poem does a Duke show a visitor the portrait of his late wife?",
+     "choice": {
+      "options": [
+       "Ozymandias",
+       "London",
+       "My Last Duchess",
+       "Exposure"
+      ],
+      "correct": 2
+     },
+     "solution": "In 'My Last Duchess' the Duke of Ferrara shows an envoy his late wife's portrait",
+     "hint": "The title tells you about a wife who has gone"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "topic_note": "Conflict poetry",
+     "text": "In 'Exposure', what is presented as the soldiers' deadliest enemy?",
+     "choice": {
+      "options": [
+       "Poison gas",
+       "Tanks",
+       "Enemy aircraft",
+       "The freezing weather"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Gas attacks appear in Owen's 'Dulce et Decorum Est', not in 'Exposure'",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The 'merciless iced east winds' and the snow are deadlier than the bullets",
+     "hint": "Look at the title and the descriptions of wind and snow"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "topic_note": "Conflict poetry",
+     "text": "In 'Ozymandias', the speaker hears about the statue from someone he met. Who? Give one word.",
+     "short": {
+      "accept": [
+       "traveller",
+       "traveler"
+      ]
+     },
+     "solution": "'I met a traveller from an antique land' opens the poem",
+     "hint": "The person had journeyed from 'an antique land'"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "topic_note": "Conflict poetry",
+     "text": "According to Tennyson's poem, how many soldiers ride into the valley of Death? Give the number.",
+     "short": {
+      "accept": [
+       "600",
+       "six hundred"
+      ]
+     },
+     "solution": "'Into the valley of Death / Rode the six hundred'",
+     "hint": "The number is repeated at the end of each stanza"
+    },
+    {
+     "id": "p13",
+     "level": 3,
+     "topic_note": "Conflict poetry",
+     "text": "Blake hears 'mind-forg'd manacles' in 'London'. What does this image suggest?",
+     "choice": {
+      "options": [
+       "People are trapped by ways of thinking and by the society around them",
+       "People are making chains in factories",
+       "Prisoners are escaping from jail",
+       "Blacksmiths are the happiest workers in London"
+      ],
+      "correct": 0
+     },
+     "solution": "The manacles (chains) are made by the mind: people are imprisoned by oppression and by accepting it",
+     "hint": "Manacles are chains, so where does Blake say they are made?"
+    },
+    {
+     "id": "p14",
+     "level": 3,
+     "topic_note": "Conflict poetry",
+     "text": "In 'My Last Duchess', what does 'I gave commands; / Then all smiles stopped together' imply?",
+     "choice": {
+      "options": [
+       "The Duke told jokes to cheer her up",
+       "The Duke had his wife killed or silenced",
+       "The Duchess left to become a painter",
+       "The servants were told to stop smiling at guests"
+      ],
+      "correct": 1
+     },
+     "solution": "The chilling understatement implies that the Duke ordered his wife's death",
+     "hint": "Why would all her smiles stop at once?"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "topic_note": "Conflict poetry",
+     "text": "What is the main message of 'Ozymandias'?",
+     "choice": {
+      "options": [
+       "Great kings are always remembered",
+       "Travelling in the desert is dangerous",
+       "Human power and pride are temporary; time and nature outlast them",
+       "Egypt was a peaceful country"
+      ],
+      "correct": 2
+     },
+     "solution": "The 'lone and level sands' outlast the boastful king: power does not last",
+     "hint": "What surrounds the statue now?"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "topic_note": "Conflict poetry",
+     "text": "In 'Remains' by Simon Armitage, what troubles the soldier after he returns home?",
+     "choice": {
+      "options": [
+       "Learning to drive a tank",
+       "Writing letters to a pen friend",
+       "Missing his family's farm",
+       "The memory of a man he shot, which keeps coming back"
+      ],
+      "correct": 3
+     },
+     "solution": "He is haunted by the memory of a looter he shot, showing the lasting mental effects of conflict",
+     "hint": "Think about the title: what stays with him?"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "topic_note": "Conflict poetry",
+     "text": "'Ozymandias' is a 14-line poem written in iambic pentameter. What type of poem is it? Give the term.",
+     "short": {
+      "accept": [
+       "sonnet",
+       "a sonnet"
+      ]
+     },
+     "solution": "It is a sonnet, though Shelley breaks the usual rhyme pattern, echoing the broken statue",
+     "hint": "Think of the 14-line form Shakespeare used for love poems"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "topic_note": "Conflict poetry",
+     "text": "'My Last Duchess' is spoken by one character, the Duke, to a silent listener. Give the term for this type of poem.",
+     "short": {
+      "accept": [
+       "dramatic monologue",
+       "monologue"
+      ]
+     },
+     "solution": "A dramatic monologue reveals the speaker's character through his own words",
+     "hint": "One character speaks; the listener never replies"
+    },
+    {
+     "id": "p19",
+     "level": 4,
+     "topic_note": "Conflict poetry",
+     "text": "In 'Exposure', Owen repeats the line 'But nothing happens.' What is the effect?",
+     "choice": {
+      "options": [
+       "It emphasises the boredom and hopelessness of waiting in the freezing trenches",
+       "It shows the soldiers are enjoying a peaceful rest",
+       "It suggests the war has ended",
+       "It shows the enemy has surrendered"
+      ],
+      "correct": 0
+     },
+     "solution": "The refrain stresses endless, pointless waiting while the cold kills",
+     "hint": "How would it feel to wait all night in the freezing cold for something to happen?"
+    },
+    {
+     "id": "p20",
+     "level": 4,
+     "topic_note": "Conflict poetry",
+     "text": "In 'The Charge of the Light Brigade', what does 'Someone had blunder'd' reveal?",
+     "choice": {
+      "options": [
+       "The soldiers were cowards",
+       "The charge happened because of a mistake by commanders",
+       "The enemy made a tactical error",
+       "The poet himself gave the order"
+      ],
+      "correct": 1
+     },
+     "solution": "A misunderstood order sent the cavalry into the valley; Tennyson hints at the commanders' error",
+     "hint": "What does 'blunder' mean?"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "topic_note": "Conflict poetry",
+     "text": "How do 'Ozymandias' and 'My Last Duchess' present powerful men in a similar way?",
+     "choice": {
+      "options": [
+       "Both celebrate the kindness of powerful leaders",
+       "Both are set during the First World War",
+       "Both show proud, controlling rulers whose arrogance is exposed to the reader",
+       "Both are written by Wilfred Owen"
+      ],
+      "correct": 2
+     },
+     "solution": "Ozymandias's boastful inscription and the Duke's jealous control both reveal arrogant power",
+     "hint": "Think about the king's inscription and the Duke's attitude to his wife"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "topic_note": "Conflict poetry",
+     "text": "In 'London', Blake describes the streets and the Thames as 'charter'd'. What is he criticising?",
+     "choice": {
+      "options": [
+       "That London has too many bridges",
+       "That the river is too clean",
+       "That the streets are badly mapped",
+       "That even public spaces and nature are owned and controlled by the powerful"
+      ],
+      "correct": 3
+     },
+     "solution": "'Charter'd' means legally owned or controlled: Blake attacks the control of the rich and powerful",
+     "hint": "A charter is a legal document that grants ownership or rights"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "topic_note": "Conflict poetry",
+     "text": "'The Charge of the Light Brigade' describes an event in 1854. Name the battle. Give the name.",
+     "short": {
+      "accept": [
+       "Balaclava",
+       "Battle of Balaclava",
+       "Balaklava",
+       "Battle of Balaklava"
+      ]
+     },
+     "solution": "The charge took place at the Battle of Balaclava, 25 October 1854, in the Crimean War",
+     "hint": "The battle shares its name with a knitted hat that covers the face"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "topic_note": "Conflict poetry",
+     "text": "How does Blake present suffering in 'London'?",
+     "rubric": {
+      "model_answer": "Blake presents suffering as everywhere. The repetition in 'In every cry of every Man' suggests no one escapes it. He blames those in power: the 'charter'd' streets suggest that even the city is owned and controlled. The 'mind-forg'd manacles' imply people are trapped by oppression and by their own thinking. The 'hapless Soldier's sigh' that 'Runs in blood down Palace walls' links the suffering of ordinary soldiers to the monarchy.",
+      "mark_scheme": "1 mark: clear point about how suffering is presented\n1 mark: relevant quotation from the poem\n1 mark: analysis of language or repetition (e.g. 'every', 'charter'd', 'manacles')\n1 mark: link to who Blake blames (those in power, church, monarchy)",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: suffering is everywhere ('every'), control by the powerful ('charter'd') and people trapped ('mind-forg'd manacles')",
+     "hint": "Look at the words Blake repeats and who he blames"
+    },
+    {
+     "id": "p25",
+     "level": 5,
+     "topic_note": "Conflict poetry",
+     "text": "Which statement about 'War Photographer' by Carol Ann Duffy is accurate?",
+     "choice": {
+      "options": [
+       "It contrasts suffering in war zones with the indifference of people at home",
+       "It is spoken by a soldier in the trenches",
+       "It celebrates the excitement of war",
+       "It is set in Victorian London"
+      ],
+      "correct": 0
+     },
+     "solution": "The photographer develops images of suffering for newspaper readers who barely care",
+     "hint": "Think about the photographer's job and who sees his photographs"
+    },
+    {
+     "id": "p26",
+     "level": 5,
+     "topic_note": "Conflict poetry",
+     "text": "Which statement about 'Kamikaze' by Beatrice Garland is accurate?",
+     "choice": {
+      "options": [
+       "A British pilot is celebrated for a bombing raid",
+       "A Japanese pilot turns back from his mission and is then rejected by his family and community",
+       "It describes a nurse in wartime London",
+       "The pilot completes his mission and is honoured as a hero"
+      ],
+      "correct": 1
+     },
+     "solution": "The pilot chooses life, but his family and neighbours treat him as if he no longer exists",
+     "hint": "Think about what happens when he returns home"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "topic_note": "Conflict poetry",
+     "text": "Which statement about 'Poppies' by Jane Weir is accurate?",
+     "choice": {
+      "options": [
+       "A soldier describes fighting in the Crimean War",
+       "A Duke describes his collection of paintings",
+       "A mother describes her feelings as her son leaves home, with links to war and remembrance",
+       "A child describes a storm on an island"
+      ],
+      "correct": 2
+     },
+     "solution": "The mother's grief and worry as her son leaves are linked to poppies and Armistice Day",
+     "hint": "Whose voice do we hear in the poem?"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "topic_note": "Conflict poetry",
+     "text": "How do 'Exposure' and 'Storm on the Island' both present nature?",
+     "choice": {
+      "options": [
+       "As gentle and comforting",
+       "As a beautiful backdrop for a love story",
+       "As something people have completely tamed",
+       "As a powerful, hostile force that people cannot control"
+      ],
+      "correct": 3
+     },
+     "solution": "Owen's freezing winds and Heaney's storm both show nature's overwhelming power",
+     "hint": "Think about the wind in both poems"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "topic_note": "Conflict poetry",
+     "text": "In 'Exposure', Owen pairs words such as 'silent' and 'salient', which share their consonants but have different vowel sounds. Give the term for this kind of rhyme.",
+     "short": {
+      "accept": [
+       "pararhyme",
+       "para-rhyme",
+       "para rhyme",
+       "half rhyme",
+       "half-rhyme",
+       "slant rhyme"
+      ]
+     },
+     "solution": "Owen's pararhyme (half-rhyme) sounds uneasy and incomplete, like the soldiers' situation",
+     "hint": "The rhyme is never fully complete"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "topic_note": "Conflict poetry",
+     "text": "Compare how Owen in 'Exposure' and Tennyson in 'The Charge of the Light Brigade' present soldiers' experience of war.",
+     "rubric": {
+      "model_answer": "Tennyson presents soldiers as heroic: the 'Noble six hundred' obey without question ('Theirs not to reason why'), and the galloping dactylic rhythm creates excitement. Owen, a soldier himself, presents war as slow, miserable waiting: the refrain 'But nothing happens' stresses boredom, and the weather is the real enemy ('merciless iced east winds that knive us'). Tennyson glorifies sacrifice from newspaper reports, while Owen's first-hand experience exposes suffering and pointlessness.",
+      "mark_scheme": "1 mark: clear comparison of the two poems' views of war\n1 mark: Tennyson's heroic presentation with a quotation\n1 mark: Owen's presentation of suffering or waiting with a quotation\n1 mark: comparison of form or structure (rhythm, refrain)\n1 mark: context (newspaper report versus first-hand experience)\n1 mark: comparative connectives used throughout",
+      "max_marks": 6
+     },
+     "solution": "Key ideas: Tennyson's heroic, fast-paced glory against Owen's slow, freezing suffering; second-hand versus first-hand experience",
+     "hint": "Start with one big difference: who is the real enemy in each poem?"
+    }
+   ]
+  },
+  {
+   "id": "english_literature.romeo_juliet",
+   "title": "Romeo and Juliet",
+   "aliases": [
+    "romeo and juliet",
+    "romeo",
+    "juliet",
+    "mercutio",
+    "tybalt",
+    "friar laurence",
+    "capulet",
+    "montague"
+   ],
+   "questions": [
+    {
+     "id": "rj01",
+     "level": 1,
+     "topic_note": "Romeo and Juliet",
+     "text": "In which city is the play mainly set?",
+     "choice": {
+      "options": [
+       "Verona",
+       "Venice",
+       "Mantua",
+       "Rome"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Romeo is banished to Mantua, but most of the play happens elsewhere",
+       null
+      ]
+     },
+     "solution": "The play is set in Verona, in northern Italy",
+     "hint": "The Prologue names the city in its second line"
+    },
+    {
+     "id": "rj02",
+     "level": 1,
+     "topic_note": "Romeo and Juliet",
+     "text": "Which family does Juliet belong to?",
+     "choice": {
+      "options": [
+       "The Montagues",
+       "The Capulets",
+       "The Escalus family",
+       "The Medici family"
+      ],
+      "correct": 1
+     },
+     "solution": "Juliet is a Capulet; Romeo is a Montague",
+     "hint": "Her father hosts the feast where she meets Romeo"
+    },
+    {
+     "id": "rj03",
+     "level": 1,
+     "topic_note": "Romeo and Juliet",
+     "text": "Who is Juliet's hot-tempered cousin?",
+     "choice": {
+      "options": [
+       "Benvolio",
+       "Mercutio",
+       "Tybalt",
+       "Paris"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Benvolio is Romeo's cousin and a peacemaker",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Tybalt, Lady Capulet's nephew, is aggressive and hates the Montagues",
+     "hint": "He wants to fight Romeo at the Capulet feast"
+    },
+    {
+     "id": "rj04",
+     "level": 1,
+     "topic_note": "Romeo and Juliet",
+     "text": "In which form is the Prologue at the start of the play written?",
+     "choice": {
+      "options": [
+       "Limerick",
+       "Haiku",
+       "Ballad",
+       "Sonnet"
+      ],
+      "correct": 3
+     },
+     "solution": "The Prologue is a 14-line sonnet, a form linked with love poetry",
+     "hint": "It has 14 lines"
+    },
+    {
+     "id": "rj05",
+     "level": 1,
+     "topic_note": "Romeo and Juliet",
+     "text": "Who secretly marries Romeo and Juliet? Give the name.",
+     "short": {
+      "accept": [
+       "Friar Laurence",
+       "Friar Lawrence",
+       "Laurence",
+       "Lawrence",
+       "the Friar",
+       "Friar"
+      ],
+      "reject": [
+       "Friar John"
+      ],
+      "feedback": {
+       "Friar John": "Friar John fails to deliver a letter; a different friar performs the marriage"
+      }
+     },
+     "solution": "Friar Laurence marries them, hoping it will end the feud",
+     "hint": "He is a holy man who also knows about herbs and potions"
+    },
+    {
+     "id": "rj06",
+     "level": 1,
+     "topic_note": "Romeo and Juliet",
+     "text": "To which city is Romeo banished? Give the name.",
+     "short": {
+      "accept": [
+       "Mantua"
+      ]
+     },
+     "solution": "Romeo is banished to Mantua after killing Tybalt",
+     "hint": "It is a nearby city in northern Italy"
+    },
+    {
+     "id": "rj07",
+     "level": 2,
+     "topic_note": "Romeo and Juliet",
+     "text": "Who says 'A plague o' both your houses!'?",
+     "choice": {
+      "options": [
+       "Mercutio",
+       "Tybalt",
+       "Benvolio",
+       "Prince Escalus"
+      ],
+      "correct": 0
+     },
+     "solution": "Mercutio curses both families as he dies in Act 3 Scene 1",
+     "hint": "The speaker is dying after a fight he joined on Romeo's behalf"
+    },
+    {
+     "id": "rj08",
+     "level": 2,
+     "topic_note": "Romeo and Juliet",
+     "text": "Who says 'O Romeo, Romeo! wherefore art thou Romeo?'",
+     "choice": {
+      "options": [
+       "The Nurse",
+       "Juliet",
+       "Lady Capulet",
+       "Rosaline"
+      ],
+      "correct": 1
+     },
+     "solution": "Juliet says it on her balcony, wishing Romeo were not a Montague",
+     "hint": "It is spoken in the balcony scene"
+    },
+    {
+     "id": "rj09",
+     "level": 2,
+     "topic_note": "Romeo and Juliet",
+     "text": "In 'wherefore art thou Romeo?', what does 'wherefore' mean?",
+     "choice": {
+      "options": [
+       "Where",
+       "When",
+       "Why",
+       "How"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A common mistake: Juliet is not asking where he is",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "'Wherefore' means 'why': Juliet asks why he has to be a Montague",
+     "hint": "She is not looking for him; she is questioning his name"
+    },
+    {
+     "id": "rj10",
+     "level": 2,
+     "topic_note": "Romeo and Juliet",
+     "text": "Who is Romeo in love with at the start of the play, before he meets Juliet?",
+     "choice": {
+      "options": [
+       "Ophelia",
+       "Portia",
+       "Helena",
+       "Rosaline"
+      ],
+      "correct": 3
+     },
+     "solution": "Romeo is lovesick over Rosaline, who rejects him",
+     "hint": "Her name is on the guest list for the Capulet feast"
+    },
+    {
+     "id": "rj11",
+     "level": 2,
+     "topic_note": "Romeo and Juliet",
+     "text": "Who does Lord Capulet want Juliet to marry? Give the name.",
+     "short": {
+      "accept": [
+       "Paris",
+       "Count Paris",
+       "County Paris"
+      ]
+     },
+     "solution": "Paris, a young nobleman related to the Prince",
+     "hint": "He is a nobleman related to Prince Escalus"
+    },
+    {
+     "id": "rj12",
+     "level": 2,
+     "topic_note": "Romeo and Juliet",
+     "text": "Which character, Romeo's cousin, tries to keep the peace in Act 1 Scene 1? Give the name.",
+     "short": {
+      "accept": [
+       "Benvolio"
+      ]
+     },
+     "solution": "Benvolio tries to stop the fight, but Tybalt attacks him",
+     "hint": "His name comes from the Latin for 'good will'"
+    },
+    {
+     "id": "rj13",
+     "level": 3,
+     "topic_note": "Romeo and Juliet",
+     "text": "In Act 3 Scene 5, why is Lord Capulet furious with Juliet?",
+     "choice": {
+      "options": [
+       "She refuses to marry Paris",
+       "She has run away to Mantua",
+       "She has insulted Tybalt",
+       "She has lost the family's money"
+      ],
+      "correct": 0
+     },
+     "solution": "Juliet refuses the marriage to Paris, and Capulet threatens to throw her out",
+     "hint": "He has just arranged her wedding"
+    },
+    {
+     "id": "rj14",
+     "level": 3,
+     "topic_note": "Romeo and Juliet",
+     "text": "What does the Nurse advise Juliet to do after Romeo is banished?",
+     "choice": {
+      "options": [
+       "Run away to Mantua at once",
+       "Forget Romeo and marry Paris",
+       "Tell her parents about the secret marriage",
+       "Ask the Prince to pardon Romeo"
+      ],
+      "correct": 1
+     },
+     "solution": "The Nurse tells Juliet to marry Paris, and Juliet feels betrayed",
+     "hint": "Juliet feels betrayed by this advice"
+    },
+    {
+     "id": "rj15",
+     "level": 3,
+     "topic_note": "Romeo and Juliet",
+     "text": "Why does Romeo never receive Friar Laurence's letter explaining the plan?",
+     "choice": {
+      "options": [
+       "Balthasar loses it on the road",
+       "Tybalt steals it",
+       "Friar John is shut in a house because of the plague and cannot deliver it",
+       "Juliet forgets to send it"
+      ],
+      "correct": 2
+     },
+     "solution": "Friar John is quarantined, so Romeo only hears that Juliet is dead",
+     "hint": "A disease stops the messenger"
+    },
+    {
+     "id": "rj16",
+     "level": 3,
+     "topic_note": "Romeo and Juliet",
+     "text": "What happens in Act 3 Scene 1?",
+     "choice": {
+      "options": [
+       "Romeo and Tybalt become friends",
+       "Tybalt is banished by the Prince",
+       "Juliet marries Paris",
+       "After Tybalt kills Mercutio, Romeo kills Tybalt"
+      ],
+      "correct": 3
+     },
+     "solution": "Mercutio dies fighting Tybalt; Romeo kills Tybalt in revenge and is banished",
+     "hint": "It is the turning point of the play"
+    },
+    {
+     "id": "rj17",
+     "level": 3,
+     "topic_note": "Romeo and Juliet",
+     "text": "Complete Romeo's line from the balcony scene: 'It is the east, and Juliet is the ___.' Give the missing word.",
+     "short": {
+      "accept": [
+       "sun",
+       "the sun"
+      ],
+      "reject": [
+       "moon"
+      ],
+      "feedback": {
+       "moon": "Romeo calls the moon 'envious' of Juliet; he compares her to something brighter"
+      }
+     },
+     "solution": "'It is the east, and Juliet is the sun': she is bright, warm and the centre of his world",
+     "hint": "She appears at the window like the dawn in the east"
+    },
+    {
+     "id": "rj18",
+     "level": 3,
+     "topic_note": "Romeo and Juliet",
+     "text": "At the Capulet feast, which character recognises Romeo's voice and wants to fight him? Give the name.",
+     "short": {
+      "accept": [
+       "Tybalt"
+      ]
+     },
+     "solution": "Tybalt is stopped by Lord Capulet but swears revenge",
+     "hint": "He is Lady Capulet's nephew"
+    },
+    {
+     "id": "rj19",
+     "level": 4,
+     "topic_note": "Romeo and Juliet",
+     "text": "Friar Laurence warns, 'These violent delights have violent ends.' What does this suggest?",
+     "choice": {
+      "options": [
+       "Passionate, hasty love may end in disaster",
+       "Romeo should take up fencing",
+       "The wedding will be cancelled",
+       "Juliet is secretly in love with Paris"
+      ],
+      "correct": 0
+     },
+     "solution": "The Friar foreshadows the tragic end of the lovers' rushed passion",
+     "hint": "What might 'violent ends' foreshadow?"
+    },
+    {
+     "id": "rj20",
+     "level": 4,
+     "topic_note": "Romeo and Juliet",
+     "text": "How does the Prologue shape the audience's response to the play?",
+     "choice": {
+      "options": [
+       "It hides the ending to create a surprise",
+       "It reveals that the lovers will die, creating dramatic irony and a sense of fate",
+       "It introduces a comic subplot",
+       "It lists the actors in order of appearance"
+      ],
+      "correct": 1
+     },
+     "solution": "By revealing the ending, the Prologue makes us watch events unfold as if fated",
+     "hint": "What does the Prologue tell us about the lovers' fate?"
+    },
+    {
+     "id": "rj21",
+     "level": 4,
+     "topic_note": "Romeo and Juliet",
+     "text": "When Romeo and Juliet first meet, their first fourteen lines together form a sonnet. What does this suggest?",
+     "choice": {
+      "options": [
+       "They are arguing about the feud",
+       "They are reading from a book",
+       "Their love is perfectly matched, as they complete each other's lines",
+       "They dislike each other"
+      ],
+      "correct": 2
+     },
+     "solution": "Sharing a sonnet, a traditional form of love poetry, shows instant harmony between them",
+     "hint": "A sonnet is a traditional form for love poetry"
+    },
+    {
+     "id": "rj22",
+     "level": 4,
+     "topic_note": "Romeo and Juliet",
+     "text": "Just after killing Tybalt, Romeo cries 'O, I am fortune's fool!' What does this show?",
+     "choice": {
+      "options": [
+       "He believes he is very lucky",
+       "He is joking with Mercutio",
+       "He wants to become a court jester",
+       "He feels controlled by fate and bad luck"
+      ],
+      "correct": 3
+     },
+     "solution": "Romeo sees himself as a plaything of fate, linking to the 'star-cross'd lovers' of the Prologue",
+     "hint": "Think about what 'fortune' meant: fate or chance"
+    },
+    {
+     "id": "rj23",
+     "level": 4,
+     "topic_note": "Romeo and Juliet",
+     "text": "Which character advises Romeo, 'Wisely and slow; they stumble that run fast'? Give the name.",
+     "short": {
+      "accept": [
+       "Friar Laurence",
+       "Friar Lawrence",
+       "Laurence",
+       "Lawrence",
+       "the Friar",
+       "Friar"
+      ],
+      "reject": [
+       "Friar John"
+      ],
+      "feedback": {
+       "Friar John": "Friar John only appears in Act 5; this advice comes from a different friar"
+      }
+     },
+     "solution": "Friar Laurence warns Romeo not to rush into marriage",
+     "hint": "The speaker is the holy man who agrees to marry the lovers"
+    },
+    {
+     "id": "rj24",
+     "level": 4,
+     "topic_note": "Romeo and Juliet",
+     "text": "How does Shakespeare present Mercutio in Act 3 Scene 1?",
+     "rubric": {
+      "model_answer": "Mercutio is presented as witty and fiery. He provokes Tybalt and fights him when Romeo refuses, showing his loyalty and quick temper. Even when dying he jokes: 'ask for me tomorrow, and you shall find me a grave man', a pun that shows his wit. His curse, 'A plague o' both your houses!', blames both families for the feud and foreshadows the tragedy to come. His death is the turning point that drives Romeo to kill Tybalt.",
+      "mark_scheme": "1 mark: clear point about Mercutio's character (witty, loyal, hot-tempered)\n1 mark: relevant quotation from Act 3 Scene 1\n1 mark: analysis of language (e.g. the 'grave man' pun, the curse)\n1 mark: his importance to the plot or the theme of conflict",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: loyal and hot-tempered, witty even when dying, his curse on both houses and his death as the turning point",
+     "hint": "Look at what Mercutio says as he dies"
+    },
+    {
+     "id": "rj25",
+     "level": 5,
+     "topic_note": "Romeo and Juliet",
+     "text": "Which statement about fate in Romeo and Juliet is accurate?",
+     "choice": {
+      "options": [
+       "The Prologue calls them 'star-cross'd lovers', suggesting their deaths are fated",
+       "Fate is never mentioned in the play",
+       "Romeo always accepts his fate calmly",
+       "The ending is caused only by the Nurse's lies"
+      ],
+      "correct": 0
+     },
+     "solution": "'Star-cross'd' suggests the stars (fate) are against the lovers from the start",
+     "hint": "Look back at how the Prologue describes the lovers"
+    },
+    {
+     "id": "rj26",
+     "level": 5,
+     "topic_note": "Romeo and Juliet",
+     "text": "Lord Capulet's anger in Act 3 Scene 5 is shocking, yet in some ways typical of his time. Why?",
+     "choice": {
+      "options": [
+       "Daughters freely chose their own husbands in Elizabethan England",
+       "Fathers expected daughters to obey them over marriage, but his threats to disown her are extreme",
+       "Capulet wants Juliet to marry Romeo",
+       "Fathers had no say in marriages at that time"
+      ],
+      "correct": 1
+     },
+     "solution": "Elizabethan fathers arranged marriages, but threatening to throw Juliet out is shockingly harsh",
+     "hint": "Who usually decided on a daughter's marriage in Shakespeare's time?"
+    },
+    {
+     "id": "rj27",
+     "level": 5,
+     "topic_note": "Romeo and Juliet",
+     "text": "How is the feud resolved at the end of the play?",
+     "choice": {
+      "options": [
+       "The Prince banishes both families",
+       "Paris marries Juliet's cousin",
+       "Montague and Capulet are reconciled and promise golden statues of each other's child",
+       "The feud continues, worse than before"
+      ],
+      "correct": 2
+     },
+     "solution": "The deaths finally reconcile the families, who promise to raise statues of the lovers in gold",
+     "hint": "What do the two fathers promise each other?"
+    },
+    {
+     "id": "rj28",
+     "level": 5,
+     "topic_note": "Romeo and Juliet",
+     "text": "Which statement about how Shakespeare presents Tybalt is accurate?",
+     "choice": {
+      "options": [
+       "He is a gentle peacemaker like Benvolio",
+       "He is secretly in love with Juliet",
+       "He is Romeo's closest friend",
+       "He is proud and aggressive, saying he hates the word 'peace'"
+      ],
+      "correct": 3
+     },
+     "solution": "In Act 1 Scene 1 Tybalt says he hates peace 'as I hate hell, all Montagues'",
+     "hint": "Remember Tybalt's first appearance in the street fight"
+    },
+    {
+     "id": "rj29",
+     "level": 5,
+     "topic_note": "Romeo and Juliet",
+     "text": "Romeo and Juliet ends in disaster for its main characters. Give the term for this type of play.",
+     "short": {
+      "accept": [
+       "tragedy",
+       "a tragedy",
+       "tragic",
+       "Shakespearean tragedy",
+       "tragic play"
+      ]
+     },
+     "solution": "It is a tragedy: the main characters fall because of fate, hasty choices and the feud",
+     "hint": "It is the opposite of a comedy"
+    },
+    {
+     "id": "rj30",
+     "level": 5,
+     "topic_note": "Romeo and Juliet",
+     "text": "How does Shakespeare present the conflict between love and hate in Act 1 Scene 5?",
+     "rubric": {
+      "model_answer": "In Act 1 Scene 5 love and hate are placed side by side. Romeo's wonder at Juliet ('O, she doth teach the torches to burn bright!') uses light imagery to show sudden, intense love. At the same moment Tybalt recognises Romeo and wants to fight, so the audience sees hatred threatening the lovers. Their shared sonnet presents love as perfect and holy, yet Juliet's line 'My only love sprung from my only hate!' shows their love is born inside the feud, foreshadowing tragedy.",
+      "mark_scheme": "1 mark: clear argument about love and hate in the scene\n1 mark: Romeo's language of love, with a quotation\n1 mark: Tybalt's hatred and its effect on the audience\n1 mark: the shared sonnet and what it suggests\n1 mark: Juliet's 'only love... only hate' and its antithesis\n1 mark: link to fate, foreshadowing or the Prologue",
+      "max_marks": 6
+     },
+     "solution": "Key ideas: light imagery of love, Tybalt's hatred in the same scene, the shared sonnet and Juliet's 'only love... only hate'",
+     "hint": "Track what Romeo says, what Tybalt does, and what Juliet realises"
+    }
+   ]
+  },
+  {
+   "id": "english_literature.jekyll_hyde",
+   "title": "Jekyll and Hyde",
+   "aliases": [
+    "jekyll and hyde",
+    "dr jekyll",
+    "mr hyde",
+    "utterson",
+    "stevenson",
+    "lanyon"
+   ],
+   "questions": [
+    {
+     "id": "jh01",
+     "level": 1,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Who wrote Strange Case of Dr Jekyll and Mr Hyde?",
+     "choice": {
+      "options": [
+       "Robert Louis Stevenson",
+       "Charles Dickens",
+       "Mary Shelley",
+       "Arthur Conan Doyle"
+      ],
+      "correct": 0
+     },
+     "solution": "Robert Louis Stevenson, a Scottish writer, published it in 1886",
+     "hint": "He also wrote Treasure Island"
+    },
+    {
+     "id": "jh02",
+     "level": 1,
+     "topic_note": "Jekyll and Hyde",
+     "text": "What is Mr Utterson's job?",
+     "choice": {
+      "options": [
+       "Doctor",
+       "Lawyer",
+       "Butler",
+       "Police inspector"
+      ],
+      "correct": 1
+     },
+     "solution": "Utterson is a respectable lawyer and Jekyll's friend",
+     "hint": "He keeps Jekyll's will in his safe"
+    },
+    {
+     "id": "jh03",
+     "level": 1,
+     "topic_note": "Jekyll and Hyde",
+     "text": "In which city is the novella set?",
+     "choice": {
+      "options": [
+       "Edinburgh",
+       "Paris",
+       "London",
+       "Dublin"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Stevenson came from Edinburgh, but the story is set elsewhere",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "It is set in foggy Victorian London",
+     "hint": "Hyde has a house in Soho"
+    },
+    {
+     "id": "jh04",
+     "level": 1,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Who is Dr Jekyll's butler?",
+     "choice": {
+      "options": [
+       "Guest",
+       "Enfield",
+       "Newcomen",
+       "Poole"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Mr Guest is Utterson's head clerk",
+       "Enfield is Utterson's relative and walking companion",
+       "Newcomen is the police inspector",
+       null
+      ]
+     },
+     "solution": "Poole, who fetches Utterson on 'The Last Night'",
+     "hint": "He breaks down the laboratory door with Utterson"
+    },
+    {
+     "id": "jh05",
+     "level": 1,
+     "topic_note": "Jekyll and Hyde",
+     "text": "In which year was Strange Case of Dr Jekyll and Mr Hyde first published? Give the year.",
+     "short": {
+      "accept": [
+       "1886"
+      ]
+     },
+     "solution": "It was published in January 1886",
+     "hint": "It was in the mid-1880s"
+    },
+    {
+     "id": "jh06",
+     "level": 1,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Name the doctor, Jekyll's old friend, who dies after seeing Hyde transform. Give the name.",
+     "short": {
+      "accept": [
+       "Lanyon",
+       "Dr Lanyon",
+       "Hastie Lanyon"
+      ]
+     },
+     "solution": "Dr Hastie Lanyon is so shocked by what he sees that he dies soon afterwards",
+     "hint": "He had quarrelled with Jekyll about science years before"
+    },
+    {
+     "id": "jh07",
+     "level": 2,
+     "topic_note": "Jekyll and Hyde",
+     "text": "In the first chapter, what does Hyde do that shocks Enfield?",
+     "choice": {
+      "options": [
+       "He tramples over a young girl in the street",
+       "He robs a bank",
+       "He attacks Sir Danvers Carew",
+       "He sets fire to a house"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That happens later, in 'The Carew Murder Case'",
+       null
+      ]
+     },
+     "solution": "Hyde tramples a girl at about three in the morning, then pays her family with a cheque in Jekyll's name",
+     "hint": "It happens in the street at about three in the morning"
+    },
+    {
+     "id": "jh08",
+     "level": 2,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Which Member of Parliament does Hyde murder?",
+     "choice": {
+      "options": [
+       "Dr Lanyon",
+       "Sir Danvers Carew",
+       "Mr Enfield",
+       "Poole"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Lanyon dies of shock, not murder",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Hyde attacks Sir Danvers Carew, an MP, in a street, and a maid sees it from her window",
+     "hint": "A maid sees the attack from her window"
+    },
+    {
+     "id": "jh09",
+     "level": 2,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Whose narrative describes actually watching Hyde turn into Jekyll?",
+     "choice": {
+      "options": [
+       "Mr Enfield's",
+       "Poole's",
+       "Dr Lanyon's",
+       "Mr Guest's"
+      ],
+      "correct": 2
+     },
+     "solution": "In 'Dr Lanyon's Narrative', Lanyon watches Hyde drink the potion and become Jekyll",
+     "hint": "This witness dies soon afterwards from the shock"
+    },
+    {
+     "id": "jh10",
+     "level": 2,
+     "topic_note": "Jekyll and Hyde",
+     "text": "What does Jekyll's will say should happen if he dies or disappears?",
+     "choice": {
+      "options": [
+       "Everything goes to Utterson",
+       "Everything goes to charity",
+       "His house goes to Poole",
+       "Everything goes to Edward Hyde"
+      ],
+      "correct": 3
+     },
+     "solution": "The will leaves everything to Hyde, which alarms Utterson",
+     "hint": "The will worries Utterson because of who benefits"
+    },
+    {
+     "id": "jh11",
+     "level": 2,
+     "topic_note": "Jekyll and Hyde",
+     "text": "What is Mr Hyde's first name? Give the name.",
+     "short": {
+      "accept": [
+       "Edward",
+       "Edward Hyde"
+      ]
+     },
+     "solution": "Edward Hyde; Jekyll's first name is Henry",
+     "hint": "It is also the name of several English kings"
+    },
+    {
+     "id": "jh12",
+     "level": 2,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Who is Utterson's distant relative who tells the 'Story of the Door'? Give the name.",
+     "short": {
+      "accept": [
+       "Enfield",
+       "Richard Enfield",
+       "Mr Enfield"
+      ]
+     },
+     "solution": "Richard Enfield, Utterson's distant relative and walking companion",
+     "hint": "He walks with Utterson every Sunday"
+    },
+    {
+     "id": "jh13",
+     "level": 3,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Half of a broken walking stick is found where Carew was attacked. Why does Utterson recognise it?",
+     "choice": {
+      "options": [
+       "He had given it to Jekyll years before",
+       "It belongs to Poole",
+       "He saw Hyde buy it in Soho",
+       "It was taken from his own office that morning"
+      ],
+      "correct": 0
+     },
+     "solution": "Utterson had given the stick to Jekyll, which links Hyde to Jekyll",
+     "hint": "Think about who Utterson once gave a present to"
+    },
+    {
+     "id": "jh14",
+     "level": 3,
+     "topic_note": "Jekyll and Hyde",
+     "text": "How do people react when they see Hyde?",
+     "choice": {
+      "options": [
+       "They find him handsome and charming",
+       "They feel instant disgust, though they cannot say exactly why",
+       "They think he looks just like Jekyll",
+       "They do not notice him at all"
+      ],
+      "correct": 1
+     },
+     "solution": "Everyone who meets Hyde feels loathing but cannot name a clear deformity",
+     "hint": "Enfield struggles to describe what is wrong with Hyde's appearance"
+    },
+    {
+     "id": "jh15",
+     "level": 3,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Mr Guest, Utterson's clerk, compares a note from Jekyll with a letter signed by Hyde. What does he notice?",
+     "choice": {
+      "options": [
+       "One of them is written in French",
+       "Neither of them is signed",
+       "The handwriting is almost identical, only sloped differently",
+       "Hyde's letter is written in pencil"
+      ],
+      "correct": 2
+     },
+     "solution": "Guest sees that the two hands are nearly identical, only differently sloped: Jekyll has written for Hyde",
+     "hint": "Guest is an expert in handwriting"
+    },
+    {
+     "id": "jh16",
+     "level": 3,
+     "topic_note": "Jekyll and Hyde",
+     "text": "In 'Incident at the Window', what do Utterson and Enfield see?",
+     "choice": {
+      "options": [
+       "Hyde climbing out of the window",
+       "Lanyon waving from a carriage",
+       "Poole arguing with Hyde",
+       "Jekyll at a window, whose face suddenly shows terror before the window is shut"
+      ],
+      "correct": 3
+     },
+     "solution": "Jekyll's look of 'abject terror and despair' horrifies them",
+     "hint": "They are in the courtyard and see their friend above them"
+    },
+    {
+     "id": "jh17",
+     "level": 3,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Utterson thinks: 'If he be Mr Hyde, I shall be Mr ___.' Give the missing word.",
+     "short": {
+      "accept": [
+       "Seek"
+      ]
+     },
+     "solution": "'Mr Seek': Utterson puns on hide-and-seek, showing his determination to find Hyde",
+     "hint": "Think of a children's game in which one player hides"
+    },
+    {
+     "id": "jh18",
+     "level": 3,
+     "topic_note": "Jekyll and Hyde",
+     "text": "In which district of London does Hyde have his house? Give the name.",
+     "short": {
+      "accept": [
+       "Soho"
+      ]
+     },
+     "solution": "Hyde lives in Soho, which had a poor and disreputable reputation at the time",
+     "hint": "It is in the West End and begins with S"
+    },
+    {
+     "id": "jh19",
+     "level": 4,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Stevenson often describes London in thick fog. What does the fog suggest?",
+     "choice": {
+      "options": [
+       "Secrecy and mystery, as the truth is hidden",
+       "That it is the middle of summer",
+       "That London is clean and modern",
+       "That Hyde is a sailor"
+      ],
+      "correct": 0
+     },
+     "solution": "The fog hides things, mirroring the secrets of Jekyll and of respectable society",
+     "hint": "What does fog do to what you can see?"
+    },
+    {
+     "id": "jh20",
+     "level": 4,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Why is Utterson reluctant to expose Jekyll's secret?",
+     "choice": {
+      "options": [
+       "He is secretly working with Hyde",
+       "He wants to protect his friend's reputation and avoid scandal",
+       "He is too ill to leave his house",
+       "He has never met Jekyll"
+      ],
+      "correct": 1
+     },
+     "solution": "Victorian gentlemen valued reputation, and Utterson fears a scandal for his friend",
+     "hint": "Think about what mattered most to a Victorian gentleman"
+    },
+    {
+     "id": "jh21",
+     "level": 4,
+     "topic_note": "Jekyll and Hyde",
+     "text": "In Jekyll's full statement, why did he first make the potion?",
+     "choice": {
+      "options": [
+       "To cure Lanyon's illness",
+       "To become invisible",
+       "To separate the good and evil sides of his nature",
+       "To become rich"
+      ],
+      "correct": 2
+     },
+     "solution": "He hoped to separate his two natures so that each could live without the other's restraint",
+     "hint": "He believed every person has two sides"
+    },
+    {
+     "id": "jh22",
+     "level": 4,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Why does Jekyll lose control of the transformations near the end?",
+     "choice": {
+      "options": [
+       "Poole hides the potion from him",
+       "Utterson destroys his laboratory",
+       "Lanyon steals his notes",
+       "He turns into Hyde without the potion, and new supplies of the salt do not work"
+      ],
+      "correct": 3
+     },
+     "solution": "Hyde appears without the drug, and the original salt had an unknown impurity that could not be replaced",
+     "hint": "Something was special about the first batch of salt"
+    },
+    {
+     "id": "jh23",
+     "level": 4,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Give the one-word term for the idea that a person has both a good and an evil side, a central theme of the novella.",
+     "short": {
+      "accept": [
+       "duality",
+       "dualism",
+       "duality of man",
+       "duality of human nature",
+       "dual nature"
+      ]
+     },
+     "solution": "Duality: Jekyll writes that man is 'not truly one, but truly two'",
+     "hint": "It comes from the Latin for 'two'"
+    },
+    {
+     "id": "jh24",
+     "level": 4,
+     "topic_note": "Jekyll and Hyde",
+     "text": "How does Stevenson present Mr Utterson in the first chapter?",
+     "rubric": {
+      "model_answer": "Stevenson presents Utterson as a reserved but loyal gentleman. He is described as 'lean, long, dusty, dreary' and yet 'somehow lovable', suggesting a dull surface that hides warmth. He is self-disciplined, drinking gin when alone to curb his taste for fine wine. His saying 'I incline to Cain's heresy' shows he does not judge others, which makes him a trustworthy guide for the reader, while his care for reputation reflects Victorian values.",
+      "mark_scheme": "1 mark: clear point about Utterson's character\n1 mark: relevant quotation from the first chapter\n1 mark: analysis of language (e.g. 'dusty, dreary', 'somehow lovable')\n1 mark: link to his role in the novella or Victorian values",
+      "max_marks": 4
+     },
+     "solution": "Key ideas: dull and reserved on the surface but loyal and lovable, self-disciplined, tolerant and concerned with reputation",
+     "hint": "Look at how Stevenson describes Utterson in the first paragraph"
+    },
+    {
+     "id": "jh25",
+     "level": 5,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Which statement about the context of the novella is accurate?",
+     "choice": {
+      "options": [
+       "Victorian gentlemen were expected to keep a respectable public reputation",
+       "Victorian society encouraged people to share their secrets openly",
+       "The novella was written after the First World War",
+       "Stevenson wrote it to celebrate science without question"
+      ],
+      "correct": 0
+     },
+     "solution": "Respectability mattered greatly, so Jekyll hides his desires and creates Hyde",
+     "hint": "Why can't Jekyll simply behave badly as himself?"
+    },
+    {
+     "id": "jh26",
+     "level": 5,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Hyde is described as 'ape-like'. Which Victorian fear does this reflect?",
+     "choice": {
+      "options": [
+       "That apes were escaping from London Zoo",
+       "That humans might be closer to animals than they believed and could become more primitive",
+       "That electricity would make cities dangerous",
+       "That machines would replace workers"
+      ],
+      "correct": 1
+     },
+     "solution": "After theories of evolution, some Victorians feared humans could degenerate into a primitive state",
+     "hint": "Think about debates on evolution in the later 1800s"
+    },
+    {
+     "id": "jh27",
+     "level": 5,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Why does Stevenson tell most of the story through Utterson rather than Jekyll?",
+     "choice": {
+      "options": [
+       "Because Utterson is the villain",
+       "Because Jekyll cannot write",
+       "So the reader shares Utterson's confusion and the mystery lasts until the final chapters",
+       "So the ending is revealed in the first chapter"
+      ],
+      "correct": 2
+     },
+     "solution": "Following Utterson, we only learn the truth from the documents at the end",
+     "hint": "When does the reader learn that Jekyll and Hyde are the same man?"
+    },
+    {
+     "id": "jh28",
+     "level": 5,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Which statement about the structure of the novella is accurate?",
+     "choice": {
+      "options": [
+       "It is told entirely in letters between Jekyll and Hyde",
+       "It opens with Jekyll's confession",
+       "It is a play in five acts",
+       "It ends with two documents, Lanyon's narrative and Jekyll's statement, that reveal the truth"
+      ],
+      "correct": 3
+     },
+     "solution": "The last two chapters are written documents that finally reveal the truth",
+     "hint": "Think about the titles of the last two chapters"
+    },
+    {
+     "id": "jh29",
+     "level": 5,
+     "topic_note": "Jekyll and Hyde",
+     "text": "Whose theory of evolution made some Victorians fear that humans could become more primitive, a fear reflected in Hyde? Give the scientist's surname.",
+     "short": {
+      "accept": [
+       "Darwin",
+       "Charles Darwin"
+      ]
+     },
+     "solution": "Charles Darwin's On the Origin of Species (1859) unsettled ideas about human nature",
+     "hint": "He sailed round the world on HMS Beagle"
+    },
+    {
+     "id": "jh30",
+     "level": 5,
+     "topic_note": "Jekyll and Hyde",
+     "text": "How does Stevenson suggest that respectable Victorian gentlemen hide secrets?",
+     "rubric": {
+      "model_answer": "Stevenson shows respectability as a mask. Jekyll is a wealthy, honoured doctor, yet he creates Hyde to indulge hidden desires without damaging his reputation. Utterson and Enfield agree never to mention the story of the door again, showing gentlemen avoided scandal rather than seeking the truth. Even the buildings reflect this: Jekyll's fine house faces a square, while the shabby laboratory door opens onto a back street. Jekyll admits man is 'not truly one, but truly two'.",
+      "mark_scheme": "1 mark: clear argument about secrecy and respectability\n1 mark: Jekyll's double life and his motive\n1 mark: Utterson and Enfield's silence\n1 mark: setting or buildings as symbols (front and back doors)\n1 mark: relevant quotation analysed\n1 mark: Victorian context of reputation",
+      "max_marks": 6
+     },
+     "solution": "Key ideas: Jekyll's double life, the gentlemen's agreement to stay silent, the two sides of Jekyll's house and Victorian respectability",
+     "hint": "Think about who keeps quiet, and why"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "english_literature.y{year}.macbeth",
+      "label": "Macbeth",
+      "skills": [
+       "english_literature.macbeth"
+      ]
+     },
+     {
+      "id": "english_literature.y{year}.christmas_carol",
+      "label": "A Christmas Carol",
+      "skills": [
+       "english_literature.christmas_carol"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "english_literature.y{year}.inspector_calls",
+      "label": "An Inspector Calls",
+      "skills": [
+       "english_literature.inspector_calls"
+      ]
+     },
+     {
+      "id": "english_literature.y{year}.conflict_poetry",
+      "label": "Conflict poetry",
+      "skills": [
+       "english_literature.conflict_poetry"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

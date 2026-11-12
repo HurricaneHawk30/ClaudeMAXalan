@@ -456,20 +456,20 @@
      "text": "Choose the correct verb: «Quando ero piccolo, ___ al parco ogni giorno.»",
      "choice": {
       "options": [
-       "ho giocato",
+       "giocavano",
        "giocherò",
        "giocavo",
        "gioco"
       ],
       "correct": 2,
       "feedback": [
-       "Ho giocato is for a single completed action",
+       "Giocavano goes with loro; the subject here is io",
        "Giocherò is the future",
        null,
-       null
+       "Gioco is the present"
       ]
      },
-     "solution": "A repeated past habit uses the imperfetto: giocavo",
+     "solution": "A repeated past habit uses the imperfetto, and the subject is io: giocavo",
      "hint": "Ogni giorno in the past describes a habit"
     },
     {
@@ -743,7 +743,8 @@
      "short": {
       "accept": [
        "doctor",
-       "GP"
+       "GP",
+       "physician"
       ],
       "form": "any"
      },
@@ -975,7 +976,8 @@
        "lawyer",
        "solicitor",
        "attorney",
-       "barrister"
+       "barrister",
+       "advocate"
       ],
       "form": "any"
      },
@@ -1306,7 +1308,8 @@
      "text": "What does «il nuoto» mean in English? Answer in English.",
      "short": {
       "accept": [
-       "swimming"
+       "swimming",
+       "swim"
       ],
       "form": "any"
      },
@@ -1469,7 +1472,8 @@
      "text": "Translate into Italian. Include the definite article (il, lo, la, l', i, gli or le): the newspaper",
      "short": {
       "accept": [
-       "il giornale"
+       "il giornale",
+       "il quotidiano"
       ],
       "reject": [
        "la giornale",
@@ -1481,7 +1485,7 @@
        "la giornale": "Giornale is masculine"
       }
      },
-     "solution": "Il giornale = the newspaper (masculine)",
+     "solution": "Il giornale (or il quotidiano) = the newspaper",
      "hint": "It is masculine and ends in -e"
     },
     {
@@ -1530,7 +1534,7 @@
       "correct": 2,
       "feedback": [
        "Al means to the; piacere needs the article il",
-       "Lo is only used before z or s + consonant",
+       "Lo is used before z or s + consonant, not before an ordinary consonant like c",
        null,
        null
       ]
@@ -2190,6 +2194,8 @@
        "by bicycle",
        "bicycle",
        "cycling",
+       "cycle",
+       "cycles",
        "on a bike",
        "on my bike",
        "by cycle"
