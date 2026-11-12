@@ -1,0 +1,35 @@
+{
+  "subject": {"id": "testsubj", "title": "Test Subject", "order": 99},
+  "skills": [
+    {"id": "testsubj.adding", "title": "Adding", "aliases": ["adding", "addition"],
+     "questions": [
+       {"level": 1, "text": "What is 2 + 3?",
+        "answer": {"kind": "number", "display": "5", "value": 5},
+        "solution": "2 + 3 = 5", "hint": "Count on from 2",
+        "mistakes": [{"answer": {"kind": "number", "display": "6", "value": 6}, "feedback": "Count again carefully"}]},
+       {"level": 1, "text": "What is 4 + 4?",
+        "answer": {"kind": "number", "display": "8", "value": 8},
+        "solution": "4 + 4 = 8", "hint": "Double 4"},
+       {"level": 3, "text": "What is 17 + 26?",
+        "answer": {"kind": "number", "display": "43", "value": 43},
+        "solution": "17 + 26 = 43", "hint": "Add the tens first"}
+     ]},
+    {"id": "testsubj.algebra", "title": "Algebra", "aliases": ["algebra", "expanding"],
+     "questions": [
+       {"level": 2, "text": "Expand (x + 2)(x + 3).",
+        "answer": {"kind": "expr", "display": "x² + 5x + 6", "value": "x**2+5*x+6", "form": "expanded"},
+        "solution": "x² + 3x + 2x + 6 = x² + 5x + 6", "hint": "Multiply each term in the first bracket by each in the second"}
+     ]},
+    {"id": "testsubj.writing", "title": "Writing", "aliases": ["writing"],
+     "questions": [
+       {"level": 5, "text": "Explain why the sky is blue.",
+        "answer": {"kind": "rubric", "display": "Light is scattered by the atmosphere", "mark_scheme": "1 mark scattering; 1 mark blue light scatters most", "max_marks": 2},
+        "solution": "Blue light scatters most", "hint": "Think about sunlight"}
+     ]}
+  ],
+  "years": {
+    "10": {"rows": [[{"id": "testsubj.y10.basics", "label": "Basics", "skills": ["testsubj.adding", "testsubj.algebra"], "level_map": [1,2,3,4,5]}],
+                    [{"id": "testsubj.y10.words", "label": "Words", "skills": ["testsubj.writing"]}]],
+           "past_paper_level_map": [1,1,1,1,1]}
+  }
+}

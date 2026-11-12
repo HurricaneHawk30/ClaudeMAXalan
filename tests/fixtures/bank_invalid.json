@@ -1,0 +1,14 @@
+{
+  "subject": {"id": "badsubj", "title": "Bad Subject", "order": 98},
+  "skills": [
+    {"id": "badsubj.adding", "title": "Adding", "aliases": ["adding"],
+     "questions": [
+       {"level": 9, "text": "What is 2 + 3?",
+        "answer": {"kind": "number", "display": "5", "value": 5},
+        "solution": "2 + 3 = 5", "hint": "Count on from 2"}
+     ]}
+  ],
+  "years": {
+    "10": {"rows": [[{"id": "badsubj.y10.basics", "label": "Basics", "skills": ["badsubj.adding"]}]]}
+  }
+}
