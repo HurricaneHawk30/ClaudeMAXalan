@@ -78,6 +78,7 @@ _PM = re.compile(r"\+\s*/\s*-|\+\s*-(?=\s*\d)")
 
 def _normalise(s: str) -> str:
     s = s.replace("−", "-").replace("–", "-").replace("‒", "-").replace(" ", " ")
+    s = s.replace("\u2009", " ").replace("\u202f", " ")         # thin spaces ("5 040")
     s = s.replace("’", "'").replace("º", "°").replace("˚", "°").replace("＝", "=")
     for k, v in _VULGAR.items():
         if k in s:
@@ -226,7 +227,7 @@ def _number_pieces(text: str) -> Iterator[str]:
 
 # --------------------------------------------------------------- numbers
 
-_NUMTOK = r"(?:\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+,\d{1,2}(?!\d)|\d+(?:\.\d+)?|\.\d+)"
+_NUMTOK = r"(?:\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d{1,3}(?: \d{3})+(?!\d)(?:\.\d+)?|\d+,\d{1,2}(?!\d)|\d+(?:\.\d+)?|\.\d+)"
 _UNIT_PART = r"(?![xX×]\s*\d|[eE][+-]?\d)[A-Za-zµμΩ°%]+(?:\^?\(?[+-]?\d+\)?)?"
 _UNIT_END = re.compile(rf"(?<=[\d)])\s*{_UNIT_PART}(?:[/·*]{_UNIT_PART})*$")
 
@@ -290,10 +291,17 @@ def _std_num(m: re.Match, unit: str) -> _Num | None:
     return _Num(val, "std", std=(mant, exp), unit=unit)
 
 
-def _num_info(piece: str) -> _Num | None:
+_PER = re.compile(r"\s+per\s+", re.IGNORECASE)
+_MULT_PREFIX = re.compile(r"^[×xX]\s*(?=\d)")
+
+
+def _num_info(piece: str, mult: bool = False) -> _Num | None:
+    """``mult``: a leading × / x is a magnification sign ("×200" = 200), for plain number answers."""
     if not piece or len(piece) > 80:
         return None
-    s = _superscripts_to_caret(piece).strip()
+    s = _superscripts_to_caret(_PER.sub("/", piece)).strip()
+    if mult:
+        s = _MULT_PREFIX.sub("", s)
     s = re.sub(r"^([+-]?)\s*[£$€]\s*", r"\1", s).strip().rstrip(".,;!? ").strip()
     if not s:
         return None
@@ -365,9 +373,9 @@ def _num_info(piece: str) -> _Num | None:
     return None
 
 
-def _extract_num(text: str, need_frac: bool = False) -> _Num | None:
+def _extract_num(text: str, need_frac: bool = False, mult: bool = False) -> _Num | None:
     for piece in _number_pieces(text):
-        info = _num_info(piece)
+        info = _num_info(piece, mult)
         if info is not None and (not need_frac or info.frac is not None):
             return info
     return None
@@ -455,6 +463,16 @@ _units("length", 1, ("m",), ("m", "metre", "metres", "meter", "meters"))
 _units("length", 1e-2, ("cm",), ("cm", "centimetre", "centimetres", "centimeter", "centimeters"))
 _units("length", 1e-3, ("mm",), ("mm", "millimetre", "millimetres", "millimeter", "millimeters"))
 _units("length", 1e3, ("km",), ("km", "kilometre", "kilometres", "kilometer", "kilometers"))
+_units("length", 1e-6, ("µm", "μm", "um"), ("µm", "μm", "um", "micrometre", "micrometres", "micrometer",
+                                             "micrometers", "micron", "microns"))
+_units("length", 1e-9, ("nm",), ("nanometre", "nanometres", "nanometer", "nanometers"))   # never "Nm"
+_units("moment", 1, ("Nm",))
+# astronomical distances: separate units, never converted into each other or into metres
+_units("au", 1, ("AU",), ("au",))
+_units("ly", 1, ("ly",), ("ly", "lightyear", "lightyears"))
+_units("pc", 1, ("pc",), ("pc", "parsec", "parsecs"))
+_units("kpc", 1, ("kpc",), ("kpc", "kiloparsec", "kiloparsecs"))
+_units("mpc", 1, ("Mpc",), ("mpc", "megaparsec", "megaparsecs"))
 _units("area", 1, ("m2",), ("m2",))
 _units("area", 1e-4, ("cm2",), ("cm2",))
 _units("area", 1e-6, ("mm2",), ("mm2",))
@@ -463,6 +481,11 @@ _units("volume", 1, ("m3",), ("m3",))
 _units("volume", 1e-6, ("cm3",), ("cm3", "ml"))
 _units("volume", 1e-9, ("mm3",), ("mm3",))
 _units("volume", 1e-3, ("l", "L"), ("litre", "litres", "liter", "liters"))
+_units("volume", 1e-3, ("dm3",), ("dm3",))
+_units("concentration", 1, ("mol/dm3", "mol/l", "mol/L", "moldm-3"), ("mol/dm3", "mol/l", "moldm-3"))
+_units("concentration", 1e-3, ("mol/m3",), ("mol/m3",))
+_units("molar_energy", 1, ("J/mol",), ("j/mol",))
+_units("molar_energy", 1e3, ("kJ/mol",), ("kj/mol",))
 _units("time", 1, ("s",), ("s", "sec", "secs", "second", "seconds"))
 _units("time", 60, ("min",), ("min", "mins", "minute", "minutes"))
 _units("time", 3600, ("h",), ("h", "hr", "hrs", "hour", "hours"))
@@ -476,6 +499,7 @@ _units("pressure", 1e3, ("kPa",), ("kpa",))
 _units("pressure", 1e4, ("N/cm2",), ("n/cm2",))
 _units("density", 1000, ("g/cm3",), ("g/cm3",))
 _units("density", 1, ("kg/m3",), ("kg/m3",))
+_units("density", 1, ("g/dm3", "g/l", "g/L"), ("g/dm3", "g/l"))           # 1 g/dm³ = 1 kg/m³
 _units("angle", 1, ("°",), ("°", "deg", "degree", "degrees"))
 
 
@@ -492,7 +516,7 @@ def _unit_of(u: str) -> tuple[str, float] | None:
 
 @functools.lru_cache(maxsize=4096)
 def _display_unit(display: str) -> str:
-    info = _extract_num(display)
+    info = _extract_num(display, mult=True)
     return info.unit if info else ""
 
 
@@ -502,7 +526,7 @@ def _check_number(a: Answer, text: str) -> Verdict:
     exact = _exact_value(a.value)
     if exact is None:
         return _UNMARKABLE
-    info = _extract_num(text)
+    info = _extract_num(text, mult=a.form != "standard")
     if info is None:
         return _UNPARSED
     value = info.value
@@ -882,6 +906,9 @@ def _filler_regexes(phrases: Sequence[str]) -> tuple[re.Pattern, ...]:
 
 
 _FILLER_RX = {False: _filler_regexes(_FILLER_COMMON), True: _filler_regexes(_FILLER_COMMON + _FILLER_CHOICE)}
+# first words of all filler phrases: a line starting with anything else has nothing to strip
+_FILLER_FIRST = frozenset(ph.split()[0].rstrip(":-").lower() for ph in _FILLER_COMMON + _FILLER_CHOICE)
+_LEAD_WORD = re.compile(r"[^\s:=-]+")
 _WRAP = {'"': '"', "'": "'", "(": ")", "[": "]", "{": "}", "«": "»"}
 
 
@@ -890,6 +917,9 @@ def _strip_fillers(s: str, choice: bool) -> str:
     rxs = _FILLER_RX[choice]
     changed = True
     while changed and s:
+        lead = _LEAD_WORD.match(s)
+        if lead is None or lead.group().lower() not in _FILLER_FIRST:
+            break
         changed = False
         for rx in rxs:
             m = rx.match(s)
@@ -1135,6 +1165,7 @@ FILLER_WORDS = frozenset(
     "believe guess would say they of my final probably maybe definitely type kind example".split())
 _DIGITS = re.compile(r"[0-9]+")
 # §2.3 step 2 "digit tokens": digit runs not glued to a letter ("in 1918", "1914-1918"; not "qq1918qq")
+_THOUSANDS = re.compile(r"(?<![\d.])\d{1,3}(?: \d{3})+(?![\d.])")      # "5 040" -> "5040"
 _DIGIT_TOKENS = re.compile(r"(?<![^\W\d_])[0-9]+(?![^\W\d_])")
 
 
@@ -1247,7 +1278,7 @@ def _check_short(a: Answer, text: str) -> Verdict:
     t_full = words.norm_form(ln.full, form)[0] if ln.full != s else t
 
     if info.numeric:
-        tokens = _DIGIT_TOKENS.findall(t)
+        tokens = _DIGIT_TOKENS.findall(_THOUSANDS.sub(lambda m: m.group().replace(" ", ""), t))
         if tokens:
             hit = any(x in info.a_set for x in tokens)
             others = [x for x in tokens if x not in info.a_set]

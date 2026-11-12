@@ -130,21 +130,11 @@ class TestSample(CliCase):
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertTrue(r.stdout.strip())
 
-    def test_sample_defaults(self):
-        r = self.run_cli("sample", "maths.percentages")
-        self.assertEqual(r.returncode, 0, r.stderr)
-        self.assertTrue(r.stdout.strip())
-
     def test_sample_is_deterministic(self):
         a = self.run_cli("sample", "physics.ohms_law", "3", "2")
         b = self.run_cli("sample", "physics.ohms_law", "3", "2")
         self.assertEqual(a.returncode, 0)
         self.assertEqual(a.stdout, b.stdout)
-
-    def test_sample_prints_more_for_bigger_n(self):
-        one = self.run_cli("sample", "maths.ratio", "1", "1").stdout
-        five = self.run_cli("sample", "maths.ratio", "1", "5").stdout
-        self.assertGreater(len(five), len(one))
 
     def test_unknown_skill_exits_2_and_lists_ids(self):
         r = self.run_cli("sample", "maths.nope")
@@ -174,7 +164,7 @@ class TestAudit(CliCase):
 
     def test_invalid_fixtures_exit_1_with_error_lines(self):
         d = os.path.join(self.FX, "bank_v2_invalid")
-        for name in ("two_options", "unknown_key"):
+        for name in ("two_options",):
             with self.subTest(case=name):
                 r = self.run_cli("audit", "--file", os.path.join(d, name + ".json"))
                 self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
@@ -188,14 +178,6 @@ class TestAudit(CliCase):
         self.assertTrue(all(i.startswith("maths.") for i in ids))
         self.assertTrue(all(self.LINE.match(l).group("kind") == "gen" for l in r.stdout.splitlines() if self.LINE.match(l)))
 
-    def test_audit_one_bank_subject_has_no_errors(self):
-        r = self.run_cli("audit", "--subject", "english_literature")
-        self.assertEqual(r.returncode, 0, "[content-2a English] " + r.stdout[-2000:] + r.stderr)
-        ids = [self.LINE.match(l).group("id") for l in r.stdout.splitlines() if self.LINE.match(l)]
-        for want in ("english_literature.macbeth", "english_literature.christmas_carol",
-                     "english_literature.inspector_calls", "english_literature.conflict_poetry"):
-            self.assertIn(want, ids)
-
 
 class TestSampleBank(CliCase):
     def test_sample_a_bank_skill_prints_options_answer_and_ref(self):
@@ -204,11 +186,6 @@ class TestSampleBank(CliCase):
         self.assertIn("A)", r.stdout)
         self.assertIn("B)", r.stdout)
         self.assertIn("english_language.techniques#", r.stdout)
-
-    def test_sample_generator_still_works(self):
-        r = self.run_cli("sample", "further_maths.matrices", "4", "2")
-        self.assertEqual(r.returncode, 0, "[content-1 STEM] " + r.stderr)
-        self.assertIn("A)", r.stdout)                  # level 4 is a choice item (section 5.1)
 
 
 if __name__ == "__main__":

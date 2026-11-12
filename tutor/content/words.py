@@ -103,6 +103,8 @@ def _punct_to_space(s: str) -> str:
             out.append(c)                       # 3.5, 1/2
         elif c == "-" and nxt.isdigit():
             out.append(c)                       # -5, 1914-1918, covid-19
+        elif c == "-" and nxt.isalpha() and (not prev or prev in " =("):
+            out.append(c)                       # y = -x: a minus sign before a letter, not a hyphen
         elif c in "'":
             continue                            # apostrophes are deleted: it's -> its
         elif c == "," and prev.isdigit() and nxt.isdigit():

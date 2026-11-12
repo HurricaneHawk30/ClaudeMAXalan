@@ -359,7 +359,11 @@ def mistake(answer: Answer, feedback: str) -> Mistake:
 # ------------------------------------------------------------------ build
 
 # "a"/"A" before a vowel sound: eight..., eleven, eighteen (and their thousands), a/e/i/o words.
-_AN_NEXT = r"(?=(?:8|11(?!\d)|18(?!\d)|11\d{3}(?!\d)|18\d{3}(?!\d)|[aeioAEIO]))"
+# The next word must be a real word: 2+ letters, not all capitals, and not a verb or conjunction that
+# typically follows a variable ("A AND B", "a is the mean distance", "A is acute" are left alone).
+_NOT_AFTER_ARTICLE = r"(?!(?i:is|isn't|are|and|or|as|at|if|in|of|on|equals|increases|also|always)\b)"
+_AN_NEXT = (r"(?=(?:8|11(?!\d)|18(?!\d)|11\d{3}(?!\d)|18\d{3}(?!\d)|"
+            + _NOT_AFTER_ARTICLE + r"[aeioAEIO][a-z]+(?![A-Za-z])))")
 _ARTICLE_UPPER = re.compile(r"(^|[.!?]\s+|\n)A " + _AN_NEXT)
 _ARTICLE_LOWER = re.compile(r"(?<![\w'])a " + _AN_NEXT)
 
@@ -372,6 +376,19 @@ def fix_articles(s: str) -> str:
     """
     s = _ARTICLE_UPPER.sub(lambda m: m.group(1) + "An ", s)
     return _ARTICLE_LOWER.sub("an ", s)
+
+
+def _hint_leaks(display: str, hint: str) -> bool:
+    """The hint gives the answer away: the display (2+ chars) as a whole token, or (3+ chars) anywhere.
+
+    A one-character answer such as "0" or "4" inside a hint ("divide by 4") is not a leak.
+    """
+    d, h = display.strip().lower(), hint.lower()
+    if len(d) < 2:
+        return False
+    if len(d) >= 3 and d in h:
+        return True
+    return re.search(r"(?<![\w.])" + re.escape(d) + r"(?![\w]|\.\d)", h) is not None
 
 
 def _clean(s: str) -> str:
@@ -402,10 +419,9 @@ def build(skill_id: str, level: int, seed: int, text: str, answer: Answer, solut
         raise ValueError(f"{skill_id} L{level} seed {seed}: solution too long ({len(solution)})")
     if answer.kind != "rubric" and check(answer, answer.display).status != "correct":
         raise ValueError(f"{skill_id} L{level} seed {seed}: display {answer.display!r} fails check")
-    disp = answer.display.lower()
-    if disp and disp in hint.lower():
+    if _hint_leaks(answer.display, hint):
         hint = fallback_hint
-        if disp in hint.lower():
+        if _hint_leaks(answer.display, hint):
             hint = DEFAULT_HINT
     kept: list[Mistake] = []
     seen: set[str] = set()
