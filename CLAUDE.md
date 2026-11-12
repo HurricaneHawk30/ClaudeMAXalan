@@ -54,9 +54,9 @@ Spot-check problems with `python3 -m tutor sample SKILL_ID [LEVEL] [N]`. The tes
 
 ## 6. Tests
 **ALWAYS run `python3 -m unittest discover -s tests` before any update or deploy, and never ship red.**
-The default run takes under a minute (30 seeds per generated skill, plus every bank question). Before every
+The default run takes under a minute (20 seeds per generated skill, plus every bank question). Before every
 deploy ALSO run the full property test: `TUTOR_FULL_TESTS=1 python3 -m unittest discover -s tests` (300 seeds,
-about 2 minutes). Run `python3 -m tutor audit` too: it must show no ERROR lines.
+about 5 minutes). Run `python3 -m tutor audit` too: it must show no ERROR lines.
 
 ## 7. Rules
 - Correctness is decided by code (the checker), never by the LLM; the LLM only phrases hints and feedback.

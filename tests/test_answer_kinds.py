@@ -5,7 +5,7 @@ import random
 import unittest
 
 import helpers
-from helpers import NOTE_SPELLING, NOTE_ACCENTS, FORM_CASE, LETTERS_TEXT
+from helpers import NOTE_SPELLING, NOTE_ACCENTS, LETTERS_TEXT
 from tutor.content import (Answer, Mistake, Problem, check, problem_from_json, problem_to_json, fingerprint,
                            build_choice, build_short, shuffle_order, letters_text, CHOICE_LETTERS, SHORT_FORMS,
                            NOTE_SPELLING as C_NOTE_SPELLING, NOTE_ACCENTS as C_NOTE_ACCENTS,

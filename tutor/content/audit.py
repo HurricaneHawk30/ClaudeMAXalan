@@ -25,7 +25,7 @@ from typing import Iterable, TextIO
 from .base import CHOICE_LETTERS, MY_OWN_TOPIC_LABEL, PAST_PAPER_LABEL, Problem, Skill, Subject, \
     problem_from_json, problem_to_json
 from .bank import BANKS_DIR, PACKS_DIR, BankError, known_words, parse_bank_data, parse_pack_data, _read_json
-from .checker import FORM_CASE, NOTE_ACCENTS, NOTE_SPELLING, TYPO_MIN_WORD, check, short_typo_eligible
+from .checker import FORM_CASE, NOTE_ACCENTS, NOTE_SPELLING, check, short_typo_eligible, typo_distance
 from .fmt import _hint_leaks             # the same rule fmt.build applies (2+ chars as a token, 3+ anywhere)
 from .registry import (RESERVED_LABELS, Registry, _norm_label, _subject_modules, bank_files, load_registry,
                        match_skill_ids, register_module)
@@ -180,23 +180,19 @@ def _check_choice_problem(rep: Report, key: str, where: str, p: Problem) -> None
 
 def swap_typo(key: str, known: frozenset = frozenset()) -> str | None:
     """A typo the checker must accept (section 10.2): two neighbouring letters swapped in the second half
-    of the longest word (5+ letters, never its first letter); None when there is no such swap or the
-    result is a real word from ``known``."""
-    ws = key.split()
-    if not ws:
+    of the longest word (never its first letter).  Eligibility comes from the checker's own rule
+    (``typo_distance``: word count, word length, known-word guard, prefix rule, distance limits), so the
+    audit and the tests can never disagree with it; None when no such typo exists."""
+    if not short_typo_eligible(key):
         return None
+    ws = key.split()
     j = max(range(len(ws)), key=lambda k: len(ws[k]))
     w = ws[j]
-    if len(w) < TYPO_MIN_WORD:
-        return None
     i = next((k for k in range(max(1, len(w) // 2), len(w) - 1) if w[k] != w[k + 1]), None)
     if i is None:
         return None
-    typo = w[:i] + w[i + 1] + w[i] + w[i + 2:]
-    if typo in known or words.fold(typo) in known:
-        return None
-    ws[j] = typo
-    return " ".join(ws)
+    typo = " ".join(ws[:j] + [w[:i] + w[i + 1] + w[i] + w[i + 2:]] + ws[j + 1:])
+    return typo if typo_distance(typo, key, known) is not None else None
 
 
 def _check_short_problem(rep: Report, key: str, where: str, p: Problem) -> None:

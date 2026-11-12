@@ -637,7 +637,7 @@ def _parse_years(raw: object, skill_ids: set[str], errors: list[str] | None) -> 
                         tskills = _req(t, "skills", tp, list)
                         if not tskills or any(not isinstance(k, str) or k not in skill_ids for k in tskills):
                             bad = [k for k in tskills if not isinstance(k, str) or k not in skill_ids]
-                            e = _err(f"{tp}.skills", f"must be a non-empty list of skill ids from this file"
+                            e = _err(f"{tp}.skills", "must be a non-empty list of skill ids from this file"
                                                      + (f" (unknown: {bad})" if bad else ""))
                             good = [k for k in tskills if isinstance(k, str) and k in skill_ids]
                             if errors is None or not good:

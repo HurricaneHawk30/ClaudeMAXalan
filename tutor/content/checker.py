@@ -894,12 +894,14 @@ _CHECK_LINE_TEXT = re.compile(r"^\W*(?:check(?:ing)?|verify(?:ing)?)\b", re.IGNO
 # "substitute goods", "sub-Saharan Africa" are answers, not checks.
 _SUB_LINE = re.compile(r"^\W*(?:sub|substitut\w*)\b", re.IGNORECASE)
 # Reason words always cut ("osmosis because ..."). "check" / "checking" cut only as working after a
-# separator or before ":" / "=" / a digit ("cell wall, check: ..."): in "format check or range check"
-# it is part of the answer, and cutting there would leave "format" (section 10.2).
+# separator or before "=" / a digit ("cell wall, check: ..."); "format check: ..." is cut at the colon.
+# In "format check or range check" the word is part of the answer: cutting there would leave "format"
+# (section 10.2).
 _WORD_CUT = re.compile(
     r"[,;:]?\s*\(?\b(?:because|coz|cuz|since)\b"
     r"|(?:[,;:]\s*\(?|\(\s*)\b(?:check(?:ing)?)\b"
-    r"|\s*\b(?:check(?:ing)?)\b(?=\s*[:=\d])", re.IGNORECASE)
+    r"|\s*\b(?:check(?:ing)?)\b(?=\s*[=\d])"
+    r"|(?<=\bcheck)\s*:|(?<=\bchecking)\s*:", re.IGNORECASE)
 _BULLET = re.compile(r"^(?:[•·*>]+|-(?=\s))\s*")
 _FIRST_WORD = re.compile(r"\W*(\w+)")
 _QUESTION_WORDS = frozenset("what why how can could explain tell which who where when does do".split())
@@ -933,7 +935,7 @@ def _filler_regexes(phrases: Sequence[str]) -> tuple[re.Pattern, ...]:
 _FILLER_RX = {False: _filler_regexes(_FILLER_COMMON), True: _filler_regexes(_FILLER_COMMON + _FILLER_CHOICE)}
 # first words of all filler phrases: a line starting with anything else has nothing to strip
 _FILLER_FIRST = frozenset(ph.split()[0].rstrip(":-").lower() for ph in _FILLER_COMMON + _FILLER_CHOICE)
-_LEAD_WORD = re.compile(r"[^\s:=-]+")
+_LEAD_WORD = re.compile(r"[^\s:=,-]+")
 _WRAP = {'"': '"', "'": "'", "(": ")", "[": "]", "{": "}", "«": "»"}
 
 
@@ -1314,7 +1316,7 @@ def short_typo_eligible(key: str) -> bool:
 
 # ---- typo tolerance, word by word (section 10.2)
 TYPO_MIN_WORD = 5           # shorter answer words must be typed exactly
-_LONE_LETTER = re.compile(r"^\(?[A-Ea-e]\)?[.:)]?$")
+_LONE_LETTER = re.compile(r"^\(?([A-Ea-e])\)?[.:)]?$")
 _HEX_ACCEPT = re.compile(r"^[0-9A-F]{1,4}$")
 _HEX_INPUT = re.compile(r"^(?:0x)?([0-9a-f]{1,4})(?:h|\s+(?:in\s+)?hex(?:adecimal)?|\s+base\s+16)?$")
 
@@ -1392,8 +1394,8 @@ def _short_info(accept: tuple[str, ...], reject: tuple[str, ...], form: str) -> 
     r_fold = frozenset(f for r in r_list for f in (words.fold(r), words.fold_german(r))) if folding else frozenset()
     numeric = bool(keys) and all(_DIGITS.fullmatch(k) for k in keys)
     eligible = tuple((i, k) for i, k in enumerate(keys) if form == "any" and short_typo_eligible(k))
-    hexes = frozenset(acc.strip().casefold() for acc in accept
-                      if _HEX_ACCEPT.match(acc.strip()) and not acc.strip().isdigit())
+    hexes = frozenset(acc.strip().casefold() for acc in accept           # never in form case: "C" is carbon
+                      if form == "any" and _HEX_ACCEPT.match(acc.strip()) and not acc.strip().isdigit())
     return _ShortInfo(
         form=form, accepts=accept, a_set=frozenset(a_set), a_spaced=tuple(a_spaced), a_fold=a_fold,
         a_case=frozenset(k.casefold() for k in keys) if form == "case" else frozenset(),
@@ -1456,8 +1458,10 @@ def _check_short(a: Answer, text: str) -> Verdict:
         return _UNPARSED
     t_full = words.norm_form(ln.full, form)[0] if ln.full != s else t
 
-    if _LONE_LETTER.match(s.strip()) and t not in info.a_set and t not in info.r_set:
+    m = _LONE_LETTER.match(s.strip())
+    if m and not any(k.casefold() == m.group(1).casefold() for k in info.a_set | info.r_set):
         return _UNPARSED                        # "B" on a problem that is not multiple choice
+                                                # ("c" for a case-form accept "C" still gets FORM_CASE)
     if info.hex:
         m = _HEX_INPUT.match(words.norm_basic(s))
         if m and m.group(1) in info.hex:

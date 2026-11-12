@@ -3,7 +3,7 @@ import unittest
 import helpers
 from helpers import (S, snap, send, make_engine, get_codes, verify, to_topic, answer_of, FakeLLM, FLAG_ALERT,
                      DISTRESS, CHEAT, DELETED, CODE_REQUEST, CODE_OK, TOPIC_KB_MATHS_11, SUBJECT_KB_11, YEAR_KB,
-                     CHANGE_YEAR, PROBLEM)
+                     CHANGE_YEAR)
 from tutor.intents import is_distress, is_cheat_request, intent
 
 OWNER = 999

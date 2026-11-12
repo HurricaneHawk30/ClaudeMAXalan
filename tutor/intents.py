@@ -116,8 +116,9 @@ _DISTRESS = (
     "secret from my family",
     # not safe: personal forms only ("unsafe", "not safe" and "danger zone" are curriculum words in food
     # safety, D&T and PE answers; docs/ARCHITECTURE_V2.md section 10.2)
-    "i am not safe", "i am unsafe", "not feel safe", "feel unsafe", "feeling unsafe", "not safe at home", "unsafe at home", "not safe at school", "unsafe at school", "not safe for me",
-    "unsafe for me", "not safe here", "we are not safe", "scared to go home", "afraid to go home",
+    "i am not safe", "i am unsafe", "not feel safe", "feel unsafe", "feeling unsafe", "not safe at home",
+    "unsafe at home", "not safe at school", "unsafe at school", "not safe for me", "unsafe for me",
+    "not safe here", "we are not safe", "scared to go home", "afraid to go home",
     "is following me", "are following me", "been following me",
 )
 # "<someone> hit/hurt/kicked me": the person in front avoids flagging "hit me with a question"
