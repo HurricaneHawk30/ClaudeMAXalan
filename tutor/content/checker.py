@@ -1165,8 +1165,38 @@ FILLER_WORDS = frozenset(
     "believe guess would say they of my final probably maybe definitely type kind example".split())
 _DIGITS = re.compile(r"[0-9]+")
 # §2.3 step 2 "digit tokens": digit runs not glued to a letter ("in 1918", "1914-1918"; not "qq1918qq")
-_THOUSANDS = re.compile(r"(?<![\d.])\d{1,3}(?: \d{3})+(?![\d.])")      # "5 040" -> "5040"
-_DIGIT_TOKENS = re.compile(r"(?<![^\W\d_])[0-9]+(?![^\W\d_])")
+# §2.3 step 2: whole numeric tokens, not glued to letters ("in 1918", "£600", "1914-1918"; not "qq1918qq").
+# Thousands separators per v1 ("1,200", "5 040"); a decimal part with "." or a 1-2 digit decimal comma.
+_NUM_TOKEN = re.compile(
+    r"(?<![\w.,])(?P<sign>[-+](?=\d))?"
+    r"(?P<int>\d{1,3}(?:,\d{3})+(?![\d,])|\d{1,3}(?: \d{3})+(?!\d)|\d+)"
+    r"(?P<frac>\.\d+|,\d{1,2}(?!\d))?(?![\w])")
+_SPACED_DIGITS = re.compile(r"(?<![\w.,])\d{4}(?: \d{4})+(?![\w])")    # nibble-spaced binary "0010 1101"
+
+
+@dataclass(frozen=True)
+class _NumTok:
+    negative: bool
+    digits: str          # integer part, separators removed
+    fraction_zero: bool  # no fractional part, or only zeros ("5.0", "5.00")
+
+
+def _num_tokens(s: str) -> list[_NumTok]:
+    out = []
+    for m in _NUM_TOKEN.finditer(s):
+        frac = (m.group("frac") or "")[1:]
+        out.append(_NumTok(m.group("sign") == "-", re.sub(r"[ ,]", "", m.group("int")), set(frac) <= {"0"}))
+    return out
+
+
+def _tok_equals(tok: _NumTok, accept: str) -> bool:
+    """A token equals a digits-only accept: same integer, no non-zero decimals, no minus sign.
+    Accepts with leading zeros (binary "00101101") must match digit for digit."""
+    if tok.negative or not tok.fraction_zero:
+        return False
+    if len(accept) > 1 and accept.startswith("0"):
+        return tok.digits == accept
+    return int(tok.digits) == int(accept)
 
 
 @dataclass(frozen=True)
@@ -1278,11 +1308,19 @@ def _check_short(a: Answer, text: str) -> Verdict:
     t_full = words.norm_form(ln.full, form)[0] if ln.full != s else t
 
     if info.numeric:
-        tokens = _DIGIT_TOKENS.findall(_THOUSANDS.sub(lambda m: m.group().replace(" ", ""), t))
+        accepts = [k for k in info.a_set if k.isdigit()]
+        region = s
+        parts = re.split(r"[=≈]", s)
+        if len(parts) > 1 and _num_tokens(parts[-1]):
+            region = parts[-1]                  # one-line working: "600 ÷ 6 = 100" -> "100"
+        for run in _SPACED_DIGITS.findall(region):
+            if run.replace(" ", "") in accepts:
+                return _CORRECT                 # "0010 1101" for "00101101"
+        tokens = _num_tokens(region)
         if tokens:
-            hit = any(x in info.a_set for x in tokens)
-            others = [x for x in tokens if x not in info.a_set]
-            if hit and not any(len(x) >= 3 for x in others):
+            hit = [tk for tk in tokens if any(_tok_equals(tk, acc) for acc in accepts)]
+            others = [tk for tk in tokens if tk not in hit]
+            if hit and not any(len(tk.digits) >= 3 for tk in others):
                 return _CORRECT
             return _WRONG
     else:
