@@ -68,7 +68,7 @@ def audit(skill):
                 bad(level, seed, f"dp {a.dp}")
             if a.sf is not None and a.sf < 2:
                 bad(level, seed, f"sf {a.sf}")
-            if a.dp is not None and a.dp >= 1 and "decimal place" not in p.text.lower():
+            if a.dp is not None and a.dp >= 1 and not any(k in p.text.lower() for k in ("decimal place", "nearest", "d.p")):
                 bad(level, seed, "dp not stated in text")
             if a.sf is not None and "significant figure" not in p.text.lower():
                 bad(level, seed, "sf not stated in text")

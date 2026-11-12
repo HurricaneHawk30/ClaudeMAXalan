@@ -50,7 +50,8 @@ class TestCodes(OwnerCase):
         self.assertEqual(len(set(codes)), 50)
         for c in codes:
             self.assertEqual(len(c), 8)
-            self.assertFalse(set(c) & set("01OIL"))
+            self.assertLessEqual(set(c), set("ABCDEFGHJKLMNPQRSTUVWXYZ23456789"))   # literal alphabet of section 0.5
+            self.assertFalse(set(c) & set("01OI"))
 
     def test_codes_usage(self):
         for t in ("/codes 0", "/codes 51", "/codes abc", "/codes -1", "/codes 1.5", "/codes 1000"):

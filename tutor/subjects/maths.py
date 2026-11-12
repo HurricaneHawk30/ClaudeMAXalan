@@ -11,12 +11,12 @@ import random
 from fractions import Fraction
 from typing import Callable
 
-from ..content.base import Answer, Mistake, Skill, Subject, Topic, YearSpec
+from ..content.base import Answer, Mistake, Problem, Skill, Subject, Topic, YearSpec
 from ..content.fmt import (
-    acosd, asind, atand, build, check_level, cosd, fmt_dp, fmt_num, fmt_std, group,
+    acosd, asind, atand, build, check_level, cosd, fmt_dp, fmt_num, frac_str, group,
     is_whole, lin_factor, mixed_str, money, money_text, near_half, num_answer,
-    num_mistake, poly, poly_mul, retry, signed, sind, std_answer, std_mistake, sup,
-    tand, terms, unit, frac_str,
+    num_mistake, poly, poly_mul, retry, sig_digits, signed, sind, std_answer,
+    std_mistake, sup, tand, terms, unit,
 )
 
 SUBJECT_ID = "maths"
@@ -668,7 +668,7 @@ def _ratio_4(rng: random.Random) -> Draft:
         return _q(head + f"How much does {n2} get?", _ans(b * u, "£"),
                   start + f"{n2} gets {b} × {money(u)} = {money(b * u)}", hint,
                   [_mis(as_total, "£", f"{money(known)} is {n1}'s share, not the total — {a} parts are worth {money(known)}",
-                        dp=None if as_total.denominator in (1, 2, 4, 5, 10, 20, 25, 50, 100) else 2),
+                        dp=2),
                    _mis(known + (b - a), "£", "Ratios work by multiplying, not adding — find the value of 1 part first")])
     total = (a + b) * u
     return _q(head + "How much money do they share altogether?", _ans(total, "£"),
@@ -689,18 +689,18 @@ def _ratio_5(rng: random.Random) -> Draft:
             f"{n1} gets {money_text(diff)} more than {n2}. ")
     start = f"The difference is {a} − {b} = {a - b} parts = {money(diff)}, so 1 part = {money(u)}. "
     hint = f"The difference between their shares is {a} − {b} = {a - b} parts"
-    common = [_mis(u, "£", f"That's the value of 1 part — now multiply it by the number of parts you need")]
-    if a - b > 1:
-        common.append(_mis(diff * (a + b) if rng.random() < 0.5 else diff * b, "£",
-                           f"The difference {money(diff)} is {a - b} parts, not 1 part — divide by {a - b} first"))
+    common = [_mis(u, "£", "That's the value of 1 part — now multiply it by the number of parts you need")]
+    one_part = f"The difference {money(diff)} is {a - b} parts, not 1 part — divide by {a - b} first"
     if rng.random() < 0.5:
         total = (a + b) * u
         return _q(head + "How much money do they share altogether?", _ans(total, "£"),
                   start + f"Total = {a + b} × {money(u)} = {money(total)}", hint,
-                  common + [_mis(diff, "£", f"{money(diff)} is the difference between the shares, not the total")])
+                  common + [_mis(diff, "£", f"{money(diff)} is the difference between the shares, not the total"),
+                            _mis(diff * (a + b), "£", one_part) if a - b > 1 else None])
     return _q(head + f"How much does {n2} get?", _ans(b * u, "£"),
               start + f"{n2} gets {b} × {money(u)} = {money(b * u)}", hint,
-              common + [_mis(a * u, "£", f"That's {n1}'s share — {n2} gets {b} parts")])
+              common + [_mis(a * u, "£", f"That's {n1}'s share — {n2} gets {b} parts"),
+                        _mis(diff * b, "£", one_part) if a - b > 1 else None])
 
 
 # ================================================================ HCF/LCM
@@ -799,9 +799,11 @@ def _hcf_5(rng: random.Random) -> Draft:
         def pick(r):
             lo, hi = (6, 31) if kind == "bus" else (4, 25)
             a, b = r.randrange(lo, hi), r.randrange(lo, hi)
-            if a == b or a % b == 0 or b % a == 0:
+            if a == b or a % b == 0 or b % a == 0 or _lcm(a, b) > 180:
                 return None
-            return (a, b) if _lcm(a, b) <= 180 and _lcm(a, b) != a * b or r.random() < 0.3 else None
+            if math.gcd(a, b) == 1 and r.random() < 0.7:
+                return None              # prefer pairs where the LCM is less than a × b
+            return a, b
         a, b = retry(pick, rng)
         L = _lcm(a, b)
         if kind == "bus":
@@ -925,7 +927,7 @@ def _sf_4(rng: random.Random) -> Draft:
     def pick(r):
         m1, m2 = r.choice(_MANT), r.choice(_MANT)
         q = m1 / m2
-        return (m1, m2, q) if m1 != m2 and _terminating(q) and len(fmt_num(q).replace(".", "").strip("0")) <= 3 else None
+        return (m1, m2, q) if m1 != m2 and _terminating(q) and sig_digits(q) <= 3 else None
     m1, m2, q = retry(pick, rng)
     e1, e2 = rng.randrange(3, 10), rng.randrange(-3, 7)
     s = e1 - e2
@@ -1060,7 +1062,7 @@ def _ap_5(rng: random.Random) -> Draft:
         return _q(f"A rectangle has an area of {A} {u}² and a length of {L} {u}. Work out its width.", _ans(W, u),
                   f"Area = length × width, so width = {A} ÷ {L} = {W} {u}", "Area = length × width — so divide the area by the length",
                   [_mis(A - L, u, "Area = length × width, so divide the area by the length"),
-                   _mis(Fraction(A, 2) - L, u, "That method is for the perimeter — for area, divide the area by the length")])
+                   _mis(A * L, u, "Area = length × width, so divide the area by the length (don't multiply)")])
     if kind == "tri_area":
         b, h = rng.randrange(2, 21), rng.randrange(2, 21)
         A = Fraction(b * h, 2)
@@ -1598,7 +1600,7 @@ def _ex_4(rng: random.Random) -> Draft:
         ans = _expr_answer(co)
         f = lin_factor(a, b)[0]
         return _q(f"Expand and simplify {f}².", ans,
-                  f"{f}² = {f}{f} = {poly([a * a, a * b, a * b, b * b][:1] + [2 * a * b, b * b])[0]}",
+                  f"{f}² = {f}{f} = {ans.display}",
                   f"{f}² means {f} × {f}",
                   [_expr_mis([a * a, 0, b * b], f"Squaring a bracket means multiplying it by itself: {f}{f} — don't forget the middle term"),
                    _expr_mis([a * a, a * b, b * b], f"There are two middle terms ({a * b}x each), giving {2 * a * b}x"),
@@ -1705,7 +1707,7 @@ def _fa_ax(rng: random.Random, negatives: bool) -> Draft:
     A, B, C = m * n, m * q + n * p, p * q
     ex = poly([A, B, C])[0]
     ans = _fact_answer([(m, p), (n, q)])
-    split = poly([A, m * q])[0] + f" {signed(n * p)}x " + signed(C)
+    split = f"{A}x² {signed(m * q)}x {signed(n * p)}x {signed(C)}"
     ms: list[Mistake | None] = [
         _fact_mis([(m, -p), (n, -q)], f"Check the signs: expanding should give {signed(B)}x and {signed(C)}"),
         _fact_mis([(m, q), (n, p)], f"Expand your brackets to check — the middle term should be {B}x"),
@@ -1865,7 +1867,6 @@ def _si_2(rng: random.Random) -> Draft:
         k = a + d
         sol = f"Add the equations: {k}x = {c1 + c2}, so x = {x}. Substitute into the first: {a * x} {signed(b)}y = {c1}, so y = {y}"
         hint = "The y terms have opposite signs, so add the two equations"
-    sol = sol.replace(f"{a * x} +", f"{a * x} +")
     return _q(_sim_text(e1, e2), _assign(x, y), sol, hint, _sim_ms(x, y, e1))
 
 
@@ -1883,8 +1884,6 @@ def _si_3(rng: random.Random) -> Draft:
     e1, e2 = _eq(a, b, c1), _eq(d, e, c2)
     m = _eq(k * d, k * e, k * c2)
     diff = a - k * d
-    sol = (f"Multiply the second equation by {k}: {m}. Subtract this from the first: {diff}x = {c1 - k * c2}, "
-           f"so x = {x}. Substitute into the second: {d * x} {signed(e)}y = {c2}... so y = {y}")
     sol = (f"Multiply the second equation by {k}: {m}. Subtract it from the first: {diff}x = {c1 - k * c2}, "
            f"so x = {x}. Substitute x = {x} into either equation to get y = {y}")
     return _q(_sim_text(e1, e2), _assign(x, y), sol,
@@ -1950,8 +1949,9 @@ def _nt_1(rng: random.Random) -> Draft:
     n = rng.choice((10, 10, 10, 12, 15, 20, 50, 100))
     ans = a + (n - 1) * d
     way = f"goes up by {d}" if d > 0 else f"goes down by {-d}"
+    jumps = f"{a} + {n - 1} × {d}" if d > 0 else f"{a} − {n - 1} × {-d}"
     return _q(f"Here is a sequence: {_seq(lambda i: a + (i - 1) * d, 4)} Work out the {n}th term.", _ans(ans),
-              f"The sequence {way} each time. The {n}th term = {a} + {n - 1} × {d} = {ans}".replace("+ -", "− ").replace("× -", "× −"),
+              f"The sequence {way} each time. The {n}th term = {jumps} = {ans}",
               f"Find the difference between the terms, then count the jumps from the 1st term to the {n}th",
               [_mis(a + n * d, "", f"From the 1st term to the {n}th term there are {n - 1} jumps, not {n}"),
                _mis(n * d, "", f"Start from the first term ({a}) and add {n - 1} jumps of {d}")])
@@ -1962,9 +1962,10 @@ def _nt_2(rng: random.Random) -> Draft:
     c = rng.randrange(-5, 11)
     a = d + c
     ans = _expr_answer([d, c], var="n", form="any")
+    diff_txt = "the same" if c == 0 else (f"{c} more" if c > 0 else f"{-c} less")
     return _q(f"Here are the first five terms of a sequence: {_seq(lambda i: d * i + c, 5)} Find an expression for the nth term.",
-              ans, f"The terms go up by {d}, so compare with {d}n: {d}, {2 * d}, {3 * d}, ... Each term is {c} more" .replace(f"{c} more", f"{c} more" if c >= 0 else f"{-c} less")
-              + f", so the nth term is {ans.display}",
+              ans, f"The terms go up by {d}, so compare with {d}n: {d}, {2 * d}, {3 * d}, ... "
+                   f"Each term is {diff_txt}, so the nth term is {ans.display}",
               "The difference between the terms tells you the number in front of n",
               [_expr_mis([1, d], f"The difference ({d}) goes in front of n: {d}n", var="n"),
                _expr_mis([d, a], f"Check with n = 1: {d} × 1 + {a} = {d + a}, but the first term is {a} — the number on the end comes from the term before the first one", var="n")])
@@ -2015,15 +2016,11 @@ def _nt_5(rng: random.Random) -> Draft:
                    f"{', '.join(str(x) for x in resid)}, ..., which is {lin}. So the nth term is {ans.display}",
               "Find the second difference — halve it to get the number in front of n²",
               [_expr_mis([2 * a, b, c], "The number in front of n² is half of the second difference", var="n"),
-               _expr_mis([a, 0, c + b] if b else [a, 1, c - 1], f"Check your expression with n = 1, 2 and 3 — subtract {an2} from each term to find the rest", var="n")])
+               _expr_mis([a, b, b + c], "For the linear part, the number on the end is the term before the first one (the zero term), not the first term", var="n")
+               if b else None])
 
 
 # ======================================================= trig: sides
-
-def _rad(fn: Callable[[float], float], deg: float) -> float:
-    """The value a calculator in RADIANS mode would give."""
-    return fn(deg)
-
 
 def _trig_pick(rng: random.Random, f: Callable[[random.Random], tuple]) -> tuple:
     def pick(r):
@@ -2095,7 +2092,7 @@ def _ts_4(rng: random.Random) -> Draft:
            "adj_hyp": (sind, "AB is adjacent to angle A, so use cos, not sin"),
            "opp_adj": (sind, "BC is opposite and AB is adjacent, so use tan")}[kind]
     return _q(f"Triangle ABC has a right angle at B. Angle A = {t}° and {given} = {ss} {u}. Work out the length of {want}. Give your answer to 1 decimal place.",
-              _ans(v, u, 1), f"{given} is {role} and {want} is {wrole}, so {name} {t}° = {given if kind != 'adj_hyp' else 'AB'} ÷ {want}. "
+              _ans(v, u, 1), f"{given} is {role} and {want} is {wrole}, so {name} {t}° = {given} ÷ {want}. "
                              f"{want} = {ss} ÷ {name} {t}° = {_approx(v)} = {_disp(v, u, 1)} (1 d.p.)",
               f"{want} is {wrole}. Decide which ratio links {want} with {given}, then rearrange",
               [_mis(float(s) * fn(t), u, f"{want} is on the bottom of the fraction, so divide: {want} = {ss} ÷ {name} {t}°", dp=1),
@@ -2518,7 +2515,7 @@ def _skill(name: str, title: str, aliases: tuple[str, ...],
     if len(levels) != 5:
         raise ValueError(f"{sid}: needs 5 levels")
 
-    def generate(level: int, seed: int) -> "Problem":
+    def generate(level: int, seed: int) -> Problem:
         check_level(level)
         rng = random.Random(seed)
         d = levels[level - 1](rng)
