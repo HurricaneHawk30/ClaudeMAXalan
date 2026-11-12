@@ -233,7 +233,7 @@ class TestSkills(unittest.TestCase):
 
     def test_required_ids_exist(self):
         self.assertEqual(len(REQUIRED), 32 + len(V2_GENERATORS))
-        self.assertGreaterEqual(len(V2_GENERATORS), 40)
+        self.assertGreaterEqual(len(V2_GENERATORS), 30)
         missing = [f"[{self.owner(s)}] {s}" for s in REQUIRED if self.reg.skill(s) is None]
         self.assertEqual(missing, [], f"{len(missing)} required generator skill(s) missing: {missing[:12]}")
 

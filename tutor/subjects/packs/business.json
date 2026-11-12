@@ -1,0 +1,2243 @@
+{
+ "subject_id": "business",
+ "skills": [
+  {
+   "id": "business.enterprise",
+   "title": "Enterprise & ideas",
+   "aliases": [
+    "business ownership",
+    "enterprise",
+    "entrepreneur",
+    "sole trader",
+    "partnership",
+    "limited liability",
+    "stakeholders",
+    "business location",
+    "franchising",
+    "smart objectives",
+    "added value"
+   ],
+   "questions": [
+    {
+     "id": "en01",
+     "level": 1,
+     "text": "What is the name for a person who takes the risk of starting and running a business? Give the term.",
+     "short": {
+      "accept": [
+       "entrepreneur",
+       "entrepreneurs",
+       "an entrepreneur"
+      ]
+     },
+     "solution": "An entrepreneur organises resources and takes risks to start a business, hoping to make a profit",
+     "hint": "The word comes from French and means someone who 'undertakes' a venture"
+    },
+    {
+     "id": "en02",
+     "level": 1,
+     "text": "What is a sole trader?",
+     "choice": {
+      "options": [
+       "A business owned by one person",
+       "A business owned by shareholders who can buy shares on a stock exchange",
+       "A business owned by two or more partners",
+       "A business run by the government"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is a public limited company (plc)",
+       "That is a partnership",
+       null
+      ]
+     },
+     "solution": "A sole trader is owned and controlled by one person, who usually has unlimited liability",
+     "hint": "'Sole' means only one"
+    },
+    {
+     "id": "en03",
+     "level": 1,
+     "text": "What term describes owners being personally responsible for ALL the debts of their business, so they could lose their own possessions? Give the term.",
+     "short": {
+      "accept": [
+       "unlimited liability",
+       "unlimited"
+      ],
+      "reject": [
+       "limited liability",
+       "limited"
+      ],
+      "feedback": {
+       "limited liability": "Limited liability means owners can lose only what they invested",
+       "limited": "Limited liability means owners can lose only what they invested"
+      }
+     },
+     "solution": "With unlimited liability (sole traders and most partnerships), owners can lose personal possessions to pay business debts",
+     "hint": "There is no limit on what the owner could lose"
+    },
+    {
+     "id": "en04",
+     "level": 1,
+     "text": "Which of these is an internal stakeholder?",
+     "choice": {
+      "options": [
+       "Suppliers",
+       "Employees",
+       "Customers",
+       "The local community"
+      ],
+      "correct": 1
+     },
+     "solution": "Internal stakeholders are inside the business (owners, managers, employees); external ones are outside it",
+     "hint": "Internal stakeholders work in, or own, the business"
+    },
+    {
+     "id": "en05",
+     "level": 1,
+     "text": "What is the name of the business that sells the right to use its name and products to another business (the franchisee)? Give the term.",
+     "short": {
+      "accept": [
+       "franchisor",
+       "the franchisor"
+      ],
+      "reject": [
+       "franchisee"
+      ],
+      "feedback": {
+       "franchisee": "The franchisee is the business that BUYS a franchise — the business that sells it has a different name"
+      }
+     },
+     "solution": "The franchisor owns the brand and sells franchises; the franchisee buys the right to trade under that brand",
+     "hint": "It is the business that GIVES the franchise"
+    },
+    {
+     "id": "en06",
+     "level": 1,
+     "text": "Which sector of the economy extracts raw materials, for example through farming, fishing and mining?",
+     "choice": {
+      "options": [
+       "Secondary sector",
+       "Tertiary sector",
+       "Primary sector",
+       "Public sector"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The secondary sector manufactures goods",
+       "The tertiary sector provides services",
+       null,
+       "The public sector is owned by the government"
+      ]
+     },
+     "solution": "Primary = extracting raw materials; secondary = manufacturing; tertiary = services",
+     "hint": "This sector comes first in the chain of production"
+    },
+    {
+     "id": "en07",
+     "level": 2,
+     "text": "What is the main difference between a private limited company (Ltd) and a public limited company (plc)?",
+     "choice": {
+      "options": [
+       "A Ltd has unlimited liability; a plc has limited liability",
+       "A plc is owned by the government",
+       "A Ltd must have only one owner",
+       "A plc can sell shares to the general public on a stock exchange; a Ltd cannot"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Both Ltd and plc companies have limited liability",
+       "Plcs are owned by shareholders, not the government",
+       null,
+       null
+      ]
+     },
+     "solution": "Both have limited liability, but only a plc can sell shares to the public on a stock exchange",
+     "hint": "Think about who is allowed to buy the shares"
+    },
+    {
+     "id": "en08",
+     "level": 2,
+     "text": "Which of these is a non-financial reason for starting a business?",
+     "choice": {
+      "options": [
+       "Wanting to be your own boss",
+       "Wanting to earn a high income",
+       "Wanting to make a profit",
+       "Wanting to build up personal wealth"
+      ],
+      "correct": 0
+     },
+     "solution": "Non-financial reasons include independence, satisfaction and helping others; the others are about money",
+     "hint": "Look for the reason that is not about money"
+    },
+    {
+     "id": "en09",
+     "level": 2,
+     "text": "What is added value?",
+     "choice": {
+      "options": [
+       "The total revenue of a business",
+       "The difference between the selling price and the cost of bought-in materials",
+       "The profit after tax",
+       "The cost of all raw materials"
+      ],
+      "correct": 1
+     },
+     "solution": "Added value = selling price − cost of bought-in materials and components",
+     "hint": "It is the extra value the business creates on top of what it buys in"
+    },
+    {
+     "id": "en10",
+     "level": 2,
+     "text": "Which statement about shareholders and stakeholders is accurate?",
+     "choice": {
+      "options": [
+       "A stakeholder always owns shares",
+       "Shareholders and stakeholders are exactly the same",
+       "A shareholder owns part of a company; a stakeholder is anyone with an interest in the business",
+       "A shareholder is always a customer of the business"
+      ],
+      "correct": 2
+     },
+     "solution": "Shareholders are one type of stakeholder: the owners of a company",
+     "hint": "Shareholders hold shares; stakeholders have a 'stake' or interest"
+    },
+    {
+     "id": "en11",
+     "level": 2,
+     "text": "What term describes the protection that means shareholders can lose only the money they have invested in a company? Give the term.",
+     "short": {
+      "accept": [
+       "limited liability",
+       "limited"
+      ],
+      "reject": [
+       "unlimited liability",
+       "unlimited"
+      ],
+      "feedback": {
+       "unlimited liability": "With unlimited liability, owners can lose their personal possessions",
+       "unlimited": "With unlimited liability, owners can lose their personal possessions"
+      }
+     },
+     "solution": "Limited liability protects shareholders' personal possessions; a company is a separate legal entity",
+     "hint": "The amount the owners could lose has a limit"
+    },
+    {
+     "id": "en12",
+     "level": 2,
+     "text": "A business objective should be SMART. What word does the letter 'M' stand for? Give the word.",
+     "short": {
+      "accept": [
+       "measurable"
+      ]
+     },
+     "solution": "SMART: Specific, Measurable, Achievable, Realistic, Time-bound. A measurable objective can be checked with numbers",
+     "hint": "It means you can count or check whether the objective has been met"
+    },
+    {
+     "id": "en13",
+     "level": 3,
+     "text": "Three friends start a business together. They own it jointly, share the profits as set out in a written agreement (a deed), and have not set up a company. Which form of ownership is this?",
+     "choice": {
+      "options": [
+       "Sole trader",
+       "Public limited company",
+       "Franchisor",
+       "Partnership"
+      ],
+      "correct": 3
+     },
+     "solution": "A partnership is owned by two or more people, often with a deed of partnership setting out how profits are shared",
+     "hint": "There are several owners and no company has been formed"
+    },
+    {
+     "id": "en14",
+     "level": 3,
+     "text": "Priya opens a branch of a well-known sandwich chain. She pays a fee and a share of her revenue to use the chain's name and products. What is Priya?",
+     "choice": {
+      "options": [
+       "A franchisee",
+       "A franchisor",
+       "A shareholder",
+       "A public limited company"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The franchisor is the chain that sells the right to use its brand",
+       null,
+       null
+      ]
+     },
+     "solution": "Priya buys the right to use the brand, so she is the franchisee; the chain is the franchisor",
+     "hint": "Is Priya selling the right to use the brand, or buying it?"
+    },
+    {
+     "id": "en15",
+     "level": 3,
+     "text": "A new factory will bring jobs to a town but also more lorries on local roads. Which stakeholder group is most affected by the extra traffic?",
+     "choice": {
+      "options": [
+       "Shareholders",
+       "The local community",
+       "Suppliers",
+       "Managers"
+      ],
+      "correct": 1
+     },
+     "solution": "Local residents (the local community) live with the extra traffic, noise and pollution",
+     "hint": "Who lives on the roads near the factory?"
+    },
+    {
+     "id": "en16",
+     "level": 3,
+     "text": "A bakery buys flour, eggs and sugar for £1.20 and sells the finished cake for £4.00. What is the added value?",
+     "choice": {
+      "options": [
+       "£4.00",
+       "£1.20",
+       "£2.80",
+       "£5.20"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Subtract the cost of the ingredients — don't add it"
+      ]
+     },
+     "solution": "Added value = £4.00 − £1.20 = £2.80",
+     "hint": "Subtract the cost of the bought-in ingredients from the selling price"
+    },
+    {
+     "id": "en17",
+     "level": 3,
+     "text": "A business provides a service such as hairdressing. Which sector of the economy is it in? Give the sector.",
+     "short": {
+      "accept": [
+       "tertiary",
+       "tertiary sector",
+       "service sector",
+       "services"
+      ],
+      "reject": [
+       "secondary",
+       "primary",
+       "secondary sector",
+       "primary sector"
+      ],
+      "feedback": {
+       "secondary": "The secondary sector manufactures goods",
+       "secondary sector": "The secondary sector manufactures goods",
+       "primary": "The primary sector extracts raw materials",
+       "primary sector": "The primary sector extracts raw materials"
+      }
+     },
+     "solution": "The tertiary sector provides services, such as hairdressing, banking and retail",
+     "hint": "It is the third sector in the chain of production"
+    },
+    {
+     "id": "en18",
+     "level": 3,
+     "text": "A business opens near a large town because many skilled workers live there. Which factor affecting location is this? Give the factor.",
+     "short": {
+      "accept": [
+       "labour",
+       "labor",
+       "availability of labour",
+       "access to labour",
+       "workforce",
+       "skilled labour",
+       "labour supply",
+       "skilled workers",
+       "workers"
+      ]
+     },
+     "solution": "Access to labour (a skilled workforce) is a key factor in choosing a location",
+     "hint": "Think about the people the business needs to employ"
+    },
+    {
+     "id": "en19",
+     "level": 4,
+     "text": "A new café forecasts revenue of £60,000 and total costs of £66,000 in its first year. What does this suggest?",
+     "choice": {
+      "options": [
+       "The café expects a profit of £6,000",
+       "The café expects to break even",
+       "The café expects a profit of £126,000",
+       "The café expects to make a loss of £6,000 in its first year"
+      ],
+      "correct": 3
+     },
+     "solution": "Profit = £60,000 − £66,000 = −£6,000, a loss",
+     "hint": "Profit = revenue − total costs"
+    },
+    {
+     "id": "en20",
+     "level": 4,
+     "text": "Which is a disadvantage of running a business as a franchisee?",
+     "choice": {
+      "options": [
+       "Part of the revenue must be paid to the franchisor as a royalty",
+       "There is no support from the franchisor",
+       "The brand is unknown to customers",
+       "The franchisee can sell any products it likes"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Franchisors usually give training and support",
+       "A known brand is a key advantage of a franchise",
+       null
+      ]
+     },
+     "solution": "Franchisees pay an initial fee and ongoing royalties, and must follow the franchisor's rules",
+     "hint": "Think about what the franchisee must pay and follow"
+    },
+    {
+     "id": "en21",
+     "level": 4,
+     "text": "A sole trader's business has debts of £30,000 that it cannot pay. What might happen to the owner?",
+     "choice": {
+      "options": [
+       "The owner loses only the money put into the business",
+       "The owner may have to sell personal possessions, such as a car, to pay the debts",
+       "The debts are paid by shareholders",
+       "The debts are cancelled automatically"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That describes limited liability, which sole traders do not have",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Sole traders have unlimited liability, so their personal possessions can be used to pay business debts",
+     "hint": "Does a sole trader have limited or unlimited liability?"
+    },
+    {
+     "id": "en22",
+     "level": 4,
+     "text": "Employees want higher pay, but shareholders want higher dividends. What does this show?",
+     "choice": {
+      "options": [
+       "All stakeholders always want the same thing",
+       "Employees are external stakeholders",
+       "Stakeholders can have conflicting objectives",
+       "Shareholders are not interested in profit"
+      ],
+      "correct": 2
+     },
+     "solution": "Higher wages reduce the profit available for dividends, so these stakeholders' aims conflict",
+     "hint": "Could the business give both groups everything they want?"
+    },
+    {
+     "id": "en23",
+     "level": 4,
+     "text": "An objective says: 'Increase sales by 10% within 12 months.' Which part of SMART does 'within 12 months' show? Give the word.",
+     "short": {
+      "accept": [
+       "time-bound",
+       "time bound",
+       "timed",
+       "time-related",
+       "time related",
+       "timely",
+       "time"
+      ]
+     },
+     "solution": "'Within 12 months' gives a deadline, so the objective is time-bound (timed)",
+     "hint": "It sets a deadline"
+    },
+    {
+     "id": "en24",
+     "level": 4,
+     "text": "Explain two advantages of starting a business as a sole trader.",
+     "rubric": {
+      "model_answer": "First, it is quick and cheap to set up, with very little legal paperwork, so the owner can start trading straight away. Second, the owner keeps all the profit after tax, which is a strong reward for hard work. Other advantages include full control over decisions, so the owner can act quickly, and privacy, because a sole trader does not have to publish accounts.",
+      "mark_scheme": "1 mark: first advantage identified (e.g. easy to set up)\n1 mark: first advantage explained\n1 mark: second advantage identified (e.g. keeps all profit, full control)\n1 mark: second advantage explained\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "E.g. easy and cheap to set up; keeps all the profit; full control; financial privacy",
+     "hint": "Think about cost, control and profit"
+    },
+    {
+     "id": "en25",
+     "level": 5,
+     "text": "Which statement about a public limited company (plc) is accurate?",
+     "choice": {
+      "options": [
+       "It has unlimited liability",
+       "It cannot sell shares to the public",
+       "It is owned by a single person",
+       "Its shares can be bought by the public, but the original owners may find it harder to keep control"
+      ],
+      "correct": 3
+     },
+     "solution": "Selling shares to the public raises lots of finance, but anyone can buy shares, so control can be lost (even to a takeover)",
+     "hint": "Think about what happens when anyone can buy shares"
+    },
+    {
+     "id": "en26",
+     "level": 5,
+     "text": "A clothing chain is choosing a location for a new store. Which factor supports choosing a busy high street, even though the rent is high?",
+     "choice": {
+      "options": [
+       "Being close to large numbers of customers",
+       "Cheaper rent than an out-of-town site",
+       "Being near raw materials such as cotton farms",
+       "Having no competitors anywhere nearby"
+      ],
+      "correct": 0
+     },
+     "solution": "A busy high street brings high footfall (lots of passing customers), which can justify the higher rent",
+     "hint": "Why would a shop pay more to be on a busy street?"
+    },
+    {
+     "id": "en27",
+     "level": 5,
+     "text": "Why might an entrepreneur set up a private limited company rather than operate as a sole trader?",
+     "choice": {
+      "options": [
+       "To avoid all legal paperwork",
+       "To protect personal possessions through limited liability",
+       "To have unlimited liability",
+       "To sell shares on a stock exchange"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A company has more paperwork than a sole trader, not less",
+       null,
+       null,
+       "Only a plc can sell shares on a stock exchange"
+      ]
+     },
+     "solution": "A private limited company has limited liability, so the owner's personal possessions are protected",
+     "hint": "Think about what happens to personal possessions if the business fails"
+    },
+    {
+     "id": "en28",
+     "level": 5,
+     "text": "Why must businesses keep up with changes in technology?",
+     "choice": {
+      "options": [
+       "New technology always lowers revenue",
+       "Technology never changes what customers expect",
+       "Competitors may use new technology to offer cheaper or better products",
+       "The law requires businesses to use old technology"
+      ],
+      "correct": 2
+     },
+     "solution": "If rivals use new technology to cut costs or improve products, a business that does not adapt may lose customers",
+     "hint": "Think about what rivals might do"
+    },
+    {
+     "id": "en29",
+     "level": 5,
+     "text": "What term describes a business whose main aim is to help society or the environment, and which reinvests most of its profits in that aim? Give the term.",
+     "short": {
+      "accept": [
+       "social enterprise",
+       "social enterprises",
+       "a social enterprise"
+      ],
+      "reject": [
+       "charity"
+      ],
+      "feedback": {
+       "charity": "A charity mainly relies on donations — a business that trades to help society is called something else"
+      }
+     },
+     "solution": "A social enterprise trades like a business but has social or environmental aims and reinvests its profits",
+     "hint": "It is still an enterprise, but its aim is about society"
+    },
+    {
+     "id": "en30",
+     "level": 5,
+     "text": "Assess whether the benefits of becoming a franchisee outweigh the drawbacks.",
+     "rubric": {
+      "model_answer": "Benefits: the franchisee trades under a well-known brand, so customers already trust it and the risk of failure is lower. The franchisor gives training, support and national advertising, and banks may lend more readily. Drawbacks: there is a large initial fee and ongoing royalties on revenue, which cut profit, and the franchisee must follow strict rules on products, prices and layout, so there is little independence. Overall, for someone who values lower risk more than freedom, the benefits often outweigh the drawbacks.",
+      "mark_scheme": "1 mark: a benefit identified (e.g. known brand)\n1 mark: the benefit explained (e.g. lower risk)\n1 mark: a second benefit (e.g. training, advertising)\n1 mark: a drawback identified (e.g. fees and royalties)\n1 mark: the drawback explained (e.g. less profit, less independence)\n1 mark: a justified conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Benefits: known brand, lower risk, support and advertising. Drawbacks: fees, royalties, little independence. Conclusion depends on the person",
+     "hint": "Weigh the known brand and support against the fees and the rules"
+    }
+   ]
+  },
+  {
+   "id": "business.marketing",
+   "title": "Marketing",
+   "aliases": [
+    "marketing mix",
+    "marketing",
+    "market research",
+    "segmentation",
+    "product life cycle",
+    "boston matrix",
+    "pricing strategies",
+    "promotion",
+    "branding",
+    "4ps",
+    "usp"
+   ],
+   "questions": [
+    {
+     "id": "ma01",
+     "level": 1,
+     "text": "What are the 4 Ps of the marketing mix?",
+     "choice": {
+      "options": [
+       "Product, price, place and promotion",
+       "Product, profit, people and planning",
+       "Price, packaging, profit and place",
+       "Promotion, production, packaging and price"
+      ],
+      "correct": 0
+     },
+     "solution": "The marketing mix is product, price, place and promotion",
+     "hint": "All four begin with P, and one of them is about where the product is sold"
+    },
+    {
+     "id": "ma02",
+     "level": 1,
+     "text": "What term describes market research that a business collects itself for the first time, such as a survey of its own customers? Give the term.",
+     "short": {
+      "accept": [
+       "primary research",
+       "field research",
+       "primary market research",
+       "primary",
+       "field"
+      ],
+      "reject": [
+       "secondary research",
+       "desk research",
+       "secondary",
+       "desk"
+      ],
+      "feedback": {
+       "secondary research": "Secondary research uses data that already exists",
+       "desk research": "Desk research uses data that already exists",
+       "secondary": "Secondary research uses data that already exists",
+       "desk": "Desk research uses data that already exists"
+      }
+     },
+     "solution": "Primary (field) research is new data collected first-hand; secondary (desk) research uses existing data",
+     "hint": "It is collected first-hand"
+    },
+    {
+     "id": "ma03",
+     "level": 1,
+     "text": "What term describes dividing a market into groups of customers with similar characteristics, such as age or income? Give the term.",
+     "short": {
+      "accept": [
+       "market segmentation",
+       "segmentation",
+       "segmenting"
+      ]
+     },
+     "solution": "Market segmentation lets a business target each group (segment) with a suitable marketing mix",
+     "hint": "The market is split into 'segments'"
+    },
+    {
+     "id": "ma04",
+     "level": 1,
+     "text": "Which stage of the product life cycle comes straight after introduction?",
+     "choice": {
+      "options": [
+       "Maturity",
+       "Growth",
+       "Decline",
+       "Development"
+      ],
+      "correct": 1
+     },
+     "solution": "The stages are development, introduction, growth, maturity and decline",
+     "hint": "After launch, sales usually start to rise quickly"
+    },
+    {
+     "id": "ma05",
+     "level": 1,
+     "text": "A USP is a feature that makes a product different from its competitors. What do the letters USP stand for? Give the full term.",
+     "short": {
+      "accept": [
+       "unique selling point",
+       "unique selling proposition",
+       "USP"
+      ]
+     },
+     "solution": "A unique selling point (USP) makes a product stand out from rivals",
+     "hint": "U is for 'unique'"
+    },
+    {
+     "id": "ma06",
+     "level": 1,
+     "text": "In the Boston Matrix, what is a product with a high market share in a low-growth market called?",
+     "choice": {
+      "options": [
+       "Star",
+       "Dog",
+       "Cash cow",
+       "Question mark"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A star has high market share in a HIGH-growth market",
+       "A dog has low market share in a low-growth market",
+       null,
+       "A question mark has low market share in a high-growth market"
+      ]
+     },
+     "solution": "Cash cows have high share in low-growth markets and generate cash; stars have high share in high-growth markets",
+     "hint": "It is 'milked' for the cash it brings in"
+    },
+    {
+     "id": "ma07",
+     "level": 2,
+     "text": "Which pricing strategy sets a high price when a new, innovative product is launched?",
+     "choice": {
+      "options": [
+       "Penetration pricing",
+       "Loss leader pricing",
+       "Competitive pricing",
+       "Price skimming"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Penetration pricing starts LOW to win market share",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Price skimming charges a high launch price to early adopters, then lowers it over time",
+     "hint": "The business 'skims' the most it can from keen early buyers"
+    },
+    {
+     "id": "ma08",
+     "level": 2,
+     "text": "Which pricing strategy sets a low price at launch to win market share quickly?",
+     "choice": {
+      "options": [
+       "Penetration pricing",
+       "Price skimming",
+       "Premium pricing",
+       "Cost-plus pricing"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Price skimming starts HIGH",
+       null,
+       null
+      ]
+     },
+     "solution": "Penetration pricing uses a low launch price to 'penetrate' the market, then raises it later",
+     "hint": "The low price helps the product break into the market"
+    },
+    {
+     "id": "ma09",
+     "level": 2,
+     "text": "In the Boston Matrix, what is a product with a low market share in a low-growth market called?",
+     "choice": {
+      "options": [
+       "Cash cow",
+       "Dog",
+       "Star",
+       "Question mark"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A cash cow has HIGH market share in a low-growth market",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Dogs have low share in low-growth markets and are often withdrawn",
+     "hint": "This is the weakest position in the matrix"
+    },
+    {
+     "id": "ma10",
+     "level": 2,
+     "text": "Which is an example of secondary research?",
+     "choice": {
+      "options": [
+       "Interviewing customers in a shop",
+       "Running a focus group",
+       "Reading a government report on population trends",
+       "Giving out free samples and asking for feedback"
+      ],
+      "correct": 2
+     },
+     "solution": "Secondary research uses data that already exists, such as government statistics and published reports",
+     "hint": "Secondary research uses information someone else has already collected"
+    },
+    {
+     "id": "ma11",
+     "level": 2,
+     "text": "What is the name for a product sold below cost to attract customers, who then buy other, more profitable items? Give the term.",
+     "short": {
+      "accept": [
+       "loss leader",
+       "loss leader pricing",
+       "loss leading",
+       "loss leaders"
+      ]
+     },
+     "solution": "A loss leader is sold at a loss to bring customers in, hoping they buy other products",
+     "hint": "The business makes a loss on it, but it 'leads' customers into the shop"
+    },
+    {
+     "id": "ma12",
+     "level": 2,
+     "text": "In the Boston Matrix, what is a product with a high market share in a high-growth market called? Give the term.",
+     "short": {
+      "accept": [
+       "star",
+       "stars",
+       "a star"
+      ],
+      "reject": [
+       "cash cow"
+      ],
+      "feedback": {
+       "cash cow": "A cash cow has high share in a LOW-growth market"
+      }
+     },
+     "solution": "Stars have high share in high-growth markets; they earn a lot but need heavy investment",
+     "hint": "It is the 'brightest' product in the matrix"
+    },
+    {
+     "id": "ma13",
+     "level": 3,
+     "text": "A games company launches a new console at a high price, then lowers the price a year later. Which pricing strategy did it use at launch?",
+     "choice": {
+      "options": [
+       "Penetration pricing",
+       "Psychological pricing",
+       "Loss leader pricing",
+       "Price skimming"
+      ],
+      "correct": 3
+     },
+     "solution": "A high launch price that falls later is price skimming",
+     "hint": "The price started high and came down"
+    },
+    {
+     "id": "ma14",
+     "level": 3,
+     "text": "A shop prices a jacket at £49.99 instead of £50. Which pricing strategy is this?",
+     "choice": {
+      "options": [
+       "Psychological pricing",
+       "Price skimming",
+       "Cost-plus pricing",
+       "Penetration pricing"
+      ],
+      "correct": 0
+     },
+     "solution": "Psychological pricing makes the price seem lower (£49.99 'feels' like £40-something)",
+     "hint": "The price is designed to feel cheaper than it really is"
+    },
+    {
+     "id": "ma15",
+     "level": 3,
+     "text": "Sales of a product have levelled off at their highest point, and competition is strong. Which stage of the product life cycle is it in?",
+     "choice": {
+      "options": [
+       "Growth",
+       "Maturity",
+       "Introduction",
+       "Decline"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "In decline, sales are FALLING"
+      ]
+     },
+     "solution": "In maturity, sales peak and level off, and competition is at its strongest",
+     "hint": "Sales are high but no longer rising"
+    },
+    {
+     "id": "ma16",
+     "level": 3,
+     "text": "A sports drink company targets 18–30-year-olds who regularly go to the gym. Which types of segmentation is it using?",
+     "choice": {
+      "options": [
+       "Gender and location",
+       "Income only",
+       "Age and lifestyle",
+       "Religion and location"
+      ],
+      "correct": 2
+     },
+     "solution": "18–30-year-olds is segmentation by age; regular gym-goers is segmentation by lifestyle",
+     "hint": "Look at the two pieces of information about the target customers"
+    },
+    {
+     "id": "ma17",
+     "level": 3,
+     "text": "A business gives away free samples of a new drink in a supermarket. Which of the 4 Ps of the marketing mix is this? Give the P.",
+     "short": {
+      "accept": [
+       "promotion",
+       "promotions",
+       "sales promotion"
+      ],
+      "reject": [
+       "product",
+       "price",
+       "place"
+      ],
+      "feedback": {
+       "product": "Product is about the item itself and its features",
+       "price": "Price is about how much is charged",
+       "place": "Place is about where and how the product is sold"
+      }
+     },
+     "solution": "Free samples are a sales promotion, part of the promotion element of the marketing mix",
+     "hint": "This P is about communicating with customers and persuading them to buy"
+    },
+    {
+     "id": "ma18",
+     "level": 3,
+     "text": "A company redesigns the packaging of an older product and launches it in a new country, so sales rise again. What is the name for actions like this? Give the term.",
+     "short": {
+      "accept": [
+       "extension strategy",
+       "extension strategies",
+       "extension",
+       "product extension strategy"
+      ]
+     },
+     "solution": "Extension strategies (such as new packaging, new markets or new features) lengthen the product life cycle",
+     "hint": "They make the product's life cycle longer"
+    },
+    {
+     "id": "ma19",
+     "level": 4,
+     "text": "A product's yearly sales were: 2,000 units, then 6,000, then 9,000, then 9,200, then 7,000. Which stage of the product life cycle had it reached in the final year?",
+     "choice": {
+      "options": [
+       "Growth",
+       "Maturity",
+       "Introduction",
+       "Decline"
+      ],
+      "correct": 3
+     },
+     "solution": "Sales grew quickly, levelled off around 9,000 (maturity), then fell to 7,000: decline",
+     "hint": "Look at what happened to sales in the final year compared with the year before"
+    },
+    {
+     "id": "ma20",
+     "level": 4,
+     "text": "A product is a 'star' in the Boston Matrix. What does it usually need?",
+     "choice": {
+      "options": [
+       "High spending on promotion to keep up in a fast-growing market",
+       "No marketing at all, because it will sell itself",
+       "To be withdrawn from the market",
+       "To be sold at a loss"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Withdrawal is usually considered for dogs",
+       null
+      ]
+     },
+     "solution": "Stars earn a lot but need heavy investment to keep their share of a fast-growing market",
+     "hint": "Think about what it takes to stay ahead in a fast-growing market"
+    },
+    {
+     "id": "ma21",
+     "level": 4,
+     "text": "A survey of 200 customers found that 120 prefer online shopping, 50 prefer shops and 30 have no preference. What percentage prefer online shopping?",
+     "choice": {
+      "options": [
+       "120%",
+       "60%",
+       "40%",
+       "25%"
+      ],
+      "correct": 1
+     },
+     "solution": "120 ÷ 200 × 100 = 60%",
+     "hint": "Divide the number who prefer online shopping by the total, then multiply by 100"
+    },
+    {
+     "id": "ma22",
+     "level": 4,
+     "text": "A restaurant wants detailed opinions about why customers like or dislike its new menu. Which research method suits this aim?",
+     "choice": {
+      "options": [
+       "Government statistics",
+       "Last year's sales figures",
+       "A focus group",
+       "A national population census"
+      ],
+      "correct": 2
+     },
+     "solution": "A focus group gives detailed qualitative opinions and reasons from a small group of customers",
+     "hint": "The restaurant wants reasons and opinions, not just numbers"
+    },
+    {
+     "id": "ma23",
+     "level": 4,
+     "text": "TV, radio and online adverts reach a mass audience. What is this type of promotion called, as opposed to 'below the line' methods such as direct mail and sales promotions? Give the term.",
+     "short": {
+      "accept": [
+       "above the line",
+       "above-the-line",
+       "above the line promotion",
+       "above-the-line promotion",
+       "ATL"
+      ],
+      "reject": [
+       "below the line",
+       "below-the-line"
+      ],
+      "feedback": {
+       "below the line": "Below-the-line methods are the targeted ones such as direct mail and sales promotions",
+       "below-the-line": "Below-the-line methods are the targeted ones such as direct mail and sales promotions"
+      }
+     },
+     "solution": "Above-the-line promotion uses mass media advertising; below-the-line methods are more targeted",
+     "hint": "If the other kind is 'below', what is this kind?"
+    },
+    {
+     "id": "ma24",
+     "level": 4,
+     "text": "Explain two benefits of market research for a new business.",
+     "rubric": {
+      "model_answer": "First, market research shows whether there is enough demand for the product, so the owner can avoid wasting money on an idea that will not sell. This reduces risk. Second, it helps the business understand its target customers, such as their age, income and what price they will pay. This means the marketing mix (product, price, place and promotion) can be designed to meet their needs, which should increase sales. It also gives information about competitors.",
+      "mark_scheme": "1 mark: first benefit identified (e.g. checks demand)\n1 mark: first benefit explained (e.g. reduces risk)\n1 mark: second benefit identified (e.g. understand customers or competitors)\n1 mark: second benefit explained (e.g. better marketing mix, more sales)\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "It shows whether there is demand (reducing risk) and what customers want, so the marketing mix can meet their needs",
+     "hint": "Think about risk and about knowing your customers"
+    },
+    {
+     "id": "ma25",
+     "level": 5,
+     "text": "Which statement about penetration pricing is accurate?",
+     "choice": {
+      "options": [
+       "It always gives high profit per unit at launch",
+       "It is used only for luxury products",
+       "It means the price never changes",
+       "It can build market share quickly, but profit per unit is low at first"
+      ],
+      "correct": 3
+     },
+     "solution": "A low launch price attracts customers and builds share, but each sale earns little profit until the price rises",
+     "hint": "Think about both the benefit and the cost of a low launch price"
+    },
+    {
+     "id": "ma26",
+     "level": 5,
+     "text": "How might a business use the profits from a cash cow?",
+     "choice": {
+      "options": [
+       "To fund the development of question marks or new products",
+       "To close down all its other products",
+       "To cut the cash cow's price to zero",
+       "To stop paying its staff"
+      ],
+      "correct": 0
+     },
+     "solution": "Cash cows generate surplus cash that can be invested in question marks and new products, balancing the portfolio",
+     "hint": "Cash cows provide money; which products need money to grow?"
+    },
+    {
+     "id": "ma27",
+     "level": 5,
+     "text": "Which is a limitation of secondary research?",
+     "choice": {
+      "options": [
+       "It is always more expensive than primary research",
+       "It may be out of date or may not fit the business's exact needs",
+       "It can never be found online",
+       "It is always collected by the business itself"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Secondary research is usually CHEAPER than primary research",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Secondary data is cheap and quick, but it was collected for another purpose and may be old or too general",
+     "hint": "Think about who collected the data, when and why"
+    },
+    {
+     "id": "ma28",
+     "level": 5,
+     "text": "Which statement about branding is accurate?",
+     "choice": {
+      "options": [
+       "Branding always lowers the price a business can charge",
+       "Only small businesses use branding",
+       "A strong brand can build customer loyalty and allow a higher price to be charged",
+       "A brand has no effect on customers' choices"
+      ],
+      "correct": 2
+     },
+     "solution": "A recognised, trusted brand builds loyalty and lets the business charge a premium price",
+     "hint": "Why do people pay more for some well-known names?"
+    },
+    {
+     "id": "ma29",
+     "level": 5,
+     "text": "Which of the 4 Ps covers how and where a product is distributed, for example online or through retailers? Give the P.",
+     "short": {
+      "accept": [
+       "place",
+       "distribution"
+      ],
+      "reject": [
+       "price",
+       "product",
+       "promotion"
+      ],
+      "feedback": {
+       "price": "Price is about how much is charged",
+       "product": "Product is about the item itself",
+       "promotion": "Promotion is about communicating with customers"
+      }
+     },
+     "solution": "Place covers distribution channels: where and how customers can buy the product",
+     "hint": "This P is about where customers can get the product"
+    },
+    {
+     "id": "ma30",
+     "level": 5,
+     "text": "A company is launching a new, innovative games console. Assess whether it should use price skimming or penetration pricing.",
+     "rubric": {
+      "model_answer": "Price skimming suits an innovative console: keen early buyers will pay a high price, so the company can recover high development costs quickly, and the high price can build a premium image. The price can be lowered later to reach more buyers. However, if rivals launch similar consoles, a high price may lose sales. Penetration pricing would win market share quickly and sell more games, but profit per console would be low and it may be hard to raise the price later. As the product is innovative, skimming is probably better.",
+      "mark_scheme": "1 mark: price skimming explained\n1 mark: a benefit of skimming in this case (e.g. recover development costs, early adopters)\n1 mark: a drawback of skimming (e.g. competition)\n1 mark: penetration pricing explained\n1 mark: a benefit or drawback of penetration (e.g. market share vs low profit per unit)\n1 mark: a justified conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Skimming suits an innovative product (early adopters, recover costs); penetration wins share but earns little per unit",
+     "hint": "Explain both strategies, apply them to a console, then choose"
+    }
+   ]
+  },
+  {
+   "id": "business.operations_people",
+   "title": "Operations & people",
+   "aliases": [
+    "production methods",
+    "operations",
+    "quality control",
+    "supply chain",
+    "lean production",
+    "customer service",
+    "recruitment",
+    "motivation",
+    "organisational structure",
+    "just in time",
+    "maslow",
+    "herzberg",
+    "training"
+   ],
+   "questions": [
+    {
+     "id": "op01",
+     "level": 1,
+     "text": "Which production method makes one-off products to a customer's exact order?",
+     "choice": {
+      "options": [
+       "Job production",
+       "Batch production",
+       "Flow production",
+       "Mass production"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Batch production makes groups of identical items",
+       "Flow production makes large numbers of identical items continuously",
+       null
+      ]
+     },
+     "solution": "Job production makes unique, made-to-order items, such as a wedding dress or a custom-built house",
+     "hint": "Each order is a separate 'job'"
+    },
+    {
+     "id": "op02",
+     "level": 1,
+     "text": "What production method makes a group of identical products together, such as a tray of 24 identical loaves, before switching to a different product? Give the term.",
+     "short": {
+      "accept": [
+       "batch production",
+       "batch"
+      ]
+     },
+     "solution": "Batch production makes a set number of identical items, then switches to a different batch",
+     "hint": "The products are made in groups"
+    },
+    {
+     "id": "op03",
+     "level": 1,
+     "text": "What stock control system has materials delivered only when they are needed, so very little stock is held? Give the term or abbreviation.",
+     "short": {
+      "accept": [
+       "just in time",
+       "just-in-time",
+       "JIT",
+       "just in time production"
+      ]
+     },
+     "solution": "Just-in-time (JIT) keeps stock to a minimum, with deliveries arriving exactly when needed",
+     "hint": "The materials arrive at the very last moment"
+    },
+    {
+     "id": "op04",
+     "level": 1,
+     "text": "What is a job description?",
+     "choice": {
+      "options": [
+       "A document listing the skills and qualities needed by the person",
+       "A document listing the tasks and responsibilities of a job",
+       "A letter offering someone a job",
+       "A record of an employee's pay"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is a person specification",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "A job description describes the job; a person specification describes the ideal person for it",
+     "hint": "It describes the job itself, not the person"
+    },
+    {
+     "id": "op05",
+     "level": 1,
+     "text": "What term describes training that introduces new employees to the business, its people and its rules? Give the term.",
+     "short": {
+      "accept": [
+       "induction",
+       "induction training",
+       "inductions"
+      ]
+     },
+     "solution": "Induction training helps new staff settle in and understand the business quickly",
+     "hint": "It happens on a new employee's first days"
+    },
+    {
+     "id": "op06",
+     "level": 1,
+     "text": "What does 'span of control' mean?",
+     "choice": {
+      "options": [
+       "The number of levels in a business's hierarchy",
+       "The total number of employees in a business",
+       "The number of employees who report directly to one manager",
+       "The number of products a business sells"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The number of levels is the chain of command or hierarchy",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Span of control is how many subordinates report directly to one manager",
+     "hint": "It is about how many people one manager is directly in charge of"
+    },
+    {
+     "id": "op07",
+     "level": 2,
+     "text": "Which describes quality assurance?",
+     "choice": {
+      "options": [
+       "Inspecting finished products at the end to find faults",
+       "Asking customers to return faulty goods",
+       "Using the cheapest materials possible",
+       "Checking quality at every stage of production so that faults are prevented"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That describes quality control",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Quality assurance builds quality into every stage and makes every worker responsible; quality control inspects at the end",
+     "hint": "Assurance is about preventing problems, not just finding them"
+    },
+    {
+     "id": "op08",
+     "level": 2,
+     "text": "In Maslow's hierarchy of needs, which need is at the top?",
+     "choice": {
+      "options": [
+       "Self-actualisation",
+       "Safety",
+       "Physiological needs",
+       "Love and belonging"
+      ],
+      "correct": 0
+     },
+     "solution": "From the bottom: physiological, safety, love/belonging (social), esteem, self-actualisation",
+     "hint": "The top level is about reaching your full potential"
+    },
+    {
+     "id": "op09",
+     "level": 2,
+     "text": "Which is a financial method of motivation?",
+     "choice": {
+      "options": [
+       "Job rotation",
+       "Commission",
+       "Praise",
+       "Job enrichment"
+      ],
+      "correct": 1
+     },
+     "solution": "Commission (a percentage of sales) is financial; praise, job rotation and job enrichment are non-financial",
+     "hint": "Look for the method that involves money"
+    },
+    {
+     "id": "op10",
+     "level": 2,
+     "text": "What is a flat organisational structure?",
+     "choice": {
+      "options": [
+       "One with many levels of hierarchy and narrow spans of control",
+       "One with no managers at all",
+       "One with few levels of hierarchy and wide spans of control",
+       "One where every decision is made by a single owner"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That describes a tall structure",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Flat structures have few layers and wide spans of control; tall structures have many layers and narrow spans",
+     "hint": "Picture the shape: flat means few levels"
+    },
+    {
+     "id": "op11",
+     "level": 2,
+     "text": "What term describes paying workers a fixed amount for each item they produce? Give the term.",
+     "short": {
+      "accept": [
+       "piece rate",
+       "piece-rate",
+       "piecework",
+       "piece work",
+       "piece rate pay"
+      ]
+     },
+     "solution": "Piece rate pays per item produced, encouraging speed but possibly lowering quality",
+     "hint": "Workers are paid for each 'piece' they make"
+    },
+    {
+     "id": "op12",
+     "level": 2,
+     "text": "What term describes the network of businesses involved in getting a product from raw materials to the customer? Give the term.",
+     "short": {
+      "accept": [
+       "supply chain",
+       "the supply chain",
+       "supply chains"
+      ]
+     },
+     "solution": "The supply chain links suppliers, manufacturers, distributors and retailers",
+     "hint": "It is a 'chain' of businesses that supply each other"
+    },
+    {
+     "id": "op13",
+     "level": 3,
+     "text": "A car factory uses an assembly line to make thousands of identical cars. Which production method is this?",
+     "choice": {
+      "options": [
+       "Job production",
+       "Batch production",
+       "Hand-made production",
+       "Flow production"
+      ],
+      "correct": 3
+     },
+     "solution": "Flow (mass) production makes large numbers of identical products continuously on a production line",
+     "hint": "The cars 'flow' along the line non-stop"
+    },
+    {
+     "id": "op14",
+     "level": 3,
+     "text": "A manager gives an employee more responsibility and more challenging tasks. Which method of motivation is this?",
+     "choice": {
+      "options": [
+       "Job enrichment",
+       "Job rotation",
+       "Piece rate",
+       "Commission"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Job rotation moves workers between different tasks at the same level",
+       null,
+       null
+      ]
+     },
+     "solution": "Job enrichment gives more challenging, responsible work, which can motivate employees",
+     "hint": "The job is made 'richer' with responsibility"
+    },
+    {
+     "id": "op15",
+     "level": 3,
+     "text": "A manager moves workers between different tasks every few weeks to reduce boredom. What is this called?",
+     "choice": {
+      "options": [
+       "Job enrichment",
+       "Job rotation",
+       "Delayering",
+       "Induction"
+      ],
+      "correct": 1
+     },
+     "solution": "Job rotation moves workers between tasks to add variety and develop skills",
+     "hint": "The workers 'rotate' between tasks"
+    },
+    {
+     "id": "op16",
+     "level": 3,
+     "text": "A business removes a whole layer of middle managers. What is this called?",
+     "choice": {
+      "options": [
+       "Recruitment",
+       "Job rotation",
+       "Delayering",
+       "Outsourcing"
+      ],
+      "correct": 2
+     },
+     "solution": "Delayering removes layers of hierarchy, flattening the structure and cutting costs",
+     "hint": "A 'layer' of the structure is taken away"
+    },
+    {
+     "id": "op17",
+     "level": 3,
+     "text": "A shop employee is paid 5% of the value of everything they sell. What is this type of payment called? Give the term.",
+     "short": {
+      "accept": [
+       "commission",
+       "sales commission"
+      ]
+     },
+     "solution": "Commission is a percentage of the value of sales, encouraging staff to sell more",
+     "hint": "It is a percentage of sales"
+    },
+    {
+     "id": "op18",
+     "level": 3,
+     "text": "Workers at a factory suggest small improvements every week, such as rearranging tools to save time. What is the Japanese term for this approach of continuous improvement? Give the term.",
+     "short": {
+      "accept": [
+       "kaizen"
+      ]
+     },
+     "solution": "Kaizen means continuous improvement through many small steps, often suggested by workers",
+     "hint": "It is a Japanese word that is part of lean production"
+    },
+    {
+     "id": "op19",
+     "level": 4,
+     "text": "A manager has 12 employees reporting directly to her, and the business has 3 levels of hierarchy. What is her span of control?",
+     "choice": {
+      "options": [
+       "3",
+       "36",
+       "4",
+       "12"
+      ],
+      "correct": 3,
+      "feedback": [
+       "3 is the number of levels in the hierarchy",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Span of control is the number of people reporting directly to her: 12. The 3 levels describe the chain of command",
+     "hint": "Span of control counts people, not levels"
+    },
+    {
+     "id": "op20",
+     "level": 4,
+     "text": "A business switches from holding large stocks to just-in-time. Which is a likely benefit?",
+     "choice": {
+      "options": [
+       "Less money is tied up in stock and less storage space is needed",
+       "It can never run out of materials",
+       "It can buy in bulk more easily",
+       "Suppliers become less important"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "With JIT, a late delivery could stop production",
+       "JIT means buying small amounts often, not in bulk",
+       null
+      ]
+     },
+     "solution": "JIT cuts stock-holding costs and storage space, freeing up cash",
+     "hint": "Think about the costs of holding lots of stock"
+    },
+    {
+     "id": "op21",
+     "level": 4,
+     "text": "Which is a disadvantage of external recruitment?",
+     "choice": {
+      "options": [
+       "It brings no new ideas into the business",
+       "It is usually more expensive and takes longer than recruiting internally",
+       "It always leaves another vacancy to fill inside the business",
+       "The candidates are already known to managers"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Leaving another vacancy to fill is a drawback of INTERNAL recruitment",
+       null
+      ]
+     },
+     "solution": "External recruitment costs more (adverts, interviews) and takes longer, though it brings in new ideas",
+     "hint": "Think about adverts and how well managers know the candidates"
+    },
+    {
+     "id": "op22",
+     "level": 4,
+     "text": "A business needs an extra worker for 10 weeks to cover its busy summer season. Which type of contract suits this?",
+     "choice": {
+      "options": [
+       "A permanent full-time contract",
+       "A partnership agreement",
+       "A temporary contract",
+       "A franchise agreement"
+      ],
+      "correct": 2
+     },
+     "solution": "A temporary (fixed-term) contract matches a short, seasonal need",
+     "hint": "How long is the worker needed for?"
+    },
+    {
+     "id": "op23",
+     "level": 4,
+     "text": "Which theorist believed workers are motivated mainly by money and should be paid by piece rate, as part of 'scientific management'? Give the surname.",
+     "short": {
+      "accept": [
+       "Taylor",
+       "F. W. Taylor",
+       "Frederick Taylor",
+       "Frederick Winslow Taylor",
+       "FW Taylor"
+      ],
+      "reject": [
+       "Maslow",
+       "Herzberg",
+       "Mayo"
+      ],
+      "feedback": {
+       "Maslow": "Maslow's hierarchy of needs says people are motivated by more than money",
+       "Herzberg": "Herzberg said pay is a hygiene factor rather than a motivator",
+       "Mayo": "Mayo stressed social needs at work, not money"
+      }
+     },
+     "solution": "F. W. Taylor's scientific management broke jobs into simple tasks and used piece rate to motivate workers with money",
+     "hint": "He was an American engineer working around 1900"
+    },
+    {
+     "id": "op24",
+     "level": 4,
+     "text": "Explain two benefits to a business of training its employees.",
+     "rubric": {
+      "model_answer": "First, trained employees have better skills, so they work faster and make fewer mistakes. This raises productivity and quality, which can lower costs and increase customer satisfaction. Second, training shows employees that the business values them, which can increase motivation and loyalty. This reduces labour turnover, so the business spends less on recruiting and training replacements.",
+      "mark_scheme": "1 mark: first benefit identified (e.g. better skills, productivity)\n1 mark: first benefit explained (e.g. lower costs, better quality)\n1 mark: second benefit identified (e.g. motivation, retention)\n1 mark: second benefit explained (e.g. lower labour turnover, lower recruitment costs)\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Better skills raise productivity and quality; feeling valued raises motivation and reduces labour turnover",
+     "hint": "Think about skills, and about how employees feel"
+    },
+    {
+     "id": "op25",
+     "level": 5,
+     "text": "Which statement about flow production is accurate?",
+     "choice": {
+      "options": [
+       "It is best for one-off, made-to-order products",
+       "It has high costs per unit because output is low",
+       "It never uses machinery",
+       "It has low costs per unit because output is high, but it is hard to change the product"
+      ],
+      "correct": 3
+     },
+     "solution": "Flow production gives economies of scale and low unit costs, but needs heavy investment and is inflexible",
+     "hint": "Think about large output and identical products"
+    },
+    {
+     "id": "op26",
+     "level": 5,
+     "text": "Herzberg divided factors at work into motivators and hygiene factors. Which of these is a hygiene factor?",
+     "choice": {
+      "options": [
+       "Pay and working conditions",
+       "Recognition for achievement",
+       "Responsibility",
+       "Opportunities for promotion"
+      ],
+      "correct": 0
+     },
+     "solution": "Hygiene factors (pay, conditions, policies) prevent dissatisfaction; motivators (recognition, responsibility, promotion) motivate",
+     "hint": "Hygiene factors stop people being unhappy but do not motivate them"
+    },
+    {
+     "id": "op27",
+     "level": 5,
+     "text": "Why might good customer service increase a business's profit?",
+     "choice": {
+      "options": [
+       "It always lowers the selling price",
+       "Satisfied customers return and recommend the business to others",
+       "It means the business needs no staff",
+       "It removes the need for any marketing"
+      ],
+      "correct": 1
+     },
+     "solution": "Good service builds loyalty, repeat custom and word-of-mouth recommendations, raising sales",
+     "hint": "Think about what happy customers do next"
+    },
+    {
+     "id": "op28",
+     "level": 5,
+     "text": "Which is a risk of relying on just-in-time stock control?",
+     "choice": {
+      "options": [
+       "Too much money is tied up in stock",
+       "Stock is more likely to go out of date",
+       "A late delivery from a supplier could stop production",
+       "It needs a very large warehouse"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Tying up money in stock is a problem of holding LARGE stocks",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "With almost no buffer stock, any supply problem can halt production",
+     "hint": "What happens if a delivery does not arrive on time?"
+    },
+    {
+     "id": "op29",
+     "level": 5,
+     "text": "Which recruitment document sets out the skills, qualifications and qualities needed by the ideal candidate for a job? Give the term.",
+     "short": {
+      "accept": [
+       "person specification",
+       "person spec",
+       "personal specification"
+      ],
+      "reject": [
+       "job description"
+      ],
+      "feedback": {
+       "job description": "A job description lists the tasks of the job — the document about the ideal candidate has a different name"
+      }
+     },
+     "solution": "A person specification describes the ideal candidate; a job description describes the job",
+     "hint": "It describes the person rather than the job"
+    },
+    {
+     "id": "op30",
+     "level": 5,
+     "text": "Assess whether a business should use financial or non-financial methods to motivate its staff.",
+     "rubric": {
+      "model_answer": "Financial methods such as bonuses, commission and piece rate give a clear reward that many workers value, and Taylor argued money is the main motivator. But their effect may not last, they raise costs, and piece rate can lower quality. Non-financial methods such as praise, job enrichment and empowerment meet higher needs in Maslow's hierarchy and are Herzberg's motivators, so they can motivate for longer and cost less. However, if pay is too low (a hygiene factor), staff will be dissatisfied. A mix of both usually works best.",
+      "mark_scheme": "1 mark: a financial method explained\n1 mark: a benefit of financial methods (e.g. clear reward, Taylor)\n1 mark: a drawback of financial methods (e.g. cost, short-lived, quality)\n1 mark: a non-financial method explained\n1 mark: link to theory (Maslow or Herzberg)\n1 mark: a justified conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Money is a clear reward but costly and short-lived; non-financial methods meet higher needs. Fair pay plus non-financial methods is best",
+     "hint": "Use Taylor, Maslow and Herzberg to compare the two, then decide"
+    }
+   ]
+  },
+  {
+   "id": "business.finance",
+   "title": "Finance",
+   "aliases": [
+    "sources of finance",
+    "finance",
+    "cash flow",
+    "break-even",
+    "income statement",
+    "profit margins",
+    "average rate of return",
+    "overdraft",
+    "retained profit"
+   ],
+   "questions": [
+    {
+     "id": "fn01",
+     "level": 1,
+     "text": "What is the name for the money coming into a business from selling its goods or services? Give the term.",
+     "short": {
+      "accept": [
+       "revenue",
+       "sales revenue",
+       "turnover",
+       "sales",
+       "total revenue",
+       "income"
+      ]
+     },
+     "solution": "Revenue (sales revenue or turnover) = selling price × quantity sold",
+     "hint": "It is calculated as price × quantity"
+    },
+    {
+     "id": "fn02",
+     "level": 1,
+     "text": "What is an overdraft?",
+     "choice": {
+      "options": [
+       "When a bank lets a business take out more money than is in its account, up to a limit",
+       "A long-term loan to buy a building",
+       "Money raised by selling shares",
+       "A grant from the government"
+      ],
+      "correct": 0
+     },
+     "solution": "An overdraft is a flexible, short-term source of finance, but interest rates on it are usually high",
+     "hint": "The account is 'overdrawn'"
+    },
+    {
+     "id": "fn03",
+     "level": 1,
+     "text": "What is the name for the level of output where total revenue equals total costs, so there is no profit and no loss? Give the term.",
+     "short": {
+      "accept": [
+       "break-even point",
+       "break-even",
+       "break even",
+       "break even point",
+       "breakeven",
+       "breakeven point",
+       "break-even output"
+      ]
+     },
+     "solution": "At the break-even point, total revenue = total costs",
+     "hint": "The business neither gains nor loses"
+    },
+    {
+     "id": "fn04",
+     "level": 1,
+     "text": "Which of these is an internal source of finance?",
+     "choice": {
+      "options": [
+       "Bank loan",
+       "Retained profit",
+       "Venture capital",
+       "Crowdfunding"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A bank loan comes from outside the business",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Internal finance comes from within the business (retained profit, selling assets); external comes from outside",
+     "hint": "Internal finance comes from the business's own resources"
+    },
+    {
+     "id": "fn05",
+     "level": 1,
+     "text": "What is a cash flow forecast?",
+     "choice": {
+      "options": [
+       "A record of last year's profits",
+       "A list of a business's assets",
+       "A prediction of the cash coming into and going out of a business over future months",
+       "A plan for recruiting staff"
+      ],
+      "correct": 2
+     },
+     "solution": "A cash flow forecast predicts inflows, outflows and closing balances, showing when extra finance may be needed",
+     "hint": "A forecast looks to the future"
+    },
+    {
+     "id": "fn06",
+     "level": 1,
+     "text": "What term describes costs that do not change when output changes, such as rent? Give the term.",
+     "short": {
+      "accept": [
+       "fixed costs",
+       "fixed cost",
+       "fixed",
+       "overheads",
+       "indirect costs"
+      ],
+      "reject": [
+       "variable costs",
+       "variable cost",
+       "variable"
+      ],
+      "feedback": {
+       "variable costs": "Variable costs CHANGE with output, such as raw materials",
+       "variable cost": "Variable costs CHANGE with output, such as raw materials",
+       "variable": "Variable costs CHANGE with output, such as raw materials"
+      }
+     },
+     "solution": "Fixed costs stay the same whatever the output; variable costs change with output",
+     "hint": "These costs stay the same whatever the business produces"
+    },
+    {
+     "id": "fn07",
+     "level": 2,
+     "text": "Which is a short-term source of finance?",
+     "choice": {
+      "options": [
+       "Share capital",
+       "A 10-year bank loan",
+       "A mortgage",
+       "Trade credit"
+      ],
+      "correct": 3
+     },
+     "solution": "Trade credit (paying suppliers later) and overdrafts are short-term; loans, mortgages and share capital are long-term",
+     "hint": "Short-term finance usually needs to be repaid within a year"
+    },
+    {
+     "id": "fn08",
+     "level": 2,
+     "text": "Which statement about cash and profit is accurate?",
+     "choice": {
+      "options": [
+       "A business can make a profit but still run out of cash",
+       "Profit and cash are always the same amount",
+       "A business with cash in the bank always makes a profit",
+       "Cash flow has nothing to do with sales"
+      ],
+      "correct": 0
+     },
+     "solution": "Profit is revenue minus costs over a period; cash is money available now. Late payments from customers can cause cash shortages even when profitable",
+     "hint": "Think about customers who buy now but pay later"
+    },
+    {
+     "id": "fn09",
+     "level": 2,
+     "text": "What is contribution per unit?",
+     "choice": {
+      "options": [
+       "Selling price minus fixed costs",
+       "Selling price minus variable cost per unit",
+       "Total revenue minus total costs",
+       "Fixed costs divided by output"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Total revenue minus total costs is profit",
+       null
+      ]
+     },
+     "solution": "Contribution per unit = selling price − variable cost per unit; it 'contributes' to fixed costs and then profit",
+     "hint": "It is what each sale contributes towards paying the fixed costs"
+    },
+    {
+     "id": "fn10",
+     "level": 2,
+     "text": "On an income statement, what is the name for revenue minus cost of sales?",
+     "choice": {
+      "options": [
+       "Net profit",
+       "Closing balance",
+       "Gross profit",
+       "Net cash flow"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Net profit also takes off the other expenses",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Gross profit = revenue − cost of sales; net profit also takes off other operating expenses and interest",
+     "hint": "This is the first profit figure on the income statement"
+    },
+    {
+     "id": "fn11",
+     "level": 2,
+     "text": "What term describes a supplier letting a business pay for goods some time after receiving them, for example 30 days later? Give the term.",
+     "short": {
+      "accept": [
+       "trade credit",
+       "credit",
+       "supplier credit"
+      ]
+     },
+     "solution": "Trade credit is a short-term source of finance: the business can sell goods before it pays for them",
+     "hint": "The supplier lets the business 'buy now, pay later'"
+    },
+    {
+     "id": "fn12",
+     "level": 2,
+     "text": "What source of finance comes from investors who buy a share of a new, risky business in return for part-ownership and often advice? Give the term.",
+     "short": {
+      "accept": [
+       "venture capital",
+       "venture capitalists",
+       "venture capitalist",
+       "business angel",
+       "business angels",
+       "angel investors",
+       "angel investor",
+       "share capital"
+      ]
+     },
+     "solution": "Venture capitalists and business angels invest in risky new businesses in return for a share of ownership",
+     "hint": "The investors are taking part in a risky 'venture'"
+    },
+    {
+     "id": "fn13",
+     "level": 3,
+     "text": "A business has an opening balance of £2,000, cash inflows of £5,000 and cash outflows of £6,500 in a month. What is its closing balance?",
+     "choice": {
+      "options": [
+       "£3,500",
+       "-£1,500",
+       "£13,500",
+       "£500"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Outflows are bigger than inflows, so the balance goes down, not up",
+       "−£1,500 is the net cash flow — add it to the opening balance",
+       null,
+       null
+      ]
+     },
+     "solution": "Net cash flow = £5,000 − £6,500 = −£1,500. Closing balance = £2,000 − £1,500 = £500",
+     "hint": "Work out the net cash flow, then add it to the opening balance"
+    },
+    {
+     "id": "fn14",
+     "level": 3,
+     "text": "A business wants to buy a delivery van that will last 8 years. Which source of finance suits this?",
+     "choice": {
+      "options": [
+       "A bank loan",
+       "An overdraft",
+       "Trade credit",
+       "Selling its stock at a discount"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "An overdraft is short-term and usually has a high interest rate",
+       null,
+       null
+      ]
+     },
+     "solution": "A long-lasting asset should be paid for with long-term finance such as a bank loan",
+     "hint": "Match the length of the finance to how long the van will last"
+    },
+    {
+     "id": "fn15",
+     "level": 3,
+     "text": "A product sells for £12 and has a variable cost of £4 per unit. What is the contribution per unit?",
+     "choice": {
+      "options": [
+       "£16",
+       "£8",
+       "£3",
+       "£48"
+      ],
+      "correct": 1
+     },
+     "solution": "Contribution per unit = £12 − £4 = £8",
+     "hint": "Subtract the variable cost from the selling price"
+    },
+    {
+     "id": "fn16",
+     "level": 3,
+     "text": "A business's fixed costs fall while its selling price and variable cost per unit stay the same. What happens to its break-even output?",
+     "choice": {
+      "options": [
+       "It rises",
+       "It stays the same",
+       "It falls",
+       "It doubles"
+      ],
+      "correct": 2
+     },
+     "solution": "Break-even = fixed costs ÷ contribution per unit; with lower fixed costs, fewer units are needed to break even",
+     "hint": "Use the break-even formula: what happens when the top number falls?"
+    },
+    {
+     "id": "fn17",
+     "level": 3,
+     "text": "A business has fixed costs of £600. Each product sells for £10 and costs £4 to make. Calculate the break-even output in units. Give the number.",
+     "short": {
+      "accept": [
+       "100"
+      ]
+     },
+     "solution": "Contribution per unit = £10 − £4 = £6. Break-even = £600 ÷ £6 = 100 units",
+     "hint": "Work out the contribution per unit first"
+    },
+    {
+     "id": "fn18",
+     "level": 3,
+     "text": "A company raises money by selling new shares to investors. What is the name for this source of finance? Give the term.",
+     "short": {
+      "accept": [
+       "share capital",
+       "share issue",
+       "selling shares",
+       "issuing shares",
+       "equity",
+       "equity finance",
+       "shares"
+      ]
+     },
+     "solution": "Share capital is long-term finance that does not have to be repaid, but the owners give up some control",
+     "hint": "The money comes from people buying part of the company"
+    },
+    {
+     "id": "fn19",
+     "level": 4,
+     "text": "A business has revenue of £80,000, cost of sales of £30,000 and other operating expenses of £35,000. What are its gross profit and net profit?",
+     "choice": {
+      "options": [
+       "Gross profit £15,000; net profit £50,000",
+       "Gross profit £45,000; net profit £15,000",
+       "Gross profit £50,000; net profit £45,000",
+       "Gross profit £50,000; net profit £15,000"
+      ],
+      "correct": 3
+     },
+     "solution": "Gross profit = £80,000 − £30,000 = £50,000. Net profit = £50,000 − £35,000 = £15,000",
+     "hint": "Work out gross profit first, then take off the other expenses"
+    },
+    {
+     "id": "fn20",
+     "level": 4,
+     "text": "A cash flow forecast shows a closing balance of −£3,000 in March. What could the business do?",
+     "choice": {
+      "options": [
+       "Arrange an overdraft to cover the shortfall",
+       "Pay its suppliers earlier",
+       "Give customers longer to pay",
+       "Buy extra stock in March"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Paying suppliers earlier makes the cash shortage worse",
+       "Giving customers longer to pay delays cash coming in",
+       null
+      ]
+     },
+     "solution": "An overdraft covers a short-term cash shortage; the other actions would make March's cash position worse",
+     "hint": "Look for an action that brings cash in or delays cash going out"
+    },
+    {
+     "id": "fn21",
+     "level": 4,
+     "text": "A business has revenue of £200,000 and gross profit of £80,000. What is its gross profit margin?",
+     "choice": {
+      "options": [
+       "60%",
+       "40%",
+       "250%",
+       "£120,000"
+      ],
+      "correct": 1,
+      "feedback": [
+       "60% is the cost of sales as a share of revenue",
+       null,
+       "Divide gross profit by revenue, not the other way round",
+       null
+      ]
+     },
+     "solution": "Gross profit margin = £80,000 ÷ £200,000 × 100 = 40%",
+     "hint": "Divide gross profit by revenue, then multiply by 100"
+    },
+    {
+     "id": "fn22",
+     "level": 4,
+     "text": "A business currently sells 1,500 units a month. Its break-even output is 1,200 units. What is its margin of safety?",
+     "choice": {
+      "options": [
+       "2,700 units",
+       "1,200 units",
+       "300 units",
+       "1,500 units"
+      ],
+      "correct": 2
+     },
+     "solution": "Margin of safety = actual sales − break-even output = 1,500 − 1,200 = 300 units",
+     "hint": "How far could sales fall before the business makes a loss?"
+    },
+    {
+     "id": "fn23",
+     "level": 4,
+     "text": "A business sells 50 units at £20 each. Its total costs are £700. Calculate its profit in pounds. Give the number.",
+     "short": {
+      "accept": [
+       "300"
+      ]
+     },
+     "solution": "Revenue = 50 × £20 = £1,000. Profit = £1,000 − £700 = £300",
+     "hint": "Work out revenue first, then subtract total costs"
+    },
+    {
+     "id": "fn24",
+     "level": 4,
+     "text": "Explain two ways a business could improve its cash flow.",
+     "rubric": {
+      "model_answer": "First, it could ask customers to pay sooner, for example by giving less trade credit or offering a discount for early payment. Cash then comes in earlier, so the business can pay its bills. Second, it could ask suppliers for longer trade credit, delaying cash outflows. Other ways include arranging an overdraft, selling unused assets, cutting or delaying spending, and holding less stock so that less cash is tied up.",
+      "mark_scheme": "1 mark: first way identified (e.g. get customers to pay sooner)\n1 mark: first way explained (cash comes in earlier)\n1 mark: second way identified (e.g. longer credit from suppliers, overdraft, sell assets)\n1 mark: second way explained\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "E.g. get customers to pay sooner (inflows earlier) and get longer credit from suppliers (outflows later); also overdrafts, selling assets",
+     "hint": "Think about speeding up inflows and slowing down outflows"
+    },
+    {
+     "id": "fn25",
+     "level": 5,
+     "text": "Which statement about break-even analysis is accurate?",
+     "choice": {
+      "options": [
+       "It shows exactly how many units customers will buy",
+       "It shows the business's cash balance each month",
+       "It ignores fixed costs",
+       "It assumes all output is sold at the same price, which may not happen in reality"
+      ],
+      "correct": 3
+     },
+     "solution": "Break-even analysis is simple and useful, but it assumes constant prices and costs and that all output is sold",
+     "hint": "Think about the assumptions behind a break-even chart"
+    },
+    {
+     "id": "fn26",
+     "level": 5,
+     "text": "A business's net profit margin falls while its gross profit margin stays the same. What is the likely cause?",
+     "choice": {
+      "options": [
+       "Its other operating expenses have risen compared with its revenue",
+       "Its cost of sales has risen compared with its revenue",
+       "Its selling price has risen",
+       "Its revenue has risen with no change in any costs"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A rise in cost of sales would reduce the GROSS profit margin too",
+       null,
+       null
+      ]
+     },
+     "solution": "If gross profit margin is unchanged, cost of sales is not the cause; higher overheads (other expenses) reduce net profit margin",
+     "hint": "What sits between gross profit and net profit?"
+    },
+    {
+     "id": "fn27",
+     "level": 5,
+     "text": "Which is a drawback of crowdfunding for a new business?",
+     "choice": {
+      "options": [
+       "It always needs a bank's approval",
+       "If the target is not reached the business may receive no money, and its idea becomes public",
+       "It gives the owner unlimited liability",
+       "Only public limited companies can use it"
+      ],
+      "correct": 1
+     },
+     "solution": "Many crowdfunding schemes are 'all or nothing', and publishing the idea lets competitors copy it",
+     "hint": "Think about what happens if not enough people invest"
+    },
+    {
+     "id": "fn28",
+     "level": 5,
+     "text": "A business is choosing between two investments. Investment X has an ARR of 12% and investment Y has an ARR of 8%. Based on ARR alone, which should it choose, and why?",
+     "choice": {
+      "options": [
+       "Investment Y, because a lower ARR means lower risk",
+       "Investment Y, because ARR should be as low as possible",
+       "Investment X, because it gives a higher average yearly return on the money invested",
+       "Neither, because ARR values cannot be compared"
+      ],
+      "correct": 2
+     },
+     "solution": "A higher ARR means a higher average annual profit compared with the cost, so X is better on this measure",
+     "hint": "ARR measures the yearly return as a percentage of the cost"
+    },
+    {
+     "id": "fn29",
+     "level": 5,
+     "text": "Which financial statement shows a business's assets, liabilities and capital at a particular date? Give the term.",
+     "short": {
+      "accept": [
+       "statement of financial position",
+       "balance sheet",
+       "the balance sheet"
+      ],
+      "reject": [
+       "income statement",
+       "cash flow forecast",
+       "profit and loss account"
+      ],
+      "feedback": {
+       "income statement": "The income statement shows revenue, costs and profit over a period",
+       "cash flow forecast": "A cash flow forecast predicts future cash inflows and outflows",
+       "profit and loss account": "The profit and loss account (income statement) shows profit over a period"
+      }
+     },
+     "solution": "The statement of financial position (balance sheet) shows what a business owns and owes on a given date",
+     "hint": "It shows whether what the business owns 'balances' with what it owes plus capital"
+    },
+    {
+     "id": "fn30",
+     "level": 5,
+     "text": "Assess whether a new business should use a bank loan or crowdfunding to raise finance.",
+     "rubric": {
+      "model_answer": "A bank loan gives a fixed sum quickly, and the owner keeps full control and all future profit. However, interest must be paid, repayments start straight away, which can strain cash flow, and a new business with no track record may need security or be refused. Crowdfunding can raise money from many small investors, test demand and create publicity. But it may fail to reach its target, investors may want rewards or shares, and the idea becomes public. The best choice depends on the amount needed and how much control the owner wants to keep.",
+      "mark_scheme": "1 mark: bank loan advantage (e.g. keep control)\n1 mark: bank loan disadvantage (interest, repayments, security)\n1 mark: crowdfunding advantage (e.g. tests demand, publicity)\n1 mark: crowdfunding disadvantage (may fail, idea copied, give up shares)\n1 mark: applied to a new business (no track record, cash flow)\n1 mark: a justified conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Loan: keep control but pay interest and may be refused. Crowdfunding: tests demand but may fail and reveals the idea. Depends on needs",
+     "hint": "Give one advantage and one disadvantage of each, then decide"
+    }
+   ]
+  }
+ ]
+}

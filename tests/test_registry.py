@@ -494,18 +494,18 @@ class TestRegisterErrors(unittest.TestCase):
         for lm in ((1, 2, 3, 4), (1, 2, 3, 4, 5, 5), (0, 1, 2, 3, 4), (1, 2, 3, 4, 6), (), (1, 2, 3, 4, -1)):
             with self.subTest(level_map=lm):
                 with self.assertRaises(RegistryError):
-                    one_subject(((topic("t1", "A", ["s.a"], level_map=lm),),))
+                    one_subject(((topic("t1", "Alpha", ["s.a"], level_map=lm),),))
 
     def test_good_level_map_boundaries(self):
-        one_subject(((topic("t1", "A", ["s.a"], level_map=(1, 1, 1, 1, 1)),),))
-        one_subject(((topic("t1", "A", ["s.a"], level_map=(5, 5, 5, 5, 5)),),))
+        one_subject(((topic("t1", "Alpha", ["s.a"], level_map=(1, 1, 1, 1, 1)),),))
+        one_subject(((topic("t1", "Alpha", ["s.a"], level_map=(5, 5, 5, 5, 5)),),))
 
     def test_row_size(self):
         with self.assertRaises(RegistryError):
             one_subject(((),))
         with self.assertRaises(RegistryError):
-            one_subject(((topic("t1", "A", ["s.a"]), topic("t2", "B", ["s.a"]), topic("t3", "C", ["s.a"])),))
-        one_subject(((topic("t1", "A", ["s.a"]), topic("t2", "B", ["s.a"])),))   # 2 is fine
+            one_subject(((topic("t1", "Alpha", ["s.a"]), topic("t2", "Beta", ["s.a"]), topic("t3", "Gamma", ["s.a"])),))
+        one_subject(((topic("t1", "Alpha", ["s.a"]), topic("t2", "Beta", ["s.a"])),))   # 2 is fine
 
     def test_subjects_sorted_by_order(self):
         reg = Registry()

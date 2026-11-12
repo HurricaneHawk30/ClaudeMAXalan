@@ -671,11 +671,17 @@
      "level": 5,
      "text": "Which modern material is a single layer of carbon atoms, extremely strong and an excellent conductor? Give the name.",
      "solution": "Graphene is a single layer of carbon atoms in a hexagonal lattice",
-     "hint": "Its name is related to graphite, the 'lead' in pencils",
+     "hint": "Its name is related to the 'lead' in pencils, which is made of many such layers",
      "short": {
       "accept": [
        "graphene"
-      ]
+      ],
+      "reject": [
+       "graphite"
+      ],
+      "feedback": {
+       "graphite": "Graphite is made of many layers; a single layer has a different name"
+      }
      }
     },
     {
@@ -1495,17 +1501,18 @@
      "id": "k04",
      "level": 1,
      "text": "Name the hand saw with a thin blade in a C-shaped frame, designed for cutting curves in wood and plastic.",
-     "solution": "A coping saw has a thin blade in a frame, so it can cut curves",
+     "solution": "A coping saw (or a fret saw, which has a deeper frame) has a thin blade in a frame, so it can cut curves",
      "hint": "Its name begins with 'cop'",
      "short": {
       "accept": [
        "coping saw",
-       "coping"
+       "coping",
+       "fret saw",
+       "fretsaw"
       ],
       "reject": [
        "tenon saw",
-       "hacksaw",
-       "fret saw"
+       "hacksaw"
       ],
       "feedback": {
        "tenon saw": "A tenon saw cuts straight lines in wood",

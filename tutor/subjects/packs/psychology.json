@@ -13,7 +13,11 @@
     "reconstructive memory",
     "serial position effect",
     "visual illusions",
-    "perceptual set"
+    "perceptual set",
+    "bartlett",
+    "depth cues",
+    "gregory",
+    "gibson"
    ],
    "questions": [
     {
@@ -652,7 +656,11 @@
     "neuropsychology",
     "neurons",
     "synapse",
-    "lobes of the brain"
+    "lobes of the brain",
+    "nervous system",
+    "dweck",
+    "neuron",
+    "brain"
    ],
    "questions": [
     {
@@ -690,14 +698,14 @@
     {
      "id": "db03",
      "level": 1,
-     "text": "Which part of the brain develops first in the foetus and controls basic functions such as breathing and heart rate? Give the term.",
+     "text": "Which part of the brain is one of the first to develop in the foetus and controls basic automatic functions such as breathing and heart rate? Give the term.",
      "short": {
       "accept": [
        "brainstem",
        "brain stem"
       ]
      },
-     "solution": "The brainstem develops first and controls automatic functions such as breathing, heart rate and swallowing",
+     "solution": "The brainstem develops early in the foetus and controls automatic functions such as breathing, heart rate and swallowing",
      "hint": "It sits at the base of the brain, connecting it to the spinal cord"
     },
     {
@@ -1255,7 +1263,11 @@
     "bystander effect",
     "crowd behaviour",
     "deindividuation",
-    "prosocial behaviour"
+    "prosocial behaviour",
+    "milgram",
+    "asch",
+    "piliavin",
+    "bickman"
    ],
    "questions": [
     {
@@ -1430,7 +1442,7 @@
       ]
      },
      "solution": "Dispositional factors are about the person (personality); situational factors are about the setting, such as uniform, location and proximity",
-     "hint": "'Dispositional' means to do with the individual's personality"
+     "hint": "Dispositional factors are inside the person rather than in the setting"
     },
     {
      "id": "si10",

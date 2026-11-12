@@ -432,7 +432,7 @@
     {
      "id": "a21",
      "level": 3,
-     "text": "A long-distance runner's legs feel heavy near the end of a race, and they have to slow down. Which substance has built up in their muscles?",
+     "text": "An 800 m runner sprints flat out for the last 200 m. Their legs start to feel heavy and they slow down. Which substance has built up in their muscles?",
      "solution": "Working anaerobically at high intensity produces lactic acid, which causes muscle fatigue",
      "hint": "This substance is produced when muscles work without enough oxygen",
      "choice": {
@@ -2635,7 +2635,8 @@
        "deviancy"
       ],
       "reject": [
-       "gamesmanship"
+       "gamesmanship",
+       "defiance"
       ],
       "feedback": {
        "gamesmanship": "Gamesmanship bends the rules; doping and violence break them"

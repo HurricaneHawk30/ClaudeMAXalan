@@ -104,7 +104,7 @@
         "hint": "Each student is equally likely to be picked"},
        {"id": "dc17", "level": 3,
         "text": "A researcher picks a random starting point from 1 to 20 on a list of names, then chooses every 20th name after it. Name this sampling method.",
-        "short": {"accept": ["systematic", "systematic sampling", "systematic sample"],
+        "short": {"accept": ["systematic", "systematic sampling", "systematic sample", "systematic random sampling"],
                   "reject": ["stratified", "stratified sampling", "simple random", "simple random sampling", "random sampling"]},
         "solution": "Choosing every kth item from a list after a random start is systematic sampling",
         "hint": "The names are picked at regular intervals"},
@@ -165,7 +165,7 @@
         "hint": "Look for a value that does not fit with the units of the others"},
 
        {"id": "dc28", "level": 5,
-        "text": "A teacher wants to find the mean time that students at her school spend on homework. She asks 10 students in her own class. Which change would make the results more reliable?",
+        "text": "A teacher wants to find the mean time that students at her school spend on homework. She asks 10 students in her own class. Which change would make her estimate more likely to represent the whole school?",
         "choice": {"options": ["Use a larger sample chosen at random from the whole school", "Ask only the students who finish their homework fastest", "Ask the same 10 students again", "Use a smaller sample"], "correct": 0},
         "solution": "A larger random sample from the whole school is more likely to represent all the students",
         "hint": "Think about sample size and whether the sample represents the whole school"},
@@ -383,7 +383,7 @@
         "hint": "The sign gives the type, and how close it is to 1 or -1 gives the strength"},
        {"id": "dg33", "level": 5,
         "text": "Two schools' test marks are shown on box plots. School P: median 58, range 40, interquartile range 12. School Q: median 58, range 35, interquartile range 24. Which statement is accurate?",
-        "choice": {"options": ["The middle half of School P's marks is more consistent than School Q's", "School Q's marks are more consistent because its range is smaller", "School P has a higher median than School Q", "The two schools have identical distributions"], "correct": 0},
+        "choice": {"options": ["The middle half of School P's marks is more consistent than School Q's", "The middle half of School Q's marks is more consistent than School P's", "School P has a higher median than School Q", "The two schools have identical distributions"], "correct": 0},
         "solution": "The medians are equal; P's interquartile range (12) is smaller than Q's (24), so P's middle 50% of marks is more consistent",
         "hint": "The interquartile range is not affected by extreme values, so compare the interquartile ranges"}
      ]}

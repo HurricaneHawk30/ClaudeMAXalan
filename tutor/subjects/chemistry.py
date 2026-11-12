@@ -7,9 +7,11 @@ instruction and unit is in the question text.
 """
 from __future__ import annotations
 
+import hashlib
 import random
 import re
 from collections import Counter
+from dataclasses import replace
 from fractions import Fraction
 
 from ..content import Answer, Mistake, Problem, Skill, Subject, Topic, YearSpec, build_choice, load_pack
@@ -1070,8 +1072,11 @@ def _rf_5(rng):
     feedback = [None if i == k else f"That dye's Rf is {fmt_dp(Fraction(v, 100), 2)}, but the unknown's Rf is {fmt_dp(s, 1)} ÷ {fmt_dp(d, 1)} = {rf}"
                 for i, v in enumerate(refs)]
     text, answer, mistakes = build_choice(stem, names, k, rng.randrange(2 ** 31), feedback)
-    return _q(text, answer, f"Rf = {fmt_dp(s, 1)} ÷ {fmt_dp(d, 1)} = {rf}, which matches the {names[k].lower()}",
-              "Calculate the Rf value of the unknown spot first, then compare it with the table", mistakes)
+    d = _q(text, answer, f"Rf = {fmt_dp(s, 1)} ÷ {fmt_dp(d, 1)} = {rf}, which matches the {names[k].lower()}",
+           "Calculate the Rf value of the unknown spot first, then compare it with the table", mistakes)
+    # one ref per underlying question, whatever order the options are shown in
+    d["ref"] = f"{SUBJECT_ID}.rf_values#L5-" + hashlib.sha1(stem.encode("utf-8")).hexdigest()[:12]
+    return d
 
 
 # =========================================================== bond energies
@@ -1270,8 +1275,10 @@ def _skill(name: str, title: str, aliases: tuple[str, ...], levels: tuple, fallb
     def generate(level: int, seed: int) -> Problem:
         check_level(level)
         rng = random.Random(seed)
-        d = levels[level - 1](rng)
-        return build(sid, level, seed, fallback_hint=fallback, **d)
+        d = dict(levels[level - 1](rng))
+        ref = d.pop("ref", "")
+        p = build(sid, level, seed, fallback_hint=fallback, **d)
+        return replace(p, ref=ref) if ref else p
 
     generate.__name__ = f"generate_{name}"
     generate.__qualname__ = generate.__name__

@@ -123,19 +123,23 @@ def _orb_1(rng):
                    std_mistake(a * F("1.5") * 10 ** 6, "km", "Check the power of ten: 1 AU = 1.50 × 10^8 km", round_to_sf=3)])
 
     def make(r):
-        mant = F(r.randrange(11, 99)) / 10
-        e = r.choice((8, 9))
+        e = r.choice((11, 12, 13))
+        mant = F(r.randrange(11, 31 if e == 13 else 99)) / 10      # at most 3.0 × 10^13 km (2 × 10^5 AU)
         km = mant * Fraction(10) ** e
         au = km / AU_KM
         return None if not _rounding_ok(au, sf=3) else (mant, e, km, au)
     mant, e, km, au = retry(make, rng)
-    body = rng.choice(("A comet", "An asteroid", "A space probe"))
+    if e == 11:
+        body = rng.choice(("A long-period comet at its furthest point", "An icy object in the outer Solar System"))
+    else:
+        body = rng.choice(("A comet in the Oort cloud", "An icy body in the Oort cloud"))
+    ans = std_answer(au, "AU", round_to_sf=3)
     return _q(f"{body} is {n(mant)} × 10^{e} km from the Sun. Express this distance in astronomical units (AU). "
-              f"{AU_TXT} {SF_TXT}",
-              _sf3(au, "AU"), f"distance = ({n(mant)} × 10^{e}) ÷ (1.50 × 10^8) = {fmt_sf(au, 3)} AU",
+              f"{AU_TXT} Give your answer in standard form to 3 significant figures.",
+              ans, f"distance = ({n(mant)} × 10^{e}) ÷ (1.50 × 10^8) = {ans.display}",
               "Divide the distance in km by the number of km in 1 AU",
-              [_m(km * AU_KM, "AU", "Divide by 1.50 × 10^8 to change km into AU — don't multiply"),
-               _m(km / (F("1.5") * 10 ** 6), "AU", "Check the power of ten: 1 AU = 1.50 × 10^8 km")])
+              [std_mistake(km * AU_KM, "AU", "Divide by 1.50 × 10^8 to change km into AU — don't multiply", round_to_sf=3),
+               std_mistake(km / (F("1.5") * 10 ** 6), "AU", "Check the power of ten: 1 AU = 1.50 × 10^8 km", round_to_sf=3)])
 
 
 KEPLER_TXT = "Use Kepler's third law, T² = a³ (T = orbital period in years, a = mean distance from the Sun in AU)."

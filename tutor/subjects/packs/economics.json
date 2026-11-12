@@ -1,0 +1,2269 @@
+{
+ "subject_id": "economics",
+ "skills": [
+  {
+   "id": "economics.markets",
+   "title": "Markets & prices",
+   "aliases": [
+    "supply and demand",
+    "markets",
+    "equilibrium price",
+    "market failure",
+    "externalities",
+    "opportunity cost",
+    "scarcity",
+    "competition",
+    "demand",
+    "supply",
+    "public goods",
+    "merit goods"
+   ],
+   "questions": [
+    {
+     "id": "mk01",
+     "level": 1,
+     "text": "What term describes the basic economic problem that resources are limited but people's wants are unlimited? Give the term.",
+     "short": {
+      "accept": [
+       "scarcity"
+      ]
+     },
+     "solution": "Scarcity means there are not enough resources to satisfy all wants, so choices must be made",
+     "hint": "There is not enough of everything to go round"
+    },
+    {
+     "id": "mk02",
+     "level": 1,
+     "text": "What term describes the next best alternative given up when a choice is made? Give the term.",
+     "short": {
+      "accept": [
+       "opportunity cost",
+       "the opportunity cost"
+      ]
+     },
+     "solution": "Opportunity cost is the value of the next best alternative forgone",
+     "hint": "It is the 'cost' of the chance you missed"
+    },
+    {
+     "id": "mk03",
+     "level": 1,
+     "text": "Which of these is a factor of production?",
+     "choice": {
+      "options": [
+       "Labour",
+       "Profit",
+       "Demand",
+       "Inflation"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Profit is the reward for enterprise, not a factor itself",
+       null,
+       null
+      ]
+     },
+     "solution": "The four factors of production are land, labour, capital and enterprise",
+     "hint": "Factors of production are the resources used to make goods and services"
+    },
+    {
+     "id": "mk04",
+     "level": 1,
+     "text": "What does the law of demand state?",
+     "choice": {
+      "options": [
+       "As price rises, quantity demanded rises",
+       "As price rises, quantity demanded falls (other things being equal)",
+       "As price falls, quantity supplied rises",
+       "Price has no effect on quantity demanded"
+      ],
+      "correct": 1
+     },
+     "solution": "The demand curve slopes downwards: a higher price means a lower quantity demanded, other things being equal",
+     "hint": "Think about the shape of a demand curve"
+    },
+    {
+     "id": "mk05",
+     "level": 1,
+     "text": "What is the name for the price at which quantity demanded equals quantity supplied? Give the term.",
+     "short": {
+      "accept": [
+       "equilibrium price",
+       "equilibrium",
+       "market price",
+       "market-clearing price",
+       "market clearing price"
+      ]
+     },
+     "solution": "At the equilibrium (market-clearing) price there is no excess demand or excess supply",
+     "hint": "The market is 'balanced' at this price"
+    },
+    {
+     "id": "mk06",
+     "level": 1,
+     "text": "Which factor of production is rewarded with profit?",
+     "choice": {
+      "options": [
+       "Land",
+       "Labour",
+       "Enterprise",
+       "Capital"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Land earns rent",
+       "Labour earns wages",
+       null,
+       "Capital earns interest"
+      ]
+     },
+     "solution": "Land earns rent, labour earns wages, capital earns interest and enterprise earns profit",
+     "hint": "Which factor takes the risk of starting a business?"
+    },
+    {
+     "id": "mk07",
+     "level": 2,
+     "text": "What causes a movement along a demand curve, rather than a shift of the curve?",
+     "choice": {
+      "options": [
+       "A change in consumers' incomes",
+       "A change in tastes and fashions",
+       "A change in the price of a substitute",
+       "A change in the good's own price"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A change in income shifts the demand curve",
+       "A change in tastes shifts the demand curve",
+       "A change in a substitute's price shifts the demand curve",
+       null
+      ]
+     },
+     "solution": "A change in the good's own price moves along the curve; changes in other factors (income, tastes, related goods) shift it",
+     "hint": "Which variable is on the axis of the demand diagram?"
+    },
+    {
+     "id": "mk08",
+     "level": 2,
+     "text": "Which pair of goods are complements?",
+     "choice": {
+      "options": [
+       "Printers and ink cartridges",
+       "Tea and coffee",
+       "Butter and margarine",
+       "Buses and trains"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Tea and coffee are substitutes",
+       "Butter and margarine are substitutes",
+       "Buses and trains are substitutes"
+      ]
+     },
+     "solution": "Complements are used together, so demand for one rises when the other gets cheaper; the others are substitutes",
+     "hint": "Complements are bought and used together"
+    },
+    {
+     "id": "mk09",
+     "level": 2,
+     "text": "Which is a feature of a public good?",
+     "choice": {
+      "options": [
+       "It is always sold at a high price",
+       "It is non-excludable: people cannot easily be stopped from using it",
+       "It is only provided by private firms",
+       "One person using it stops others from using it"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Public goods are non-rival: one person's use does not reduce what is left for others"
+      ]
+     },
+     "solution": "Public goods are non-excludable and non-rival (e.g. street lighting), which leads to the free-rider problem",
+     "hint": "Think about street lighting: can anyone be stopped from using it?"
+    },
+    {
+     "id": "mk10",
+     "level": 2,
+     "text": "Which is an example of a negative externality?",
+     "choice": {
+      "options": [
+       "A firm earning a high profit",
+       "A consumer paying a high price for a good",
+       "Noise from a factory that disturbs nearby residents",
+       "A worker being paid a wage"
+      ],
+      "correct": 2
+     },
+     "solution": "A negative externality is a cost to a third party, such as noise or pollution affecting people not involved in the trade",
+     "hint": "Look for a cost that falls on people outside the transaction"
+    },
+    {
+     "id": "mk11",
+     "level": 2,
+     "text": "What term describes a good whose demand rises when consumers' incomes rise? Give the term.",
+     "short": {
+      "accept": [
+       "normal good",
+       "normal goods",
+       "normal"
+      ],
+      "reject": [
+       "inferior good",
+       "inferior goods",
+       "inferior"
+      ],
+      "feedback": {
+       "inferior good": "Demand for an inferior good FALLS when incomes rise",
+       "inferior goods": "Demand for an inferior good FALLS when incomes rise",
+       "inferior": "Demand for an inferior good FALLS when incomes rise"
+      }
+     },
+     "solution": "For a normal good, demand rises as income rises; for an inferior good, demand falls as income rises",
+     "hint": "This is the usual reaction: more income, more demand"
+    },
+    {
+     "id": "mk12",
+     "level": 2,
+     "text": "What term describes the situation when quantity demanded is greater than quantity supplied at the current price? Give the term.",
+     "short": {
+      "accept": [
+       "excess demand",
+       "shortage",
+       "a shortage",
+       "shortages"
+      ],
+      "reject": [
+       "excess supply",
+       "surplus"
+      ],
+      "feedback": {
+       "excess supply": "Excess supply is when quantity supplied is greater than quantity demanded",
+       "surplus": "A surplus is when quantity supplied is greater than quantity demanded"
+      }
+     },
+     "solution": "Excess demand (a shortage) puts upward pressure on the price until the market clears",
+     "hint": "There is not enough supply for everyone who wants to buy"
+    },
+    {
+     "id": "mk13",
+     "level": 3,
+     "text": "Petrol prices rise sharply. What is likely to happen to the demand for large cars that use a lot of petrol?",
+     "choice": {
+      "options": [
+       "Demand rises (the demand curve shifts right)",
+       "Supply of large cars falls to zero",
+       "Nothing, because the goods are unrelated",
+       "Demand falls (the demand curve shifts left)"
+      ],
+      "correct": 3
+     },
+     "solution": "Petrol and cars are complements, so dearer petrol reduces demand for petrol-hungry cars",
+     "hint": "Are petrol and cars used together?"
+    },
+    {
+     "id": "mk14",
+     "level": 3,
+     "text": "A frost destroys much of the orange harvest. What happens in the market for oranges?",
+     "choice": {
+      "options": [
+       "Supply falls, so the price rises",
+       "Supply rises, so the price falls",
+       "Demand rises, so supply falls",
+       "Demand falls, so the price rises"
+      ],
+      "correct": 0
+     },
+     "solution": "Supply shifts left; at the old price there is excess demand, so the price rises",
+     "hint": "Is this a change in supply or in demand?"
+    },
+    {
+     "id": "mk15",
+     "level": 3,
+     "text": "A government places a tax on cigarettes. What is the main aim?",
+     "choice": {
+      "options": [
+       "To increase consumption of a merit good",
+       "To reduce consumption of a demerit good",
+       "To lower the price of cigarettes",
+       "To turn cigarettes into a public good"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Merit goods (such as education) are under-consumed — cigarettes are the opposite",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Cigarettes are a demerit good that is over-consumed; a tax raises the price and reduces consumption",
+     "hint": "Do governments want people to consume more or fewer cigarettes?"
+    },
+    {
+     "id": "mk16",
+     "level": 3,
+     "text": "A student chooses to work a Saturday shift instead of going to a football match with friends. What is the opportunity cost of working?",
+     "choice": {
+      "options": [
+       "The wages earned from the shift",
+       "The cost of travel to work",
+       "Going to the football match",
+       "The tax paid on the wages"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The wages are the benefit of working, not the cost",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The opportunity cost is the next best alternative given up: the football match",
+     "hint": "What did the student give up?"
+    },
+    {
+     "id": "mk17",
+     "level": 3,
+     "text": "As people's incomes rise, demand for a supermarket's cheapest own-brand bread falls. What type of good is this bread? Give the term.",
+     "short": {
+      "accept": [
+       "inferior good",
+       "inferior",
+       "an inferior good",
+       "inferior goods"
+      ],
+      "reject": [
+       "normal good",
+       "normal"
+      ],
+      "feedback": {
+       "normal good": "Demand for a normal good RISES when incomes rise",
+       "normal": "Demand for a normal good RISES when incomes rise"
+      }
+     },
+     "solution": "When demand falls as income rises, the good is an inferior good: people switch to better-quality alternatives",
+     "hint": "Demand moves in the opposite direction to income"
+    },
+    {
+     "id": "mk18",
+     "level": 3,
+     "text": "Many people choose to have a flu vaccine, which also reduces the spread of flu to other people. What type of externality is this? Give the term.",
+     "short": {
+      "accept": [
+       "positive externality",
+       "positive",
+       "external benefit",
+       "positive externalities"
+      ],
+      "reject": [
+       "negative externality",
+       "negative",
+       "external cost"
+      ],
+      "feedback": {
+       "negative externality": "A negative externality is a COST to third parties",
+       "negative": "A negative externality is a COST to third parties",
+       "external cost": "An external cost is a negative externality — here third parties gain"
+      }
+     },
+     "solution": "Other people benefit without paying, so this is a positive externality (external benefit)",
+     "hint": "Third parties gain something good"
+    },
+    {
+     "id": "mk19",
+     "level": 4,
+     "text": "At a price of £3, 500 units are demanded and 800 are supplied. At £2, 650 are demanded and 650 are supplied. At £1, 800 are demanded and 400 are supplied. What is the equilibrium price?",
+     "choice": {
+      "options": [
+       "£3",
+       "£1",
+       "There is no equilibrium price",
+       "£2"
+      ],
+      "correct": 3,
+      "feedback": [
+       "At £3 there is excess supply (800 supplied, 500 demanded)",
+       "At £1 there is excess demand (800 demanded, 400 supplied)",
+       null,
+       null
+      ]
+     },
+     "solution": "At £2, quantity demanded (650) equals quantity supplied (650), so £2 is the equilibrium price",
+     "hint": "Find the price where the two quantities are equal"
+    },
+    {
+     "id": "mk20",
+     "level": 4,
+     "text": "At a price of £5, quantity demanded is 200 units and quantity supplied is 350 units. What is the situation in the market, and what is likely to happen to the price?",
+     "choice": {
+      "options": [
+       "Excess supply of 150 units, so the price is likely to fall",
+       "Excess demand of 150 units, so the price is likely to rise",
+       "Excess supply of 150 units, so the price is likely to rise",
+       "The market is in equilibrium"
+      ],
+      "correct": 0
+     },
+     "solution": "Supply (350) exceeds demand (200) by 150 units; sellers cut prices to get rid of the surplus",
+     "hint": "Compare the two quantities, then think about what sellers do with unsold stock"
+    },
+    {
+     "id": "mk21",
+     "level": 4,
+     "text": "Demand for electric cars rises and, at the same time, new technology cuts the cost of making them. Which outcome is certain?",
+     "choice": {
+      "options": [
+       "Price and quantity both definitely rise",
+       "The quantity sold rises, but the effect on price depends on the size of each shift",
+       "Price definitely falls and quantity falls",
+       "Neither price nor quantity changes"
+      ],
+      "correct": 1
+     },
+     "solution": "Demand shifts right (pushing price up) and supply shifts right (pushing price down); both raise quantity, but the price effect is unclear",
+     "hint": "Work out the effect of each shift separately, then combine them"
+    },
+    {
+     "id": "mk22",
+     "level": 4,
+     "text": "A government sets a maximum rent below the equilibrium rent. What is the likely result?",
+     "choice": {
+      "options": [
+       "A surplus of rented homes",
+       "Rents rise above the equilibrium",
+       "A shortage of rented homes, because demand is greater than supply at that rent",
+       "No change in the market"
+      ],
+      "correct": 2
+     },
+     "solution": "Below equilibrium, more people want to rent and landlords supply fewer homes, creating excess demand",
+     "hint": "Compare demand and supply at a price below equilibrium"
+    },
+    {
+     "id": "mk23",
+     "level": 4,
+     "text": "When the price of a video game rose by 10%, the quantity demanded fell by 2%. Is demand for the game price elastic or price inelastic? Type 'elastic' or 'inelastic'.",
+     "short": {
+      "accept": [
+       "inelastic",
+       "price inelastic",
+       "inelastic demand",
+       "relatively inelastic"
+      ],
+      "reject": [
+       "elastic",
+       "price elastic",
+       "elastic demand"
+      ],
+      "feedback": {
+       "elastic": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic",
+       "price elastic": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic",
+       "elastic demand": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic"
+      }
+     },
+     "solution": "PED = -2 ÷ 10 = -0.2. Its size is less than 1, so demand is price inelastic",
+     "hint": "Compare the size of the change in quantity with the size of the change in price"
+    },
+    {
+     "id": "mk24",
+     "level": 4,
+     "text": "Explain how the price mechanism removes a shortage in a market.",
+     "rubric": {
+      "model_answer": "A shortage (excess demand) means quantity demanded is greater than quantity supplied at the current price. Buyers compete for the limited goods, so sellers can raise the price. The higher price rations the goods: some buyers are no longer willing to pay, so quantity demanded falls. It also acts as a signal and incentive to producers: higher prices mean more profit, so quantity supplied rises. The price keeps rising until demand equals supply at the new equilibrium price.",
+      "mark_scheme": "1 mark: shortage defined (demand greater than supply)\n1 mark: the price rises\n1 mark: quantity demanded falls (rationing)\n1 mark: quantity supplied rises (incentive/signal), reaching equilibrium\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Excess demand pushes up the price; demand contracts and supply extends until the market reaches equilibrium",
+     "hint": "Start with what a shortage is, then follow what happens to the price"
+    },
+    {
+     "id": "mk25",
+     "level": 5,
+     "text": "Which statement about price elasticity of demand is accurate?",
+     "choice": {
+      "options": [
+       "If demand is price elastic, a price rise will increase total revenue",
+       "Necessities usually have price elastic demand",
+       "Goods with many close substitutes usually have price inelastic demand",
+       "If demand is price inelastic, a price rise will increase total revenue"
+      ],
+      "correct": 3,
+      "feedback": [
+       "With elastic demand, quantity falls by more than the price rises, so revenue falls",
+       "Necessities usually have inelastic demand",
+       "Many substitutes make demand more elastic",
+       null
+      ]
+     },
+     "solution": "With inelastic demand, quantity falls by a smaller percentage than price rises, so total revenue rises",
+     "hint": "Think about what happens to price × quantity when quantity hardly changes"
+    },
+    {
+     "id": "mk26",
+     "level": 5,
+     "text": "Why might a free market fail to provide street lighting?",
+     "choice": {
+      "options": [
+       "It is a public good, so people can benefit without paying (the free-rider problem)",
+       "It is a demerit good that is over-consumed",
+       "Its price is kept too low by a subsidy",
+       "It has too many sellers"
+      ],
+      "correct": 0
+     },
+     "solution": "Because nobody can be excluded, people can free-ride, so private firms cannot charge for it and will not supply it",
+     "hint": "Could a firm stop people who have not paid from using the light?"
+    },
+    {
+     "id": "mk27",
+     "level": 5,
+     "text": "Which statement about monopoly is accurate?",
+     "choice": {
+      "options": [
+       "A monopoly always charges lower prices than competitive firms",
+       "A monopoly may charge higher prices and offer less choice because it faces little competition",
+       "A monopoly is a market with many small firms",
+       "A monopoly can never make a profit"
+      ],
+      "correct": 1
+     },
+     "solution": "With little competition a monopoly has market power, so it may raise prices, restrict output and reduce choice",
+     "hint": "Think about what happens when a firm has no rivals"
+    },
+    {
+     "id": "mk28",
+     "level": 5,
+     "text": "Which of these would cause the supply curve for wheat to shift to the right?",
+     "choice": {
+      "options": [
+       "A rise in the price of wheat",
+       "A new tax on wheat producers",
+       "New machinery that lowers the cost of harvesting",
+       "A drought"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A change in the good's own price is a movement along the supply curve",
+       "A tax raises costs and shifts supply to the left",
+       null,
+       "A drought reduces supply, shifting it to the left"
+      ]
+     },
+     "solution": "Lower costs of production increase supply at every price, shifting the curve to the right",
+     "hint": "A rightward shift means more is supplied at every price"
+    },
+    {
+     "id": "mk29",
+     "level": 5,
+     "text": "What term describes a market dominated by a few large firms, such as the UK supermarket industry? Give the term.",
+     "short": {
+      "accept": [
+       "oligopoly",
+       "an oligopoly",
+       "oligopolistic"
+      ],
+      "reject": [
+       "monopoly",
+       "monopsony"
+      ],
+      "feedback": {
+       "monopoly": "A monopoly has a single dominant seller — here there are a few large firms",
+       "monopsony": "A monopsony has a single dominant BUYER"
+      }
+     },
+     "solution": "An oligopoly is a market dominated by a few large firms, which watch and react to each other's decisions",
+     "hint": "'Oligo' means 'few'"
+    },
+    {
+     "id": "mk30",
+     "level": 5,
+     "text": "Assess whether a government should use taxes or regulation to reduce pollution from factories.",
+     "rubric": {
+      "model_answer": "A tax on pollution makes firms pay for the external cost, giving them an incentive to cut pollution in the cheapest way, and it raises revenue that can be spent on clean-up. But the right tax level is hard to judge, demand may be inelastic, and firms may pass costs to consumers. Regulation, such as legal limits or bans, gives certain results and is easy to understand, but it needs inspection and enforcement, gives no reason to pollute less than the limit, and fines may be too small. A mix of both is often used.",
+      "mark_scheme": "1 mark: how a tax works (internalises the external cost)\n1 mark: an advantage of taxes (incentive, revenue)\n1 mark: a disadvantage of taxes (hard to set, inelastic demand)\n1 mark: an advantage of regulation (certainty)\n1 mark: a disadvantage of regulation (enforcement cost, no incentive to do better)\n1 mark: a justified conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Taxes give incentives and revenue but are hard to set; regulation is certain but costly to enforce. Often a mix is best",
+     "hint": "Give an advantage and a disadvantage of each, then decide"
+    }
+   ]
+  },
+  {
+   "id": "economics.firms",
+   "title": "Firms & production",
+   "aliases": [
+    "economies of scale",
+    "firms",
+    "productivity",
+    "specialisation",
+    "division of labour",
+    "objectives of firms",
+    "diseconomies of scale",
+    "mergers",
+    "integration",
+    "profit maximisation"
+   ],
+   "questions": [
+    {
+     "id": "fi01",
+     "level": 1,
+     "text": "What term describes splitting production into separate tasks, with each worker doing one task? Give the term.",
+     "short": {
+      "accept": [
+       "division of labour",
+       "division of labor",
+       "specialisation",
+       "specialization"
+      ]
+     },
+     "solution": "Division of labour (specialisation of workers) breaks production into tasks so each worker becomes skilled at one",
+     "hint": "Adam Smith described this in a pin factory"
+    },
+    {
+     "id": "fi02",
+     "level": 1,
+     "text": "What term describes the fall in average cost that a firm gets as it grows larger? Give the term.",
+     "short": {
+      "accept": [
+       "economies of scale",
+       "economy of scale",
+       "internal economies of scale"
+      ],
+      "reject": [
+       "diseconomies of scale"
+      ],
+      "feedback": {
+       "diseconomies of scale": "Diseconomies of scale make average cost RISE as a firm grows too large"
+      }
+     },
+     "solution": "Economies of scale are the cost advantages of growing larger, which lower average cost",
+     "hint": "The cost benefits come from the 'scale' of production"
+    },
+    {
+     "id": "fi03",
+     "level": 1,
+     "text": "What is productivity?",
+     "choice": {
+      "options": [
+       "Output per worker (or per hour worked)",
+       "The total number of workers in a firm",
+       "The total revenue of a firm",
+       "The price of a product"
+      ],
+      "correct": 0
+     },
+     "solution": "Labour productivity = total output ÷ number of workers (or hours worked)",
+     "hint": "It measures how much each worker produces"
+    },
+    {
+     "id": "fi04",
+     "level": 1,
+     "text": "Which of these is a fixed cost for a bakery?",
+     "choice": {
+      "options": [
+       "Flour",
+       "Rent for the shop",
+       "Packaging for each loaf",
+       "Eggs for the cakes"
+      ],
+      "correct": 1
+     },
+     "solution": "Fixed costs do not change with output (rent); variable costs rise with output (flour, packaging, eggs)",
+     "hint": "Which cost stays the same however much bread is baked?"
+    },
+    {
+     "id": "fi05",
+     "level": 1,
+     "text": "Which economist described specialisation in a pin factory in 'The Wealth of Nations' (1776)?",
+     "choice": {
+      "options": [
+       "Karl Marx",
+       "John Maynard Keynes",
+       "Adam Smith",
+       "Milton Friedman"
+      ],
+      "correct": 2
+     },
+     "solution": "Adam Smith showed that dividing pin-making into separate tasks greatly increased output per worker",
+     "hint": "He was an 18th-century Scottish economist"
+    },
+    {
+     "id": "fi06",
+     "level": 1,
+     "text": "What term describes a firm aiming to make the largest possible difference between its revenue and its costs? Give the term.",
+     "short": {
+      "accept": [
+       "profit maximisation",
+       "profit maximization",
+       "maximising profit",
+       "maximizing profit",
+       "profit maximising"
+      ]
+     },
+     "solution": "Profit maximisation is the traditional objective of firms: making as much profit as possible",
+     "hint": "Profit = revenue − costs; the firm wants the biggest possible amount"
+    },
+    {
+     "id": "fi07",
+     "level": 2,
+     "text": "Which is an example of a purchasing economy of scale?",
+     "choice": {
+      "options": [
+       "A large firm can borrow money at lower interest rates",
+       "A large firm can afford specialist managers",
+       "A large firm finds communication harder",
+       "A large firm gets discounts by buying raw materials in bulk"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is a financial economy of scale",
+       "That is a managerial economy of scale",
+       "That is a diseconomy of scale",
+       null
+      ]
+     },
+     "solution": "Buying in bulk gives lower prices per unit: a purchasing (bulk-buying) economy of scale",
+     "hint": "'Purchasing' means buying"
+    },
+    {
+     "id": "fi08",
+     "level": 2,
+     "text": "Which is a diseconomy of scale?",
+     "choice": {
+      "options": [
+       "Communication becomes slower and harder as the firm grows",
+       "Bulk buying lowers the cost of each unit",
+       "The firm can afford better technology",
+       "Banks offer the firm cheaper loans"
+      ],
+      "correct": 0
+     },
+     "solution": "Diseconomies of scale (poor communication, coordination and motivation) can raise average costs in very large firms",
+     "hint": "Look for a problem that comes from being very big"
+    },
+    {
+     "id": "fi09",
+     "level": 2,
+     "text": "Which describes capital-intensive production?",
+     "choice": {
+      "options": [
+       "Production that uses a lot of workers compared with machinery",
+       "Production that uses a lot of machinery compared with workers",
+       "Production that uses no machines",
+       "Production that happens only in the public sector"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That describes labour-intensive production",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Capital-intensive production relies mainly on machinery (e.g. car assembly); labour-intensive relies mainly on workers",
+     "hint": "In economics, 'capital' means machinery and equipment"
+    },
+    {
+     "id": "fi10",
+     "level": 2,
+     "text": "A firm aims to make 'enough' profit to keep its owners happy, rather than the maximum possible. What is this called?",
+     "choice": {
+      "options": [
+       "Profit maximisation",
+       "Revenue maximisation",
+       "Satisficing",
+       "Survival"
+      ],
+      "correct": 2
+     },
+     "solution": "Satisficing means aiming for a satisfactory level of profit, often because managers have other goals too",
+     "hint": "The word combines 'satisfy' and 'suffice'"
+    },
+    {
+     "id": "fi11",
+     "level": 2,
+     "text": "What term describes two firms agreeing to join together to form one new firm? Give the term.",
+     "short": {
+      "accept": [
+       "merger",
+       "a merger",
+       "mergers",
+       "amalgamation"
+      ],
+      "reject": [
+       "takeover",
+       "acquisition"
+      ],
+      "feedback": {
+       "takeover": "A takeover is when one firm buys control of another — here the firms agree to join together",
+       "acquisition": "An acquisition is when one firm buys another — here the firms agree to join together"
+      }
+     },
+     "solution": "A merger is when firms agree to combine; a takeover is when one firm buys control of another",
+     "hint": "The two firms 'merge' into one"
+    },
+    {
+     "id": "fi12",
+     "level": 2,
+     "text": "What term describes a firm growing by opening new branches or increasing its own output, rather than joining with other firms? Give the term.",
+     "short": {
+      "accept": [
+       "organic growth",
+       "internal growth",
+       "organic"
+      ],
+      "reject": [
+       "external growth",
+       "inorganic growth"
+      ],
+      "feedback": {
+       "external growth": "External growth happens through mergers and takeovers",
+       "inorganic growth": "Inorganic growth happens through mergers and takeovers"
+      }
+     },
+     "solution": "Organic (internal) growth comes from within the firm; external growth comes from mergers and takeovers",
+     "hint": "This growth comes from within the firm, like a plant growing naturally"
+    },
+    {
+     "id": "fi13",
+     "level": 3,
+     "text": "A car maker buys a tyre company that supplies it. What type of integration is this?",
+     "choice": {
+      "options": [
+       "Forward vertical integration",
+       "Horizontal integration",
+       "Conglomerate integration",
+       "Backward vertical integration"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Forward integration means buying a business at a LATER stage, such as a car dealer",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Buying a supplier (an earlier stage of production) is backward vertical integration",
+     "hint": "Is the tyre company before or after the car maker in the chain of production?"
+    },
+    {
+     "id": "fi14",
+     "level": 3,
+     "text": "A supermarket chain takes over another supermarket chain. What type of integration is this?",
+     "choice": {
+      "options": [
+       "Horizontal integration",
+       "Backward vertical integration",
+       "Forward vertical integration",
+       "Conglomerate integration"
+      ],
+      "correct": 0
+     },
+     "solution": "Joining a firm at the same stage of the same industry is horizontal integration",
+     "hint": "Are the two firms at the same stage of production?"
+    },
+    {
+     "id": "fi15",
+     "level": 3,
+     "text": "A factory produced 2,000 units a week with 50 workers. After training, it produced 2,400 units a week with the same 50 workers. What has happened?",
+     "choice": {
+      "options": [
+       "Labour productivity has fallen",
+       "Labour productivity has risen",
+       "The firm has employed more workers",
+       "Fixed costs have fallen"
+      ],
+      "correct": 1
+     },
+     "solution": "Output per worker rose from 2,000 ÷ 50 = 40 to 2,400 ÷ 50 = 48 units, so labour productivity rose",
+     "hint": "Work out the output per worker before and after"
+    },
+    {
+     "id": "fi16",
+     "level": 3,
+     "text": "A clothing firm gives each worker one task, such as sewing sleeves, all day. What is a likely disadvantage?",
+     "choice": {
+      "options": [
+       "Output per worker always falls",
+       "Workers become skilled at every task",
+       "Workers may get bored, which can lower motivation",
+       "The firm needs no machines"
+      ],
+      "correct": 2
+     },
+     "solution": "Repetitive single tasks can be boring, lowering motivation and quality; this is a drawback of the division of labour",
+     "hint": "Think about how it feels to do the same task all day"
+    },
+    {
+     "id": "fi17",
+     "level": 3,
+     "text": "A firm makes 600 units a day with 20 workers. Calculate labour productivity in units per worker per day. Give the number.",
+     "short": {
+      "accept": [
+       "30"
+      ]
+     },
+     "solution": "Labour productivity = 600 ÷ 20 = 30 units per worker per day",
+     "hint": "Divide the total output by the number of workers"
+    },
+    {
+     "id": "fi18",
+     "level": 3,
+     "text": "A chocolate maker buys a chain of sweet shops that sell its products. Is this forward or backward vertical integration? Type 'forward' or 'backward'.",
+     "short": {
+      "accept": [
+       "forward",
+       "forward vertical integration",
+       "forward integration",
+       "forward vertical"
+      ],
+      "reject": [
+       "backward",
+       "backward vertical integration",
+       "backward integration"
+      ],
+      "feedback": {
+       "backward": "Backward integration means buying a SUPPLIER, which is an earlier stage",
+       "backward vertical integration": "Backward integration means buying a SUPPLIER, which is an earlier stage",
+       "backward integration": "Backward integration means buying a SUPPLIER, which is an earlier stage"
+      }
+     },
+     "solution": "The shops are at a later stage (closer to the customer), so this is forward vertical integration",
+     "hint": "Are the shops closer to the customer or closer to the raw materials?"
+    },
+    {
+     "id": "fi19",
+     "level": 4,
+     "text": "A firm's total cost is £200 for 10 units, £300 for 20 units and £390 for 30 units. What happens to average cost as output rises from 10 to 30 units?",
+     "choice": {
+      "options": [
+       "It rises from £20 to £39 per unit",
+       "It stays at £20 per unit",
+       "It falls from £200 to £130 per unit",
+       "It falls from £20 to £13 per unit"
+      ],
+      "correct": 3
+     },
+     "solution": "Average cost = total cost ÷ output: £200 ÷ 10 = £20, £300 ÷ 20 = £15, £390 ÷ 30 = £13",
+     "hint": "Divide each total cost by its output"
+    },
+    {
+     "id": "fi20",
+     "level": 4,
+     "text": "Why might a large supermarket chain be able to charge lower prices than a small corner shop?",
+     "choice": {
+      "options": [
+       "It benefits from economies of scale, such as bulk buying",
+       "It has higher average costs",
+       "It pays no rent",
+       "It faces no competition"
+      ],
+      "correct": 0
+     },
+     "solution": "Economies of scale lower the supermarket's average costs, so it can charge lower prices and still make a profit",
+     "hint": "Think about why bigger firms often have lower costs per unit"
+    },
+    {
+     "id": "fi21",
+     "level": 4,
+     "text": "A firm's workers become 10% more productive, but wages stay the same. What happens to the labour cost of making each unit?",
+     "choice": {
+      "options": [
+       "It rises",
+       "It falls",
+       "It stays the same",
+       "It doubles"
+      ],
+      "correct": 1
+     },
+     "solution": "The same wage bill now produces more units, so the labour cost per unit falls",
+     "hint": "The firm pays the same wages but gets more output"
+    },
+    {
+     "id": "fi22",
+     "level": 4,
+     "text": "Which is an example of an external economy of scale?",
+     "choice": {
+      "options": [
+       "A firm buys materials in bulk",
+       "A firm employs specialist managers",
+       "A pool of skilled workers develops in an area where many similar firms are based",
+       "A firm uses its own larger machines"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Bulk buying is an internal economy of scale",
+       "Specialist managers are an internal economy of scale",
+       null,
+       null
+      ]
+     },
+     "solution": "External economies come from the growth of the industry in an area (skilled labour, specialist suppliers), not from the firm itself",
+     "hint": "External means coming from outside the firm"
+    },
+    {
+     "id": "fi23",
+     "level": 4,
+     "text": "A firm's total cost of producing 400 units is £2,000. Calculate the average cost per unit in pounds. Give the number.",
+     "short": {
+      "accept": [
+       "5"
+      ]
+     },
+     "solution": "Average cost = total cost ÷ output = £2,000 ÷ 400 = £5 per unit",
+     "hint": "Divide the total cost by the number of units"
+    },
+    {
+     "id": "fi24",
+     "level": 4,
+     "text": "Explain two economies of scale that a growing firm might benefit from.",
+     "rubric": {
+      "model_answer": "First, purchasing (bulk-buying) economies: a larger firm buys raw materials in large quantities, so suppliers give discounts and the cost of each unit falls. Second, technical economies: a larger firm can afford expensive, efficient machinery and spread its cost over a much larger output, lowering average cost. Other examples include financial economies (borrowing more cheaply) and managerial economies (hiring specialist managers).",
+      "mark_scheme": "1 mark: first economy of scale identified\n1 mark: first explained, linked to lower average cost\n1 mark: second economy of scale identified\n1 mark: second explained, linked to lower average cost\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "E.g. bulk buying (cheaper inputs) and technical economies (efficient machinery spread over more output) lower average cost",
+     "hint": "Name each economy of scale, then explain why it lowers the cost of each unit"
+    },
+    {
+     "id": "fi25",
+     "level": 5,
+     "text": "Which statement about economies of scale is accurate?",
+     "choice": {
+      "options": [
+       "Economies of scale make average costs rise as a firm grows",
+       "Only small firms benefit from economies of scale",
+       "Economies of scale raise the price of raw materials",
+       "Beyond a certain size, a firm may suffer diseconomies of scale and its average costs may rise"
+      ],
+      "correct": 3
+     },
+     "solution": "Growth lowers average costs at first, but very large firms can face diseconomies (communication, coordination, motivation)",
+     "hint": "Can a firm grow too big?"
+    },
+    {
+     "id": "fi26",
+     "level": 5,
+     "text": "A firm replaces 30 workers with machines. Which is a likely effect on the firm's costs?",
+     "choice": {
+      "options": [
+       "Higher fixed costs but lower labour costs per unit",
+       "Lower fixed costs and higher wage costs",
+       "No change to costs",
+       "Higher variable costs from extra wages"
+      ],
+      "correct": 0
+     },
+     "solution": "Machines are a large fixed cost, but they reduce the wage bill and can lower the labour cost of each unit",
+     "hint": "Machines cost a lot to buy but replace wages"
+    },
+    {
+     "id": "fi27",
+     "level": 5,
+     "text": "Why might a newly opened business aim for survival rather than profit maximisation?",
+     "choice": {
+      "options": [
+       "It is legally banned from making a profit",
+       "It may not yet have enough customers to cover its costs",
+       "Survival always brings the highest profit",
+       "It has no costs in its first year"
+      ],
+      "correct": 1
+     },
+     "solution": "New firms face high start-up costs and few customers, so staying in business comes before maximising profit",
+     "hint": "Think about the risks a new business faces"
+    },
+    {
+     "id": "fi28",
+     "level": 5,
+     "text": "Which is a disadvantage of specialisation for a whole economy?",
+     "choice": {
+      "options": [
+       "It always lowers output",
+       "It means each worker learns every skill",
+       "Relying on a few industries makes it vulnerable if demand for them falls",
+       "It stops countries from trading"
+      ],
+      "correct": 2
+     },
+     "solution": "If an economy specialises in a few industries, a fall in demand for them can cause high unemployment",
+     "hint": "Think about what happens if the main industry declines"
+    },
+    {
+     "id": "fi29",
+     "level": 5,
+     "text": "A firm's aim is to sell as many units as possible so that it has the largest share of its market. Which objective is this? Give the term.",
+     "short": {
+      "accept": [
+       "market share",
+       "increasing market share",
+       "increase market share",
+       "maximising market share",
+       "sales maximisation",
+       "sales maximization",
+       "market leadership"
+      ]
+     },
+     "solution": "Aiming for the largest share of sales in a market is a market share (or sales maximisation) objective",
+     "hint": "The aim is about the firm's percentage of all sales in the market"
+    },
+    {
+     "id": "fi30",
+     "level": 5,
+     "text": "Discuss the advantages and disadvantages of specialisation (the division of labour) for a firm.",
+     "rubric": {
+      "model_answer": "Advantages: workers become skilled and quick at one task, so output per worker (productivity) rises and average costs fall. Less training is needed for each task, and specialist machinery can be used. Disadvantages: repetitive work can be boring, lowering motivation and quality; if one stage breaks down or a worker is absent, the whole process can stop; and workers have narrow skills. Overall, specialisation usually raises productivity, but firms may need job rotation to keep workers motivated.",
+      "mark_scheme": "1 mark: advantage identified (e.g. higher productivity)\n1 mark: advantage explained (e.g. lower average cost)\n1 mark: disadvantage identified (e.g. boredom)\n1 mark: disadvantage explained (e.g. lower motivation or quality)\n1 mark: second disadvantage (e.g. dependence on each stage)\n1 mark: a balanced conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Advantages: higher productivity and lower costs. Disadvantages: boredom, lower motivation, dependence on each stage",
+     "hint": "Give at least two advantages and two disadvantages, then conclude"
+    }
+   ]
+  },
+  {
+   "id": "economics.money_work",
+   "title": "Money, banks & work",
+   "aliases": [
+    "role of money",
+    "banks",
+    "interest rates",
+    "saving",
+    "borrowing",
+    "labour market",
+    "wages",
+    "trade unions",
+    "functions of money",
+    "central bank",
+    "income tax"
+   ],
+   "questions": [
+    {
+     "id": "mw01",
+     "level": 1,
+     "text": "Which of these is a function of money?",
+     "choice": {
+      "options": [
+       "Medium of exchange",
+       "Factor of production",
+       "Cause of inflation",
+       "Type of tax"
+      ],
+      "correct": 0
+     },
+     "solution": "Money's functions are a medium of exchange, a store of value, a unit of account and a standard of deferred payment",
+     "hint": "Money is used to buy and sell"
+    },
+    {
+     "id": "mw02",
+     "level": 1,
+     "text": "What term describes swapping goods or services directly for other goods or services, without using money? Give the term.",
+     "short": {
+      "accept": [
+       "barter",
+       "bartering",
+       "barter system"
+      ]
+     },
+     "solution": "Barter is direct exchange; it needs a double coincidence of wants, which money removes",
+     "hint": "It is how people traded before money"
+    },
+    {
+     "id": "mw03",
+     "level": 1,
+     "text": "What is the reward for saving money in a bank account?",
+     "choice": {
+      "options": [
+       "Profit",
+       "Interest",
+       "Rent",
+       "Wages"
+      ],
+      "correct": 1
+     },
+     "solution": "Savers receive interest; borrowers pay interest",
+     "hint": "The bank pays you for using your money"
+    },
+    {
+     "id": "mw04",
+     "level": 1,
+     "text": "What is the name of the UK's central bank? Give the name.",
+     "short": {
+      "accept": [
+       "Bank of England",
+       "the Bank of England",
+       "BoE"
+      ]
+     },
+     "solution": "The Bank of England is the UK's central bank; its Monetary Policy Committee sets Bank Rate",
+     "hint": "It is based in Threadneedle Street in London"
+    },
+    {
+     "id": "mw05",
+     "level": 1,
+     "text": "What is a trade union?",
+     "choice": {
+      "options": [
+       "A group of firms that agree to fix prices",
+       "A government department that sets taxes",
+       "An organisation that represents workers and bargains for better pay and conditions",
+       "A bank that lends to businesses"
+      ],
+      "correct": 2
+     },
+     "solution": "Trade unions represent their members in negotiations with employers about pay and conditions",
+     "hint": "Its members are workers"
+    },
+    {
+     "id": "mw06",
+     "level": 1,
+     "text": "What term describes pay before any deductions, such as income tax, are taken off? Give the term.",
+     "short": {
+      "accept": [
+       "gross pay",
+       "gross income",
+       "gross wage",
+       "gross salary",
+       "gross"
+      ],
+      "reject": [
+       "net pay",
+       "net income",
+       "net"
+      ],
+      "feedback": {
+       "net pay": "Net pay is what is left AFTER deductions",
+       "net income": "Net income is what is left AFTER deductions",
+       "net": "Net pay is what is left AFTER deductions"
+      }
+     },
+     "solution": "Gross pay is the full amount before deductions; net pay is what is left after them",
+     "hint": "It is the 'whole' amount earned"
+    },
+    {
+     "id": "mw07",
+     "level": 2,
+     "text": "Which is a role of the Bank of England (a central bank)?",
+     "choice": {
+      "options": [
+       "Opening current accounts for members of the public",
+       "Selling car insurance",
+       "Running high-street shops",
+       "Setting the base interest rate for the economy"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Commercial (high-street) banks open accounts for the public",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The central bank sets the base interest rate (Bank Rate), issues banknotes and acts as the government's bank",
+     "hint": "A central bank looks after the whole economy, not individual customers"
+    },
+    {
+     "id": "mw08",
+     "level": 2,
+     "text": "What is collective bargaining?",
+     "choice": {
+      "options": [
+       "A trade union negotiating pay and conditions with employers on behalf of its members",
+       "Customers bargaining over prices in a market",
+       "Banks agreeing interest rates with each other",
+       "Each worker negotiating their own pay alone"
+      ],
+      "correct": 0
+     },
+     "solution": "In collective bargaining, a union negotiates for all its members together, which gives them more power",
+     "hint": "'Collective' means as a group"
+    },
+    {
+     "id": "mw09",
+     "level": 2,
+     "text": "Which deduction from pay helps to fund state benefits such as the State Pension?",
+     "choice": {
+      "options": [
+       "VAT",
+       "National Insurance contributions",
+       "Council tax",
+       "Corporation tax"
+      ],
+      "correct": 1,
+      "feedback": [
+       "VAT is a tax on spending, not a deduction from pay",
+       null,
+       null,
+       "Corporation tax is paid by companies on their profits"
+      ]
+     },
+     "solution": "National Insurance contributions are taken from pay and build entitlement to the State Pension and some benefits",
+     "hint": "It has 'insurance' in its name"
+    },
+    {
+     "id": "mw10",
+     "level": 2,
+     "text": "Which statement about savers and borrowers is accurate?",
+     "choice": {
+      "options": [
+       "Savers pay interest; borrowers receive interest",
+       "Interest rates do not affect savers or borrowers",
+       "Savers receive interest; borrowers pay interest",
+       "Only firms pay interest"
+      ],
+      "correct": 2
+     },
+     "solution": "Interest is the reward for saving and the cost of borrowing",
+     "hint": "Who is the bank paying, and who is paying the bank?"
+    },
+    {
+     "id": "mw11",
+     "level": 2,
+     "text": "What term describes pay after deductions such as income tax and National Insurance have been taken off? Give the term.",
+     "short": {
+      "accept": [
+       "net pay",
+       "net income",
+       "take-home pay",
+       "take home pay",
+       "net wage",
+       "net salary",
+       "net"
+      ],
+      "reject": [
+       "gross pay",
+       "gross"
+      ],
+      "feedback": {
+       "gross pay": "Gross pay is BEFORE deductions",
+       "gross": "Gross pay is BEFORE deductions"
+      }
+     },
+     "solution": "Net (take-home) pay = gross pay − deductions such as income tax, National Insurance and pension contributions",
+     "hint": "It is the amount the worker actually takes home"
+    },
+    {
+     "id": "mw12",
+     "level": 2,
+     "text": "What term describes action taken by workers, such as going on strike, to put pressure on an employer? Give the term.",
+     "short": {
+      "accept": [
+       "industrial action",
+       "strike action",
+       "industrial"
+      ]
+     },
+     "solution": "Industrial action includes strikes, work-to-rule and overtime bans",
+     "hint": "This kind of action happens in industry and workplaces"
+    },
+    {
+     "id": "mw13",
+     "level": 3,
+     "text": "Interest rates rise. What is the likely effect on household borrowing?",
+     "choice": {
+      "options": [
+       "Borrowing rises because loans become cheaper",
+       "Borrowing is unaffected",
+       "Borrowing rises because saving becomes less attractive",
+       "Borrowing falls because loans become more expensive"
+      ],
+      "correct": 3
+     },
+     "solution": "Higher interest rates raise the cost of loans and credit, so households borrow less",
+     "hint": "Interest is the price of borrowing"
+    },
+    {
+     "id": "mw14",
+     "level": 3,
+     "text": "Doctors are usually paid more than shop assistants. Which reason explains this?",
+     "choice": {
+      "options": [
+       "Doctors need many years of training and their skills are scarce",
+       "There are more doctors than shop assistants",
+       "Shop assistants always work longer hours than doctors",
+       "Doctors never belong to trade unions"
+      ],
+      "correct": 0
+     },
+     "solution": "The supply of qualified doctors is limited by long training, and demand for their skills is high, so wages are high",
+     "hint": "Think about the supply of people who can do each job"
+    },
+    {
+     "id": "mw15",
+     "level": 3,
+     "text": "Demand for a firm's product falls, so the firm needs fewer workers. Which idea explains this?",
+     "choice": {
+      "options": [
+       "Wages have risen",
+       "Demand for labour is derived from demand for the product",
+       "Workers have joined a trade union",
+       "Interest rates have fallen"
+      ],
+      "correct": 1
+     },
+     "solution": "Firms want workers in order to make goods, so the demand for labour is derived demand",
+     "hint": "Why does a firm employ workers in the first place?"
+    },
+    {
+     "id": "mw16",
+     "level": 3,
+     "text": "Which change would encourage people to save more?",
+     "choice": {
+      "options": [
+       "Interest rates on savings fall",
+       "Their income falls sharply",
+       "Interest rates on savings rise",
+       "Borrowing becomes cheaper"
+      ],
+      "correct": 2
+     },
+     "solution": "A higher interest rate increases the reward for saving",
+     "hint": "What makes saving more rewarding?"
+    },
+    {
+     "id": "mw17",
+     "level": 3,
+     "text": "Aisha earns £20 per hour and works 30 hours a week. What is her gross weekly pay in pounds? Give the number.",
+     "short": {
+      "accept": [
+       "600"
+      ]
+     },
+     "solution": "Gross weekly pay = £20 × 30 hours = £600",
+     "hint": "Multiply the hourly rate by the number of hours"
+    },
+    {
+     "id": "mw18",
+     "level": 3,
+     "text": "Which function of money means it can be used to measure and compare the value of different goods? Give the term.",
+     "short": {
+      "accept": [
+       "unit of account",
+       "measure of value",
+       "a unit of account"
+      ],
+      "reject": [
+       "store of value",
+       "medium of exchange"
+      ],
+      "feedback": {
+       "store of value": "A store of value means money keeps its value over time so it can be saved",
+       "medium of exchange": "A medium of exchange means money is accepted in payment for goods"
+      }
+     },
+     "solution": "As a unit of account (measure of value), money lets us compare values, e.g. a coat costs the same as 10 cinema tickets",
+     "hint": "Prices let us compare the worth of different things"
+    },
+    {
+     "id": "mw19",
+     "level": 4,
+     "text": "A worker's gross pay is £2,400 a month. Deductions are income tax £280, National Insurance £150 and pension £120. What is the worker's net pay?",
+     "choice": {
+      "options": [
+       "£1,970",
+       "£2,120",
+       "£2,950",
+       "£1,850"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Include the pension contribution too",
+       null,
+       "Deductions are taken away, not added",
+       null
+      ]
+     },
+     "solution": "Total deductions = £280 + £150 + £120 = £550, so net pay = £2,400 − £550 = £1,850",
+     "hint": "Add up all the deductions, then subtract them from gross pay"
+    },
+    {
+     "id": "mw20",
+     "level": 4,
+     "text": "A trade union wins a large pay rise for its members. What is a possible disadvantage for workers?",
+     "choice": {
+      "options": [
+       "The firm may employ fewer workers because labour costs have risen",
+       "All workers will be paid less",
+       "The firm's costs will fall",
+       "Workers will have to work longer hours for no pay"
+      ],
+      "correct": 0
+     },
+     "solution": "Higher wages raise costs, so the firm may cut jobs or replace workers with machines",
+     "hint": "Think about the firm's costs after the pay rise"
+    },
+    {
+     "id": "mw21",
+     "level": 4,
+     "text": "Which change would increase the supply of labour to an industry?",
+     "choice": {
+      "options": [
+       "A fall in wages in the industry",
+       "More people gaining the qualifications needed for the job",
+       "Worse working conditions",
+       "Longer and more expensive training for the job"
+      ],
+      "correct": 1
+     },
+     "solution": "If more people are qualified and able to do the job, the supply of labour increases",
+     "hint": "Supply of labour means the number of people willing and able to do the job"
+    },
+    {
+     "id": "mw22",
+     "level": 4,
+     "text": "The Bank of England cuts interest rates. Which group is most likely to lose out?",
+     "choice": {
+      "options": [
+       "Borrowers, because loans cost more",
+       "Homeowners with variable-rate mortgages",
+       "Savers, because they earn less interest",
+       "Firms planning to borrow to invest"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Lower interest rates make loans CHEAPER",
+       "Their mortgage payments are likely to fall",
+       null,
+       "Cheaper loans help firms that want to borrow"
+      ]
+     },
+     "solution": "Lower rates reduce the return on savings; borrowers, including those with variable-rate mortgages, gain",
+     "hint": "Who receives interest?"
+    },
+    {
+     "id": "mw23",
+     "level": 4,
+     "text": "Suppose the first £12,000 of a person's yearly income is tax-free and the rest is taxed at 20%. A worker earns £15,000 a year. How much income tax do they pay in a year? Give the number of pounds.",
+     "short": {
+      "accept": [
+       "600"
+      ]
+     },
+     "solution": "Taxable income = £15,000 − £12,000 = £3,000. Tax = 20% of £3,000 = £600",
+     "hint": "Work out how much income is above the tax-free amount first"
+    },
+    {
+     "id": "mw24",
+     "level": 4,
+     "text": "Explain two factors that affect the wage a worker is paid.",
+     "rubric": {
+      "model_answer": "First, skills and qualifications: jobs needing long training, such as doctors, have a small supply of qualified workers, so wages are high. Second, the demand for labour: if demand for the product is high and workers are very productive, firms are willing to pay more. Other factors include trade union power, which can bargain wages up, the minimum wage, the danger or unpleasantness of the job, and where the job is located.",
+      "mark_scheme": "1 mark: first factor identified\n1 mark: first factor explained (link to supply or demand of labour)\n1 mark: second factor identified\n1 mark: second factor explained\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "E.g. skills/qualifications (limit supply) and demand for the product or productivity (raise demand); also unions and the minimum wage",
+     "hint": "Think about the supply of workers and the demand for workers"
+    },
+    {
+     "id": "mw25",
+     "level": 5,
+     "text": "Which statement about a national minimum wage is accurate?",
+     "choice": {
+      "options": [
+       "It always increases the number of jobs",
+       "It lowers the pay of the lowest-paid workers",
+       "It applies only to self-employed people",
+       "It may raise the pay of low-paid workers, but could reduce the number of jobs if it is set too high"
+      ],
+      "correct": 3
+     },
+     "solution": "A minimum wage protects low-paid workers, but if it is above the market wage, firms may demand fewer workers",
+     "hint": "Think about both workers and employers"
+    },
+    {
+     "id": "mw26",
+     "level": 5,
+     "text": "Which statement explains why higher interest rates can reduce consumer spending?",
+     "choice": {
+      "options": [
+       "Borrowing costs more and saving is more rewarding, so people spend less",
+       "Prices of goods fall immediately",
+       "Incomes rise for all households",
+       "Firms must lower their prices by law"
+      ],
+      "correct": 0
+     },
+     "solution": "Higher rates make loans and mortgages dearer and saving more attractive, so consumer spending falls",
+     "hint": "Think about the effect on both borrowers and savers"
+    },
+    {
+     "id": "mw27",
+     "level": 5,
+     "text": "Why might a trade union have less bargaining power in an industry where many unemployed people have the right skills?",
+     "choice": {
+      "options": [
+       "Unions are banned when unemployment is high",
+       "Employers can more easily find other workers, so the union's threats carry less weight",
+       "Unemployed people must join the union",
+       "Wages are always set by the government"
+      ],
+      "correct": 1
+     },
+     "solution": "When there is a large supply of suitable workers, employers depend less on the union's members, weakening its bargaining power",
+     "hint": "Think about how easily the employer could find other staff"
+    },
+    {
+     "id": "mw28",
+     "level": 5,
+     "text": "Which problem of barter does money solve?",
+     "choice": {
+      "options": [
+       "The need for goods to be produced",
+       "The need for people to work",
+       "The need for a double coincidence of wants",
+       "The scarcity of resources"
+      ],
+      "correct": 2
+     },
+     "solution": "With barter you must find someone who has what you want AND wants what you have; money removes this problem",
+     "hint": "In barter, both people must want what the other has"
+    },
+    {
+     "id": "mw29",
+     "level": 5,
+     "text": "What term describes the demand for labour depending on the demand for the goods and services that labour produces? Give the term.",
+     "short": {
+      "accept": [
+       "derived demand",
+       "derived"
+      ]
+     },
+     "solution": "Labour is a derived demand: firms employ workers because consumers want the products they make",
+     "hint": "The demand for workers is 'drawn' from the demand for products"
+    },
+    {
+     "id": "mw30",
+     "level": 5,
+     "text": "Discuss whether higher interest rates are good for households.",
+     "rubric": {
+      "model_answer": "Higher interest rates help households that save, because they earn more interest, and they can reduce inflation, protecting the value of incomes. However, households with loans, credit cards or variable-rate mortgages face higher repayments, leaving less to spend. Higher rates can also slow the economy, so firms may cut jobs, which harms households. Overall, the effect depends on whether a household is mainly a saver or a borrower: savers gain, borrowers lose.",
+      "mark_scheme": "1 mark: a benefit identified (e.g. savers earn more interest)\n1 mark: the benefit explained\n1 mark: a cost identified (e.g. higher loan or mortgage repayments)\n1 mark: the cost explained (less disposable income)\n1 mark: a wider effect (lower inflation or fewer jobs)\n1 mark: a judgement (depends on saver or borrower)\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Savers gain more interest and inflation may fall; borrowers pay more and jobs may be lost. It depends on the household",
+     "hint": "Consider savers and borrowers separately, then decide"
+    }
+   ]
+  },
+  {
+   "id": "economics.national",
+   "title": "The national economy",
+   "aliases": [
+    "economic growth",
+    "gdp",
+    "inflation",
+    "unemployment",
+    "fiscal policy",
+    "monetary policy",
+    "international trade",
+    "exchange rates",
+    "globalisation",
+    "recession",
+    "supply-side policies"
+   ],
+   "questions": [
+    {
+     "id": "na01",
+     "level": 1,
+     "text": "What is the name of the measure of the total value of goods and services produced in a country in a year? Give the abbreviation or the full name.",
+     "short": {
+      "accept": [
+       "GDP",
+       "gross domestic product"
+      ]
+     },
+     "solution": "Gross domestic product (GDP) measures a country's total output; a rise in real GDP is economic growth",
+     "hint": "It is a three-letter abbreviation that starts with G"
+    },
+    {
+     "id": "na02",
+     "level": 1,
+     "text": "What is inflation?",
+     "choice": {
+      "options": [
+       "A sustained rise in the general price level",
+       "A fall in the general price level",
+       "A rise in unemployment",
+       "A rise in the value of the pound"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A fall in the general price level is deflation",
+       null,
+       null
+      ]
+     },
+     "solution": "Inflation is a sustained rise in the general level of prices, which reduces the purchasing power of money",
+     "hint": "Think about what happens to prices over time"
+    },
+    {
+     "id": "na03",
+     "level": 1,
+     "text": "What term describes a sustained fall in the general price level? Give the term.",
+     "short": {
+      "accept": [
+       "deflation",
+       "deflationary"
+      ],
+      "reject": [
+       "disinflation",
+       "inflation"
+      ],
+      "feedback": {
+       "disinflation": "Disinflation is when prices are still rising, but more slowly",
+       "inflation": "Inflation is a RISE in the general price level"
+      }
+     },
+     "solution": "Deflation means the general price level is falling",
+     "hint": "It is the opposite of inflation"
+    },
+    {
+     "id": "na04",
+     "level": 1,
+     "text": "Which of these is a direct tax?",
+     "choice": {
+      "options": [
+       "VAT",
+       "Income tax",
+       "Excise duty on petrol",
+       "A tariff on imports"
+      ],
+      "correct": 1,
+      "feedback": [
+       "VAT is an indirect tax on spending",
+       null,
+       "Excise duty is an indirect tax on spending",
+       null
+      ]
+     },
+     "solution": "Direct taxes are paid directly to the government from income or profit (income tax, corporation tax); indirect taxes are on spending",
+     "hint": "A direct tax is taken from what people earn"
+    },
+    {
+     "id": "na05",
+     "level": 1,
+     "text": "What term describes the government using its spending and taxation to influence the economy? Give the term.",
+     "short": {
+      "accept": [
+       "fiscal policy",
+       "fiscal"
+      ],
+      "reject": [
+       "monetary policy",
+       "monetary"
+      ],
+      "feedback": {
+       "monetary policy": "Monetary policy uses interest rates and the money supply",
+       "monetary": "Monetary policy uses interest rates and the money supply"
+      }
+     },
+     "solution": "Fiscal policy uses government spending and taxation; monetary policy uses interest rates and the money supply",
+     "hint": "It involves the government's budget"
+    },
+    {
+     "id": "na06",
+     "level": 1,
+     "text": "What is an export?",
+     "choice": {
+      "options": [
+       "A good or service bought from another country",
+       "A tax on imported goods",
+       "A good or service sold to buyers in another country",
+       "A limit on the quantity of imports"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is an import",
+       "That is a tariff",
+       null,
+       "That is a quota"
+      ]
+     },
+     "solution": "Exports are sold abroad and bring money into the country; imports are bought from abroad",
+     "hint": "'Ex' means out"
+    },
+    {
+     "id": "na07",
+     "level": 2,
+     "text": "Which is an example of monetary policy?",
+     "choice": {
+      "options": [
+       "Changing income tax rates",
+       "Building new hospitals",
+       "Changing the rate of VAT",
+       "Changing interest rates"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Changing taxes is fiscal policy",
+       "Government spending is fiscal policy",
+       "Changing taxes is fiscal policy",
+       null
+      ]
+     },
+     "solution": "Monetary policy uses interest rates and the money supply; tax and spending changes are fiscal policy",
+     "hint": "Monetary policy is about money and interest"
+    },
+    {
+     "id": "na08",
+     "level": 2,
+     "text": "Which type of unemployment happens when people are between jobs, for example after leaving one job and while searching for another?",
+     "choice": {
+      "options": [
+       "Frictional unemployment",
+       "Structural unemployment",
+       "Cyclical unemployment",
+       "Seasonal unemployment"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Structural unemployment is caused by the long-term decline of industries",
+       "Cyclical unemployment is caused by a fall in demand during a recession",
+       null
+      ]
+     },
+     "solution": "Frictional unemployment is short-term unemployment while people move between jobs",
+     "hint": "It is caused by the time it takes to move smoothly from one job to another"
+    },
+    {
+     "id": "na09",
+     "level": 2,
+     "text": "What is a tariff?",
+     "choice": {
+      "options": [
+       "A limit on the number of goods imported",
+       "A tax on imported goods",
+       "A subsidy given to exporters",
+       "A ban on all trade"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A limit on quantity is a quota",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "A tariff is a tax on imports; a quota is a limit on the quantity of imports",
+     "hint": "It is a form of tax"
+    },
+    {
+     "id": "na10",
+     "level": 2,
+     "text": "Which of these is a measure of inflation?",
+     "choice": {
+      "options": [
+       "The FTSE 100 share index",
+       "The Human Development Index",
+       "The Consumer Prices Index (CPI)",
+       "Gross domestic product"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The FTSE 100 tracks share prices of large companies",
+       null,
+       null,
+       "GDP measures total output, not prices"
+      ]
+     },
+     "solution": "The Consumer Prices Index tracks the prices of a typical basket of goods and services over time",
+     "hint": "Look for an index based on prices that consumers pay"
+    },
+    {
+     "id": "na11",
+     "level": 2,
+     "text": "What term describes unemployment caused by the long-term decline of an industry, such as coal mining, when workers' skills no longer match the jobs available? Give the term.",
+     "short": {
+      "accept": [
+       "structural unemployment",
+       "structural"
+      ],
+      "reject": [
+       "cyclical unemployment",
+       "cyclical",
+       "frictional unemployment",
+       "frictional",
+       "seasonal unemployment",
+       "seasonal"
+      ],
+      "feedback": {
+       "cyclical unemployment": "Cyclical unemployment is caused by a recession",
+       "cyclical": "Cyclical unemployment is caused by a recession",
+       "frictional unemployment": "Frictional unemployment is short-term, between jobs",
+       "frictional": "Frictional unemployment is short-term, between jobs",
+       "seasonal unemployment": "Seasonal unemployment happens at certain times of year",
+       "seasonal": "Seasonal unemployment happens at certain times of year"
+      }
+     },
+     "solution": "Structural unemployment comes from long-term changes in the structure of the economy",
+     "hint": "The 'structure' of the economy has changed"
+    },
+    {
+     "id": "na12",
+     "level": 2,
+     "text": "What term describes a rise in the value of a currency against other currencies, caused by the market? Give the term.",
+     "short": {
+      "accept": [
+       "appreciation",
+       "appreciate",
+       "currency appreciation"
+      ],
+      "reject": [
+       "depreciation",
+       "devaluation"
+      ],
+      "feedback": {
+       "depreciation": "A depreciation is a FALL in a currency's value",
+       "devaluation": "A devaluation is a deliberate FALL in a currency's value"
+      }
+     },
+     "solution": "An appreciation is a rise in a currency's value; a depreciation is a fall",
+     "hint": "When something rises in value, we say it ..."
+    },
+    {
+     "id": "na13",
+     "level": 3,
+     "text": "The pound appreciates against the euro. What happens to the price of UK exports for buyers in the eurozone?",
+     "choice": {
+      "options": [
+       "They become cheaper",
+       "They do not change",
+       "They can no longer be sold",
+       "They become more expensive"
+      ],
+      "correct": 3
+     },
+     "solution": "A stronger pound means eurozone buyers need more euros to buy each pound, so UK exports become dearer (Strong Pound: Imports Cheaper, Exports Dearer)",
+     "hint": "Each pound now costs more euros"
+    },
+    {
+     "id": "na14",
+     "level": 3,
+     "text": "The government cuts income tax. What is the likely effect on consumer spending?",
+     "choice": {
+      "options": [
+       "It rises, because people have more disposable income",
+       "It falls, because people have less income",
+       "It stays the same",
+       "It falls, because prices rise immediately"
+      ],
+      "correct": 0
+     },
+     "solution": "Lower income tax raises disposable income, so consumers are likely to spend more",
+     "hint": "What happens to take-home pay when income tax is cut?"
+    },
+    {
+     "id": "na15",
+     "level": 3,
+     "text": "Ski instructors in a mountain resort are out of work every summer. What type of unemployment is this?",
+     "choice": {
+      "options": [
+       "Structural unemployment",
+       "Seasonal unemployment",
+       "Frictional unemployment",
+       "Cyclical unemployment"
+      ],
+      "correct": 1
+     },
+     "solution": "Seasonal unemployment happens because demand for some jobs changes with the time of year",
+     "hint": "Think about the time of year"
+    },
+    {
+     "id": "na16",
+     "level": 3,
+     "text": "A country spends more on imports of goods and services than it earns from exports. What does this mean for its balance of trade?",
+     "choice": {
+      "options": [
+       "It has a trade surplus",
+       "Its trade is balanced",
+       "It has a trade deficit",
+       "It has no trade"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A surplus means exports are greater than imports",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Imports greater than exports means a trade deficit",
+     "hint": "Balance of trade = exports − imports: is the result positive or negative?"
+    },
+    {
+     "id": "na17",
+     "level": 3,
+     "text": "Total demand in the economy rises faster than the economy can produce goods and services, so prices rise. What type of inflation is this? Give the term.",
+     "short": {
+      "accept": [
+       "demand-pull inflation",
+       "demand pull inflation",
+       "demand-pull",
+       "demand pull"
+      ],
+      "reject": [
+       "cost-push inflation",
+       "cost push inflation",
+       "cost-push",
+       "cost push"
+      ],
+      "feedback": {
+       "cost-push inflation": "Cost-push inflation is caused by rising costs of production",
+       "cost push inflation": "Cost-push inflation is caused by rising costs of production",
+       "cost-push": "Cost-push inflation is caused by rising costs of production",
+       "cost push": "Cost-push inflation is caused by rising costs of production"
+      }
+     },
+     "solution": "Demand-pull inflation: too much spending chasing too few goods 'pulls' prices up",
+     "hint": "Prices are being 'pulled' up by spending"
+    },
+    {
+     "id": "na18",
+     "level": 3,
+     "text": "A country has two consecutive quarters of negative economic growth. What is this called? Give the term.",
+     "short": {
+      "accept": [
+       "recession",
+       "a recession"
+      ],
+      "reject": [
+       "depression"
+      ],
+      "feedback": {
+       "depression": "A depression is a much deeper and longer downturn — two quarters of falling output has a different name"
+      }
+     },
+     "solution": "A recession is commonly defined as two consecutive quarters of falling real GDP",
+     "hint": "It is the downturn phase of the economic cycle"
+    },
+    {
+     "id": "na19",
+     "level": 4,
+     "text": "Real GDP growth in four quarters was: Q1 +0.5%, Q2 +0.2%, Q3 −0.3%, Q4 −0.1%. Which conclusion is correct?",
+     "choice": {
+      "options": [
+       "Real GDP fell in every quarter",
+       "Real GDP rose in every quarter",
+       "Real GDP fell only in Q1",
+       "Real GDP fell in Q3 and Q4, so the economy was in recession"
+      ],
+      "correct": 3
+     },
+     "solution": "Growth was negative in two consecutive quarters (Q3 and Q4), which meets the usual definition of a recession",
+     "hint": "Look for negative growth figures in a row"
+    },
+    {
+     "id": "na20",
+     "level": 4,
+     "text": "A basket of goods cost £200 last year and £210 this year. What is the rate of inflation for this basket?",
+     "choice": {
+      "options": [
+       "5%",
+       "10%",
+       "105%",
+       "4.8%"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "£10 is the change in pounds — turn it into a percentage of the original £200",
+       "That's this year's cost as a percentage of last year's — the rise is the part above 100%",
+       "Divide by last year's price (£200), not this year's"
+      ]
+     },
+     "solution": "Change = £10. Inflation = £10 ÷ £200 × 100 = 5%",
+     "hint": "Divide the change in price by last year's price, then multiply by 100"
+    },
+    {
+     "id": "na21",
+     "level": 4,
+     "text": "Why might a fall in the value of the pound increase inflation in the UK?",
+     "choice": {
+      "options": [
+       "Exports become more expensive",
+       "Imported goods and raw materials become more expensive",
+       "Interest rates automatically fall",
+       "Unemployment falls to zero"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A weaker pound makes exports CHEAPER for foreign buyers",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "A weaker pound makes imports dearer, raising firms' costs and the prices of imported goods",
+     "hint": "Think about what happens to the price of things bought from abroad"
+    },
+    {
+     "id": "na22",
+     "level": 4,
+     "text": "Which is a supply-side policy?",
+     "choice": {
+      "options": [
+       "Raising interest rates",
+       "Raising benefit payments to boost spending",
+       "Spending more on education and training to improve workers' skills",
+       "Putting a tariff on imports"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Changing interest rates is monetary policy",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Supply-side policies aim to increase the economy's productive capacity, for example by improving skills",
+     "hint": "Supply-side policies aim to increase how much the economy can produce"
+    },
+    {
+     "id": "na23",
+     "level": 4,
+     "text": "A government spends more than it receives in tax revenue in one year. What is the name for this gap? Give the term.",
+     "short": {
+      "accept": [
+       "budget deficit",
+       "fiscal deficit",
+       "deficit",
+       "government deficit"
+      ],
+      "reject": [
+       "national debt",
+       "budget surplus",
+       "surplus"
+      ],
+      "feedback": {
+       "national debt": "The national debt is the TOTAL built up over many years — the gap in one year has a different name",
+       "budget surplus": "A budget surplus is when revenue is GREATER than spending",
+       "surplus": "A surplus is when revenue is GREATER than spending"
+      }
+     },
+     "solution": "A budget deficit is when spending is greater than revenue in a year; borrowing covers the gap",
+     "hint": "It is the opposite of a budget surplus"
+    },
+    {
+     "id": "na24",
+     "level": 4,
+     "text": "Explain two possible causes of inflation.",
+     "rubric": {
+      "model_answer": "First, demand-pull inflation: if total demand in the economy grows faster than the economy can produce, for example because of rising consumer spending, firms raise prices. Second, cost-push inflation: if firms' costs rise, for example because of higher wages, energy prices or imported raw materials after a fall in the pound, they pass the higher costs on to consumers as higher prices.",
+      "mark_scheme": "1 mark: demand-pull identified\n1 mark: demand-pull explained (too much demand for the available output)\n1 mark: cost-push identified\n1 mark: cost-push explained (higher costs passed on in prices)\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Demand-pull (spending grows faster than output) and cost-push (rising wages, energy or import costs passed on)",
+     "hint": "One cause comes from spending; the other comes from firms' costs"
+    },
+    {
+     "id": "na25",
+     "level": 5,
+     "text": "Which statement about economic growth is accurate?",
+     "choice": {
+      "options": [
+       "It always reduces inequality",
+       "It always lowers unemployment to zero",
+       "It means the general price level is falling",
+       "It can raise living standards but may also increase pollution"
+      ],
+      "correct": 3
+     },
+     "solution": "Growth raises incomes and can create jobs, but it can also bring costs such as pollution and use of resources",
+     "hint": "Growth has benefits and costs"
+    },
+    {
+     "id": "na26",
+     "level": 5,
+     "text": "Which statement about a progressive tax is accurate?",
+     "choice": {
+      "options": [
+       "Higher earners pay a larger percentage of their income in tax",
+       "Everyone pays the same amount of tax",
+       "Lower earners pay a larger percentage of their income in tax",
+       "It is charged only on imports"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That describes a regressive tax",
+       null
+      ]
+     },
+     "solution": "With a progressive tax, the percentage of income paid rises as income rises",
+     "hint": "Think about the percentage of income, not the amount"
+    },
+    {
+     "id": "na27",
+     "level": 5,
+     "text": "Why might protectionism, such as tariffs, harm consumers?",
+     "choice": {
+      "options": [
+       "Imported goods become cheaper",
+       "Imported goods become more expensive and choice may be reduced",
+       "Domestic firms face more competition",
+       "The variety of imported goods increases"
+      ],
+      "correct": 1
+     },
+     "solution": "Tariffs raise the price of imports and reduce competition, so consumers pay more and have less choice",
+     "hint": "Who pays the tariff in the end?"
+    },
+    {
+     "id": "na28",
+     "level": 5,
+     "text": "Which statement about globalisation is accurate?",
+     "choice": {
+      "options": [
+       "It means countries trade less with each other",
+       "It has stopped multinational companies from operating",
+       "It has increased trade between countries, but some workers lose jobs when production moves abroad",
+       "It affects only the countries of Europe"
+      ],
+      "correct": 2
+     },
+     "solution": "Globalisation has increased trade, investment and links between economies, with winners and losers",
+     "hint": "Globalisation means the world's economies are becoming more connected"
+    },
+    {
+     "id": "na29",
+     "level": 5,
+     "text": "What term describes a company that has its headquarters in one country and operates in several other countries? Give the term or its abbreviation.",
+     "short": {
+      "accept": [
+       "multinational company",
+       "multinational",
+       "multinational corporation",
+       "MNC",
+       "transnational company",
+       "transnational corporation",
+       "TNC",
+       "multinational companies",
+       "transnational"
+      ]
+     },
+     "solution": "Multinational (transnational) companies operate in many countries and are a major part of globalisation",
+     "hint": "'Multi' means many and 'national' means countries"
+    },
+    {
+     "id": "na30",
+     "level": 5,
+     "text": "Assess whether lowering interest rates is an effective way to reduce unemployment.",
+     "rubric": {
+      "model_answer": "Lower interest rates make borrowing cheaper and saving less attractive, so consumers spend more and firms invest more. Higher demand means firms need more workers, so cyclical unemployment falls. However, it may take a long time to work, and if confidence is low, people may not borrow even at low rates. It does little for structural unemployment, where workers lack the right skills; training (a supply-side policy) is needed. Lower rates can also raise inflation. So it works best for unemployment caused by a recession.",
+      "mark_scheme": "1 mark: lower rates make borrowing cheaper / saving less attractive\n1 mark: spending and investment rise\n1 mark: firms need more workers, so cyclical unemployment falls\n1 mark: a limitation (time lags, low confidence, inflation)\n1 mark: does not solve structural unemployment\n1 mark: a justified conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "It can cut cyclical unemployment by boosting spending, but works slowly, may raise inflation and does not fix structural unemployment",
+     "hint": "Explain the chain of effects, then its limits, then decide"
+    }
+   ]
+  }
+ ]
+}
