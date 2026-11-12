@@ -303,7 +303,7 @@
         "hint": "Look for a leaf that appears more than once in the same row"},
        {"id": "dg19", "level": 3,
         "text": "A histogram has a bar for the class 10 < t ≤ 30 with a frequency density of 2. What is the frequency of this class?",
-        "choice": {"options": ["40", "20", "15", "60"], "correct": 0,
+        "choice": {"options": ["40", "20", "10", "60"], "correct": 0,
                    "feedback": [null, "The class width is 30 - 10 = 20: multiply it by the frequency density", "Frequency = frequency density × class width, not class width ÷ frequency density", "The class width is 20, not 30"]},
         "solution": "Frequency = frequency density × class width = 2 × 20 = 40",
         "hint": "Frequency = frequency density × class width"},
