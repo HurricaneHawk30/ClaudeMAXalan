@@ -223,8 +223,9 @@ _NAMES = {
 
 
 def named(f: str) -> str:
-    """'sulfuric acid, H₂SO₄'."""
-    return f"{_NAMES[f]}, {chem(f)}" if f in _NAMES else chem(f)
+    """'sulfuric acid (H₂SO₄)'. Brackets, not a comma, so the name reads well mid-sentence:
+    'the mass of iron (Fe) made from …', not 'the mass of iron, Fe made from …'."""
+    return f"{_NAMES[f]} ({chem(f)})" if f in _NAMES else chem(f)
 
 
 _SIMPLE = ("H2O", "CO2", "NaCl", "MgO", "CH4", "NH3", "HCl", "H2SO4", "CaCO3", "NaOH", "KCl", "C2H6", "SO2",
@@ -1301,7 +1302,8 @@ GEN_SKILLS: tuple[Skill, ...] = (
            ("percentage yield", "atom economy", "theoretical yield", "yield"),
            (_yield_1, _ae_2, _yield_3, _yield_4, _ae_5), "Percentage yield = actual ÷ theoretical × 100"),
     _skill("rates", "Rates of reaction",
-           ("mean rate of reaction", "rate of reaction", "rate calculation", "mean rate", "rates calculation"),
+           ("mean rate of reaction", "rate of reaction", "rate calculation", "mean rate", "rates calculation",
+            "rates of reaction"),
            (_rate_1, _rate_2, _rate_3, _rate_4, _rate_5), "Mean rate = amount of product formed ÷ time taken"),
     _skill("rf_values", "Chromatography Rf values",
            ("rf value", "chromatography calculation", "rf values", "retention factor", "rf"),

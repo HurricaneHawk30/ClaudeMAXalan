@@ -19,7 +19,11 @@
     "aerobic",
     "anaerobic",
     "epoc",
-    "cardiac output"
+    "cardiac output",
+    "skeleton",
+    "bones",
+    "heart",
+    "lungs"
    ],
    "questions": [
     {
@@ -801,10 +805,12 @@
       "reject": [
        "balance",
        "speed",
-       "coordination"
+       "coordination",
+       "ability"
       ],
       "feedback": {
-       "balance": "Balance is keeping the body's centre of mass over the base of support"
+       "balance": "Balance is keeping the body's centre of mass over the base of support",
+       "ability": "'Ability' is too general — name the component of fitness"
       }
      }
     },

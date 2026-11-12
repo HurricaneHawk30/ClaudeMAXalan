@@ -327,7 +327,13 @@
        "revolving stage",
        "turntable",
        "a revolve"
-      ]
+      ],
+      "reject": [
+       "resolve"
+      ],
+      "feedback": {
+       "resolve": "Careful: 'resolve' means to settle something — check the spelling of the turning stage"
+      }
      },
      "solution": "A revolve is a turntable built into the stage floor that rotates scenery and actors",
      "hint": "It begins with R and spins like a record player"
@@ -1418,10 +1424,14 @@
        "project"
       ],
       "reject": [
-       "volume"
+       "volume",
+       "protection",
+       "production"
       ],
       "feedback": {
-       "volume": "Volume is simply how loud; carrying the voice clearly without shouting has its own name"
+       "volume": "Volume is simply how loud; carrying the voice clearly without shouting has its own name",
+       "protection": "That's a different word — this vocal skill makes the voice carry to the back without shouting",
+       "production": "That's a different word — this vocal skill makes the voice carry to the back without shouting"
       }
      },
      "solution": "Projection carries the voice to the whole audience, supported by breath from the diaphragm, without shouting",
@@ -1566,10 +1576,12 @@
        "expressions"
       ],
       "reject": [
-       "gesture"
+       "gesture",
+       "expressionism"
       ],
       "feedback": {
-       "gesture": "A gesture uses the hands, arms or head; this skill uses the face"
+       "gesture": "A gesture uses the hands, arms or head; this skill uses the face",
+       "expressionism": "Expressionism is a style of theatre and art — this skill uses the face to show feelings"
       }
      },
      "solution": "Facial expression shows a character's feelings through the face",

@@ -105,6 +105,10 @@ FLAGS_LINE = "#{id} {datetime} {kind} · chat {chat_id} ({name}): {text}"
 FLAGS_DONE = "✅ {n} flag{s} marked as reviewed."
 FLAGS_USAGE = "Usage: /flags (list new flags), /flags done [N] (mark flags up to #N as reviewed)"
 FLAG_ALERT = "🚩 Safety flag ({kind}) from {name} (chat {chat_id}):\n\"{text}\"\nUse /student {chat_id} for details."
+# docs/ARCHITECTURE_V2.md section 10.2: with a problem open, the alert and the stored flag name it,
+# so the owner can tell a curriculum answer from a real disclosure
+FLAG_PROBLEM = "Open problem: {ref} (the message may be an answer to it)"
+FLAG_TEXT_REF = "[open problem: {ref}] {text}"
 CODE_ALERT = "🚩 {n} wrong access codes from {name} (chat {chat_id}) in the last hour — someone may be guessing codes. Use /student {chat_id} for details."
 STATS = (
     "📊 Stats\nStudents: {total} ({verified} verified, {active7} active in 7 days)\n"

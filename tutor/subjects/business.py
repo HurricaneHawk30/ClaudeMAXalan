@@ -303,7 +303,7 @@ def _bf_5(rng: random.Random) -> Draft:
 FINANCE_MATHS = gen_skill(
     SUBJECT_ID, "finance_maths", "Business calculations",
     ("break-even point", "break even calculation", "gross profit margin", "net profit margin", "arr",
-     "cash flow forecast", "margin of safety"),
+     "cash flow forecast", "margin of safety", "break even", "break even point", "profit"),
     (_bf_1, _bf_2, _bf_3, _bf_4, _bf_5),
     "Write down the formula first, then put the numbers in",
 )

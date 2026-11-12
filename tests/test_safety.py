@@ -104,10 +104,13 @@ class TestDistressFlow(SafetyCase):
         mine = by_chat[5]
         self.assertEqual(mine.text, DISTRESS)
         self.assertEqual(tuple(tuple(r) for r in mine.keyboard), TOPIC_KB_MATHS_11)
-        self.assertEqual(by_chat[OWNER].text, FLAG_ALERT("distress", "Zorblax", 5, "I want to kill myself"))
+        # the open problem is named so the owner can judge the context (section 10.2)
+        ref = p.problem.ref or p.skill
+        self.assertEqual(by_chat[OWNER].text, FLAG_ALERT("distress", "Zorblax", 5, "I want to kill myself", ref))
         flags = self.store.unreviewed_flags()
         self.assertEqual(len(flags), 1)
-        self.assertEqual((flags[0].chat_id, flags[0].kind, flags[0].text), (5, "distress", "I want to kill myself"))
+        self.assertEqual((flags[0].chat_id, flags[0].kind, flags[0].text),
+                         (5, "distress", helpers.FLAG_TEXT("I want to kill myself", ref)))
         self.assertFalse(flags[0].reviewed)
         # nothing else happened: no problem sent, pending kept, LLM untouched, no attempt
         self.assertFalse(any(o.text.startswith("Problem") for o in out))
@@ -216,6 +219,8 @@ class TestDeleteMyData(SafetyCase):
     def test_delete_everything_except_unreviewed_safety_flags(self):
         to_topic(self.engine, 5)
         send(self.engine, 5, answer_of(self.store, 5))
+        q = self.store.get_pending(5)
+        ref = q.problem.ref or q.skill
         send(self.engine, 5, "I want to die")
         send(self.engine, OWNER, "/stats")
         out = send(self.engine, 5, "/delete_my_data")
@@ -227,7 +232,7 @@ class TestDeleteMyData(SafetyCase):
         self.assertEqual(self.store.llm_calls(5, helpers.day_of(self.clock)), 0)
         # the safeguarding record stays, unchanged, until the owner has reviewed it
         flags = [f for f in self.store.unreviewed_flags() if f.chat_id == 5]
-        self.assertEqual([(f.kind, f.text) for f in flags], [("distress", "I want to die")])
+        self.assertEqual([(f.kind, f.text) for f in flags], [("distress", helpers.FLAG_TEXT("I want to die", ref))])
         self.assertTrue(send(self.engine, OWNER, "/flags")[0].text.startswith("🚩 1 new flag:"))
         send(self.engine, OWNER, "/flags done")
         self.assertEqual(self.store.conn.execute("SELECT COUNT(*) FROM flags WHERE chat_id = 5").fetchone()[0], 0)

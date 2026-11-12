@@ -11,7 +11,7 @@ from . import texts as T
 from .config import Config
 from .content import MY_OWN_TOPIC_LABEL, Problem, Registry, Topic, check, fingerprint, letters_text, load_registry
 from .db import Attempt, Pending, Store, Student
-from .intents import (command_name, intent, is_cheat_request, is_distress, normalize_code,
+from .intents import (command_name, exact_intent, is_cheat_request, is_distress, loose_intent, normalize_code,
                       parse_year)
 from .llm import LLM, mark_rubric, pick_skill, tutor_text
 from .messages import Incoming, Keyboard, Outgoing
@@ -196,14 +196,31 @@ class Engine:
             st.step = "subject"
         return st
 
+    def _open_problem_ref(self, st: Student) -> str:
+        """The open problem (bank ref, else skill id) so the owner can judge a flag in context:
+        a curriculum answer such as "suicide" in RS ethics is still flagged (safety first)."""
+        if not st.verified:
+            return ""
+        try:
+            p = self.store.get_pending(st.chat_id)
+        except Exception as e:      # noqa: BLE001 - the flag and the DISTRESS reply must always go out
+            log.error("could not read the open problem for a flag: %s", where(e))
+            return ""
+        if p is None:
+            return ""
+        return p.problem.ref or p.skill or ""
+
     def _distress(self, msg: Incoming, text: str, now: float) -> list[Outgoing]:
         st = self._seen(msg, now)
-        self.store.add_flag(msg.chat_id, "distress", text, now)
+        ref = self._open_problem_ref(st)
+        self.store.add_flag(msg.chat_id, "distress", T.FLAG_TEXT_REF.format(ref=ref, text=text) if ref else text, now)
         out = [Outgoing(msg.chat_id, T.DISTRESS, keyboard=self._current_kb(st))]
         owner_id = self.config.owner_id
         if owner_id is not None:
-            out.append(Outgoing(owner_id, T.FLAG_ALERT.format(
-                kind="distress", name=self._name(st), chat_id=msg.chat_id, text=text[:300])))
+            alert = T.FLAG_ALERT.format(kind="distress", name=self._name(st), chat_id=msg.chat_id, text=text[:300])
+            if ref:
+                alert += "\n" + T.FLAG_PROBLEM.format(ref=ref)
+            out.append(Outgoing(owner_id, alert))
         self.store.save_student(st)
         return out
 
@@ -358,11 +375,20 @@ class Engine:
 
     def _next_problem(self, st: Student, topic: Topic, skill_id: str, level: int, number: int,
                       prev: Problem | None) -> Outgoing:
-        skill = self.registry.skill(skill_id)
-        if skill is None:
-            raise RuntimeError(f"unknown skill {skill_id}")
         gen = topic.level_map[level - 1]
-        seed, problem = self._choose(st.chat_id, skill, gen, prev)
+        got = self._choose_from(st.chat_id, skill_id, gen, prev)
+        if got is None:
+            # this skill cannot make a problem (a generator bug): another skill of the topic
+            others = [s for s in topic.skills if s != skill_id]
+            self.rng.shuffle(others)
+            for other in others:
+                got = self._choose_from(st.chat_id, other, gen, prev)
+                if got is not None:
+                    skill_id = other
+                    break
+        if got is None:
+            raise RuntimeError(f"no skill of topic {topic.id} could generate a problem")
+        seed, problem = got
         self.store.add_seen(st.chat_id, skill_id, fingerprint(problem))
         self.store.set_pending(Pending(
             chat_id=st.chat_id, subject=st.subject, topic=topic.id, skill=skill_id, level=level,
@@ -371,29 +397,56 @@ class Engine:
         return Outgoing(st.chat_id, _problem_message(problem, number, topic.exam, gen),
                         keyboard=self._lesson_kb(st, problem))
 
-    def _choose(self, chat_id: int, skill, gen: int, prev: Problem | None) -> tuple[int, Problem]:
+    def _choose_from(self, chat_id: int, skill_id: str, gen: int,
+                     prev: Problem | None) -> tuple[int, Problem] | None:
+        skill = self.registry.skill(skill_id)
+        if skill is None:
+            log.error("unknown skill %s", skill_id)
+            return None
+        return self._choose(chat_id, skill, gen, prev)
+
+    def _choose(self, chat_id: int, skill, gen: int, prev: Problem | None) -> tuple[int, Problem] | None:
         """Repeat avoidance (docs/ARCHITECTURE_V2.md section 3.2): never the previous problem, never two
-        extended-practice problems in a row, and the least recently seen problem when all were seen."""
+        extended-practice problems in a row, and the least recently seen problem when all were seen.
+
+        Section 10.2: every candidate seed is drawn at random (consecutive seeds would walk a bank's
+        questions in file order), and a seed whose generator raises is skipped.  None = no seed worked.
+        """
         recent = self.store.recent_seen(chat_id, skill.id)
-        base = self.rng.randrange(1, 2 ** 31 - REROLL_TRIES)
         prev_fp = fingerprint(prev) if prev is not None else None
         fallback: tuple[int, int, Problem] | None = None       # (index in recent, seed, problem)
-        for k in range(REROLL_TRIES):
-            seed = base + k
-            p = skill.generate(gen, seed)
-            fp = fingerprint(p)
+        any_ok: tuple[int, Problem] | None = None              # last resort; may repeat
+        failed, first_error = 0, None
+        chosen: tuple[int, Problem] | None = None
+        for _ in range(REROLL_TRIES):
+            seed = self.rng.randrange(1, 2 ** 31)
+            try:
+                p = skill.generate(gen, seed)
+                fp = fingerprint(p)
+            except Exception as e:   # noqa: BLE001 - one bad seed must not break the lesson
+                failed += 1
+                first_error = first_error or e
+                continue
+            if any_ok is None:
+                any_ok = (seed, p)
             if prev is not None and (fp == prev_fp or p.text == prev.text):
                 continue
             if prev is not None and prev.answer.kind == "rubric" and p.answer.kind == "rubric":
                 continue
             if fp not in recent:
-                return seed, p
+                chosen = (seed, p)
+                break
             idx = recent.index(fp)
             if fallback is None or idx > fallback[0]:
                 fallback = (idx, seed, p)
+        if failed:
+            log.error("skill %s level %s: the generator failed for %d seed(s): %s",
+                      skill.id, gen, failed, where(first_error))
+        if chosen is not None:
+            return chosen
         if fallback is not None:
             return fallback[1], fallback[2]
-        return base, skill.generate(gen, base)          # last resort; may repeat
+        return any_ok
 
     def _record(self, st: Student, p: Pending, correct: bool, skipped: bool) -> None:
         self.store.add_attempt(Attempt(
@@ -417,7 +470,17 @@ class Engine:
         problem = p.problem
         answer = problem.answer
         kb = self._lesson_kb(st, problem)
-        want = intent(text)
+        # docs/ARCHITECTURE_V2.md section 10.2: a whole-message command ("skip", "hint please") counts
+        # unless it is the correct answer; a command phrase inside a longer text ("I need help") counts
+        # only when the checker finds no answer in it; extended practice takes whole-message commands only
+        want = exact_intent(text)
+        verdict = None
+        if answer.kind != "rubric":
+            verdict = check(answer, text, problem.mistakes)
+            if verdict.status == "correct":
+                want = None
+            elif want is None and verdict.status in ("unparsed", "unmarkable"):
+                want = loose_intent(text)
 
         if want == "hint":
             if p.hints_given == 0:
@@ -430,15 +493,15 @@ class Engine:
             return [Outgoing(st.chat_id, reply, keyboard=kb)]
 
         if want == "skip":
-            self._record(st, p, False, True)
-            level = self._set_level(st, p, p.level - 1)
+            level = p.level
+            if answer.kind != "rubric":        # D2: extended practice: no attempt, no level change
+                self._record(st, p, False, True)
+                level = self._set_level(st, p, p.level - 1)
             return [Outgoing(st.chat_id, T.SKIP.format(solution=_trim(problem.solution), answer=answer.display)),
                     self._next_problem(st, topic, p.skill, level, p.problem_no + 1, problem)]
 
-        if answer.kind == "rubric":
+        if verdict is None:
             return self._rubric_reply(st, p, topic, text)
-
-        verdict = check(answer, text, problem.mistakes)
 
         if verdict.status == "correct":
             self._record(st, p, True, False)

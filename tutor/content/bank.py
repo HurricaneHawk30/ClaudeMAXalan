@@ -7,12 +7,16 @@ raises ``BankError`` whose message starts with the JSON path of the problem.
 """
 from __future__ import annotations
 
+import contextlib
+import contextvars
 import copy
+import glob
 import json
+import logging
 import os
 import re
 from dataclasses import dataclass, fields, replace
-from typing import Callable
+from typing import Callable, Iterator
 
 from .base import (
     ANSWER_KINDS, SHORT_FORMS, Answer, BankItem, Mistake, Problem, Skill, Subject, Topic, YearSpec,
@@ -21,6 +25,8 @@ from .checker import check, short_typo_eligible
 from .kinds import _choice_problem, _choice_semantics, _short_problem, _short_semantics, build_choice, build_short
 from .registry import Registry
 from . import words
+
+log = logging.getLogger("tutor.content")
 
 _TUTOR_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BANKS_DIR = os.path.join(_TUTOR_DIR, "subjects", "banks")
@@ -623,19 +629,31 @@ def _parse_years(raw: object, skill_ids: set[str], errors: list[str] | None) -> 
                 prow = []
                 for ti, t in enumerate(row):
                     tp = f"{rp}[{ti}]"
-                    t = _obj(t, tp, _KEYS_TOPIC)
-                    tid = _str(t, "id", tp).strip()
-                    label = _str(t, "label", tp).strip()
-                    tskills = _req(t, "skills", tp, list)
-                    if not tskills or any(not isinstance(k, str) or k not in skill_ids for k in tskills):
-                        bad = [k for k in tskills if not isinstance(k, str) or k not in skill_ids]
-                        raise _err(f"{tp}.skills", f"must be a non-empty list of skill ids from this file"
-                                                   + (f" (unknown: {bad})" if bad else ""))
-                    kw = {}
-                    if "level_map" in t:
-                        kw["level_map"] = _level_map(t["level_map"], f"{tp}.level_map")
-                    prow.append((tid, label, tuple(tskills), kw, tp))
-                parsed_rows.append(prow)
+
+                    def one_topic(t=t, tp=tp) -> None:
+                        t = _obj(t, tp, _KEYS_TOPIC)
+                        tid = _str(t, "id", tp).strip()
+                        label = _str(t, "label", tp).strip()
+                        tskills = _req(t, "skills", tp, list)
+                        if not tskills or any(not isinstance(k, str) or k not in skill_ids for k in tskills):
+                            bad = [k for k in tskills if not isinstance(k, str) or k not in skill_ids]
+                            e = _err(f"{tp}.skills", f"must be a non-empty list of skill ids from this file"
+                                                     + (f" (unknown: {bad})" if bad else ""))
+                            good = [k for k in tskills if isinstance(k, str) and k in skill_ids]
+                            if errors is None or not good:
+                                raise e
+                            errors.append(str(e))       # collect mode: the topic keeps its working skills
+                            tskills = good
+                        kw = {}
+                        if "level_map" in t:
+                            kw["level_map"] = _level_map(t["level_map"], f"{tp}.level_map")
+                        prow.append((tid, label, tuple(tskills), kw, tp))
+
+                    _guard(errors, one_topic)          # collect mode: a broken topic is left out
+                if prow:
+                    parsed_rows.append(prow)
+            if not parsed_rows:
+                raise _err(f"{yp}.rows", "no usable topics")
             for y in ys:
                 if y in years:
                     raise _err(yp, f"year {y} is defined twice")
@@ -705,6 +723,24 @@ def parse_pack_data(data: object, subject_id: str, errors: list[str] | None = No
 
 _BANK_CACHE: dict[tuple, tuple[Subject, list[Skill]]] = {}
 _PACK_CACHE: dict[tuple, list[Skill]] = {}
+# lenient loads keep the problems they skipped: (result, errors)
+_LENIENT_BANK_CACHE: dict[tuple, tuple[tuple[Subject, list[Skill]], tuple[str, ...]]] = {}
+_LENIENT_PACK_CACHE: dict[tuple, tuple[list[Skill], tuple[str, ...]]] = {}
+
+# Non-strict runtime loading (docs/ARCHITECTURE_V2.md section 10.2): while a list is set here, load_bank and
+# load_pack leave out broken questions, skills and topics instead of raising, and append one line per
+# problem to the list.  Strict loading (tests, audit) is unchanged.
+_LENIENT: contextvars.ContextVar[list[str] | None] = contextvars.ContextVar("tutor_bank_lenient", default=None)
+
+
+@contextlib.contextmanager
+def lenient(errors: list[str]) -> Iterator[list[str]]:
+    """Within this block bank and pack loading skips broken parts and records them in ``errors``."""
+    token = _LENIENT.set(errors)
+    try:
+        yield errors
+    finally:
+        _LENIENT.reset(token)
 
 
 def _file_key(path: str) -> tuple:
@@ -716,12 +752,34 @@ def _file_key(path: str) -> tuple:
     return real, st.st_mtime_ns, st.st_size
 
 
+def _report_skipped(path: str, problems: tuple[str, ...], sink: list[str]) -> None:
+    name = os.path.basename(path)
+    for p in problems:
+        msg = f"{name}: skipped {p}"
+        log.warning("%s", msg)
+        sink.append(msg)
+
+
 def load_bank(path: str) -> tuple[Subject, list[Skill]]:
     """A complete subject from a bank file; cached by (realpath, mtime_ns, size)."""
     key = _file_key(path)
     hit = _BANK_CACHE.get(key)
     if hit is not None:
         return hit
+    sink = _LENIENT.get()
+    if sink is not None:
+        got = _LENIENT_BANK_CACHE.get(key)
+        if got is None:
+            errors: list[str] = []
+            subject, skills = parse_bank_data(_read_json(path), errors)
+            if subject is None:
+                raise BankError(errors[0] if errors else "$.years: no usable years")
+            got = ((subject, skills), tuple(errors))
+            _LENIENT_BANK_CACHE[key] = got
+            if not errors:
+                _BANK_CACHE[key] = got[0]
+        _report_skipped(path, got[1], sink)
+        return got[0]
     subject, skills = parse_bank_data(_read_json(path))
     assert subject is not None
     out = (subject, skills)
@@ -749,6 +807,69 @@ def load_pack(name_or_path: str, subject_id: str) -> list[Skill]:
     hit = _PACK_CACHE.get(key)
     if hit is not None:
         return hit
+    sink = _LENIENT.get()
+    if sink is not None:
+        got = _LENIENT_PACK_CACHE.get(key)
+        if got is None:
+            errors: list[str] = []
+            skills = parse_pack_data(_read_json(path), subject_id, errors)
+            got = (skills, tuple(errors))
+            _LENIENT_PACK_CACHE[key] = got
+            if not errors:
+                _PACK_CACHE[key] = skills
+        _report_skipped(path, got[1], sink)
+        return got[0]
     skills = parse_pack_data(_read_json(path), subject_id)
     _PACK_CACHE[key] = skills
     return skills
+
+
+# ------------------------------------------------------------ known words
+
+_WORD_RX = re.compile(r"[^\W\d_]+")
+_KNOWN_WORDS: frozenset[str] | None = None
+
+
+def _json_strings(o: object, out: list[str]) -> None:
+    if isinstance(o, str):
+        out.append(o)
+    elif isinstance(o, dict):
+        for k, v in o.items():
+            out.append(str(k))
+            _json_strings(v, out)
+    elif isinstance(o, list):
+        for v in o:
+            _json_strings(v, out)
+
+
+def vocabulary_words(data: object) -> set[str]:
+    """Every word (letters only, casefolded, apostrophes removed, plus its accent-folded copy) of every
+    string in a bank or pack: question texts, options, accepts, rejects, solutions, hints, feedback,
+    model answers, titles and aliases."""
+    out: list[str] = []
+    _json_strings(data, out)
+    blob = "\n".join(out).casefold()
+    for q in ("'", "’", "‘", "ʼ"):
+        blob = blob.replace(q, "")
+    found = set(_WORD_RX.findall(blob))
+    return found | {words.fold(w) for w in found}
+
+
+def known_words() -> frozenset[str]:
+    """The global known-word set: the words of ALL shipped bank and pack files (every subject).
+
+    The checker never accepts a typed word from this set as a misspelling of a different answer word
+    (docs/ARCHITECTURE_V2.md section 10.2: "refraction" is not a typo of "reflection").  Built once per
+    process from the files on disk, so it does not depend on which sources were loaded or in what order.
+    """
+    global _KNOWN_WORDS
+    if _KNOWN_WORDS is None:
+        found: set[str] = set()
+        for d in (BANKS_DIR, PACKS_DIR):
+            for path in sorted(glob.glob(os.path.join(d, "*.json"))):
+                try:
+                    found |= vocabulary_words(_read_json(path))
+                except BankError:
+                    continue        # a broken file is reported by the loader, not here
+        _KNOWN_WORDS = frozenset(found)
+    return _KNOWN_WORDS

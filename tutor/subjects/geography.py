@@ -130,22 +130,34 @@ def _l1_range(rng: random.Random) -> Draft:
     return _q(text, _ans(rng_v, u), sol, "Find the highest and the lowest values first", ms)
 
 
+def _mean_values(rng: random.Random, n: int, lo: int, hi: int) -> tuple[list[int], int]:
+    """n whole numbers in [lo, hi] whose mean is a whole number m, with at least 3 different values.
+
+    Never fails: the first n - 1 values are drawn so that the sum still needed by the remaining
+    values can always be reached, and the last value is set so the total is exactly n × m.
+    """
+    edge = max(3, (hi - lo) // 4)                  # a mean near the middle keeps the data varied
+    m = rng.randint(lo + edge, hi - edge)
+    for _ in range(20):
+        need = n * m
+        vals = []
+        for left in range(n - 1, 0, -1):          # values still to choose after this one
+            v = rng.randint(max(lo, need - left * hi), min(hi, need - left * lo))
+            vals.append(v)
+            need -= v
+        vals.append(need)                          # lo <= need <= hi by construction
+        if len(set(vals)) >= 3:
+            rng.shuffle(vals)
+            return vals, m
+    vals = [m - 3, m + 3] + [m] * (n - 2)          # deterministic fallback: mean m, 3 different values, in range
+    rng.shuffle(vals)
+    return vals, m
+
+
 def _l1_mean(rng: random.Random) -> Draft:
     n = rng.randint(5, 7)
     intro, name, u, lo, hi = _intro(rng, n)
-
-    def pick(r):
-        m = r.randint(lo + 3, hi - 3)
-        vals = [r.randint(lo, hi) for _ in range(n - 1)]
-        last = n * m - sum(vals)
-        if not lo <= last <= hi:
-            return None
-        vals.append(last)
-        r.shuffle(vals)
-        if len(set(vals)) < 3:
-            return None
-        return vals, m
-    vals, m = retry(pick, rng)
+    vals, m = _mean_values(rng, n, lo, hi)
     total = sum(vals)
     text = f"{intro}\n{_listing(vals)}\nWork out the mean."
     sol = f"Total = {total}, and there are {n} values, so mean = {total} ÷ {n} = {_disp(m, u)}"
@@ -309,8 +321,11 @@ def _l5_density(rng: random.Random) -> Draft:
     text = (f"{place} has a population of {group(pop)} and an area of {area} km². "
             f"Work out its population density in people per km². Give your answer to the nearest whole number.")
     shown = fmt_dp(dens, 0)
-    sol = (f"Population density = population ÷ area = {group(pop)} ÷ {area} = {_approx(dens)} "
-           f"= {shown} people/km² (nearest whole number)")
+    if dens.denominator == 1:          # exact: no rounding step to show
+        sol = f"Population density = population ÷ area = {group(pop)} ÷ {area} = {shown} people/km²"
+    else:
+        sol = (f"Population density = population ÷ area = {group(pop)} ÷ {area} = {_approx(dens)} "
+               f"= {shown} people/km² (nearest whole number)")
     ans = num_answer(dens, f"{shown} people/km²", dp=0)
     ms = []
     inv = Fraction(area, pop)

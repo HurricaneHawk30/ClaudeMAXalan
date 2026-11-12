@@ -1842,11 +1842,13 @@
       ],
       "reject": [
        "exhibition",
-       "production"
+       "production",
+       "distributor"
       ],
       "feedback": {
        "exhibition": "Exhibition is the actual showing of the film, for example in cinemas",
-       "production": "Production is the making of the film"
+       "production": "Production is the making of the film",
+       "distributor": "A distributor is the company that does this job — give the name of the stage"
       }
      },
      "solution": "Distribution links production and exhibition: marketing the film and arranging its release",

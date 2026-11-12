@@ -1973,7 +1973,13 @@
        "bakers",
        "baker's shop"
       ],
-      "form": "any"
+      "reject": [
+       "baker"
+      ],
+      "form": "any",
+      "feedback": {
+       "baker": "A baker is the person (il panettiere) — «la panetteria» is the shop"
+      }
      },
      "solution": "La panetteria = the bakery (il pane = bread)",
      "hint": "It comes from pane, bread"

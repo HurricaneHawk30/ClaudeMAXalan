@@ -20,7 +20,8 @@
     "extended family",
     "lone-parent family",
     "murdock",
-    "parsons"
+    "parsons",
+    "family"
    ],
    "questions": [
     {
@@ -224,11 +225,15 @@
       ],
       "reject": [
        "secondary socialisation",
-       "secondary socialization"
+       "secondary socialization",
+       "specialisation",
+       "specialization"
       ],
       "feedback": {
        "secondary socialisation": "Secondary socialisation happens later, through school, peers and the media",
-       "secondary socialization": "Secondary socialisation happens later, through school, peers and the media"
+       "secondary socialization": "Secondary socialisation happens later, through school, peers and the media",
+       "specialisation": "Specialisation means concentrating on one task or job — this term is about learning norms and values",
+       "specialization": "Specialisation means concentrating on one task or job — this term is about learning norms and values"
       }
      },
      "solution": "Primary socialisation happens in the family in early childhood; secondary socialisation comes later through school, peers and the media",
@@ -1137,7 +1142,8 @@
     "victim surveys",
     "deviance",
     "merton",
-    "dark figure of crime"
+    "dark figure of crime",
+    "crime"
    ],
    "questions": [
     {

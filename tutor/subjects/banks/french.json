@@ -1928,7 +1928,13 @@
        "bakers",
        "baker's shop"
       ],
-      "form": "any"
+      "reject": [
+       "baker"
+      ],
+      "form": "any",
+      "feedback": {
+       "baker": "A baker is the person (le boulanger) — «la boulangerie» is the shop"
+      }
      },
      "solution": "La boulangerie = the bakery (le boulanger = the baker)",
      "hint": "You buy bread and croissants there"

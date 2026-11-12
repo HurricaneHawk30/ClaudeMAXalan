@@ -1980,7 +1980,13 @@
        "bakers",
        "baker's shop"
       ],
-      "form": "any"
+      "reject": [
+       "baker"
+      ],
+      "form": "any",
+      "feedback": {
+       "baker": "A baker is the person (el panadero) — «la panadería» is the shop"
+      }
      },
      "solution": "La panadería = the bakery (el pan = bread)",
      "hint": "It comes from pan, bread"

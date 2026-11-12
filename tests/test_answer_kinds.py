@@ -255,8 +255,10 @@ class TestShortRules(unittest.TestCase):
 
     def test_typo_distance_one_below_ten_two_from_ten(self):
         self.assertNotEqual(check_short(["mitosis"], "mitoxxs").status, "correct")             # 2 edits, len 7
-        v = check_short(["photosynthesis"], "photosinthesys")                                    # 2 edits, len 14
+        v = check_short(["photosynthesis"], "phtosynthesys")          # 2 edits (1 deletion, 1 substitution)
         self.assertEqual((v.status, v.feedback), ("correct", NOTE_SPELLING("photosynthesis")))
+        # section 10.2 (c): two SUBSTITUTIONS are never a typo, even in a long word
+        self.assertNotEqual(check_short(["photosynthesis"], "photosinthesys").status, "correct")
         self.assertNotEqual(check_short(["photosynthesis"], "photosinthesyzz").status, "correct")   # 4 edits
 
     def test_typo_ten_char_accept_allows_two(self):

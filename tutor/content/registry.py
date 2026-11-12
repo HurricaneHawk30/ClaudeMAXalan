@@ -68,13 +68,51 @@ class Registry:
         # (subject, year) -> {folded label -> Topic}
         self._labels: dict[tuple[str, int], dict[str, Topic]] = {}
         self._past: dict[tuple[str, int], Topic] = {}
-        self.load_errors: list[str] = []          # sources skipped by load_registry(strict=False)
+        self.load_errors: list[str] = []          # sources / parts skipped by load_registry(strict=False)
+        # load_registry(strict=False): topics drop skills that failed to load instead of failing the subject
+        self.lenient = False
 
     # ------------------------------------------------------------ register
+    def _drop_missing_skills(self, subject: Subject, skill_ids: set[str]) -> Subject:
+        """Lenient mode: leave out topic skills that are not registered (their content failed to load);
+        a topic with no skills left, an empty row and a year with no rows are left out too."""
+        years: dict = {}
+        for year, spec in subject.years.items():
+            if not isinstance(spec, YearSpec) or not isinstance(spec.rows, (tuple, list)):
+                years[year] = spec
+                continue
+            rows = []
+            for row in spec.rows:
+                if not isinstance(row, (tuple, list)):
+                    rows.append(row)
+                    continue
+                kept = []
+                for t in row:
+                    if not isinstance(t, Topic) or not isinstance(t.skills, (tuple, list)):
+                        kept.append(t)
+                        continue
+                    good = tuple(k for k in t.skills if k in skill_ids)
+                    if len(good) != len(t.skills):
+                        msg = (f"subject {subject.id!r}: topic {t.id!r} skipped skills "
+                               f"{[k for k in t.skills if k not in skill_ids]} (not loaded)")
+                        log.warning("%s", msg)
+                        self.load_errors.append(msg)
+                    if good:
+                        kept.append(Topic(id=t.id, label=t.label, skills=good, level_map=t.level_map, exam=t.exam))
+                if kept:
+                    rows.append(tuple(kept))
+            if rows:
+                years[year] = YearSpec(rows=tuple(rows), past_paper_level_map=spec.past_paper_level_map)
+        return Subject(id=subject.id, title=subject.title, order=subject.order, years=years)
+
     def register(self, subject: Subject, skills: Iterable[Skill]) -> None:
         skills = list(skills)
         if not isinstance(subject, Subject):
             raise RegistryError("register() needs a Subject")
+        if self.lenient and isinstance(subject.years, dict) and subject.years:
+            subject = self._drop_missing_skills(subject, {sk.id for sk in skills if isinstance(sk, Skill)})
+            if not subject.years:
+                raise RegistryError(f"subject {subject.id!r}: no topic has a working skill")
         sid = subject.id
         if not isinstance(sid, str) or not sid:
             raise RegistryError("subject id must be a non-empty string")
@@ -208,11 +246,40 @@ class Registry:
         return match_skill_ids(self._skills_by_subject.get(subject_id, ()), text)
 
 
+_TITLE_STOP = frozenset("and the of in on to for with from into a an its their your our my".split())
+
+
+def _norm_title(s: str) -> str:
+    """Titles and the text they are looked for in: _norm_text, '&' -> 'and', other punctuation -> space."""
+    s = _norm_text(s).replace("&", " and ")
+    return " ".join(re.sub(r"[^\w']+", " ", s).split())
+
+
+def _occurs(phrase: str, text: str) -> bool:
+    return re.search(r"(?<![^\W_])" + re.escape(phrase) + r"s?(?![^\W_])", text) is not None
+
+
+def _title_matches(title: str, tt: str) -> bool:
+    """The (normalised) title occurs in the text, or every significant word of it does, in any order
+    ("structure and reading" finds "Reading & structure"; one shared word such as "triangles" is not enough)."""
+    if not title:
+        return False
+    if _occurs(title, tt):
+        return True
+    sig = [w for w in title.split() if w not in _TITLE_STOP]
+    return len(sig) >= 2 and all(_occurs(w, tt) for w in sig)
+
+
 def match_skill_ids(skills: Iterable[Skill], text: str) -> list[str]:
-    """Skill ids whose aliases occur in ``text``; longest alias first, ties by order (section 2.2)."""
+    """Skill ids whose aliases or title occur in ``text``; longest match first, ties by order (section 2.2).
+
+    ARCHITECTURE_V2 section 10.2: the skill title counts like an alias of its own length, matched after
+    normalisation ('&' = 'and', punctuation ignored) or when all its significant words occur in any order.
+    """
     if not isinstance(text, str):
         return []
     t = _norm_text(text)
+    tt = _norm_title(text)
     scored: list[tuple[int, int, str]] = []
     for idx, sk in enumerate(skills):
         best = 0
@@ -220,9 +287,11 @@ def match_skill_ids(skills: Iterable[Skill], text: str) -> list[str]:
             a = _norm_text(alias)
             if not a or len(a) <= best:
                 continue
-            pat = r"(?<![^\W_])" + re.escape(a) + r"s?(?![^\W_])"
-            if re.search(pat, t):
+            if _occurs(a, t):
                 best = len(a)
+        title = _norm_title(sk.title) if isinstance(sk.title, str) else ""
+        if len(title) > best and _title_matches(title, tt):
+            best = len(title)
         if best:
             scored.append((-best, idx, sk.id))
     scored.sort()
@@ -272,8 +341,9 @@ def load_registry(banks: Iterable[str] = (), strict: bool = True) -> Registry:
 
     strict=False: a source that raises is logged, recorded in ``reg.load_errors`` and skipped.
     """
-    from .bank import register_bank
+    from .bank import known_words, lenient, register_bank
     reg = Registry()
+    reg.lenient = not strict
     _, names = _subject_modules()
     sources: list[tuple[str, object]] = [(name, (register_module, name)) for name in names]
     sources += [(os.path.basename(p), (register_bank, p)) for p in bank_files()]
@@ -282,10 +352,15 @@ def load_registry(banks: Iterable[str] = (), strict: bool = True) -> Registry:
         if strict:
             fn(reg, arg)
             continue
+        skipped: list[str] = []
         try:
-            fn(reg, arg)
+            # broken questions / skills / topics inside the source are left out, the rest still loads
+            with lenient(skipped):
+                fn(reg, arg)
         except Exception as e:   # noqa: BLE001 - a broken content file must never stop the bot
             msg = f"subject source {name} failed: {type(e).__name__}: {e}"
             log.warning("%s", msg)
             reg.load_errors.append(msg)
+        reg.load_errors.extend(f"subject source {name}: {s}" for s in skipped)
+    known_words()               # build the typo guard now, not on a student's first answer
     return reg

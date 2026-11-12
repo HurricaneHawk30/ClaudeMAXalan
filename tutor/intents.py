@@ -114,9 +114,11 @@ _DISTRESS = (
     "wants me to send", "told me to send", "make me send", "wants to meet me", "want to meet me",
     "asked to meet me", "secret from my parents", "secret from my mum", "secret from my dad",
     "secret from my family",
-    # not safe
-    "not safe", "unsafe", "in danger", "scared to go home", "afraid to go home", "is following me",
-    "are following me", "been following me",
+    # not safe: personal forms only ("unsafe", "not safe" and "danger zone" are curriculum words in food
+    # safety, D&T and PE answers; docs/ARCHITECTURE_V2.md section 10.2)
+    "i am not safe", "i am unsafe", "not feel safe", "feel unsafe", "feeling unsafe", "not safe at home", "unsafe at home", "not safe at school", "unsafe at school", "not safe for me",
+    "unsafe for me", "not safe here", "we are not safe", "scared to go home", "afraid to go home",
+    "is following me", "are following me", "been following me",
 )
 # "<someone> hit/hurt/kicked me": the person in front avoids flagging "hit me with a question"
 _DISTRESS_RE = (
@@ -125,6 +127,8 @@ _DISTRESS_RE = (
                r"adult|people|kids|boys|girls)\s+(?:hit|hurt|kicked|punched|slapped|beat|touched|abused|"
                r"threatened|hits|kicks|punches|slaps|threatens)\s+me\b"),
     re.compile(r"\bscared of (?:my )?(?:mum|dad|step ?dad|step ?mum|parents?|brother|uncle|him|her)\b"),
+    # "i am in danger", "my mum is in danger"; not "the danger zone" or "in danger of extinction"
+    re.compile(r"\bin danger\b(?! zone)(?! of\b)"),
 )
 
 _WORK = (r"(?:(?:maths|math|physics|science|chemistry|biology|english|french|history|geography) )?"
@@ -143,13 +147,22 @@ _CHEAT_RE = tuple(re.compile(p) for p in (
 
 _SKIP_EXACT = {"skip", "next", "pass", "i don't know", "i dont know", "idk", "dunno", "no idea",
                "give up", "i give up", "show answer", "show me the answer",
-               "no clue", "not sure", "im not sure", "i'm not sure", "unsure"}
+               "no clue", "not sure", "im not sure", "i'm not sure", "unsure",
+               # whole-message forms (docs/ARCHITECTURE_V2.md section 10.2)
+               "skip this", "skip this one", "skip it", "next one", "next question", "answer", "the answer",
+               "what's the answer", "whats the answer", "what is the answer", "tell me the answer"}
 _HINT_EXACT = {"hint", "a hint", "give me a hint", "help", "help me", "stuck", "i'm stuck", "im stuck",
                "i don't get it", "i dont get it", "i don't understand", "i dont understand",
-               "how do i start", "what do i do", "explain", "?"}
+               "how do i start", "what do i do", "explain", "?",
+               "another hint", "more help", "clue", "a clue", "i'm confused", "im confused", "confused",
+               "how do i do this", "how do i do it", "can you help", "can you help me"}
 _HINT_WORDS = ("hint", "help", "stuck", "don't get", "dont get", "don't understand",
                "dont understand", "how do i", "how to")
 _SKIP_WORDS = ("skip", "don't know", "dont know", "idk", "give up", "no idea")
+# "can I have a hint please" -> "hint"; "I need help" -> "help"
+_ASK_HEAD = re.compile(r"^(?:(?:can|could|may) i (?:have|get|see)|i need|i want|i would like|i'd like|"
+                       r"give me|show me|need|please)\s+(?:a |an |another |some |more |the )?")
+_COURTESY_TAIL = re.compile(r"(?:\s+(?:please|pls|plz|thanks|thank you|thx|now))+$")
 
 
 @functools.lru_cache(maxsize=4096)
@@ -182,7 +195,9 @@ def is_cheat_request(text: str) -> bool:
     return any(rx.search(norm) for rx in _CHEAT_RE)
 
 
-def intent(text: str) -> str | None:
+def exact_intent(text: str) -> str | None:
+    """"hint" / "skip" when the WHOLE message is a command ("skip", "I'm not sure.", "can I have a hint
+    please"), else None.  In a lesson these count before marking, unless the text is the correct answer."""
     if text is None or any(c.isdigit() for c in text):
         return None
     if text.strip() == "?":
@@ -190,13 +205,31 @@ def intent(text: str) -> str | None:
     norm = normalize(text)
     if not norm:
         return None
-    bare = norm.strip(" .,")               # "I'm not sure." is the exact phrase "i'm not sure"
-    if norm in _SKIP_EXACT or bare in _SKIP_EXACT:
-        return "skip"
-    if norm in _HINT_EXACT or bare in _HINT_EXACT:
-        return "hint"
+    bare = norm.strip(" .,!?")             # "I'm not sure." is the exact phrase "i'm not sure"
+    canon = _ASK_HEAD.sub("", _COURTESY_TAIL.sub("", bare)).strip()
+    for cand in (norm, bare, canon):
+        if cand in _SKIP_EXACT:
+            return "skip"
+        if cand in _HINT_EXACT:
+            return "hint"
+    return None
+
+
+def loose_intent(text: str) -> str | None:
+    """"hint" / "skip" when a command phrase occurs anywhere in the text ("this is hard, I need help").
+    In a lesson these count only when the checker found no answer (docs/ARCHITECTURE_V2.md section 10.2)."""
+    if text is None or any(c.isdigit() for c in text):
+        return None
+    norm = normalize(text)
+    if not norm:
+        return None
     if any(_contains(norm, p) for p in _HINT_WORDS):
         return "hint"
     if any(_contains(norm, p) for p in _SKIP_WORDS):
         return "skip"
     return None
+
+
+def intent(text: str) -> str | None:
+    """Exact command phrases first, then command phrases anywhere in the text."""
+    return exact_intent(text) or loose_intent(text)

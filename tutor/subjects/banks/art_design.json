@@ -467,7 +467,13 @@
        "tonal gradation",
        "gradient",
        "graded tone"
-      ]
+      ],
+      "reject": [
+       "bleeding"
+      ],
+      "feedback": {
+       "bleeding": "Bleeding is when wet colours run into each other — this shading technique changes tone smoothly"
+      }
      }
     },
     {
@@ -621,7 +627,10 @@
     "warm colours",
     "tint",
     "shade",
-    "hue"
+    "hue",
+    "colour",
+    "colours",
+    "color"
    ],
    "questions": [
     {
@@ -702,11 +711,13 @@
       ],
       "reject": [
        "tint",
-       "tone"
+       "tone",
+       "shapes"
       ],
       "feedback": {
        "tint": "A tint is made by adding white",
-       "tone": "A tone is made by adding grey"
+       "tone": "A tone is made by adding grey",
+       "shapes": "Shape is a formal element, not a colour mix — check the spelling of the term for a colour plus black"
       }
      }
     },

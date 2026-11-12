@@ -1968,7 +1968,13 @@
        "bakers",
        "baker's shop"
       ],
-      "form": "any"
+      "reject": [
+       "baker"
+      ],
+      "form": "any",
+      "feedback": {
+       "baker": "A baker is the person (der Bäcker) — «die Bäckerei» is the shop"
+      }
      },
      "solution": "Die Bäckerei = the bakery (der Bäcker = the baker)",
      "hint": "You buy bread and rolls there"

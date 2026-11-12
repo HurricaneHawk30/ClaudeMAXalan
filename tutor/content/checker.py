@@ -501,6 +501,7 @@ _units("density", 1000, ("g/cm3",), ("g/cm3",))
 _units("density", 1, ("kg/m3",), ("kg/m3",))
 _units("density", 1, ("g/dm3", "g/l", "g/L"), ("g/dm3", "g/l"))           # 1 g/dm³ = 1 kg/m³
 _units("angle", 1, ("°",), ("°", "deg", "degree", "degrees"))
+_units("temperature", 1, ("°C", "℃"), ("°c", "degc", "celsius", "degreescelsius", "degreesc", "oc"))
 
 
 def _unit_key(u: str) -> str:
@@ -512,6 +513,17 @@ def _unit_of(u: str) -> tuple[str, float] | None:
     if not key:
         return None
     return _UNITS.get(key) or _UNITS_CI.get(key.lower())
+
+
+def _same_quantity(got: tuple[str, float], want: tuple[str, float]) -> bool:
+    """Both units measure the same quantity.  "75 degrees" and "75 C" are read as °C when °C is wanted."""
+    return got[0] == want[0] or (want[0] == "temperature" and got[0] in ("angle", "charge"))
+
+
+def _pretty_unit(u: str) -> str:
+    """'cm^(3)/s' -> 'cm³/s' for feedback."""
+    sup = {"2": "²", "3": "³", "-1": "⁻¹", "-2": "⁻²", "-3": "⁻³"}
+    return re.sub(r"\^\((-?\d)\)", lambda m: sup.get(m.group(1), "^" + m.group(1)), u)
 
 
 @functools.lru_cache(maxsize=4096)
@@ -534,9 +546,14 @@ def _check_number(a: Answer, text: str) -> Verdict:
     if want_unit:
         got_u, want_u = _unit_of(info.unit), _unit_of(want_unit)
         if got_u and want_u:
-            if got_u[0] != want_u[0]:
-                return Verdict("wrong", FORM_UNIT.format(unit=want_unit))
-            value = value * got_u[1] / want_u[1]
+            if not _same_quantity(got_u, want_u):
+                return Verdict("wrong", FORM_UNIT.format(unit=_pretty_unit(want_unit)))
+            if got_u[0] == want_u[0]:
+                value = value * got_u[1] / want_u[1]
+        elif got_u and _unit_key(info.unit).casefold() != _unit_key(want_unit).casefold():
+            # the display unit is not in the table (L/min, people/km², %, bpm) but the student wrote a
+            # known unit of some quantity, written differently: a different unit ("15 cm" for "15 L/min")
+            return Verdict("wrong", FORM_UNIT.format(unit=_pretty_unit(want_unit)))
     if not _within(value, exact, a.dp, a.sf):
         return _WRONG
     if a.form == "standard":
@@ -876,7 +893,13 @@ _CHECK_LINE_TEXT = re.compile(r"^\W*(?:check(?:ing)?|verify(?:ing)?)\b", re.IGNO
 # "sub" / "substitute" count as check words only on a line with a digit or "=" (maths working):
 # "substitute goods", "sub-Saharan Africa" are answers, not checks.
 _SUB_LINE = re.compile(r"^\W*(?:sub|substitut\w*)\b", re.IGNORECASE)
-_WORD_CUT = re.compile(r"[,;:]?\s*\(?\b(?:because|coz|cuz|since|check(?:ing)?)\b", re.IGNORECASE)
+# Reason words always cut ("osmosis because ..."). "check" / "checking" cut only as working after a
+# separator or before ":" / "=" / a digit ("cell wall, check: ..."): in "format check or range check"
+# it is part of the answer, and cutting there would leave "format" (section 10.2).
+_WORD_CUT = re.compile(
+    r"[,;:]?\s*\(?\b(?:because|coz|cuz|since)\b"
+    r"|(?:[,;:]\s*\(?|\(\s*)\b(?:check(?:ing)?)\b"
+    r"|\s*\b(?:check(?:ing)?)\b(?=\s*[:=\d])", re.IGNORECASE)
 _BULLET = re.compile(r"^(?:[•·*>]+|-(?=\s))\s*")
 _FIRST_WORD = re.compile(r"\W*(\w+)")
 _QUESTION_WORDS = frozenset("what why how can could explain tell which who where when does do".split())
@@ -888,7 +911,9 @@ _FILLER_COMMON = (
     "the term is", "known as", "it's", "its", "it is", "it was", "is it", "it must be", "must be",
     "probably", "maybe", "definitely", "actually",
 )
-_FILLER_CHOICE = ("option", "letter", "i choose", "i pick", "i'll go with", "going with")
+_FILLER_CHOICE = ("option", "letter", "i choose", "i pick", "i'll go with", "going with",
+                  # correction lines ("A\nsorry I meant B" names two letters -> unparsed; section 10.2)
+                  "sorry", "i meant", "i mean", "no wait", "wait", "oops")
 
 
 def _filler_regexes(phrases: Sequence[str]) -> tuple[re.Pattern, ...]:
@@ -901,7 +926,7 @@ def _filler_regexes(phrases: Sequence[str]) -> tuple[re.Pattern, ...]:
             tail = r"(?![\w'])"
         else:
             tail = ""
-        out.append(re.compile(r"^" + body + tail + r"\s*(?:[:=]\s*|-\s+)?", re.IGNORECASE))
+        out.append(re.compile(r"^" + body + tail + r"\s*(?:[:=,]\s*|-\s+)?", re.IGNORECASE))
     return tuple(out)
 
 
@@ -1009,6 +1034,11 @@ def _text_lines(text: str, choice: bool) -> tuple[_TLine, ...]:
 # So typing an option's text always names that option: never correct for a wrong option.
 
 _CH_A = re.compile(r"^\(?([A-Ea-e])\)?[.:]?$")
+# a letter followed only by words of certainty: "B I think", "B is correct", "B 100%" (section 10.2)
+_CH_TRAIL = re.compile(
+    r"^\(?([A-Ea-e])\)?[.:,]?\s+(?:i\s+think|i\s+guess|i\s+believe|i\s+reckon|is\s+(?:the\s+)?(?:correct|right)"
+    r"(?:\s+answer)?|is\s+(?:the|my)\s+answer|definitely|for\s+sure|100\s*%|probably|maybe|surely|obviously)$",
+    re.IGNORECASE)
 _CH_B = re.compile(r"^([A-Ea-e])\s*([).:\-–])\s*(.+)$", re.DOTALL)
 _CH_B2 = re.compile(r"^([A-Ea-e])\s+(.+)$", re.DOTALL)
 _LETTER_SHAPED = re.compile(r"^[a-e](?:\s|$)")
@@ -1104,9 +1134,16 @@ def _choice_line(ln: _TLine, keys: _OptKeys, n: int):
     s = ln.cut
     if not s:
         return None
-    m = _CH_A.match(s)
+    m = _CH_A.match(s) or _CH_TRAIL.match(s)
     if m:
         i = CHOICE_LETTERS.index(m.group(1).upper())
+        if ln.cut != ln.full:
+            # the cut left a lone letter, but the whole line is "a" + an option text
+            # ("a Because the pool was closed, I went home."): that option, not the letter A
+            k = _wkey(ln.full)
+            hits = [j for j, ks in enumerate(keys.stripped) if k and k in ks]
+            if len(hits) == 1:
+                return hits[0]
         return i if i < n else "invalid"
     m = _CH_B.match(s)
     if m:
@@ -1116,6 +1153,9 @@ def _choice_line(ln: _TLine, keys: _OptKeys, n: int):
             return i
         if hits:
             return "conflict"
+        f = _fallback(ln, keys)          # "a −18 °C or below" is an article + an option, not "A - 18 °C"
+        if f is not None:
+            return f
         return i if i < n else "invalid"
     m = _CH_B2.match(s)
     if m:
@@ -1179,14 +1219,65 @@ class _NumTok:
     negative: bool
     digits: str          # integer part, separators removed
     fraction_zero: bool  # no fractional part, or only zeros ("5.0", "5.00")
+    start: int = 0       # position in the line
+    end: int = 0
 
 
 def _num_tokens(s: str) -> list[_NumTok]:
     out = []
     for m in _NUM_TOKEN.finditer(s):
         frac = (m.group("frac") or "")[1:]
-        out.append(_NumTok(m.group("sign") == "-", re.sub(r"[ ,]", "", m.group("int")), set(frac) <= {"0"}))
+        out.append(_NumTok(m.group("sign") == "-", re.sub(r"[ ,]", "", m.group("int")), set(frac) <= {"0"},
+                           m.start(), m.end()))
     return out
+
+
+# section 10.2: numeric short answers
+_NUM_NEGATION = re.compile(r"\b(?:not|isn'?t|wasn'?t|aren'?t|wrong|incorrect|never)\b", re.IGNORECASE)
+_MONTH = (r"(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|"
+          r"sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)")
+_MONTH_BEFORE = re.compile(_MONTH + r"\.?\s*(?:the\s+)?,?\s*$", re.IGNORECASE)      # "November 11"
+_MONTH_AFTER = re.compile(r"^\s*(?:of\s+)?" + _MONTH + r"\b", re.IGNORECASE)          # "11 November"
+_HEX_MARK = re.compile(r"(?i)\b0x(?=\d)|(?<=\d)h\b")
+# "79 BC" is not the year 79 (AD): read as -79, which never equals a digits-only accept
+_BC_YEAR = re.compile(r"(?<![\w.,-])(\d+)\s*(?:bce?|b\.\s?c\.?(?:\s?e\.?)?)(?!\w)", re.IGNORECASE)
+
+
+def _is_day(tok: _NumTok, line: str) -> bool:
+    """A 1-2 digit number written as the day of a month ("11 November 1918", "November 11, 1918")."""
+    if len(tok.digits) > 2 or tok.negative or not tok.fraction_zero or not 1 <= int(tok.digits) <= 31:
+        return False
+    return bool(_MONTH_BEFORE.search(line[:tok.start]) or _MONTH_AFTER.match(line[tok.end:]))
+
+
+def _numeric_verdict(info: "_ShortInfo", s: str) -> Verdict | None:
+    """§2.3 step 2 with the section 10.2 hedging rules; None = no number in the line."""
+    accepts = [k for k in info.a_set if k.isdigit()]
+    region = _BC_YEAR.sub(r"-\1", _HEX_MARK.sub("", s))     # "0x27", "27h" (hex answers); "79 BC" = -79
+    parts = re.split(r"[=≈]", region)
+    if len(parts) > 1 and _num_tokens(parts[-1]):
+        region = parts[-1]                          # one-line working: "600 ÷ 6 = 100" -> "100"
+    tokens = _num_tokens(region)
+    spaced = _SPACED_DIGITS.findall(region)
+    if not tokens and not spaced:
+        return None
+    if _NUM_NEGATION.search(s):
+        return _UNPARSED                            # "not 1843", "1843 is wrong"
+    for run in spaced:
+        if run.replace(" ", "") in accepts and len(tokens) == len(run.split()):
+            return _CORRECT                         # "0010 1101" for "00101101"
+    hit_acc = [acc for acc in accepts if any(_tok_equals(tk, acc) for tk in tokens)]
+    if not hit_acc:
+        return _WRONG
+    hit = [tk for tk in tokens if any(_tok_equals(tk, acc) for acc in hit_acc)]
+    others = [tk for tk in tokens if tk not in hit]
+    if not others:
+        return _CORRECT
+    if any(len(acc) <= 2 for acc in hit_acc):
+        return _WRONG                               # "7 or 8", "1 2 3 ... 12", "10 1/2": one number only
+    if all(_is_day(tk, region) for tk in others):
+        return _CORRECT                             # "11 November 1918"
+    return _WRONG
 
 
 def _tok_equals(tok: _NumTok, accept: str) -> bool:
@@ -1213,11 +1304,67 @@ class _ShortInfo:
     numeric: bool
     max_words: int
     eligible: tuple[tuple[int, str], ...]    # typo-eligible accepts (index, key), form any
+    hex: frozenset = frozenset()             # casefolded hexadecimal accepts ("a2" for "A2")
 
 
 def short_typo_eligible(key: str) -> bool:
     """§2.3 step 6: a normalised accept made of letters and spaces, >= 6 chars, <= 3 words."""
     return words.is_letters_spaces(key) and len(key) >= 6 and len(key.split()) <= 3
+
+
+# ---- typo tolerance, word by word (section 10.2)
+TYPO_MIN_WORD = 5           # shorter answer words must be typed exactly
+_LONE_LETTER = re.compile(r"^\(?[A-Ea-e]\)?[.:)]?$")
+_HEX_ACCEPT = re.compile(r"^[0-9A-F]{1,4}$")
+_HEX_INPUT = re.compile(r"^(?:0x)?([0-9a-f]{1,4})(?:h|\s+(?:in\s+)?hex(?:adecimal)?|\s+base\s+16)?$")
+
+
+def _known_words() -> frozenset:
+    """Every word of every shipped bank and pack (all subjects); built once, see bank.known_words."""
+    from .bank import known_words
+    return known_words()
+
+
+def _word_typo(x: str, y: str, known: frozenset) -> int | None:
+    """Edits from typed word x to answer word y if x is an acceptable misspelling of y, else None."""
+    if len(y) >= 3 and words.word_form(x, y) and abs(len(x) - len(y)) == 1:
+        return 1                                    # "walls" for "wall", "alkanes" for "alkane"
+    if x[0] != y[0] or len(y) < TYPO_MIN_WORD or words.prefix_change(x, y):
+        return None
+    if (x in known or words.fold(x) in known) and not words.word_form(x, y):
+        return None                                 # a real word: "refraction" is not "reflection"
+    lim = 2 if len(y) >= 10 else 1
+    if words.osa(x, y, lim) > lim:
+        return None
+    d, subs = words.osa_subs(x, y)
+    if d > lim or (d == 2 and subs > 1):
+        return None                                 # two letters changed: "conversation" / "conservation"
+    return d
+
+
+def typo_distance(t: str, a: str, known: frozenset = frozenset()) -> int | None:
+    """Section 10.2: the typed answer t as a misspelling of the accept a, compared word by word.
+
+    Same number of words; every changed word keeps its first letter, has >= 5 letters, gains or loses no
+    negation prefix (in-/un-/im-/ir-/il-/non-/dis-), is not a real word from ``known`` (unless it is a
+    plain -s/-es/-ed/-ing form of the answer word) and is within 1 edit (2 edits with at most one
+    substitution for words of 10+ letters).  In total at most 1 edit (2 when the accept has 10+ chars).
+    Returns the total number of edits, or None.
+    """
+    tw, aw = t.split(), a.split()
+    if len(tw) != len(aw) or not tw:
+        return None
+    total = 0
+    for x, y in zip(tw, aw):
+        if x == y:
+            continue
+        d = _word_typo(x, y, known)
+        if d is None:
+            return None
+        total += d
+    if not total or total > (2 if len(a) >= 10 else 1):
+        return None
+    return total
 
 
 @functools.lru_cache(maxsize=8192)
@@ -1245,11 +1392,13 @@ def _short_info(accept: tuple[str, ...], reject: tuple[str, ...], form: str) -> 
     r_fold = frozenset(f for r in r_list for f in (words.fold(r), words.fold_german(r))) if folding else frozenset()
     numeric = bool(keys) and all(_DIGITS.fullmatch(k) for k in keys)
     eligible = tuple((i, k) for i, k in enumerate(keys) if form == "any" and short_typo_eligible(k))
+    hexes = frozenset(acc.strip().casefold() for acc in accept
+                      if _HEX_ACCEPT.match(acc.strip()) and not acc.strip().isdigit())
     return _ShortInfo(
         form=form, accepts=accept, a_set=frozenset(a_set), a_spaced=tuple(a_spaced), a_fold=a_fold,
         a_case=frozenset(k.casefold() for k in keys) if form == "case" else frozenset(),
         r_set=frozenset(r_list), r_fold=r_fold, r_list=r_list, numeric=numeric, max_words=max_words,
-        eligible=eligible)
+        eligible=eligible, hex=hexes)
 
 
 def _short_value(a: Answer) -> _ShortInfo | None:
@@ -1307,22 +1456,17 @@ def _check_short(a: Answer, text: str) -> Verdict:
         return _UNPARSED
     t_full = words.norm_form(ln.full, form)[0] if ln.full != s else t
 
+    if _LONE_LETTER.match(s.strip()) and t not in info.a_set and t not in info.r_set:
+        return _UNPARSED                        # "B" on a problem that is not multiple choice
+    if info.hex:
+        m = _HEX_INPUT.match(words.norm_basic(s))
+        if m and m.group(1) in info.hex:
+            return _CORRECT                     # "0xA2", "A2h", "A2 hex", "a2" for "A2"
+
     if info.numeric:
-        accepts = [k for k in info.a_set if k.isdigit()]
-        region = s
-        parts = re.split(r"[=≈]", s)
-        if len(parts) > 1 and _num_tokens(parts[-1]):
-            region = parts[-1]                  # one-line working: "600 ÷ 6 = 100" -> "100"
-        for run in _SPACED_DIGITS.findall(region):
-            if run.replace(" ", "") in accepts:
-                return _CORRECT                 # "0010 1101" for "00101101"
-        tokens = _num_tokens(region)
-        if tokens:
-            hit = [tk for tk in tokens if any(_tok_equals(tk, acc) for acc in accepts)]
-            others = [tk for tk in tokens if tk not in hit]
-            if hit and not any(len(tk.digits) >= 3 for tk in others):
-                return _CORRECT
-            return _WRONG
+        v = _numeric_verdict(info, s)
+        if v is not None:
+            return v
     else:
         if t in info.a_set or t_full in info.a_set:
             return _CORRECT
@@ -1339,12 +1483,10 @@ def _check_short(a: Answer, text: str) -> Verdict:
             return Verdict("wrong", FORM_CASE)
         if form == "any" and info.eligible and words.is_letters_spaces(t):
             best: tuple[int, int] | None = None
+            known = _known_words()
             for idx, ak in info.eligible:
-                if t[0] != ak[0]:
-                    continue
-                lim = 2 if len(ak) >= 10 else 1
-                d = words.osa(t, ak, lim)
-                if d > lim or (best is not None and d >= best[0]):
+                d = typo_distance(t, ak, known)
+                if d is None or (best is not None and d >= best[0]):
                     continue
                 if any(words.osa(t, r, d) <= d for r in info.r_list):
                     continue

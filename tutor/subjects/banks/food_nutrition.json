@@ -551,10 +551,12 @@
       ],
       "reject": [
        "protein",
-       "fat"
+       "fat",
+       "carbohydrase"
       ],
       "feedback": {
-       "protein": "Protein is mainly for growth and repair"
+       "protein": "Protein is mainly for growth and repair",
+       "carbohydrase": "Carbohydrase is the enzyme that breaks carbohydrates down — give the nutrient itself"
       }
      }
     },

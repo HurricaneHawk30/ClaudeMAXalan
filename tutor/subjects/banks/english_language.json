@@ -113,10 +113,12 @@
        "simile"
       ],
       "reject": [
-       "metaphor"
+       "metaphor",
+       "simple"
       ],
       "feedback": {
-       "metaphor": "A metaphor does not use 'like' or 'as'"
+       "metaphor": "A metaphor does not use 'like' or 'as'",
+       "simple": "Careful: 'simple' is a different word — check the spelling of the comparison term"
       }
      },
      "solution": "A simile compares two things using 'like' or 'as'",
@@ -1353,7 +1355,15 @@
        "conjunctions",
        "connective",
        "connectives"
-      ]
+      ],
+      "reject": [
+       "conjugation",
+       "collective"
+      ],
+      "feedback": {
+       "conjugation": "Conjugation is changing the form of a verb — these words join words, phrases or clauses",
+       "collective": "A collective noun names a group, such as 'flock' — these words join words, phrases or clauses"
+      }
      },
      "solution": "They are conjunctions: they join words, phrases or clauses",
      "hint": "These words join clauses together"
@@ -1781,7 +1791,13 @@
        "linking words",
        "linking phrases",
        "adverbials"
-      ]
+      ],
+      "reject": [
+       "collective"
+      ],
+      "feedback": {
+       "collective": "A collective noun names a group, such as 'flock' — these words link ideas and paragraphs"
+      }
      },
      "solution": "They are discourse markers, which guide the reader through an argument",
      "hint": "They signpost the order and structure of ideas"
@@ -1893,7 +1909,13 @@
        "type of text",
        "format",
        "genre"
-      ]
+      ],
+      "reject": [
+       "formal"
+      ],
+      "feedback": {
+       "formal": "Formal describes the tone (register) of a text — the type of text has a different name"
+      }
      },
      "solution": "Form is the type of text, such as a letter, speech, article or leaflet",
      "hint": "Writers think about this together with audience and purpose"

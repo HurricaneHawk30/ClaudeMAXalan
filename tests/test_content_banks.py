@@ -14,6 +14,8 @@ import helpers
 import spec
 from helpers import FORM_CASE, NOTE_ACCENTS, perturb
 from tutor.content import check, load_registry, problem_from_json, problem_to_json, BANKS_DIR, PACKS_DIR
+from tutor.content.audit import swap_typo
+from tutor.content.bank import known_words
 from tutor.intents import intent, is_cheat_request, is_distress
 
 FULL = os.environ.get("TUTOR_FULL_TESTS") == "1"
@@ -371,6 +373,7 @@ class TestBankItems(unittest.TestCase):
 
     def test_short_items(self):
         fails = []
+        known = known_words()
         for sk in self.skills:
             owner = owner_of(sk.id)
             for it in sk.items:
@@ -410,10 +413,8 @@ class TestBankItems(unittest.TestCase):
                     nd = norm_basic(disp)
                     letters_only = nd.replace(" ", "").isalpha() and nd.isascii()
                     if letters_only and len(nd) >= 6 and len(nd.split()) <= 3:
-                        i = next((k for k in range(len(nd) // 2, len(nd) - 1)
-                                  if nd[k] != nd[k + 1] and nd[k] != " " and nd[k + 1] != " "), None)
-                        if i is not None:
-                            t = nd[:i] + nd[i + 1] + nd[i] + nd[i + 2:]
+                        t = swap_typo(nd, known)       # section 10.2: a swap inside the longest word
+                        if t is not None:
                             rn = [norm_basic(r) for r in reject]
                             an = {norm_basic(x) for x in accept}
                             if t not in rn and t not in an and all(osa(t, r) > 1 for r in rn):

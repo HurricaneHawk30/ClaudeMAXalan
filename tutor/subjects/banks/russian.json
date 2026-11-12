@@ -596,9 +596,15 @@
        "dative",
        "genitive",
        "accusative",
-       "instrumental"
+       "instrumental",
+       "preposition",
+       "prepositions"
       ],
-      "form": "any"
+      "form": "any",
+      "feedback": {
+       "preposition": "о is the preposition — give the name of the case it takes",
+       "prepositions": "о is the preposition — give the name of the case it takes"
+      }
      },
      "solution": "о (about) takes the prepositional: брат → о брате",
      "hint": "Which case follows о when it means 'about'?"
@@ -756,7 +762,13 @@
        "smart",
        "intelligent"
       ],
-      "form": "any"
+      "reject": [
+       "intelligence"
+      ],
+      "form": "any",
+      "feedback": {
+       "intelligence": "Intelligence is the noun — this word is an adjective that describes a person"
+      }
      },
      "solution": "умный = clever, intelligent",
      "hint": "A student who gets top marks is often called this"

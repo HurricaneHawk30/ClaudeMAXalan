@@ -202,9 +202,18 @@ def UNMARKABLE(answer):
     return f"📝 I can't mark written answers automatically yet, so here's a model answer to compare with yours: {answer}"
 
 
-def FLAG_ALERT(kind, name, chat, text):
-    return (f"🚩 Safety flag ({kind}) from {name} (chat {chat}):\n\"{text}\"\n"
-            f"Use /student {chat} for details.")
+def FLAG_ALERT(kind, name, chat, text, ref=None):
+    """ARCHITECTURE_V2 section 10.2: with a problem open, the alert names it on an extra line."""
+    out = (f"🚩 Safety flag ({kind}) from {name} (chat {chat}):\n\"{text}\"\n"
+           f"Use /student {chat} for details.")
+    if ref:
+        out += f"\nOpen problem: {ref} (the message may be an answer to it)"
+    return out
+
+
+def FLAG_TEXT(text, ref=None):
+    """The stored flag text: the open problem first (texts are cut at 500 characters), then the message."""
+    return f"[open problem: {ref}] {text}" if ref else text
 
 
 # --------------------------------------------------------------------------

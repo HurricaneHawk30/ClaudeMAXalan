@@ -306,8 +306,11 @@ def _pol_1(rng: random.Random) -> Draft:
         ms.append(_num_mis(val - 2 * vals[0], f"({x0})³ = {x0 ** 3}: a negative number cubed is negative"))
         if co[1]:
             ms.append(_num_mis(val - 2 * vals[1], f"({x0})² = {x0 * x0}: a negative number squared is positive"))
-    return _q(f"f(x) = {_p(co)}. Work out f({x0}).", _num(val), sol,
-              f"Substitute x = {x0} into every term — work out the powers first", ms)
+    d = _q(f"f(x) = {_p(co)}. Work out f({x0}).", _num(val), sol,
+           f"Substitute x = {x0} into every term — work out the powers first", ms)
+    # used when the value of f equals the number substituted (the hint would give the answer away)
+    d["fallback"] = "Replace every x with the number in the brackets, work out the powers first, then add up the terms"
+    return d
 
 
 def _poly_k(co: list[int | None]) -> str:
@@ -674,9 +677,12 @@ def _ma_1(rng: random.Random) -> Draft:
     e = a[i][j]
     val = k * e
     ms = [_num_mis(k + e, f"Multiply each entry by {k} — don't add {k}")]
-    return _q(f"Matrix A has {_mt(a)}. Work out the {name} entry of {k}A.", _num(val),
-              f"Multiply every entry of A by {k}: the {name} entry is {k} × {_pn(e)} = {val}",
-              f"{k}A means multiply every entry of A by {k}", ms)
+    d = _q(f"Matrix A has {_mt(a)}. Work out the {name} entry of {k}A.", _num(val),
+           f"Multiply every entry of A by {k}: the {name} entry is {k} × {_pn(e)} = {val}",
+           f"{k}A means multiply every entry of A by {k}", ms)
+    # used when the entry is 1, so k × entry = k and the hint would give the answer away
+    d["fallback"] = f"Find the {name} entry of A, then multiply it by the number in front of A"
+    return d
 
 
 def _ma_2(rng: random.Random) -> Draft:
@@ -1027,12 +1033,13 @@ def _skill(name: str, title: str, aliases: tuple[str, ...],
         rng = random.Random(seed)
         d = dict(levels[level - 1](rng))
         ref = d.pop("ref", "")
+        level_fallback = d.pop("fallback", "") or fallback   # a level whose method differs gives its own
         ch = d.pop("choice", None)
         if ch is not None:
             stem, options, correct, feedback = ch
             text, answer, ms = build_choice(stem, options, correct, seed, feedback)
             d.update(text=text, answer=answer, mistakes=list(ms))
-        p = build(sid, level, seed, fallback_hint=fallback, **d)
+        p = build(sid, level, seed, fallback_hint=level_fallback, **d)
         return replace(p, ref=f"{sid}#{ref}") if ref else p
 
     generate.__name__ = f"generate_{name}"

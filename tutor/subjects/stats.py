@@ -533,8 +533,9 @@ def _sp_5(rng: random.Random) -> Draft:
         vals, n, mean, var, sd = retry(pick, rng)
         sx2 = sum(v * v for v in vals)
         data = f"Here are {n} numbers: {_lst(vals)}."
+        var_txt = fmt_num(var) if _terminating(var, 4) else fmt_dp(var, 4) + "…"
         sol = (f"Σx = {sum(vals)}, so the mean = {fmt_num(mean)}. Σx² = {sx2}. "
-               f"SD = √({sx2} ÷ {n} - {fmt_num(mean)}²) = √{float(var):.4f} = {fmt_dp(sd, 2)}")
+               f"SD = √({sx2} ÷ {n} - {fmt_num(mean)}²) = √{var_txt} = {fmt_dp(sd, 2)}")
         samp = math.sqrt(float(var) * n / (n - 1))
     else:
         def pick(r):
@@ -711,9 +712,10 @@ def _pb_1(rng: random.Random) -> Draft:
         name, s = rng.choice(_DICE)
         p = Fraction(len(s), 6)
         ms = [_frac_mis(Fraction(len(s), 6 - len(s)), "Divide by the total number of outcomes (6), not by the number of other outcomes")]
+        p_txt = f"{len(s)}/6" + ("" if p.denominator == 6 else f" = {frac_str(p)}")   # no "5/6 = 5/6"
         return _q(f"A fair six-sided dice is rolled. What is the probability of getting {name}? "
                   "Give your answer as a fraction in its simplest form.",
-                  _frac(p, simplest=True), f"The outcomes are {_lst(sorted(s))}: {len(s)} out of 6, so P = {len(s)}/6 = {frac_str(p)}",
+                  _frac(p, simplest=True), f"The outcomes are {_lst(sorted(s))}: {len(s)} out of 6, so P = {p_txt}",
                   "List the outcomes that work, then divide by the total number of outcomes", ms)
     cols = rng.sample(_COLOURS, 3)
 
@@ -726,7 +728,8 @@ def _pb_1(rng: random.Random) -> Draft:
     ms = [_frac_mis(Fraction(ns[0], tot - ns[0]), f"Divide by the total number of counters ({tot}), not by the number of other counters")]
     return _q(f"A bag contains {ns[0]} {cols[0]}, {ns[1]} {cols[1]} and {ns[2]} {cols[2]} counters. One counter is taken at random. "
               f"What is the probability that it is {cols[0]}? Give your answer as a fraction in its simplest form.",
-              _frac(p, simplest=True), f"There are {tot} counters and {ns[0]} are {cols[0]}, so P = {ns[0]}/{tot} = {frac_str(p)}",
+              _frac(p, simplest=True), f"There are {tot} counters and {ns[0]} are {cols[0]}, so P = {ns[0]}/{tot}"
+                                       + ("" if p.denominator == tot else f" = {frac_str(p)}"),
               "Probability = number of ways it can happen ÷ total number of outcomes", ms)
 
 
@@ -864,7 +867,11 @@ def _pb_5(rng: random.Random) -> Draft:
 
 # ==================================================================== index numbers
 
-_GOODS = ("a loaf of bread", "a litre of milk", "a cinema ticket", "a bus fare", "a kilogram of apples", "a box of cereal")
+# (item, lowest and highest realistic base price in pence). Every range is at least 100p wide and
+# contains a whole number of pounds, so _ix_1 always finds a base price for any index number.
+_GOODS = (("a loaf of bread", 90, 200), ("a litre of milk", 80, 180), ("a cinema ticket", 600, 1400),
+          ("a bus fare", 150, 400), ("a kilogram of apples", 150, 350), ("a box of cereal", 150, 450))
+_INDEX_1 = tuple(i for i in range(85, 146) if i != 100)      # a fall of up to 15% or a rise of up to 45%
 
 
 def _money(p: Fraction) -> str:
@@ -873,17 +880,11 @@ def _money(p: Fraction) -> str:
 
 def _ix_1(rng: random.Random) -> Draft:
     """Index number from two prices."""
-    item = rng.choice(_GOODS)
-
-    def pick(r):
-        idx = r.randint(80, 160)
-        step = 100 // math.gcd(idx, 100)               # base price (pence) must make base × idx ÷ 100 whole
-        if idx == 100 or step > 450:
-            return None
-        base = step * r.randint(max(1, -(-40 // step)), 900 // step)
-        new = Fraction(base * idx, 100)
-        return (base, idx, new) if new.denominator == 1 else None
-    base, idx, new = retry(pick, rng)
+    item, lo, hi = rng.choice(_GOODS)
+    idx = rng.choice(_INDEX_1)
+    step = 100 // math.gcd(idx, 100)                   # base price (pence) must make base × idx ÷ 100 whole
+    base = step * rng.randint(-(-lo // step), hi // step)
+    new = Fraction(base * idx, 100)
     y0 = rng.randint(2012, 2018)
     y1 = y0 + rng.randint(2, 6)
     p0, p1 = Fraction(base, 100), Fraction(int(new), 100)
@@ -897,11 +898,11 @@ def _ix_1(rng: random.Random) -> Draft:
 
 def _ix_2(rng: random.Random) -> Draft:
     """Price from an index number (£, 2 d.p.)."""
-    item = rng.choice(_GOODS)
+    item, lo, hi = rng.choice(_GOODS)
 
     def pick(r):
-        base = Fraction(r.randint(50, 950), 100)
-        idx = Fraction(r.randint(850, 1600), 10)
+        base = Fraction(r.randint(lo, hi), 100)
+        idx = Fraction(r.randint(850, 1450), 10)
         price = base * idx / 100
         if idx == 100 or near_half(price, 2) or (price * 100).denominator == 1:
             return None
@@ -914,7 +915,7 @@ def _ix_2(rng: random.Random) -> Draft:
     return _q(f"The price of {item} was {_money(base)} in {y0}. Using {y0} as the base year, the index number for {y1} "
               f"is {fmt_num(idx)}. Work out the price in {y1}. Give your answer to the nearest penny.",
               num_answer(price, _money(price), dp=2),
-              f"Price = {_money(base)} × {fmt_num(idx)} ÷ 100 = £{float(price):.4f} = {_money(price)}",
+              f"Price = {_money(base)} × {fmt_num(idx)} ÷ 100 = £{fmt_num(price)} = {_money(price)}",
               "Price in the year = base price × index ÷ 100", ms)
 
 
@@ -942,10 +943,13 @@ def _ix_3(rng: random.Random) -> Draft:
 def _ix_4(rng: random.Random) -> Draft:
     """Chain base index, or the overall change from two chain base indices."""
     if rng.random() < 0.55:
-        item = rng.choice(_GOODS)
+        item, lo, hi = rng.choice(_GOODS)
 
         def pick(r):
-            p1, p2, p3 = (r.randint(80, 600) for _ in range(3))
+            # realistic year-on-year changes: between 8% cheaper and 15% dearer
+            p1 = r.randint(lo, hi)
+            p2 = p1 + r.randint(-(p1 * 8 // 100), p1 * 15 // 100)
+            p3 = p2 + r.randint(-(p2 * 8 // 100), p2 * 15 // 100)
             ci = Fraction(p3 * 100, p2)
             return None if near_half(ci, 1) or p2 == p3 or p1 == p2 else (p1, p2, p3, ci)
         p1, p2, p3, ci = retry(pick, rng)

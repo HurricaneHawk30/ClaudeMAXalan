@@ -149,14 +149,14 @@
       "options": [
        "طالبة",
        "طلاب",
-       "طالبان",
+       "معلمان",
        "مطلوب"
       ],
       "correct": 0,
       "feedback": [
        null,
        "طلاب is the plural (students)",
-       "طالبان means 'two students'",
+       "معلمان means 'two teachers' (the dual)",
        null
       ]
      },
@@ -794,7 +794,13 @@
        "intelligent",
        "smart"
       ],
-      "form": "any"
+      "reject": [
+       "intelligence"
+      ],
+      "form": "any",
+      "feedback": {
+       "intelligence": "Intelligence is the noun — this word is an adjective that describes a person"
+      }
      },
      "solution": "ذكي = clever, intelligent",
      "hint": "A student who gets top marks is often called this"

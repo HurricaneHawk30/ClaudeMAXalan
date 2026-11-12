@@ -24,8 +24,8 @@ from typing import Iterable, TextIO
 
 from .base import CHOICE_LETTERS, MY_OWN_TOPIC_LABEL, PAST_PAPER_LABEL, Problem, Skill, Subject, \
     problem_from_json, problem_to_json
-from .bank import BANKS_DIR, PACKS_DIR, BankError, parse_bank_data, parse_pack_data, _read_json
-from .checker import FORM_CASE, NOTE_ACCENTS, NOTE_SPELLING, check, short_typo_eligible
+from .bank import BANKS_DIR, PACKS_DIR, BankError, known_words, parse_bank_data, parse_pack_data, _read_json
+from .checker import FORM_CASE, NOTE_ACCENTS, NOTE_SPELLING, TYPO_MIN_WORD, check, short_typo_eligible
 from .fmt import _hint_leaks             # the same rule fmt.build applies (2+ chars as a token, 3+ anywhere)
 from .registry import (RESERVED_LABELS, Registry, _norm_label, _subject_modules, bank_files, load_registry,
                        match_skill_ids, register_module)
@@ -178,6 +178,27 @@ def _check_choice_problem(rep: Report, key: str, where: str, p: Problem) -> None
                 rep.error(key, f"{where}: letter {CHOICE_LETTERS[j]} feedback {v.feedback!r} != {want!r}")
 
 
+def swap_typo(key: str, known: frozenset = frozenset()) -> str | None:
+    """A typo the checker must accept (section 10.2): two neighbouring letters swapped in the second half
+    of the longest word (5+ letters, never its first letter); None when there is no such swap or the
+    result is a real word from ``known``."""
+    ws = key.split()
+    if not ws:
+        return None
+    j = max(range(len(ws)), key=lambda k: len(ws[k]))
+    w = ws[j]
+    if len(w) < TYPO_MIN_WORD:
+        return None
+    i = next((k for k in range(max(1, len(w) // 2), len(w) - 1) if w[k] != w[k + 1]), None)
+    if i is None:
+        return None
+    typo = w[:i] + w[i + 1] + w[i] + w[i + 2:]
+    if typo in known or words.fold(typo) in known:
+        return None
+    ws[j] = typo
+    return " ".join(ws)
+
+
 def _check_short_problem(rep: Report, key: str, where: str, p: Problem) -> None:
     a = p.answer
     accept, reject, form = a.value["accept"], a.value["reject"], a.form
@@ -209,10 +230,8 @@ def _check_short_problem(rep: Report, key: str, where: str, p: Problem) -> None:
     if form == "any":
         nd = words.norm_any(disp)
         if short_typo_eligible(nd) and nd.isascii():
-            i = next((k for k in range(len(nd) // 2, len(nd) - 1)
-                      if nd[k] != nd[k + 1] and nd[k] != " " and nd[k + 1] != " "), None)
-            if i is not None:
-                t = nd[:i] + nd[i + 1] + nd[i] + nd[i + 2:]
+            t = swap_typo(nd, known_words())
+            if t is not None:
                 rn = [words.norm_any(r) for r in reject]
                 an = {words.norm_any(x) for x in accept}
                 if t not in rn and t not in an and all(words.osa(t, r) > 1 for r in rn):

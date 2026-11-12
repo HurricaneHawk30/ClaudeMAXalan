@@ -16,7 +16,9 @@
     "demand",
     "supply",
     "public goods",
-    "merit goods"
+    "merit goods",
+    "monopoly",
+    "monopolies"
    ],
    "questions": [
     {
@@ -338,11 +340,13 @@
       ],
       "reject": [
        "normal good",
-       "normal"
+       "normal",
+       "interior"
       ],
       "feedback": {
        "normal good": "Demand for a normal good RISES when incomes rise",
-       "normal": "Demand for a normal good RISES when incomes rise"
+       "normal": "Demand for a normal good RISES when incomes rise",
+       "interior": "Careful: 'interior' means inside — check the spelling of the type of good"
       }
      },
      "solution": "When demand falls as income rises, the good is an inferior good: people switch to better-quality alternatives",
@@ -457,12 +461,14 @@
       "reject": [
        "elastic",
        "price elastic",
-       "elastic demand"
+       "elastic demand",
+       "relatively elastic"
       ],
       "feedback": {
        "elastic": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic",
        "price elastic": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic",
-       "elastic demand": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic"
+       "elastic demand": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic",
+       "relatively elastic": "The quantity changed by LESS (2%) than the price (10%), so demand is inelastic"
       }
      },
      "solution": "PED = -2 ÷ 10 = -0.2. Its size is less than 1, so demand is price inelastic",
@@ -618,7 +624,15 @@
        "division of labor",
        "specialisation",
        "specialization"
-      ]
+      ],
+      "reject": [
+       "socialisation",
+       "socialization"
+      ],
+      "feedback": {
+       "socialisation": "Careful: socialisation is a sociology term (learning society's norms) — check the economics term",
+       "socialization": "Careful: socialisation is a sociology term (learning society's norms) — check the economics term"
+      }
      },
      "solution": "Division of labour (specialisation of workers) breaks production into tasks so each worker becomes skilled at one",
      "hint": "Adam Smith described this in a pin factory"
@@ -1703,7 +1717,8 @@
     "exchange rates",
     "globalisation",
     "recession",
-    "supply-side policies"
+    "supply-side policies",
+    "exchange rate"
    ],
    "questions": [
     {

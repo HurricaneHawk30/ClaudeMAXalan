@@ -144,14 +144,20 @@ def _bi_3(rng: random.Random) -> Draft:
             ms.append(_num_mis(int(h), "Hexadecimal is base 16: the first digit is worth 16, not 10"))
         else:
             ms.append(_num_mis(hi * 10 + lo, "Hexadecimal is base 16: multiply the first digit by 16, not 10"))
-        return _q(f"Convert the hexadecimal number {h} to denary.", _num(v), sol,
-                  "The left digit counts 16s and the right digit counts 1s; A = 10, B = 11, … F = 15", ms)
+        d = _q(f"Convert the hexadecimal number {h} to denary.", _num(v), sol,
+               "The left digit counts 16s and the right digit counts 1s; A = 10, B = 11, … F = 15", ms)
+        d["fallback"] = "Multiply the left hex digit by sixteen, then add the right digit (A is ten, B is eleven and so on)"
+        return d
     rev = h[::-1]
     rej = {rev: f"The first hex digit is the number of 16s: {v} ÷ 16 = {hi} remainder {lo}"}
-    return _q(f"Convert the denary number {v} to hexadecimal.", None,
-              f"{v} ÷ 16 = {hi} remainder {lo}. {_hex_note(hi)} and {_hex_note(lo)}, so the hex is {h}",
-              "Divide by 16: the whole-number answer is the first digit and the remainder is the second",
-              short=([h], [r for r in rej if r != h], "any", {r: f for r, f in rej.items() if r != h}))
+    d = _q(f"Convert the denary number {v} to hexadecimal.", None,
+           f"{v} ÷ 16 = {hi} remainder {lo}. {_hex_note(hi)} and {_hex_note(lo)}, so the hex is {h}",
+           "Divide by 16: the whole-number answer is the first digit and the remainder is the second",
+           short=([h], [r for r in rej if r != h], "any", {r: f for r, f in rej.items() if r != h}))
+    # used when the hex answer is "16" (denary 22): the main hint mentions 16
+    d["fallback"] = ("Work out how many sixteens fit into the number: that is the first hex digit, "
+                     "and what is left over is the second digit")
+    return d
 
 
 def _bi_4(rng: random.Random) -> Draft:
@@ -164,17 +170,21 @@ def _bi_4(rng: random.Random) -> Draft:
     hi, lo = divmod(v, 16)
     if rng.random() < 0.5:
         rej = {h[::-1]: "Convert each group of 4 bits from left to right: the left nibble gives the first hex digit"}
-        return _q(f"Convert the 8-bit binary number {b} to hexadecimal.", None,
-                  f"Split into nibbles: {b[:4]} = {_hex_note(hi)} and {b[4:]} = {_hex_note(lo)}, so the hex is {h}",
-                  "Split the bits into two groups of 4 and convert each group to one hex digit",
-                  short=([h], list(rej), "any", rej))
+        d = _q(f"Convert the 8-bit binary number {b} to hexadecimal.", None,
+               f"Split into nibbles: {b[:4]} = {_hex_note(hi)} and {b[4:]} = {_hex_note(lo)}, so the hex is {h}",
+               "Split the bits into two groups of 4 and convert each group to one hex digit",
+               short=([h], list(rej), "any", rej))
+        d["fallback"] = "Split the bits into two groups of four and turn each group into one hex digit"
+        return d
     rej = {_b8(lo * 16 + hi): "Convert the hex digits in order: the first digit gives the left 4 bits"}
     if v < 128:
         rej[b.lstrip("0")] = "That's the right value, but the question asks for 8 bits — include the leading zeros"
-    return _q(f"Convert the hexadecimal number {h} to an 8-bit binary number.", None,
-              f"{h[0]} = {b[:4]} and {h[1]} = {b[4:]}, so the binary is {b}",
-              "Convert each hex digit into a group of 4 bits (8, 4, 2, 1)",
-              short=_bits_short(v, rej))
+    d = _q(f"Convert the hexadecimal number {h} to an 8-bit binary number.", None,
+           f"{h[0]} = {b[:4]} and {h[1]} = {b[4:]}, so the binary is {b}",
+           "Convert each hex digit into a group of 4 bits (8, 4, 2, 1)",
+           short=_bits_short(v, rej))
+    d["fallback"] = "Turn each hex digit into a group of four bits, then write the two groups side by side"
+    return d
 
 
 def _bi_5(rng: random.Random) -> Draft:
@@ -560,6 +570,7 @@ def _skill(name: str, title: str, aliases: tuple[str, ...],
         rng = random.Random(seed)
         d = dict(levels[level - 1](rng))
         ref = d.pop("ref", "")
+        level_fallback = d.pop("fallback", "") or fallback   # a problem whose method differs gives its own
         ch = d.pop("choice", None)
         sh = d.pop("short", None)
         if ch is not None:
@@ -570,7 +581,7 @@ def _skill(name: str, title: str, aliases: tuple[str, ...],
             accept, reject, form, feedback = sh
             answer, ms = build_short(accept, reject, form, feedback)
             d.update(answer=answer, mistakes=list(ms) + list(d.get("mistakes", [])))
-        p = build(sid, level, seed, fallback_hint=fallback, **d)
+        p = build(sid, level, seed, fallback_hint=level_fallback, **d)
         return replace(p, ref=f"{sid}#{ref}") if ref else p
 
     generate.__name__ = f"generate_{name}"

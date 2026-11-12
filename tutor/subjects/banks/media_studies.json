@@ -2006,9 +2006,16 @@
      "short": {
       "accept": [
        "prosumer",
-       "prosumers",
-       "produser"
-      ]
+       "prosumers"
+      ],
+      "reject": [
+       "producer",
+       "producers"
+      ],
+      "feedback": {
+       "producer": "A producer only makes media content — this term blends producer and consumer",
+       "producers": "A producer only makes media content — this term blends producer and consumer"
+      }
      },
      "solution": "A prosumer both produces and consumes media",
      "hint": "The word blends 'producer' and 'consumer'"

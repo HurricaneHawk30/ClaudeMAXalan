@@ -225,3 +225,59 @@ def osa(a: str, b: str, cap: int | None = None) -> int:
         prev2, prev, prev_min = prev, cur, row_min
     d = prev[lb]
     return d if cap is None else min(d, cap + 1)
+
+
+def osa_subs(a: str, b: str) -> tuple[int, int]:
+    """(OSA distance, fewest substitutions over all optimal alignments).
+
+    "photosinthesis" -> "photosynthesis" is (1, 1); "conversation" -> "conservation" is (2, 2);
+    "chrmosomes" -> "chromosome" is (2, 0).  Meant for single words (quadratic, no cap).
+    """
+    la, lb = len(a), len(b)
+    # cells hold (distance, substitutions); tuples compare lexicographically
+    d = [[(0, 0)] * (lb + 1) for _ in range(la + 1)]
+    for i in range(la + 1):
+        d[i][0] = (i, 0)
+    for j in range(lb + 1):
+        d[0][j] = (j, 0)
+    for i in range(1, la + 1):
+        for j in range(1, lb + 1):
+            dl, ds = d[i - 1][j]
+            il, is_ = d[i][j - 1]
+            best = min((dl + 1, ds), (il + 1, is_))
+            sd, ss = d[i - 1][j - 1]
+            best = min(best, (sd, ss) if a[i - 1] == b[j - 1] else (sd + 1, ss + 1))
+            if i > 1 and j > 1 and a[i - 1] == b[j - 2] and a[i - 2] == b[j - 1]:
+                td, ts = d[i - 2][j - 2]
+                best = min(best, (td + 1, ts))
+            d[i][j] = best
+    return d[la][lb]
+
+
+# ------------------------------------------------------------ word rules
+# docs/ARCHITECTURE_V2.md section 10.2 (typo tolerance works word by word)
+
+NEGATION_PREFIXES = ("non", "dis", "un", "in", "im", "ir", "il")
+
+
+def prefix_change(x: str, y: str) -> bool:
+    """One word is the other with a negation prefix added, removed or swapped (elastic / inelastic)."""
+    for p in NEGATION_PREFIXES:
+        if x == p + y or y == p + x:
+            return True
+        for q in NEGATION_PREFIXES:
+            if p != q and x.startswith(p) and y.startswith(q) and x[len(p):] == y[len(q):]:
+                return True
+    return False
+
+
+def word_form(x: str, y: str) -> bool:
+    """x and y are regular forms of one word: -s, -es, -ed, -ing (alkane / alkanes, translate / translated)."""
+    for a, b in ((x, y), (y, x)):
+        if a in (b + "s", b + "es", b + "ed", b + "ing"):
+            return True
+        if b.endswith("e") and a in (b + "d", b[:-1] + "ing"):
+            return True
+        if b.endswith("y") and len(b) > 2 and a in (b[:-1] + "ies", b[:-1] + "ied"):
+            return True
+    return False

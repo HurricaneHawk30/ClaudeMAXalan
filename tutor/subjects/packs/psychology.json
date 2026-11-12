@@ -394,11 +394,17 @@
       ],
       "reject": [
        "state",
-       "state-dependent"
+       "state-dependent",
+       "content",
+       "context independent",
+       "context-independent"
       ],
       "feedback": {
        "state": "State-dependent memory is about your internal state (such as mood), not the place",
-       "state-dependent": "State-dependent memory is about your internal state (such as mood), not the place"
+       "state-dependent": "State-dependent memory is about your internal state (such as mood), not the place",
+       "content": "Careful: 'content' means what is stored — the missing word is about the setting",
+       "context independent": "Recall was better when the setting matched, so memory depended on the setting",
+       "context-independent": "Recall was better when the setting matched, so memory depended on the setting"
       }
      },
      "solution": "Context-dependent memory: the environment at learning acts as a cue at recall (Godden and Baddeley)",
@@ -824,7 +830,13 @@
      "short": {
       "accept": [
        "conservation"
-      ]
+      ],
+      "reject": [
+       "conversation"
+      ],
+      "feedback": {
+       "conversation": "Careful: 'conversation' means talking — Piaget's term is spelt differently"
+      }
      },
      "solution": "Conservation is the understanding that quantity stays the same despite changes in appearance; Piaget said it develops at about age 7",
      "hint": "Children in the pre-operational stage think the taller glass holds more"
