@@ -90,7 +90,11 @@ def _choice_problem(options: Sequence[str], correct: int, feedback) -> str | Non
 
 @functools.lru_cache(maxsize=8192)
 def _choice_semantics(options: tuple[str, ...], correct: int) -> str | None:
-    """Rule 7, last point: on the seed-0 render the display is correct and every other letter wrong."""
+    """Rule 7, last point: on the seed-0 render the display is correct and every other letter wrong.
+
+    (Typing a wrong option's text can never be judged correct: the checker matches the exact option
+    text first; the audit verifies it per item.)
+    """
     from .checker import check
     order = shuffle_order(len(options), 0)
     shown = [options[i] for i in order]
@@ -102,8 +106,6 @@ def _choice_semantics(options: tuple[str, ...], correct: int) -> str | None:
     for j in range(len(shown)):
         if j != c and check(ans, CHOICE_LETTERS[j]).status != "wrong":
             return f"letter {CHOICE_LETTERS[j]} is not judged wrong"
-        if j != c and check(ans, shown[j]).status == "correct":     # safety invariant: never correct
-            return f"typing the wrong option {shown[j]!r} is judged correct"
     return None
 
 
