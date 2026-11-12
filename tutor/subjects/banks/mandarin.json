@@ -1,0 +1,2138 @@
+{
+ "subject": {
+  "id": "mandarin",
+  "title": "Mandarin Chinese",
+  "order": 66
+ },
+ "skills": [
+  {
+   "id": "mandarin.grammar",
+   "title": "Grammar & tenses",
+   "aliases": [
+    "mandarin grammar",
+    "chinese grammar",
+    "tenses",
+    "present tense",
+    "past tense",
+    "future tense",
+    "conditional",
+    "verbs",
+    "adjective agreement",
+    "pronouns",
+    "negatives",
+    "measure words",
+    "particles"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which word means 'I' or 'me'? Choose the correct word.",
+     "choice": {
+      "options": [
+       "我 (wǒ)",
+       "你 (nǐ)",
+       "他 (tā)",
+       "我们 (wǒmen)"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "你 (nǐ) means 'you'",
+       null,
+       "我们 (wǒmen) means 'we'"
+      ]
+     },
+     "solution": "我 (wǒ) = I, me; 你 (nǐ) = you; 他 (tā) = he; 我们 (wǒmen) = we",
+     "hint": "It is one character, and adding 们 (men) to it makes 'we'"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "What does 他们 (tāmen) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "you",
+       "they",
+       "he",
+       "we"
+      ],
+      "correct": 1
+     },
+     "solution": "他 (tā) = he; adding 们 (men) makes it plural: 他们 (tāmen) = they",
+     "hint": "们 (men) makes a pronoun plural"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "What does 你 (nǐ) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "you"
+      ],
+      "reject": [
+       "me",
+       "he"
+      ],
+      "form": "any"
+     },
+     "solution": "你 (nǐ) = you, as in 你好 (nǐ hǎo), hello",
+     "hint": "It is in the greeting 你好 (nǐ hǎo)"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Which particle goes at the end of a sentence to make a yes/no question?",
+     "choice": {
+      "options": [
+       "的 (de)",
+       "了 (le)",
+       "吗 (ma)",
+       "呢 (ne)"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "了 (le) shows a completed action or change",
+       null,
+       "呢 (ne) asks 'and you?' or 'what about…?'"
+      ]
+     },
+     "solution": "吗 (ma) at the end makes a yes/no question: 你好吗 (nǐ hǎo ma)? = How are you?",
+     "hint": "Think of the question 你好___? (How are you?)"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "Complete: 我___是学生 (Wǒ ___ shì xuésheng) = I am not a student.",
+     "choice": {
+      "options": [
+       "没 (méi)",
+       "很 (hěn)",
+       "也 (yě)",
+       "不 (bù)"
+      ],
+      "correct": 3,
+      "feedback": [
+       "没 (méi) negates 有 (yǒu) and past actions, not 是 (shì)",
+       "很 (hěn) means 'very'",
+       "也 (yě) means 'also'",
+       null
+      ]
+     },
+     "solution": "不 (bù) negates 是 (shì): 我不是学生 = I am not a student",
+     "hint": "Which word means 'not' and can go before 是 (shì)?"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "Give the pinyin for the Chinese greeting that means 'hello' (two syllables).",
+     "short": {
+      "accept": [
+       "nǐ hǎo",
+       "nín hǎo"
+      ],
+      "reject": [
+       "zài jiàn",
+       "xiè xie"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "你好 (nǐ hǎo) = hello; 您好 (nín hǎo) is the polite form",
+     "hint": "It starts with the word for 'you'"
+    },
+    {
+     "id": "g07",
+     "level": 2,
+     "text": "Which particle shows a completed action? 我买___一本书 (Wǒ mǎi ___ yì běn shū) = I bought a book.",
+     "choice": {
+      "options": [
+       "了 (le)",
+       "吗 (ma)",
+       "呢 (ne)",
+       "的 (de)"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "吗 (ma) makes a question",
+       null,
+       null
+      ]
+     },
+     "solution": "了 (le) after a verb shows a completed action: 我买了一本书 = I bought a book",
+     "hint": "The action is finished"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "What does 很 (hěn) mean in 她很高 (tā hěn gāo)?",
+     "choice": {
+      "options": [
+       "only",
+       "very",
+       "not",
+       "also"
+      ],
+      "correct": 1
+     },
+     "solution": "很 (hěn) = very: 她很高 = she is (very) tall",
+     "hint": "It comes before an adjective to make it stronger"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "What does 也 (yě) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "also",
+       "too",
+       "as well"
+      ],
+      "form": "any"
+     },
+     "solution": "也 (yě) = also, too: 我也是学生 (wǒ yě shì xuésheng) = I am also a student",
+     "hint": "It comes before the verb, as in 我___是学生 (wǒ ___ shì xuésheng)"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Which measure word goes with 书 (shū, book)? 一___书 (yì ___ shū)",
+     "choice": {
+      "options": [
+       "只 (zhī)",
+       "张 (zhāng)",
+       "本 (běn)",
+       "个 (gè)"
+      ],
+      "correct": 2,
+      "feedback": [
+       "只 (zhī) is used for many animals",
+       "张 (zhāng) is used for flat things like paper and tables",
+       null,
+       "个 (gè) is the general measure word, but books use their own one"
+      ]
+     },
+     "solution": "本 (běn) is the measure word for books: 一本书 (yì běn shū) = one book",
+     "hint": "It is the measure word for bound things like books and magazines"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Which sentence means 'I don't have an older brother'?",
+     "choice": {
+      "options": [
+       "我不有哥哥 (Wǒ bù yǒu gēge)",
+       "我有哥哥 (Wǒ yǒu gēge)",
+       "我是哥哥 (Wǒ shì gēge)",
+       "我没有哥哥 (Wǒ méiyǒu gēge)"
+      ],
+      "correct": 3,
+      "feedback": [
+       "有 (yǒu) is never negated with 不 (bù)",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "有 (yǒu) is always negated with 没 (méi): 我没有哥哥",
+     "hint": "有 (yǒu) uses a special negative word"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "Give the pinyin of the word for 'not' that is used to negate 有 (yǒu, to have).",
+     "short": {
+      "accept": [
+       "méi",
+       "méiyǒu"
+      ],
+      "reject": [
+       "bù"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "没 (méi): 没有 (méiyǒu) = not have",
+     "hint": "It is not 不 (bù)"
+    },
+    {
+     "id": "g13",
+     "level": 3,
+     "text": "What does 我明天去北京 (Wǒ míngtiān qù Běijīng) mean?",
+     "choice": {
+      "options": [
+       "I am going to Beijing tomorrow",
+       "I went to Beijing yesterday",
+       "I live in Beijing",
+       "I like Beijing"
+      ],
+      "correct": 0
+     },
+     "solution": "明天 (míngtiān) = tomorrow; 去 (qù) = to go",
+     "hint": "明天 (míngtiān) is a time word"
+    },
+    {
+     "id": "g14",
+     "level": 3,
+     "text": "Which sentence correctly means 'I study in the evening'?",
+     "choice": {
+      "options": [
+       "晚上学习我 (Wǎnshang xuéxí wǒ)",
+       "我晚上学习 (Wǒ wǎnshang xuéxí)",
+       "我学习晚上 (Wǒ xuéxí wǎnshang)",
+       "学习我晚上 (Xuéxí wǒ wǎnshang)"
+      ],
+      "correct": 1
+     },
+     "solution": "Time words go before the verb: 我晚上学习",
+     "hint": "In Chinese, the time word comes before the verb"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "What does 昨天 (zuótiān) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "yesterday"
+      ],
+      "reject": [
+       "tomorrow",
+       "today"
+      ],
+      "form": "any",
+      "feedback": {
+       "tomorrow": "明天 (míngtiān) means 'tomorrow'"
+      }
+     },
+     "solution": "昨天 (zuótiān) = yesterday; 今天 (jīntiān) = today; 明天 (míngtiān) = tomorrow",
+     "hint": "天 (tiān) means 'day'"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "Complete: 我___中国人 (Wǒ ___ Zhōngguó rén) = I am Chinese.",
+     "choice": {
+      "options": [
+       "在 (zài)",
+       "很 (hěn)",
+       "是 (shì)",
+       "有 (yǒu)"
+      ],
+      "correct": 2,
+      "feedback": [
+       "在 (zài) means 'to be at (a place)'",
+       "很 (hěn) goes before adjectives",
+       null,
+       "有 (yǒu) means 'to have'"
+      ]
+     },
+     "solution": "是 (shì) = to be (am, is, are) before a noun: 我是中国人",
+     "hint": "Which word links two nouns, like 'am' in English?"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "What does 我会说中文 (Wǒ huì shuō Zhōngwén) mean?",
+     "choice": {
+      "options": [
+       "I am speaking Chinese now",
+       "I spoke Chinese",
+       "I want to speak Chinese",
+       "I can speak Chinese"
+      ],
+      "correct": 3
+     },
+     "solution": "会 (huì) = can, know how to; 说 (shuō) = speak",
+     "hint": "会 (huì) here is about a skill you have learned"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "In 他在看书 (Tā zài kàn shū), is the action finished or happening now?",
+     "choice": {
+      "options": [
+       "happening now",
+       "finished",
+       "about to start",
+       "never happened"
+      ],
+      "correct": 0
+     },
+     "solution": "在 (zài) before a verb shows an action in progress: he is reading",
+     "hint": "在 (zài) before a verb is like '-ing' in English"
+    },
+    {
+     "id": "g19",
+     "level": 4,
+     "text": "What does 我去过中国 mean?",
+     "choice": {
+      "options": [
+       "I went to China yesterday",
+       "I have been to China",
+       "I am going to China",
+       "I don't want to go to China"
+      ],
+      "correct": 1
+     },
+     "solution": "过 (guo) after a verb shows experience: I have been to China",
+     "hint": "过 after a verb talks about experience"
+    },
+    {
+     "id": "g20",
+     "level": 4,
+     "text": "Which sentence means 'My older brother is taller than me'?",
+     "choice": {
+      "options": [
+       "我哥哥很高",
+       "我哥哥没有我高",
+       "我哥哥比我高",
+       "我比哥哥高"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "This means 'my brother is not as tall as me'",
+       null,
+       "This means 'I am taller than my brother'"
+      ]
+     },
+     "solution": "A 比 B + adjective = A is more … than B: 我哥哥比我高",
+     "hint": "The pattern is A 比 B + adjective"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "Give the pinyin for 谢谢.",
+     "short": {
+      "accept": [
+       "xièxie",
+       "xièxiè"
+      ],
+      "reject": [
+       "zàijiàn",
+       "nǐhǎo"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "谢谢 (xièxie) = thank you",
+     "hint": "It is what you say when someone gives you a present"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "What does 如果明天下雨，我就不去公园 mean?",
+     "choice": {
+      "options": [
+       "It rained yesterday, so I didn't go to the park",
+       "I go to the park when it rains",
+       "It will not rain tomorrow",
+       "If it rains tomorrow, I won't go to the park"
+      ],
+      "correct": 3
+     },
+     "solution": "如果 … 就 … = if … then …; 下雨 = rain; 公园 = park",
+     "hint": "如果 means 'if'"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "What does 所以 mean in 因为下雨，所以我在家? Answer in English.",
+     "short": {
+      "accept": [
+       "so",
+       "therefore",
+       "as a result",
+       "thus"
+      ],
+      "form": "any"
+     },
+     "solution": "因为 … 所以 … = because … so …: because it is raining, I am at home",
+     "hint": "因为 at the start gives the reason; 所以 introduces the result"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "Which sentence means 'I will go to school by bus'?",
+     "choice": {
+      "options": [
+       "我会坐公共汽车去学校",
+       "我坐公共汽车去了学校",
+       "我不坐公共汽车去学校",
+       "我在学校坐公共汽车"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "了 shows the trip has already happened",
+       null,
+       null
+      ]
+     },
+     "solution": "会 = will; 坐公共汽车 = by bus; 去学校 = go to school",
+     "hint": "Look for 会, which can show the future"
+    },
+    {
+     "id": "g25",
+     "level": 5,
+     "text": "Which sentence means 'I have been learning Chinese for two years (and still am)'?",
+     "choice": {
+      "options": [
+       "我学中文两次",
+       "我学了两年中文了",
+       "我两年以前学中文",
+       "我要学两年中文"
+      ],
+      "correct": 1,
+      "feedback": [
+       "This means 'I studied Chinese twice'",
+       null,
+       "This means 'I studied Chinese two years ago'",
+       "This means 'I am going to study Chinese for two years'"
+      ]
+     },
+     "solution": "Verb + 了 + duration + object + 了 shows an action that has lasted until now",
+     "hint": "Look for the sentence with two 了"
+    },
+    {
+     "id": "g26",
+     "level": 5,
+     "text": "Why is 两, not 二, used in 两个人 ('two people')?",
+     "choice": {
+      "options": [
+       "二 means 'second' only",
+       "两 is more polite than 二",
+       "Before a measure word, 'two' is usually 两",
+       "二 is only used for dates"
+      ],
+      "correct": 2
+     },
+     "solution": "Before a measure word such as 个, 'two' is 两: 两个人",
+     "hint": "Look at the word that comes after the number"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "In 我把作业做完了, what does 把 do?",
+     "choice": {
+      "options": [
+       "It makes the sentence a question",
+       "It shows the future",
+       "It makes the sentence negative",
+       "It moves the object before the verb"
+      ],
+      "correct": 3
+     },
+     "solution": "把 brings the object (作业, homework) before the verb: I finished the homework",
+     "hint": "Find the object 作业 and look at where it comes in the sentence"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "In 我是坐火车来的, the 是…的 pattern stresses one detail of a past action. Which detail: when, where or how? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "how",
+       "manner",
+       "by train"
+      ],
+      "reject": [
+       "when",
+       "where"
+      ],
+      "form": "any"
+     },
+     "solution": "是…的 stresses the detail between them: 坐火车 = by train, so it stresses how I came",
+     "hint": "Look at the words between 是 and 来的"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "Give the pinyin for 学校 (school).",
+     "short": {
+      "accept": [
+       "xuéxiào"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "学校 (xuéxiào) = school",
+     "hint": "学 is the character in 学生 (student)"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "What does 已经 mean in 他已经走了? Answer in English.",
+     "short": {
+      "accept": [
+       "already"
+      ],
+      "form": "any"
+     },
+     "solution": "已经 = already: 他已经走了 = he has already left",
+     "hint": "已经 often goes with 了 at the end of the sentence"
+    }
+   ]
+  },
+  {
+   "id": "mandarin.people",
+   "title": "People & lifestyle",
+   "aliases": [
+    "mandarin family",
+    "chinese family",
+    "family",
+    "friends",
+    "describing people",
+    "personality",
+    "school",
+    "healthy living",
+    "daily routine",
+    "jobs",
+    "future plans"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What does 妈妈 (māma) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "mum",
+       "dad",
+       "older sister",
+       "grandma"
+      ],
+      "correct": 0
+     },
+     "solution": "妈妈 (māma) = mum; 爸爸 (bàba) = dad",
+     "hint": "It sounds like an English word for a parent"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "Which word means 'dad'?",
+     "choice": {
+      "options": [
+       "弟弟 (dìdi)",
+       "爸爸 (bàba)",
+       "妈妈 (māma)",
+       "哥哥 (gēge)"
+      ],
+      "correct": 1
+     },
+     "solution": "爸爸 (bàba) = dad; 妈妈 (māma) = mum; 哥哥 (gēge) = older brother; 弟弟 (dìdi) = younger brother",
+     "hint": "It sounds like 'papa'"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "What does 朋友 (péngyou) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "friend",
+       "friends"
+      ],
+      "form": "any"
+     },
+     "solution": "朋友 (péngyou) = friend",
+     "hint": "You spend your free time with this person"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "What does 老师 (lǎoshī) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "doctor",
+       "friend",
+       "teacher",
+       "student"
+      ],
+      "correct": 2
+     },
+     "solution": "老师 (lǎoshī) = teacher; 学生 (xuésheng) = student",
+     "hint": "This person works in a 学校 (xuéxiào), school, and gives lessons"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "Which word means 'younger sister'?",
+     "choice": {
+      "options": [
+       "姐姐 (jiějie)",
+       "弟弟 (dìdi)",
+       "哥哥 (gēge)",
+       "妹妹 (mèimei)"
+      ],
+      "correct": 3,
+      "feedback": [
+       "姐姐 (jiějie) is an older sister",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "妹妹 (mèimei) = younger sister; 姐姐 (jiějie) = older sister",
+     "hint": "姐姐 (jiějie) is the older sister; find the other sister word"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "Give the pinyin for the Chinese word meaning 'student' (two syllables).",
+     "short": {
+      "accept": [
+       "xuésheng",
+       "xuéshēng"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "学生 (xuésheng) = student",
+     "hint": "The first syllable is the same as in 学校 (school)"
+    },
+    {
+     "id": "p07",
+     "level": 2,
+     "text": "What does 医生 (yīshēng) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "doctor",
+       "nurse",
+       "teacher",
+       "police officer"
+      ],
+      "correct": 0
+     },
+     "solution": "医生 (yīshēng) = doctor; 护士 (hùshi) = nurse",
+     "hint": "医 (yī) is the character in 医院 (yīyuàn), hospital"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "What does 高 (gāo) mean when describing a person?",
+     "choice": {
+      "options": [
+       "old",
+       "tall",
+       "short",
+       "young"
+      ],
+      "correct": 1
+     },
+     "solution": "高 (gāo) = tall; 矮 (ǎi) = short",
+     "hint": "Its opposite is 矮 (ǎi)"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "What does 哥哥 (gēge) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "older brother",
+       "elder brother",
+       "big brother"
+      ],
+      "reject": [
+       "younger brother",
+       "brother"
+      ],
+      "form": "any",
+      "feedback": {
+       "younger brother": "弟弟 (dìdi) is a younger brother",
+       "brother": "Be precise: 哥哥 (gēge) is specifically an older brother"
+      }
+     },
+     "solution": "哥哥 (gēge) = older brother; 弟弟 (dìdi) = younger brother",
+     "hint": "There are two words for 'brother' in Chinese, depending on age"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "What does 聪明 (cōngming) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "friendly",
+       "shy",
+       "clever",
+       "lazy"
+      ],
+      "correct": 2
+     },
+     "solution": "聪明 (cōngming) = clever; 懒 (lǎn) = lazy; 友好 (yǒuhǎo) = friendly; 害羞 (hàixiū) = shy",
+     "hint": "A student who gets top marks is often called this"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "What does 学校 (xuéxiào) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "school"
+      ],
+      "form": "any"
+     },
+     "solution": "学校 (xuéxiào) = school; 学生 (xuésheng) = student",
+     "hint": "学 (xué) means 'to study'"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "Which word means 'to get up'?",
+     "choice": {
+      "options": [
+       "睡觉 (shuìjiào)",
+       "吃饭 (chīfàn)",
+       "上学 (shàngxué)",
+       "起床 (qǐchuáng)"
+      ],
+      "correct": 3
+     },
+     "solution": "起床 (qǐchuáng) = to get up; 睡觉 (shuìjiào) = to sleep; 吃饭 (chīfàn) = to eat; 上学 (shàngxué) = to go to school",
+     "hint": "床 (chuáng) means 'bed'"
+    },
+    {
+     "id": "p13",
+     "level": 3,
+     "text": "What does 我家有四口人 (Wǒ jiā yǒu sì kǒu rén) mean?",
+     "choice": {
+      "options": [
+       "There are four people in my family",
+       "My family has four rooms",
+       "I have four brothers",
+       "My home is four kilometres away"
+      ],
+      "correct": 0
+     },
+     "solution": "口 (kǒu) is the measure word for family members: four people in my family",
+     "hint": "人 (rén) means 'person'"
+    },
+    {
+     "id": "p14",
+     "level": 3,
+     "text": "What does 我每天七点起床 (Wǒ měitiān qī diǎn qǐchuáng) mean?",
+     "choice": {
+      "options": [
+       "I eat breakfast at seven",
+       "I get up at seven every day",
+       "I go to bed at seven every day",
+       "I get up at eleven every day"
+      ],
+      "correct": 1
+     },
+     "solution": "每天 (měitiān) = every day; 七点 (qī diǎn) = seven o'clock; 起床 (qǐchuáng) = get up",
+     "hint": "起床 (qǐchuáng) contains 床 (chuáng), bed"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "我姐姐是护士 (Wǒ jiějie shì hùshi). What is the older sister's job? Answer in English.",
+     "short": {
+      "accept": [
+       "nurse",
+       "a nurse"
+      ],
+      "form": "any"
+     },
+     "solution": "护士 (hùshi) = nurse",
+     "hint": "This person works in a hospital and looks after patients, but is not a doctor"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "What does 我喜欢数学 (Wǒ xǐhuan shùxué) mean?",
+     "choice": {
+      "options": [
+       "I don't like maths",
+       "I teach maths",
+       "I like maths",
+       "I like science"
+      ],
+      "correct": 2
+     },
+     "solution": "喜欢 (xǐhuan) = like; 数学 (shùxué) = maths",
+     "hint": "数 (shù) means 'number'"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "我爸爸很忙 (Wǒ bàba hěn máng). What is Dad like? Answer in English.",
+     "short": {
+      "accept": [
+       "busy",
+       "very busy"
+      ],
+      "form": "any"
+     },
+     "solution": "忙 (máng) = busy; 很 (hěn) = very",
+     "hint": "Someone with lots of work and no free time is this"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "What does 他很友好 (Tā hěn yǒuhǎo) mean?",
+     "choice": {
+      "options": [
+       "He is very lazy",
+       "He is not friendly",
+       "He has many friends",
+       "He is very friendly"
+      ],
+      "correct": 3
+     },
+     "solution": "友好 (yǒuhǎo) = friendly; 很 (hěn) = very",
+     "hint": "友 (yǒu) is the character in 朋友 (péngyou)"
+    },
+    {
+     "id": "p19",
+     "level": 4,
+     "text": "Read: 我叫小明。我十六岁。我喜欢英语，可是我不喜欢历史。 Which statement is true?",
+     "choice": {
+      "options": [
+       "Xiaoming likes English",
+       "Xiaoming is fifteen",
+       "Xiaoming likes history",
+       "Xiaoming does not like English"
+      ],
+      "correct": 0
+     },
+     "solution": "我喜欢英语 = I like English; 我不喜欢历史 = I don't like history; 十六岁 = 16 years old",
+     "hint": "可是 means 'but'"
+    },
+    {
+     "id": "p20",
+     "level": 4,
+     "text": "Read: 我爸爸是医生，他在医院工作。 Where does the father work?",
+     "choice": {
+      "options": [
+       "in an office",
+       "in a hospital",
+       "in a school",
+       "in a shop"
+      ],
+      "correct": 1
+     },
+     "solution": "医院 = hospital; 在医院工作 = works in a hospital",
+     "hint": "医 is in both 医生 (doctor) and 医院"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "text": "Read: 我每天早上跑步，因为跑步对身体好。 What does the person do every morning? Answer in English.",
+     "short": {
+      "accept": [
+       "running",
+       "run",
+       "go running",
+       "goes running",
+       "runs",
+       "jogging",
+       "go jogging",
+       "goes jogging",
+       "jog"
+      ],
+      "form": "any"
+     },
+     "solution": "跑步 = to run, to go running; 对身体好 = good for the body",
+     "hint": "跑 contains the 'foot' part 足"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "Read: 以后我想当老师。 What does the person want to do in the future?",
+     "choice": {
+      "options": [
+       "Study abroad",
+       "Work in a shop",
+       "Become a teacher",
+       "Become a doctor"
+      ],
+      "correct": 2
+     },
+     "solution": "以后 = in the future; 想当老师 = want to be a teacher",
+     "hint": "当 here means 'to work as'"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "Read: 我妹妹比我小三岁。 How many years younger than the writer is the younger sister? Answer with a number.",
+     "short": {
+      "accept": [
+       "3",
+       "three",
+       "3 years",
+       "three years",
+       "3 years younger",
+       "three years younger"
+      ],
+      "reject": [
+       "2",
+       "4"
+      ],
+      "form": "any"
+     },
+     "solution": "比我小三岁 = three years younger than me",
+     "hint": "岁 means 'years of age'; look at the number before it"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "Read: 我晚上十点睡觉。 What happens at ten in the evening?",
+     "choice": {
+      "options": [
+       "The person gets up",
+       "The person eats dinner",
+       "The person does homework",
+       "The person goes to bed"
+      ],
+      "correct": 3
+     },
+     "solution": "睡觉 = to sleep, go to bed; 晚上十点 = 10 pm",
+     "hint": "觉 here is about sleep"
+    },
+    {
+     "id": "p25",
+     "level": 5,
+     "text": "Read: 我以前不爱运动，但是现在我每个周末都去游泳。 Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The person now swims every weekend",
+       "The person has always loved sport",
+       "The person swims every day",
+       "The person has stopped swimming"
+      ],
+      "correct": 0
+     },
+     "solution": "以前不爱运动 = didn't like sport before; 现在每个周末都去游泳 = now goes swimming every weekend",
+     "hint": "Contrast 以前 (before) with 现在 (now)"
+    },
+    {
+     "id": "p26",
+     "level": 5,
+     "text": "Read: 我的好朋友很幽默，可是有时候有点儿懒。 What is the friend like?",
+     "choice": {
+      "options": [
+       "Shy but clever",
+       "Funny but sometimes a bit lazy",
+       "Serious and hard-working",
+       "Lazy and never funny"
+      ],
+      "correct": 1
+     },
+     "solution": "幽默 = humorous, funny; 有时候有点儿懒 = sometimes a bit lazy",
+     "hint": "幽默 sounds like the English word 'humour'"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "text": "Read: 我想上大学学习医学，因为我想帮助病人。 Why does the person want to study medicine?",
+     "choice": {
+      "options": [
+       "To please the parents",
+       "To travel the world",
+       "To care for sick people",
+       "To earn a lot of money"
+      ],
+      "correct": 2
+     },
+     "solution": "因为我想帮助病人 = because I want to help sick people (patients)",
+     "hint": "The reason comes after 因为 (because); 病人 are people who are ill"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "text": "Read: 为了身体健康，我少吃糖，多喝水。 What does the person drink more of? Answer in English.",
+     "short": {
+      "accept": [
+       "water"
+      ],
+      "reject": [
+       "sugar"
+      ],
+      "form": "any",
+      "feedback": {
+       "sugar": "糖 (sugar) is what the person eats less of"
+      }
+     },
+     "solution": "多喝水 = drink more water; 少吃糖 = eat less sugar",
+     "hint": "多 means 'more' and 喝 means 'drink'"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "Give the pinyin for 工作 (work, job).",
+     "short": {
+      "accept": [
+       "gōngzuò"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "工作 (gōngzuò) = work, job",
+     "hint": "The first syllable sounds like the first syllable of 公园 (park)"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "Read: 我周末常常帮妈妈做饭，所以我会做很多中国菜。 Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The person never cooks",
+       "Mum cannot cook",
+       "The person cooks only on weekdays",
+       "The person can cook many Chinese dishes"
+      ],
+      "correct": 3
+     },
+     "solution": "常常帮妈妈做饭 = often cooks with Mum; 会做很多中国菜 = can make many Chinese dishes",
+     "hint": "会做 means 'can make'"
+    }
+   ]
+  },
+  {
+   "id": "mandarin.culture",
+   "title": "Free time & culture",
+   "aliases": [
+    "mandarin free time",
+    "chinese free time",
+    "hobbies",
+    "sport",
+    "music",
+    "cinema",
+    "tv",
+    "technology",
+    "social media",
+    "festivals",
+    "food and drink"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What does 茶 (chá) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "tea",
+       "coffee",
+       "water",
+       "milk"
+      ],
+      "correct": 0
+     },
+     "solution": "茶 (chá) = tea; 咖啡 (kāfēi) = coffee; 水 (shuǐ) = water; 牛奶 (niúnǎi) = milk",
+     "hint": "It sounds like the English 'char' or 'chai'"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "Which word means cooked 'rice'?",
+     "choice": {
+      "options": [
+       "包子 (bāozi)",
+       "米饭 (mǐfàn)",
+       "面条 (miàntiáo)",
+       "饺子 (jiǎozi)"
+      ],
+      "correct": 1
+     },
+     "solution": "米饭 (mǐfàn) = cooked rice; 面条 (miàntiáo) = noodles; 饺子 (jiǎozi) = dumplings; 包子 (bāozi) = steamed buns",
+     "hint": "米 (mǐ) means 'rice grain'"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "What does 电影 (diànyǐng) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "film",
+       "movie",
+       "films",
+       "movies"
+      ],
+      "form": "any"
+     },
+     "solution": "电影 (diànyǐng) = film; 电影院 (diànyǐngyuàn) = cinema",
+     "hint": "电 (diàn) means 'electric' and 影 (yǐng) means 'shadow'"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "What does 足球 (zúqiú) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "table tennis",
+       "badminton",
+       "football",
+       "basketball"
+      ],
+      "correct": 2
+     },
+     "solution": "足球 (zúqiú) = football (足 = foot, 球 = ball)",
+     "hint": "足 (zú) means 'foot' and 球 (qiú) means 'ball'"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "What does 唱歌 (chànggē) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "to dance",
+       "to draw",
+       "to swim",
+       "to sing"
+      ],
+      "correct": 3
+     },
+     "solution": "唱歌 (chànggē) = to sing; 跳舞 (tiàowǔ) = to dance",
+     "hint": "歌 (gē) means 'song'"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "Give the pinyin for the Chinese word meaning 'water' (one syllable).",
+     "short": {
+      "accept": [
+       "shuǐ"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "水 (shuǐ) = water",
+     "hint": "It starts with sh-"
+    },
+    {
+     "id": "c07",
+     "level": 2,
+     "text": "What does 饺子 (jiǎozi) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "dumplings",
+       "noodles",
+       "rice",
+       "steamed buns"
+      ],
+      "correct": 0
+     },
+     "solution": "饺子 (jiǎozi) = dumplings, often eaten at Spring Festival",
+     "hint": "Families often make them together at Chinese New Year"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "Which phrase means 'to watch TV'?",
+     "choice": {
+      "options": [
+       "上网 (shàngwǎng)",
+       "看电视 (kàn diànshì)",
+       "听音乐 (tīng yīnyuè)",
+       "打篮球 (dǎ lánqiú)"
+      ],
+      "correct": 1
+     },
+     "solution": "看电视 (kàn diànshì) = watch TV; 听音乐 (tīng yīnyuè) = listen to music; 打篮球 (dǎ lánqiú) = play basketball; 上网 (shàngwǎng) = go online",
+     "hint": "看 (kàn) means 'to look at, to watch'"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "What does 跳舞 (tiàowǔ) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "to dance",
+       "dance",
+       "dancing"
+      ],
+      "form": "any"
+     },
+     "solution": "跳舞 (tiàowǔ) = to dance",
+     "hint": "跳 (tiào) means 'to jump'"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "What does 春节 (Chūnjié) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "Dragon Boat Festival",
+       "Lantern Festival",
+       "Spring Festival",
+       "Mid-Autumn Festival"
+      ],
+      "correct": 2
+     },
+     "solution": "春节 (Chūnjié) = Spring Festival (Chinese New Year); 春 (chūn) = spring, 节 (jié) = festival",
+     "hint": "春 (chūn) is a season"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "What does 打篮球 (dǎ lánqiú) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "play basketball",
+       "to play basketball",
+       "playing basketball",
+       "basketball"
+      ],
+      "form": "any"
+     },
+     "solution": "打篮球 (dǎ lánqiú) = play basketball (篮 = basket, 球 = ball)",
+     "hint": "篮 (lán) means 'basket' and 球 (qiú) means 'ball'"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "What does 手机 (shǒujī) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "computer",
+       "television",
+       "camera",
+       "mobile phone"
+      ],
+      "correct": 3
+     },
+     "solution": "手机 (shǒujī) = mobile phone (手 = hand, 机 = machine)",
+     "hint": "手 (shǒu) means 'hand' and 机 (jī) means 'machine'"
+    },
+    {
+     "id": "c13",
+     "level": 3,
+     "text": "What does 我喜欢看电影 (Wǒ xǐhuan kàn diànyǐng) mean?",
+     "choice": {
+      "options": [
+       "I like watching films",
+       "I like listening to music",
+       "I don't like films",
+       "I am watching a film"
+      ],
+      "correct": 0
+     },
+     "solution": "喜欢 (xǐhuan) = like; 看电影 (kàn diànyǐng) = watch films",
+     "hint": "电影 (diànyǐng) means 'film'"
+    },
+    {
+     "id": "c14",
+     "level": 3,
+     "text": "What does 周末我常常打乒乓球 (Zhōumò wǒ chángcháng dǎ pīngpāngqiú) mean?",
+     "choice": {
+      "options": [
+       "I played table tennis last weekend",
+       "At weekends I often play table tennis",
+       "At weekends I never play table tennis",
+       "I play table tennis every day"
+      ],
+      "correct": 1
+     },
+     "solution": "周末 (zhōumò) = weekend; 常常 (chángcháng) = often; 乒乓球 (pīngpāngqiú) = table tennis",
+     "hint": "常常 (chángcháng) is a frequency word"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "我最喜欢的菜是面条 (Wǒ zuì xǐhuan de cài shì miàntiáo). What is the person's favourite dish? Answer in English.",
+     "short": {
+      "accept": [
+       "noodles",
+       "noodle"
+      ],
+      "form": "any"
+     },
+     "solution": "面条 (miàntiáo) = noodles; 最喜欢的 (zuì xǐhuan de) = favourite",
+     "hint": "条 (tiáo) is used for long thin things"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "What do people traditionally eat at the Mid-Autumn Festival (中秋节, Zhōngqiū jié)?",
+     "choice": {
+      "options": [
+       "zongzi rice parcels",
+       "birthday noodles",
+       "mooncakes",
+       "dumplings"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Zongzi are eaten at the Dragon Boat Festival",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "People eat 月饼 (yuèbing), mooncakes, and admire the full moon",
+     "hint": "The festival is held when the moon is full"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "我每天上网 (Wǒ měitiān shàngwǎng). What does the person do every day? Answer in English.",
+     "short": {
+      "accept": [
+       "go online",
+       "goes online",
+       "use the internet",
+       "uses the internet",
+       "surf the internet",
+       "surfs the internet",
+       "going online",
+       "get online",
+       "surf the web",
+       "browse the internet"
+      ],
+      "form": "any"
+     },
+     "solution": "上网 (shàngwǎng) = go online; 网 (wǎng) = net",
+     "hint": "网 (wǎng) means 'net'"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "What does 我会弹钢琴 (Wǒ huì tán gāngqín) mean?",
+     "choice": {
+      "options": [
+       "I can play the guitar",
+       "I like listening to the piano",
+       "I want to buy a piano",
+       "I can play the piano"
+      ],
+      "correct": 3
+     },
+     "solution": "会 (huì) = can; 弹钢琴 (tán gāngqín) = play the piano",
+     "hint": "钢琴 (gāngqín) is a keyboard instrument"
+    },
+    {
+     "id": "c19",
+     "level": 4,
+     "text": "Read: 春节的时候，我们全家一起吃饭，孩子们收红包。 What do children receive at Spring Festival?",
+     "choice": {
+      "options": [
+       "red envelopes with money",
+       "mooncakes",
+       "new school books",
+       "toys from school"
+      ],
+      "correct": 0
+     },
+     "solution": "收红包 = receive red envelopes (红包) with money inside",
+     "hint": "红 means 'red' and 包 means 'packet'"
+    },
+    {
+     "id": "c20",
+     "level": 4,
+     "text": "Read: 我觉得社交媒体很有意思，但是有时候浪费时间。 What is the person's opinion of social media?",
+     "choice": {
+      "options": [
+       "Only for older people",
+       "Interesting but sometimes a waste of time",
+       "Boring and a waste of time",
+       "Always useful"
+      ],
+      "correct": 1
+     },
+     "solution": "很有意思 = very interesting; 有时候浪费时间 = sometimes wastes time",
+     "hint": "有意思 means 'interesting'; 但是 means 'but'"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "Read: 我爸爸喜欢喝咖啡，我妈妈喜欢喝茶。 What does the father like to drink?",
+     "choice": {
+      "options": [
+       "milk",
+       "juice",
+       "coffee",
+       "tea"
+      ],
+      "correct": 2
+     },
+     "solution": "咖啡 = coffee; the mother likes 茶 (tea)",
+     "hint": "Say 咖啡 (kāfēi) aloud"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Read: 昨天晚上我和朋友去看了一部很好笑的电影。 What kind of film did they see?",
+     "choice": {
+      "options": [
+       "a scary film",
+       "a sad film",
+       "a boring film",
+       "a very funny film"
+      ],
+      "correct": 3
+     },
+     "solution": "好笑 = funny; 很 = very",
+     "hint": "笑 means 'to laugh'"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Give the pinyin for 音乐 (music).",
+     "short": {
+      "accept": [
+       "yīnyuè"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "音乐 (yīnyuè) = music",
+     "hint": "It has two syllables; the first one sounds like 'yin'"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Read: 我每个星期六都去踢足球。如果下雨，我就在家玩电脑游戏。 What does the person do when it rains?",
+     "choice": {
+      "options": [
+       "Plays computer games at home",
+       "Plays football in the rain",
+       "Goes to the cinema",
+       "Reads a book"
+      ],
+      "correct": 0
+     },
+     "solution": "如果下雨 = if it rains; 在家玩电脑游戏 = play computer games at home",
+     "hint": "如果 means 'if'"
+    },
+    {
+     "id": "c25",
+     "level": 5,
+     "text": "Read: 端午节的时候，人们吃粽子，看龙舟比赛。 Which festival is described?",
+     "choice": {
+      "options": [
+       "Lantern Festival",
+       "Dragon Boat Festival",
+       "Spring Festival",
+       "Mid-Autumn Festival"
+      ],
+      "correct": 1
+     },
+     "solution": "端午节 is the Dragon Boat Festival: people eat 粽子 (zongzi) and watch 龙舟 (dragon boat) races",
+     "hint": "龙 means 'dragon' and 舟 means 'boat'"
+    },
+    {
+     "id": "c26",
+     "level": 5,
+     "text": "Read: 虽然中国菜很好吃，但是我觉得有点儿辣。 Which statement is accurate?",
+     "choice": {
+      "options": [
+       "Chinese food is not spicy",
+       "The person cannot eat spicy food",
+       "The person finds Chinese food tasty but a bit spicy",
+       "The person does not like Chinese food at all"
+      ],
+      "correct": 2
+     },
+     "solution": "虽然 … 但是 … = although … but …; 好吃 = tasty; 有点儿辣 = a bit spicy",
+     "hint": "虽然 … 但是 … introduces a contrast"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "Read: 我以前常常看电视，现在我更喜欢用手机看视频。 What has changed?",
+     "choice": {
+      "options": [
+       "The person now watches more TV",
+       "The person never watched TV",
+       "The person has no phone",
+       "The person now prefers watching videos on the phone"
+      ],
+      "correct": 3
+     },
+     "solution": "以前 = before; 现在更喜欢用手机看视频 = now prefers watching videos on the phone",
+     "hint": "Contrast 以前 (before) with 现在 (now)"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "Read: 元宵节的晚上，很多人去看灯笼。 What do many people go to see? Answer in English.",
+     "short": {
+      "accept": [
+       "lanterns",
+       "lantern",
+       "the lanterns",
+       "lantern displays",
+       "lantern show"
+      ],
+      "form": "any"
+     },
+     "solution": "灯笼 = lanterns; 元宵节 is the Lantern Festival",
+     "hint": "灯 means 'lamp, light'"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Give the pinyin for 中国 (China).",
+     "short": {
+      "accept": [
+       "Zhōngguó"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "中国 (Zhōngguó) = China, the 'Middle Kingdom'",
+     "hint": "中 means 'middle' and starts with zh-"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Read: 我每天花两个小时玩电子游戏，我妈妈说太多了。 What does the mother think? Answer in English.",
+     "short": {
+      "accept": [
+       "too much",
+       "too much time",
+       "too long"
+      ],
+      "form": "any"
+     },
+     "solution": "太多了 = too much: Mum thinks two hours a day of video games is too much",
+     "hint": "太 means 'too' and 多 means 'many, much'"
+    }
+   ]
+  },
+  {
+   "id": "mandarin.world",
+   "title": "Travel & the world",
+   "aliases": [
+    "mandarin holidays",
+    "chinese holidays",
+    "holidays",
+    "travel",
+    "town",
+    "local area",
+    "home",
+    "environment",
+    "global issues",
+    "weather",
+    "directions",
+    "transport",
+    "shopping"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What does 火车 (huǒchē) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "train",
+       "bus",
+       "plane",
+       "car"
+      ],
+      "correct": 0
+     },
+     "solution": "火车 (huǒchē) = train (火 = fire, 车 = vehicle)",
+     "hint": "火 (huǒ) means 'fire': think of old steam engines"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "Which word means 'plane'?",
+     "choice": {
+      "options": [
+       "船 (chuán)",
+       "飞机 (fēijī)",
+       "火车 (huǒchē)",
+       "汽车 (qìchē)"
+      ],
+      "correct": 1
+     },
+     "solution": "飞机 (fēijī) = plane; 火车 (huǒchē) = train; 汽车 (qìchē) = car; 船 (chuán) = boat",
+     "hint": "飞 (fēi) means 'to fly'"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "What does 商店 (shāngdiàn) mean? Answer in English.",
+     "short": {
+      "accept": [
+       "shop",
+       "store"
+      ],
+      "form": "any"
+     },
+     "solution": "商店 (shāngdiàn) = shop",
+     "hint": "You buy things there"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "What does 下雨 (xià yǔ) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "to be windy",
+       "to be sunny",
+       "to rain",
+       "to snow"
+      ],
+      "correct": 2
+     },
+     "solution": "下雨 (xià yǔ) = to rain; 下雪 (xià xuě) = to snow",
+     "hint": "雨 (yǔ) falls from clouds and makes you wet"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "What does 医院 (yīyuàn) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "hotel",
+       "bank",
+       "library",
+       "hospital"
+      ],
+      "correct": 3
+     },
+     "solution": "医院 (yīyuàn) = hospital; 医生 (yīshēng) = doctor",
+     "hint": "医 (yī) is the character in 医生 (yīshēng), doctor"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "Give the pinyin for the Chinese word meaning 'cold' (weather, one syllable).",
+     "short": {
+      "accept": [
+       "lěng"
+      ],
+      "reject": [
+       "rè"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "冷 (lěng) = cold; 热 (rè) = hot",
+     "hint": "It starts with l-"
+    },
+    {
+     "id": "w07",
+     "level": 2,
+     "text": "What does 左 (zuǒ) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "left",
+       "right",
+       "straight on",
+       "behind"
+      ],
+      "correct": 0
+     },
+     "solution": "左 (zuǒ) = left; 右 (yòu) = right",
+     "hint": "Its opposite is 右 (yòu)"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "Which word means 'hotel'?",
+     "choice": {
+      "options": [
+       "银行 (yínháng)",
+       "酒店 (jiǔdiàn)",
+       "商店 (shāngdiàn)",
+       "书店 (shūdiàn)"
+      ],
+      "correct": 1
+     },
+     "solution": "酒店 (jiǔdiàn) = hotel; 商店 (shāngdiàn) = shop; 书店 (shūdiàn) = bookshop; 银行 (yínháng) = bank",
+     "hint": "You sleep there on holiday"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "What does 右 (yòu) mean in directions? Answer in English.",
+     "short": {
+      "accept": [
+       "right",
+       "the right",
+       "to the right",
+       "on the right"
+      ],
+      "reject": [
+       "left"
+      ],
+      "form": "any",
+      "feedback": {
+       "left": "左 (zuǒ) means 'left'"
+      }
+     },
+     "solution": "右 (yòu) = right; 左 (zuǒ) = left",
+     "hint": "左 (zuǒ) means 'left'; this word is its opposite"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "What does 天气很热 (tiānqì hěn rè) mean?",
+     "choice": {
+      "options": [
+       "The weather is rainy",
+       "The weather is windy",
+       "The weather is very hot",
+       "The weather is very cold"
+      ],
+      "correct": 2
+     },
+     "solution": "天气 (tiānqì) = weather; 热 (rè) = hot",
+     "hint": "热 (rè) has the 'fire' dots at the bottom"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "What does 公园 (gōngyuán) mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "zoo",
+       "square",
+       "station",
+       "park"
+      ],
+      "correct": 3
+     },
+     "solution": "公园 (gōngyuán) = park; 动物园 (dòngwùyuán) = zoo",
+     "hint": "公 (gōng) means 'public' and 园 (yuán) means 'garden'"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "Which word means 'bus'?",
+     "choice": {
+      "options": [
+       "公共汽车 (gōnggòng qìchē)",
+       "出租车 (chūzūchē)",
+       "自行车 (zìxíngchē)",
+       "地铁 (dìtiě)"
+      ],
+      "correct": 0
+     },
+     "solution": "公共汽车 (gōnggòng qìchē) = bus; 出租车 (chūzūchē) = taxi; 自行车 (zìxíngchē) = bicycle; 地铁 (dìtiě) = underground",
+     "hint": "公共 (gōnggòng) means 'public'"
+    },
+    {
+     "id": "w13",
+     "level": 3,
+     "text": "What does 我坐飞机去上海 (Wǒ zuò fēijī qù Shànghǎi) mean?",
+     "choice": {
+      "options": [
+       "I flew from Shanghai",
+       "I go to Shanghai by plane",
+       "I go to Shanghai by train",
+       "I live in Shanghai"
+      ],
+      "correct": 1
+     },
+     "solution": "坐飞机 (zuò fēijī) = by plane; 去上海 (qù Shànghǎi) = go to Shanghai",
+     "hint": "坐 (zuò) + vehicle shows how you travel"
+    },
+    {
+     "id": "w14",
+     "level": 3,
+     "text": "What does 银行在学校旁边 (Yínháng zài xuéxiào pángbiān) mean?",
+     "choice": {
+      "options": [
+       "The bank is behind the school",
+       "The school is in the bank",
+       "The bank is beside the school",
+       "The bank is opposite the school"
+      ],
+      "correct": 2
+     },
+     "solution": "旁边 (pángbiān) = beside; 银行 (yínháng) = bank",
+     "hint": "旁边 (pángbiān) means 'at the side'"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "我家附近有一个超市 (Wǒ jiā fùjìn yǒu yí ge chāoshì). What is near the person's home? Answer in English.",
+     "short": {
+      "accept": [
+       "a supermarket",
+       "supermarket"
+      ],
+      "form": "any"
+     },
+     "solution": "超市 (chāoshì) = supermarket; 附近 (fùjìn) = nearby",
+     "hint": "超 (chāo) means 'super' and 市 (shì) means 'market'"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "What does 一直往前走 (yìzhí wǎng qián zǒu) mean?",
+     "choice": {
+      "options": [
+       "Turn left",
+       "Turn right",
+       "Go back",
+       "Go straight on"
+      ],
+      "correct": 3
+     },
+     "solution": "一直 (yìzhí) = straight; 往前 (wǎng qián) = forward; 走 (zǒu) = walk",
+     "hint": "前 (qián) means 'front'"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "这件衣服多少钱 (Zhè jiàn yīfu duōshao qián)? What is the person asking? Answer in English.",
+     "short": {
+      "accept": [
+       "the price",
+       "price",
+       "how much it costs",
+       "how much is it",
+       "how much the clothes cost",
+       "the cost",
+       "cost",
+       "how much"
+      ],
+      "form": "any"
+     },
+     "solution": "多少钱 (duōshao qián) = how much (money); 衣服 (yīfu) = clothes",
+     "hint": "钱 (qián) means 'money'"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "What does 明天会下雪 (Míngtiān huì xià xuě) mean?",
+     "choice": {
+      "options": [
+       "Tomorrow it will snow",
+       "Yesterday it snowed",
+       "Today it is snowing",
+       "Tomorrow it will rain"
+      ],
+      "correct": 0
+     },
+     "solution": "明天 (míngtiān) = tomorrow; 会 (huì) = will; 下雪 (xià xuě) = to snow",
+     "hint": "雪 (xuě) means 'snow' and 雨 (yǔ) means 'rain'"
+    },
+    {
+     "id": "w19",
+     "level": 4,
+     "text": "Read: 去年暑假我和家人去了西安，参观了兵马俑。 What did they visit?",
+     "choice": {
+      "options": [
+       "the Summer Palace",
+       "the Terracotta Army",
+       "the Great Wall",
+       "the Forbidden City"
+      ],
+      "correct": 1
+     },
+     "solution": "兵马俑 = the Terracotta Army (soldier and horse figures) in Xi'an",
+     "hint": "兵 means 'soldier' and 马 means 'horse'"
+    },
+    {
+     "id": "w20",
+     "level": 4,
+     "text": "Read: 我住的城市很漂亮，但是交通很拥挤。 What is the problem with the city?",
+     "choice": {
+      "options": [
+       "There is no public transport",
+       "The air is very cold",
+       "The traffic is very congested",
+       "The city is ugly"
+      ],
+      "correct": 2
+     },
+     "solution": "交通很拥挤 = the traffic is very congested",
+     "hint": "The problem comes after 但是 (but); 交通 means 'traffic'"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "Read: 我们坐了十个小时的火车。 How long was the train journey?",
+     "choice": {
+      "options": [
+       "four hours",
+       "two hours",
+       "twelve hours",
+       "ten hours"
+      ],
+      "correct": 3
+     },
+     "solution": "十个小时 = ten hours",
+     "hint": "小时 means 'hour'; look at the number before it"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "Read: 为了保护环境，我们应该多坐公共汽车，少开车。 What does the writer suggest?",
+     "choice": {
+      "options": [
+       "Take the bus more and drive less",
+       "Drive more and take the bus less",
+       "Buy a new car",
+       "Walk to school every day"
+      ],
+      "correct": 0
+     },
+     "solution": "多坐公共汽车 = take the bus more; 少开车 = drive less",
+     "hint": "多 means 'more' and 少 means 'less'"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "Read: 我在商店买了一双鞋。 What did the person buy? Answer in English.",
+     "short": {
+      "accept": [
+       "a pair of shoes",
+       "shoes",
+       "pair of shoes",
+       "some shoes"
+      ],
+      "form": "any"
+     },
+     "solution": "一双鞋 = a pair of shoes (双 is the measure word for pairs)",
+     "hint": "双 is the measure word for pairs"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "Read: 我的房间不大，但是很干净。 What is the room like?",
+     "choice": {
+      "options": [
+       "big but dirty",
+       "small but clean",
+       "big and clean",
+       "small and dirty"
+      ],
+      "correct": 1
+     },
+     "solution": "不大 = not big; 很干净 = very clean",
+     "hint": "干净 means 'clean'"
+    },
+    {
+     "id": "w25",
+     "level": 5,
+     "text": "Read: 虽然坐火车比坐飞机慢，可是我觉得坐火车更舒服。 Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The train is faster and more comfortable",
+       "The writer prefers flying",
+       "The train is slower but more comfortable",
+       "The plane is slower than the train"
+      ],
+      "correct": 2
+     },
+     "solution": "比坐飞机慢 = slower than flying; 更舒服 = more comfortable",
+     "hint": "慢 means 'slow' and 舒服 means 'comfortable'"
+    },
+    {
+     "id": "w26",
+     "level": 5,
+     "text": "Read: 现在很多城市的空气污染很严重，所以人们要多种树。 What solution is suggested?",
+     "choice": {
+      "options": [
+       "Building more roads",
+       "Driving more cars",
+       "Moving to the countryside",
+       "Planting more trees"
+      ],
+      "correct": 3
+     },
+     "solution": "空气污染 = air pollution; 多种树 = plant more trees",
+     "hint": "种 means 'to plant' and 树 means 'tree'"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "Read: 如果我有钱，我就去世界各地旅游。 What does this mean?",
+     "choice": {
+      "options": [
+       "If I had money, I would travel around the world",
+       "I have money, so I travel",
+       "I travelled around the world last year",
+       "I never want to travel"
+      ],
+      "correct": 0
+     },
+     "solution": "如果 … 就 … = if … then …; 世界各地 = all over the world; 旅游 = travel",
+     "hint": "如果 means 'if'"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "Read: 从这儿到火车站要走二十分钟。 How many minutes does it take to walk to the station? Answer with a number.",
+     "short": {
+      "accept": [
+       "20",
+       "twenty",
+       "20 minutes",
+       "twenty minutes"
+      ],
+      "reject": [
+       "2",
+       "10"
+      ],
+      "form": "any"
+     },
+     "solution": "二十分钟 = twenty minutes",
+     "hint": "分钟 means 'minute'; 二十 is two tens"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "Give the pinyin for 火车站 (railway station).",
+     "short": {
+      "accept": [
+       "huǒchēzhàn"
+      ],
+      "form": "pinyin"
+     },
+     "solution": "火车站 (huǒchēzhàn) = railway station",
+     "hint": "It has three syllables; 站 means 'station' or 'stop'"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "Read: 那家饭馆的菜又便宜又好吃。 What is the food at that restaurant like? Answer in English.",
+     "short": {
+      "accept": [
+       "cheap and tasty",
+       "tasty and cheap",
+       "cheap and delicious",
+       "delicious and cheap",
+       "cheap and good",
+       "inexpensive and tasty",
+       "inexpensive and delicious",
+       "both cheap and tasty",
+       "both cheap and delicious"
+      ],
+      "form": "any"
+     },
+     "solution": "又 … 又 … = both … and …; 便宜 = cheap; 好吃 = tasty",
+     "hint": "又 … 又 … links two qualities"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "mandarin.y{year}.grammar",
+      "label": "Grammar & tenses",
+      "skills": [
+       "mandarin.grammar"
+      ]
+     },
+     {
+      "id": "mandarin.y{year}.people",
+      "label": "People & lifestyle",
+      "skills": [
+       "mandarin.people"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "mandarin.y{year}.culture",
+      "label": "Free time & culture",
+      "skills": [
+       "mandarin.culture"
+      ]
+     },
+     {
+      "id": "mandarin.y{year}.world",
+      "label": "Travel & the world",
+      "skills": [
+       "mandarin.world"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

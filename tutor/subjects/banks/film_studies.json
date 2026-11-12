@@ -1,0 +1,2346 @@
+{
+ "subject": {
+  "id": "film_studies",
+  "title": "Film Studies",
+  "order": 50
+ },
+ "skills": [
+  {
+   "id": "film_studies.cinematography",
+   "title": "Cinematography & editing",
+   "aliases": [
+    "camera shots",
+    "camera angles",
+    "camera movement",
+    "continuity editing",
+    "montage",
+    "match on action",
+    "shot reverse shot",
+    "cross-cutting",
+    "jump cut"
+   ],
+   "questions": [
+    {
+     "id": "fc01",
+     "level": 1,
+     "text": "Which camera shot shows a character's face filling most of the frame?",
+     "choice": {
+      "options": [
+       "Long shot",
+       "Establishing shot",
+       "Two-shot",
+       "Close-up"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "A long shot shows the whole body and some of the setting",
+       null,
+       null
+      ]
+     },
+     "solution": "A close-up frames the face, showing emotion in detail",
+     "hint": "The camera is very near the face"
+    },
+    {
+     "id": "fc02",
+     "level": 1,
+     "text": "Which camera movement turns the camera horizontally, left or right, while the camera stays in one place? Give the term.",
+     "short": {
+      "accept": [
+       "pan",
+       "panning",
+       "pan shot"
+      ],
+      "reject": [
+       "tilt",
+       "tracking shot",
+       "zoom"
+      ],
+      "feedback": {
+       "tilt": "A tilt moves the camera up or down",
+       "tracking shot": "In a tracking shot the whole camera travels along",
+       "zoom": "A zoom changes the lens, not the direction the camera points"
+      }
+     },
+     "solution": "A pan swivels the camera horizontally from a fixed position",
+     "hint": "It is a three-letter word"
+    },
+    {
+     "id": "fc03",
+     "level": 1,
+     "text": "What is an establishing shot used for?",
+     "choice": {
+      "options": [
+       "Showing a character's tears in detail",
+       "Showing a conversation between two people",
+       "Showing where, and sometimes when, a scene takes place",
+       "Showing the end credits"
+      ],
+      "correct": 2
+     },
+     "solution": "An establishing shot, often an extreme long shot, sets up the location of a scene",
+     "hint": "It usually comes at the start of a scene"
+    },
+    {
+     "id": "fc04",
+     "level": 1,
+     "text": "Which camera angle looks up at a character from below, often making them seem powerful? Give the term.",
+     "short": {
+      "accept": [
+       "low angle",
+       "low-angle shot",
+       "low angle shot"
+      ],
+      "reject": [
+       "high angle",
+       "high angle shot"
+      ],
+      "feedback": {
+       "high angle": "A high angle looks down on a character, often making them seem weaker",
+       "high angle shot": "A high angle looks down on a character, often making them seem weaker"
+      }
+     },
+     "solution": "A low-angle shot looks up at the subject, often suggesting power or threat",
+     "hint": "The camera is placed beneath the character's eye level"
+    },
+    {
+     "id": "fc05",
+     "level": 1,
+     "text": "What is a jump cut?",
+     "choice": {
+      "options": [
+       "A smooth cut where an action continues across two shots",
+       "A gradual change from one image to another",
+       "An abrupt cut that makes time or the subject seem to jump forward",
+       "A shot taken from a helicopter"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That is match on action",
+       null,
+       "That is a dissolve"
+      ]
+     },
+     "solution": "A jump cut is a sudden, noticeable cut within a scene that makes time appear to jump",
+     "hint": "The name tells you how it feels to watch"
+    },
+    {
+     "id": "fc06",
+     "level": 1,
+     "text": "Which editing technique cuts back and forth between two characters in a conversation, often over their shoulders?",
+     "choice": {
+      "options": [
+       "Shot reverse shot",
+       "Montage",
+       "Jump cut",
+       "Cross-cutting"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Shot reverse shot alternates between two characters, usually in conversation",
+     "hint": "One shot shows one character, the next shows the other"
+    },
+    {
+     "id": "fc07",
+     "level": 1,
+     "text": "What is the name for a series of short shots edited together to show time passing quickly, such as a training sequence? Give the term.",
+     "short": {
+      "accept": [
+       "montage",
+       "montage sequence",
+       "training montage"
+      ]
+     },
+     "solution": "A montage compresses time by joining many short shots together",
+     "hint": "It comes from a French word meaning 'assembly'"
+    },
+    {
+     "id": "fc08",
+     "level": 2,
+     "text": "What is the difference between a tilt and a pan?",
+     "choice": {
+      "options": [
+       "A tilt moves the camera from side to side; a pan moves it up or down",
+       "A tilt moves the camera up or down; a pan moves it from side to side",
+       "A tilt moves the whole camera along a track; a pan is a zoom",
+       "A tilt is an editing effect; a pan is a type of lighting"
+      ],
+      "correct": 1,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Both pivot from a fixed point: a tilt is vertical, a pan is horizontal",
+     "hint": "Think of nodding your head versus shaking it"
+    },
+    {
+     "id": "fc09",
+     "level": 2,
+     "text": "What is the difference between a zoom and a tracking shot?",
+     "choice": {
+      "options": [
+       "A zoom moves the camera on rails; a tracking shot changes the lens",
+       "A zoom is always handheld; a tracking shot is always overhead",
+       "A zoom is a cut between shots; a tracking shot is a fade",
+       "A zoom changes the lens to magnify the image; in a tracking shot the camera itself moves"
+      ],
+      "correct": 3,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "A zoom changes the focal length of the lens; a tracking shot physically moves the camera",
+     "hint": "Does the camera itself travel, or only the lens change?"
+    },
+    {
+     "id": "fc10",
+     "level": 2,
+     "text": "What is the name of the shot that shows exactly what a character is seeing, as if through their eyes? Give the term.",
+     "short": {
+      "accept": [
+       "point of view shot",
+       "point-of-view shot",
+       "point of view",
+       "POV",
+       "POV shot",
+       "subjective shot"
+      ]
+     },
+     "solution": "A point-of-view (POV) shot shows the scene from a character's viewpoint",
+     "hint": "Its abbreviation is three letters"
+    },
+    {
+     "id": "fc11",
+     "level": 2,
+     "text": "What is cross-cutting?",
+     "choice": {
+      "options": [
+       "Cutting between two or more scenes happening at the same time in different places",
+       "Cutting between two people in one conversation",
+       "Using a fade to black between scenes",
+       "Cutting to a close-up of an object"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That is shot reverse shot",
+       null
+      ]
+     },
+     "solution": "Cross-cutting (parallel editing) switches between actions in different places, often to build tension",
+     "hint": "The scenes happen in different places"
+    },
+    {
+     "id": "fc12",
+     "level": 2,
+     "text": "Which editing rule says the camera should stay on one side of an imaginary line between two characters, so they keep the same left–right positions on screen? Give the name of the rule.",
+     "short": {
+      "accept": [
+       "180-degree rule",
+       "180 degree rule",
+       "180degree rule",
+       "180 rule",
+       "180° rule",
+       "180 degrees rule"
+      ],
+      "reject": [
+       "30-degree rule",
+       "30 degree rule"
+      ],
+      "feedback": {
+       "30-degree rule": "The 30-degree rule is about moving the camera at least 30 degrees between shots of the same subject",
+       "30 degree rule": "The 30-degree rule is about moving the camera at least 30 degrees between shots of the same subject"
+      }
+     },
+     "solution": "The 180-degree rule keeps the camera on one side of the line of action so screen positions stay consistent",
+     "hint": "The line cuts the circle around the actors in half"
+    },
+    {
+     "id": "fc13",
+     "level": 2,
+     "text": "What is the difference between a high angle and a bird's-eye view?",
+     "choice": {
+      "options": [
+       "A high angle looks down from above eye level; a bird's-eye view looks straight down from overhead",
+       "A high angle looks up; a bird's-eye view looks down",
+       "A high angle is filmed from a plane; a bird's-eye view is filmed from the ground",
+       "They are the same: both look straight up at the sky"
+      ],
+      "correct": 0
+     },
+     "solution": "A high angle looks down at an angle; a bird's-eye view is directly overhead",
+     "hint": "Think about how steeply each one looks down"
+    },
+    {
+     "id": "fc14",
+     "level": 2,
+     "text": "Which editing technique cuts in the middle of a movement, so the action continues smoothly into the next shot? Give the term.",
+     "short": {
+      "accept": [
+       "match on action",
+       "matching on action",
+       "cutting on action",
+       "cut on action"
+      ]
+     },
+     "solution": "Match on action hides a cut by continuing a movement across two shots",
+     "hint": "The cut happens while someone is moving"
+    },
+    {
+     "id": "fc15",
+     "level": 3,
+     "text": "A director films a villain from a low angle as he stands over the hero. What does this suggest?",
+     "choice": {
+      "options": [
+       "The villain is weak and vulnerable",
+       "The villain is powerful and threatening",
+       "The scene takes place at night",
+       "The hero is the villain's friend"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "A high angle would make him seem weak",
+       null
+      ]
+     },
+     "solution": "Looking up at a character from a low angle makes them seem powerful and threatening",
+     "hint": "Think about how it feels to look up at someone"
+    },
+    {
+     "id": "fc16",
+     "level": 3,
+     "text": "In a thriller, the film cuts back and forth between a train speeding along and the hero running to warn the driver of a car stuck on the tracks. Which editing technique is this?",
+     "choice": {
+      "options": [
+       "Shot reverse shot",
+       "Jump cut",
+       "Fade",
+       "Cross-cutting"
+      ],
+      "correct": 3
+     },
+     "solution": "Cutting between two actions in different places to build suspense is cross-cutting",
+     "hint": "Two different places, at the same time"
+    },
+    {
+     "id": "fc17",
+     "level": 3,
+     "text": "A camera mounted on a moving dolly travels alongside a character as she walks down a corridor. What type of shot is this? Give the term.",
+     "short": {
+      "accept": [
+       "tracking shot",
+       "tracking",
+       "dolly shot",
+       "travelling shot"
+      ],
+      "reject": [
+       "pan",
+       "zoom"
+      ],
+      "feedback": {
+       "pan": "A pan turns the camera from a fixed position; here the camera travels",
+       "zoom": "A zoom changes the lens; here the camera itself moves"
+      }
+     },
+     "solution": "A tracking (dolly) shot moves the whole camera to follow the action",
+     "hint": "The dolly often runs on rails like a train"
+    },
+    {
+     "id": "fc18",
+     "level": 3,
+     "text": "A shot shows a character looking off-screen, then the film cuts to a shot of a letter on a table. What has the editor created?",
+     "choice": {
+      "options": [
+       "Eyeline match",
+       "Jump cut",
+       "Montage",
+       "Dissolve"
+      ],
+      "correct": 0
+     },
+     "solution": "An eyeline match cuts from a character looking to what they are looking at",
+     "hint": "The second shot shows what the character sees"
+    },
+    {
+     "id": "fc19",
+     "level": 3,
+     "text": "One image slowly fades out while the next image fades in, so that for a moment both can be seen. What is this transition called? Give the term.",
+     "short": {
+      "accept": [
+       "dissolve",
+       "cross dissolve",
+       "lap dissolve",
+       "mix"
+      ],
+      "reject": [
+       "fade",
+       "wipe"
+      ],
+      "feedback": {
+       "fade": "A fade goes to or from a single colour, usually black; this transition overlaps two images",
+       "wipe": "A wipe pushes one image off the screen with a moving edge"
+      }
+     },
+     "solution": "A dissolve overlaps two images, often to show time passing",
+     "hint": "Like sugar in tea, one image seems to melt away"
+    },
+    {
+     "id": "fc20",
+     "level": 3,
+     "text": "A horror film shows a scene with the camera tilted so the horizon is on a slant. What is this angle called?",
+     "choice": {
+      "options": [
+       "Bird's-eye view",
+       "Dutch angle (canted angle)",
+       "Eye-level shot",
+       "Over-the-shoulder shot"
+      ],
+      "correct": 1
+     },
+     "solution": "A Dutch (canted) angle tilts the frame to create unease or disorientation",
+     "hint": "The frame is deliberately tilted"
+    },
+    {
+     "id": "fc21",
+     "level": 4,
+     "text": "Read this shot list: '1. Extreme long shot of a city at night. 2. Long shot of an apartment block. 3. Close-up of a woman at a window.' What is the effect of this sequence?",
+     "choice": {
+      "options": [
+       "It shows the same moment from three random angles",
+       "It is a montage showing years passing",
+       "It moves from the location to a single character, guiding the audience in",
+       "It is a series of jump cuts that confuse the audience"
+      ],
+      "correct": 2
+     },
+     "solution": "The shots move from wide to close, establishing the city and then leading us to one character",
+     "hint": "Notice how the shot sizes change from 1 to 3"
+    },
+    {
+     "id": "fc22",
+     "level": 4,
+     "text": "Read this: 'Two characters argue. In shot 1 Ana is on the left of the frame; in shot 2 the camera has crossed the line and Ana now appears on the right.' Which rule has been broken, and what is the likely effect?",
+     "choice": {
+      "options": [
+       "The 30-degree rule, which makes the shot last too long",
+       "The 180-degree rule, which may confuse the audience about where the characters are",
+       "The rule of thirds, which makes the image too bright",
+       "Match on action, which slows the scene down"
+      ],
+      "correct": 1
+     },
+     "solution": "Crossing the line breaks the 180-degree rule, so characters swap sides and the audience may feel disoriented",
+     "hint": "Which rule is about an imaginary line between characters?"
+    },
+    {
+     "id": "fc23",
+     "level": 4,
+     "text": "Read this: 'A long shot shows a car on a desert road; then a series of cuts shows the same car from the same angle in slightly different positions, each a few seconds later.' What type of cut is this? Give the term.",
+     "short": {
+      "accept": [
+       "jump cut",
+       "jump cuts",
+       "jump-cut"
+      ],
+      "reject": [
+       "match cut",
+       "cutaway"
+      ],
+      "feedback": {
+       "match cut": "A match cut links two different shots by similar shapes or ideas",
+       "cutaway": "A cutaway cuts to something else and then back"
+      }
+     },
+     "solution": "Cutting between near-identical shots of the same subject makes time jump forward",
+     "hint": "Think of the cut that makes time appear to leap forward"
+    },
+    {
+     "id": "fc24",
+     "level": 4,
+     "text": "Read this: a film's average shot length is 2 seconds in a chase scene and 12 seconds in a quiet dialogue scene. What does this show about the editing?",
+     "choice": {
+      "options": [
+       "The chase uses longer takes than the dialogue scene",
+       "The dialogue scene has more cuts per minute",
+       "The editing is faster in the chase, building excitement",
+       "Both scenes are edited at the same pace"
+      ],
+      "correct": 2
+     },
+     "solution": "Shorter average shots mean more cuts and a faster editing pace, which builds excitement in the chase",
+     "hint": "A shorter average shot length means more cuts"
+    },
+    {
+     "id": "fc25",
+     "level": 4,
+     "text": "A shot begins focused on a phone in the foreground; then the focus shifts to a character's face in the background. What is this technique and its usual purpose?",
+     "choice": {
+      "options": [
+       "Jump cut, used to show time moving on",
+       "Dutch angle, used to show unease",
+       "Crane shot, used to reveal a landscape",
+       "Pull focus (rack focus), moving the audience's attention between subjects"
+      ],
+      "correct": 3
+     },
+     "solution": "A pull (rack) focus shifts sharp focus within the shot, directing the audience's attention",
+     "hint": "Nothing is cut and the camera does not move: only the focus changes"
+    },
+    {
+     "id": "fc26",
+     "level": 4,
+     "text": "Explain how camera angles could be used to show the difference in power between a king and a frightened servant.",
+     "rubric": {
+      "model_answer": "The king could be filmed from a low angle so he seems to tower over the audience, suggesting power and authority. The servant could be filmed from a high angle, looking down on them, making them seem small and vulnerable. Cutting between these angles in shot reverse shot makes the difference in status clear.",
+      "mark_scheme": "1 mark: low angle for the king\n1 mark: effect: power or dominance\n1 mark: high angle for the servant\n1 mark: effect: weakness or vulnerability, or how editing shows the contrast",
+      "max_marks": 4
+     },
+     "solution": "Low angles suggest power; high angles suggest weakness",
+     "hint": "Think about where the camera is placed for each character"
+    },
+    {
+     "id": "fc27",
+     "level": 5,
+     "text": "Which statement about continuity editing is accurate?",
+     "choice": {
+      "options": [
+       "It deliberately draws attention to every cut",
+       "It aims to make cuts invisible so the story flows logically in time and space",
+       "It is only used in documentaries",
+       "It means filming the whole film in one take"
+      ],
+      "correct": 1
+     },
+     "solution": "Continuity editing hides cuts, using rules such as the 180-degree rule and match on action",
+     "hint": "Think about the word 'continuity'"
+    },
+    {
+     "id": "fc28",
+     "level": 5,
+     "text": "Why might a director choose handheld camera work for a battle scene in a war film?",
+     "choice": {
+      "options": [
+       "It creates a sense of chaos and realism, as if the audience is there",
+       "It makes the image perfectly smooth and calm",
+       "It is the only way to film outdoors",
+       "It makes the scene look like a painting"
+      ],
+      "correct": 0
+     },
+     "solution": "Shaky handheld camera work feels immediate and chaotic, like documentary footage",
+     "hint": "Think about how shaky footage feels to watch"
+    },
+    {
+     "id": "fc29",
+     "level": 5,
+     "text": "Which statement about the Kuleshov effect is accurate?",
+     "choice": {
+      "options": [
+       "Audiences only notice the longest shot in a sequence",
+       "Editing has no effect on how a face is understood",
+       "Audiences read meaning from how shots are put together, not from each shot alone",
+       "It is a lighting technique used in horror films"
+      ],
+      "correct": 2
+     },
+     "solution": "Kuleshov showed that the same face seems to show different emotions depending on the shot placed next to it",
+     "hint": "It comes from early Soviet experiments with editing"
+    },
+    {
+     "id": "fc30",
+     "level": 5,
+     "text": "Why might a director use a long take instead of many cuts?",
+     "choice": {
+      "options": [
+       "To make the scene feel faster and more fragmented",
+       "To build tension or realism by letting the action unfold without interruption",
+       "To hide every camera movement from the audience",
+       "Because long takes are required for every dialogue scene"
+      ],
+      "correct": 1
+     },
+     "solution": "A long take lets action unfold in real time, which can build tension and realism",
+     "hint": "What happens to time when there are no cuts?"
+    },
+    {
+     "id": "fc31",
+     "level": 5,
+     "text": "Why is the deep focus in Citizen Kane (1941) often discussed?",
+     "choice": {
+      "options": [
+       "It was the first film ever shot in colour",
+       "It keeps foreground and background sharp at once, letting the audience choose where to look",
+       "It used only handheld cameras",
+       "It was the first film to use jump cuts"
+      ],
+      "correct": 1
+     },
+     "solution": "Citizen Kane's deep focus keeps near and far planes sharp at once, so several actions can be seen in one shot",
+     "hint": "Think about what 'deep' focus keeps sharp"
+    },
+    {
+     "id": "fc32",
+     "level": 5,
+     "text": "Explain how continuity editing makes a conversation scene easy to follow.",
+     "rubric": {
+      "model_answer": "An establishing shot first shows where the characters are. Shot reverse shot then cuts between the speakers, keeping to the 180-degree rule so each character stays on the same side of the screen. Eyeline matches make it clear who is looking at whom, and match on action hides cuts during movement. Together these make the cuts almost invisible.",
+      "mark_scheme": "1 mark: establishing shot sets up the space\n1 mark: shot reverse shot\n1 mark: the 180-degree rule keeps positions consistent\n1 mark: eyeline match or match on action\n1 mark: overall effect: invisible editing and a logical flow",
+      "max_marks": 5
+     },
+     "solution": "Establishing shots, shot reverse shot, the 180-degree rule and eyeline matches keep a conversation clear",
+     "hint": "Follow the scene from its first shot to the cuts between speakers"
+    }
+   ]
+  },
+  {
+   "id": "film_studies.mise_en_scene",
+   "title": "Mise-en-scène & sound",
+   "aliases": [
+    "mise-en-scene",
+    "mise en scene",
+    "low key lighting",
+    "high key lighting",
+    "costume",
+    "diegetic sound",
+    "non-diegetic sound",
+    "foley",
+    "sound bridge"
+   ],
+   "questions": [
+    {
+     "id": "fm01",
+     "level": 1,
+     "text": "What does mise-en-scène mean?",
+     "choice": {
+      "options": [
+       "The order in which shots are edited",
+       "Everything placed in the frame, such as setting, props, costume, lighting and performance",
+       "The music added after filming",
+       "The camera's movement during a shot"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "That is editing",
+       null
+      ]
+     },
+     "solution": "Mise-en-scène is everything in front of the camera: setting, props, costume, lighting and performance",
+     "hint": "It is a French phrase about what is put into the scene"
+    },
+    {
+     "id": "fm02",
+     "level": 1,
+     "text": "What is the term for sound whose source exists in the world of the film, such as dialogue or a car horn the characters can hear? Give the term.",
+     "short": {
+      "accept": [
+       "diegetic sound",
+       "diegetic"
+      ],
+      "reject": [
+       "non-diegetic",
+       "non-diegetic sound"
+      ],
+      "feedback": {
+       "non-diegetic": "Non-diegetic sound comes from outside the story world, such as the film score",
+       "non-diegetic sound": "Non-diegetic sound comes from outside the story world, such as the film score"
+      }
+     },
+     "solution": "Diegetic sound comes from within the story world, so the characters can hear it",
+     "hint": "The word comes from the Greek for 'narrative', meaning the story world"
+    },
+    {
+     "id": "fm03",
+     "level": 1,
+     "text": "Which lighting style is bright, with few shadows, and is often used in comedies and musicals?",
+     "choice": {
+      "options": [
+       "Low-key lighting",
+       "Chiaroscuro",
+       "Underlighting",
+       "High-key lighting"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Low-key lighting creates strong shadows",
+       null,
+       null
+      ]
+     },
+     "solution": "High-key lighting is bright and even, with few shadows, creating a light mood",
+     "hint": "Think 'high' and bright"
+    },
+    {
+     "id": "fm04",
+     "level": 1,
+     "text": "What is the name for everyday sound effects, such as footsteps, created and recorded after filming to match the action? Give the term.",
+     "short": {
+      "accept": [
+       "Foley",
+       "Foley sound",
+       "Foley effects",
+       "Foley art"
+      ]
+     },
+     "solution": "Foley is the art of recreating everyday sound effects in a studio, in time with the picture",
+     "hint": "It is named after Jack, a sound artist at Universal Studios"
+    },
+    {
+     "id": "fm05",
+     "level": 1,
+     "text": "Which of these is an example of non-diegetic sound?",
+     "choice": {
+      "options": [
+       "A character's dialogue",
+       "The orchestral score that only the audience hears",
+       "A radio playing in a character's kitchen",
+       "The footsteps of a character walking"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "The characters can hear the radio, so it is diegetic"
+      ]
+     },
+     "solution": "Non-diegetic sound, such as the film score, comes from outside the story world",
+     "hint": "Which sound could the characters not hear?"
+    },
+    {
+     "id": "fm06",
+     "level": 1,
+     "text": "Which lighting style uses strong shadows and contrast, and is often used in horror and film noir?",
+     "choice": {
+      "options": [
+       "Low-key lighting",
+       "High-key lighting",
+       "Fill lighting",
+       "Natural daylight"
+      ],
+      "correct": 0
+     },
+     "solution": "Low-key lighting creates dark shadows and strong contrast, building mystery or fear",
+     "hint": "Think 'low' and dark"
+    },
+    {
+     "id": "fm07",
+     "level": 1,
+     "text": "What is the term for a sound that carries over a cut, linking the end of one scene to the start of the next? Give the term.",
+     "short": {
+      "accept": [
+       "sound bridge",
+       "sound bridges",
+       "audio bridge"
+      ]
+     },
+     "solution": "A sound bridge carries sound across a cut, smoothly linking two scenes",
+     "hint": "Think of something that crosses a gap to join two sides"
+    },
+    {
+     "id": "fm08",
+     "level": 2,
+     "text": "What is the difference between diegetic and non-diegetic sound?",
+     "choice": {
+      "options": [
+       "Diegetic sound comes from the story world; non-diegetic sound is added for the audience only",
+       "Diegetic sound is music; non-diegetic sound is dialogue",
+       "Diegetic sound is recorded later; non-diegetic sound is recorded on set",
+       "Diegetic sound is loud; non-diegetic sound is quiet"
+      ],
+      "correct": 0
+     },
+     "solution": "Characters can hear diegetic sound; non-diegetic sound, such as the score, is for the audience only",
+     "hint": "Ask whether the characters can hear it"
+    },
+    {
+     "id": "fm09",
+     "level": 2,
+     "text": "In three-point lighting, which light is the main, brightest source on the subject?",
+     "choice": {
+      "options": [
+       "Fill light",
+       "Back light",
+       "Practical light",
+       "Key light"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "The fill light is weaker and softens shadows",
+       "The back light separates the subject from the background",
+       null
+      ]
+     },
+     "solution": "The key light is the main source; the fill light softens shadows and the back light separates the subject",
+     "hint": "It is the 'key' to the lighting set-up"
+    },
+    {
+     "id": "fm10",
+     "level": 2,
+     "text": "In three-point lighting, which light softens the shadows created by the main light? Give the term.",
+     "short": {
+      "accept": [
+       "fill light",
+       "fill",
+       "fill lighting"
+      ],
+      "reject": [
+       "key light",
+       "back light",
+       "backlight"
+      ],
+      "feedback": {
+       "key light": "The key light is the main light; a weaker light softens its shadows",
+       "back light": "The back light sits behind the subject to separate it from the background",
+       "backlight": "The back light sits behind the subject to separate it from the background"
+      }
+     },
+     "solution": "The fill light is a weaker light that softens the shadows made by the key light",
+     "hint": "It lightens the dark areas on the other side of the face"
+    },
+    {
+     "id": "fm11",
+     "level": 2,
+     "text": "In film, what is a prop?",
+     "choice": {
+      "options": [
+       "An object in the scene that characters use or that dresses the set",
+       "A large light used outdoors",
+       "A type of camera support",
+       "A sound effect added later"
+      ],
+      "correct": 0
+     },
+     "solution": "Props are objects in the frame, used by characters or dressing the set",
+     "hint": "The word is short for 'property'"
+    },
+    {
+     "id": "fm12",
+     "level": 2,
+     "text": "What is the term for music that sounds happy or calm while something disturbing happens on screen, creating a clash? Give the term.",
+     "short": {
+      "accept": [
+       "contrapuntal sound",
+       "contrapuntal",
+       "contrapuntal music",
+       "counterpoint"
+      ],
+      "reject": [
+       "parallel sound",
+       "parallel"
+      ],
+      "feedback": {
+       "parallel sound": "Parallel sound matches the mood of the images",
+       "parallel": "Parallel sound matches the mood of the images"
+      }
+     },
+     "solution": "Contrapuntal sound contrasts with the mood of the images, which can unsettle the audience",
+     "hint": "The opposite term is 'parallel sound'"
+    },
+    {
+     "id": "fm13",
+     "level": 2,
+     "text": "Which part of mise-en-scène includes a character's clothing, hairstyle and make-up?",
+     "choice": {
+      "options": [
+       "Costume, hair and make-up",
+       "Setting",
+       "Lighting",
+       "Editing"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Costume, hair and make-up show character, status, period and change",
+     "hint": "Think about how the actor looks"
+    },
+    {
+     "id": "fm14",
+     "level": 2,
+     "text": "What is a recurring piece of music linked to a particular character or idea called? Give the term.",
+     "short": {
+      "accept": [
+       "leitmotif",
+       "leitmotiv",
+       "leitmotifs",
+       "motif",
+       "musical motif",
+       "sound motif"
+      ]
+     },
+     "solution": "A leitmotif is a recurring musical idea linked to a character, place or idea",
+     "hint": "Think of the two-note music that signals the shark in Jaws"
+    },
+    {
+     "id": "fm15",
+     "level": 3,
+     "text": "In a horror film, a character walks down a corridor lit by a single flickering bulb, leaving deep shadows. What does this lighting create?",
+     "choice": {
+      "options": [
+       "A cheerful, safe mood",
+       "Tension and fear, because the audience cannot see what is hidden",
+       "A sense of bright daytime",
+       "A comic, light-hearted tone"
+      ],
+      "correct": 1
+     },
+     "solution": "Low-key lighting with deep shadows hides parts of the frame, creating tension and fear",
+     "hint": "Think about what the shadows might hide"
+    },
+    {
+     "id": "fm16",
+     "level": 3,
+     "text": "A character hums a tune, and the same tune continues, played by an orchestra, as the film cuts to the next scene. What does this transition use?",
+     "choice": {
+      "options": [
+       "Foley",
+       "Jump cut",
+       "Sound bridge",
+       "Ambient sound only"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Foley is recreated sound effects such as footsteps",
+       null,
+       null
+      ]
+     },
+     "solution": "The music carries across the cut and links the scenes: a sound bridge",
+     "hint": "The sound continues across the cut"
+    },
+    {
+     "id": "fm17",
+     "level": 3,
+     "text": "In a scene set in a busy café, background chatter, clinking cups and traffic outside are heard quietly behind the dialogue. What is the specific name for this background sound of a location? Give the term.",
+     "short": {
+      "accept": [
+       "ambient sound",
+       "ambient",
+       "ambience",
+       "ambiance",
+       "atmos",
+       "ambient noise"
+      ],
+      "reject": [
+       "diegetic",
+       "diegetic sound",
+       "foley"
+      ],
+      "feedback": {
+       "diegetic": "It is diegetic, but there is a more specific name for the background sound of a location",
+       "diegetic sound": "It is diegetic, but there is a more specific name for the background sound of a location",
+       "foley": "Foley is recreated sound effects for specific actions, such as footsteps"
+      }
+     },
+     "solution": "Ambient sound (atmos) is the background sound of a location, which makes the setting feel real",
+     "hint": "The term comes from a word meaning 'surrounding'"
+    },
+    {
+     "id": "fm18",
+     "level": 3,
+     "text": "A film uses a dull, grey colour palette in a story about a lonely office worker. What does the colour most likely suggest?",
+     "choice": {
+      "options": [
+       "Joy and celebration",
+       "That the film is a musical",
+       "That the scene takes place in summer",
+       "Sadness and a lack of excitement in his life"
+      ],
+      "correct": 3
+     },
+     "solution": "Grey, desaturated colours connote dullness and sadness, reflecting his lonely life",
+     "hint": "Think about the connotations of grey"
+    },
+    {
+     "id": "fm19",
+     "level": 3,
+     "text": "A gangster film opens in a cramped, dark basement full of crates of stolen money. Which element of mise-en-scène is the basement? Give the term.",
+     "short": {
+      "accept": [
+       "setting",
+       "location",
+       "set"
+      ],
+      "reject": [
+       "props",
+       "prop"
+      ],
+      "feedback": {
+       "props": "Props are objects within the scene; the basement is the place itself",
+       "prop": "Props are objects within the scene; the basement is the place itself"
+      }
+     },
+     "solution": "The basement is the setting, the place where the action happens",
+     "hint": "It is the place, not an object within it"
+    },
+    {
+     "id": "fm20",
+     "level": 3,
+     "text": "A character in a crime film is lit from below, so shadows stretch upwards across her face. What is this effect usually used to suggest?",
+     "choice": {
+      "options": [
+       "That the character is a hero",
+       "That it is a sunny morning",
+       "Something sinister or threatening about the character",
+       "That the scene is a flashback"
+      ],
+      "correct": 2
+     },
+     "solution": "Underlighting distorts the face with upward shadows, suggesting something sinister",
+     "hint": "Think of someone holding a torch under their chin to tell a ghost story"
+    },
+    {
+     "id": "fm21",
+     "level": 4,
+     "text": "Read this description: 'Bright, even lighting; a pastel-coloured bedroom; an upbeat pop song the character sings along to.' Which genre do these choices most likely suggest?",
+     "choice": {
+      "options": [
+       "Horror",
+       "Film noir",
+       "War film",
+       "Teen or romantic comedy"
+      ],
+      "correct": 3
+     },
+     "solution": "High-key lighting, pastel colours and an upbeat diegetic song suggest a light-hearted comedy",
+     "hint": "Work out the mood of the lighting, colour and music, then match it to a genre"
+    },
+    {
+     "id": "fm22",
+     "level": 4,
+     "text": "Read this description: 'A detective sits in a dark office; light through the window blinds casts striped shadows; rain falls outside; a slow saxophone plays on the soundtrack.' Which film style does this mise-en-scène suggest?",
+     "choice": {
+      "options": [
+       "Musical",
+       "Western",
+       "Teen comedy",
+       "Film noir"
+      ],
+      "correct": 3
+     },
+     "solution": "Low-key lighting, striped shadows, rain, a detective and moody jazz are classic film noir conventions",
+     "hint": "Think of the dark, shadowy crime films of the 1940s"
+    },
+    {
+     "id": "fm23",
+     "level": 4,
+     "text": "Read this: 'The score swells as the hero reaches the summit, but the climber beside him cannot hear it.' Is the score diegetic or non-diegetic? Give the term.",
+     "short": {
+      "accept": [
+       "non-diegetic",
+       "nondiegetic",
+       "non-diegetic sound",
+       "extra-diegetic"
+      ],
+      "reject": [
+       "diegetic",
+       "diegetic sound"
+      ],
+      "feedback": {
+       "diegetic": "The other character cannot hear it, so it is not part of the story world",
+       "diegetic sound": "The other character cannot hear it, so it is not part of the story world"
+      }
+     },
+     "solution": "The other climber cannot hear the score, so it is outside the story world: non-diegetic",
+     "hint": "Can the characters in the scene hear it?"
+    },
+    {
+     "id": "fm24",
+     "level": 4,
+     "text": "A director wants the audience to feel that a calm family dinner hides a secret. Which choice would create this?",
+     "choice": {
+      "options": [
+       "Bright high-key lighting with upbeat pop music",
+       "A comic sound effect each time someone speaks",
+       "Warm lighting with a low, tense note of music underneath",
+       "A cheerful, fast orchestral score"
+      ],
+      "correct": 2
+     },
+     "solution": "The warm lighting shows calm on the surface, while a low, tense note hints that something is wrong",
+     "hint": "The scene needs something calm and something uneasy at the same time"
+    },
+    {
+     "id": "fm25",
+     "level": 4,
+     "text": "Read this: 'In the final shot, the hero's white costume is torn and stained with mud.' What does this change in costume most likely show?",
+     "choice": {
+      "options": [
+       "The film is set in the future",
+       "The character has been changed by struggle or conflict",
+       "The character is about to get married",
+       "The scene is a dream"
+      ],
+      "correct": 1
+     },
+     "solution": "A once-clean costume now torn and dirty shows what the character has been through",
+     "hint": "Compare the costume now with how it looked at the start"
+    },
+    {
+     "id": "fm26",
+     "level": 4,
+     "text": "Explain how lighting and sound could be combined to build suspense in a horror scene.",
+     "rubric": {
+      "model_answer": "Low-key lighting would leave much of the room in shadow, so the audience cannot see what might be hiding, and a single source of light would create harsh contrasts. A slow, quiet non-diegetic score with long silences, broken by small diegetic sounds such as a creaking floorboard, would make the audience listen closely and expect something to happen.",
+      "mark_scheme": "1 mark: a lighting choice (e.g. low-key, shadows, a single source)\n1 mark: the effect of the lighting on suspense\n1 mark: a sound choice (e.g. score, silence, diegetic effects)\n1 mark: the effect of the sound on suspense",
+      "max_marks": 4
+     },
+     "solution": "Shadows hide threats; quiet music, silence and sudden small sounds keep the audience on edge",
+     "hint": "Deal with lighting first, then sound, then say how they work together"
+    },
+    {
+     "id": "fm27",
+     "level": 5,
+     "text": "Which statement about mise-en-scène is accurate?",
+     "choice": {
+      "options": [
+       "It refers only to the camera angles used in a film",
+       "It means the music chosen after editing",
+       "The term comes from theatre and means 'putting into the scene'; it covers everything placed in the frame",
+       "It is the name for the film's opening titles"
+      ],
+      "correct": 2
+     },
+     "solution": "Mise-en-scène is a French theatre term, 'putting into the scene', covering everything in the frame",
+     "hint": "Translate the French phrase"
+    },
+    {
+     "id": "fm28",
+     "level": 5,
+     "text": "Why do sound designers often record Foley rather than using the sound recorded on set?",
+     "choice": {
+      "options": [
+       "Foley is cheaper because no recording is needed",
+       "On-set sound is often unclear, so Foley gives clean, controlled effects that match the action",
+       "Foley is only used for music",
+       "Laws require all sound to be recorded later"
+      ],
+      "correct": 1
+     },
+     "solution": "On-set recordings focus on dialogue and pick up noise, so Foley artists recreate clear effects in a studio",
+     "hint": "Think about how noisy a film set is"
+    },
+    {
+     "id": "fm29",
+     "level": 5,
+     "text": "Which statement about high-key and low-key lighting is accurate?",
+     "choice": {
+      "options": [
+       "High-key lighting reduces shadows and suits light moods; low-key lighting creates contrast and suits dark moods",
+       "Both always create exactly the same mood",
+       "High-key lighting is darker than low-key lighting",
+       "Low-key lighting is mostly used in children's films"
+      ],
+      "correct": 0
+     },
+     "solution": "High-key lighting is bright with few shadows; low-key lighting has strong contrast and shadows",
+     "hint": "Link 'high' with bright and 'low' with dark"
+    },
+    {
+     "id": "fm30",
+     "level": 5,
+     "text": "Why might a director play contrapuntal music over a violent scene?",
+     "choice": {
+      "options": [
+       "To make the violence seem realistic by matching its mood",
+       "Because film music must always be happy",
+       "To tell the audience that the film is a musical",
+       "The clash between music and images can unsettle the audience and make the scene more disturbing"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Matching the mood is parallel sound, not contrapuntal",
+       null,
+       null
+      ]
+     },
+     "solution": "Contrapuntal music clashes with the images, which can make a scene more unsettling",
+     "hint": "What does 'contrapuntal' mean: matching or clashing?"
+    },
+    {
+     "id": "fm31",
+     "level": 5,
+     "text": "Which statement about diegetic sound is accurate?",
+     "choice": {
+      "options": [
+       "It can be on-screen or off-screen, as long as its source is in the story world",
+       "It must always be music",
+       "It can never be heard by the characters",
+       "It is always written by the film's composer"
+      ],
+      "correct": 0
+     },
+     "solution": "Diegetic sound can come from off-screen, such as a knock at a door we cannot see",
+     "hint": "Think about a sound the characters hear from outside the frame"
+    },
+    {
+     "id": "fm32",
+     "level": 5,
+     "text": "Explain how a character's costume can tell the audience about them. Use an example of your own.",
+     "rubric": {
+      "model_answer": "Costume communicates status, personality and change. For example, a businesswoman in a sharp, dark tailored suit connotes power and control, while later in the film she wears loose, colourful clothes, showing she has relaxed and changed her priorities. Colour, fit and condition of clothing all carry connotations the audience reads quickly.",
+      "mark_scheme": "1 mark: an aspect of character shown by costume (e.g. status, personality, job, period)\n1 mark: a relevant example of a costume detail\n1 mark: the connotation of the detail explained\n1 mark: development, e.g. a change of costume showing a change in the character",
+      "max_marks": 4
+     },
+     "solution": "Colour, fit and condition of costume show status, personality and change",
+     "hint": "Choose one character and describe their clothes, then what they suggest"
+    }
+   ]
+  },
+  {
+   "id": "film_studies.genre_narrative",
+   "title": "Genre & narrative",
+   "aliases": [
+    "film genre",
+    "iconography",
+    "three-act structure",
+    "protagonist",
+    "auteur",
+    "spectatorship"
+   ],
+   "questions": [
+    {
+     "id": "fg01",
+     "level": 1,
+     "text": "What is the term for the main character of a film, whose goals drive the story? Give the term.",
+     "short": {
+      "accept": [
+       "protagonist",
+       "protagonists"
+      ],
+      "reject": [
+       "antagonist"
+      ],
+      "feedback": {
+       "antagonist": "The antagonist is the character who opposes the main character"
+      }
+     },
+     "solution": "The protagonist is the central character whose goals drive the plot",
+     "hint": "It is the opposite of the antagonist"
+    },
+    {
+     "id": "fg02",
+     "level": 1,
+     "text": "What is iconography in film genre?",
+     "choice": {
+      "options": [
+       "The familiar objects, settings and costumes that signal a genre",
+       "The order of events in a story",
+       "The sound added after filming",
+       "The study of film audiences"
+      ],
+      "correct": 0
+     },
+     "solution": "Iconography is the visual signs of a genre, such as the Stetsons and saloons of a Western",
+     "hint": "The word contains 'icon', meaning an image"
+    },
+    {
+     "id": "fg03",
+     "level": 1,
+     "text": "What is an auteur?",
+     "choice": {
+      "options": [
+       "A director whose films show a distinctive personal style and recurring themes",
+       "A person who writes film reviews",
+       "A cinema owner",
+       "An actor who does their own stunts"
+      ],
+      "correct": 0
+     },
+     "solution": "An auteur is a director seen as the 'author' of their films, with a recognisable style",
+     "hint": "The word is French for 'author'"
+    },
+    {
+     "id": "fg04",
+     "level": 1,
+     "text": "What is the name for the character who opposes the main character and creates conflict? Give the term.",
+     "short": {
+      "accept": [
+       "antagonist",
+       "antagonists"
+      ],
+      "reject": [
+       "protagonist"
+      ],
+      "feedback": {
+       "protagonist": "The protagonist is the main character, not the one who opposes them"
+      }
+     },
+     "solution": "The antagonist opposes the protagonist and creates conflict",
+     "hint": "This character works against the main character"
+    },
+    {
+     "id": "fg05",
+     "level": 1,
+     "text": "In the three-act structure, what happens in Act One?",
+     "choice": {
+      "options": [
+       "The setup: the characters, setting and main problem are introduced",
+       "The final battle and resolution",
+       "The end credits roll",
+       "The story is told backwards"
+      ],
+      "correct": 0
+     },
+     "solution": "Act One sets up the characters, the world and the problem; Act Two is confrontation; Act Three is resolution",
+     "hint": "Think about what has to happen first in any story"
+    },
+    {
+     "id": "fg06",
+     "level": 1,
+     "text": "Which of these is typical iconography of the Western genre?",
+     "choice": {
+      "options": [
+       "Spaceships, robots and lasers",
+       "Cowboy hats, horses and saloons",
+       "Haunted houses and candles",
+       "Tuxedos, casinos and gadgets"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "That is science fiction iconography",
+       "That is horror iconography"
+      ]
+     },
+     "solution": "Stetsons, horses, saloons and deserts are classic Western iconography",
+     "hint": "Think of the American frontier"
+    },
+    {
+     "id": "fg07",
+     "level": 1,
+     "text": "What is the term for a film that combines two or more genres, such as a sci-fi horror? Give the term.",
+     "short": {
+      "accept": [
+       "hybrid",
+       "hybrid genre",
+       "hybrid film",
+       "genre hybrid",
+       "hybridity"
+      ]
+     },
+     "solution": "A hybrid genre film mixes the conventions of two or more genres",
+     "hint": "The same word is used for a car that runs on both petrol and electricity"
+    },
+    {
+     "id": "fg08",
+     "level": 2,
+     "text": "What is the difference between a film's story and its plot?",
+     "choice": {
+      "options": [
+       "The story is all the events in time order; the plot is how they are arranged and shown in the film",
+       "The story is shown on screen; the plot exists only in the script",
+       "The story is the music; the plot is the dialogue",
+       "There is no difference: they mean exactly the same thing"
+      ],
+      "correct": 0
+     },
+     "solution": "The story is every event in time order, including ones we only infer; the plot is the order and way the film shows them",
+     "hint": "A film with flashbacks shows events out of order"
+    },
+    {
+     "id": "fg09",
+     "level": 2,
+     "text": "What is a subgenre?",
+     "choice": {
+      "options": [
+       "A film that has no genre",
+       "A genre made only for television",
+       "The music used in a genre film",
+       "A smaller, more specific category within a genre, such as the slasher film within horror"
+      ],
+      "correct": 3
+     },
+     "solution": "A subgenre is a more specific category inside a broader genre",
+     "hint": "'Sub' means under or within"
+    },
+    {
+     "id": "fg10",
+     "level": 2,
+     "text": "What is the term for a story told in time order, from beginning to end, without jumping around in time? Give the term.",
+     "short": {
+      "accept": [
+       "linear narrative",
+       "linear",
+       "linear structure",
+       "chronological",
+       "chronological narrative"
+      ],
+      "reject": [
+       "non-linear",
+       "non-linear narrative"
+      ],
+      "feedback": {
+       "non-linear": "A non-linear narrative jumps around in time, for example with flashbacks",
+       "non-linear narrative": "A non-linear narrative jumps around in time, for example with flashbacks"
+      }
+     },
+     "solution": "A linear narrative presents events in chronological order",
+     "hint": "It moves forward in a straight line"
+    },
+    {
+     "id": "fg11",
+     "level": 2,
+     "text": "Who is most closely linked with the idea of the 'male gaze' in film spectatorship?",
+     "choice": {
+      "options": [
+       "Tzvetan Todorov",
+       "Laura Mulvey",
+       "Steve Neale",
+       "Vladimir Propp"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Todorov is known for narrative theory",
+       "Steve Neale is known for genre theory"
+      ]
+     },
+     "solution": "Laura Mulvey introduced the male gaze in 1975",
+     "hint": "She is a British feminist film theorist"
+    },
+    {
+     "id": "fg12",
+     "level": 2,
+     "text": "In the three-act structure, what is the name for the event early in the story that sets the main plot in motion? Give the term.",
+     "short": {
+      "accept": [
+       "inciting incident",
+       "catalyst"
+      ]
+     },
+     "solution": "The inciting incident sets the story in motion by disrupting the protagonist's normal life",
+     "hint": "It provokes, or sets off, the action"
+    },
+    {
+     "id": "fg13",
+     "level": 2,
+     "text": "What is the difference between an open ending and a closed ending?",
+     "choice": {
+      "options": [
+       "An open ending leaves questions unresolved; a closed ending ties up the main storylines",
+       "An open ending is always happy; a closed ending is always sad",
+       "An open ending has no music; a closed ending has a song",
+       "An open ending is in colour; a closed ending is in black and white"
+      ],
+      "correct": 0
+     },
+     "solution": "Closed endings resolve the story; open endings leave questions for the audience",
+     "hint": "Think about whether the story is 'closed off'"
+    },
+    {
+     "id": "fg14",
+     "level": 2,
+     "text": "Which British film theorist described genres as 'instances of repetition and difference'? Give the surname.",
+     "short": {
+      "accept": [
+       "Neale",
+       "Steve Neale"
+      ]
+     },
+     "solution": "Steve Neale argued that genres work through repetition of conventions and difference",
+     "hint": "He wrote the book 'Genre' (1980)"
+    },
+    {
+     "id": "fg15",
+     "level": 3,
+     "text": "A film opens with a character waking in a hospital with no memory, then jumps back to show how she got there. Which narrative technique is used?",
+     "choice": {
+      "options": [
+       "Flash-forward",
+       "Cross-cutting",
+       "Linear narrative",
+       "Flashback"
+      ],
+      "correct": 3
+     },
+     "solution": "Jumping back in time to show earlier events is a flashback, making the narrative non-linear",
+     "hint": "Is the film jumping forwards or backwards in time?"
+    },
+    {
+     "id": "fg16",
+     "level": 3,
+     "text": "In a fantasy film, the audience knows that the villain is hiding in the castle, but the hero does not. What is this called?",
+     "choice": {
+      "options": [
+       "Red herring",
+       "Open ending",
+       "Dramatic irony",
+       "MacGuffin"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "A red herring is a misleading clue",
+       null,
+       null
+      ]
+     },
+     "solution": "Dramatic irony is when the audience knows something a character does not",
+     "hint": "The audience knows more than the hero"
+    },
+    {
+     "id": "fg17",
+     "level": 3,
+     "text": "A mystery film points the audience towards a suspicious butler who turns out to be innocent. What is this misleading clue called? Give the term.",
+     "short": {
+      "accept": [
+       "red herring",
+       "red herrings"
+      ]
+     },
+     "solution": "A red herring is a false clue that misleads the audience",
+     "hint": "It is named after a strong-smelling fish"
+    },
+    {
+     "id": "fg18",
+     "level": 3,
+     "text": "A film tells its story only through what one character knows, so the audience discovers clues at the same time as she does. What type of narration is this?",
+     "choice": {
+      "options": [
+       "Unrestricted (omniscient) narration",
+       "Parallel editing",
+       "Restricted narration",
+       "Contrapuntal sound"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Unrestricted narration lets the audience know more than any one character",
+       null,
+       null
+      ]
+     },
+     "solution": "Restricted narration limits the audience to what one character knows, often building mystery",
+     "hint": "Is the audience's knowledge limited or unlimited?"
+    },
+    {
+     "id": "fg19",
+     "level": 3,
+     "text": "Across many films, a director uses symmetrical framing, pastel colours and quirky characters, so audiences recognise the style at once. Which theory treats a director like this as the 'author' of their films? Give the name of the theory.",
+     "short": {
+      "accept": [
+       "auteur theory",
+       "auteur",
+       "auteurism",
+       "politique des auteurs"
+      ]
+     },
+     "solution": "Auteur theory sees the director as the author of a film, with a recognisable style across their work",
+     "hint": "The term comes from the French word for 'author'"
+    },
+    {
+     "id": "fg20",
+     "level": 3,
+     "text": "A science fiction film includes a robot, a spaceship and laser weapons. What do these elements show about genre?",
+     "choice": {
+      "options": [
+       "They are examples of non-diegetic sound",
+       "They are iconography that signals the sci-fi genre",
+       "They show the film is a documentary",
+       "They prove the film has a linear narrative"
+      ],
+      "correct": 1
+     },
+     "solution": "Robots, spaceships and lasers are iconography of science fiction",
+     "hint": "These are visual objects associated with a genre"
+    },
+    {
+     "id": "fg21",
+     "level": 4,
+     "text": "Read this summary: 'Act 1: a young chef dreams of opening a restaurant. Act 2: she loses her savings and her business partner leaves. Act 3: she wins a cooking contest and opens the restaurant.' Which part of the three-act structure is Act 2?",
+     "choice": {
+      "options": [
+       "The setup, where characters are introduced",
+       "The confrontation, where obstacles increase",
+       "The resolution, where problems are solved",
+       "The epilogue, after the credits"
+      ],
+      "correct": 1
+     },
+     "solution": "Act Two is the confrontation: the protagonist faces growing obstacles before the resolution",
+     "hint": "Act 2 is where things go wrong for her"
+    },
+    {
+     "id": "fg22",
+     "level": 4,
+     "text": "Read this: 'A film begins with the hero arrested for a robbery, then shows the week before the robbery, then returns to his trial.' How is the narrative structured?",
+     "choice": {
+      "options": [
+       "Linear, in strict time order",
+       "In real time, with no edits",
+       "Non-linear, using a flashback",
+       "As a montage of the future"
+      ],
+      "correct": 2
+     },
+     "solution": "Starting at the arrest, going back a week, then forward again is a non-linear structure with a flashback",
+     "hint": "Put the three events in time order and compare that with the order shown"
+    },
+    {
+     "id": "fg23",
+     "level": 4,
+     "text": "Read this: 'A Western features a sheriff, a lone gunfighter, a saloon and a showdown. A later film keeps all of these but sets them on a distant planet.' Steve Neale said genres work through repetition and what? Give the word.",
+     "short": {
+      "accept": [
+       "difference",
+       "differences",
+       "variation"
+      ]
+     },
+     "solution": "Neale argued that genres repeat familiar conventions but also add difference to stay fresh",
+     "hint": "The second film changes something while keeping the rest"
+    },
+    {
+     "id": "fg24",
+     "level": 4,
+     "text": "Read this: 'Many audience members cheered when the villain was defeated, but some felt sorry for him because of his tragic backstory.' What does this show about spectatorship?",
+     "choice": {
+      "options": [
+       "All spectators respond to a film in exactly the same way",
+       "Different spectators can respond to the same film in different ways",
+       "Audiences never feel sympathy for villains",
+       "The film must have been a documentary"
+      ],
+      "correct": 1
+     },
+     "solution": "Spectators bring their own experiences and values, so responses to the same film can differ",
+     "hint": "Compare the two groups' responses"
+    },
+    {
+     "id": "fg25",
+     "level": 4,
+     "text": "Read this: 'In a romantic comedy, two characters meet, dislike each other, are forced to work together and finally fall in love.' Which term describes familiar, repeated story patterns like this in a genre?",
+     "choice": {
+      "options": [
+       "Iconography",
+       "Mise-en-scène",
+       "Cinematography",
+       "Narrative conventions"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Iconography is about visual objects and settings, not story patterns",
+       null,
+       null
+      ]
+     },
+     "solution": "Repeated story patterns are narrative conventions; iconography is the visual objects of a genre",
+     "hint": "This is about the story, not about what is seen in the frame"
+    },
+    {
+     "id": "fg26",
+     "level": 4,
+     "text": "Explain how a genre film can both follow and break genre conventions. Use an example of your own.",
+     "rubric": {
+      "model_answer": "A genre film follows conventions so the audience recognises it: a superhero film has a hero with special powers, a villain and a final battle. It may also break conventions to surprise the audience, for example by making the hero morally flawed or letting the villain win. This mix of familiar and new, which Steve Neale called repetition and difference, keeps the genre fresh.",
+      "mark_scheme": "1 mark: an example of a convention that is followed\n1 mark: why following conventions matters (recognition, expectations)\n1 mark: an example of a convention that is broken or changed\n1 mark: why breaking conventions matters (surprise, freshness, repetition and difference)",
+      "max_marks": 4
+     },
+     "solution": "Genres repeat familiar conventions but change some of them to surprise audiences",
+     "hint": "Pick one genre and list its usual conventions first"
+    },
+    {
+     "id": "fg27",
+     "level": 5,
+     "text": "Which statement about auteur theory is accurate?",
+     "choice": {
+      "options": [
+       "It treats the director as the main creative 'author', though critics note films are made by large teams",
+       "It argues that the screenwriter alone decides how a film looks",
+       "It says only silent films can have auteurs",
+       "It was created to describe video game design"
+      ],
+      "correct": 0
+     },
+     "solution": "Auteur theory sees the director as the author of a film; critics point out that filmmaking is collaborative",
+     "hint": "Who is the 'author' in auteur theory?"
+    },
+    {
+     "id": "fg28",
+     "level": 5,
+     "text": "Why do film studios often prefer to make genre films?",
+     "choice": {
+      "options": [
+       "Genre films are exempt from age certificates",
+       "Genre films need no marketing at all",
+       "Genre films are always cheaper than any other film",
+       "Familiar genres attract audiences who know what to expect, which reduces financial risk"
+      ],
+      "correct": 3
+     },
+     "solution": "Genres come with ready-made audiences and expectations, which makes them a safer investment",
+     "hint": "Think about money and risk"
+    },
+    {
+     "id": "fg29",
+     "level": 5,
+     "text": "Which statement about Laura Mulvey's 'male gaze' is accurate?",
+     "choice": {
+      "options": [
+       "She argued that only men watch films",
+       "She invented the three-act structure",
+       "She argued that genre conventions never change",
+       "She argued mainstream cinema often positions the spectator to look at women from a male point of view"
+      ],
+      "correct": 3
+     },
+     "solution": "Mulvey argued that classical cinema often frames women as objects of a male look",
+     "hint": "Think about whose point of view the camera adopts"
+    },
+    {
+     "id": "fg30",
+     "level": 5,
+     "text": "Why might a film use a non-linear narrative?",
+     "choice": {
+      "options": [
+       "To create mystery or reveal information in a surprising order",
+       "Because non-linear films do not need editing",
+       "To make sure the audience can always predict the ending",
+       "Because age ratings require it"
+      ],
+      "correct": 0
+     },
+     "solution": "Telling events out of order can create mystery, surprise or new connections between events",
+     "hint": "Think about the effect of seeing events out of order"
+    },
+    {
+     "id": "fg31",
+     "level": 5,
+     "text": "Which statement about the three-act structure is accurate?",
+     "choice": {
+      "options": [
+       "It requires every film to be exactly three hours long",
+       "It was used only for silent films and has since been abandoned",
+       "It divides a story into setup, confrontation and resolution, and is widely used in mainstream films",
+       "It means a film must have three protagonists"
+      ],
+      "correct": 2
+     },
+     "solution": "The three-act structure (setup, confrontation, resolution) is common in mainstream, especially Hollywood, films",
+     "hint": "Name the three acts"
+    },
+    {
+     "id": "fg32",
+     "level": 5,
+     "text": "Explain how a film can position the spectator to sympathise with a character.",
+     "rubric": {
+      "model_answer": "The film can align the spectator with a character by giving them the most screen time, close-ups and point-of-view shots, so we share their experiences and feelings. Restricted narration means we learn things only when they do. Music, such as a gentle score in sad moments, and dialogue revealing their motives or backstory, encourage us to care about them, even if they make mistakes.",
+      "mark_scheme": "1 mark: camera choices (e.g. close-ups, point-of-view shots) create alignment\n1 mark: narration or screen time shares the character's experience\n1 mark: sound or music encouraging emotion\n1 mark: backstory or motives building sympathy",
+      "max_marks": 4
+     },
+     "solution": "Camera, narration, music and backstory can all align the spectator with a character",
+     "hint": "Think about camera, sound and story in turn"
+    }
+   ]
+  },
+  {
+   "id": "film_studies.history_industry",
+   "title": "Film history & industry",
+   "aliases": [
+    "film history",
+    "silent cinema",
+    "studio system",
+    "classical hollywood",
+    "new hollywood",
+    "independent film",
+    "distribution",
+    "exhibition",
+    "film certificates",
+    "cgi"
+   ],
+   "questions": [
+    {
+     "id": "fh01",
+     "level": 1,
+     "text": "In which year did the Lumière brothers hold their first public film screening for a paying audience in Paris? Give the year.",
+     "short": {
+      "accept": [
+       "1895"
+      ]
+     },
+     "solution": "The Lumière brothers showed their films to a paying audience in Paris on 28 December 1895",
+     "hint": "It was in the mid-1890s, in late December"
+    },
+    {
+     "id": "fh02",
+     "level": 1,
+     "text": "What were intertitles in silent films?",
+     "choice": {
+      "options": [
+       "Musical instruments played in the cinema",
+       "Printed text shown between shots to give dialogue or describe the action",
+       "Coloured filters on the projector",
+       "Posters displayed outside the cinema"
+      ],
+      "correct": 1
+     },
+     "solution": "Intertitles were cards of printed text that gave dialogue or narration in silent films",
+     "hint": "Silent films had no recorded speech, so how did viewers read the dialogue?"
+    },
+    {
+     "id": "fh03",
+     "level": 1,
+     "text": "Which 1927 film is usually credited as the first feature film with synchronised spoken dialogue scenes, starting the 'talkie' era?",
+     "choice": {
+      "options": [
+       "Metropolis",
+       "The Wizard of Oz",
+       "The Jazz Singer",
+       "Citizen Kane"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Metropolis (1927) was a silent German film",
+       null,
+       "The Wizard of Oz came out in 1939"
+      ]
+     },
+     "solution": "The Jazz Singer (1927) used synchronised songs and some dialogue, launching the era of sound films",
+     "hint": "Its title refers to a style of music"
+    },
+    {
+     "id": "fh04",
+     "level": 1,
+     "text": "What is the name for the stage of the film industry that gets a film to audiences by marketing it and arranging where and when it is shown? Give the term.",
+     "short": {
+      "accept": [
+       "distribution",
+       "film distribution",
+       "distributing"
+      ],
+      "reject": [
+       "exhibition",
+       "production"
+      ],
+      "feedback": {
+       "exhibition": "Exhibition is the actual showing of the film, for example in cinemas",
+       "production": "Production is the making of the film"
+      }
+     },
+     "solution": "Distribution links production and exhibition: marketing the film and arranging its release",
+     "hint": "It sits between production and exhibition"
+    },
+    {
+     "id": "fh05",
+     "level": 1,
+     "text": "Which BBFC certificate means a film is suitable for all ages?",
+     "choice": {
+      "options": [
+       "PG (Parental Guidance)",
+       "12A",
+       "15",
+       "U (Universal)"
+      ],
+      "correct": 3
+     },
+     "solution": "U stands for Universal: suitable for audiences aged four years and over, so for everyone",
+     "hint": "Its letter stands for a word meaning 'for everyone'"
+    },
+    {
+     "id": "fh06",
+     "level": 1,
+     "text": "What does CGI stand for?",
+     "choice": {
+      "options": [
+       "Camera-guided illumination",
+       "Cinema graphics interface",
+       "Computer-generated imagery",
+       "Colour grading instruction"
+      ],
+      "correct": 2
+     },
+     "solution": "CGI stands for computer-generated imagery",
+     "hint": "The C stands for computer"
+    },
+    {
+     "id": "fh07",
+     "level": 1,
+     "text": "What is the name for the stage of the film industry in which films are shown to audiences, for example in cinemas? Give the term.",
+     "short": {
+      "accept": [
+       "exhibition",
+       "film exhibition",
+       "exhibiting"
+      ],
+      "reject": [
+       "distribution"
+      ],
+      "feedback": {
+       "distribution": "Distribution is marketing the film and arranging its release; showing it is the next stage"
+      }
+     },
+     "solution": "Exhibition is the showing of films to audiences, for example in cinemas or on other platforms",
+     "hint": "Think about where an art gallery puts its pictures on show"
+    },
+    {
+     "id": "fh08",
+     "level": 2,
+     "text": "What was the Hollywood studio system?",
+     "choice": {
+      "options": [
+       "Large studios controlled production, distribution and cinemas, with actors and crews on long contracts",
+       "Small independent companies made low-budget films",
+       "The government made all films in America",
+       "A system for giving films age certificates"
+      ],
+      "correct": 0
+     },
+     "solution": "In the studio era, major studios owned the whole chain and kept stars and staff on long-term contracts",
+     "hint": "Think about who controlled every stage of filmmaking"
+    },
+    {
+     "id": "fh09",
+     "level": 2,
+     "text": "Which of these studios was one of Hollywood's 'Big Five' in the studio era?",
+     "choice": {
+      "options": [
+       "Pixar",
+       "Netflix",
+       "MGM (Metro-Goldwyn-Mayer)",
+       "Aardman Animations"
+      ],
+      "correct": 2
+     },
+     "solution": "The Big Five were MGM, Paramount, Warner Bros., 20th Century Fox and RKO",
+     "hint": "The other three companies were founded long after the studio era"
+    },
+    {
+     "id": "fh10",
+     "level": 2,
+     "text": "What is the term for a film made outside the major studio system, usually with a lower budget? Give the term.",
+     "short": {
+      "accept": [
+       "independent film",
+       "independent",
+       "indie",
+       "indie film",
+       "independent cinema"
+      ]
+     },
+     "solution": "Independent (indie) films are made outside the major studios, usually on lower budgets",
+     "hint": "It is made without the backing of a major studio"
+    },
+    {
+     "id": "fh11",
+     "level": 2,
+     "text": "What is the difference between the BBFC certificates 12A and 12?",
+     "choice": {
+      "options": [
+       "12A is for home video; 12 is for cinema",
+       "12A means the film is animated; 12 means it is live action",
+       "There is no difference",
+       "12A is for cinema (under-12s only with an adult); 12 is for home video, which under-12s may not buy"
+      ],
+      "correct": 3
+     },
+     "solution": "12A applies in cinemas, where under-12s can watch with an adult; the 12 certificate applies to video releases",
+     "hint": "The A stands for 'accompanied'"
+    },
+    {
+     "id": "fh12",
+     "level": 2,
+     "text": "Which 1995 Pixar film was the first feature film made entirely with computer animation? Give the title.",
+     "short": {
+      "accept": [
+       "Toy Story"
+      ]
+     },
+     "solution": "Toy Story (1995) was the first fully computer-animated feature film",
+     "hint": "It follows a cowboy doll and a space ranger toy"
+    },
+    {
+     "id": "fh13",
+     "level": 2,
+     "text": "What is a multiplex cinema?",
+     "choice": {
+      "options": [
+       "A cinema with many screens in one building",
+       "A cinema that only shows silent films",
+       "A film shown on several TV channels at once",
+       "A camera that films in 3D"
+      ],
+      "correct": 0
+     },
+     "solution": "A multiplex has many screens, so it can show many films at once",
+     "hint": "'Multi' means many"
+    },
+    {
+     "id": "fh14",
+     "level": 2,
+     "text": "What name is given to the period of American filmmaking from the late 1960s to around 1980, when young directors such as Scorsese and Coppola gained more creative control? Give the term.",
+     "short": {
+      "accept": [
+       "New Hollywood",
+       "American New Wave",
+       "Hollywood Renaissance"
+      ]
+     },
+     "solution": "New Hollywood (the American New Wave) gave young directors more control from the late 1960s",
+     "hint": "It followed the decline of the old studio system"
+    },
+    {
+     "id": "fh15",
+     "level": 3,
+     "text": "A distributor opens a film in a few cinemas in big cities, then expands to more cinemas as good reviews spread. What is this release strategy called?",
+     "choice": {
+      "options": [
+       "Saturation (wide) release",
+       "Day-and-date release",
+       "Platform release",
+       "Direct-to-video release"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "A saturation release opens on as many screens as possible at once",
+       null,
+       null
+      ]
+     },
+     "solution": "A platform release starts small and widens as word of mouth grows",
+     "hint": "The film builds up from a small base"
+    },
+    {
+     "id": "fh16",
+     "level": 3,
+     "text": "A blockbuster opens on thousands of screens on the same day, backed by huge TV and online advertising. What is this release strategy called?",
+     "choice": {
+      "options": [
+       "Platform release",
+       "Limited festival release",
+       "Saturation (wide) release",
+       "Silent release"
+      ],
+      "correct": 2
+     },
+     "solution": "A saturation release opens everywhere at once to maximise the opening weekend",
+     "hint": "The market is 'flooded' with the film"
+    },
+    {
+     "id": "fh17",
+     "level": 3,
+     "text": "A film is released in cinemas and on a streaming service on the same day. What is this called? Give the term.",
+     "short": {
+      "accept": [
+       "day-and-date release",
+       "day and date",
+       "day-and-date",
+       "simultaneous release"
+      ]
+     },
+     "solution": "A day-and-date release puts a film in cinemas and on home platforms at the same time",
+     "hint": "The name is a phrase with the word 'and' in the middle"
+    },
+    {
+     "id": "fh18",
+     "level": 3,
+     "text": "In the 1930s, a studio owns a film, the company that distributes it and the cinemas that show it. What is this an example of?",
+     "choice": {
+      "options": [
+       "Vertical integration",
+       "Horizontal integration",
+       "Independent production",
+       "Day-and-date release"
+      ],
+      "correct": 0
+     },
+     "solution": "Owning production, distribution and exhibition is vertical integration",
+     "hint": "The company owns different stages of the same chain"
+    },
+    {
+     "id": "fh19",
+     "level": 3,
+     "text": "A parent sees that a film is rated PG. What do the letters PG stand for? Give the words.",
+     "short": {
+      "accept": [
+       "parental guidance"
+      ]
+     },
+     "solution": "PG means Parental Guidance: general viewing, but some scenes may be unsuitable for young children",
+     "hint": "The P refers to parents"
+    },
+    {
+     "id": "fh20",
+     "level": 3,
+     "text": "A film needs a dinosaur that interacts with real actors, so the creature is created on computers and added in post-production. Which technology is being used?",
+     "choice": {
+      "options": [
+       "Stop-motion with clay models only",
+       "Silent intertitles",
+       "CGI",
+       "Deep focus"
+      ],
+      "correct": 2
+     },
+     "solution": "Creating images on computers and adding them in post-production is CGI",
+     "hint": "The creature was made on computers"
+    },
+    {
+     "id": "fh21",
+     "level": 4,
+     "text": "Read this timeline: '1927: The Jazz Singer. 1948: the Paramount Decision. Late 1960s: New Hollywood begins.' What did the 1948 Paramount Decision do?",
+     "choice": {
+      "options": [
+       "It introduced synchronised sound to Hollywood",
+       "It created the BBFC",
+       "It forced the big studios to sell their cinema chains, weakening the studio system",
+       "It banned colour films in America"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Synchronised sound arrived in 1927 with The Jazz Singer",
+       null,
+       null
+      ]
+     },
+     "solution": "The 1948 US Supreme Court ruling made the studios sell their cinemas, ending their vertical integration",
+     "hint": "Think about what happened to the studio system after 1948"
+    },
+    {
+     "id": "fh22",
+     "level": 4,
+     "text": "Read this: 'A low-budget film premieres at a festival, wins a prize, and is then bought by a distributor.' Why are film festivals important for independent films?",
+     "choice": {
+      "options": [
+       "They attract attention, reviews and distributors without a large marketing budget",
+       "They give every film an automatic BBFC certificate",
+       "They replace the need for exhibition",
+       "They are only for studio blockbusters"
+      ],
+      "correct": 0
+     },
+     "solution": "Festivals give independent films publicity, reviews and the chance to be picked up by distributors",
+     "hint": "What did the festival lead to in the example?"
+    },
+    {
+     "id": "fh23",
+     "level": 4,
+     "text": "Read this: 'In the late 1920s, silent films were quickly replaced by films with recorded sound.' What was the popular name for these new sound films? Give the term.",
+     "short": {
+      "accept": [
+       "talkies",
+       "talkie",
+       "talking pictures",
+       "talking picture"
+      ]
+     },
+     "solution": "Sound films were nicknamed 'talkies' because audiences could now hear actors speak",
+     "hint": "The name comes from the fact that audiences could now hear actors speak"
+    },
+    {
+     "id": "fh24",
+     "level": 4,
+     "text": "Read this: 'A film took £40 million at the box office worldwide but cost £60 million to make and market.' What does this suggest?",
+     "choice": {
+      "options": [
+       "On box-office figures alone, the film lost money",
+       "The film made a profit of £20 million",
+       "The film exactly broke even",
+       "The film made a profit of £100 million"
+      ],
+      "correct": 0
+     },
+     "solution": "£40 million in minus £60 million in costs is a £20 million shortfall on box-office figures alone",
+     "hint": "Compare the money taken with the money spent"
+    },
+    {
+     "id": "fh25",
+     "level": 4,
+     "text": "Read this: 'In the 1950s, studios introduced widescreen formats such as CinemaScope and experimented with 3D.' What were they most likely responding to?",
+     "choice": {
+      "options": [
+       "The invention of synchronised sound",
+       "The arrival of streaming services",
+       "The end of the First World War",
+       "Competition from television, which was keeping audiences at home"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Synchronised sound arrived in the late 1920s",
+       "Streaming arrived in the 21st century",
+       null
+      ]
+     },
+     "solution": "Studios offered bigger, more spectacular images to compete with television in the 1950s",
+     "hint": "What new technology appeared in many homes in the 1950s?"
+    },
+    {
+     "id": "fh26",
+     "level": 4,
+     "text": "Explain how the arrival of streaming has changed film distribution and exhibition.",
+     "rubric": {
+      "model_answer": "Streaming services let audiences watch films at home on many devices, so the cinema is no longer the only first window. Some films are released on streaming services and in cinemas on the same day, or only online, which shortens the gap between cinema and home release. Streaming companies also produce and distribute their own films, using data about viewers to decide what to make and recommend.",
+      "mark_scheme": "1 mark: viewing at home on many devices as a change in exhibition\n1 mark: shorter release windows, day-and-date or online-only releases\n1 mark: streaming companies acting as producers and distributors\n1 mark: use of viewer data or recommendations",
+      "max_marks": 4
+     },
+     "solution": "Streaming changes where films are watched, when they are released and who distributes them",
+     "hint": "Think about where, when and how people now watch new films"
+    },
+    {
+     "id": "fh27",
+     "level": 5,
+     "text": "Which statement about classical Hollywood cinema is accurate?",
+     "choice": {
+      "options": [
+       "It rejected all genre films",
+       "It was made mainly by independent directors with tiny budgets",
+       "It mostly used jump cuts and non-linear stories",
+       "It favoured continuity editing and clear, goal-driven narratives with resolved endings"
+      ],
+      "correct": 3
+     },
+     "solution": "Classical Hollywood used invisible continuity editing and clear cause-and-effect stories with closure",
+     "hint": "Think about the studio era and its storytelling"
+    },
+    {
+     "id": "fh28",
+     "level": 5,
+     "text": "Why did the French New Wave of the late 1950s and 1960s influence later filmmakers?",
+     "choice": {
+      "options": [
+       "It introduced synchronised sound",
+       "It invented Technicolor",
+       "It created the Hollywood star system",
+       "Its directors broke rules with jump cuts, handheld cameras and location shooting"
+      ],
+      "correct": 3
+     },
+     "solution": "Directors such as Godard and Truffaut broke classical rules, inspiring filmmakers around the world",
+     "hint": "Think about Godard's Breathless (1960)"
+    },
+    {
+     "id": "fh29",
+     "level": 5,
+     "text": "Which statement about the BBFC's age ratings is accurate?",
+     "choice": {
+      "options": [
+       "They classify films by content, such as violence, language and frightening scenes, and set age limits",
+       "They are decided by the film's director",
+       "They only apply to video games",
+       "They rate films on how good they are"
+      ],
+      "correct": 0
+     },
+     "solution": "BBFC ratings are based on content issues such as violence, language and threat, not on quality",
+     "hint": "What does the BBFC look at when it rates a film?"
+    },
+    {
+     "id": "fh30",
+     "level": 5,
+     "text": "Why is Jaws (1975) often called the first summer blockbuster?",
+     "choice": {
+      "options": [
+       "It opened widely with heavy TV advertising and earned record box-office takings",
+       "It was the first film with sound",
+       "It was the first fully computer-animated film",
+       "It was released only at film festivals"
+      ],
+      "correct": 0
+     },
+     "solution": "Jaws combined a wide release with national TV advertising and became the highest-earning film of its time",
+     "hint": "Think about how it was marketed and released"
+    },
+    {
+     "id": "fh31",
+     "level": 5,
+     "text": "Which statement about CGI is accurate?",
+     "choice": {
+      "options": [
+       "It was used in the earliest silent films of the 1890s",
+       "It means a film has no actors",
+       "It allows filmmakers to create images that would be impossible or too costly to film for real",
+       "It can only be used in animated films"
+      ],
+      "correct": 2
+     },
+     "solution": "CGI creates images digitally, from whole creatures to crowds and landscapes, that could not be filmed practically",
+     "hint": "Think about what computers let filmmakers create"
+    },
+    {
+     "id": "fh32",
+     "level": 5,
+     "text": "Explain why the Hollywood studio system declined after the 1940s.",
+     "rubric": {
+      "model_answer": "The 1948 Paramount Decision forced the major studios to sell their cinema chains, ending vertical integration and block booking, so they lost guaranteed screens for their films. At the same time, television kept many audiences at home, cinema attendance fell, and stars and directors increasingly worked freelance rather than on long-term contracts.",
+      "mark_scheme": "1 mark: the 1948 Paramount Decision\n1 mark: loss of cinema chains, ending vertical integration or block booking\n1 mark: competition from television and falling attendance\n1 mark: stars and directors leaving long-term studio contracts",
+      "max_marks": 4
+     },
+     "solution": "The Paramount Decision, television and the end of long contracts weakened the studios",
+     "hint": "Think about a court ruling, a new technology and the stars themselves"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "film_studies.y{year}.cinematography",
+      "label": "Cinematography & editing",
+      "skills": [
+       "film_studies.cinematography"
+      ]
+     },
+     {
+      "id": "film_studies.y{year}.mise_en_scene",
+      "label": "Mise-en-scène & sound",
+      "skills": [
+       "film_studies.mise_en_scene"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "film_studies.y{year}.genre_narrative",
+      "label": "Genre & narrative",
+      "skills": [
+       "film_studies.genre_narrative"
+      ]
+     },
+     {
+      "id": "film_studies.y{year}.history_industry",
+      "label": "Film history & industry",
+      "skills": [
+       "film_studies.history_industry"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

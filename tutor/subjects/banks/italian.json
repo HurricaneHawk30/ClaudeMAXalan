@@ -1,0 +1,2549 @@
+{
+ "subject": {
+  "id": "italian",
+  "title": "Italian",
+  "order": 58
+ },
+ "skills": [
+  {
+   "id": "italian.grammar",
+   "title": "Grammar & tenses",
+   "aliases": [
+    "italian grammar",
+    "tenses",
+    "present tense",
+    "past tense",
+    "future tense",
+    "conditional",
+    "verbs",
+    "adjective agreement",
+    "pronouns",
+    "negatives",
+    "passato prossimo",
+    "imperfetto",
+    "futuro",
+    "condizionale"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which Italian subject pronoun means «we»?",
+     "choice": {
+      "options": [
+       "noi",
+       "voi",
+       "loro",
+       "lei"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Voi means you (talking to several people)",
+       null,
+       null
+      ]
+     },
+     "solution": "Noi = we; voi = you (plural), loro = they, lei = she",
+     "hint": "Its verb forms end in -iamo"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "What does «non ... mai» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "never",
+       "not ever"
+      ],
+      "reject": [
+       "always"
+      ],
+      "form": "any",
+      "feedback": {
+       "always": "Always is sempre; non ... mai is a negative"
+      }
+     },
+     "solution": "Non ... mai = never, e.g. non mangio mai carne = I never eat meat",
+     "hint": "It is the opposite of sempre"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "What does «non ... niente» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "nothing",
+       "not anything"
+      ],
+      "form": "any"
+     },
+     "solution": "Non ... niente (or nulla) = nothing, e.g. non faccio niente = I do nothing / I don't do anything",
+     "hint": "It is the opposite of qualcosa (something)"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Give the «io» form of «essere» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "sono"
+      ],
+      "reject": [
+       "sei",
+       "è",
+       "siamo",
+       "siete"
+      ],
+      "form": "strict",
+      "feedback": {
+       "è": "È goes with lui/lei",
+       "sei": "Sei goes with tu"
+      }
+     },
+     "solution": "Essere: sono, sei, è, siamo, siete, sono",
+     "hint": "Essere is irregular; the io and loro forms are the same"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "Give the «loro» form of «avere» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "hanno"
+      ],
+      "reject": [
+       "sono",
+       "abbiamo",
+       "avete",
+       "ha"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sono": "Sono comes from essere; this question asks for avere",
+       "ha": "Ha goes with lui/lei"
+      }
+     },
+     "solution": "Avere: ho, hai, ha, abbiamo, avete, hanno",
+     "hint": "Avere is irregular; this form starts with a silent h"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "Which word means «the» before a masculine plural noun such as «libri»?",
+     "choice": {
+      "options": [
+       "gli",
+       "i",
+       "il",
+       "le"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Gli is used before vowels, s + consonant and z (gli amici, gli studenti)",
+       null,
+       "Il is singular",
+       "Le is feminine plural"
+      ]
+     },
+     "solution": "Masculine plural nouns starting with a consonant take i: i libri",
+     "hint": "Libri starts with an ordinary consonant (not a vowel, s + consonant or z)"
+    },
+    {
+     "id": "g07",
+     "level": 1,
+     "text": "Which word means «my» before a feminine singular noun such as «sorella»?",
+     "choice": {
+      "options": [
+       "mio",
+       "miei",
+       "mia",
+       "mie"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Mio is masculine",
+       "Miei is masculine plural",
+       null,
+       "Mie is feminine plural"
+      ]
+     },
+     "solution": "Sorella is feminine singular: mia sorella (no article with a singular family member)",
+     "hint": "Sorella is feminine and singular"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "Choose the correct article: «___ zaino è pesante.»",
+     "choice": {
+      "options": [
+       "Il",
+       "La",
+       "Un",
+       "Lo"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Before z or s + consonant, il becomes lo",
+       null,
+       "Before z, un becomes uno",
+       null
+      ]
+     },
+     "solution": "Masculine nouns starting with z or s + consonant take lo: lo zaino",
+     "hint": "Zaino is masculine and starts with z"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "Which phrase is correct for «a little girl»?",
+     "choice": {
+      "options": [
+       "una bambina piccola",
+       "un bambina piccola",
+       "una bambino piccola",
+       "una bambina piccolo"
+      ],
+      "correct": 0
+     },
+     "solution": "Bambina is feminine: una bambina piccola",
+     "hint": "Check the article, the noun ending and the adjective"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Translate into Italian. Include the definite article (il, lo, la, l', i, gli or le): the friends (a group of boys)",
+     "short": {
+      "accept": [
+       "gli amici"
+      ],
+      "reject": [
+       "i amici",
+       "le amiche",
+       "gli amichi"
+      ],
+      "form": "strict",
+      "feedback": {
+       "i amici": "Before a vowel, the masculine plural article is gli",
+       "le amiche": "Le amiche are female friends",
+       "gli amichi": "Amico has the plural amici (soft c)"
+      }
+     },
+     "solution": "Masculine plural nouns starting with a vowel take gli: gli amici",
+     "hint": "The noun starts with a vowel and is masculine plural"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Give the plural of «il problema», with its article.",
+     "short": {
+      "accept": [
+       "i problemi"
+      ],
+      "reject": [
+       "le probleme",
+       "i problema",
+       "le problemi"
+      ],
+      "form": "strict",
+      "feedback": {
+       "le probleme": "Problema is masculine, so the plural is i ...-i"
+      }
+     },
+     "solution": "Problema is masculine, so its plural is i problemi",
+     "hint": "Problema ends in -a but is masculine"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "Choose the correct word: «Vado ___ cinema.»",
+     "choice": {
+      "options": [
+       "alla",
+       "al",
+       "allo",
+       "ai"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Cinema is masculine, so alla is wrong",
+       null,
+       "Allo is used before z or s + consonant",
+       "Ai is plural"
+      ]
+     },
+     "solution": "A + il = al: vado al cinema",
+     "hint": "Cinema is masculine singular and starts with a consonant"
+    },
+    {
+     "id": "g13",
+     "level": 2,
+     "text": "Complete with the word for «my»: «___ madre si chiama Anna.» Type the missing word only.",
+     "short": {
+      "accept": [
+       "Mia"
+      ],
+      "reject": [
+       "mio",
+       "la mia",
+       "mie"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la mia": "With a singular family member, Italian leaves out the article",
+       "mio": "Madre is feminine, so mio is wrong"
+      }
+     },
+     "solution": "Madre is feminine singular: mia madre (no article with a singular family member)",
+     "hint": "Madre is feminine, and there is no article here"
+    },
+    {
+     "id": "g14",
+     "level": 2,
+     "text": "Choose the correct adjective: «Le mie sorelle sono ___.» (tall)",
+     "choice": {
+      "options": [
+       "alti",
+       "alta",
+       "alte",
+       "alto"
+      ],
+      "correct": 2
+     },
+     "solution": "Sorelle is feminine plural: alte",
+     "hint": "Sorelle is feminine and plural"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "What does «Non mangio mai carne» mean?",
+     "choice": {
+      "options": [
+       "I always eat meat",
+       "I am not eating meat today",
+       "I eat a lot of meat",
+       "I never eat meat"
+      ],
+      "correct": 3
+     },
+     "solution": "Non ... mai = never: I never eat meat",
+     "hint": "Look at the negative around the verb"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "What does «Guarderemo un film» mean?",
+     "choice": {
+      "options": [
+       "We will watch a film",
+       "We watched a film",
+       "We would like to watch a film",
+       "We watch a film every day"
+      ],
+      "correct": 0
+     },
+     "solution": "Guarderemo is the future of guardare (noi): we will watch a film",
+     "hint": "The ending -remo shows the future"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "Read: «Ieri ho giocato a tennis con Paolo.» When did this happen? Answer in English.",
+     "short": {
+      "accept": [
+       "yesterday"
+      ],
+      "form": "any"
+     },
+     "solution": "Ieri means yesterday",
+     "hint": "Look at the first word of the sentence"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "Read: «Luca non beve mai caffè.» What does Luca never drink? Answer in English.",
+     "short": {
+      "accept": [
+       "coffee"
+      ],
+      "form": "any"
+     },
+     "solution": "Caffè = coffee: Luca never drinks coffee",
+     "hint": "Look at the noun at the end"
+    },
+    {
+     "id": "g19",
+     "level": 3,
+     "text": "Which sentence is in the passato prossimo?",
+     "choice": {
+      "options": [
+       "Mangio la pizza",
+       "Ho mangiato la pizza",
+       "Mangerò la pizza",
+       "Mangiavo la pizza"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Mangiavo is the imperfetto (I used to eat / I was eating)"
+      ]
+     },
+     "solution": "Passato prossimo = avere/essere + past participle: ho mangiato",
+     "hint": "Look for avere or essere plus a participle ending in -ato"
+    },
+    {
+     "id": "g20",
+     "level": 3,
+     "text": "Read: «Non mi piace per niente il pesce.» What does the speaker dislike? Answer in English.",
+     "short": {
+      "accept": [
+       "fish"
+      ],
+      "form": "any"
+     },
+     "solution": "Il pesce = fish; non mi piace per niente = I don't like it at all",
+     "hint": "It lives in the sea or in rivers"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "Complete with the passato prossimo of «andare»: «Ieri lei ___ al mercato.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "è andata"
+      ],
+      "reject": [
+       "è andato",
+       "ha andato",
+       "ha andata"
+      ],
+      "form": "strict",
+      "feedback": {
+       "è andato": "With essere, the participle agrees with the subject: lei needs -a",
+       "ha andato": "Andare takes essere, not avere",
+       "ha andata": "Andare takes essere, not avere"
+      }
+     },
+     "solution": "Andare takes essere and agrees with lei: è andata",
+     "hint": "Andare uses essere, and the subject is feminine"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "Complete with the present tense of «finire»: «Noi ___ alle cinque.» Type the verb only.",
+     "short": {
+      "accept": [
+       "finiamo"
+      ],
+      "reject": [
+       "finisciamo",
+       "finite",
+       "finiscono"
+      ],
+      "form": "strict",
+      "feedback": {
+       "finisciamo": "-isc- is not used in the noi form"
+      }
+     },
+     "solution": "Finire (an -isc- verb) has no -isc- in the noi form: finiamo",
+     "hint": "-isc- verbs do not add -isc- with noi and voi"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "Choose the correct verb: «Quando ero piccolo, ___ al parco ogni giorno.»",
+     "choice": {
+      "options": [
+       "ho giocato",
+       "giocherò",
+       "giocavo",
+       "gioco"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Ho giocato is for a single completed action",
+       "Giocherò is the future",
+       null,
+       null
+      ]
+     },
+     "solution": "A repeated past habit uses the imperfetto: giocavo",
+     "hint": "Ogni giorno in the past describes a habit"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "Choose the correct form: «A mio fratello ___ i videogiochi.»",
+     "choice": {
+      "options": [
+       "piace",
+       "piaccio",
+       "piacciamo",
+       "piacciono"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Piace is for one thing; i videogiochi is plural",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Piacere agrees with the thing liked; i videogiochi is plural: piacciono",
+     "hint": "With piacere, the verb agrees with what is liked"
+    },
+    {
+     "id": "g25",
+     "level": 4,
+     "text": "Complete with the future tense of «avere»: «Domani ___ molti compiti.» (io) Type the verb only.",
+     "short": {
+      "accept": [
+       "avrò"
+      ],
+      "reject": [
+       "avrei",
+       "avevo",
+       "ho",
+       "avremo"
+      ],
+      "form": "strict",
+      "feedback": {
+       "avrei": "Avrei is the conditional (I would have)",
+       "avevo": "Avevo is the imperfetto"
+      }
+     },
+     "solution": "Avere has the irregular future stem avr-: avrò",
+     "hint": "Avere drops the e in its future stem"
+    },
+    {
+     "id": "g26",
+     "level": 4,
+     "text": "Replace «la televisione» with a pronoun: «Guardo la televisione.» → «___ guardo.»",
+     "choice": {
+      "options": [
+       "La",
+       "Lo",
+       "Le",
+       "Gli"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Lo replaces a masculine noun",
+       null,
+       "Gli is an indirect pronoun (to him)"
+      ]
+     },
+     "solution": "La televisione is feminine singular: la guardo",
+     "hint": "Televisione is feminine and it is the direct object"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "Which sentence in the passato prossimo is correct?",
+     "choice": {
+      "options": [
+       "Lei ha andata in città ieri",
+       "Lei è andata in città ieri",
+       "Lei è andato in città ieri",
+       "Lei ha andato in città ieri"
+      ],
+      "correct": 1
+     },
+     "solution": "Andare takes essere and agrees with lei: è andata",
+     "hint": "Check the auxiliary first, then the agreement"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "Which is the correct translation of «I would like to travel to Spain»?",
+     "choice": {
+      "options": [
+       "Vorrei viaggiare a Spagna",
+       "Voglio viaggiato in Spagna",
+       "Vorrei viaggiare in Spagna",
+       "Ho viaggiato in Spagna"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Countries take in, not a",
+       null,
+       null,
+       "Ho viaggiato means I travelled"
+      ]
+     },
+     "solution": "Would like = vorrei; countries take in: in Spagna",
+     "hint": "Look for the conditional of volere and the preposition used with countries"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "Ho non mangiato niente",
+       "Non ho mangiato qualcosa",
+       "Ho mangiato non niente",
+       "Non ho mangiato niente"
+      ],
+      "correct": 3
+     },
+     "solution": "Non goes before the auxiliary, and Italian uses a double negative: non ho mangiato niente",
+     "hint": "Non comes before avere, and Italian needs niente, not qualcosa"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "Translate into Italian using the passato prossimo: «they arrived» (a group of boys)",
+     "short": {
+      "accept": [
+       "sono arrivati",
+       "loro sono arrivati"
+      ],
+      "reject": [
+       "hanno arrivato",
+       "sono arrivato",
+       "sono arrivate",
+       "loro hanno arrivato"
+      ],
+      "form": "strict",
+      "feedback": {
+       "hanno arrivato": "Arrivare takes essere, not avere",
+       "loro hanno arrivato": "Arrivare takes essere, not avere",
+       "sono arrivato": "With essere, the participle agrees: masculine plural -i",
+       "sono arrivate": "The boys are masculine, so -i, not -e"
+      }
+     },
+     "solution": "Arrivare takes essere and agrees: sono arrivati",
+     "hint": "Arrivare uses essere; make the participle masculine plural"
+    },
+    {
+     "id": "g31",
+     "level": 5,
+     "text": "Translate into Italian using the future tense: «I will eat»",
+     "short": {
+      "accept": [
+       "mangerò",
+       "io mangerò"
+      ],
+      "reject": [
+       "mangiarò",
+       "mangierò",
+       "mangio",
+       "mangerei"
+      ],
+      "form": "strict",
+      "feedback": {
+       "mangiarò": "In the future, -are verbs change -ar- to -er-",
+       "mangierò": "Mangiare drops its i in the future",
+       "mangerei": "Mangerei is the conditional (I would eat)"
+      }
+     },
+     "solution": "Future of mangiare: -are changes to -er- and the i is dropped: mangerò",
+     "hint": "-are verbs change -ar- to -er- in the future, and mangiare also drops its i"
+    },
+    {
+     "id": "g32",
+     "level": 5,
+     "text": "Translate into Italian using the conditional: «we would go»",
+     "short": {
+      "accept": [
+       "andremmo",
+       "noi andremmo"
+      ],
+      "reject": [
+       "andremo",
+       "andavamo",
+       "andiamo"
+      ],
+      "form": "strict",
+      "feedback": {
+       "andremo": "Andremo is the future (we will go); the conditional has a double m",
+       "andavamo": "Andavamo is the imperfetto",
+       "andiamo": "Andiamo is the present"
+      }
+     },
+     "solution": "Conditional of andare (noi): stem andr- + -emmo = andremmo",
+     "hint": "Andare has the stem andr- in the future and the conditional"
+    }
+   ]
+  },
+  {
+   "id": "italian.people",
+   "title": "People & lifestyle",
+   "aliases": [
+    "italian family",
+    "family",
+    "friends",
+    "describing people",
+    "personality",
+    "school",
+    "healthy living",
+    "daily routine",
+    "jobs",
+    "future plans"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What does «il fratello» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "brother"
+      ],
+      "form": "any"
+     },
+     "solution": "Il fratello = the brother",
+     "hint": "Think of the boys in a family"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "What does «la zia» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "aunt",
+       "auntie",
+       "aunty"
+      ],
+      "reject": [
+       "uncle"
+      ],
+      "form": "any",
+      "feedback": {
+       "uncle": "Uncle is lo zio; the -a ending shows a woman"
+      }
+     },
+     "solution": "La zia = the aunt (lo zio = the uncle)",
+     "hint": "She is your mother's or father's sister"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "Which is the Italian for «grandfather»?",
+     "choice": {
+      "options": [
+       "il nonno",
+       "la nonna",
+       "il nipote",
+       "lo zio"
+      ],
+      "correct": 0
+     },
+     "solution": "Il nonno = grandfather; la nonna = grandmother, il nipote = grandson or nephew, lo zio = uncle",
+     "hint": "It is the masculine form of nonna"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "What does «il medico» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "doctor",
+       "GP"
+      ],
+      "form": "any"
+     },
+     "solution": "Il medico = the doctor",
+     "hint": "This person treats people who are ill"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "Which word means «tired»?",
+     "choice": {
+      "options": [
+       "contento",
+       "stanco",
+       "malato",
+       "arrabbiato"
+      ],
+      "correct": 1
+     },
+     "solution": "Stanco = tired; contento = happy, malato = ill, arrabbiato = angry",
+     "hint": "Think of how you feel after a long day"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "What does «la colazione» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "breakfast"
+      ],
+      "form": "any"
+     },
+     "solution": "La colazione = breakfast (fare colazione = to have breakfast)",
+     "hint": "It's the first meal of the day"
+    },
+    {
+     "id": "p07",
+     "level": 1,
+     "text": "Which word means «funny»?",
+     "choice": {
+      "options": [
+       "timido",
+       "pigro",
+       "divertente",
+       "serio"
+      ],
+      "correct": 2
+     },
+     "solution": "Divertente = funny or fun; timido = shy, pigro = lazy, serio = serious",
+     "hint": "This person makes you laugh"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "False friend! What does «il parente» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "relative",
+       "relation",
+       "family member"
+      ],
+      "reject": [
+       "parent",
+       "parents"
+      ],
+      "form": "any",
+      "feedback": {
+       "parent": "False friend: parents are i genitori; un parente is a relative",
+       "parents": "False friend: parents are i genitori; un parente is a relative"
+      }
+     },
+     "solution": "Il parente = a relative; parents are i genitori",
+     "hint": "It's a false friend: think of aunts, uncles and cousins"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "Choose the correct adjective: «Mia sorella è molto ___.» (intelligent)",
+     "choice": {
+      "options": [
+       "intelligenta",
+       "intelligenti",
+       "intelligento",
+       "intelligente"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Adjectives ending in -e do not change to -a in the feminine",
+       "Intelligenti is plural",
+       null,
+       null
+      ]
+     },
+     "solution": "Adjectives ending in -e are the same for masculine and feminine singular: intelligente",
+     "hint": "Adjectives ending in -e do not change for gender in the singular"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "Translate into Italian. Include the definite article (il, lo, la, l', i, gli or le): the hand",
+     "short": {
+      "accept": [
+       "la mano"
+      ],
+      "reject": [
+       "il mano",
+       "le mani"
+      ],
+      "form": "strict",
+      "feedback": {
+       "il mano": "Mano is an exception: it ends in -o but is feminine",
+       "le mani": "Le mani is plural (the hands)"
+      }
+     },
+     "solution": "Mano is feminine even though it ends in -o: la mano (plural le mani)",
+     "hint": "This noun is an exception: it ends in -o but is feminine"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "Which sentence means «I get up at seven o'clock»?",
+     "choice": {
+      "options": [
+       "Mi alzo alle sette",
+       "Vado a letto alle sette",
+       "Mi sveglio alle sette",
+       "Mi vesto alle sette"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Vado a letto means I go to bed",
+       "Mi sveglio means I wake up, not I get up",
+       "Mi vesto means I get dressed"
+      ]
+     },
+     "solution": "Alzarsi = to get up; svegliarsi = to wake up, andare a letto = to go to bed, vestirsi = to get dressed",
+     "hint": "Which reflexive verb means to get out of bed?"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "Translate into Italian. Include «un» or «una»: a waitress",
+     "short": {
+      "accept": [
+       "una cameriera"
+      ],
+      "reject": [
+       "un cameriere",
+       "una cameriere",
+       "un cameriera"
+      ],
+      "form": "strict",
+      "feedback": {
+       "un cameriere": "Un cameriere is a waiter (male)"
+      }
+     },
+     "solution": "Cameriere becomes cameriera for a woman: una cameriera",
+     "hint": "Start from the word for a waiter and make it feminine"
+    },
+    {
+     "id": "p13",
+     "level": 2,
+     "text": "Choose the correct article: «Ho ___ capelli lunghi.» (I have long hair)",
+     "choice": {
+      "options": [
+       "il",
+       "i",
+       "le",
+       "gli"
+      ],
+      "correct": 1
+     },
+     "solution": "Capelli is masculine plural and starts with a consonant: ho i capelli lunghi",
+     "hint": "Capelli (hair) is plural in Italian"
+    },
+    {
+     "id": "p14",
+     "level": 2,
+     "text": "What does «gli occhi» mean?",
+     "choice": {
+      "options": [
+       "the ears",
+       "the hair",
+       "the eyes",
+       "the teeth"
+      ],
+      "correct": 2
+     },
+     "solution": "Gli occhi = the eyes; le orecchie = ears, i capelli = hair, i denti = teeth",
+     "hint": "You see with them"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "What does «Mio padre è più alto di mia madre» mean?",
+     "choice": {
+      "options": [
+       "My father is older than my mother",
+       "My mother is taller than my father",
+       "My father is as tall as my mother",
+       "My father is taller than my mother"
+      ],
+      "correct": 3
+     },
+     "solution": "Più alto di = taller than: my father is taller than my mother",
+     "hint": "Più ... di makes a comparison: more ... than"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "Read: «Mio fratello è molto chiacchierone.» What is the brother like? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "chatty",
+       "talkative"
+      ],
+      "form": "any"
+     },
+     "solution": "Chiacchierone = chatty or talkative",
+     "hint": "He never stops talking!"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "Read: «Mio zio è avvocato.» What is the uncle's job? Answer in English.",
+     "short": {
+      "accept": [
+       "lawyer",
+       "solicitor",
+       "attorney",
+       "barrister"
+      ],
+      "form": "any"
+     },
+     "solution": "Avvocato = lawyer",
+     "hint": "He works in courts"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "What does «Devo mettere in ordine la mia camera» mean?",
+     "choice": {
+      "options": [
+       "I have to tidy my bedroom",
+       "I want to tidy my bedroom",
+       "I tidied my bedroom",
+       "I can tidy my bedroom"
+      ],
+      "correct": 0
+     },
+     "solution": "Devo (from dovere) = I must / I have to; mettere in ordine = to tidy",
+     "hint": "Devo comes from dovere"
+    },
+    {
+     "id": "p19",
+     "level": 3,
+     "text": "Read: «Per stare in forma, mangio frutta e non fumo.» What does the speaker do to stay healthy?",
+     "choice": {
+      "options": [
+       "Eats fruit and goes running",
+       "Eats fruit and does not smoke",
+       "Drinks water and does not smoke",
+       "Sleeps well and eats fruit"
+      ],
+      "correct": 1
+     },
+     "solution": "Mangio frutta = I eat fruit; non fumo = I don't smoke",
+     "hint": "Find the two verbs: mangio and fumo"
+    },
+    {
+     "id": "p20",
+     "level": 3,
+     "text": "Read: «La mattina faccio la doccia e bevo il tè.» What does the speaker drink in the morning? Answer in English.",
+     "short": {
+      "accept": [
+       "tea",
+       "some tea",
+       "a cup of tea"
+      ],
+      "form": "any"
+     },
+     "solution": "Bevo il tè = I drink tea",
+     "hint": "It's a hot drink, often served with milk in Britain"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "text": "Complete with the present tense of «alzarsi»: «Mio fratello ___ alle otto.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "si alza"
+      ],
+      "reject": [
+       "mi alzo",
+       "si alzo",
+       "alza",
+       "si alzano"
+      ],
+      "form": "strict",
+      "feedback": {
+       "mi alzo": "Mi alzo is for io; mio fratello needs the lui form",
+       "alza": "Reflexive verbs need their pronoun (si with lui)"
+      }
+     },
+     "solution": "Reflexive verb with lui: si alza",
+     "hint": "Use the reflexive pronoun for lui, then the lui form of alzare"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "Choose the correct verb: «Mia sorella ___ diventare medico.» (wants to)",
+     "choice": {
+      "options": [
+       "voglio",
+       "vogliamo",
+       "vuole",
+       "vogliono"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Voglio goes with io",
+       null,
+       null,
+       "Vogliono goes with loro"
+      ]
+     },
+     "solution": "Volere with lei: vuole",
+     "hint": "Mia sorella = lei; which form of volere goes with lei?"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "Complete with the correct form of «simpatico»: «Le mie cugine sono molto ___.» Type the adjective only.",
+     "short": {
+      "accept": [
+       "simpatiche"
+      ],
+      "reject": [
+       "simpatici",
+       "simpatica",
+       "simpatice"
+      ],
+      "form": "strict",
+      "feedback": {
+       "simpatici": "Simpatici is masculine plural; cugine is feminine",
+       "simpatice": "Feminine plural -ca becomes -che to keep the hard sound"
+      }
+     },
+     "solution": "Feminine plural of simpatico: simpatiche (-ca → -che)",
+     "hint": "Feminine plural, and keep the hard c sound"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "Choose the correct verb: «L'anno prossimo mio fratello ___ all'università.» (will go)",
+     "choice": {
+      "options": [
+       "andrebbe",
+       "andava",
+       "è andato",
+       "andrà"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Andrebbe is the conditional (would go)",
+       "Andava is the imperfetto",
+       "È andato is the passato prossimo",
+       null
+      ]
+     },
+     "solution": "Future of andare (lui): andrà",
+     "hint": "L'anno prossimo = next year"
+    },
+    {
+     "id": "p25",
+     "level": 4,
+     "text": "Complete with the imperfetto of «essere»: «Quando ___ piccolo, abitavo a Roma.» (io) Type the verb only.",
+     "short": {
+      "accept": [
+       "ero"
+      ],
+      "reject": [
+       "sono",
+       "sarò",
+       "era",
+       "eri"
+      ],
+      "form": "strict",
+      "feedback": {
+       "era": "Era is the lui/lei form",
+       "sono": "Sono is the present",
+       "eri": "Eri goes with tu"
+      }
+     },
+     "solution": "Essere in the imperfetto with io: ero",
+     "hint": "Essere is irregular in the imperfetto; this is the io form"
+    },
+    {
+     "id": "p26",
+     "level": 4,
+     "text": "Choose the correct form of «svegliarsi»: «Stamattina mi ___ alle sei.»",
+     "choice": {
+      "options": [
+       "sono svegliato",
+       "ho svegliato",
+       "sveglierò",
+       "svegliamo"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Reflexive verbs take essere, not avere",
+       "Sveglierò is the future",
+       null
+      ]
+     },
+     "solution": "Reflexive verbs take essere in the passato prossimo: mi sono svegliato (svegliata for a girl)",
+     "hint": "Reflexive verbs use essere"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "text": "Which sentence is correct?",
+     "choice": {
+      "options": [
+       "I miei genitori sono simpatiche",
+       "I miei genitori sono simpatici",
+       "I miei genitori è simpatici",
+       "Miei genitori sono simpatici"
+      ],
+      "correct": 1
+     },
+     "solution": "Genitori is plural, so it keeps the article (i miei) and takes sono + simpatici",
+     "hint": "Plural family members keep the article"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "text": "Which is the correct translation of «When I am older, I would like to be a vet»?",
+     "choice": {
+      "options": [
+       "Quando ero più grande, volevo fare il veterinario",
+       "Quando sarò più grande, ho fatto il veterinario",
+       "Quando sarò più grande, vorrei fare il veterinario",
+       "Quando sarò più grande, faccio il veterinario"
+      ],
+      "correct": 2
+     },
+     "solution": "Italian uses the future after quando (sarò) and the conditional vorrei for would like",
+     "hint": "Look for the future after quando and the conditional of volere"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "Mi non alzo mai presto",
+       "Non alzo mi mai presto",
+       "Mi alzo non mai presto",
+       "Non mi alzo mai presto"
+      ],
+      "correct": 3
+     },
+     "solution": "Non goes before the reflexive pronoun, and mai after the verb: non mi alzo mai presto",
+     "hint": "Non comes first, then the pronoun mi"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "Translate into Italian: «she is tall and intelligent»",
+     "short": {
+      "accept": [
+       "è alta e intelligente",
+       "lei è alta e intelligente"
+      ],
+      "reject": [
+       "è alto e intelligente",
+       "lei è alto e intelligente",
+       "lei è alta e intelligenta"
+      ],
+      "form": "strict",
+      "feedback": {
+       "lei è alto e intelligente": "Alto must agree with lei: alta",
+       "è alto e intelligente": "Alto must agree with lei: alta",
+       "lei è alta e intelligenta": "Adjectives ending in -e do not change in the feminine"
+      }
+     },
+     "solution": "Alta agrees with lei; intelligente is the same for both genders",
+     "hint": "Make alto feminine; adjectives ending in -e don't change"
+    },
+    {
+     "id": "p31",
+     "level": 5,
+     "text": "Translate into Italian using the future tense: «I will work»",
+     "short": {
+      "accept": [
+       "lavorerò",
+       "io lavorerò"
+      ],
+      "reject": [
+       "lavorarò",
+       "lavoro",
+       "lavorerei"
+      ],
+      "form": "strict",
+      "feedback": {
+       "lavorarò": "In the future, -are verbs change -ar- to -er-",
+       "lavorerei": "Lavorerei is the conditional (I would work)"
+      }
+     },
+     "solution": "-are verbs change -ar- to -er- in the future: lavorerò",
+     "hint": "In the future, -are verbs change -ar- to -er-"
+    },
+    {
+     "id": "p32",
+     "level": 5,
+     "text": "Translate into Italian: «my brothers are lazy»",
+     "short": {
+      "accept": [
+       "i miei fratelli sono pigri"
+      ],
+      "reject": [
+       "miei fratelli sono pigri",
+       "i miei fratelli sono pigre",
+       "i miei fratelli è pigri",
+       "mio fratello è pigro"
+      ],
+      "form": "strict",
+      "feedback": {
+       "miei fratelli sono pigri": "Plural family members keep the article: i miei",
+       "mio fratello è pigro": "That is singular (my brother is lazy)"
+      }
+     },
+     "solution": "Plural family members keep the article: i miei fratelli sono pigri",
+     "hint": "With plural family members, keep the article before the possessive"
+    }
+   ]
+  },
+  {
+   "id": "italian.culture",
+   "title": "Free time & culture",
+   "aliases": [
+    "italian free time",
+    "hobbies",
+    "sport",
+    "music",
+    "cinema",
+    "tv",
+    "technology",
+    "social media",
+    "festivals",
+    "food and drink"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What does «il nuoto» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "swimming"
+      ],
+      "form": "any"
+     },
+     "solution": "Il nuoto = swimming (nuotare = to swim)",
+     "hint": "It's a sport you do in a pool"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What does «il formaggio» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "cheese"
+      ],
+      "form": "any"
+     },
+     "solution": "Il formaggio = cheese",
+     "hint": "Parmigiano is a famous Italian one"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "Which is the Italian for «the mobile phone»?",
+     "choice": {
+      "options": [
+       "il cellulare",
+       "il computer",
+       "il tablet",
+       "il telecomando"
+      ],
+      "correct": 0
+     },
+     "solution": "Il cellulare (or il telefonino) = the mobile phone; il telecomando = the remote control",
+     "hint": "It is also called il telefonino"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "What does «gli scacchi» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "chess"
+      ],
+      "form": "any"
+     },
+     "solution": "Giocare a scacchi = to play chess",
+     "hint": "A board game with kings, queens and knights"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "Which word means «the cake»?",
+     "choice": {
+      "options": [
+       "il pane",
+       "la torta",
+       "il pesce",
+       "il pollo"
+      ],
+      "correct": 1
+     },
+     "solution": "La torta = the cake; il pane = bread, il pesce = fish, il pollo = chicken",
+     "hint": "You might have one with candles on your birthday"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "What does «la canzone» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "song"
+      ],
+      "form": "any"
+     },
+     "solution": "La canzone = the song (cantare = to sing)",
+     "hint": "It's related to cantare, to sing"
+    },
+    {
+     "id": "c07",
+     "level": 1,
+     "text": "Which word means «Christmas»?",
+     "choice": {
+      "options": [
+       "la Pasqua",
+       "il compleanno",
+       "il Natale",
+       "il Capodanno"
+      ],
+      "correct": 2
+     },
+     "solution": "Natale = Christmas; Pasqua = Easter, il compleanno = birthday, Capodanno = New Year's Day",
+     "hint": "It is celebrated on 25 December"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "Choose the correct verb: «Mio fratello ___ la chitarra.» (plays)",
+     "choice": {
+      "options": [
+       "gioca",
+       "fa",
+       "mette",
+       "suona"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Giocare is used for sports and games, not instruments",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Instruments use suonare: suona la chitarra; sports and games use giocare",
+     "hint": "Italian uses different verbs for instruments and for sports"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "Choose the correct article: «___ sport è importante.»",
+     "choice": {
+      "options": [
+       "Lo",
+       "Il",
+       "La",
+       "Gli"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Before s + consonant, il becomes lo",
+       null,
+       "Gli is plural"
+      ]
+     },
+     "solution": "Sport starts with s + consonant, so it takes lo: lo sport",
+     "hint": "Masculine nouns starting with s + consonant take a special article"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "Translate into Italian. Include the definite article (il, lo, la, l', i, gli or le): the music",
+     "short": {
+      "accept": [
+       "la musica"
+      ],
+      "reject": [
+       "il musica"
+      ],
+      "form": "strict",
+      "feedback": {
+       "il musica": "Musica is feminine, so it takes la"
+      }
+     },
+     "solution": "Musica is feminine: la musica",
+     "hint": "Nouns ending in -a are usually feminine"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "Translate into Italian. Include the definite article (il, lo, la, l', i, gli or le): the newspaper",
+     "short": {
+      "accept": [
+       "il giornale"
+      ],
+      "reject": [
+       "la giornale",
+       "la giornata"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la giornata": "La giornata means the day",
+       "la giornale": "Giornale is masculine"
+      }
+     },
+     "solution": "Il giornale = the newspaper (masculine)",
+     "hint": "It is masculine and ends in -e"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "Which phrase means «cartoons»?",
+     "choice": {
+      "options": [
+       "le telenovele",
+       "i cartoni animati",
+       "i quiz",
+       "il telegiornale"
+      ],
+      "correct": 1
+     },
+     "solution": "I cartoni animati = cartoons; le telenovele = soap operas, i quiz = quiz shows, il telegiornale = the TV news",
+     "hint": "Animati suggests animation"
+    },
+    {
+     "id": "c13",
+     "level": 2,
+     "text": "What does «il telegiornale» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "news",
+       "TV news",
+       "news programme",
+       "news bulletin"
+      ],
+      "form": "any"
+     },
+     "solution": "Il telegiornale = the TV news",
+     "hint": "Tele + giornale (newspaper): a TV programme about today's events"
+    },
+    {
+     "id": "c14",
+     "level": 2,
+     "text": "Choose the correct word: «Mi piace ___ cinema.»",
+     "choice": {
+      "options": [
+       "al",
+       "lo",
+       "il",
+       "i"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Al means to the; piacere needs the article il",
+       "Lo is only used before z or s + consonant",
+       null,
+       null
+      ]
+     },
+     "solution": "With piacere, Italian uses the definite article: mi piace il cinema",
+     "hint": "Cinema is masculine singular and starts with an ordinary consonant"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "What does «Preferisco guardare i film dell'orrore» mean?",
+     "choice": {
+      "options": [
+       "I hate watching horror films",
+       "I prefer watching comedies",
+       "I watched a horror film",
+       "I prefer watching horror films"
+      ],
+      "correct": 3
+     },
+     "solution": "Preferisco = I prefer; i film dell'orrore = horror films",
+     "hint": "Preferisco looks like an English verb"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "Read: «Il sabato vado in piscina con mia sorella.» On which day does the speaker go to the pool? Answer in English.",
+     "short": {
+      "accept": [
+       "Saturday",
+       "Saturdays",
+       "on Saturday",
+       "on Saturdays",
+       "every Saturday"
+      ],
+      "reject": [
+       "Sunday"
+      ],
+      "form": "any",
+      "feedback": {
+       "Sunday": "Sunday is domenica"
+      }
+     },
+     "solution": "Il sabato = on Saturdays",
+     "hint": "It's the day before domenica"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "Read: «Il mio piatto preferito è il pollo arrosto.» What is the speaker's favourite dish? Answer in English.",
+     "short": {
+      "accept": [
+       "roast chicken",
+       "chicken",
+       "roasted chicken"
+      ],
+      "form": "any"
+     },
+     "solution": "Il pollo arrosto = roast chicken",
+     "hint": "Pollo is a bird you eat; arrosto is a way of cooking it"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "What does «Passo troppo tempo sui social» mean?",
+     "choice": {
+      "options": [
+       "I spend too much time on social media",
+       "I spend very little time on social media",
+       "I never use social media",
+       "I spent a long time on my phone"
+      ],
+      "correct": 0
+     },
+     "solution": "Passare tempo = to spend time; troppo = too much; i social = social media",
+     "hint": "Troppo means too much"
+    },
+    {
+     "id": "c19",
+     "level": 3,
+     "text": "Read: «Per il mio compleanno, i miei genitori mi hanno regalato una chitarra.» What present did the speaker get? Answer in English.",
+     "short": {
+      "accept": [
+       "guitar",
+       "a guitar"
+      ],
+      "form": "any"
+     },
+     "solution": "Una chitarra = a guitar",
+     "hint": "It's a musical instrument with strings"
+    },
+    {
+     "id": "c20",
+     "level": 3,
+     "text": "Read: «Non mi piace il rap, ma adoro il jazz.» Which statement is true?",
+     "choice": {
+      "options": [
+       "The speaker loves rap",
+       "The speaker loves jazz",
+       "The speaker hates jazz",
+       "The speaker likes both rap and jazz"
+      ],
+      "correct": 1
+     },
+     "solution": "Non mi piace il rap = I don't like rap; adoro il jazz = I love jazz",
+     "hint": "Ma (but) separates the two opinions"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "Complete with the passato prossimo of «vedere»: «Lo scorso fine settimana ___ un bel film.» (noi) Type the two missing words.",
+     "short": {
+      "accept": [
+       "abbiamo visto",
+       "abbiamo veduto"
+      ],
+      "reject": [
+       "siamo visti",
+       "abbiamo vedito",
+       "abbiamo vedere"
+      ],
+      "form": "strict",
+      "feedback": {
+       "siamo visti": "Vedere takes avere, not essere",
+       "abbiamo vedere": "Use the past participle, not the infinitive"
+      }
+     },
+     "solution": "Vedere takes avere and has the irregular participle visto: abbiamo visto",
+     "hint": "Vedere uses avere and has an irregular past participle"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Choose the correct verb: «Domani ___ a tennis con i miei amici.» (io)",
+     "choice": {
+      "options": [
+       "giocavo",
+       "ho giocato",
+       "giocherò",
+       "giocheranno"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Giocavo is the imperfetto",
+       "Ho giocato is the passato prossimo",
+       null,
+       "Giocheranno goes with loro"
+      ]
+     },
+     "solution": "Domani points to the future: giocherò (the h keeps the hard c sound)",
+     "hint": "Which tense goes with domani, and which ending goes with io?"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Complete with the present tense of «fare»: «La domenica ___ sport con mio padre.» (io) Type the verb only.",
+     "short": {
+      "accept": [
+       "faccio"
+      ],
+      "reject": [
+       "fa",
+       "facio",
+       "fai",
+       "fare"
+      ],
+      "form": "strict",
+      "feedback": {
+       "fa": "Fa goes with lui/lei",
+       "fai": "Fai goes with tu"
+      }
+     },
+     "solution": "Fare is irregular: io faccio",
+     "hint": "Fare is irregular in the io form: it has a double consonant"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Choose the correct pronoun: «Ti piacciono le patatine? — Sì, ___ mangio spesso.»",
+     "choice": {
+      "options": [
+       "la",
+       "li",
+       "gli",
+       "le"
+      ],
+      "correct": 3,
+      "feedback": [
+       "La replaces a feminine singular noun",
+       "Li replaces a masculine plural noun",
+       null,
+       null
+      ]
+     },
+     "solution": "Le patatine is feminine plural, so the pronoun is le",
+     "hint": "Patatine is feminine plural"
+    },
+    {
+     "id": "c25",
+     "level": 4,
+     "text": "Complete with the imperfetto of «guardare»: «Prima ___ la TV ogni sera.» (io) Type the verb only.",
+     "short": {
+      "accept": [
+       "guardavo"
+      ],
+      "reject": [
+       "guardato",
+       "guarderò",
+       "guardava",
+       "guardo"
+      ],
+      "form": "strict",
+      "feedback": {
+       "guardava": "Guardava is the lui/lei form",
+       "guardo": "Guardo is the present"
+      }
+     },
+     "solution": "Imperfetto for a past habit: guardavo",
+     "hint": "Prima + ogni sera describes a past habit"
+    },
+    {
+     "id": "c26",
+     "level": 4,
+     "text": "Choose the correct adjective: «È un ___ programma.» (good)",
+     "choice": {
+      "options": [
+       "buon",
+       "buono",
+       "buona",
+       "buoni"
+      ],
+      "correct": 0
+     },
+     "solution": "Before most masculine singular nouns, buono shortens to buon: un buon programma",
+     "hint": "Buono changes form before a masculine singular noun"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "Which sentence about last night is correct?",
+     "choice": {
+      "options": [
+       "Ieri sera abbiamo andato al concerto",
+       "Ieri sera siamo andati al concerto",
+       "Ieri sera siamo andato al concerto",
+       "Ieri sera andiamo al concerto"
+      ],
+      "correct": 1
+     },
+     "solution": "Andare takes essere and agrees with noi: siamo andati",
+     "hint": "Check the auxiliary, the agreement and the tense"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "Which is the correct translation of «I don't like playing video games»?",
+     "choice": {
+      "options": [
+       "Non mi piaccio giocare ai videogiochi",
+       "Mi non piace giocare ai videogiochi",
+       "Non mi piace giocare ai videogiochi",
+       "Non mi piace giocando ai videogiochi"
+      ],
+      "correct": 2
+     },
+     "solution": "Non goes before mi piace, and piacere is followed by the infinitive",
+     "hint": "Piacere is followed by an infinitive, not an -ing form"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Which sentence with «se» (if) is correct?",
+     "choice": {
+      "options": [
+       "Se avrei soldi, comprerei una console",
+       "Se ho soldi, comprerei una console",
+       "Se avessi soldi, comprerò una console",
+       "Se avessi soldi, comprerei una console"
+      ],
+      "correct": 3
+     },
+     "solution": "Se + imperfect subjunctive (avessi), then the conditional (comprerei)",
+     "hint": "After se, Italian never uses the conditional"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Translate into Italian: «I play the guitar»",
+     "short": {
+      "accept": [
+       "suono la chitarra",
+       "io suono la chitarra"
+      ],
+      "reject": [
+       "gioco la chitarra",
+       "gioco a chitarra",
+       "io gioco la chitarra"
+      ],
+      "form": "strict",
+      "feedback": {
+       "gioco la chitarra": "Instruments use suonare, not giocare",
+       "gioco a chitarra": "Instruments use suonare, not giocare",
+       "io gioco la chitarra": "Instruments use suonare, not giocare"
+      }
+     },
+     "solution": "Instruments use suonare: suono la chitarra",
+     "hint": "Italian uses a special verb for playing instruments"
+    },
+    {
+     "id": "c31",
+     "level": 5,
+     "text": "Translate into Italian using the passato prossimo: «she watched a film»",
+     "short": {
+      "accept": [
+       "ha guardato un film",
+       "lei ha guardato un film",
+       "ha visto un film",
+       "lei ha visto un film"
+      ],
+      "reject": [
+       "è guardata un film",
+       "ha guardata un film",
+       "guardava un film",
+       "lei è guardata un film"
+      ],
+      "form": "strict",
+      "feedback": {
+       "è guardata un film": "Guardare takes avere, not essere",
+       "lei è guardata un film": "Guardare takes avere, not essere",
+       "ha guardata un film": "With avere, the participle does not agree with the subject",
+       "guardava un film": "Guardava is the imperfetto"
+      }
+     },
+     "solution": "Guardare takes avere, so there is no agreement: ha guardato un film",
+     "hint": "Guardare uses avere, so the participle does not agree with lei"
+    },
+    {
+     "id": "c32",
+     "level": 5,
+     "text": "Translate into Italian: «we are going to the restaurant»",
+     "short": {
+      "accept": [
+       "andiamo al ristorante",
+       "noi andiamo al ristorante"
+      ],
+      "reject": [
+       "andiamo a il ristorante",
+       "andiamo alla ristorante",
+       "andiamo allo ristorante"
+      ],
+      "form": "strict",
+      "feedback": {
+       "andiamo a il ristorante": "A + il always contracts to al",
+       "andiamo alla ristorante": "Ristorante is masculine, so al"
+      }
+     },
+     "solution": "A + il = al: andiamo al ristorante",
+     "hint": "Use the noi form of andare, and remember what a + il becomes"
+    }
+   ]
+  },
+  {
+   "id": "italian.world",
+   "title": "Travel & the world",
+   "aliases": [
+    "italian holidays",
+    "holidays",
+    "travel",
+    "town",
+    "local area",
+    "home",
+    "environment",
+    "global issues",
+    "weather",
+    "directions",
+    "transport",
+    "shopping"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What does «la spiaggia» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "beach",
+       "seaside"
+      ],
+      "form": "any"
+     },
+     "solution": "La spiaggia = the beach",
+     "hint": "You find sand and the sea there"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "What does «la stazione» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "station",
+       "railway station",
+       "train station"
+      ],
+      "form": "any"
+     },
+     "solution": "La stazione = the (railway) station",
+     "hint": "You catch a train there"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "Which is the Italian for «it is raining»?",
+     "choice": {
+      "options": [
+       "piove",
+       "nevica",
+       "fa bel tempo",
+       "c'è vento"
+      ],
+      "correct": 0
+     },
+     "solution": "Piove = it is raining; nevica = it is snowing, fa bel tempo = it is fine, c'è vento = it is windy",
+     "hint": "Think of la pioggia (rain)"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "What does «la panetteria» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "bakery",
+       "baker's",
+       "bakers",
+       "baker's shop"
+      ],
+      "form": "any"
+     },
+     "solution": "La panetteria = the bakery (il pane = bread)",
+     "hint": "It comes from pane, bread"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "Which word means «the plane»?",
+     "choice": {
+      "options": [
+       "la nave",
+       "l'aereo",
+       "la macchina",
+       "il pullman"
+      ],
+      "correct": 1
+     },
+     "solution": "L'aereo = the plane; la nave = the ship, la macchina = the car, il pullman = the coach",
+     "hint": "You get on it at an airport"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "What does «il municipio» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "town hall",
+       "city hall"
+      ],
+      "form": "any"
+     },
+     "solution": "Il municipio = the town hall",
+     "hint": "The mayor (il sindaco) works there"
+    },
+    {
+     "id": "w07",
+     "level": 1,
+     "text": "Which phrase means «the bedroom»?",
+     "choice": {
+      "options": [
+       "la cucina",
+       "il bagno",
+       "la camera da letto",
+       "il soggiorno"
+      ],
+      "correct": 2
+     },
+     "solution": "La camera da letto = the bedroom; la cucina = the kitchen, il bagno = the bathroom, il soggiorno = the living room",
+     "hint": "Letto means bed"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "False friend! What does «la libreria» mean?",
+     "choice": {
+      "options": [
+       "the library",
+       "the bakery",
+       "the newsagent",
+       "the bookshop"
+      ],
+      "correct": 3,
+      "feedback": [
+       "False friend: the library is la biblioteca",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "False friend: la libreria is a bookshop; a library is la biblioteca",
+     "hint": "It's a false friend: think about where you buy books"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "Translate into Italian. Include the definite article (il, lo, la, l', i, gli or le): the library",
+     "short": {
+      "accept": [
+       "la biblioteca"
+      ],
+      "reject": [
+       "la libreria",
+       "il biblioteca"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la libreria": "La libreria is a bookshop (false friend)",
+       "il biblioteca": "Biblioteca is feminine, so it takes la"
+      }
+     },
+     "solution": "La biblioteca = the library; la libreria is a bookshop",
+     "hint": "It's feminine and it is not the false friend libreria"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "Choose the correct phrase: «La banca è ___ cinema.» (next to)",
+     "choice": {
+      "options": [
+       "accanto al",
+       "di fronte al",
+       "dietro il",
+       "sotto il"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Di fronte a means opposite",
+       "Dietro means behind",
+       null
+      ]
+     },
+     "solution": "Accanto a = next to; di fronte a = opposite, dietro = behind, sotto = under",
+     "hint": "This preposition shows that something is beside something else"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "Translate into Italian. Include the definite article (il, lo, la, l', i, gli or le): the car",
+     "short": {
+      "accept": [
+       "la macchina",
+       "l'auto",
+       "l'automobile"
+      ],
+      "reject": [
+       "il macchina"
+      ],
+      "form": "strict",
+      "feedback": {
+       "il macchina": "Macchina is feminine, so it takes la"
+      }
+     },
+     "solution": "Macchina is feminine: la macchina (also l'auto)",
+     "hint": "It is feminine"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "Choose the correct sentence: «I live in London.»",
+     "choice": {
+      "options": [
+       "Abito in Londra",
+       "Abito a Londra",
+       "Abito al Londra",
+       "Abito nella Londra"
+      ],
+      "correct": 1,
+      "feedback": [
+       "In is used with countries and regions (in Italia)",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Towns and cities take a: abito a Londra; countries take in",
+     "hint": "Italian uses different prepositions for cities and for countries"
+    },
+    {
+     "id": "w13",
+     "level": 2,
+     "text": "What does «la periferia» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "outskirts",
+       "the outskirts",
+       "suburbs",
+       "periphery"
+      ],
+      "form": "any"
+     },
+     "solution": "La periferia = the outskirts or suburbs of a town",
+     "hint": "It's the part of a town far from the centre"
+    },
+    {
+     "id": "w14",
+     "level": 2,
+     "text": "Which phrase means «on the left»?",
+     "choice": {
+      "options": [
+       "a destra",
+       "sempre dritto",
+       "a sinistra",
+       "di fronte"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A destra means on the right",
+       "Sempre dritto means straight on",
+       null,
+       null
+      ]
+     },
+     "solution": "A sinistra = on the left; a destra = on the right, sempre dritto = straight on, di fronte = opposite",
+     "hint": "It is the opposite of a destra"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "What does «Fa caldo e c'è il sole» mean?",
+     "choice": {
+      "options": [
+       "It is cold and sunny",
+       "It is hot and windy",
+       "It is cloudy and hot",
+       "It is hot and sunny"
+      ],
+      "correct": 3
+     },
+     "solution": "Fa caldo = it is hot; c'è il sole = it is sunny",
+     "hint": "Caldo is a false friend: it does not mean cold"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "Read: «Vado a scuola in bicicletta.» How does the speaker travel to school? Answer in English.",
+     "short": {
+      "accept": [
+       "by bike",
+       "bike",
+       "by bicycle",
+       "bicycle",
+       "cycling",
+       "on a bike",
+       "on my bike",
+       "by cycle"
+      ],
+      "form": "any"
+     },
+     "solution": "In bicicletta = by bike",
+     "hint": "It has two wheels and pedals"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "Read: «L'estate scorsa sono andato in Francia con la mia famiglia.» Which country did the speaker visit? Answer in English.",
+     "short": {
+      "accept": [
+       "France"
+      ],
+      "form": "any"
+     },
+     "solution": "La Francia = France",
+     "hint": "Its capital is Paris"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "What does «La stazione è di fronte alla banca» mean?",
+     "choice": {
+      "options": [
+       "The station is opposite the bank",
+       "The station is next to the bank",
+       "The station is behind the bank",
+       "The bank is opposite the post office"
+      ],
+      "correct": 0
+     },
+     "solution": "Di fronte a = opposite: the station is opposite the bank",
+     "hint": "Di fronte a is a preposition of place: think of facing something"
+    },
+    {
+     "id": "w19",
+     "level": 3,
+     "text": "Read: «Nella mia città c'è troppo inquinamento.» What problem does the town have? Answer in English.",
+     "short": {
+      "accept": [
+       "pollution",
+       "too much pollution"
+      ],
+      "form": "any"
+     },
+     "solution": "L'inquinamento = pollution",
+     "hint": "It is bad for the air and for the environment"
+    },
+    {
+     "id": "w20",
+     "level": 3,
+     "text": "Read: «Per proteggere l'ambiente, riciclo e prendo l'autobus.» What does the speaker do?",
+     "choice": {
+      "options": [
+       "Recycles and walks to school",
+       "Recycles and takes the bus",
+       "Saves water and takes the bus",
+       "Turns off the lights and recycles"
+      ],
+      "correct": 1
+     },
+     "solution": "Riciclo = I recycle; prendo l'autobus = I take the bus",
+     "hint": "Find the two verbs after per proteggere l'ambiente"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "Complete with the passato prossimo of «partire»: «I miei genitori ___ ieri per le vacanze.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "sono partiti"
+      ],
+      "reject": [
+       "hanno partito",
+       "sono partito",
+       "sono partite"
+      ],
+      "form": "strict",
+      "feedback": {
+       "hanno partito": "Partire takes essere, not avere",
+       "sono partito": "With essere, the participle agrees: masculine plural -i",
+       "sono partite": "Genitori is masculine plural, so -i"
+      }
+     },
+     "solution": "Partire takes essere and agrees with i miei genitori: sono partiti",
+     "hint": "Partire uses essere; make the participle masculine plural"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "Choose the correct verb: «Se domani fa bel tempo, ___ al mare.» (noi)",
+     "choice": {
+      "options": [
+       "andremmo",
+       "andavamo",
+       "andremo",
+       "siamo andati"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Andremmo is the conditional (we would go)",
+       "Andavamo is the imperfetto",
+       null,
+       null
+      ]
+     },
+     "solution": "Se + present, then future: andremo",
+     "hint": "Se + present tense is followed by the future"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "Complete with the present tense of «uscire»: «Mio padre ___ di casa alle sette.» Type the verb only.",
+     "short": {
+      "accept": [
+       "esce"
+      ],
+      "reject": [
+       "usce",
+       "uscisce",
+       "escono",
+       "esco"
+      ],
+      "form": "strict",
+      "feedback": {
+       "esco": "Esco goes with io",
+       "escono": "Escono goes with loro"
+      }
+     },
+     "solution": "Uscire is irregular: lui esce",
+     "hint": "Uscire changes its first vowel in most present tense forms"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "Choose the correct adjective: «Abito in una casa molto ___.» (beautiful)",
+     "choice": {
+      "options": [
+       "bello",
+       "belle",
+       "belli",
+       "bella"
+      ],
+      "correct": 3
+     },
+     "solution": "Casa is feminine singular: bella",
+     "hint": "Casa is feminine"
+    },
+    {
+     "id": "w25",
+     "level": 4,
+     "text": "Complete with the imperfetto of «fare»: «Durante le vacanze ___ molto caldo.» Type the verb only.",
+     "short": {
+      "accept": [
+       "faceva"
+      ],
+      "reject": [
+       "fa",
+       "ha fatto",
+       "farà",
+       "facevo"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ha fatto": "Ha fatto is the passato prossimo; this question asks for the imperfetto",
+       "fa": "Fa is the present",
+       "facevo": "Facevo is the io form"
+      }
+     },
+     "solution": "Imperfetto of fare for describing the weather: faceva",
+     "hint": "Fare uses the stem fac- in the imperfetto"
+    },
+    {
+     "id": "w26",
+     "level": 4,
+     "text": "Choose the correct pronoun: «Compri la maglietta? — Sì, ___ compro oggi.»",
+     "choice": {
+      "options": [
+       "la",
+       "lo",
+       "le",
+       "gli"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Lo replaces a masculine noun",
+       null,
+       "Gli is an indirect pronoun (to him)"
+      ]
+     },
+     "solution": "La maglietta is feminine singular: la compro",
+     "hint": "Maglietta is feminine and it is the direct object"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "Which sentence about last year is correct?",
+     "choice": {
+      "options": [
+       "L'anno scorso abbiamo andato in Spagna",
+       "L'anno scorso siamo andati in Spagna",
+       "L'anno scorso siamo andati a Spagna",
+       "L'anno scorso andiamo in Spagna"
+      ],
+      "correct": 1
+     },
+     "solution": "Andare takes essere and agrees with noi, and countries take in",
+     "hint": "Check the auxiliary, the agreement and the preposition"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "Which is the correct translation of «We must protect the planet»?",
+     "choice": {
+      "options": [
+       "Dobbiamo proteggere la pianeta",
+       "Dobbiamo proteggiamo il pianeta",
+       "Dobbiamo proteggere il pianeta",
+       "Dovere proteggere il pianeta"
+      ],
+      "correct": 2
+     },
+     "solution": "Dovere + infinitive: dobbiamo proteggere; pianeta is masculine (il pianeta)",
+     "hint": "After dovere, the next verb is an infinitive"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "Read: «Prima c'era un cinema nel mio paese, ma adesso non c'è più niente.» Which statement is true?",
+     "choice": {
+      "options": [
+       "There is a new cinema in the village",
+       "There has never been a cinema in the village",
+       "The cinema is going to close soon",
+       "There used to be a cinema, but now there is nothing"
+      ],
+      "correct": 3
+     },
+     "solution": "C'era = there was / there used to be; non c'è più niente = there is nothing any more",
+     "hint": "Compare the imperfetto c'era with the present c'è"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "Translate into Italian: «I went to the beach» (the speaker is a boy)",
+     "short": {
+      "accept": [
+       "sono andato in spiaggia",
+       "io sono andato in spiaggia",
+       "sono andato alla spiaggia",
+       "io sono andato alla spiaggia"
+      ],
+      "reject": [
+       "ho andato in spiaggia",
+       "sono andata in spiaggia",
+       "sono andato a spiaggia"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ho andato in spiaggia": "Andare takes essere, not avere",
+       "sono andata in spiaggia": "The speaker is a boy, so andato"
+      }
+     },
+     "solution": "Andare takes essere: sono andato (masculine) + in spiaggia",
+     "hint": "Andare uses essere, and the speaker is male"
+    },
+    {
+     "id": "w31",
+     "level": 5,
+     "text": "Translate into Italian using the future tense: «it will rain»",
+     "short": {
+      "accept": [
+       "pioverà"
+      ],
+      "reject": [
+       "pioverebbe",
+       "piove",
+       "pioveva"
+      ],
+      "form": "strict",
+      "feedback": {
+       "pioverebbe": "Pioverebbe is the conditional (it would rain)",
+       "piove": "Piove is the present"
+      }
+     },
+     "solution": "Future of piovere: pioverà",
+     "hint": "Add the future ending for lui to the stem piover-"
+    },
+    {
+     "id": "w32",
+     "level": 5,
+     "text": "Translate into Italian: «there is a lot of traffic»",
+     "short": {
+      "accept": [
+       "c'è molto traffico"
+      ],
+      "reject": [
+       "c'è molta traffico",
+       "ci sono molto traffico",
+       "è molto traffico"
+      ],
+      "form": "strict",
+      "feedback": {
+       "c'è molta traffico": "Traffico is masculine, so molto",
+       "è molto traffico": "There is = c'è"
+      }
+     },
+     "solution": "C'è = there is; traffico is masculine: molto traffico",
+     "hint": "Use c'è, and make the word for a lot agree with a masculine noun"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "italian.y{year}.grammar",
+      "label": "Grammar & tenses",
+      "skills": [
+       "italian.grammar"
+      ]
+     },
+     {
+      "id": "italian.y{year}.people",
+      "label": "People & lifestyle",
+      "skills": [
+       "italian.people"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "italian.y{year}.culture",
+      "label": "Free time & culture",
+      "skills": [
+       "italian.culture"
+      ]
+     },
+     {
+      "id": "italian.y{year}.world",
+      "label": "Travel & the world",
+      "skills": [
+       "italian.world"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

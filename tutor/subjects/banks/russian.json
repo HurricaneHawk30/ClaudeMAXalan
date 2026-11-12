@@ -1,0 +1,2189 @@
+{
+ "subject": {
+  "id": "russian",
+  "title": "Russian",
+  "order": 60
+ },
+ "skills": [
+  {
+   "id": "russian.grammar",
+   "title": "Grammar & tenses",
+   "aliases": [
+    "russian grammar",
+    "tenses",
+    "present tense",
+    "past tense",
+    "future tense",
+    "conditional",
+    "verbs",
+    "adjective agreement",
+    "pronouns",
+    "negatives",
+    "падежи",
+    "cases",
+    "aspect",
+    "verbs of motion"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which Russian pronoun means 'we'? Choose the correct word.",
+     "choice": {
+      "options": [
+       "мы",
+       "вы",
+       "они",
+       "я"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "вы means 'you' (plural or polite)",
+       "они means 'they'",
+       null
+      ]
+     },
+     "solution": "мы = we. вы = you (plural or polite), они = they, я = I",
+     "hint": "Think of the pronoun that goes with verbs ending in -ем, as in «___ живём»"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "What does the Russian pronoun «она» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "she",
+       "it"
+      ],
+      "reject": [
+       "he"
+      ],
+      "form": "any",
+      "feedback": {
+       "he": "он means 'he'; она is the feminine pronoun"
+      }
+     },
+     "solution": "она = she (or 'it' for a feminine noun such as книга)",
+     "hint": "It is the feminine partner of он"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "What is the gender of the noun «окно» (window)?",
+     "choice": {
+      "options": [
+       "neuter",
+       "masculine",
+       "feminine"
+      ],
+      "correct": 0
+     },
+     "solution": "Nouns ending in -о or -е are usually neuter, so окно is neuter",
+     "hint": "Look at the last letter of the word"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Most Russian feminine nouns end in which letters in the nominative singular?",
+     "choice": {
+      "options": [
+       "-ы or -и",
+       "-а or -я",
+       "-о or -е",
+       "a consonant"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "-о and -е are typical neuter endings",
+       "Most masculine nouns end in a consonant"
+      ]
+     },
+     "solution": "Most feminine nouns end in -а or -я, e.g. мама, неделя",
+     "hint": "Think of the Russian words for 'mum' and 'week'"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "«Я читаю» — which tense is this? Answer in English: past, present or future.",
+     "short": {
+      "accept": [
+       "present",
+       "present tense"
+      ],
+      "reject": [
+       "past",
+       "future"
+      ],
+      "form": "any"
+     },
+     "solution": "читаю is present tense: I read / I am reading",
+     "hint": "Past-tense verbs end in -л, -ла, -ло or -ли; future forms often use буду"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "Which short Russian word goes before a verb to make it negative (like 'not')? Type it in Cyrillic.",
+     "short": {
+      "accept": [
+       "не"
+      ],
+      "reject": [
+       "нет"
+      ],
+      "form": "strict",
+      "feedback": {
+       "нет": "нет means 'no' or 'there is no'; to negate a verb use не"
+      }
+     },
+     "solution": "не goes before the verb: Я не знаю = I don't know",
+     "hint": "It is a two-letter word that starts with н"
+    },
+    {
+     "id": "g07",
+     "level": 2,
+     "text": "Choose the correct past-tense form: «Вчера мама ___ книгу.» (читать = to read)",
+     "choice": {
+      "options": [
+       "читали",
+       "читало",
+       "читала",
+       "читал"
+      ],
+      "correct": 2,
+      "feedback": [
+       "читали is the plural form",
+       null,
+       null,
+       "читал is the masculine form"
+      ]
+     },
+     "solution": "The past tense agrees with the subject: мама is feminine, so читала",
+     "hint": "Is the subject masculine, feminine or plural?"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "Which word for 'my' goes with «сестра» (sister)?",
+     "choice": {
+      "options": [
+       "мой",
+       "моё",
+       "мои",
+       "моя"
+      ],
+      "correct": 3,
+      "feedback": [
+       "мой goes with masculine nouns",
+       "моё goes with neuter nouns",
+       "мои is plural",
+       null
+      ]
+     },
+     "solution": "сестра is feminine, so моя сестра",
+     "hint": "сестра ends in -а: what gender is it?"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "«Я буду играть» — which tense is this? Answer in English: past, present or future.",
+     "short": {
+      "accept": [
+       "future",
+       "future tense"
+      ],
+      "reject": [
+       "past",
+       "present"
+      ],
+      "form": "any"
+     },
+     "solution": "буду + infinitive is the future: I will play / I will be playing",
+     "hint": "буду comes from быть (to be) and points forward in time"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Give the plural of «книга» (book). Type it in Cyrillic.",
+     "short": {
+      "accept": [
+       "книги"
+      ],
+      "reject": [
+       "книгы"
+      ],
+      "form": "strict",
+      "feedback": {
+       "книгы": "After г you write -и, never -ы"
+      }
+     },
+     "solution": "After г, к and х you write -и, not -ы: книга → книги",
+     "hint": "Remember the spelling rule for nouns ending in -га"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Which sentence means 'I don't like sport'?",
+     "choice": {
+      "options": [
+       "Я не люблю спорт.",
+       "Я люблю спорт.",
+       "Я очень люблю спорт.",
+       "Я тоже люблю спорт."
+      ],
+      "correct": 0
+     },
+     "solution": "не before the verb makes it negative: Я не люблю спорт",
+     "hint": "Look for the small word that means 'not'"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "Translate into English: «Он не работает.»",
+     "short": {
+      "accept": [
+       "he does not work",
+       "he doesn't work",
+       "he is not working",
+       "he isn't working",
+       "he's not working"
+      ],
+      "form": "any"
+     },
+     "solution": "не + работает: he does not work / he isn't working",
+     "hint": "работать means 'to work'; не makes it negative"
+    },
+    {
+     "id": "g13",
+     "level": 3,
+     "text": "Complete with the prepositional case: «Я живу в ___.» (Москва)",
+     "choice": {
+      "options": [
+       "Москвы",
+       "Москве",
+       "Москва",
+       "Москву"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Москву (accusative) is used for movement: Я еду в Москву"
+      ]
+     },
+     "solution": "в + prepositional shows where something is: Москва → в Москве",
+     "hint": "Location after в takes the prepositional case"
+    },
+    {
+     "id": "g14",
+     "level": 3,
+     "text": "Complete with the accusative case: «Я вижу ___.» (сестра = sister)",
+     "choice": {
+      "options": [
+       "сестре",
+       "сестры",
+       "сестру",
+       "сестра"
+      ],
+      "correct": 2
+     },
+     "solution": "The direct object goes into the accusative: сестра → сестру",
+     "hint": "Feminine nouns ending in -а change their ending in the accusative"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "Complete with the correct form of «говорить» (to speak): «Мы ___ по-русски.» Type the verb in Cyrillic.",
+     "short": {
+      "accept": [
+       "говорим"
+      ],
+      "reject": [
+       "говорят",
+       "говорит"
+      ],
+      "form": "strict",
+      "feedback": {
+       "говорят": "говорят is the они form",
+       "говорит": "говорит is the он/она form"
+      }
+     },
+     "solution": "говорить: я говорю, ты говоришь, он говорит, мы говорим, вы говорите, они говорят",
+     "hint": "The мы form of an -ить verb ends in -им"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "Translate into English: «Я играл в футбол.»",
+     "short": {
+      "accept": [
+       "I played football",
+       "I was playing football",
+       "I used to play football",
+       "I played soccer",
+       "I was playing soccer",
+       "I used to play soccer"
+      ],
+      "form": "any"
+     },
+     "solution": "играл is past tense (masculine): I played football",
+     "hint": "играть в + a sport = to play a sport; the -л ending shows the past"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "Which form is perfective, describing one completed action?",
+     "choice": {
+      "options": [
+       "читал",
+       "читаю",
+       "читает",
+       "прочитал"
+      ],
+      "correct": 3
+     },
+     "solution": "The prefix про- makes the perfective: прочитал = read (and finished)",
+     "hint": "Perfective verbs often add a prefix to the imperfective verb"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "What does «У меня есть брат» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "I have a brother",
+       "I've got a brother",
+       "I have got a brother",
+       "I have one brother"
+      ],
+      "form": "any"
+     },
+     "solution": "У меня есть = I have; брат = brother",
+     "hint": "У меня есть is the usual way to say what you own"
+    },
+    {
+     "id": "g19",
+     "level": 4,
+     "text": "Which case follows «у» in «У сестры есть кошка»?",
+     "choice": {
+      "options": [
+       "genitive",
+       "dative",
+       "prepositional",
+       "instrumental"
+      ],
+      "correct": 0
+     },
+     "solution": "у always takes the genitive: сестра → у сестры",
+     "hint": "Look at the ending -ы on сестры"
+    },
+    {
+     "id": "g20",
+     "level": 4,
+     "text": "Complete: «Я пишу ___.» (I write with a pen. ручка = pen; use the instrumental case)",
+     "choice": {
+      "options": [
+       "ручке",
+       "ручкой",
+       "ручку",
+       "ручки"
+      ],
+      "correct": 1
+     },
+     "solution": "The instrumental of feminine nouns in -а ends in -ой: ручка → ручкой",
+     "hint": "The instrumental case shows the tool you use"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "Which case follows «с» when it means 'with', as in «чай с молоком»? Give the case in English.",
+     "short": {
+      "accept": [
+       "instrumental",
+       "instrumental case"
+      ],
+      "reject": [
+       "genitive",
+       "accusative",
+       "prepositional",
+       "dative"
+      ],
+      "form": "any"
+     },
+     "solution": "с meaning 'with' takes the instrumental: молоко → с молоком",
+     "hint": "Look at the ending -ом on молоком"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "Put into the past tense for a female speaker: «Я (делать) домашнее задание.» Type the verb in Cyrillic.",
+     "short": {
+      "accept": [
+       "делала"
+      ],
+      "reject": [
+       "делал",
+       "делали"
+      ],
+      "form": "strict",
+      "feedback": {
+       "делал": "делал is the masculine form; the speaker is female",
+       "делали": "делали is plural"
+      }
+     },
+     "solution": "Take off -ть and add -ла for a feminine subject: делать → делала",
+     "hint": "Past-tense endings depend on the gender of the speaker"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "Choose the correct verb: «Каждый день я ___ в школу на автобусе.»",
+     "choice": {
+      "options": [
+       "еду",
+       "хожу",
+       "езжу",
+       "иду"
+      ],
+      "correct": 2,
+      "feedback": [
+       "еду is one trip by transport, happening now",
+       "хожу is for repeated trips on foot",
+       null,
+       "иду is one trip on foot, happening now"
+      ]
+     },
+     "solution": "Regular trips by transport use ездить: я езжу (every day, by bus)",
+     "hint": "Is it a repeated trip, and is it on foot or by transport?"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "Translate into English: «Мы будем жить в Москве.»",
+     "short": {
+      "accept": [
+       "we will live in Moscow",
+       "we'll live in Moscow",
+       "we will be living in Moscow",
+       "we'll be living in Moscow",
+       "we are going to live in Moscow",
+       "we're going to live in Moscow"
+      ],
+      "form": "any"
+     },
+     "solution": "будем + жить is the future: we will live in Moscow",
+     "hint": "будем is the мы form of the future of быть"
+    },
+    {
+     "id": "g25",
+     "level": 5,
+     "text": "«Когда я был маленьким, я часто играл в парке.» Why is the imperfective «играл» used?",
+     "choice": {
+      "options": [
+       "It describes one completed action",
+       "It describes a future plan",
+       "It gives a polite command",
+       "It describes a repeated action in the past"
+      ],
+      "correct": 3
+     },
+     "solution": "Imperfective verbs describe repeated or ongoing actions; часто (often) signals repetition",
+     "hint": "Look at the word часто (often)"
+    },
+    {
+     "id": "g26",
+     "level": 5,
+     "text": "Which sentence is grammatically correct?",
+     "choice": {
+      "options": [
+       "Я иду к врачу.",
+       "Я иду к врач.",
+       "Я иду к врача.",
+       "Я иду к врачом."
+      ],
+      "correct": 0
+     },
+     "solution": "к (towards) takes the dative: врач → к врачу",
+     "hint": "Which case does к take?"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "Which sentence correctly means 'I have no time'?",
+     "choice": {
+      "options": [
+       "Я не время.",
+       "У меня нет времени.",
+       "У меня есть время.",
+       "У меня нет время."
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "After нет the noun must be genitive: времени"
+      ]
+     },
+     "solution": "нет meaning 'there is no' takes the genitive: время → времени",
+     "hint": "After нет meaning 'there is no', the noun goes into the genitive"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "In «Я поеду в Россию», which tense is «поеду»? Answer in English: past, present or future.",
+     "short": {
+      "accept": [
+       "future",
+       "future tense",
+       "perfective future",
+       "future perfective"
+      ],
+      "reject": [
+       "present",
+       "past"
+      ],
+      "form": "any",
+      "feedback": {
+       "present": "Perfective verbs have no present tense: поеду means 'I will go'"
+      }
+     },
+     "solution": "A perfective verb with present-tense endings has future meaning: поеду = I will go",
+     "hint": "по- makes ехать perfective; think about what a perfective verb with present endings means"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "Complete with the correct form of «мой»: «Я позвонил ___ брату.» Type the word in Cyrillic.",
+     "short": {
+      "accept": [
+       "моему"
+      ],
+      "reject": [
+       "моего",
+       "мой"
+      ],
+      "form": "strict",
+      "feedback": {
+       "моего": "моего is genitive/accusative; позвонить needs the dative"
+      }
+     },
+     "solution": "позвонить takes the dative, and мой agrees: моему брату",
+     "hint": "позвонить (to phone someone) is followed by the dative case"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "In «Мы говорили о брате», which case is «брате»? Give the case in English.",
+     "short": {
+      "accept": [
+       "prepositional",
+       "prepositional case"
+      ],
+      "reject": [
+       "dative",
+       "genitive",
+       "accusative",
+       "instrumental"
+      ],
+      "form": "any"
+     },
+     "solution": "о (about) takes the prepositional: брат → о брате",
+     "hint": "Which case follows о when it means 'about'?"
+    }
+   ]
+  },
+  {
+   "id": "russian.people",
+   "title": "People & lifestyle",
+   "aliases": [
+    "russian family",
+    "family",
+    "friends",
+    "describing people",
+    "personality",
+    "school",
+    "healthy living",
+    "daily routine",
+    "jobs",
+    "future plans"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What does «брат» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "brother",
+       "sister",
+       "father",
+       "uncle"
+      ],
+      "correct": 0
+     },
+     "solution": "брат = brother; сестра = sister; отец = father; дядя = uncle",
+     "hint": "It sounds a little like the English word"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "What does «сестра» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "sister"
+      ],
+      "reject": [
+       "brother"
+      ],
+      "form": "any",
+      "feedback": {
+       "brother": "брат means 'brother'"
+      }
+     },
+     "solution": "сестра = sister; брат = brother",
+     "hint": "It is a female family member of the same generation"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "What does «бабушка» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "granddaughter",
+       "grandmother",
+       "aunt",
+       "mother"
+      ],
+      "correct": 1
+     },
+     "solution": "бабушка = grandmother (grandma); дедушка = grandfather",
+     "hint": "The male partner of this word is дедушка"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "What does «учитель» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "teacher"
+      ],
+      "form": "any"
+     },
+     "solution": "учитель = teacher (a female teacher is учительница)",
+     "hint": "This person works in a школа (school) and gives lessons"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "Which Russian word means 'school'?",
+     "choice": {
+      "options": [
+       "больница",
+       "магазин",
+       "школа",
+       "работа"
+      ],
+      "correct": 2
+     },
+     "solution": "школа = school; работа = work; больница = hospital; магазин = shop",
+     "hint": "It sounds like the English word"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "Type the Russian word for 'mum' in Cyrillic.",
+     "short": {
+      "accept": [
+       "мама"
+      ],
+      "form": "strict"
+     },
+     "solution": "мама = mum; папа = dad",
+     "hint": "It sounds almost the same as the English word 'mama'"
+    },
+    {
+     "id": "p07",
+     "level": 2,
+     "text": "What does «весёлый» mean when describing a person?",
+     "choice": {
+      "options": [
+       "lazy",
+       "serious",
+       "shy",
+       "cheerful"
+      ],
+      "correct": 3
+     },
+     "solution": "весёлый = cheerful, fun; ленивый = lazy; серьёзный = serious; застенчивый = shy",
+     "hint": "It describes someone who laughs a lot"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "Which Russian word means 'lazy'?",
+     "choice": {
+      "options": [
+       "ленивый",
+       "умный",
+       "добрый",
+       "высокий"
+      ],
+      "correct": 0
+     },
+     "solution": "ленивый = lazy; умный = clever; добрый = kind; высокий = tall",
+     "hint": "It is the opposite of трудолюбивый (hard-working)"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "What does «умный» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "clever",
+       "smart",
+       "intelligent"
+      ],
+      "form": "any"
+     },
+     "solution": "умный = clever, intelligent",
+     "hint": "A student who gets top marks is often called this"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "What does «врач» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "doctor",
+       "physician",
+       "GP"
+      ],
+      "form": "any"
+     },
+     "solution": "врач = doctor; больница = hospital",
+     "hint": "This person works in a больница (hospital)"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "Which Russian verb means 'to get up'?",
+     "choice": {
+      "options": [
+       "умываться",
+       "вставать",
+       "ложиться",
+       "завтракать"
+      ],
+      "correct": 1
+     },
+     "solution": "вставать = to get up; ложиться = to go to bed; завтракать = to have breakfast; умываться = to wash",
+     "hint": "Think of the first thing you do after waking up"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "Type the Russian word for a male 'friend' in Cyrillic.",
+     "short": {
+      "accept": [
+       "друг"
+      ],
+      "reject": [
+       "подруга"
+      ],
+      "form": "strict",
+      "feedback": {
+       "подруга": "подруга is a female friend"
+      }
+     },
+     "solution": "друг = (male) friend; подруга = (female) friend",
+     "hint": "It is a four-letter word starting with д"
+    },
+    {
+     "id": "p13",
+     "level": 3,
+     "text": "«Мой брат высокий и спортивный.» What is the brother like?",
+     "choice": {
+      "options": [
+       "tall and shy",
+       "funny and clever",
+       "tall and sporty",
+       "short and lazy"
+      ],
+      "correct": 2
+     },
+     "solution": "высокий = tall, спортивный = sporty",
+     "hint": "спортивный looks like an English word"
+    },
+    {
+     "id": "p14",
+     "level": 3,
+     "text": "«Я встаю в семь часов.» At what time does the person get up?",
+     "choice": {
+      "options": [
+       "at 6 o'clock",
+       "at 8 o'clock",
+       "at 11 o'clock",
+       "at 7 o'clock"
+      ],
+      "correct": 3
+     },
+     "solution": "семь = seven, so в семь часов = at seven o'clock",
+     "hint": "Count in Russian: один, два, три, четыре, пять, шесть…"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "«Моя мама работает в больнице.» Where does the mother work?",
+     "choice": {
+      "options": [
+       "in a hospital",
+       "in a school",
+       "in a shop",
+       "in an office"
+      ],
+      "correct": 0
+     },
+     "solution": "больница = hospital; в больнице = in a hospital",
+     "hint": "The word больница is linked to больной (ill)"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "«Я хочу стать инженером.» What job does the person want to do? Answer in English.",
+     "short": {
+      "accept": [
+       "engineer",
+       "an engineer"
+      ],
+      "form": "any"
+     },
+     "solution": "стать + instrumental: инженер → инженером = engineer",
+     "hint": "Take the ending -ом off the job word and it looks like English"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "Complete with the я form of «завтракать» (to have breakfast): «Я ___ в семь часов.» Type the verb in Cyrillic.",
+     "short": {
+      "accept": [
+       "завтракаю"
+      ],
+      "reject": [
+       "завтракает"
+      ],
+      "form": "strict",
+      "feedback": {
+       "завтракает": "завтракает is the он/она form"
+      }
+     },
+     "solution": "завтракать: я завтракаю, ты завтракаешь, он завтракает",
+     "hint": "Take off -ть and add the я ending -ю"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "Which sentence means 'My friend is kind'?",
+     "choice": {
+      "options": [
+       "Мой брат добрый.",
+       "Мой друг добрый.",
+       "Мой друг злой.",
+       "Моя подруга умная."
+      ],
+      "correct": 1
+     },
+     "solution": "друг = friend, добрый = kind",
+     "hint": "Find the sentence with both 'friend' and 'kind'"
+    },
+    {
+     "id": "p19",
+     "level": 4,
+     "text": "Read: «В школе я изучаю химию и историю. Мой любимый предмет — история, а химия очень трудная.» Which statement is true?",
+     "choice": {
+      "options": [
+       "History is very difficult",
+       "The writer does not study chemistry",
+       "History is the favourite subject",
+       "Chemistry is the favourite subject"
+      ],
+      "correct": 2
+     },
+     "solution": "Мой любимый предмет — история = my favourite subject is history; химия очень трудная = chemistry is very hard",
+     "hint": "любимый means 'favourite'"
+    },
+    {
+     "id": "p20",
+     "level": 4,
+     "text": "Read: «Летом мой брат будет работать в кафе, потому что ему нужны деньги.» Why will the brother work?",
+     "choice": {
+      "options": [
+       "He likes cooking",
+       "His friend works there",
+       "He wants to meet people",
+       "He needs money"
+      ],
+      "correct": 3
+     },
+     "solution": "ему нужны деньги = he needs money",
+     "hint": "деньги means 'money'"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "text": "Read: «Чтобы быть здоровым, я каждый день пью воду и занимаюсь спортом.» Apart from doing sport, what does the person do every day? Answer in English.",
+     "short": {
+      "accept": [
+       "drinks water",
+       "drink water",
+       "drinking water",
+       "water",
+       "I drink water",
+       "he drinks water",
+       "she drinks water"
+      ],
+      "form": "any"
+     },
+     "solution": "пью воду = I drink water; занимаюсь спортом = I do sport",
+     "hint": "пью comes from пить (to drink)"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "Read: «Раньше я ел много сладкого, а теперь я ем фрукты.» What does the person eat now? Answer in English.",
+     "short": {
+      "accept": [
+       "fruit",
+       "fruits"
+      ],
+      "reject": [
+       "sweets",
+       "sweet things"
+      ],
+      "form": "any",
+      "feedback": {
+       "sweets": "That is what the person ate before (раньше)"
+      }
+     },
+     "solution": "теперь = now; фрукты = fruit; раньше (before) the person ate lots of sweet things",
+     "hint": "Find теперь (now) and read what comes after it"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "Change into the past tense (the speaker is male): «Я работаю в банке.» Type the verb only, in Cyrillic.",
+     "short": {
+      "accept": [
+       "работал"
+      ],
+      "reject": [
+       "работала"
+      ],
+      "form": "strict",
+      "feedback": {
+       "работала": "работала is feminine; the speaker is male"
+      }
+     },
+     "solution": "работать → работал (masculine past)",
+     "hint": "Take off -ть and add the masculine past ending"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "Read: «После школы я хочу поступить в университет и изучать медицину.» What are the person's plans?",
+     "choice": {
+      "options": [
+       "To go to university and study medicine",
+       "To find a job in a hospital",
+       "To travel and then study medicine",
+       "To leave school and start work"
+      ],
+      "correct": 0
+     },
+     "solution": "поступить в университет = to get into university; изучать медицину = to study medicine",
+     "hint": "университет and медицину look like English words"
+    },
+    {
+     "id": "p25",
+     "level": 5,
+     "text": "Read: «Мой отец — врач. Он много работает, но говорит, что его работа интересная. Я не хочу быть врачом: я хочу стать учителем.» Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The father works very little",
+       "The writer wants to become a teacher",
+       "The writer's father finds his job boring",
+       "The writer wants to be a doctor like his father"
+      ],
+      "correct": 1
+     },
+     "solution": "я хочу стать учителем = I want to become a teacher; the father says his work is interesting",
+     "hint": "Look at the last sentence: стать means 'to become'"
+    },
+    {
+     "id": "p26",
+     "level": 5,
+     "text": "Read: «Анна раньше много сидела в интернете, но теперь она гуляет каждый день и рано ложится спать.» What has changed in Anna's lifestyle?",
+     "choice": {
+      "options": [
+       "She now goes to bed late",
+       "She has stopped going for walks",
+       "She now walks every day and goes to bed early",
+       "She now spends more time online"
+      ],
+      "correct": 2
+     },
+     "solution": "теперь = now: она гуляет каждый день (walks every day) и рано ложится спать (goes to bed early)",
+     "hint": "Contrast раньше (before) with теперь (now)"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "text": "Which sentence means 'I get on well with my sister'?",
+     "choice": {
+      "options": [
+       "Я плохо лажу с сестрой.",
+       "Я хорошо знаю сестру.",
+       "Я часто звоню сестре.",
+       "Я хорошо лажу с сестрой."
+      ],
+      "correct": 3
+     },
+     "solution": "ладить с + instrumental = to get on with; хорошо = well",
+     "hint": "хорошо means 'well' and плохо means 'badly'"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "text": "Read: «Мой друг очень надёжный: он никогда не опаздывает.» What does «надёжный» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "reliable",
+       "dependable",
+       "trustworthy"
+      ],
+      "form": "any"
+     },
+     "solution": "надёжный = reliable; он никогда не опаздывает = he is never late",
+     "hint": "The second half of the sentence says he is never late"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "Read: «Брат редко занимается спортом, но часто играет в компьютерные игры.» How often does the brother do sport? Answer in English.",
+     "short": {
+      "accept": [
+       "rarely",
+       "seldom",
+       "not often",
+       "hardly ever"
+      ],
+      "reject": [
+       "often"
+      ],
+      "form": "any",
+      "feedback": {
+       "often": "часто means 'often' and goes with computer games"
+      }
+     },
+     "solution": "редко = rarely; часто = often",
+     "hint": "Contrast the two adverbs: one of them means 'often'"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "Complete with the correct form of «сестра»: «Я часто звоню ___.» Type the noun in Cyrillic.",
+     "short": {
+      "accept": [
+       "сестре"
+      ],
+      "reject": [
+       "сестру",
+       "сестры"
+      ],
+      "form": "strict",
+      "feedback": {
+       "сестру": "сестру is accusative; звонить needs the dative"
+      }
+     },
+     "solution": "звонить (to phone someone) takes the dative: сестра → сестре",
+     "hint": "звонить is followed by the dative case"
+    }
+   ]
+  },
+  {
+   "id": "russian.culture",
+   "title": "Free time & culture",
+   "aliases": [
+    "russian free time",
+    "hobbies",
+    "sport",
+    "music",
+    "cinema",
+    "tv",
+    "technology",
+    "social media",
+    "festivals",
+    "food and drink"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What does «плавание» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "swimming",
+       "running",
+       "dancing",
+       "skiing"
+      ],
+      "correct": 0
+     },
+     "solution": "плавание = swimming; бег = running; танцы = dancing",
+     "hint": "You do this in a бассейн (pool)"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What does «книга» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "book"
+      ],
+      "form": "any"
+     },
+     "solution": "книга = book; читать книгу = to read a book",
+     "hint": "You read it"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "Which Russian word means 'song'?",
+     "choice": {
+      "options": [
+       "книга",
+       "песня",
+       "музыка",
+       "игра"
+      ],
+      "correct": 1
+     },
+     "solution": "песня = song; музыка = music; игра = game; книга = book",
+     "hint": "A singer sings one of these"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "What does «чай» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "tea"
+      ],
+      "form": "any"
+     },
+     "solution": "чай = tea; кофе = coffee",
+     "hint": "A hot drink often served with lemon in Russia"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "What does «хлеб» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "cheese",
+       "meat",
+       "bread",
+       "milk"
+      ],
+      "correct": 2
+     },
+     "solution": "хлеб = bread; молоко = milk; сыр = cheese; мясо = meat",
+     "hint": "You buy it at a bakery"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "Type the Russian word for 'milk' in Cyrillic.",
+     "short": {
+      "accept": [
+       "молоко"
+      ],
+      "form": "strict"
+     },
+     "solution": "молоко = milk",
+     "hint": "It has three syllables, each with the vowel о"
+    },
+    {
+     "id": "c07",
+     "level": 2,
+     "text": "Choose the verb used with sports: «Я ___ в теннис.»",
+     "choice": {
+      "options": [
+       "делаю",
+       "читаю",
+       "пишу",
+       "играю"
+      ],
+      "correct": 3
+     },
+     "solution": "играть в + sport: Я играю в теннис = I play tennis",
+     "hint": "You 'play' a sport"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "«Я играю на гитаре.» What does this mean?",
+     "choice": {
+      "options": [
+       "I play the guitar",
+       "I play football",
+       "I listen to the guitar",
+       "I buy a guitar"
+      ],
+      "correct": 0
+     },
+     "solution": "играть на + instrument = to play an instrument",
+     "hint": "гитаре looks like an English word"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "What does «смотреть телевизор» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "to watch TV",
+       "watch TV",
+       "to watch television",
+       "watch television",
+       "watching TV",
+       "watching television",
+       "to watch the TV",
+       "watch the TV"
+      ],
+      "form": "any"
+     },
+     "solution": "смотреть = to watch; телевизор = television",
+     "hint": "телевизор looks like an English word"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "What does «праздник» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "festival",
+       "holiday",
+       "celebration",
+       "public holiday",
+       "feast day"
+      ],
+      "form": "any"
+     },
+     "solution": "праздник = festival, holiday, celebration (e.g. Новый год)",
+     "hint": "Новый год (New Year) is a famous example"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "Which phrase means 'social media'?",
+     "choice": {
+      "options": [
+       "мобильный телефон",
+       "социальные сети",
+       "новости",
+       "компьютерные игры"
+      ],
+      "correct": 1
+     },
+     "solution": "социальные сети = social networks, social media",
+     "hint": "сеть means 'network'"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "Type the Russian word for 'sport' in Cyrillic.",
+     "short": {
+      "accept": [
+       "спорт"
+      ],
+      "form": "strict"
+     },
+     "solution": "спорт = sport; заниматься спортом = to do sport",
+     "hint": "It is spelt with the Cyrillic letters for s, p, o, r and t"
+    },
+    {
+     "id": "c13",
+     "level": 3,
+     "text": "«В свободное время я люблю читать и рисовать.» What does the person like doing?",
+     "choice": {
+      "options": [
+       "swimming and drawing",
+       "writing and singing",
+       "reading and drawing",
+       "reading and dancing"
+      ],
+      "correct": 2
+     },
+     "solution": "читать = to read; рисовать = to draw",
+     "hint": "читать means 'to read'"
+    },
+    {
+     "id": "c14",
+     "level": 3,
+     "text": "«Я слушаю музыку каждый вечер.» When does the person listen to music?",
+     "choice": {
+      "options": [
+       "every morning",
+       "at the weekend",
+       "every Friday",
+       "every evening"
+      ],
+      "correct": 3
+     },
+     "solution": "каждый вечер = every evening",
+     "hint": "вечер is the part of the day after afternoon"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "«Мы ходили в кино в субботу.» Where did they go? Answer in English.",
+     "short": {
+      "accept": [
+       "the cinema",
+       "cinema",
+       "to the cinema",
+       "the movies",
+       "to the movies",
+       "movies"
+      ],
+      "form": "any"
+     },
+     "solution": "кино = cinema; в субботу = on Saturday",
+     "hint": "You watch films there"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "«Мне нравится этот фильм, потому что он смешной.» What is the film like?",
+     "choice": {
+      "options": [
+       "funny",
+       "scary",
+       "long",
+       "sad"
+      ],
+      "correct": 0
+     },
+     "solution": "смешной = funny",
+     "hint": "смех means laughter"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "Complete with the correct form of «любить» (to like, to love): «Я ___ плавать.» Type the verb in Cyrillic.",
+     "short": {
+      "accept": [
+       "люблю"
+      ],
+      "reject": [
+       "любит"
+      ],
+      "form": "strict",
+      "feedback": {
+       "любит": "любит is the он/она form"
+      }
+     },
+     "solution": "любить: я люблю, ты любишь, он любит (note the extra л in the я form)",
+     "hint": "The я form of любить has an extra л before the ending"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "«Моя любимая еда — пицца, а мой любимый напиток — сок.» What is the favourite drink?",
+     "choice": {
+      "options": [
+       "water",
+       "juice",
+       "pizza",
+       "tea"
+      ],
+      "correct": 1
+     },
+     "solution": "напиток = drink; сок = juice",
+     "hint": "напиток means 'drink'"
+    },
+    {
+     "id": "c19",
+     "level": 4,
+     "text": "Read: «Раньше я много смотрел телевизор, но теперь я смотрю фильмы на телефоне.» Which statement is true?",
+     "choice": {
+      "options": [
+       "He never watched TV",
+       "He watches films at the cinema",
+       "He now watches films on his phone",
+       "He watches more TV now than before"
+      ],
+      "correct": 2
+     },
+     "solution": "теперь я смотрю фильмы на телефоне = now I watch films on my phone",
+     "hint": "Contrast раньше (before) with теперь (now)"
+    },
+    {
+     "id": "c20",
+     "level": 4,
+     "text": "Read: «Новый год — мой любимый праздник. Мы украшаем ёлку и дарим подарки.» What do they do at New Year?",
+     "choice": {
+      "options": [
+       "go to church and sing",
+       "eat pancakes and burn a straw figure",
+       "paint eggs and give flowers",
+       "decorate a tree and give presents"
+      ],
+      "correct": 3
+     },
+     "solution": "украшаем ёлку = we decorate the (fir) tree; дарим подарки = we give presents",
+     "hint": "ёлка is a fir tree"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "Read: «По выходным я катаюсь на коньках.» What does the person do at weekends? Answer in English.",
+     "short": {
+      "accept": [
+       "ice skating",
+       "skating",
+       "go skating",
+       "go ice skating",
+       "goes skating",
+       "goes ice skating",
+       "skate",
+       "ice skate"
+      ],
+      "form": "any"
+     },
+     "solution": "кататься на коньках = to skate (коньки = skates)",
+     "hint": "коньки are boots with blades for the ice"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Read: «Я редко пользуюсь социальными сетями, потому что это пустая трата времени.» What does the writer think social media is? Answer in English.",
+     "short": {
+      "accept": [
+       "a waste of time",
+       "waste of time",
+       "a total waste of time",
+       "a complete waste of time",
+       "time wasting",
+       "pointless"
+      ],
+      "form": "any"
+     },
+     "solution": "пустая трата времени = a (complete) waste of time",
+     "hint": "трата comes from тратить (to spend); времени means 'of time'"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Put «смотреть» into the past tense (the speaker is female): «Вчера я (смотреть) интересный фильм.» Type the verb in Cyrillic.",
+     "short": {
+      "accept": [
+       "смотрела"
+      ],
+      "reject": [
+       "смотрел"
+      ],
+      "form": "strict",
+      "feedback": {
+       "смотрел": "смотрел is masculine; the speaker is female"
+      }
+     },
+     "solution": "смотреть → смотрела (feminine past)",
+     "hint": "Take off -ть and add the feminine past ending"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "«Я предпочитаю читать электронные книги.» What does the person prefer?",
+     "choice": {
+      "options": [
+       "electronic books",
+       "paper books",
+       "audiobooks",
+       "magazines"
+      ],
+      "correct": 0
+     },
+     "solution": "предпочитать = to prefer; электронные книги = e-books",
+     "hint": "электронные looks like an English word"
+    },
+    {
+     "id": "c25",
+     "level": 5,
+     "text": "Read: «Я люблю спорт, но больше всего мне нравится плавание. Я хожу в бассейн три раза в неделю.» Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The writer prefers running to swimming",
+       "Swimming is the writer's favourite sport",
+       "The writer goes to the pool every day",
+       "The writer does not like sport"
+      ],
+      "correct": 1
+     },
+     "solution": "больше всего мне нравится плавание = I like swimming most of all; три раза в неделю = three times a week",
+     "hint": "больше всего means 'most of all'"
+    },
+    {
+     "id": "c26",
+     "level": 5,
+     "text": "Read: «Технологии полезны, но мои родители считают, что я слишком много времени провожу за телефоном.» What do the writer's parents think?",
+     "choice": {
+      "options": [
+       "The writer should buy a new phone",
+       "The writer does not use the phone enough",
+       "The writer spends too much time on the phone",
+       "Technology is useless"
+      ],
+      "correct": 2
+     },
+     "solution": "слишком много времени = too much time; провожу за телефоном = I spend on the phone",
+     "hint": "слишком means 'too'"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "Read: «На Масленицу люди едят блины и прощаются с зимой.» What is Maslenitsa about?",
+     "choice": {
+      "options": [
+       "Welcoming the New Year",
+       "Celebrating the end of school",
+       "Remembering a famous battle",
+       "Saying goodbye to winter"
+      ],
+      "correct": 3
+     },
+     "solution": "прощаются с зимой = they say goodbye to winter; блины = pancakes",
+     "hint": "прощаться means 'to say goodbye'"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "Read: «Я больше не играю в компьютерные игры.» What has the person stopped doing? Answer in English.",
+     "short": {
+      "accept": [
+       "playing computer games",
+       "play computer games",
+       "playing video games",
+       "computer games",
+       "video games",
+       "gaming",
+       "playing games",
+       "games"
+      ],
+      "form": "any"
+     },
+     "solution": "больше не = no longer: I no longer play computer games",
+     "hint": "больше не means 'no longer'"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Read: «Если будет хорошая погода, мы поедем на дачу.» Where will they go if the weather is good? Answer in English.",
+     "short": {
+      "accept": [
+       "the dacha",
+       "dacha",
+       "to the dacha",
+       "country house",
+       "to the country house",
+       "summer house",
+       "to the summer house",
+       "the countryside",
+       "to the countryside",
+       "country cottage"
+      ],
+      "form": "any"
+     },
+     "solution": "дача = a dacha, a country house where many Russians spend weekends",
+     "hint": "Many Russian families have a small house outside the city"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Complete with the instrumental case: «Я занимаюсь ___.» (спорт) Type the noun in Cyrillic.",
+     "short": {
+      "accept": [
+       "спортом"
+      ],
+      "reject": [
+       "спорт",
+       "спорта"
+      ],
+      "form": "strict",
+      "feedback": {
+       "спорт": "заниматься needs the instrumental case"
+      }
+     },
+     "solution": "заниматься takes the instrumental: спорт → спортом",
+     "hint": "Masculine nouns ending in a consonant add -ом in the instrumental"
+    }
+   ]
+  },
+  {
+   "id": "russian.world",
+   "title": "Travel & the world",
+   "aliases": [
+    "russian holidays",
+    "holidays",
+    "travel",
+    "town",
+    "local area",
+    "home",
+    "environment",
+    "global issues",
+    "weather",
+    "directions",
+    "transport",
+    "shopping"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What does «поезд» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "train",
+       "plane",
+       "bus",
+       "car"
+      ],
+      "correct": 0
+     },
+     "solution": "поезд = train; самолёт = plane; автобус = bus; машина = car",
+     "hint": "It runs on rails"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "What does «море» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "sea"
+      ],
+      "form": "any"
+     },
+     "solution": "море = sea; на море = at the seaside",
+     "hint": "You swim in it on a beach holiday"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "Which Russian word means 'shop'?",
+     "choice": {
+      "options": [
+       "парк",
+       "магазин",
+       "музей",
+       "вокзал"
+      ],
+      "correct": 1
+     },
+     "solution": "магазин = shop; музей = museum; вокзал = station; парк = park",
+     "hint": "French has a very similar word for a shop: magasin"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "What does «город» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "town",
+       "city"
+      ],
+      "form": "any"
+     },
+     "solution": "город = town or city",
+     "hint": "Москва and Лондон are examples"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "What does «дождь» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "wind",
+       "sun",
+       "rain",
+       "snow"
+      ],
+      "correct": 2
+     },
+     "solution": "дождь = rain; снег = snow; ветер = wind; солнце = sun",
+     "hint": "You need an umbrella for it"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "Type the Russian word for 'house' in Cyrillic.",
+     "short": {
+      "accept": [
+       "дом"
+      ],
+      "form": "strict"
+     },
+     "solution": "дом = house, home",
+     "hint": "It is a three-letter word starting with д"
+    },
+    {
+     "id": "w07",
+     "level": 2,
+     "text": "«Сегодня холодно.» What is the weather like today?",
+     "choice": {
+      "options": [
+       "hot",
+       "windy",
+       "rainy",
+       "cold"
+      ],
+      "correct": 3
+     },
+     "solution": "холодно = it is cold; жарко = it is hot",
+     "hint": "Think of холодильник (fridge)"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "Which Russian word means 'to the left' (as in 'turn left')?",
+     "choice": {
+      "options": [
+       "налево",
+       "направо",
+       "прямо",
+       "назад"
+      ],
+      "correct": 0
+     },
+     "solution": "налево = left; направо = right; прямо = straight on; назад = back",
+     "hint": "The word for 'right' is направо"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "What does «направо» mean in directions? Answer in English.",
+     "short": {
+      "accept": [
+       "right",
+       "to the right",
+       "turn right"
+      ],
+      "reject": [
+       "left"
+      ],
+      "form": "any",
+      "feedback": {
+       "left": "налево means 'left'"
+      }
+     },
+     "solution": "направо = to the right; налево = to the left",
+     "hint": "налево means 'left'; this is the opposite direction"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "What does «самолёт» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "plane",
+       "aeroplane",
+       "airplane",
+       "aircraft"
+      ],
+      "form": "any"
+     },
+     "solution": "самолёт = plane; лететь на самолёте = to fly",
+     "hint": "It takes you to the аэропорт (airport) and flies"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "Which phrase means 'by bus'?",
+     "choice": {
+      "options": [
+       "на машине",
+       "на автобусе",
+       "на поезде",
+       "пешком"
+      ],
+      "correct": 1
+     },
+     "solution": "на автобусе = by bus; на поезде = by train; пешком = on foot; на машине = by car",
+     "hint": "автобус looks like an English word"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "Type the Russian word for 'snow' in Cyrillic.",
+     "short": {
+      "accept": [
+       "снег"
+      ],
+      "form": "strict"
+     },
+     "solution": "снег = snow; идёт снег = it is snowing",
+     "hint": "It is a four-letter word starting with с"
+    },
+    {
+     "id": "w13",
+     "level": 3,
+     "text": "«Я живу в квартире на третьем этаже.» Where does the person live?",
+     "choice": {
+      "options": [
+       "in a flat on the first floor",
+       "in a hotel near the sea",
+       "in a flat on the third floor",
+       "in a house in the country"
+      ],
+      "correct": 2
+     },
+     "solution": "квартира = flat; на третьем этаже = on the third floor",
+     "hint": "квартира means 'flat'; третий means 'third'"
+    },
+    {
+     "id": "w14",
+     "level": 3,
+     "text": "«Летом мы ездили на море.» What did they do in the summer?",
+     "choice": {
+      "options": [
+       "They went to the mountains",
+       "They stayed at home",
+       "They went skiing",
+       "They went to the seaside"
+      ],
+      "correct": 3
+     },
+     "solution": "ездили на море = went to the seaside",
+     "hint": "море means 'sea'"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "«В нашем городе есть большой парк.» What is there in their town? Answer in English.",
+     "short": {
+      "accept": [
+       "a big park",
+       "a large park",
+       "park",
+       "big park",
+       "large park"
+      ],
+      "form": "any"
+     },
+     "solution": "большой парк = a big park",
+     "hint": "большой means 'big'"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "«Сколько стоит эта сумка?» What is the person asking about the bag? Answer in English.",
+     "short": {
+      "accept": [
+       "the price",
+       "price",
+       "how much it costs",
+       "how much it is",
+       "how much does it cost",
+       "the cost",
+       "cost",
+       "how much the bag costs",
+       "how much"
+      ],
+      "form": "any"
+     },
+     "solution": "Сколько стоит…? = How much does … cost?",
+     "hint": "Look at the question word at the start: it asks about an amount"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "Complete with the accusative case for movement: «Я еду в ___.» (Москва) Type the noun in Cyrillic.",
+     "short": {
+      "accept": [
+       "Москву"
+      ],
+      "reject": [
+       "Москве"
+      ],
+      "form": "strict",
+      "feedback": {
+       "Москве": "Москве (prepositional) shows location, not movement"
+      }
+     },
+     "solution": "в + accusative shows movement into a place: Москва → в Москву",
+     "hint": "Feminine nouns in -а change their ending in the accusative"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "«Завтра будет солнечно.» What will the weather be like tomorrow?",
+     "choice": {
+      "options": [
+       "sunny",
+       "cloudy",
+       "foggy",
+       "snowy"
+      ],
+      "correct": 0
+     },
+     "solution": "солнечно = sunny (from солнце, sun)",
+     "hint": "солнце means 'sun'"
+    },
+    {
+     "id": "w19",
+     "level": 4,
+     "text": "Read: «Мне нравится мой район, потому что здесь тихо, но нет кинотеатра.» What is the problem with the area?",
+     "choice": {
+      "options": [
+       "School is too far away",
+       "There is no cinema",
+       "The area is too noisy",
+       "There are no shops"
+      ],
+      "correct": 1
+     },
+     "solution": "нет кинотеатра = there is no cinema; тихо = quiet",
+     "hint": "нет + genitive means 'there is no'"
+    },
+    {
+     "id": "w20",
+     "level": 4,
+     "text": "Read: «Мы должны меньше ездить на машине и больше ходить пешком, чтобы защитить природу.» What does the writer suggest?",
+     "choice": {
+      "options": [
+       "Use planes instead of trains",
+       "Walk less and drive more",
+       "Drive less and walk more",
+       "Buy electric cars"
+      ],
+      "correct": 2
+     },
+     "solution": "меньше ездить на машине = drive less; больше ходить пешком = walk more",
+     "hint": "меньше means 'less' and больше means 'more'"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "Read: «Чтобы попасть на вокзал, идите прямо, потом поверните налево.» After going straight on, which way do you turn? Answer in English.",
+     "short": {
+      "accept": [
+       "left",
+       "turn left",
+       "to the left"
+      ],
+      "reject": [
+       "right",
+       "turn right"
+      ],
+      "form": "any",
+      "feedback": {
+       "right": "направо would be 'right'"
+      }
+     },
+     "solution": "идите прямо = go straight on; поверните налево = turn left",
+     "hint": "Look at the word after поверните (turn)"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "Read: «В прошлом году мы отдыхали в горах.» Where did they spend their holiday? Answer in English.",
+     "short": {
+      "accept": [
+       "in the mountains",
+       "the mountains",
+       "mountains",
+       "in mountains"
+      ],
+      "form": "any"
+     },
+     "solution": "в горах = in the mountains (гора = mountain)",
+     "hint": "гора means 'mountain'"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "Complete with the prepositional case: «Я был в ___.» (магазин = shop) Type the noun in Cyrillic.",
+     "short": {
+      "accept": [
+       "магазине"
+      ],
+      "reject": [
+       "магазин"
+      ],
+      "form": "strict",
+      "feedback": {
+       "магазин": "After в meaning 'in', the noun needs the prepositional"
+      }
+     },
+     "solution": "в + prepositional for location: магазин → в магазине",
+     "hint": "Masculine nouns ending in a consonant add -е in the prepositional"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "Read: «В будущем я хотел бы поехать в Сибирь, потому что там красивая природа.» Why does the writer want to go to Siberia?",
+     "choice": {
+      "options": [
+       "The weather there is warm",
+       "His family lives there",
+       "Travel there is cheap",
+       "The nature there is beautiful"
+      ],
+      "correct": 3
+     },
+     "solution": "там красивая природа = the nature there is beautiful",
+     "hint": "природа means 'nature'"
+    },
+    {
+     "id": "w25",
+     "level": 5,
+     "text": "Read: «Глобальное потепление — серьёзная проблема. Каждый может что-то сделать: например, экономить энергию и сортировать мусор.» Which statement is accurate?",
+     "choice": {
+      "options": [
+       "Everyone can do something, such as saving energy",
+       "Only governments can solve the problem",
+       "Global warming is not a serious problem",
+       "Sorting rubbish makes no difference"
+      ],
+      "correct": 0
+     },
+     "solution": "Каждый может что-то сделать = everyone can do something; экономить энергию = save energy",
+     "hint": "каждый means 'everyone'"
+    },
+    {
+     "id": "w26",
+     "level": 5,
+     "text": "Read: «Мы остановились в гостинице недалеко от центра. Номер был маленький, но чистый.» What was the hotel room like?",
+     "choice": {
+      "options": [
+       "big and clean",
+       "small but clean",
+       "big but dirty",
+       "small and dirty"
+      ],
+      "correct": 1
+     },
+     "solution": "маленький = small; чистый = clean; но = but",
+     "hint": "чистый means 'clean'"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "Which sentence means 'I would like to travel to Russia'?",
+     "choice": {
+      "options": [
+       "Я не хочу ехать в Россию.",
+       "Я поеду в России.",
+       "Я хотел бы поехать в Россию.",
+       "Я поехал в Россию."
+      ],
+      "correct": 2
+     },
+     "solution": "хотел бы = would like (бы makes the conditional); в Россию = to Russia",
+     "hint": "The conditional in Russian uses the past tense plus бы"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "Read: «Если бы у меня были деньги, я бы купил машину.» What would the person buy? Answer in English.",
+     "short": {
+      "accept": [
+       "a car",
+       "car"
+      ],
+      "form": "any"
+     },
+     "solution": "Если бы… я бы купил машину = if I had money, I would buy a car",
+     "hint": "машина is the object of купил"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "Read: «Вокзал находится напротив банка.» Where is the station? Answer in English.",
+     "short": {
+      "accept": [
+       "opposite the bank",
+       "across from the bank",
+       "facing the bank",
+       "across the road from the bank",
+       "opposite a bank"
+      ],
+      "form": "any"
+     },
+     "solution": "напротив + genitive = opposite: напротив банка = opposite the bank",
+     "hint": "напротив is a preposition of place that takes the genitive"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "Complete: «Мы поедем в Петербург на ___.» (поезд — by train) Type the noun in Cyrillic.",
+     "short": {
+      "accept": [
+       "поезде"
+      ],
+      "reject": [
+       "поезд",
+       "поезду"
+      ],
+      "form": "strict",
+      "feedback": {
+       "поезд": "After на meaning 'by', use the prepositional"
+      }
+     },
+     "solution": "на + prepositional for transport: поезд → на поезде",
+     "hint": "Transport after на goes into the prepositional case"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "russian.y{year}.grammar",
+      "label": "Grammar & tenses",
+      "skills": [
+       "russian.grammar"
+      ]
+     },
+     {
+      "id": "russian.y{year}.people",
+      "label": "People & lifestyle",
+      "skills": [
+       "russian.people"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "russian.y{year}.culture",
+      "label": "Free time & culture",
+      "skills": [
+       "russian.culture"
+      ]
+     },
+     {
+      "id": "russian.y{year}.world",
+      "label": "Travel & the world",
+      "skills": [
+       "russian.world"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

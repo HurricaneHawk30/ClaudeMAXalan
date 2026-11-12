@@ -1,0 +1,43 @@
+{
+ "subject_id": "packsub",
+ "skills": [
+  {
+   "id": "packsub.facts",
+   "title": "Pack facts",
+   "aliases": [
+    "pack facts",
+    "facts",
+    "packs"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "Which gas do plants take in for photosynthesis?",
+     "choice": {
+      "options": [
+       "Oxygen",
+       "Carbon dioxide",
+       "Nitrogen"
+      ],
+      "correct": 1
+     },
+     "solution": "Plants take in carbon dioxide",
+     "hint": "It is the gas that animals breathe out"
+    },
+    {
+     "id": "p02",
+     "level": 2,
+     "text": "Name the green pigment in leaves. Give the term.",
+     "short": {
+      "accept": [
+       "chlorophyll"
+      ]
+     },
+     "solution": "Chlorophyll absorbs light",
+     "hint": "It starts with chloro"
+    }
+   ]
+  }
+ ]
+}

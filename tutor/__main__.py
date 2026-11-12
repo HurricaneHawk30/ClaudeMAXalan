@@ -1,4 +1,4 @@
-"""CLI: python3 -m tutor [--check] | codes N | sample SKILL_ID [LEVEL] [N]"""
+"""CLI: python3 -m tutor [--check] | codes N | sample SKILL_ID [LEVEL] [N] | audit [--subject ID | --file PATH]"""
 from __future__ import annotations
 
 import argparse
@@ -33,6 +33,10 @@ def _build_parser() -> argparse.ArgumentParser:
     s.add_argument("skill_id")
     s.add_argument("level", nargs="?", type=_int_range(1, 5, "LEVEL"), default=None)
     s.add_argument("n", nargs="?", type=_int_range(1, 50, "N"), default=3)
+    a = sub.add_parser("audit", help="check content: banks, packs, generators and lint rules")
+    g = a.add_mutually_exclusive_group()
+    g.add_argument("--subject", metavar="ID", help="only the source that registers subject ID")
+    g.add_argument("--file", metavar="PATH", help="one bank or pack JSON file")
     return p
 
 
@@ -52,9 +56,22 @@ def _cmd_codes(n: int) -> int:
     return 0
 
 
-def _cmd_sample(skill_id: str, level: int | None, n: int) -> int:
+def _load_registry_or_report():
+    """Strict registry for the CLI; on failure print every broken source and return None."""
     from .content import load_registry
-    reg = load_registry()
+    try:
+        return load_registry()
+    except Exception as e:      # noqa: BLE001 - shown to the user, not a crash
+        print(f"Content failed to load: {type(e).__name__}: {e}", file=sys.stderr)
+        for line in load_registry(strict=False).load_errors:
+            print(line, file=sys.stderr)
+        return None
+
+
+def _cmd_sample(skill_id: str, level: int | None, n: int) -> int:
+    reg = _load_registry_or_report()
+    if reg is None:
+        return 1
     skill = reg.skill(skill_id)
     if skill is None:
         ids = sorted({s.id for subj in _all_subject_ids(reg) for s in reg.skills_of(subj)})
@@ -69,7 +86,23 @@ def _cmd_sample(skill_id: str, level: int | None, n: int) -> int:
             print(f"A: {p.answer.display}")
             print(f"Solution: {p.solution}")
             print(f"Hint: {p.hint}")
+            if p.ref:
+                print(f"Ref: {p.ref}")
     return 0
+
+
+def _cmd_audit(subject: str | None, file: str | None) -> int:
+    from .content.audit import run
+    return run(subject=subject, file=file)
+
+
+def _subject_report() -> None:
+    from .content import load_registry
+    reg = load_registry(strict=False)
+    n = len({s.id for y in reg.years() for s in reg.subjects_for_year(y)})
+    print(f"Subjects: {n} loaded")
+    for line in reg.load_errors:
+        print(line)
 
 
 def _all_subject_ids(reg) -> list[str]:
@@ -94,6 +127,7 @@ def _cmd_check() -> int:
     if not config.token:
         print(f"Set {token_env_name()} (env var or .env file)", file=sys.stderr)
         return 1
+    _subject_report()
     try:
         me = TelegramAPI(config.token).get_me()
     except (TelegramError, OSError) as e:
@@ -163,6 +197,8 @@ def main(argv: list[str] | None = None) -> int:
         return _cmd_codes(args.n)
     if args.command == "sample":
         return _cmd_sample(args.skill_id, args.level, args.n)
+    if args.command == "audit":
+        return _cmd_audit(args.subject, args.file)
     if args.check:
         return _cmd_check()
     return _cmd_run()

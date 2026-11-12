@@ -1,0 +1,2960 @@
+{
+ "subject": {
+  "id": "music",
+  "title": "Music",
+  "order": 68
+ },
+ "skills": [
+  {
+   "id": "music.elements",
+   "title": "Elements of music",
+   "aliases": [
+    "elements of music",
+    "dynamics",
+    "tempo",
+    "rhythm",
+    "melody",
+    "harmony",
+    "texture",
+    "timbre",
+    "structure",
+    "italian terms",
+    "ostinato",
+    "syncopation",
+    "cadence"
+   ],
+   "questions": [
+    {
+     "id": "e01",
+     "level": 1,
+     "text": "What does the Italian term forte (marked f) mean?",
+     "solution": "Forte means loud; its sign is f, and the opposite is piano (p), meaning soft",
+     "hint": "Think of the opposite of piano (p)",
+     "choice": {
+      "options": [
+       "Loud",
+       "Soft",
+       "Fast",
+       "Smoothly"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Soft is piano (p); forte is its opposite",
+       "Fast is a tempo marking such as allegro, not a dynamic",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e02",
+     "level": 1,
+     "text": "Which Italian term means 'gradually getting louder'?",
+     "solution": "Crescendo (cresc.) means gradually getting louder; its sign is an opening hairpin <",
+     "hint": "Its sign looks like a hairpin that opens out",
+     "choice": {
+      "options": [
+       "Diminuendo",
+       "Crescendo",
+       "Rallentando",
+       "Accelerando"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Diminuendo means gradually getting softer",
+       null,
+       "Rallentando means gradually getting slower",
+       "Accelerando means gradually getting faster"
+      ]
+     }
+    },
+    {
+     "id": "e03",
+     "level": 1,
+     "text": "Which element of music describes the speed of the music?",
+     "solution": "Tempo is the speed of the music, given by terms such as allegro or andante, or by a metronome mark",
+     "hint": "Allegro and adagio are markings for this element",
+     "choice": {
+      "options": [
+       "Timbre",
+       "Texture",
+       "Tempo",
+       "Dynamics"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Timbre is the tone colour of a sound",
+       null,
+       null,
+       "Dynamics describe how loud or soft the music is"
+      ]
+     }
+    },
+    {
+     "id": "e04",
+     "level": 1,
+     "text": "Which Italian term means 'very soft' (marked pp)? Give the term.",
+     "solution": "Pianissimo (pp) means very soft",
+     "hint": "Add the ending -issimo to the term for soft",
+     "short": {
+      "accept": [
+       "pianissimo"
+      ],
+      "reject": [
+       "fortissimo",
+       "piano"
+      ],
+      "feedback": {
+       "fortissimo": "Fortissimo (ff) means very loud",
+       "piano": "Piano (p) means soft; very soft is pianissimo (pp)"
+      }
+     }
+    },
+    {
+     "id": "e05",
+     "level": 1,
+     "text": "A short musical pattern is repeated many times in a row. Give the Italian term for this device.",
+     "solution": "A repeated musical pattern is an ostinato (in pop music it is often called a riff)",
+     "hint": "The word comes from the Italian for 'stubborn' or 'obstinate'",
+     "short": {
+      "accept": [
+       "ostinato",
+       "ostinati"
+      ]
+     }
+    },
+    {
+     "id": "e06",
+     "level": 1,
+     "text": "What does 'timbre' describe?",
+     "solution": "Timbre (sonority) is the tone colour that makes a trumpet sound different from a violin playing the same note",
+     "hint": "It is why a flute and a violin playing the same note still sound different",
+     "choice": {
+      "options": [
+       "How loud or soft the music is",
+       "How many layers of sound there are",
+       "The speed of the beat",
+       "The particular sound quality or tone colour of an instrument or voice"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is dynamics",
+       "That is texture",
+       "That is tempo",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e07",
+     "level": 1,
+     "text": "What does the Italian term staccato mean?",
+     "solution": "Staccato notes are short and detached, shown by a dot above or below the note",
+     "hint": "It is shown by a small dot above or below the note head",
+     "choice": {
+      "options": [
+       "Short and detached",
+       "Smooth and connected",
+       "Very loud",
+       "Gradually slower"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Smooth and connected playing is legato",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "e08",
+     "level": 2,
+     "text": "Which tempo marking is the slowest?",
+     "solution": "Largo means very slow and broad; andante is a walking pace, moderato is moderate and allegro is fast",
+     "hint": "Put the terms in order: walking pace, moderate, fast… which is left?",
+     "choice": {
+      "options": [
+       "Andante",
+       "Largo",
+       "Allegro",
+       "Moderato"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Andante is at a walking pace, faster than largo",
+       null,
+       "Allegro means fast and lively",
+       "Moderato means at a moderate speed"
+      ]
+     }
+    },
+    {
+     "id": "e09",
+     "level": 2,
+     "text": "Which dynamic marking is quieter than mezzo piano (mp)?",
+     "solution": "From quiet to loud: pp, p, mp, mf, f, ff; so piano (p) is quieter than mezzo piano",
+     "hint": "Mezzo means 'moderately', so mezzo piano is a little louder than the plain marking",
+     "choice": {
+      "options": [
+       "Mezzo forte (mf)",
+       "Forte (f)",
+       "Piano (p)",
+       "Fortissimo (ff)"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Mezzo forte is moderately loud, so it is louder than mp",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "e10",
+     "level": 2,
+     "text": "Which statement about legato and staccato is accurate?",
+     "solution": "Legato means smooth and connected (often shown by a slur); staccato means short and detached (a dot)",
+     "hint": "These terms describe articulation, not volume or speed",
+     "choice": {
+      "options": [
+       "Legato is short and detached; staccato is smooth and connected",
+       "Legato is loud; staccato is soft",
+       "Legato is fast; staccato is slow",
+       "Legato is smooth and connected; staccato is short and detached"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "e11",
+     "level": 2,
+     "text": "Which Italian term means 'gradually getting slower'? Give the term.",
+     "solution": "Rallentando (rall.) or ritardando (rit.) means gradually getting slower",
+     "hint": "It is the opposite of accelerando",
+     "short": {
+      "accept": [
+       "rallentando",
+       "ritardando",
+       "rall",
+       "rit"
+      ],
+      "reject": [
+       "accelerando"
+      ],
+      "feedback": {
+       "accelerando": "Accelerando means gradually getting faster"
+      }
+     }
+    },
+    {
+     "id": "e12",
+     "level": 2,
+     "text": "Which texture has all the parts moving together in the same rhythm, like a hymn?",
+     "solution": "Homophonic (chordal) texture has the parts moving together in chords, as in most hymns",
+     "hint": "'Homo' means 'same': the parts share the same rhythm",
+     "choice": {
+      "options": [
+       "Homophonic",
+       "Monophonic",
+       "Polyphonic",
+       "Heterophonic"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Monophonic is a single melody line with no accompaniment",
+       "Polyphonic has several independent melodies at once",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e13",
+     "level": 2,
+     "text": "Which cadence is made of chord V followed by chord I?",
+     "solution": "A perfect cadence is V–I and sounds finished",
+     "hint": "This cadence is used at the end of most pieces because it sounds complete",
+     "choice": {
+      "options": [
+       "Plagal",
+       "Perfect",
+       "Imperfect",
+       "Interrupted"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A plagal cadence is IV–I",
+       null,
+       "An imperfect cadence ends on chord V",
+       "An interrupted cadence is usually V–VI"
+      ]
+     }
+    },
+    {
+     "id": "e14",
+     "level": 2,
+     "text": "Name the texture made of a single melody line with no accompaniment. Give the term.",
+     "solution": "A single unaccompanied melody line is a monophonic texture",
+     "hint": "'Mono' means one",
+     "short": {
+      "accept": [
+       "monophonic",
+       "monophony",
+       "monophonic texture"
+      ],
+      "reject": [
+       "homophonic",
+       "polyphonic"
+      ],
+      "feedback": {
+       "homophonic": "Homophonic means parts moving together in chords",
+       "polyphonic": "Polyphonic means several independent melodies at once"
+      }
+     }
+    },
+    {
+     "id": "e15",
+     "level": 3,
+     "text": "A piece is marked Allegro. How should it be played?",
+     "solution": "Allegro means fast and lively",
+     "hint": "It is a tempo marking often used for the first movement of a symphony",
+     "choice": {
+      "options": [
+       "Slowly",
+       "At a walking pace",
+       "Fast and lively",
+       "Gradually getting slower"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "At a walking pace is andante",
+       null,
+       "That is rallentando"
+      ]
+     }
+    },
+    {
+     "id": "e16",
+     "level": 3,
+     "text": "A bass part plays the same four-note pattern over and over while the melody changes above it. Which device is this?",
+     "solution": "A short pattern repeated over and over is an ostinato; a repeating bass pattern like this is also called a ground bass",
+     "hint": "The pattern repeats again and again without changing",
+     "choice": {
+      "options": [
+       "Sequence",
+       "Imitation",
+       "Pedal",
+       "Ostinato"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A sequence repeats a phrase at a higher or lower pitch",
+       "Imitation is when another part copies a melody",
+       "A pedal is a single sustained or repeated note",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e17",
+     "level": 3,
+     "text": "A melodic phrase is repeated straight away but starting one note higher. Which device is this?",
+     "solution": "Repeating a phrase at a higher or lower pitch is a sequence",
+     "hint": "The phrase keeps its shape but moves up in pitch",
+     "choice": {
+      "options": [
+       "Sequence",
+       "Ostinato",
+       "Drone",
+       "Syncopation"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "An ostinato repeats at the same pitch",
+       "A drone is a held note or notes",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e18",
+     "level": 3,
+     "text": "In a rhythm, the accents fall on weak beats and off-beats instead of the strong beats. What is this called?",
+     "solution": "Accenting weak beats or off-beats is syncopation",
+     "hint": "It gives an 'off-beat' feel that is common in jazz and pop",
+     "choice": {
+      "options": [
+       "Rubato",
+       "Syncopation",
+       "Augmentation",
+       "Legato"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Rubato is flexible tempo",
+       null,
+       "Augmentation makes note values longer",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e19",
+     "level": 3,
+     "text": "Folk music has two notes, the tonic and the dominant, held throughout like the bagpipes. Give the one-word term.",
+     "solution": "Held notes, often the tonic and dominant as on bagpipes, form a drone",
+     "hint": "Think of the low, steady sound of the bagpipes under the tune",
+     "short": {
+      "accept": [
+       "drone",
+       "drones"
+      ]
+     }
+    },
+    {
+     "id": "e20",
+     "level": 3,
+     "text": "A single note is marked sfz to show a sudden, strong accent. Give the full Italian term.",
+     "solution": "sfz stands for sforzando (or sforzato): a sudden strong accent",
+     "hint": "The Italian word begins with the letters s and f",
+     "short": {
+      "accept": [
+       "sforzando",
+       "sforzato"
+      ]
+     }
+    },
+    {
+     "id": "e21",
+     "level": 3,
+     "text": "A song's sections run verse, chorus, verse, chorus, bridge, chorus. Which element of music does this describe?",
+     "solution": "The order of sections in a piece is its structure (or form)",
+     "hint": "This element is about how a piece is organised into sections",
+     "choice": {
+      "options": [
+       "Texture",
+       "Timbre",
+       "Structure",
+       "Harmony"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Texture is about the layers of sound",
+       null,
+       null,
+       "Harmony is about chords"
+      ]
+     }
+    },
+    {
+     "id": "e22",
+     "level": 4,
+     "text": "A passage starts at pp and ends at ff over eight bars. Which description is accurate?",
+     "solution": "pp is pianissimo (very soft) and ff is fortissimo (very loud), so the music gets gradually louder: a crescendo",
+     "hint": "First decode pp and ff, then decide whether the music gets louder or softer",
+     "choice": {
+      "options": [
+       "A diminuendo from very loud to very soft",
+       "A crescendo from soft to moderately loud",
+       "An accelerando from slow to fast",
+       "A crescendo from very soft to very loud"
+      ],
+      "correct": 3,
+      "feedback": [
+       "pp comes first, so the music gets louder, not softer",
+       null,
+       "pp and ff are dynamics, not tempo markings",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e23",
+     "level": 4,
+     "text": "Bars 1–4 are marked Andante, bar 5 is marked accel. and bar 9 is marked a tempo. What happens to the speed?",
+     "solution": "accel. (accelerando) means gradually faster; a tempo means go back to the original speed",
+     "hint": "Decode accel. first, then think about what 'a tempo' tells the player",
+     "choice": {
+      "options": [
+       "It gets gradually faster from bar 5, then returns to the original speed at bar 9",
+       "It gets gradually slower from bar 5, then returns to the original speed at bar 9",
+       "It suddenly becomes very fast at bar 5 and stays fast",
+       "It gets gradually faster from bar 5 and keeps getting faster after bar 9"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Gradually slower would be rall. or rit.; accel. means gradually faster",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "e24",
+     "level": 4,
+     "text": "The sections of a piece are A B A C A D A. Give the name of this structure.",
+     "solution": "A main theme (A) that keeps returning between different episodes is rondo form",
+     "hint": "Notice which section keeps coming back between the others",
+     "short": {
+      "accept": [
+       "rondo",
+       "rondo form"
+      ],
+      "reject": [
+       "ternary",
+       "binary",
+       "ternary form",
+       "binary form"
+      ],
+      "feedback": {
+       "ternary": "Ternary form is A B A",
+       "binary": "Binary form is A B"
+      }
+     }
+    },
+    {
+     "id": "e25",
+     "level": 4,
+     "text": "A phrase ends with chord IV followed by chord I. Which cadence is this?",
+     "solution": "IV–I is a plagal cadence, often sung to 'Amen' at the end of hymns",
+     "hint": "Look at the first chord: is it V or IV?",
+     "choice": {
+      "options": [
+       "Perfect, often called the Amen cadence",
+       "Plagal, often called the Amen cadence",
+       "Imperfect, which sounds unfinished",
+       "Interrupted, a surprise ending"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A perfect cadence is V–I, not IV–I",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "e26",
+     "level": 4,
+     "text": "A phrase ends on chord V, so the music sounds unfinished, as if it is asking a question. Which cadence is this?",
+     "solution": "A cadence that ends on chord V is imperfect and sounds unfinished",
+     "hint": "Which cadence ends on the dominant chord rather than the tonic?",
+     "choice": {
+      "options": [
+       "Perfect",
+       "Plagal",
+       "Imperfect",
+       "Interrupted"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A perfect cadence ends on chord I and sounds finished",
+       null,
+       null,
+       "An interrupted cadence goes from V to a surprise chord, usually VI"
+      ]
+     }
+    },
+    {
+     "id": "e27",
+     "level": 4,
+     "text": "In C major, a phrase ends with chord V (G major) followed by chord VI (A minor) instead of chord I. Which cadence is this?",
+     "solution": "V–VI is an interrupted cadence: the ear expects chord I but hears a surprise chord",
+     "hint": "The ear expects V–I, but something else happens",
+     "choice": {
+      "options": [
+       "Perfect",
+       "Plagal",
+       "Imperfect",
+       "Interrupted"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A perfect cadence would be V–I",
+       null,
+       "An imperfect cadence ends on chord V",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e28",
+     "level": 4,
+     "text": "A piece has the structure A B A, where the return of A matches the opening. Give the name of this structure.",
+     "solution": "A B A is ternary form (three parts, with the opening section returning)",
+     "hint": "'Ter' means three",
+     "short": {
+      "accept": [
+       "ternary",
+       "ternary form"
+      ],
+      "reject": [
+       "binary",
+       "rondo",
+       "binary form",
+       "rondo form"
+      ],
+      "feedback": {
+       "binary": "Binary form has only two sections, A B",
+       "rondo": "Rondo is A B A C A…"
+      }
+     }
+    },
+    {
+     "id": "e29",
+     "level": 5,
+     "text": "Which statement about a polyphonic texture is accurate?",
+     "solution": "Polyphonic (contrapuntal) texture has several independent melodic lines at once, as in a fugue",
+     "hint": "'Poly' means many",
+     "choice": {
+      "options": [
+       "Two or more independent melodies are heard at the same time",
+       "One melody is played with no accompaniment",
+       "All the parts play the same melody in octaves",
+       "A melody is accompanied by sustained chords that move together"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is a monophonic texture",
+       "That is playing in octaves, not polyphony",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e30",
+     "level": 5,
+     "text": "Which harmonic feature is most likely to make music sound tense and unsettled?",
+     "solution": "Dissonance (notes that clash) creates tension; consonant chords and perfect cadences sound stable",
+     "hint": "Think about which chords sound 'clashing' rather than restful",
+     "choice": {
+      "options": [
+       "Consonant major chords",
+       "Dissonant chords with clashing notes",
+       "A perfect cadence at the end of each phrase",
+       "Simple chords I, IV and V only"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "A perfect cadence sounds finished and restful",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e31",
+     "level": 5,
+     "text": "Which statement about rubato is accurate?",
+     "solution": "Rubato ('robbed time') means pushing and pulling the tempo for expression, common in Romantic piano music",
+     "hint": "The Italian word means 'robbed' or 'stolen' time",
+     "choice": {
+      "options": [
+       "The performer keeps a strict, unchanging beat",
+       "The performer plays every note detached",
+       "The performer slightly speeds up and slows down for expression",
+       "The performer gradually gets louder"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That is staccato",
+       null,
+       "That is a crescendo"
+      ]
+     }
+    },
+    {
+     "id": "e32",
+     "level": 5,
+     "text": "Which statement correctly compares a perfect and an imperfect cadence?",
+     "solution": "Perfect = V–I (finished); imperfect = any chord to V (unfinished)",
+     "hint": "Decide which chord each cadence ends on",
+     "choice": {
+      "options": [
+       "A perfect cadence ends on chord V; an imperfect cadence ends on chord I",
+       "Both end on chord I, but an imperfect cadence is quieter",
+       "A perfect cadence is IV–I; an imperfect cadence is V–VI",
+       "A perfect cadence (V–I) sounds finished; an imperfect cadence (ending on V) sounds unfinished"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is the wrong way round",
+       null,
+       "IV–I is plagal and V–VI is interrupted",
+       null
+      ]
+     }
+    },
+    {
+     "id": "e33",
+     "level": 5,
+     "text": "The violins play a melody, then the cellos copy it two beats later while the violins carry on. Give the one-word term for this copying device.",
+     "solution": "When one part copies another part's melody shortly afterwards, it is imitation (strict imitation throughout is a canon)",
+     "hint": "One part is copying, or 'echoing', another",
+     "short": {
+      "accept": [
+       "imitation",
+       "imitative",
+       "canon"
+      ]
+     }
+    },
+    {
+     "id": "e34",
+     "level": 5,
+     "text": "A melody in a major key suddenly uses several notes that are not in that key. How is this melody described?",
+     "solution": "Notes from outside the key make a melody chromatic; diatonic melodies use only the notes of the key",
+     "hint": "Is the melody staying inside the key or moving outside it?",
+     "choice": {
+      "options": [
+       "Chromatic",
+       "Diatonic",
+       "Pentatonic",
+       "Conjunct"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Diatonic means using only the notes of the key",
+       null,
+       "Conjunct describes stepwise movement, not notes outside the key"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "music.theory",
+   "title": "Notation & theory",
+   "aliases": [
+    "note values",
+    "notation",
+    "time signature",
+    "key signature",
+    "scales",
+    "intervals",
+    "chords",
+    "clefs",
+    "dotted notes"
+   ],
+   "questions": [
+    {
+     "id": "t01",
+     "level": 1,
+     "text": "Which note value lasts for 1 beat in 4/4 time?",
+     "solution": "In 4/4 the beat is a crotchet, so a crotchet lasts 1 beat",
+     "hint": "The bottom 4 in 4/4 means the beat is a quarter note",
+     "choice": {
+      "options": [
+       "Crotchet",
+       "Minim",
+       "Quaver",
+       "Semibreve"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A minim lasts 2 beats",
+       "A quaver lasts half a beat",
+       "A semibreve lasts 4 beats"
+      ]
+     }
+    },
+    {
+     "id": "t02",
+     "level": 1,
+     "text": "In 4/4 time, how many crotchet beats does a minim last? Give a number.",
+     "solution": "A minim is worth two crotchets, so it lasts 2 beats",
+     "hint": "A minim is a half note",
+     "answer": {
+      "kind": "number",
+      "display": "2",
+      "value": 2
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "4",
+        "value": 4
+       },
+       "feedback": "4 beats is a semibreve"
+      }
+     ]
+    },
+    {
+     "id": "t03",
+     "level": 1,
+     "text": "Give the British name for the note worth 4 crotchet beats (a whole note).",
+     "solution": "A semibreve lasts 4 crotchet beats (a whole bar of 4/4)",
+     "hint": "Its name starts with 'semi' and it looks like an open oval with no stem",
+     "short": {
+      "accept": [
+       "semibreve"
+      ],
+      "reject": [
+       "semiquaver",
+       "breve",
+       "minim"
+      ],
+      "feedback": {
+       "semiquaver": "A semiquaver is a quarter of a beat",
+       "breve": "A breve is 8 beats",
+       "minim": "A minim is 2 beats"
+      }
+     }
+    },
+    {
+     "id": "t04",
+     "level": 1,
+     "text": "Which clef is also called the G clef? Give the name of the clef.",
+     "solution": "The treble clef curls around the G line, so it is called the G clef",
+     "hint": "This clef is used for higher instruments such as the violin and flute",
+     "short": {
+      "accept": [
+       "treble",
+       "treble clef"
+      ],
+      "reject": [
+       "bass",
+       "bass clef",
+       "alto",
+       "alto clef"
+      ],
+      "feedback": {
+       "bass": "The bass clef is the F clef",
+       "bass clef": "The bass clef is the F clef"
+      }
+     }
+    },
+    {
+     "id": "t05",
+     "level": 1,
+     "text": "What does a sharp sign (♯) do to a note?",
+     "solution": "A sharp raises a note by one semitone; a flat lowers it by one semitone",
+     "hint": "Think of the next key up on a piano",
+     "choice": {
+      "options": [
+       "Lowers it by a semitone",
+       "Raises it by a semitone",
+       "Raises it by a tone",
+       "Cancels an earlier sharp or flat"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is a flat",
+       null,
+       null,
+       "That is a natural sign"
+      ]
+     }
+    },
+    {
+     "id": "t06",
+     "level": 1,
+     "text": "Give the British name for the note worth half a crotchet (an eighth note).",
+     "solution": "A quaver lasts half a crotchet beat",
+     "hint": "It has a filled-in head and one tail or flag",
+     "short": {
+      "accept": [
+       "quaver"
+      ],
+      "reject": [
+       "semiquaver"
+      ],
+      "feedback": {
+       "semiquaver": "A semiquaver is a quarter of a crotchet"
+      }
+     }
+    },
+    {
+     "id": "t07",
+     "level": 1,
+     "text": "How many lines does a music stave have?",
+     "solution": "A stave has five lines and four spaces",
+     "hint": "Count the spaces too: there are four of them",
+     "choice": {
+      "options": [
+       "Four",
+       "Six",
+       "Five",
+       "Three"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "t08",
+     "level": 2,
+     "text": "Which time signature has three crotchet beats in each bar?",
+     "solution": "3/4 has 3 crotchet beats per bar, as in a waltz",
+     "hint": "The top number tells you how many beats",
+     "choice": {
+      "options": [
+       "2/4",
+       "4/4",
+       "6/8",
+       "3/4"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "6/8 has six quavers in two dotted-crotchet beats",
+       null
+      ]
+     }
+    },
+    {
+     "id": "t09",
+     "level": 2,
+     "text": "In a simple time signature such as 3/4, what does the top number tell you?",
+     "solution": "The top number gives the number of beats per bar; the bottom number gives the beat's note value",
+     "hint": "In 3/4 the top number is 3",
+     "choice": {
+      "options": [
+       "How many beats there are in each bar",
+       "Which note value is one beat",
+       "How fast the music is",
+       "Which key the music is in"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the bottom number",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t10",
+     "level": 2,
+     "text": "A dot written after a note changes its length. What does the dot add?",
+     "solution": "A dot after a note adds half its value: a dotted minim is 2 + 1 = 3 beats",
+     "hint": "Try it with a minim: what is a dotted minim worth?",
+     "choice": {
+      "options": [
+       "A quarter of the note's value",
+       "Half of the note's value",
+       "The same value again, doubling it",
+       "Nothing; it means play staccato"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "A dot above or below the note means staccato; a dot after the note lengthens it"
+      ]
+     }
+    },
+    {
+     "id": "t11",
+     "level": 2,
+     "text": "Which major key has one sharp, F♯, in its key signature?",
+     "solution": "G major has one sharp, F♯",
+     "hint": "The sharp is the 7th note of the scale; count up from the key note",
+     "choice": {
+      "options": [
+       "D major",
+       "F major",
+       "G major",
+       "C major"
+      ],
+      "correct": 2,
+      "feedback": [
+       "D major has two sharps",
+       "F major has one flat, B♭",
+       null,
+       "C major has no sharps or flats"
+      ]
+     }
+    },
+    {
+     "id": "t12",
+     "level": 2,
+     "text": "What is the interval from C up to the G above it? Give its full name (quality and number).",
+     "solution": "C D E F G is five letter names, and C to G is a perfect 5th",
+     "hint": "Count the letter names from C to G, including both",
+     "short": {
+      "accept": [
+       "perfect fifth",
+       "perfect 5th"
+      ],
+      "reject": [
+       "perfect fourth",
+       "perfect 4th",
+       "major fifth"
+      ],
+      "feedback": {
+       "perfect fourth": "C to F is a perfect 4th; count again including both C and G"
+      }
+     }
+    },
+    {
+     "id": "t13",
+     "level": 2,
+     "text": "Where is middle C written in the treble clef?",
+     "solution": "Middle C sits on its own short ledger line just below the treble stave",
+     "hint": "The bottom line of the treble stave is E; go down from there",
+     "choice": {
+      "options": [
+       "On the bottom line of the stave",
+       "On the middle line of the stave",
+       "In the top space of the stave",
+       "On a ledger line just below the stave"
+      ],
+      "correct": 3,
+      "feedback": [
+       "The bottom line of the treble stave is E",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t14",
+     "level": 2,
+     "text": "How many quavers are equal to one minim? Give a number.",
+     "solution": "A minim is 2 crotchets and each crotchet is 2 quavers, so 2 × 2 = 4",
+     "hint": "First find how many crotchets are in a minim",
+     "answer": {
+      "kind": "number",
+      "display": "4",
+      "value": 4
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "2",
+        "value": 2
+       },
+       "feedback": "2 quavers make a crotchet, not a minim"
+      }
+     ]
+    },
+    {
+     "id": "t35",
+     "level": 2,
+     "text": "Which sign cancels an earlier sharp or flat, returning the note to its normal pitch? Give the term.",
+     "solution": "A natural sign (♮) cancels a sharp or flat",
+     "hint": "The sign looks like a box with two stems; the note goes back to normal",
+     "short": {
+      "accept": [
+       "natural",
+       "natural sign"
+      ],
+      "reject": [
+       "sharp",
+       "flat"
+      ],
+      "feedback": {
+       "sharp": "A sharp raises a note",
+       "flat": "A flat lowers a note"
+      }
+     }
+    },
+    {
+     "id": "t15",
+     "level": 3,
+     "text": "In 3/4 time, a bar already contains a minim. How many more crotchet beats are needed to complete the bar? Give a number.",
+     "solution": "3/4 needs 3 beats; a minim is 2, so 3 − 2 = 1 more beat",
+     "hint": "How many beats does a bar of 3/4 hold?",
+     "answer": {
+      "kind": "number",
+      "display": "1",
+      "value": 1
+     }
+    },
+    {
+     "id": "t16",
+     "level": 3,
+     "text": "In the treble clef, which note sits on the bottom line of the stave?",
+     "solution": "Treble clef lines from the bottom are E, G, B, D, F, so the bottom line is E",
+     "hint": "The treble clef lines have a well-known rhyme, read from the bottom line upwards",
+     "choice": {
+      "options": [
+       "The note E",
+       "The note G",
+       "The note F",
+       "The note D"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "G is the bottom line in the bass clef, or the second line in the treble clef",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t17",
+     "level": 3,
+     "text": "In the treble clef, the four spaces from bottom to top spell a word. Give the word.",
+     "solution": "The treble clef spaces are F, A, C, E",
+     "hint": "The word is something on the front of your head",
+     "short": {
+      "accept": [
+       "face"
+      ]
+     }
+    },
+    {
+     "id": "t18",
+     "level": 3,
+     "text": "Which major key has two sharps, F♯ and C♯?",
+     "solution": "D major has two sharps: F♯ and C♯",
+     "hint": "G major has one sharp; add the next sharp in the order of sharps",
+     "choice": {
+      "options": [
+       "G major",
+       "D major",
+       "A major",
+       "F major"
+      ],
+      "correct": 1,
+      "feedback": [
+       "G major has only one sharp",
+       null,
+       "A major has three sharps",
+       "F major has one flat"
+      ]
+     }
+    },
+    {
+     "id": "t19",
+     "level": 3,
+     "text": "In C major, which chord is chord V (the dominant)?",
+     "solution": "Count up five notes from C: C D E F G, so chord V is G major",
+     "hint": "Count up the scale from C to the 5th note",
+     "choice": {
+      "options": [
+       "F major",
+       "A minor",
+       "G major",
+       "D minor"
+      ],
+      "correct": 2,
+      "feedback": [
+       "F major is chord IV (the subdominant)",
+       "A minor is chord VI",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t20",
+     "level": 3,
+     "text": "Which key is the relative minor of C major?",
+     "solution": "A minor shares C major's key signature (no sharps or flats), so it is the relative minor",
+     "hint": "The relative minor starts on the 6th note of the major scale",
+     "choice": {
+      "options": [
+       "C minor",
+       "E minor",
+       "D minor",
+       "A minor"
+      ],
+      "correct": 3,
+      "feedback": [
+       "C minor is the tonic minor; it has three flats",
+       "E minor is the relative minor of G major",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t21",
+     "level": 3,
+     "text": "Which pair of notes lasts the same length as a dotted minim?",
+     "solution": "A dotted minim is 2 + 1 = 3 beats, the same as a minim (2) plus a crotchet (1)",
+     "hint": "First work out the dotted minim: a minim plus half a minim",
+     "choice": {
+      "options": [
+       "A minim and a crotchet",
+       "Two crotchets",
+       "A semibreve and a quaver",
+       "Two minims"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Two crotchets make 2 beats, not 3",
+       null,
+       "Two minims make 4 beats"
+      ]
+     }
+    },
+    {
+     "id": "t22",
+     "level": 3,
+     "text": "Name the scale that uses only five different notes and is common in folk music around the world. Give the term.",
+     "solution": "A five-note scale is a pentatonic scale",
+     "hint": "'Penta' means five, as in pentagon",
+     "short": {
+      "accept": [
+       "pentatonic",
+       "pentatonic scale"
+      ]
+     }
+    },
+    {
+     "id": "t23",
+     "level": 4,
+     "text": "A piece has one flat in its key signature and ends on a D minor chord. Which key is it most likely in?",
+     "solution": "One flat means F major or its relative minor, D minor; ending on a D minor chord points to D minor",
+     "hint": "Which major key has one flat, and what is its relative minor?",
+     "choice": {
+      "options": [
+       "F major",
+       "D minor",
+       "B♭ major",
+       "G minor"
+      ],
+      "correct": 1,
+      "feedback": [
+       "F major also has one flat, but the piece ends on D minor",
+       null,
+       "B♭ major has two flats",
+       null
+      ]
+     }
+    },
+    {
+     "id": "t24",
+     "level": 4,
+     "text": "The major scale pattern is tone, tone, semitone, tone, tone, tone, semitone. Starting on F, which accidental is needed?",
+     "solution": "F to G to A are tones; A to the 4th note must be a semitone, so B becomes B♭ (B flat)",
+     "hint": "Work up from F step by step; the 3rd to 4th notes must be a semitone apart",
+     "choice": {
+      "options": [
+       "F sharp",
+       "C sharp",
+       "B flat",
+       "E flat"
+      ],
+      "correct": 2,
+      "feedback": [
+       "F♯ is needed in G major, not F major",
+       null,
+       null,
+       "F major's 7th note is E natural, a semitone below F"
+      ]
+     }
+    },
+    {
+     "id": "t25",
+     "level": 4,
+     "text": "A bar of 4/4 contains a dotted crotchet, a quaver and a minim. How many crotchet beats is that in total? Give a number.",
+     "solution": "Dotted crotchet 1.5 + quaver 0.5 + minim 2 = 4 beats",
+     "hint": "Write the value of each note in crotchet beats, then add",
+     "answer": {
+      "kind": "number",
+      "display": "4",
+      "value": 4
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "3.5",
+        "value": 3.5
+       },
+       "feedback": "Remember the dot adds half: a dotted crotchet is 1.5 beats"
+      }
+     ]
+    },
+    {
+     "id": "t26",
+     "level": 4,
+     "text": "Starting on C, count up 4 semitones. Which interval is this?",
+     "solution": "C → C♯ → D → D♯ → E is 4 semitones, and C to E is a major 3rd",
+     "hint": "Count the semitones on a keyboard, including black keys",
+     "choice": {
+      "options": [
+       "Minor 3rd",
+       "Perfect 4th",
+       "Major 2nd",
+       "Major 3rd"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A minor 3rd is 3 semitones (C to E♭)",
+       "A perfect 4th is 5 semitones",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "t27",
+     "level": 4,
+     "text": "In the bass clef, which note is on the top line of the stave?",
+     "solution": "Bass clef lines from the bottom are G, B, D, F, A, so the top line is A",
+     "hint": "The bass clef lines have their own rhyme, starting from G on the bottom line",
+     "choice": {
+      "options": [
+       "The note A",
+       "The note F",
+       "The note G",
+       "The note E"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "F is the 4th line (the line between the two dots of the bass clef)",
+       "G is the bottom line of the bass clef",
+       null
+      ]
+     }
+    },
+    {
+     "id": "t28",
+     "level": 4,
+     "text": "The notes C, E and G are played together. Give the name of this chord (letter name and major or minor).",
+     "solution": "C, E, G is the C major triad: root C, major 3rd E and perfect 5th G",
+     "hint": "The lowest note is the root; check whether the 3rd is major (4 semitones) or minor",
+     "short": {
+      "accept": [
+       "C major",
+       "C major chord",
+       "C major triad"
+      ],
+      "reject": [
+       "C minor"
+      ],
+      "feedback": {
+       "C minor": "C minor would have E♭, not E"
+      }
+     }
+    },
+    {
+     "id": "t29",
+     "level": 5,
+     "text": "Which description of the key of A minor is accurate?",
+     "solution": "A minor is the relative minor of C major, so both have no sharps or flats in the key signature",
+     "hint": "Find the major key whose 6th note is A",
+     "choice": {
+      "options": [
+       "One sharp, F♯, in its key signature",
+       "No sharps or flats in its key signature, the same as C major",
+       "Three flats in its key signature",
+       "The relative minor of G major"
+      ],
+      "correct": 1,
+      "feedback": [
+       "One sharp is G major or E minor",
+       null,
+       null,
+       "The relative minor of G major is E minor"
+      ]
+     }
+    },
+    {
+     "id": "t30",
+     "level": 5,
+     "text": "A bar of 4/4 contains a minim, a crotchet and a quaver. What is wrong with it?",
+     "solution": "2 + 1 + 0.5 = 3.5 beats, so the bar needs another half beat to make 4",
+     "hint": "Add up the beats: minim, crotchet and quaver",
+     "choice": {
+      "options": [
+       "Half a beat too many",
+       "One whole beat short",
+       "Half a beat short: it needs another quaver or a quaver rest",
+       "Nothing is wrong: it adds up to four beats"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "2 + 1 + 0.5 is 3.5, not 4"
+      ]
+     }
+    },
+    {
+     "id": "t31",
+     "level": 5,
+     "text": "Which statement about tones and semitones is accurate?",
+     "solution": "A tone is two semitones; E–F and B–C are semitones because there is no black key between them",
+     "hint": "Look at a keyboard: which white keys have no black key between them?",
+     "choice": {
+      "options": [
+       "A semitone is equal to two tones",
+       "E to F is a tone",
+       "Every pair of white keys next to each other is a tone apart",
+       "A tone is equal to two semitones"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "E to F is a semitone: there is no black key between them",
+       "E–F and B–C are only a semitone apart",
+       null
+      ]
+     }
+    },
+    {
+     "id": "t32",
+     "level": 5,
+     "text": "A piece in C major changes key to G major halfway through. Which description is accurate?",
+     "solution": "G is the 5th note (dominant) of C major, so moving to G major is a modulation to the dominant",
+     "hint": "Count up from C to G: which degree of the scale is G?",
+     "choice": {
+      "options": [
+       "It modulates to the dominant key",
+       "It modulates to the subdominant key",
+       "It modulates to the relative minor",
+       "It stays in the tonic key"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The subdominant of C is F",
+       "The relative minor of C major is A minor",
+       null
+      ]
+     }
+    },
+    {
+     "id": "t33",
+     "level": 5,
+     "text": "Why is 6/8 described as compound duple time?",
+     "solution": "6/8 has six quavers grouped in two dotted-crotchet beats (duple), and each beat splits into three (compound)",
+     "hint": "Group the six quavers into beats: how many groups, and how many quavers in each?",
+     "choice": {
+      "options": [
+       "It has six crotchet beats per bar",
+       "It has two dotted-crotchet beats per bar, each dividing into three quavers",
+       "It has two crotchet beats per bar, each dividing into two quavers",
+       "It has three beats per bar, each dividing into two quavers"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "That describes 2/4, which is simple duple",
+       "That describes 3/4"
+      ]
+     }
+    },
+    {
+     "id": "t34",
+     "level": 5,
+     "text": "What is the interval between two notes with the same letter name, eight notes apart, such as C to the next C up? Give the term.",
+     "solution": "From one note to the next note with the same letter name is an octave (8 notes)",
+     "hint": "'Oct' means eight, as in octopus",
+     "short": {
+      "accept": [
+       "octave",
+       "perfect octave",
+       "8ve"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "music.instruments",
+   "title": "Instruments & ensembles",
+   "aliases": [
+    "orchestral instruments",
+    "instruments",
+    "orchestra",
+    "woodwind",
+    "brass",
+    "strings",
+    "percussion",
+    "voice types",
+    "pizzicato",
+    "string quartet",
+    "music technology"
+   ],
+   "questions": [
+    {
+     "id": "i01",
+     "level": 1,
+     "text": "Which family of the orchestra does the trumpet belong to?",
+     "solution": "The trumpet is a brass instrument: the player buzzes their lips into a cup-shaped mouthpiece",
+     "hint": "Think about how the sound is made: buzzing lips into a metal mouthpiece",
+     "choice": {
+      "options": [
+       "Brass",
+       "Woodwind",
+       "Strings",
+       "Percussion"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "i02",
+     "level": 1,
+     "text": "Which of these is a woodwind instrument?",
+     "solution": "The clarinet is a woodwind instrument played with a single reed",
+     "hint": "Look for the instrument that uses a reed",
+     "choice": {
+      "options": [
+       "Trombone",
+       "Clarinet",
+       "Cello",
+       "Timpani"
+      ],
+      "correct": 1,
+      "feedback": [
+       "The trombone is brass",
+       null,
+       "The cello is a string instrument",
+       "Timpani are percussion"
+      ]
+     }
+    },
+    {
+     "id": "i03",
+     "level": 1,
+     "text": "Which voice type is the highest female voice?",
+     "solution": "From high to low the main voices are soprano, alto, tenor and bass (SATB)",
+     "hint": "SATB lists the voices from highest to lowest",
+     "choice": {
+      "options": [
+       "Alto",
+       "Tenor",
+       "Soprano",
+       "Bass"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Alto is the lower female voice",
+       "Tenor is a male voice",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i04",
+     "level": 1,
+     "text": "Give the Italian term that tells string players to pluck the strings with their fingers.",
+     "solution": "Pizzicato (pizz.) means plucking the strings",
+     "hint": "Its abbreviation is four letters long",
+     "short": {
+      "accept": [
+       "pizzicato",
+       "pizz"
+      ],
+      "reject": [
+       "arco"
+      ],
+      "feedback": {
+       "arco": "Arco means play with the bow"
+      }
+     }
+    },
+    {
+     "id": "i05",
+     "level": 1,
+     "text": "Which instruments make up a standard string quartet?",
+     "solution": "A string quartet is two violins, a viola and a cello",
+     "hint": "There are four players, and two of them play the same instrument",
+     "choice": {
+      "options": [
+       "Four violins",
+       "Violin, viola, cello and double bass",
+       "Two violins, a cello and a piano",
+       "Two violins, a viola and a cello"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "A string quartet has two violins and no double bass",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i06",
+     "level": 1,
+     "text": "Give the name of the lowest-pitched instrument in the orchestral string family.",
+     "solution": "The double bass is the largest and lowest orchestral string instrument",
+     "hint": "It is so big that the player stands or sits on a high stool",
+     "short": {
+      "accept": [
+       "double bass",
+       "contrabass",
+       "string bass",
+       "bass"
+      ],
+      "reject": [
+       "cello",
+       "viola"
+      ],
+      "feedback": {
+       "cello": "The cello is low, but the double bass is lower"
+      }
+     }
+    },
+    {
+     "id": "i07",
+     "level": 1,
+     "text": "Which of these is a tuned percussion instrument?",
+     "solution": "A xylophone has wooden bars tuned to definite pitches, so it is tuned percussion",
+     "hint": "Which one can play a melody?",
+     "choice": {
+      "options": [
+       "Xylophone",
+       "Snare drum",
+       "Cymbals",
+       "Triangle"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A snare drum has no definite pitch",
+       null,
+       "A triangle is untuned percussion"
+      ]
+     }
+    },
+    {
+     "id": "i08",
+     "level": 2,
+     "text": "Which of these instruments uses a double reed?",
+     "solution": "The oboe (like the bassoon) uses a double reed",
+     "hint": "Two reeds vibrate against each other; it is not a single reed on a mouthpiece",
+     "choice": {
+      "options": [
+       "Clarinet",
+       "Oboe",
+       "Flute",
+       "Saxophone"
+      ],
+      "correct": 1,
+      "feedback": [
+       "The clarinet uses a single reed",
+       null,
+       "The flute uses no reed: you blow across a hole",
+       "The saxophone uses a single reed"
+      ]
+     }
+    },
+    {
+     "id": "i09",
+     "level": 2,
+     "text": "After a pizzicato passage, which Italian term tells string players to go back to using the bow? Give the term.",
+     "solution": "Arco means play with the bow again",
+     "hint": "It is a short four-letter word",
+     "short": {
+      "accept": [
+       "arco"
+      ],
+      "reject": [
+       "pizzicato"
+      ],
+      "feedback": {
+       "pizzicato": "Pizzicato means pluck the strings"
+      }
+     }
+    },
+    {
+     "id": "i10",
+     "level": 2,
+     "text": "Which brass instrument changes pitch using a slide instead of valves?",
+     "solution": "The trombone uses a slide to change the length of its tube",
+     "hint": "The player moves part of the instrument in and out",
+     "choice": {
+      "options": [
+       "Trumpet",
+       "French horn",
+       "Trombone",
+       "Tuba"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The trumpet uses valves",
+       null,
+       null,
+       "The tuba uses valves"
+      ]
+     }
+    },
+    {
+     "id": "i11",
+     "level": 2,
+     "text": "Which voice type is the highest common adult male voice (not counting the countertenor)?",
+     "solution": "Male voices from high to low: (countertenor), tenor, baritone, bass",
+     "hint": "SATB: which male voice comes before bass?",
+     "choice": {
+      "options": [
+       "Baritone",
+       "Bass",
+       "Mezzo-soprano",
+       "Tenor"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Baritone is between tenor and bass",
+       null,
+       "Mezzo-soprano is a female voice",
+       null
+      ]
+     }
+    },
+    {
+     "id": "i12",
+     "level": 2,
+     "text": "Which statement about the piano and the harpsichord is accurate?",
+     "solution": "Pressing a piano key makes a hammer strike the string; pressing a harpsichord key makes a quill pluck it",
+     "hint": "The piano's full name, pianoforte, shows that it can play soft and loud depending on how hard it is hit",
+     "choice": {
+      "options": [
+       "Piano strings are struck by hammers; harpsichord strings are plucked",
+       "Piano strings are plucked; harpsichord strings are struck by hammers",
+       "Piano strings are bowed; harpsichord strings are struck",
+       "The harpsichord has no strings and uses pipes"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the wrong way round",
+       null,
+       "The organ uses pipes"
+      ]
+     }
+    },
+    {
+     "id": "i13",
+     "level": 2,
+     "text": "Which Baroque keyboard instrument plucks its strings? Give the instrument.",
+     "solution": "The harpsichord plucks its strings, so it cannot make gradual changes in volume",
+     "hint": "It often played the continuo part in Baroque music",
+     "short": {
+      "accept": [
+       "harpsichord"
+      ],
+      "reject": [
+       "piano",
+       "organ"
+      ],
+      "feedback": {
+       "piano": "The piano hits its strings with hammers",
+       "organ": "The organ uses pipes"
+      }
+     }
+    },
+    {
+     "id": "i14",
+     "level": 2,
+     "text": "Which arrangement correctly orders a system as input, then process, then output?",
+     "solution": "A microphone picks up sound (input), the mixing desk processes it and the loudspeaker plays it (output)",
+     "hint": "Which device picks up the sound in the first place?",
+     "choice": {
+      "options": [
+       "Loudspeaker → mixing desk → microphone",
+       "Microphone → mixing desk → loudspeaker",
+       "Mixing desk → microphone → loudspeaker",
+       "Microphone → loudspeaker → mixing desk"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "i15",
+     "level": 3,
+     "text": "A player blows across a hole in the side of the instrument, with no reed. Which instrument is it?",
+     "solution": "The flute has no reed: the player blows across the mouth hole",
+     "hint": "Which woodwind instrument is held sideways?",
+     "choice": {
+      "options": [
+       "Oboe",
+       "Clarinet",
+       "Flute",
+       "Bassoon"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The oboe uses a double reed",
+       "The clarinet uses a single reed",
+       null,
+       "The bassoon uses a double reed"
+      ]
+     }
+    },
+    {
+     "id": "i16",
+     "level": 3,
+     "text": "A string player moves the bow very quickly back and forth on one note to make a trembling sound. Which technique is this?",
+     "solution": "Rapid bowing back and forth on one note is (bowed) tremolo",
+     "hint": "The name comes from the Italian for 'trembling'",
+     "choice": {
+      "options": [
+       "Vibrato",
+       "Pizzicato",
+       "Glissando",
+       "Tremolo"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Vibrato is a small wobble in pitch made by the finger on the string",
+       null,
+       "A glissando is a slide between pitches",
+       null
+      ]
+     }
+    },
+    {
+     "id": "i17",
+     "level": 3,
+     "text": "A violinist plays two strings at the same time. Which technique is this?",
+     "solution": "Playing two strings at once is double stopping",
+     "hint": "The fingers 'stop' two strings at once",
+     "choice": {
+      "options": [
+       "Double stopping",
+       "Pizzicato",
+       "Col legno",
+       "Con sordino"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Col legno means playing with the wood of the bow",
+       "Con sordino means with a mute"
+      ]
+     }
+    },
+    {
+     "id": "i18",
+     "level": 3,
+     "text": "A singer slides smoothly from one pitch to another. Give the term for this slide.",
+     "solution": "A smooth slide between pitches is a glissando (in singing it is often called portamento)",
+     "hint": "Think of running a finger quickly along the keys of a piano",
+     "short": {
+      "accept": [
+       "glissando",
+       "portamento",
+       "gliss"
+      ]
+     }
+    },
+    {
+     "id": "i19",
+     "level": 3,
+     "text": "A producer places a guitar more in the left speaker than the right. Which music technology process is this?",
+     "solution": "Panning places a sound between the left and right speakers in the stereo field",
+     "hint": "Think about the left–right position of a sound",
+     "choice": {
+      "options": [
+       "Reverb",
+       "Panning",
+       "Quantising",
+       "Sampling"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Reverb adds the echoes of a room or hall",
+       null,
+       "Quantising moves notes onto an exact rhythmic grid",
+       null
+      ]
+     }
+    },
+    {
+     "id": "i20",
+     "level": 3,
+     "text": "A producer adds an effect that makes a dry recording sound as if it was played in a large hall or church. Which effect is this?",
+     "solution": "Reverb (reverberation) adds the many reflections you hear in a large space",
+     "hint": "Think about the sound of singing in a big, echoing building",
+     "choice": {
+      "options": [
+       "Distortion",
+       "Panning",
+       "Reverb",
+       "Quantising"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Distortion makes a sound gritty or fuzzy, as on a rock guitar",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i21",
+     "level": 3,
+     "text": "A music file stores instructions such as which note to play, for how long and how loud, but no recorded sound. Give the abbreviation for this technology.",
+     "solution": "MIDI (Musical Instrument Digital Interface) stores performance data, not audio",
+     "hint": "It is a four-letter abbreviation used to connect keyboards to computers",
+     "short": {
+      "accept": [
+       "MIDI",
+       "musical instrument digital interface"
+      ]
+     }
+    },
+    {
+     "id": "i22",
+     "level": 4,
+     "text": "An ensemble has two violins, a viola, a cello and a piano. What is it called?",
+     "solution": "Five players (a string quartet plus piano) make a piano quintet",
+     "hint": "Count the players first",
+     "choice": {
+      "options": [
+       "String quartet",
+       "Piano trio",
+       "Wind quintet",
+       "Piano quintet"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A string quartet has no piano",
+       "A piano trio has only three players",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i23",
+     "level": 4,
+     "text": "Which list of string instruments is in order from highest to lowest pitch range?",
+     "solution": "The smaller the string instrument, the higher it sounds: violin, viola, cello, double bass",
+     "hint": "Smaller instruments play higher",
+     "choice": {
+      "options": [
+       "Violin, viola, cello, double bass",
+       "Viola, violin, cello, double bass",
+       "Cello, viola, violin, double bass",
+       "Violin, cello, viola, double bass"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The violin is higher than the viola",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i24",
+     "level": 4,
+     "text": "Which list contains only brass instruments?",
+     "solution": "Trumpet, French horn and tuba are all brass instruments",
+     "hint": "Check each list for any instrument that uses a reed",
+     "choice": {
+      "options": [
+       "Trumpet, saxophone, tuba",
+       "Trumpet, French horn, tuba",
+       "Trombone, bassoon, tuba",
+       "Cornet, clarinet, trumpet"
+      ],
+      "correct": 1,
+      "feedback": [
+       "The saxophone is a woodwind instrument (it uses a reed)",
+       null,
+       "The bassoon is woodwind",
+       "The clarinet is woodwind"
+      ]
+     }
+    },
+    {
+     "id": "i25",
+     "level": 4,
+     "text": "A producer moves notes that were played slightly out of time onto an exact rhythmic grid. What is this process called?",
+     "solution": "Quantising snaps notes to the nearest point on a rhythmic grid in a DAW",
+     "hint": "The process makes the timing exactly even",
+     "choice": {
+      "options": [
+       "Panning",
+       "Sampling",
+       "Quantising",
+       "Looping"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Sampling means recording and reusing a piece of sound",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i26",
+     "level": 4,
+     "text": "In a symphony orchestra, which family usually sits at the front, nearest the conductor? Give the family.",
+     "solution": "The strings sit at the front, with woodwind behind, then brass and percussion at the back",
+     "hint": "It is the largest section of the orchestra",
+     "short": {
+      "accept": [
+       "strings",
+       "string",
+       "string family",
+       "string section"
+      ],
+      "reject": [
+       "woodwind",
+       "brass",
+       "percussion"
+      ]
+     }
+    },
+    {
+     "id": "i27",
+     "level": 4,
+     "text": "Which instrument is the odd one out by family: flute, oboe, saxophone, horn?",
+     "solution": "The (French) horn is brass; the flute, oboe and saxophone are all woodwind",
+     "hint": "Be careful: some woodwind instruments are made of metal",
+     "choice": {
+      "options": [
+       "Flute",
+       "Oboe",
+       "Saxophone",
+       "Horn"
+      ],
+      "correct": 3,
+      "feedback": [
+       "The flute is woodwind even though it is made of metal",
+       null,
+       "The saxophone is woodwind because it uses a reed",
+       null
+      ]
+     }
+    },
+    {
+     "id": "i28",
+     "level": 4,
+     "text": "A singer with a very high male voice sings in the alto range using falsetto. Give the name of this voice type.",
+     "solution": "A man who sings in the alto range is a countertenor",
+     "hint": "Its name includes the name of another male voice",
+     "short": {
+      "accept": [
+       "countertenor",
+       "counter tenor"
+      ],
+      "reject": [
+       "tenor",
+       "alto"
+      ],
+      "feedback": {
+       "tenor": "The tenor is the highest common male voice, but lower than this"
+      }
+     }
+    },
+    {
+     "id": "i29",
+     "level": 5,
+     "text": "Why is the saxophone classed as a woodwind instrument even though it is made of metal?",
+     "solution": "Instrument families depend on how the sound is made: the saxophone uses a reed, so it is woodwind",
+     "hint": "Families are decided by how the sound is made, not what the instrument is made of",
+     "choice": {
+      "options": [
+       "A single reed vibrates against the mouthpiece to make the sound",
+       "The inventor was a woodwind player",
+       "The player buzzes their lips into a cup mouthpiece",
+       "Saxophones always sit with the woodwind in an orchestra"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That is how brass instruments work",
+       null
+      ]
+     }
+    },
+    {
+     "id": "i30",
+     "level": 5,
+     "text": "Which statement about the timpani is accurate?",
+     "solution": "Timpani (kettledrums) are tuned percussion; the player changes the pitch with a pedal or tuning handles",
+     "hint": "They often play the tonic and dominant notes in an orchestra",
+     "choice": {
+      "options": [
+       "They are untuned drums that cannot play definite pitches",
+       "They are tuned drums whose pitch can be changed, often with a pedal",
+       "They are a type of xylophone with wooden bars",
+       "They are played by plucking with the fingers"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Timpani are tuned to definite notes",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i31",
+     "level": 5,
+     "text": "Which marking would a composer write to make the violins sound muted and distant?",
+     "solution": "Con sordino means with a mute, which softens the string sound",
+     "hint": "Sordino is the Italian word for a mute",
+     "choice": {
+      "options": [
+       "Pizzicato",
+       "Fortissimo",
+       "Con sordino",
+       "Double stopping"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Fortissimo means very loud",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i32",
+     "level": 5,
+     "text": "Which statement about how brass instruments make their sound is accurate?",
+     "solution": "Brass players buzz their lips; valves or a slide change the length of tube and so the pitch",
+     "hint": "Try making a sound by pressing your lips together and blowing",
+     "choice": {
+      "options": [
+       "The player blows across an open hole",
+       "A reed vibrates against the mouthpiece",
+       "Strings vibrate inside the tube",
+       "The player buzzes their lips into a cup-shaped mouthpiece"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is how a flute works",
+       "That is woodwind",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i33",
+     "level": 5,
+     "text": "Which instruments form the rhythm section of a jazz big band?",
+     "solution": "The rhythm section (piano, guitar, bass and drums) supplies the chords, bass line and beat",
+     "hint": "This section keeps the beat and plays the chords, not the horn melodies",
+     "choice": {
+      "options": [
+       "Piano, guitar, double bass and drums",
+       "Trumpets, trombones and saxophones",
+       "Violins, violas and cellos",
+       "Flute, oboe and clarinet"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "These are the horn sections that play the melodies and riffs",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "i34",
+     "level": 5,
+     "text": "A DAW lets a musician record, edit and mix audio on a computer. Give what the letters DAW stand for.",
+     "solution": "DAW stands for digital audio workstation",
+     "hint": "D is for digital",
+     "short": {
+      "accept": [
+       "digital audio workstation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "music.styles",
+   "title": "Styles & history",
+   "aliases": [
+    "baroque music",
+    "music history",
+    "classical period",
+    "romantic period",
+    "minimalism",
+    "film music",
+    "popular music",
+    "jazz",
+    "blues",
+    "reggae",
+    "bhangra",
+    "samba"
+   ],
+   "questions": [
+    {
+     "id": "s01",
+     "level": 1,
+     "text": "Which composer belongs to the Baroque period?",
+     "solution": "J. S. Bach (1685–1750) is a Baroque composer; Bach's death in 1750 is often used to mark the end of the period",
+     "hint": "The Baroque period ended around 1750",
+     "choice": {
+      "options": [
+       "Johann Sebastian Bach",
+       "Claude Debussy",
+       "Steve Reich",
+       "Frédéric Chopin"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Steve Reich is a minimalist composer",
+       "Chopin is a Romantic composer"
+      ]
+     }
+    },
+    {
+     "id": "s02",
+     "level": 1,
+     "text": "Which country does reggae music come from?",
+     "solution": "Reggae developed in Jamaica in the late 1960s; Bob Marley is its best-known star",
+     "hint": "Bob Marley was born there",
+     "choice": {
+      "options": [
+       "Brazil",
+       "Jamaica",
+       "Trinidad and Tobago",
+       "Cuba"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Samba comes from Brazil",
+       null,
+       "Calypso and steel pans come from Trinidad and Tobago",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s03",
+     "level": 1,
+     "text": "Which country does samba come from?",
+     "solution": "Samba comes from Brazil and is famous at the Rio de Janeiro carnival",
+     "hint": "Think of the carnival in Rio de Janeiro",
+     "choice": {
+      "options": [
+       "Jamaica",
+       "Argentina",
+       "Brazil",
+       "Spain"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Argentina is famous for the tango",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s04",
+     "level": 1,
+     "text": "Bhangra comes from which region of South Asia? Give the region.",
+     "solution": "Bhangra began as a harvest folk dance in the Punjab region, now split between India and Pakistan",
+     "hint": "The region's name means 'five rivers'",
+     "short": {
+      "accept": [
+       "Punjab",
+       "the Punjab",
+       "Punjab region"
+      ]
+     }
+    },
+    {
+     "id": "s05",
+     "level": 1,
+     "text": "Which composer is famous for minimalist music?",
+     "solution": "Steve Reich, with Philip Glass and Terry Riley, is a leading minimalist composer",
+     "hint": "Minimalism began in the USA in the 1960s",
+     "choice": {
+      "options": [
+       "Wolfgang Amadeus Mozart",
+       "George Frideric Handel",
+       "Johann Sebastian Bach",
+       "Steve Reich"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Mozart is a Classical-period composer",
+       "Handel is a Baroque composer",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s06",
+     "level": 1,
+     "text": "Name the style of music that uses a 12-bar chord pattern and blue notes and began in African American communities in the southern USA.",
+     "solution": "The blues uses the 12-bar chord pattern and flattened 'blue' notes",
+     "hint": "The style is named after a colour linked with sadness",
+     "short": {
+      "accept": [
+       "blues",
+       "the blues",
+       "12-bar blues",
+       "12 bar blues",
+       "twelve bar blues"
+      ]
+     }
+    },
+    {
+     "id": "s07",
+     "level": 1,
+     "text": "Jazz singers sometimes improvise using nonsense syllables such as 'doo-bee-doo'. Give the term for this.",
+     "solution": "Scat singing uses nonsense syllables to improvise, as made famous by Louis Armstrong and Ella Fitzgerald",
+     "hint": "Ella Fitzgerald was famous for this style; the word is short",
+     "short": {
+      "accept": [
+       "scat",
+       "scat singing",
+       "scatting"
+      ],
+      "reject": [
+       "rap",
+       "rapping"
+      ]
+     }
+    },
+    {
+     "id": "s08",
+     "level": 2,
+     "text": "Which instrument is most typical of Baroque music, often playing the continuo part?",
+     "solution": "The harpsichord often played the basso continuo in Baroque music",
+     "hint": "It is a keyboard instrument that plucks its strings",
+     "choice": {
+      "options": [
+       "Harpsichord",
+       "Electric guitar",
+       "Synthesiser",
+       "Saxophone"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "The saxophone was invented in the 1840s, long after the Baroque period"
+      ]
+     }
+    },
+    {
+     "id": "s09",
+     "level": 2,
+     "text": "Which feature is typical of minimalist music?",
+     "solution": "Minimalism uses short repeated cells (loops) that change gradually, by layering, phasing or adding notes",
+     "hint": "Think of loops that slowly change",
+     "choice": {
+      "options": [
+       "Basso continuo played by a harpsichord",
+       "Short patterns repeated many times with gradual changes",
+       "Improvised scat singing over a swing rhythm",
+       "Terraced dynamics and a fugue"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is typical of Baroque music",
+       null,
+       "That is typical of jazz",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s10",
+     "level": 2,
+     "text": "In reggae, where do the guitar and keyboard usually play their short chords?",
+     "solution": "Reggae guitar and keyboard play short, choppy chords on the off-beats, called the skank",
+     "hint": "The chords avoid the strong beats",
+     "choice": {
+      "options": [
+       "Only on the first beat of every bar",
+       "Long chords held for a whole bar",
+       "On the off-beats (the 'skank')",
+       "Fast arpeggios on every semiquaver"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Reggae chords stress the off-beats, not beat 1",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s11",
+     "level": 2,
+     "text": "In samba, what is the surdo?",
+     "solution": "The surdo is the deep bass drum that keeps the steady pulse of a samba band",
+     "hint": "It is the lowest-sounding instrument in the band",
+     "choice": {
+      "options": [
+       "A small double bell played with a stick",
+       "A whistle used by the leader",
+       "A one-stringed instrument",
+       "A large bass drum that keeps the pulse"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is the agogo",
+       "That is the apito",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s12",
+     "level": 2,
+     "text": "Name the large double-headed barrel drum, played with two sticks, that drives bhangra music.",
+     "solution": "The dhol is the double-headed barrel drum at the heart of bhangra",
+     "hint": "It is a four-letter word and is hung from the player's shoulder",
+     "short": {
+      "accept": [
+       "dhol"
+      ]
+     }
+    },
+    {
+     "id": "s13",
+     "level": 2,
+     "text": "Which composer wrote music in the Classical period?",
+     "solution": "Mozart (1756–1791) is one of the main composers of the Classical period, with Haydn",
+     "hint": "The Classical period came after the Baroque",
+     "choice": {
+      "options": [
+       "Wolfgang Amadeus Mozart",
+       "Johann Sebastian Bach",
+       "Steve Reich",
+       "Antonio Vivaldi"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Bach is a Baroque composer",
+       null,
+       "Vivaldi is a Baroque composer"
+      ]
+     }
+    },
+    {
+     "id": "s14",
+     "level": 2,
+     "text": "In a samba band, what is the apito?",
+     "solution": "The leader (mestre) blows the apito whistle to signal changes, breaks and endings",
+     "hint": "The leader needs to be heard above all the drums",
+     "choice": {
+      "options": [
+       "A large bass drum",
+       "A whistle the leader uses to give signals",
+       "A shaker made from a gourd",
+       "A guitar-like instrument"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "s15",
+     "level": 3,
+     "text": "A piece uses a harpsichord, basso continuo, terraced dynamics and many ornaments. Which period is it most likely from?",
+     "solution": "Harpsichord continuo, terraced dynamics and lots of ornaments are typical of Baroque music (about 1600–1750)",
+     "hint": "Which period used continuo throughout?",
+     "choice": {
+      "options": [
+       "Classical",
+       "Romantic",
+       "Baroque",
+       "Minimalist"
+      ],
+      "correct": 2,
+      "feedback": [
+       "In the Classical period the piano replaced the harpsichord and crescendos became common",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s16",
+     "level": 3,
+     "text": "A piece for a huge orchestra uses very wide dynamics, rubato and tells a story from a poem. Which period is it most likely from?",
+     "solution": "Large orchestras, extreme dynamics, rubato and programme music are typical of the Romantic period",
+     "hint": "Which period loved big emotions and stories in music?",
+     "choice": {
+      "options": [
+       "Baroque",
+       "Classical",
+       "Renaissance",
+       "Romantic"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Baroque orchestras were small and used terraced dynamics",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s17",
+     "level": 3,
+     "text": "In a film, a short musical theme is linked to a character and returns whenever that character appears. What is it called?",
+     "solution": "A leitmotif is a recurring theme linked to a character, place or idea, used by Wagner and in film music",
+     "hint": "The term was made famous by the opera composer Wagner",
+     "choice": {
+      "options": [
+       "Leitmotif",
+       "Ostinato",
+       "Cadence",
+       "Riff"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "An ostinato is a pattern repeated continuously, not a theme linked to a character",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s18",
+     "level": 3,
+     "text": "In film music, what is mickey-mousing?",
+     "solution": "Mickey-mousing closely matches music to actions, as in many cartoons",
+     "hint": "The name comes from cartoons",
+     "choice": {
+      "options": [
+       "Music that the characters on screen can hear",
+       "Music that matches on-screen actions exactly, such as a slide for a fall",
+       "A slow love theme played on strings",
+       "Music played before the film starts"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is diegetic music",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s19",
+     "level": 3,
+     "text": "In a film scene, the characters can hear a radio playing a song. Give the term for music that the characters themselves can hear.",
+     "solution": "Music that exists inside the story world, such as a radio in the scene, is diegetic",
+     "hint": "It comes from the Greek word for the story being told",
+     "short": {
+      "accept": [
+       "diegetic",
+       "diegetic music",
+       "diegetic sound"
+      ],
+      "reject": [
+       "non-diegetic",
+       "non-diegetic music",
+       "non-diegetic sound"
+      ],
+      "feedback": {
+       "non-diegetic": "Non-diegetic music is added for the audience and the characters cannot hear it"
+      }
+     }
+    },
+    {
+     "id": "s20",
+     "level": 3,
+     "text": "A jazz musician makes up a melody on the spot over the chords. Give the term for this.",
+     "solution": "Making up music on the spot is improvisation, a key feature of jazz",
+     "hint": "The music is not written down in advance",
+     "short": {
+      "accept": [
+       "improvisation",
+       "improvising",
+       "improvise",
+       "improvised"
+      ]
+     }
+    },
+    {
+     "id": "s21",
+     "level": 3,
+     "text": "In the 12-bar blues, which chord is played in bars 5 and 6?",
+     "solution": "The 12-bar blues is I I I I | IV IV I I | V IV I I, so bars 5 and 6 use chord IV",
+     "hint": "Write out the three lines of four bars and find the second line",
+     "choice": {
+      "options": [
+       "Chord I (the tonic)",
+       "Chord V (the dominant)",
+       "Chord IV (the subdominant)",
+       "Chord VI (the submediant)"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Chord V first appears in bar 9",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s22",
+     "level": 4,
+     "text": "A piece has a steady pulse and short repeated patterns that slowly drift out of time with each other. Which style and technique does this describe?",
+     "solution": "Patterns drifting out of sync is phase shifting (phasing), a minimalist technique used by Steve Reich",
+     "hint": "Think of two identical loops that gradually move apart",
+     "choice": {
+      "options": [
+       "Baroque using a ground bass",
+       "Jazz using swing rhythm",
+       "Romantic using rubato",
+       "Minimalism using phase shifting"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "Rubato bends the tempo, but the pulse here stays steady",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s23",
+     "level": 4,
+     "text": "Which feature would show that a piece is Classical rather than Baroque?",
+     "solution": "Balanced periodic phrases and the Alberti bass (broken-chord accompaniment) are typical of the Classical period",
+     "hint": "Look for the feature that the Baroque did not use",
+     "choice": {
+      "options": [
+       "Balanced question-and-answer phrases with an Alberti bass accompaniment",
+       "A basso continuo played by harpsichord and cello",
+       "Terraced dynamics and a fugue",
+       "A ground bass repeated throughout"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Continuo is a Baroque feature",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s24",
+     "level": 4,
+     "text": "Which set of instruments is typical of traditional bhangra?",
+     "solution": "Traditional bhangra uses the dhol drum, the one-stringed tumbi and vocals",
+     "hint": "One of these is a large barrel drum played with two sticks",
+     "choice": {
+      "options": [
+       "Steel pans, bass guitar and drum kit",
+       "Dhol, tumbi and voice",
+       "Surdo, agogo and tamborim",
+       "Harpsichord, violin and cello"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Steel pans come from Trinidad",
+       null,
+       "These are samba instruments",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s25",
+     "level": 4,
+     "text": "Which statement about the basic 12-bar blues is accurate?",
+     "solution": "The basic 12-bar blues uses the three primary chords I, IV and V in a 12-bar pattern that repeats",
+     "hint": "Name the three primary chords",
+     "choice": {
+      "options": [
+       "Only chords I and V are used, over 8 bars",
+       "The key must always be minor",
+       "Chords I, IV and V are used over 12 bars",
+       "The pattern never repeats"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Blues is often in a major key with flattened blue notes",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s26",
+     "level": 4,
+     "text": "A style of music from Trinidad and Tobago uses tuned instruments made from oil drums. Give the name of these instruments.",
+     "solution": "Steel pans (steel drums) were developed in Trinidad and Tobago from oil drums",
+     "hint": "They are made from metal barrels and hit with sticks",
+     "short": {
+      "accept": [
+       "steel pans",
+       "steel pan",
+       "steel drums",
+       "steel drum",
+       "steelpan",
+       "pans"
+      ]
+     }
+    },
+    {
+     "id": "s27",
+     "level": 4,
+     "text": "Which statement about blue notes is accurate?",
+     "solution": "Blue notes are flattened (or bent) notes, usually the 3rd, 5th and 7th, giving the blues its sound",
+     "hint": "They sound slightly lower than the notes of the major scale",
+     "choice": {
+      "options": [
+       "They are sharpened notes, such as the 4th and 6th",
+       "They are notes played only by the trumpet",
+       "They are notes held for a whole bar",
+       "They are flattened notes, such as the 3rd and 7th of the scale"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Blue notes are lowered, not raised",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "s28",
+     "level": 4,
+     "text": "Name the Jamaican singer-songwriter who led the Wailers and made reggae famous around the world.",
+     "solution": "Bob Marley (1945–1981) and the Wailers took reggae to a worldwide audience",
+     "hint": "His first name is a short form of Robert",
+     "short": {
+      "accept": [
+       "Bob Marley",
+       "Marley",
+       "Robert Nesta Marley"
+      ]
+     }
+    },
+    {
+     "id": "s29",
+     "level": 5,
+     "text": "A Baroque bass line is played by a cello and a harpsichord, and the harpsichord player adds chords from figures written under the notes. What is this called?",
+     "solution": "The basso continuo was a bass line with figures showing the chords, played by a bass instrument and a keyboard",
+     "hint": "The part plays 'continuously' throughout the piece",
+     "choice": {
+      "options": [
+       "Basso continuo (figured bass)",
+       "Alberti bass",
+       "Walking bass",
+       "Ground bass"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Alberti bass is a Classical broken-chord pattern",
+       "Walking bass is a jazz bass line",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s30",
+     "level": 5,
+     "text": "Why do Baroque pieces often change suddenly between loud and soft instead of using gradual crescendos?",
+     "solution": "Terraced dynamics suited instruments like the harpsichord and organ, which change volume in steps, not gradually",
+     "hint": "Think about the keyboard instruments used at the time",
+     "choice": {
+      "options": [
+       "Composers were not allowed to write crescendos",
+       "Harpsichords and organs could not make gradual volume changes, so dynamics changed in blocks",
+       "Orchestras had no string instruments",
+       "Concerts were always held outdoors"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Baroque orchestras were based on strings",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s31",
+     "level": 5,
+     "text": "Which description fits a fugue?",
+     "solution": "A fugue is a polyphonic (contrapuntal) piece built on a subject that enters in each part in turn, as in Bach",
+     "hint": "J. S. Bach wrote many of these, each part entering in turn",
+     "choice": {
+      "options": [
+       "A homophonic song with verses and a chorus",
+       "A slow piece with a single melody and no accompaniment",
+       "A polyphonic piece in which a subject is introduced by one part and then imitated by the other parts",
+       "A dance in triple time with a trio section"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "That describes a minuet and trio"
+      ]
+     }
+    },
+    {
+     "id": "s32",
+     "level": 5,
+     "text": "Why did the piano gradually replace the harpsichord in the Classical period?",
+     "solution": "The pianoforte ('soft-loud') could make gradual dynamic changes, which suited Classical style",
+     "hint": "Its full name, pianoforte, gives a clue",
+     "choice": {
+      "options": [
+       "The piano had no strings, so it was louder",
+       "Composers banned the harpsichord",
+       "Only the piano could play more than one note at a time",
+       "The piano could play softer or louder depending on how hard the keys were pressed"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "Harpsichords can also play chords",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s33",
+     "level": 5,
+     "text": "In reggae, the bass drum and snare often hit together on beat 3 of the bar instead of beat 1. Give the name of this drum pattern.",
+     "solution": "The one drop pattern stresses beat 3 and leaves beat 1 empty",
+     "hint": "Beat 1 is 'dropped'",
+     "short": {
+      "accept": [
+       "one drop",
+       "one-drop",
+       "one drop rhythm"
+      ]
+     }
+    },
+    {
+     "id": "s34",
+     "level": 5,
+     "text": "Which statement about British bhangra is accurate?",
+     "solution": "British bhangra, developed by the Punjabi community in the UK, fuses folk bhangra with Western pop and dance styles",
+     "hint": "It is a fusion style made by a community living in Britain",
+     "choice": {
+      "options": [
+       "Traditional Punjabi music is mixed with Western pop, dance or hip hop styles",
+       "A form of Baroque church music",
+       "A style that began in Brazil for carnival processions",
+       "Music for unaccompanied voices only"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That describes samba",
+       null
+      ]
+     }
+    },
+    {
+     "id": "s35",
+     "level": 5,
+     "text": "Which statement about Romantic music is accurate?",
+     "solution": "Romantic composers wrote programme music and used larger orchestras with a wide range of dynamics",
+     "hint": "Think about stories, emotions and big orchestras",
+     "choice": {
+      "options": [
+       "Composers mostly used the harpsichord with a basso continuo",
+       "Composers often wrote programme music that tells a story or describes a scene",
+       "Orchestras became smaller than in the Classical period",
+       "Dynamics were mostly terraced"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Romantic orchestras grew larger",
+       null
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "music.y{year}.elements",
+      "label": "Elements of music",
+      "skills": [
+       "music.elements"
+      ]
+     },
+     {
+      "id": "music.y{year}.theory",
+      "label": "Notation & theory",
+      "skills": [
+       "music.theory"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "music.y{year}.instruments",
+      "label": "Instruments & ensembles",
+      "skills": [
+       "music.instruments"
+      ]
+     },
+     {
+      "id": "music.y{year}.styles",
+      "label": "Styles & history",
+      "skills": [
+       "music.styles"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

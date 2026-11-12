@@ -1,0 +1,29 @@
+{
+  "subject_id": "computer_science",
+  "skills": [
+    {"id": "computer_science.systems", "title": "Computer systems",
+     "aliases": ["fetch decode execute", "cpu", "von neumann", "cache", "ram", "rom", "virtual memory", "secondary storage", "operating system", "compiler", "interpreter"],
+     "questions": [
+       {"id": "sy01", "level": 1, "text": "What does CPU stand for?",
+        "choice": {"options": ["Central processing unit", "Computer power unit", "Central program utility", "Control processing unit"], "correct": 0},
+        "solution": "CPU stands for central processing unit: it processes data and instructions",
+        "hint": "It is the part of the computer that does the processing"}
+     ]},
+    {"id": "computer_science.networks", "title": "Networks & cyber security",
+     "aliases": ["network topologies", "networks", "lan", "wan", "protocols", "ip address", "mac address", "malware", "phishing", "sql injection", "encryption", "firewall"],
+     "questions": [
+       {"id": "nw01", "level": 1, "text": "What does LAN stand for?",
+        "choice": {"options": ["Local area network", "Large access network", "Linked area node", "Local access node"], "correct": 0},
+        "solution": "LAN stands for local area network: a network covering a small area such as one building",
+        "hint": "It covers a small geographical area"}
+     ]},
+    {"id": "computer_science.algorithms", "title": "Algorithms & programming",
+     "aliases": ["binary search", "linear search", "bubble sort", "merge sort", "insertion sort", "pseudocode", "trace table", "data types", "iteration", "validation", "sql"],
+     "questions": [
+       {"id": "al01", "level": 1, "text": "Which data type stores a whole number, such as 42?",
+        "choice": {"options": ["Integer", "Real (float)", "Boolean", "Character"], "correct": 0},
+        "solution": "An integer is a whole number; a real (float) has a decimal part",
+        "hint": "Think of the data type for counting things"}
+     ]}
+  ]
+}

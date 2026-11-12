@@ -24,10 +24,12 @@ disagree, the document wins.
 | `TUTOR_DB` | SQLite path (default `data/tutor.db`, or `data/tutor-<bot>.db` when `BOT` is set) |
 | `TUTOR_LLM_DAILY_LIMIT` | LLM calls per student per day (default 40) |
 | `TUTOR_LLM_GLOBAL_DAILY_LIMIT` | LLM calls per day for all students together (default 1000) |
+| `TUTOR_LLM_MARKING` | 1 = the LLM marks extended-practice answers (costs money; default off) |
 
 Put them in `.env` (gitignored, never commit) or the environment. The cloud environment must allow
 `api.telegram.org` (and `api.anthropic.com` if the LLM is used).
-- `python3 -m tutor --check` checks the token (and the LLM).
+- `python3 -m tutor --check` checks the token (and the LLM) and prints `Subjects: N loaded` plus any broken
+  content source (a broken file is skipped at runtime, never stops the bot, but always fails the tests).
 - `python3 -m tutor` runs the bot (long polling; it restarts itself after unexpected errors). Only ONE
   getUpdates consumer per token.
 - Do NOT write anything to the user in the Claude chat about bot activity; speak only when asked.
@@ -45,14 +47,19 @@ plain `/flags done` marks all). Students can send `/delete_my_data` to erase eve
 except unreviewed safety flags: those stay until the owner has reviewed them, then they are deleted too.
 
 ## 5. Adding a subject
-Add one file `tutor/subjects/<name>.py` with `def register(reg): reg.register(Subject(...), [Skill(...), ...])`,
-or a JSON question bank (`tutor/content/bank.py`). The property tests cover new skills automatically.
-Spot-check generated problems with `python3 -m tutor sample SKILL_ID [LEVEL] [N]`.
+A subject is either a JSON bank `tutor/subjects/banks/<id>.json` (loaded automatically) or a module
+`tutor/subjects/<name>.py` with `def register(reg): reg.register(Subject(...), [Skill(...), ...])`, optionally
+mixing in bank skills from a pack `tutor/subjects/packs/<id>.json` (`load_pack("<id>", "<id>")`). Answer kinds:
+`choice` and `short` (marked by code), v1 number kinds, and `rubric` (extended practice: model answer, no marking).
+The spec (format, validation, content rules) is `docs/ARCHITECTURE_V2.md`. Check a subject with
+`python3 -m tutor audit --subject <id>` (one file: `--file PATH`; everything: `audit`) — no ERROR lines allowed.
+Spot-check problems with `python3 -m tutor sample SKILL_ID [LEVEL] [N]`. The tests cover new skills automatically.
 
 ## 6. Tests
 **ALWAYS run `python3 -m unittest discover -s tests` before any update or deploy, and never ship red.**
-The default run takes under a minute (60 seeds per generated skill). Before every deploy ALSO run the full
-property test: `TUTOR_FULL_TESTS=1 python3 -m unittest discover -s tests` (300 seeds, about 2 minutes).
+The default run takes under a minute (30 seeds per generated skill, plus every bank question). Before every
+deploy ALSO run the full property test: `TUTOR_FULL_TESTS=1 python3 -m unittest discover -s tests` (300 seeds,
+about 2 minutes). Run `python3 -m tutor audit` too: it must show no ERROR lines.
 
 ## 7. Rules
 - Correctness is decided by code (the checker), never by the LLM; the LLM only phrases hints and feedback.
@@ -85,7 +92,19 @@ CORRECT       = "✅ Correct! {solution}."
 WRONG         = "❌ Not quite. {why}. Correct answer: {answer}"
 HINT          = "💡 Hint: {hint}"
 SKIP          = "👀 No problem — here's how to do it: {solution}. Answer: {answer}"
+PROBLEM_CHOICE      = "Problem {n}: {text}\n\nReply with the letter of your answer — tap a button below 😊"
+PROBLEM_CHOICE_EXAM = "Problem {n} (1 mark): {text}\n\nReply with the letter of your answer — tap a button below 😊"
+PROBLEM_SHORT       = "Problem {n}: {text}\n\nSend me your answer — just the word or short phrase 😊"
+PROBLEM_SHORT_EXAM  = "Problem {n} (1 mark): {text}\n\nSend me your answer — just the word or short phrase 😊"
+PROBLEM_RUBRIC      = "Problem {n} (extended practice, {marks} mark{s}): {text}\n\nWrite your answer, then I'll show you a model answer to compare with yours 😊"
+CORRECT_NOTE        = "✅ Correct! {solution}. {note}"
+CHOICE_UNPARSED     = "🤔 Please reply with just one letter: {letters}. Or type «hint» for a hint, or «skip» to see the solution."
+SHORT_UNPARSED      = "🤔 I couldn't find one clear answer in that. Send just the word or short phrase — or type «hint» for a hint, or «skip» to see the solution."
+WHY_FACT            = "Here's why: {solution}"
 ```
+Notes (`{note}`): "Watch the spelling: {answer}" / "Watch the accents: {answer}". A wrong choice/short answer
+without specific feedback gets WHY_FACT; rubric answers are only marked when `TUTOR_LLM_MARKING=1` and an API
+key is set, otherwise the model answer is shown (UNMARKABLE) and no attempt is recorded.
 Other texts (hints, unparsed, off-topic, cheat, distress, errors, owner texts) are in `tutor/texts.py`.
 
 Keyboards (never send `⚙️ Change year / topic`):
@@ -93,8 +112,15 @@ Keyboards (never send `⚙️ Change year / topic`):
 Year:     [Year 7 ] [Year 8 ] [Year 9 ]
           [Year 10] [Year 11] [Year 12]
           [Year 13] [Year 1–6]
-Subject:  [Maths] [Physics]            (Year 8: [Maths] only)
+Subject (Years 10/11, 35 subjects, 2 per row in this order):
+          [Maths] [English Language] / [English Literature] [Biology] / [Chemistry] [Physics] /
+          [Further Maths] [Statistics] / [Computer Science] [Astronomy] / [History] [Geography] /
+          [Religious Studies] [Citizenship] / [Classical Civ] [Psychology] / [Sociology] [Economics] /
+          [Business] [Media Studies] / [Film Studies] [French] / [Spanish] [German] / [Italian] [Russian] /
+          [Latin] [Arabic] / [Mandarin Chinese] [Music] / [Drama] [Design & Tech] / [Food & Nutrition] [PE] /
+          [Art & Design]
           [🎓 Change year]
+          (Years 7–9: [Maths] only)
 Topic (Year 11 Maths):
           [GCSE Higher: algebra & functions] [GCSE Higher: trig & geometry]
           [GCSE Foundation: number         ] [GCSE Foundation: geometry   ]
@@ -102,7 +128,9 @@ Topic (Year 11 Maths):
           [🎓 Change year                  ] [📘 Change subject           ]
 ```
 Years 1-6, 12 and 13 answer YEAR_NOT_READY and keep the previous year. The topic keyboard stays attached
-to lesson messages so it is always reachable.
+to lesson messages so it is always reachable. While a multiple-choice problem is open, a letter row
+(`[A] [B] [C] [D]`, one button per option) sits on top of the topic keyboard. Problems are not repeated:
+the last 30 problems per student and skill are remembered.
 
 ## 9. Legacy `relay/`
 `relay/` (Claude answers through a monitor) and `bot.py` are kept, but never run them at the same time as

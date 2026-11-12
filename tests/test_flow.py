@@ -2,6 +2,7 @@ import random
 import unittest
 
 import helpers
+import spec
 from helpers import (S, snap, send, make_engine, get_codes, verify, to_topic, answer_of, keyboard_problem,
                      YEAR_KB, SUBJECT_KB_11, SUBJECT_KB_MATHS_ONLY, TOPIC_KB_MATHS_11, TOPIC_KB_KS3,
                      TOPIC_KB_PHYSICS, CHANGE_YEAR, CHANGE_SUBJECT, LEGACY_CHANGE, HIGHER_ALGEBRA,
@@ -191,7 +192,7 @@ class TestSubjectAndTopic(FlowCase):
         self.assertEqual(self.student().subject, "physics")
 
     def test_unknown_subject_repeats_subject_ask(self):
-        for t in ("English", "blah", "42", "🙂"):
+        for t in ("Klingon", "blah", "42", "🙂"):
             self.assertEqual(self.say(CH, t), [S(CH, SUBJECT_ASK(11), SUBJECT_KB_11)], t)
         self.assertEqual(self.student().step, "subject")
 
@@ -407,7 +408,8 @@ class TestMisc(FlowCase):
 
 
 class TestKeyboardInvariant(FlowCase):
-    POOL = ["Maths", "Physics", "Year 7", "Year 8", "Year 10", "Year 11", "Year 12", "Year 13", "Year 1–6",
+    POOL = ["English Literature", "Macbeth", "A", "B", "C", "D", "E", "Biology", "Cells & transport", "French",
+            "Grammar & tenses", "History", "Cold War", "Mandarin Chinese", "Art & Design", "Maths", "Physics", "Year 7", "Year 8", "Year 10", "Year 11", "Year 12", "Year 13", "Year 1–6",
             CHANGE_YEAR, CHANGE_SUBJECT, LEGACY_CHANGE, "My own topic", "Past paper practice", "hint", "skip",
             "42", "x=3", "pythagoras", "photosynthesis", "do my homework", "I want to die", "", " ", "😀",
             HIGHER_ALGEBRA, "KS3: algebra", "Forces & motion", "Energy", "/start", "?", "help me", "stuck",
@@ -439,6 +441,131 @@ class TestKeyboardInvariant(FlowCase):
             self.assertIsNone(prob, f"step {i} after {t!r}: {prob}")
             for o in out:
                 self.assertIn(o.chat_id, (CH, 999))
+
+
+class TestV2Subjects(FlowCase):
+    """docs/ARCHITECTURE_V2.md section 4: the 35-subject keyboard and the per-subject topic keyboards."""
+
+    def test_subject_ask_has_the_exact_35_subject_keyboard(self):
+        out = self.say(CH, "hello")                       # unverified: code request
+        self.assertEqual(out, [S(CH, CODE_REQUEST)])
+        verify(self.engine, CH)
+        kb = self.say(CH, "/start")[0][2]
+        self.assertEqual(kb, helpers.SUBJECT_KB_10_11)
+        self.assertEqual(len(helpers.flat(kb)), 35 + 1)
+        self.assertEqual(kb[0], ("Maths", "English Language"))
+        self.assertEqual(kb[-2], ("Art & Design",))
+        self.assertEqual(kb[-1], (CHANGE_YEAR,))
+        self.assertEqual(len(kb), 19)
+
+    def test_year_10_and_11_both_show_35_subjects_and_years_7_to_9_only_maths(self):
+        verify(self.engine, CH)
+        for year, kb in ((10, helpers.SUBJECT_KB_10_11), (11, helpers.SUBJECT_KB_10_11), (9, SUBJECT_KB_MATHS_ONLY),
+                         (8, SUBJECT_KB_MATHS_ONLY), (7, SUBJECT_KB_MATHS_ONLY)):
+            send(self.engine, CH, CHANGE_YEAR)
+            self.assertEqual(self.say(CH, f"Year {year}"), [S(CH, SUBJECT_ASK(year), kb)], year)
+
+    def test_english_literature_topic_keyboard(self):
+        verify(self.engine, CH)
+        rows = (("Macbeth", "A Christmas Carol"), ("An Inspector Calls", "Conflict poetry"))
+        self.assertEqual(self.say(CH, "English Literature"), [S(CH, TOPIC_ASK(11), helpers.topic_kb(rows))])
+        self.assertEqual(self.student().subject, "english_literature")
+
+    def test_every_subject_gives_its_topic_keyboard_in_both_years(self):
+        verify(self.engine, CH)
+        fails = []
+        for year in (10, 11):
+            send(self.engine, CH, CHANGE_YEAR)
+            send(self.engine, CH, f"Year {year}")
+            for sub in spec.SUBJECTS:
+                if sub["rows"] is None:
+                    rows = {"maths": helpers.MATHS_ROWS_10_11, "physics": helpers.PHYSICS_ROWS}[sub["id"]]
+                else:
+                    rows = [tuple(lbl for lbl, _, _ in row) for row in sub["rows"]]
+                out = self.say(CH, sub["title"])
+                want = [S(CH, TOPIC_ASK(year), helpers.topic_kb(rows))]
+                if out != want:
+                    fails.append(f"[{sub['owner']}] Y{year} {sub['title']}: {out[0][2] if out and len(out[0]) > 2 else out}")
+                send(self.engine, CH, CHANGE_SUBJECT)
+        self.assertEqual(fails, [], "\n".join(fails[:8]))
+
+    def test_every_new_topic_starts_a_lesson_with_the_right_message_and_keyboard(self):
+        verify(self.engine, CH)
+        fails = []
+        for year in (10, 11):
+            send(self.engine, CH, CHANGE_YEAR)
+            send(self.engine, CH, f"Year {year}")
+            for sub in spec.SUBJECTS:
+                if sub["rows"] is None:
+                    continue
+                rows = [tuple(lbl for lbl, _, _ in row) for row in sub["rows"]]
+                send(self.engine, CH, sub["title"])
+                for label in [lbl for r in rows for lbl in r] + ["Past paper practice"]:
+                    out = send(self.engine, CH, label)
+                    where = f"[{sub['owner']}] Y{year} {sub['title']} / {label}"
+                    if len(out) != 2 or out[0].text != TOPIC_START(label):
+                        fails.append(f"{where}: replies {[o.text[:40] for o in out]}")
+                        send(self.engine, CH, CHANGE_SUBJECT)
+                        send(self.engine, CH, sub["title"])
+                        continue
+                    p = self.store.get_pending(CH)
+                    kind = p.problem.answer.kind
+                    exam = label == "Past paper practice"
+                    if kind == "choice":
+                        want = helpers.PROBLEM_CHOICE_EXAM(1, p.problem.text) if exam else helpers.PROBLEM_CHOICE(1, p.problem.text)
+                        kb = helpers.topic_kb(rows)
+                        kb = (helpers.choice_row(len(p.problem.answer.value["options"])),) + kb
+                    elif kind == "short":
+                        want = helpers.PROBLEM_SHORT_EXAM(1, p.problem.text) if exam else helpers.PROBLEM_SHORT(1, p.problem.text)
+                        kb = helpers.topic_kb(rows)
+                    elif kind == "rubric":
+                        want = helpers.PROBLEM_RUBRIC(1, p.problem.answer.max_marks, p.problem.text)
+                        kb = helpers.topic_kb(rows)
+                    else:
+                        marks = {1: 1, 2: 2, 3: 2, 4: 3, 5: 4}[p.gen_level]
+                        want = helpers.PROBLEM_EXAM(1, marks, p.problem.text) if exam else helpers.PROBLEM(1, p.problem.text)
+                        kb = helpers.topic_kb(rows)
+                    got_kb = None if out[1].keyboard is None else tuple(tuple(r) for r in out[1].keyboard)
+                    if out[1].text != want:
+                        fails.append(f"{where}: problem message {out[1].text[:70]!r} != {want[:70]!r}")
+                    elif got_kb != kb:
+                        fails.append(f"{where}: keyboard {got_kb} != {kb}")
+                    elif keyboard_problem(out, CH):
+                        fails.append(f"{where}: {keyboard_problem(out, CH)}")
+                    send(self.engine, CH, CHANGE_SUBJECT)
+                    send(self.engine, CH, sub["title"])
+                send(self.engine, CH, CHANGE_SUBJECT)
+        self.assertEqual(fails, [], f"{len(fails)} failure(s):\n" + "\n".join(fails[:8]))
+
+    def test_a_lesson_in_every_new_subject_runs_with_correct_answers(self):
+        """Answer 8 problems per subject with the stored display answer (rubric: any text)."""
+        fails = []
+        chat = 50
+        verify(self.engine, chat)
+        for sub in spec.SUBJECTS:
+            if sub["rows"] is None:
+                continue
+            send(self.engine, chat, sub["title"])
+            label = sub["rows"][0][0][0]
+            send(self.engine, chat, label)
+            for n in range(8):
+                p = self.store.get_pending(chat)
+                if p is None:
+                    fails.append(f"[{sub['owner']}] {sub['title']}: no pending problem at step {n}")
+                    break
+                ans = p.problem.answer
+                text = "my written answer" if ans.kind == "rubric" else ans.display
+                out = send(self.engine, chat, text)
+                top = out[0].text
+                ok = top.startswith("✅ Correct!") or (ans.kind == "rubric" and top.startswith("📝"))
+                if not ok or any(o.text == ERROR for o in out):
+                    fails.append(f"[{sub['owner']}] {sub['title']} step {n} ({ans.kind}, {p.skill}): {top[:70]!r}")
+                    break
+                if keyboard_problem(out, chat):
+                    fails.append(f"[{sub['owner']}] {sub['title']} step {n}: {keyboard_problem(out, chat)}")
+                    break
+            send(self.engine, chat, CHANGE_SUBJECT)
+        self.assertEqual(fails, [], "\n".join(fails[:8]))
 
 
 if __name__ == "__main__":

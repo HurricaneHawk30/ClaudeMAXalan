@@ -46,6 +46,61 @@ NO_FLAGS = "No new flags."
 FLAGS_USAGE = "Usage: /flags (list new flags), /flags done [N] (mark flags up to #N as reviewed)"
 
 
+# ---- v2 (docs/ARCHITECTURE_V2.md section 3.1 and 2.3), hard-coded
+PROBLEM_CHOICE_TAIL = "\n\nReply with the letter of your answer — tap a button below 😊"
+PROBLEM_SHORT_TAIL = "\n\nSend me your answer — just the word or short phrase 😊"
+RUBRIC_TAIL = "\n\nWrite your answer, then I'll show you a model answer to compare with yours 😊"
+CHOICE_LETTERS = "ABCDE"
+FORM_CASE = "Check your capital letters — in symbols and formulae they change the meaning"
+SHORT_UNPARSED = "🤔 I couldn't find one clear answer in that. Send just the word or short phrase — or type «hint» for a hint, or «skip» to see the solution."
+
+
+def PROBLEM_CHOICE(n, text):
+    return f"Problem {n}: {text}{PROBLEM_CHOICE_TAIL}"
+
+
+def PROBLEM_CHOICE_EXAM(n, text):
+    return f"Problem {n} (1 mark): {text}{PROBLEM_CHOICE_TAIL}"
+
+
+def PROBLEM_SHORT(n, text):
+    return f"Problem {n}: {text}{PROBLEM_SHORT_TAIL}"
+
+
+def PROBLEM_SHORT_EXAM(n, text):
+    return f"Problem {n} (1 mark): {text}{PROBLEM_SHORT_TAIL}"
+
+
+def PROBLEM_RUBRIC(n, marks, text):
+    s = "" if marks == 1 else "s"
+    return f"Problem {n} (extended practice, {marks} mark{s}): {text}{RUBRIC_TAIL}"
+
+
+def CORRECT_NOTE(solution, note):
+    return f"✅ Correct! {solution.rstrip('. ')}. {note}"
+
+
+def CHOICE_UNPARSED(letters):
+    return f"🤔 Please reply with just one letter: {letters}. Or type «hint» for a hint, or «skip» to see the solution."
+
+
+def WHY_FACT(solution):
+    return f"Here's why: {solution.rstrip('. ')}"
+
+
+def NOTE_SPELLING(answer):
+    return f"Watch the spelling: {answer}"
+
+
+def NOTE_ACCENTS(answer):
+    return f"Watch the accents: {answer}"
+
+
+def LETTERS_TEXT(n):
+    ls = list(CHOICE_LETTERS[:n])
+    return ", ".join(ls[:-1]) + " or " + ls[-1]
+
+
 def FLAGS_DONE(n):
     return f"✅ {n} flag{'' if n == 1 else 's'} marked as reviewed."
 
@@ -156,13 +211,26 @@ def FLAG_ALERT(kind, name, chat, text):
 # Keyboards (section 4.2)
 # --------------------------------------------------------------------------
 YEAR_KB = (("Year 7", "Year 8", "Year 9"), ("Year 10", "Year 11", "Year 12"), ("Year 13", "Year 1–6"))
-SUBJECT_KB_11 = (("Maths", "Physics"), (CHANGE_YEAR,))
+# section 4: the 35 subjects of Years 10-11 in registry order, 2 per row, then the change-year row
+SUBJECT_TITLES_10_11 = [
+    "Maths", "English Language", "English Literature", "Biology", "Chemistry", "Physics", "Further Maths",
+    "Statistics", "Computer Science", "Astronomy", "History", "Geography", "Religious Studies", "Citizenship",
+    "Classical Civ", "Psychology", "Sociology", "Economics", "Business", "Media Studies", "Film Studies", "French",
+    "Spanish", "German", "Italian", "Russian", "Latin", "Arabic", "Mandarin Chinese", "Music", "Drama",
+    "Design & Tech", "Food & Nutrition", "PE", "Art & Design"]
+SUBJECT_KB_10_11 = tuple(tuple(SUBJECT_TITLES_10_11[i:i + 2]) for i in range(0, 35, 2)) + ((CHANGE_YEAR,),)
+SUBJECT_KB_11 = SUBJECT_KB_10_11          # v1 name kept for the existing tests
 SUBJECT_KB_MATHS_ONLY = (("Maths",), (CHANGE_YEAR,))
 BOTTOM = ((PAST, OWN), (CHANGE_YEAR, CHANGE_SUBJECT))
 
 
 def topic_kb(rows):
     return tuple(tuple(r) for r in rows) + BOTTOM
+
+
+def choice_row(n):
+    """Section 3.1: choice_kb(n, rows) = (letters,) + topic_kb(rows); this is the letter row."""
+    return tuple(CHOICE_LETTERS[:n])
 
 
 MATHS_ROWS_10_11 = (("GCSE Higher: algebra & functions", "GCSE Higher: trig & geometry"),
@@ -216,14 +284,16 @@ def shared_registry():
     return _SHARED["reg"]
 
 
-def make_engine(llm=None, owner_id=999, limit=40, registry=None, path=":memory:", flood=20, global_limit=1000):
+def make_engine(llm=None, owner_id=999, limit=40, registry=None, path=":memory:", flood=20, global_limit=1000,
+                llm_marking=False):
     from tutor.config import Config
     from tutor.db import Store
     from tutor.engine import Engine
     clock = FakeClock()
     store = Store(path)
+    extra = {"llm_marking": True} if llm_marking else {}
     cfg = Config(owner_id=owner_id, llm_daily_limit=limit, flood_per_minute=flood, db_path=path,
-                 llm_global_daily_limit=global_limit)
+                 llm_global_daily_limit=global_limit, **extra)
     reg = registry if registry is not None else shared_registry()
     engine = Engine(store, cfg, registry=reg, llm=llm, clock=clock, rng=random.Random(7))
     return engine, store, clock
@@ -282,7 +352,7 @@ def stamp(ts):
     return time.strftime("%Y-%m-%d %H:%M", time.gmtime(ts))
 
 
-def keyboard_problem(replies, chat, titles=("Maths", "Physics", "Demo")):
+def keyboard_problem(replies, chat, titles=tuple(SUBJECT_TITLES_10_11) + ("Demo", "Demo2")):
     """Section 3.7 invariant. Returns None when fine, else a description."""
     mine = [o for o in replies if o.chat_id == chat]
     if not mine:
@@ -346,6 +416,12 @@ def perturb(answer):
     if k == "ratio":
         parts = list(answer.value)
         return ":".join(str(x) for x in [parts[0] + 1] + parts[1:])
+    if k == "choice":
+        correct = answer.value["correct"]
+        first_wrong = next(j for j in range(len(answer.value["options"])) if j != correct)
+        return CHOICE_LETTERS[first_wrong]
+    if k == "short":
+        return "qq" + answer.display + "qq"
     return ""
 
 
@@ -462,3 +538,82 @@ def to_demo_topic(engine, chat, topic, first_name="Zorblax"):
     verify(engine, chat, first_name=first_name)
     send(engine, chat, "Demo", first_name=first_name)
     return send(engine, chat, topic, first_name=first_name)
+
+
+# --------------------------------------------------------------------------
+# v2 demo registry: choice, short, rubric and number skills (docs/ARCHITECTURE_V2.md section 7, test_lesson)
+# --------------------------------------------------------------------------
+V2_OPTIONS = ["Nucleus", "Mitochondria", "Ribosome", "Cell membrane"]
+V2_FB_NUCLEUS = "The nucleus stores the DNA"
+V2_SOLUTION_CHOICE = "Mitochondria release energy by respiration"
+V2_SOLUTION_SHORT = "Plants make glucose by photosynthesis"
+V2_ROWS = (("Choice", "Choice plain"), ("Short", "Short case"), ("Numbers", "Essay"), ("Choice and numbers",))
+V2_SUBJECT_KB = (("Demo2",), (CHANGE_YEAR,))
+
+
+def v2_registry(kinds=("choice", "choice_plain", "short", "shortcase", "number", "essay")):
+    """Subject 'Demo2' (Year 11) with one skill per kind. Topic labels: Choice, Choice plain, Short, Short case,
+    Numbers, Essay and (when both exist) 'Choice and numbers'. Past paper practice is the union of all skills."""
+    from tutor.content import (Answer, Problem, Registry, Skill, Subject, Topic, YearSpec, build_choice, build_short)
+
+    def choice_gen(sid, with_fb):
+        def gen(level, seed):
+            text, ans, mist = build_choice("Which organelle releases energy by respiration?", V2_OPTIONS, 1, seed,
+                                           [V2_FB_NUCLEUS, None, None, None] if with_fb else None)
+            return Problem(sid, level, seed, text, ans, V2_SOLUTION_CHOICE, "Think about where respiration happens",
+                           mist, ref=f"{sid}#c1")
+        return gen
+
+    def short_gen(level, seed):
+        ans, mist = build_short(["photosynthesis"], ["respiration"], "any")
+        return Problem("demo2.short", level, seed, "Name the process by which plants make glucose using light. Give the term.",
+                       ans, V2_SOLUTION_SHORT, "The name starts with photo", mist, ref="demo2.short#s1")
+
+    def case_gen(level, seed):
+        ans, mist = build_short(["CO2"], [], "case")
+        return Problem("demo2.shortcase", level, seed, "Give the chemical formula of carbon dioxide.", ans,
+                       "Carbon dioxide is CO2", "One carbon atom and some oxygen atoms", mist, ref="demo2.shortcase#s1")
+
+    def number_gen(level, seed):
+        r = random.Random(seed)
+        a, b = r.randint(10, 49), r.randint(10, 49)
+        return Problem("demo2.number", level, seed, f"What is {a} + {b}?", Answer("number", str(a + b), float(a + b)),
+                       f"{a} + {b} = {a + b}", "Add the units first")
+
+    def essay_gen(level, seed):
+        return Problem("demo2.essay", level, seed, "Explain why plants need light.",
+                       Answer("rubric", "Because plants need light for photosynthesis", None,
+                              mark_scheme="1 mark for light; 1 mark for energy", max_marks=2),
+                       "Plants use light for photosynthesis", "Think about energy")
+
+    defs = {
+        "choice": ("demo2.choice", "Choice", choice_gen("demo2.choice", True)),
+        "choice_plain": ("demo2.choice_plain", "Choice plain", choice_gen("demo2.choice_plain", False)),
+        "short": ("demo2.short", "Short", short_gen),
+        "shortcase": ("demo2.shortcase", "Short case", case_gen),
+        "number": ("demo2.number", "Numbers", number_gen),
+        "essay": ("demo2.essay", "Essay", essay_gen),
+    }
+    skills, topics = [], []
+    for k in kinds:
+        sid, label, gen = defs[k]
+        skills.append(Skill(sid, "demo2", label, (label.lower(),), gen))
+        topics.append(Topic(f"demo2.y11.{k}", label, (sid,)))
+    if "choice" in kinds and "number" in kinds:
+        topics.append(Topic("demo2.y11.mixed", "Choice and numbers", ("demo2.choice", "demo2.number")))
+    rows = tuple(tuple(topics[i:i + 2]) for i in range(0, len(topics), 2))
+    reg = Registry()
+    reg.register(Subject("demo2", "Demo2", 1, {11: YearSpec(rows=rows)}), skills)
+    return reg
+
+
+def to_v2_topic(engine, chat, topic, first_name="Zorblax"):
+    verify(engine, chat, first_name=first_name)
+    send(engine, chat, "Demo2", first_name=first_name)
+    return send(engine, chat, topic, first_name=first_name)
+
+
+def v2_kb(reg, n=None):
+    """Expected lesson keyboard of the Demo2 registry: the letter row on top when n is given."""
+    rows = reg.topic_rows("demo2", 11)
+    return ((choice_row(n),) if n else ()) + topic_kb(rows)

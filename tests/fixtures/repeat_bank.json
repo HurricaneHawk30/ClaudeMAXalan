@@ -1,0 +1,253 @@
+{
+ "subject": {
+  "id": "rep",
+  "title": "Repeat Test",
+  "order": 97
+ },
+ "skills": [
+  {
+   "id": "rep.six",
+   "title": "Six items",
+   "aliases": [
+    "six items",
+    "six",
+    "sixes"
+   ],
+   "questions": [
+    {
+     "id": "s1",
+     "level": 1,
+     "text": "Repeat six question number 1: which colour is number 1 in the list?",
+     "choice": {
+      "options": [
+       "Red",
+       "Pink",
+       "Grey"
+      ],
+      "correct": 0
+     },
+     "solution": "Number 1 is Red",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "s2",
+     "level": 1,
+     "text": "Repeat six question number 2: which colour is number 2 in the list?",
+     "choice": {
+      "options": [
+       "Orange",
+       "Pink",
+       "Grey"
+      ],
+      "correct": 0
+     },
+     "solution": "Number 2 is Orange",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "s3",
+     "level": 1,
+     "text": "Repeat six question number 3: which colour is number 3 in the list?",
+     "choice": {
+      "options": [
+       "Yellow",
+       "Pink",
+       "Grey"
+      ],
+      "correct": 0
+     },
+     "solution": "Number 3 is Yellow",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "s4",
+     "level": 1,
+     "text": "Repeat six question number 4: which colour is number 4 in the list?",
+     "choice": {
+      "options": [
+       "Green",
+       "Pink",
+       "Grey"
+      ],
+      "correct": 0
+     },
+     "solution": "Number 4 is Green",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "s5",
+     "level": 1,
+     "text": "Repeat six question number 5: which colour is number 5 in the list?",
+     "choice": {
+      "options": [
+       "Blue",
+       "Pink",
+       "Grey"
+      ],
+      "correct": 0
+     },
+     "solution": "Number 5 is Blue",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "s6",
+     "level": 1,
+     "text": "Repeat six question number 6: which colour is number 6 in the list?",
+     "choice": {
+      "options": [
+       "Violet",
+       "Pink",
+       "Grey"
+      ],
+      "correct": 0
+     },
+     "solution": "Number 6 is Violet",
+     "hint": "Think about it carefully"
+    }
+   ]
+  },
+  {
+   "id": "rep.two",
+   "title": "Two items",
+   "aliases": [
+    "two items",
+    "two",
+    "twos"
+   ],
+   "questions": [
+    {
+     "id": "t1",
+     "level": 1,
+     "text": "Repeat two question one: name the first day of the week. Give the day.",
+     "short": {
+      "accept": [
+       "Monday"
+      ]
+     },
+     "solution": "Counting from Monday",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "t2",
+     "level": 1,
+     "text": "Repeat two question two: name the second day of the week. Give the day.",
+     "short": {
+      "accept": [
+       "Tuesday"
+      ]
+     },
+     "solution": "Counting from Monday",
+     "hint": "Think about it carefully"
+    }
+   ]
+  },
+  {
+   "id": "rep.mix",
+   "title": "Mixed items",
+   "aliases": [
+    "mixed items",
+    "mixed",
+    "mixes"
+   ],
+   "questions": [
+    {
+     "id": "r1",
+     "level": 1,
+     "text": "Explain why plants need light.",
+     "rubric": {
+      "model_answer": "Plants need light for photosynthesis.",
+      "mark_scheme": "1 mark: photosynthesis",
+      "max_marks": 1
+     },
+     "solution": "Plants use light",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "r2",
+     "level": 1,
+     "text": "Explain why animals need food.",
+     "rubric": {
+      "model_answer": "Animals need food for energy.",
+      "mark_scheme": "1 mark: energy",
+      "max_marks": 1
+     },
+     "solution": "Food gives energy",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "r3",
+     "level": 1,
+     "text": "Explain why the sea is salty.",
+     "rubric": {
+      "model_answer": "Rivers wash salts into the sea.",
+      "mark_scheme": "1 mark: rivers carry salts",
+      "max_marks": 2
+     },
+     "solution": "Salts collect in the sea",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "c1",
+     "level": 1,
+     "text": "Repeat mix choice one: pick the fruit.",
+     "choice": {
+      "options": [
+       "Apple",
+       "Carrot",
+       "Onion"
+      ],
+      "correct": 0
+     },
+     "solution": "An apple is a fruit",
+     "hint": "Think about it carefully"
+    },
+    {
+     "id": "c2",
+     "level": 1,
+     "text": "Repeat mix choice two: pick the metal.",
+     "choice": {
+      "options": [
+       "Iron",
+       "Wood",
+       "Glass"
+      ],
+      "correct": 0
+     },
+     "solution": "Iron is a metal",
+     "hint": "Think about it carefully"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "11": {
+   "rows": [
+    [
+     {
+      "id": "rep.y11.six",
+      "label": "Six items",
+      "skills": [
+       "rep.six"
+      ]
+     },
+     {
+      "id": "rep.y11.two",
+      "label": "Two items",
+      "skills": [
+       "rep.two"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "rep.y11.mix",
+      "label": "Mixed items",
+      "skills": [
+       "rep.mix"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

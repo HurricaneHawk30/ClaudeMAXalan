@@ -1,17 +1,22 @@
 """Subject / skill / topic registry (docs/ARCHITECTURE.md section 2.2)."""
 from __future__ import annotations
 
+import glob
 import importlib
+import logging
+import os
 import pkgutil
 import re
+import unicodedata
 from typing import Iterable
 
 from .base import (
-    MY_OWN_TOPIC_LABEL, PAST_PAPER_LABEL, Skill, Subject, Topic, YearSpec,
+    CHOICE_LETTERS, MY_OWN_TOPIC_LABEL, PAST_PAPER_LABEL, Skill, Subject, Topic, YearSpec,
 )
 
-RESERVED_LABELS = (PAST_PAPER_LABEL, MY_OWN_TOPIC_LABEL, "🎓 Change year", "📘 Change subject")
-_RESERVED_FOLDED = {x.casefold() for x in RESERVED_LABELS}
+log = logging.getLogger("tutor.content")
+
+RESERVED_LABELS = (PAST_PAPER_LABEL, MY_OWN_TOPIC_LABEL, "🎓 Change year", "📘 Change subject") + tuple(CHOICE_LETTERS)
 
 
 class RegistryError(ValueError):
@@ -19,11 +24,31 @@ class RegistryError(ValueError):
 
 
 def _norm_label(s: str) -> str:
-    return " ".join(s.split()).casefold()
+    return " ".join(s.replace("–", "-").replace("—", "-").split()).casefold()
+
+
+_RESERVED_FOLDED = {_norm_label(x) for x in RESERVED_LABELS}
+
+
+def _fold_latin(s: str) -> str:
+    """Drop accents on Latin letters only (passé composé -> passe compose)."""
+    if s.isascii():
+        return s
+    out = []
+    latin = False
+    for c in unicodedata.normalize("NFKD", s):
+        if unicodedata.combining(c):
+            if not latin:
+                out.append(c)
+            continue
+        o = ord(c)
+        latin = (c.isascii() and c.isalpha()) or 0xC0 <= o <= 0x24F or 0x1E00 <= o <= 0x1EFF
+        out.append(c)
+    return unicodedata.normalize("NFC", "".join(out))
 
 
 def _norm_text(s: str) -> str:
-    s = s.lower().replace("’", "'").replace("½", "1/2")
+    s = _fold_latin(s.lower().replace("’", "'").replace("½", "1/2"))
     s = re.sub(r"\s*=\s*", "=", s)
     return " ".join(s.split())
 
@@ -43,6 +68,7 @@ class Registry:
         # (subject, year) -> {folded label -> Topic}
         self._labels: dict[tuple[str, int], dict[str, Topic]] = {}
         self._past: dict[tuple[str, int], Topic] = {}
+        self.load_errors: list[str] = []          # sources skipped by load_registry(strict=False)
 
     # ------------------------------------------------------------ register
     def register(self, subject: Subject, skills: Iterable[Skill]) -> None:
@@ -179,47 +205,87 @@ class Registry:
         return Topic(id="own:" + skill_id, label=sk.title, skills=(skill_id,))
 
     def match_skills(self, subject_id: str, text: str) -> list[str]:
-        if not isinstance(text, str):
-            return []
-        t = _norm_text(text)
-        scored: list[tuple[int, int, str]] = []
-        for idx, sk in enumerate(self._skills_by_subject.get(subject_id, ())):
-            best = 0
-            for alias in sk.aliases:
-                a = _norm_text(alias)
-                if not a or len(a) <= best:
-                    continue
-                pat = r"(?<![^\W_])" + re.escape(a) + r"s?(?![^\W_])"
-                if re.search(pat, t):
-                    best = len(a)
-            if best:
-                scored.append((-best, idx, sk.id))
-        scored.sort()
-        return [sid for _, _, sid in scored]
+        return match_skill_ids(self._skills_by_subject.get(subject_id, ()), text)
 
 
-def load_registry(banks: Iterable[str] = ()) -> Registry:
-    """Build a new Registry from tutor.subjects.* modules and optional JSON banks."""
-    reg = Registry()
+def match_skill_ids(skills: Iterable[Skill], text: str) -> list[str]:
+    """Skill ids whose aliases occur in ``text``; longest alias first, ties by order (section 2.2)."""
+    if not isinstance(text, str):
+        return []
+    t = _norm_text(text)
+    scored: list[tuple[int, int, str]] = []
+    for idx, sk in enumerate(skills):
+        best = 0
+        for alias in sk.aliases:
+            a = _norm_text(alias)
+            if not a or len(a) <= best:
+                continue
+            pat = r"(?<![^\W_])" + re.escape(a) + r"s?(?![^\W_])"
+            if re.search(pat, t):
+                best = len(a)
+        if best:
+            scored.append((-best, idx, sk.id))
+    scored.sort()
+    return [sid for _, _, sid in scored]
+
+
+def _pkg_name() -> str:
+    return (__package__ or "tutor.content").rsplit(".", 1)[0] + ".subjects"
+
+
+def _subject_modules() -> tuple[str, list[str]]:
     root = (__package__ or "tutor.content").rsplit(".", 1)[0]
-    pkg_name = root + ".subjects"
+    pkg_name = _pkg_name()
     try:
         pkg = importlib.import_module(pkg_name)
     except ModuleNotFoundError as e:
         if e.name not in (pkg_name, root):
             raise
-        pkg = None
-    if pkg is not None and hasattr(pkg, "__path__"):
-        names = sorted(m.name for m in pkgutil.iter_modules(pkg.__path__)
-                       if not m.name.startswith("_"))
-        for name in names:
-            mod = importlib.import_module(f"{pkg_name}.{name}")
-            fn = getattr(mod, "register", None)
-            if not callable(fn):
-                raise RegistryError(f"{pkg_name}.{name} has no register(reg) function")
-            fn(reg)
-    if banks:
-        from .bank import register_bank
-        for path in banks:
-            register_bank(reg, path)
+        return pkg_name, []
+    if not hasattr(pkg, "__path__"):
+        return pkg_name, []
+    names = sorted(m.name for m in pkgutil.iter_modules(pkg.__path__) if not m.name.startswith("_"))
+    return pkg_name, names
+
+
+def register_module(reg: "Registry", module_name: str) -> None:
+    """Import tutor.subjects.<module_name> and call its register(reg)."""
+    pkg_name = _pkg_name()
+    mod = importlib.import_module(f"{pkg_name}.{module_name}")
+    fn = getattr(mod, "register", None)
+    if not callable(fn):
+        raise RegistryError(f"{pkg_name}.{module_name} has no register(reg) function")
+    fn(reg)
+
+
+def bank_files() -> list[str]:
+    """Shipped bank files: BANKS_DIR/*.json sorted by file name, skipping names starting with '_'."""
+    from .bank import BANKS_DIR
+    if not os.path.isdir(BANKS_DIR):
+        return []
+    return sorted((p for p in glob.glob(os.path.join(BANKS_DIR, "*.json"))
+                   if not os.path.basename(p).startswith("_")), key=os.path.basename)
+
+
+def load_registry(banks: Iterable[str] = (), strict: bool = True) -> Registry:
+    """Build a new Registry: tutor.subjects modules, then BANKS_DIR/*.json, then ``banks``.
+
+    strict=False: a source that raises is logged, recorded in ``reg.load_errors`` and skipped.
+    """
+    from .bank import register_bank
+    reg = Registry()
+    _, names = _subject_modules()
+    sources: list[tuple[str, object]] = [(name, (register_module, name)) for name in names]
+    sources += [(os.path.basename(p), (register_bank, p)) for p in bank_files()]
+    sources += [(os.path.basename(str(p)), (register_bank, p)) for p in banks]
+    for name, (fn, arg) in sources:
+        if strict:
+            fn(reg, arg)
+            continue
+        try:
+            fn(reg, arg)
+        except Exception as e:   # noqa: BLE001 - a broken content file must never stop the bot
+            msg = f"subject source {name} failed: {type(e).__name__}: {e}"
+            log.warning("%s", msg)
+            reg.load_errors.append(msg)
     return reg

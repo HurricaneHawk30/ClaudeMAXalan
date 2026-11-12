@@ -53,6 +53,32 @@ class TestDefaults(ConfigCase):
             Config().token = "x"
 
 
+class TestLlmMarking(ConfigCase):
+    def test_default_is_off(self):
+        self.assertIs(self.load().llm_marking, False)
+        self.assertIs(Config().llm_marking, False)
+
+    def test_true_values_case_insensitive(self):
+        for v in ("1", "true", "yes", "on", "TRUE", "True", "YES", "On", "ON"):
+            with self.subTest(value=v):
+                self.assertIs(self.load({"TUTOR_LLM_MARKING": v}).llm_marking, True)
+
+    def test_other_values_are_off(self):
+        for v in ("0", "false", "no", "off", "", "2", "maybe", "enabled", "y", "t", "-1"):
+            with self.subTest(value=v):
+                self.assertIs(self.load({"TUTOR_LLM_MARKING": v}).llm_marking, False)
+
+    def test_from_env_file_and_env_beats_file(self):
+        self.assertIs(self.load(file_text="TUTOR_LLM_MARKING=1\n").llm_marking, True)
+        self.assertIs(self.load({"TUTOR_LLM_MARKING": "0"}, "TUTOR_LLM_MARKING=1\n").llm_marking, False)
+        self.assertIs(self.load({"TUTOR_LLM_MARKING": "on"}, "TUTOR_LLM_MARKING=0\n").llm_marking, True)
+
+    def test_frozen_field_and_bot_variant(self):
+        self.assertIs(self.load({"TUTOR_LLM_MARKING": "1", "BOT": "english"}).llm_marking, True)
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            Config().llm_marking = True
+
+
 class TestLookup(ConfigCase):
     def test_file_values(self):
         c = self.load(file_text="TELEGRAM_BOT_TOKEN=filetoken\nTUTOR_OWNER_ID=42\nANTHROPIC_API_KEY=k1\nTUTOR_MODEL=m1\n")

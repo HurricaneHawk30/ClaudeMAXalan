@@ -1,0 +1,2225 @@
+{
+ "subject": {
+  "id": "latin",
+  "title": "Latin",
+  "order": 62
+ },
+ "skills": [
+  {
+   "id": "latin.nouns",
+   "title": "Nouns & cases",
+   "aliases": [
+    "latin cases",
+    "nominative",
+    "accusative",
+    "genitive",
+    "dative",
+    "ablative",
+    "declensions",
+    "adjectives",
+    "prepositions"
+   ],
+   "questions": [
+    {
+     "id": "n01",
+     "level": 1,
+     "text": "Which case is used for the subject of a Latin sentence?",
+     "choice": {
+      "options": [
+       "nominative",
+       "accusative",
+       "genitive",
+       "dative"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The accusative is mainly for the direct object",
+       null,
+       null
+      ]
+     },
+     "solution": "The subject (the person or thing doing the action) is in the nominative",
+     "hint": "Think of the case you find a noun in when you look it up in the dictionary"
+    },
+    {
+     "id": "n02",
+     "level": 1,
+     "text": "Which case is used for the direct object of a Latin verb? Give the case in English.",
+     "short": {
+      "accept": [
+       "accusative",
+       "accusative case"
+      ],
+      "reject": [
+       "nominative",
+       "ablative",
+       "dative",
+       "genitive"
+      ],
+      "form": "any"
+     },
+     "solution": "The direct object is in the accusative, e.g. canem in «puella canem videt»",
+     "hint": "In «puella canem videt», it is the case of canem"
+    },
+    {
+     "id": "n03",
+     "level": 1,
+     "text": "What does «puella» mean?",
+     "choice": {
+      "options": [
+       "mother",
+       "girl",
+       "boy",
+       "woman"
+      ],
+      "correct": 1
+     },
+     "solution": "puella = girl; puer = boy; femina = woman; mater = mother",
+     "hint": "It is a first declension noun for a young person"
+    },
+    {
+     "id": "n04",
+     "level": 1,
+     "text": "Which case shows possession, translated with 'of'? Give the case in English.",
+     "short": {
+      "accept": [
+       "genitive",
+       "genitive case"
+      ],
+      "reject": [
+       "dative",
+       "nominative",
+       "accusative",
+       "ablative"
+      ],
+      "form": "any"
+     },
+     "solution": "The genitive shows possession: domini = of the master",
+     "hint": "In «filius regis» (the son of the king), it is the case of regis"
+    },
+    {
+     "id": "n05",
+     "level": 1,
+     "text": "Which declension does «amicus, amici» (friend) belong to?",
+     "choice": {
+      "options": [
+       "third declension",
+       "fourth declension",
+       "second declension",
+       "first declension"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "First declension nouns have genitive -ae, like puella, puellae"
+      ]
+     },
+     "solution": "Nouns with nominative -us and genitive -i are second declension",
+     "hint": "Look at the genitive singular ending -i"
+    },
+    {
+     "id": "n06",
+     "level": 1,
+     "text": "Give the accusative singular of «puella». Type the Latin word.",
+     "short": {
+      "accept": [
+       "puellam"
+      ],
+      "reject": [
+       "puellas",
+       "puellae"
+      ],
+      "form": "strict",
+      "feedback": {
+       "puellas": "puellas is the accusative plural",
+       "puellae": "puellae is genitive/dative singular or nominative plural"
+      }
+     },
+     "solution": "First declension accusative singular ends in -am: puella → puellam",
+     "hint": "First declension nouns add -m in the accusative singular"
+    },
+    {
+     "id": "n07",
+     "level": 2,
+     "text": "What is the nominative plural of «puella»?",
+     "choice": {
+      "options": [
+       "puellas",
+       "puellam",
+       "puellis",
+       "puellae"
+      ],
+      "correct": 3,
+      "feedback": [
+       "puellas is the accusative plural",
+       null,
+       "puellis is the dative or ablative plural",
+       null
+      ]
+     },
+     "solution": "First declension nominative plural ends in -ae: puellae",
+     "hint": "The ending is the same as the genitive singular"
+    },
+    {
+     "id": "n08",
+     "level": 2,
+     "text": "In «puer dominum videt», which word is the subject?",
+     "choice": {
+      "options": [
+       "puer",
+       "dominum",
+       "videt"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "dominum ends in -um: it is accusative, the object",
+       "videt is the verb"
+      ]
+     },
+     "solution": "puer is nominative, so it is the subject: the boy sees the master",
+     "hint": "Look for the noun in the nominative case"
+    },
+    {
+     "id": "n09",
+     "level": 2,
+     "text": "What case is «templo» in the phrase «in templo»? Give the case in English.",
+     "short": {
+      "accept": [
+       "ablative",
+       "ablative case"
+      ],
+      "reject": [
+       "accusative",
+       "dative",
+       "genitive",
+       "nominative"
+      ],
+      "form": "any",
+      "feedback": {
+       "accusative": "in + accusative means 'into'; here it means 'in'"
+      }
+     },
+     "solution": "in meaning 'in' or 'on' takes the ablative: in templo = in the temple",
+     "hint": "in meaning 'in' (place where, not motion into) takes this case"
+    },
+    {
+     "id": "n10",
+     "level": 2,
+     "text": "Give the genitive singular of «dominus». Type the Latin word.",
+     "short": {
+      "accept": [
+       "domini"
+      ],
+      "reject": [
+       "domino",
+       "dominum"
+      ],
+      "form": "strict"
+     },
+     "solution": "Second declension genitive singular ends in -i: domini = of the master",
+     "hint": "dominus is second declension, like amicus, amici"
+    },
+    {
+     "id": "n11",
+     "level": 2,
+     "text": "What does the preposition «ad» mean, followed by the accusative?",
+     "choice": {
+      "options": [
+       "to, towards",
+       "from",
+       "with",
+       "out of"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "'from' is a or ab",
+       "'with' is cum",
+       "'out of' is e or ex"
+      ]
+     },
+     "solution": "ad + accusative = to, towards: ad urbem = to the city",
+     "hint": "It shows movement in a direction"
+    },
+    {
+     "id": "n12",
+     "level": 2,
+     "text": "What does the preposition «cum» mean, as in «cum amicis»? Answer in English.",
+     "short": {
+      "accept": [
+       "with",
+       "together with",
+       "along with"
+      ],
+      "form": "any"
+     },
+     "solution": "cum + ablative = with: cum amicis = with friends",
+     "hint": "Think of a word that links you to your companions"
+    },
+    {
+     "id": "n13",
+     "level": 3,
+     "text": "Translate: «puer puellam videt».",
+     "choice": {
+      "options": [
+       "The boy saw the girl",
+       "The boy sees the girl",
+       "The girl sees the boy",
+       "The boys see the girl"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "puellam is accusative, so the girl is the one being seen",
+       null
+      ]
+     },
+     "solution": "puer (nominative) is the subject, puellam (accusative) the object, videt is present: the boy sees the girl",
+     "hint": "Find the nominative first; the -am ending marks the object"
+    },
+    {
+     "id": "n14",
+     "level": 3,
+     "text": "Which form of «magnus» agrees with «templum» (nominative singular)?",
+     "choice": {
+      "options": [
+       "magna",
+       "magni",
+       "magnum",
+       "magnus"
+      ],
+      "correct": 2
+     },
+     "solution": "templum is neuter, so the neuter nominative magnum agrees: templum magnum",
+     "hint": "What gender is templum?"
+    },
+    {
+     "id": "n15",
+     "level": 3,
+     "text": "Translate «cum amicis». Answer in English.",
+     "short": {
+      "accept": [
+       "with friends",
+       "with the friends",
+       "with his friends",
+       "with her friends",
+       "with their friends",
+       "with my friends"
+      ],
+      "form": "any"
+     },
+     "solution": "cum + ablative plural: cum amicis = with (his/her) friends",
+     "hint": "amicis is the ablative plural of amicus"
+    },
+    {
+     "id": "n16",
+     "level": 3,
+     "text": "Give the dative plural of «puella». Type the Latin word.",
+     "short": {
+      "accept": [
+       "puellis"
+      ],
+      "reject": [
+       "puellae",
+       "puellas"
+      ],
+      "form": "strict"
+     },
+     "solution": "First declension dative and ablative plural end in -is: puellis",
+     "hint": "The dative plural and ablative plural share the same ending"
+    },
+    {
+     "id": "n17",
+     "level": 3,
+     "text": "What does «e foro» mean?",
+     "choice": {
+      "options": [
+       "into the forum",
+       "near the forum",
+       "towards the forum",
+       "out of the forum"
+      ],
+      "correct": 3
+     },
+     "solution": "e/ex + ablative = out of: e foro = out of the forum",
+     "hint": "e is a short form of ex"
+    },
+    {
+     "id": "n18",
+     "level": 3,
+     "text": "Translate «in villa». Answer in English.",
+     "short": {
+      "accept": [
+       "in the villa",
+       "in the house",
+       "in a villa",
+       "in a house",
+       "at the villa",
+       "in the country house"
+      ],
+      "form": "any"
+     },
+     "solution": "in + ablative = in: in villa = in the villa (house)",
+     "hint": "villa is ablative here, so in shows place where"
+    },
+    {
+     "id": "n19",
+     "level": 4,
+     "text": "In «canis cibum puero dat», what is the case of «puero»?",
+     "choice": {
+      "options": [
+       "dative",
+       "ablative",
+       "accusative",
+       "genitive"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The form puero can be ablative, but here it means 'to the boy'",
+       null,
+       null
+      ]
+     },
+     "solution": "The dog gives food to the boy: puero is the indirect object, so dative (the form is the same as the ablative)",
+     "hint": "Ask: to whom is the food given?"
+    },
+    {
+     "id": "n20",
+     "level": 4,
+     "text": "Translate: «amici dominum in foro viderunt».",
+     "choice": {
+      "options": [
+       "The friends see the master in the forum",
+       "The friends saw the master in the forum",
+       "The friend saw the master in the forum",
+       "The master saw the friends in the forum"
+      ],
+      "correct": 1
+     },
+     "solution": "amici (nominative plural) + viderunt (perfect plural): the friends saw the master in the forum",
+     "hint": "Check the verb ending: -erunt is perfect plural"
+    },
+    {
+     "id": "n21",
+     "level": 4,
+     "text": "In «nomen regis erat Tarquinius», what does «regis» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "of the king",
+       "the king's",
+       "of a king"
+      ],
+      "form": "any"
+     },
+     "solution": "regis is the genitive of rex: the name of the king was Tarquinius",
+     "hint": "rex, regis: the -is ending is genitive singular"
+    },
+    {
+     "id": "n22",
+     "level": 4,
+     "text": "Give the accusative plural of «dominus». Type the Latin word.",
+     "short": {
+      "accept": [
+       "dominos"
+      ],
+      "reject": [
+       "domini",
+       "dominum"
+      ],
+      "form": "strict",
+      "feedback": {
+       "dominum": "dominum is the accusative singular"
+      }
+     },
+     "solution": "Second declension accusative plural ends in -os: dominos",
+     "hint": "dominus is second declension; the masculine accusative plural ends in -s"
+    },
+    {
+     "id": "n23",
+     "level": 4,
+     "text": "Which phrase means 'the brave soldiers' (nominative)?",
+     "choice": {
+      "options": [
+       "miles fortes",
+       "militum fortium",
+       "milites fortes",
+       "milites fortis"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "militum fortium is genitive plural",
+       null,
+       "fortis is not nominative plural; the adjective must be fortes"
+      ]
+     },
+     "solution": "miles is third declension (nominative plural milites); fortis agrees: milites fortes",
+     "hint": "Both words must be nominative plural"
+    },
+    {
+     "id": "n24",
+     "level": 4,
+     "text": "In «Marcus librum amici legit», what case is «amici»? Give the case in English.",
+     "short": {
+      "accept": [
+       "genitive",
+       "genitive case"
+      ],
+      "reject": [
+       "nominative",
+       "dative",
+       "accusative",
+       "ablative"
+      ],
+      "form": "any"
+     },
+     "solution": "Marcus is the subject, so amici means 'of the friend': genitive singular",
+     "hint": "Marcus is already the subject, so amici cannot be nominative plural here"
+    },
+    {
+     "id": "n25",
+     "level": 5,
+     "text": "Which is the correct translation of «Romani urbem magnis muris defenderunt»?",
+     "choice": {
+      "options": [
+       "The Romans defended the great walls of the city",
+       "The city defended the Romans with great walls",
+       "The Romans are defending the city with great walls",
+       "The Romans defended the city with great walls"
+      ],
+      "correct": 3
+     },
+     "solution": "magnis muris is ablative (means): with great walls; defenderunt is perfect",
+     "hint": "Work out the case of magnis muris and the tense of defenderunt"
+    },
+    {
+     "id": "n26",
+     "level": 5,
+     "text": "In «femina, quam heri vidi, Romam venit», what does «quam» refer to?",
+     "choice": {
+      "options": [
+       "femina",
+       "Romam",
+       "heri",
+       "vidi"
+      ],
+      "correct": 0
+     },
+     "solution": "quam is a feminine relative pronoun referring to femina: the woman, whom I saw yesterday, came to Rome",
+     "hint": "A relative pronoun refers back to a noun that comes before it"
+    },
+    {
+     "id": "n27",
+     "level": 5,
+     "text": "Why is «Roma» in the ablative in «Roma discessit», with no preposition?",
+     "choice": {
+      "options": [
+       "It shows possession",
+       "Names of cities use the ablative alone to mean 'from'",
+       "discedo always takes the dative",
+       "Roma is the subject of the sentence"
+      ],
+      "correct": 1
+     },
+     "solution": "With names of cities, the ablative alone means 'from': Roma discessit = he left Rome",
+     "hint": "discessit means 'he/she departed'"
+    },
+    {
+     "id": "n28",
+     "level": 5,
+     "text": "Translate «in urbem» (in + accusative). Answer in English.",
+     "short": {
+      "accept": [
+       "into the city",
+       "into a city",
+       "into the town",
+       "to the city",
+       "into city"
+      ],
+      "reject": [
+       "in the city"
+      ],
+      "form": "any",
+      "feedback": {
+       "in the city": "That would be in urbe (ablative); the accusative shows motion"
+      }
+     },
+     "solution": "in + accusative shows motion: in urbem = into the city",
+     "hint": "in + accusative is different from in + ablative"
+    },
+    {
+     "id": "n29",
+     "level": 5,
+     "text": "Give the ablative plural of «miles» (soldier). Type the Latin word.",
+     "short": {
+      "accept": [
+       "militibus"
+      ],
+      "reject": [
+       "milites",
+       "militum"
+      ],
+      "form": "strict"
+     },
+     "solution": "miles, militis is third declension: ablative plural militibus",
+     "hint": "Find the stem from the genitive militis, then add the third declension ending"
+    },
+    {
+     "id": "n30",
+     "level": 5,
+     "text": "In «rex, vir magnae virtutis, hostes vicit», what does «magnae virtutis» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "of great courage",
+       "of great bravery",
+       "of great virtue",
+       "of great valour",
+       "of great valor"
+      ],
+      "form": "any"
+     },
+     "solution": "Genitive of description: vir magnae virtutis = a man of great courage",
+     "hint": "Both words are genitive singular and describe vir"
+    }
+   ]
+  },
+  {
+   "id": "latin.verbs",
+   "title": "Verbs & tenses",
+   "aliases": [
+    "latin verbs",
+    "imperfect tense",
+    "perfect tense",
+    "pluperfect",
+    "infinitive",
+    "imperative",
+    "participles",
+    "passive",
+    "irregular verbs"
+   ],
+   "questions": [
+    {
+     "id": "v01",
+     "level": 1,
+     "text": "What does «amat» mean?",
+     "choice": {
+      "options": [
+       "he loves",
+       "they love",
+       "I love",
+       "we love"
+      ],
+      "correct": 0
+     },
+     "solution": "The ending -t means he/she/it: amat = he (she) loves",
+     "hint": "Look at the personal ending of the verb"
+    },
+    {
+     "id": "v02",
+     "level": 1,
+     "text": "What does the personal ending «-mus» show about who is doing the action? Answer in English.",
+     "short": {
+      "accept": [
+       "we",
+       "first person plural",
+       "1st person plural"
+      ],
+      "reject": [
+       "you",
+       "they"
+      ],
+      "form": "any"
+     },
+     "solution": "-mus = we, e.g. portamus = we carry",
+     "hint": "Compare portamus with porto (I carry)"
+    },
+    {
+     "id": "v03",
+     "level": 1,
+     "text": "Which is the infinitive of «porto» (I carry)?",
+     "choice": {
+      "options": [
+       "portant",
+       "portare",
+       "portat",
+       "portavit"
+      ],
+      "correct": 1
+     },
+     "solution": "First conjugation infinitives end in -are: portare = to carry",
+     "hint": "Infinitives mean 'to …'"
+    },
+    {
+     "id": "v04",
+     "level": 1,
+     "text": "What does the personal ending «-nt» show about who is doing the action? Answer in English.",
+     "short": {
+      "accept": [
+       "they",
+       "third person plural",
+       "3rd person plural"
+      ],
+      "reject": [
+       "we",
+       "you"
+      ],
+      "form": "any"
+     },
+     "solution": "-nt = they, e.g. portant = they carry",
+     "hint": "Compare portant with portat (he carries)"
+    },
+    {
+     "id": "v05",
+     "level": 1,
+     "text": "What does «sum» mean?",
+     "choice": {
+      "options": [
+       "I go",
+       "I want",
+       "I am",
+       "I have"
+      ],
+      "correct": 2
+     },
+     "solution": "sum = I am (from esse, to be)",
+     "hint": "It is the first person of esse"
+    },
+    {
+     "id": "v06",
+     "level": 1,
+     "text": "Give the Latin for 'he is'. Type one word.",
+     "short": {
+      "accept": [
+       "est"
+      ],
+      "reject": [
+       "sunt",
+       "sum"
+      ],
+      "form": "strict"
+     },
+     "solution": "est = he/she/it is (from esse)",
+     "hint": "It is the third person singular of esse"
+    },
+    {
+     "id": "v07",
+     "level": 2,
+     "text": "Which tense is «portabat»?",
+     "choice": {
+      "options": [
+       "perfect",
+       "present",
+       "future",
+       "imperfect"
+      ],
+      "correct": 3
+     },
+     "solution": "-ba- marks the imperfect: portabat = he was carrying",
+     "hint": "Look for the tense sign -ba-"
+    },
+    {
+     "id": "v08",
+     "level": 2,
+     "text": "Which tense is «portavit»?",
+     "choice": {
+      "options": [
+       "perfect",
+       "imperfect",
+       "pluperfect",
+       "present"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "The pluperfect would be portaverat",
+       null
+      ]
+     },
+     "solution": "portavit uses the perfect stem portav- with -it: he carried",
+     "hint": "Look at the -v- before the ending: it marks a different stem from the present"
+    },
+    {
+     "id": "v09",
+     "level": 2,
+     "text": "Translate «portabant». Answer in English.",
+     "short": {
+      "accept": [
+       "they were carrying",
+       "they used to carry",
+       "they carried",
+       "they kept carrying",
+       "they began to carry"
+      ],
+      "form": "any"
+     },
+     "solution": "-ba- = imperfect, -nt = they: they were carrying",
+     "hint": "-ba- marks the imperfect tense; then look at the person ending"
+    },
+    {
+     "id": "v10",
+     "level": 2,
+     "text": "Give the Latin for 'they are'. Type one word.",
+     "short": {
+      "accept": [
+       "sunt"
+      ],
+      "reject": [
+       "est",
+       "sum",
+       "sumus"
+      ],
+      "form": "strict"
+     },
+     "solution": "sunt = they are (from esse)",
+     "hint": "It is the third person plural of esse"
+    },
+    {
+     "id": "v11",
+     "level": 2,
+     "text": "Which form is the imperative ('carry!') addressed to one person?",
+     "choice": {
+      "options": [
+       "portat",
+       "porta",
+       "portate",
+       "portare"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "portate is the plural command",
+       null
+      ]
+     },
+     "solution": "The singular imperative is the stem: porta! (portate! is plural)",
+     "hint": "Take the infinitive and remove -re"
+    },
+    {
+     "id": "v12",
+     "level": 2,
+     "text": "Translate «dormiebat». Answer in English.",
+     "short": {
+      "accept": [
+       "he was sleeping",
+       "she was sleeping",
+       "he used to sleep",
+       "she used to sleep",
+       "he slept",
+       "she slept",
+       "he was asleep",
+       "she was asleep"
+      ],
+      "form": "any"
+     },
+     "solution": "dormio = I sleep; -ieba- is imperfect: he was sleeping",
+     "hint": "dormitory comes from this verb"
+    },
+    {
+     "id": "v13",
+     "level": 3,
+     "text": "Translate: «puellae cantabant».",
+     "choice": {
+      "options": [
+       "The girls will sing",
+       "The girls are singing",
+       "The girls were singing",
+       "The girl was singing"
+      ],
+      "correct": 2
+     },
+     "solution": "puellae (nominative plural) + cantabant (imperfect, they): the girls were singing",
+     "hint": "The verb ending tells you whether the subject is singular or plural"
+    },
+    {
+     "id": "v14",
+     "level": 3,
+     "text": "Which form means 'we had carried'?",
+     "choice": {
+      "options": [
+       "portavimus",
+       "portabamus",
+       "portamus",
+       "portaveramus"
+      ],
+      "correct": 3
+     },
+     "solution": "The pluperfect adds -eram- to the perfect stem: portaveramus",
+     "hint": "'had …' is the pluperfect"
+    },
+    {
+     "id": "v15",
+     "level": 3,
+     "text": "What tense is «laudaverat»? Give the tense in English.",
+     "short": {
+      "accept": [
+       "pluperfect",
+       "pluperfect tense"
+      ],
+      "reject": [
+       "perfect",
+       "imperfect"
+      ],
+      "form": "any",
+      "feedback": {
+       "perfect": "The perfect would be laudavit; -era- shows 'had'"
+      }
+     },
+     "solution": "Perfect stem laudav- + -erat: he had praised (pluperfect)",
+     "hint": "Look at the -era- after the perfect stem"
+    },
+    {
+     "id": "v16",
+     "level": 3,
+     "text": "Give the third person plural perfect of «porto» ('they carried'). Type the Latin word.",
+     "short": {
+      "accept": [
+       "portaverunt",
+       "portavere"
+      ],
+      "reject": [
+       "portabant",
+       "portant"
+      ],
+      "form": "strict"
+     },
+     "solution": "Perfect stem portav- + -erunt: portaverunt",
+     "hint": "Find the perfect stem, then add the 'they' ending of the perfect"
+    },
+    {
+     "id": "v17",
+     "level": 3,
+     "text": "What does «ire» mean?",
+     "choice": {
+      "options": [
+       "to go",
+       "to be",
+       "to want",
+       "to be able"
+      ],
+      "correct": 0
+     },
+     "solution": "ire = to go (eo, ire, ii); esse = to be; velle = to want; posse = to be able",
+     "hint": "Think of English 'exit' (he goes out)"
+    },
+    {
+     "id": "v18",
+     "level": 3,
+     "text": "Translate «possumus». Answer in English.",
+     "short": {
+      "accept": [
+       "we can",
+       "we are able",
+       "we are able to"
+      ],
+      "form": "any"
+     },
+     "solution": "possum, posse = to be able: possumus = we can",
+     "hint": "It is a form of possum; the ending -mus means 'we'"
+    },
+    {
+     "id": "v19",
+     "level": 4,
+     "text": "Translate: «milites, ubi hostes viderunt, fugerunt».",
+     "choice": {
+      "options": [
+       "The soldiers saw the enemy and are fleeing",
+       "When the soldiers saw the enemy, they fled",
+       "The soldiers fled before they saw the enemy",
+       "When the enemy saw the soldiers, they fled"
+      ],
+      "correct": 1
+     },
+     "solution": "ubi = when; hostes is accusative here; fugerunt = they fled",
+     "hint": "ubi + perfect means 'when'"
+    },
+    {
+     "id": "v20",
+     "level": 4,
+     "text": "Which verb form is passive?",
+     "choice": {
+      "options": [
+       "portabat",
+       "portavit",
+       "portatur",
+       "portat"
+      ],
+      "correct": 2
+     },
+     "solution": "The passive ending -tur means 'is being …': portatur = he/it is carried",
+     "hint": "Passive endings include -r, -ris, -tur"
+    },
+    {
+     "id": "v21",
+     "level": 4,
+     "text": "Translate «portantur». Answer in English.",
+     "short": {
+      "accept": [
+       "they are carried",
+       "they are being carried"
+      ],
+      "reject": [
+       "they carry",
+       "they carried"
+      ],
+      "form": "any",
+      "feedback": {
+       "they carry": "That would be portant; -ntur makes it passive"
+      }
+     },
+     "solution": "-ntur is the present passive 'they' ending: portantur = they are (being) carried",
+     "hint": "-ntur is a passive ending"
+    },
+    {
+     "id": "v22",
+     "level": 4,
+     "text": "Give the imperfect 'I was carrying' of «porto». Type the Latin word.",
+     "short": {
+      "accept": [
+       "portabam"
+      ],
+      "reject": [
+       "portabat",
+       "portavi"
+      ],
+      "form": "strict"
+     },
+     "solution": "Stem porta- + -ba- + -m: portabam",
+     "hint": "The imperfect tense sign is -ba-"
+    },
+    {
+     "id": "v23",
+     "level": 4,
+     "text": "In «dux milites pugnare iussit», what does «pugnare» mean?",
+     "choice": {
+      "options": [
+       "fighting",
+       "they fought",
+       "he fights",
+       "to fight"
+      ],
+      "correct": 3
+     },
+     "solution": "iubeo + accusative + infinitive: the leader ordered the soldiers to fight",
+     "hint": "pugnare ends in -are"
+    },
+    {
+     "id": "v24",
+     "level": 4,
+     "text": "Translate «voluit». Answer in English.",
+     "short": {
+      "accept": [
+       "he wanted",
+       "she wanted",
+       "he wished",
+       "she wished",
+       "it wanted"
+      ],
+      "form": "any"
+     },
+     "solution": "volo, velle, volui: voluit = he wanted",
+     "hint": "volo means 'I want'; -it on a perfect stem is the perfect"
+    },
+    {
+     "id": "v25",
+     "level": 5,
+     "text": "Which is the correct translation of «hostes, a militibus victi, fugerunt»?",
+     "choice": {
+      "options": [
+       "The enemy, defeated by the soldiers, fled",
+       "The enemy defeated the soldiers and fled",
+       "The soldiers, defeated by the enemy, fled",
+       "The enemy fled before they defeated the soldiers"
+      ],
+      "correct": 0
+     },
+     "solution": "victi is a perfect passive participle agreeing with hostes; a militibus = by the soldiers",
+     "hint": "victi is a perfect passive participle: 'having been …'"
+    },
+    {
+     "id": "v26",
+     "level": 5,
+     "text": "In «puer, cibum consumens, risit», what does «consumens» mean?",
+     "choice": {
+      "options": [
+       "to eat",
+       "eating",
+       "having eaten",
+       "about to eat"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "'having eaten' would be a perfect participle",
+       null
+      ]
+     },
+     "solution": "-ns is a present participle: consumens = eating",
+     "hint": "Participles ending in -ns are present participles"
+    },
+    {
+     "id": "v27",
+     "level": 5,
+     "text": "Which sentence is passive?",
+     "choice": {
+      "options": [
+       "Romani urbem capiunt",
+       "Romani urbem capere volebant",
+       "urbs a Romanis capta est",
+       "Romani urbem ceperunt"
+      ],
+      "correct": 2
+     },
+     "solution": "capta est is perfect passive: the city was captured by the Romans",
+     "hint": "Look for est or sunt with a participle"
+    },
+    {
+     "id": "v28",
+     "level": 5,
+     "text": "Translate «ab hostibus capti sunt». Answer in English.",
+     "short": {
+      "accept": [
+       "they were captured by the enemy",
+       "they were taken by the enemy",
+       "they have been captured by the enemy",
+       "they were caught by the enemy",
+       "they have been taken by the enemy"
+      ],
+      "form": "any"
+     },
+     "solution": "capti sunt = they were captured (perfect passive); ab hostibus = by the enemy",
+     "hint": "ab + ablative with a passive verb means 'by'"
+    },
+    {
+     "id": "v29",
+     "level": 5,
+     "text": "Give the third person singular perfect of «eo» ('he went'). Type the Latin word.",
+     "short": {
+      "accept": [
+       "iit",
+       "ivit"
+      ],
+      "reject": [
+       "it",
+       "ibat"
+      ],
+      "form": "strict",
+      "feedback": {
+       "it": "That form is the present tense (he goes)",
+       "ibat": "ibat is the imperfect (he was going)"
+      }
+     },
+     "solution": "eo, ire, ii (or ivi): iit (or ivit) = he went",
+     "hint": "eo is irregular; its perfect is ii or ivi"
+    },
+    {
+     "id": "v30",
+     "level": 5,
+     "text": "In «cras Romam ibimus», what tense is «ibimus»? Give the tense in English.",
+     "short": {
+      "accept": [
+       "future",
+       "future tense"
+      ],
+      "reject": [
+       "present",
+       "imperfect",
+       "perfect"
+      ],
+      "form": "any"
+     },
+     "solution": "cras = tomorrow; ibimus = we shall go (future of eo)",
+     "hint": "cras means 'tomorrow'"
+    }
+   ]
+  },
+  {
+   "id": "latin.vocab",
+   "title": "Vocabulary & translation",
+   "aliases": [
+    "latin vocabulary",
+    "vocab",
+    "translation",
+    "english derivatives"
+   ],
+   "questions": [
+    {
+     "id": "x01",
+     "level": 1,
+     "text": "What does «aqua» mean?",
+     "choice": {
+      "options": [
+       "water",
+       "air",
+       "fire",
+       "earth"
+      ],
+      "correct": 0
+     },
+     "solution": "aqua = water (English 'aquarium')",
+     "hint": "Think of the English word 'aquatic'"
+    },
+    {
+     "id": "x02",
+     "level": 1,
+     "text": "What does «rex» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "king"
+      ],
+      "form": "any"
+     },
+     "solution": "rex, regis = king (English 'regal')",
+     "hint": "Think of the English word 'regal'"
+    },
+    {
+     "id": "x03",
+     "level": 1,
+     "text": "What does «bellum» mean?",
+     "choice": {
+      "options": [
+       "peace",
+       "war",
+       "beautiful",
+       "bell"
+      ],
+      "correct": 1
+     },
+     "solution": "bellum = war; bellus = pretty; pax = peace",
+     "hint": "Think of the English word 'belligerent'"
+    },
+    {
+     "id": "x04",
+     "level": 1,
+     "text": "What does «mater» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "mother",
+       "mum",
+       "mom"
+      ],
+      "form": "any"
+     },
+     "solution": "mater = mother; pater = father",
+     "hint": "Think of the English word 'maternal'"
+    },
+    {
+     "id": "x05",
+     "level": 1,
+     "text": "What does «urbs» mean?",
+     "choice": {
+      "options": [
+       "wall",
+       "house",
+       "city",
+       "road"
+      ],
+      "correct": 2
+     },
+     "solution": "urbs = city (English 'urban'); via = road; murus = wall; domus = house",
+     "hint": "Think of the English word 'urban'"
+    },
+    {
+     "id": "x06",
+     "level": 1,
+     "text": "What does «magnus» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "big",
+       "great",
+       "large"
+      ],
+      "form": "any"
+     },
+     "solution": "magnus = big, great (English 'magnify')",
+     "hint": "Think of the English word 'magnify'"
+    },
+    {
+     "id": "x07",
+     "level": 2,
+     "text": "What does «iter» mean?",
+     "choice": {
+      "options": [
+       "again",
+       "enemy",
+       "food",
+       "journey"
+      ],
+      "correct": 3,
+      "feedback": [
+       "'again' is iterum",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "iter = journey; iterum = again; hostis = enemy; cibus = food",
+     "hint": "Think of the English word 'itinerary'"
+    },
+    {
+     "id": "x08",
+     "level": 2,
+     "text": "Which Latin word means 'often'?",
+     "choice": {
+      "options": [
+       "saepe",
+       "semper",
+       "numquam",
+       "iam"
+      ],
+      "correct": 0
+     },
+     "solution": "saepe = often; semper = always; numquam = never; iam = now, already",
+     "hint": "Rule out the words you know: semper means 'always' and numquam means 'never'"
+    },
+    {
+     "id": "x09",
+     "level": 2,
+     "text": "What does «semper» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "always"
+      ],
+      "form": "any"
+     },
+     "solution": "semper = always; numquam = never",
+     "hint": "The US Marines' motto is 'Semper fidelis'"
+    },
+    {
+     "id": "x10",
+     "level": 2,
+     "text": "What does «tamen» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "however",
+       "nevertheless",
+       "yet",
+       "all the same"
+      ],
+      "form": "any"
+     },
+     "solution": "tamen = however, nevertheless",
+     "hint": "It introduces a contrast, often as the second word of a sentence"
+    },
+    {
+     "id": "x11",
+     "level": 2,
+     "text": "What does «hostis» mean?",
+     "choice": {
+      "options": [
+       "soldier",
+       "enemy",
+       "host",
+       "guest"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "This is a false friend: the English 'host' is not the meaning",
+       null
+      ]
+     },
+     "solution": "hostis = enemy (English 'hostile'); miles = soldier",
+     "hint": "Think of the English word 'hostile'"
+    },
+    {
+     "id": "x12",
+     "level": 2,
+     "text": "Give the Latin word for 'and'. Type one word.",
+     "short": {
+      "accept": [
+       "et",
+       "atque",
+       "ac"
+      ],
+      "reject": [
+       "sed",
+       "aut"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sed": "sed means 'but'",
+       "aut": "aut means 'or'"
+      }
+     },
+     "solution": "et = and (also atque or ac)",
+     "hint": "It is used in the abbreviation 'etc.'"
+    },
+    {
+     "id": "x13",
+     "level": 3,
+     "text": "Which English word comes from «aqua» (water)?",
+     "choice": {
+      "options": [
+       "quarter",
+       "equal",
+       "aquarium",
+       "acquire"
+      ],
+      "correct": 2
+     },
+     "solution": "An aquarium is a tank of water",
+     "hint": "Which word is about a container of water?"
+    },
+    {
+     "id": "x14",
+     "level": 3,
+     "text": "Which English word comes from «navis» (ship)?",
+     "choice": {
+      "options": [
+       "naive",
+       "novel",
+       "nasty",
+       "navy"
+      ],
+      "correct": 3
+     },
+     "solution": "The navy is a fleet of ships",
+     "hint": "Which word is connected with ships?"
+    },
+    {
+     "id": "x15",
+     "level": 3,
+     "text": "The English word 'pedestrian' comes from «pes, pedis». What does «pes» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "foot"
+      ],
+      "form": "any"
+     },
+     "solution": "pes, pedis = foot: a pedestrian travels on foot",
+     "hint": "A pedestrian is someone who walks"
+    },
+    {
+     "id": "x16",
+     "level": 3,
+     "text": "Translate «puer laetus est». Answer in English.",
+     "short": {
+      "accept": [
+       "the boy is happy",
+       "the boy is glad",
+       "a boy is happy",
+       "the boy is cheerful",
+       "the boy is joyful"
+      ],
+      "form": "any"
+     },
+     "solution": "puer = boy; laetus = happy; est = is",
+     "hint": "laetus describes a feeling"
+    },
+    {
+     "id": "x17",
+     "level": 3,
+     "text": "What does «timeo» mean?",
+     "choice": {
+      "options": [
+       "I fear",
+       "I hold",
+       "I see",
+       "I hear"
+      ],
+      "correct": 0
+     },
+     "solution": "timeo = I fear (English 'timid'); teneo = I hold; video = I see; audio = I hear",
+     "hint": "Think of the English word 'timid'"
+    },
+    {
+     "id": "x18",
+     "level": 3,
+     "text": "Give the Latin word for 'I see'. Type the Latin word.",
+     "short": {
+      "accept": [
+       "video"
+      ],
+      "reject": [
+       "audio",
+       "vides"
+      ],
+      "form": "strict",
+      "feedback": {
+       "audio": "audio means 'I hear'"
+      }
+     },
+     "solution": "video = I see (videre = to see)",
+     "hint": "The same word is used in English for a recording you watch"
+    },
+    {
+     "id": "x19",
+     "level": 4,
+     "text": "Translate: «nuntius ad urbem celeriter cucurrit».",
+     "choice": {
+      "options": [
+       "The messenger is running quickly to the city",
+       "The messenger ran quickly to the city",
+       "The messenger walked slowly to the city",
+       "The messengers ran quickly from the city"
+      ],
+      "correct": 1
+     },
+     "solution": "nuntius = messenger; celeriter = quickly; cucurrit = he ran (perfect of curro)",
+     "hint": "cucurrit is the perfect of curro (I run)"
+    },
+    {
+     "id": "x20",
+     "level": 4,
+     "text": "Translate: «mercator multam pecuniam habebat».",
+     "choice": {
+      "options": [
+       "The merchant wanted much money",
+       "The merchants had a lot of money",
+       "The merchant had a lot of money",
+       "The merchant has a lot of money"
+      ],
+      "correct": 2
+     },
+     "solution": "mercator = merchant; multam pecuniam = much money; habebat = he had (imperfect)",
+     "hint": "habebat is imperfect, and mercator is singular"
+    },
+    {
+     "id": "x21",
+     "level": 4,
+     "text": "Translate «senex filium vocavit». Answer in English.",
+     "short": {
+      "accept": [
+       "the old man called his son",
+       "the old man called the son",
+       "the old man called a son",
+       "the old man summoned his son",
+       "the old man called for his son",
+       "the old man called to his son",
+       "the old man summoned the son"
+      ],
+      "form": "any"
+     },
+     "solution": "senex = old man; filium = son (accusative); vocavit = called (perfect)",
+     "hint": "senex means 'old man' (English 'senior')"
+    },
+    {
+     "id": "x22",
+     "level": 4,
+     "text": "The English word 'audience' comes from «audio». What does «audio» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "I hear",
+       "I listen",
+       "I listen to",
+       "hear",
+       "listen",
+       "to hear",
+       "to listen"
+      ],
+      "form": "any"
+     },
+     "solution": "audio = I hear, I listen to; an audience listens",
+     "hint": "An audience is a group of people who …?"
+    },
+    {
+     "id": "x23",
+     "level": 4,
+     "text": "Which English word comes from «scribo» (I write)?",
+     "choice": {
+      "options": [
+       "scrape",
+       "scream",
+       "scrap",
+       "script"
+      ],
+      "correct": 3
+     },
+     "solution": "A script is something written",
+     "hint": "Which word is about writing?"
+    },
+    {
+     "id": "x24",
+     "level": 4,
+     "text": "Give the Latin for 'the boys' (nominative plural). Type one word.",
+     "short": {
+      "accept": [
+       "pueri"
+      ],
+      "reject": [
+       "pueros",
+       "puerum"
+      ],
+      "form": "strict",
+      "feedback": {
+       "pueros": "pueros is the accusative plural"
+      }
+     },
+     "solution": "puer, pueri (second declension): nominative plural pueri",
+     "hint": "puer is second declension like amicus; masculine nominative plural ends in -i"
+    },
+    {
+     "id": "x25",
+     "level": 5,
+     "text": "Which is the correct translation of «Romani, quamquam fessi erant, fortiter pugnaverunt»?",
+     "choice": {
+      "options": [
+       "Although the Romans were tired, they fought bravely",
+       "The Romans were tired and so they did not fight",
+       "The Romans fought bravely and then became tired",
+       "The Romans were tired, so they fought badly"
+      ],
+      "correct": 0
+     },
+     "solution": "quamquam = although; fessi = tired; fortiter = bravely; pugnaverunt = they fought",
+     "hint": "quamquam introduces a contrast"
+    },
+    {
+     "id": "x26",
+     "level": 5,
+     "text": "In «postquam cenam consumpserunt, dormiverunt», what happened first?",
+     "choice": {
+      "options": [
+       "They went home",
+       "They ate dinner",
+       "They slept",
+       "They cooked dinner"
+      ],
+      "correct": 1
+     },
+     "solution": "postquam = after: after they had eaten dinner, they slept",
+     "hint": "postquam means 'after'"
+    },
+    {
+     "id": "x27",
+     "level": 5,
+     "text": "Translate: «nemo cives servare poterat».",
+     "choice": {
+      "options": [
+       "No one wanted to save the citizens",
+       "Nobody is able to save the citizens",
+       "No one was able to save the citizens",
+       "The citizens could save no one"
+      ],
+      "correct": 2
+     },
+     "solution": "nemo = no one (subject); cives = citizens (accusative); poterat = was able",
+     "hint": "nemo is the subject; poterat is imperfect"
+    },
+    {
+     "id": "x28",
+     "level": 5,
+     "text": "Translate «non diu manebant». Answer in English.",
+     "short": {
+      "accept": [
+       "they did not stay long",
+       "they didn't stay long",
+       "they did not stay for long",
+       "they didn't stay for long",
+       "they were not staying long",
+       "they did not remain long",
+       "they didn't remain long",
+       "they did not wait long",
+       "they didn't wait long"
+      ],
+      "form": "any"
+     },
+     "solution": "non = not; diu = for a long time; manebant = they stayed (imperfect)",
+     "hint": "diu means 'for a long time'; manebant comes from maneo"
+    },
+    {
+     "id": "x29",
+     "level": 5,
+     "text": "«dux milites hortatus est ut fortiter pugnarent.» What did the leader encourage the soldiers to do? Answer in English.",
+     "short": {
+      "accept": [
+       "fight bravely",
+       "to fight bravely",
+       "fight courageously",
+       "to fight courageously",
+       "fight boldly",
+       "to fight boldly"
+      ],
+      "form": "any"
+     },
+     "solution": "ut + subjunctive gives the content of the encouragement: to fight bravely",
+     "hint": "fortiter is an adverb from fortis (brave)"
+    },
+    {
+     "id": "x30",
+     "level": 5,
+     "text": "Give the Latin word for 'never'. Type the Latin word.",
+     "short": {
+      "accept": [
+       "numquam",
+       "nunquam"
+      ],
+      "reject": [
+       "nunc",
+       "semper"
+      ],
+      "form": "strict",
+      "feedback": {
+       "nunc": "nunc means 'now'"
+      }
+     },
+     "solution": "numquam = never; semper = always; saepe = often",
+     "hint": "It is the opposite of semper"
+    }
+   ]
+  },
+  {
+   "id": "latin.roman_life",
+   "title": "Roman life & myths",
+   "aliases": [
+    "roman life",
+    "roman myths",
+    "roman family",
+    "roman religion",
+    "roman army",
+    "roman britain"
+   ],
+   "questions": [
+    {
+     "id": "r01",
+     "level": 1,
+     "text": "What was the head of a Roman family called?",
+     "choice": {
+      "options": [
+       "paterfamilias",
+       "consul",
+       "centurion",
+       "senator"
+      ],
+      "correct": 0
+     },
+     "solution": "The paterfamilias was the oldest male, who had authority over the whole household",
+     "hint": "The name contains the Latin word for 'father'"
+    },
+    {
+     "id": "r02",
+     "level": 1,
+     "text": "Who was the Roman king of the gods? Give his Roman name.",
+     "short": {
+      "accept": [
+       "Jupiter",
+       "Iuppiter",
+       "Juppiter",
+       "Jove"
+      ],
+      "reject": [
+       "Zeus"
+      ],
+      "form": "any",
+      "feedback": {
+       "Zeus": "Zeus is his Greek name; give the Roman name"
+      }
+     },
+     "solution": "Jupiter was king of the gods (the Greek Zeus)",
+     "hint": "He is the Roman version of the Greek Zeus"
+    },
+    {
+     "id": "r03",
+     "level": 1,
+     "text": "What was the main public square and meeting place of a Roman town called?",
+     "choice": {
+      "options": [
+       "aqueduct",
+       "forum",
+       "atrium",
+       "amphitheatre"
+      ],
+      "correct": 1
+     },
+     "solution": "The forum was the centre of public, business and political life",
+     "hint": "Today the word is used for a place of public discussion"
+    },
+    {
+     "id": "r04",
+     "level": 1,
+     "text": "In Roman legend, which animal fed the twins Romulus and Remus? Answer in English.",
+     "short": {
+      "accept": [
+       "wolf",
+       "she-wolf",
+       "she wolf"
+      ],
+      "form": "any"
+     },
+     "solution": "A she-wolf fed the twins by the River Tiber",
+     "hint": "It is a wild animal related to the dog"
+    },
+    {
+     "id": "r05",
+     "level": 1,
+     "text": "Who was the Roman goddess of love?",
+     "choice": {
+      "options": [
+       "Juno",
+       "Diana",
+       "Venus",
+       "Minerva"
+      ],
+      "correct": 2
+     },
+     "solution": "Venus was the goddess of love (the Greek Aphrodite)",
+     "hint": "A planet is named after her"
+    },
+    {
+     "id": "r06",
+     "level": 1,
+     "text": "What was the Latin name for the Roman province of Britain? Give the Latin name.",
+     "short": {
+      "accept": [
+       "Britannia"
+      ],
+      "form": "strict"
+     },
+     "solution": "The Romans called the province Britannia",
+     "hint": "The name appears on old British coins next to a seated female figure"
+    },
+    {
+     "id": "r07",
+     "level": 2,
+     "text": "Who was the Roman god of war?",
+     "choice": {
+      "options": [
+       "Neptune",
+       "Mercury",
+       "Vulcan",
+       "Mars"
+      ],
+      "correct": 3
+     },
+     "solution": "Mars was the god of war (the Greek Ares); the month of March is named after him",
+     "hint": "The month of March is named after him"
+    },
+    {
+     "id": "r08",
+     "level": 2,
+     "text": "What was a Roman legion?",
+     "choice": {
+      "options": [
+       "A large unit of soldiers",
+       "A type of temple",
+       "A Roman coin",
+       "A public bath"
+      ],
+      "correct": 0
+     },
+     "solution": "A legion was a large army unit of about 5,000 soldiers",
+     "hint": "It was part of the Roman army"
+    },
+    {
+     "id": "r09",
+     "level": 2,
+     "text": "What was the officer called who commanded a century (about 80 men) in the Roman army? Give the term.",
+     "short": {
+      "accept": [
+       "centurion"
+      ],
+      "reject": [
+       "legionary",
+       "legion"
+      ],
+      "form": "any"
+     },
+     "solution": "A centurion commanded a century of about 80 men",
+     "hint": "The title comes from the word for the unit he led"
+    },
+    {
+     "id": "r10",
+     "level": 2,
+     "text": "Which Roman god of the sea was the same as the Greek Poseidon? Give his Roman name.",
+     "short": {
+      "accept": [
+       "Neptune",
+       "Neptunus"
+      ],
+      "reject": [
+       "Poseidon"
+      ],
+      "form": "any",
+      "feedback": {
+       "Poseidon": "Poseidon is the Greek name"
+      }
+     },
+     "solution": "Neptune was the Roman god of the sea",
+     "hint": "A planet far from the Sun is named after him"
+    },
+    {
+     "id": "r11",
+     "level": 2,
+     "text": "What was the atrium in a Roman house?",
+     "choice": {
+      "options": [
+       "The garden at the back",
+       "The main hall, often with an opening in the roof",
+       "The kitchen",
+       "The bedroom"
+      ],
+      "correct": 1
+     },
+     "solution": "The atrium was the main hall; rain fell through the compluvium into the impluvium pool",
+     "hint": "It was the first large room a visitor entered"
+    },
+    {
+     "id": "r12",
+     "level": 2,
+     "text": "What was the hot room in Roman baths called? Give the Latin term.",
+     "short": {
+      "accept": [
+       "caldarium"
+      ],
+      "reject": [
+       "tepidarium",
+       "frigidarium"
+      ],
+      "form": "strict",
+      "feedback": {
+       "tepidarium": "The tepidarium was the warm room",
+       "frigidarium": "The frigidarium was the cold room"
+      }
+     },
+     "solution": "caldarium = hot room; tepidarium = warm room; frigidarium = cold room",
+     "hint": "The Latin word calidus means 'hot'"
+    },
+    {
+     "id": "r13",
+     "level": 3,
+     "text": "Which emperor ordered a wall to be built across northern Britain in about AD 122?",
+     "choice": {
+      "options": [
+       "Nero",
+       "Augustus",
+       "Hadrian",
+       "Claudius"
+      ],
+      "correct": 2
+     },
+     "solution": "Hadrian's Wall was begun in about AD 122",
+     "hint": "The wall is named after him"
+    },
+    {
+     "id": "r14",
+     "level": 3,
+     "text": "Under which emperor did the Romans invade Britain in AD 43?",
+     "choice": {
+      "options": [
+       "Julius Caesar",
+       "Hadrian",
+       "Nero",
+       "Claudius"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Caesar led expeditions in 55 and 54 BC, and he was never emperor",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The invasion of AD 43 took place under Claudius",
+     "hint": "Julius Caesar visited Britain earlier but did not conquer it"
+    },
+    {
+     "id": "r15",
+     "level": 3,
+     "text": "Which queen of the Iceni led a revolt against the Romans in AD 60–61? Give her name.",
+     "short": {
+      "accept": [
+       "Boudicca",
+       "Boudica",
+       "Boadicea"
+      ],
+      "form": "any"
+     },
+     "solution": "Boudicca led the Iceni revolt in AD 60–61",
+     "hint": "Her statue with a chariot stands near Westminster Bridge in London"
+    },
+    {
+     "id": "r16",
+     "level": 3,
+     "text": "In Roman legend, Aeneas escaped from which city when it was destroyed by the Greeks? Give the city.",
+     "short": {
+      "accept": [
+       "Troy",
+       "Ilium"
+      ],
+      "form": "any"
+     },
+     "solution": "Aeneas escaped from burning Troy and later reached Italy",
+     "hint": "The Greeks used a wooden horse to capture it"
+    },
+    {
+     "id": "r17",
+     "level": 3,
+     "text": "What were the lares in a Roman home?",
+     "choice": {
+      "options": [
+       "Household gods who protected the family",
+       "Servants who cooked meals",
+       "Rooms for guests",
+       "Statues of famous generals"
+      ],
+      "correct": 0
+     },
+     "solution": "The lares were household gods, honoured at a shrine called the lararium",
+     "hint": "They were worshipped at the lararium shrine"
+    },
+    {
+     "id": "r18",
+     "level": 3,
+     "text": "What is the common name of the large amphitheatre in Rome where gladiators fought, opened in AD 80? Give its name.",
+     "short": {
+      "accept": [
+       "Colosseum",
+       "the Colosseum",
+       "Coliseum",
+       "Flavian Amphitheatre"
+      ],
+      "form": "any"
+     },
+     "solution": "The Colosseum (Flavian Amphitheatre) was opened in AD 80",
+     "hint": "Its name may come from a colossal statue that stood nearby"
+    },
+    {
+     "id": "r19",
+     "level": 4,
+     "text": "According to a well-known version of the legend, why did Romulus kill Remus?",
+     "choice": {
+      "options": [
+       "Remus refused to fight the Sabines",
+       "Remus jumped over the walls Romulus was building",
+       "Remus stole the she-wolf",
+       "Remus wanted to be king of Troy"
+      ],
+      "correct": 1
+     },
+     "solution": "In the best-known version, Remus mocked Romulus by leaping over his new walls",
+     "hint": "It happened while Romulus was founding his new city"
+    },
+    {
+     "id": "r20",
+     "level": 4,
+     "text": "Roman boys from free families wore a bulla. What was it?",
+     "choice": {
+      "options": [
+       "A toga with a purple stripe",
+       "A wax writing tablet",
+       "A protective amulet worn around the neck",
+       "A type of sandal"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is the toga praetexta, also worn by boys",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The bulla was a protective amulet, dedicated to the household gods when a boy came of age",
+     "hint": "It was believed to keep the wearer safe"
+    },
+    {
+     "id": "r21",
+     "level": 4,
+     "text": "What was a Roman soldier's short stabbing sword called? Give the Latin term.",
+     "short": {
+      "accept": [
+       "gladius"
+      ],
+      "reject": [
+       "pilum",
+       "scutum"
+      ],
+      "form": "strict",
+      "feedback": {
+       "pilum": "The pilum was a throwing javelin",
+       "scutum": "The scutum was a shield"
+      }
+     },
+     "solution": "The gladius was a short stabbing sword (gladiator comes from the same word)",
+     "hint": "The word 'gladiator' comes from it"
+    },
+    {
+     "id": "r22",
+     "level": 4,
+     "text": "Which Roman goddess of wisdom was the same as the Greek goddess Athena? Give her Roman name.",
+     "short": {
+      "accept": [
+       "Minerva"
+      ],
+      "reject": [
+       "Athena"
+      ],
+      "form": "any",
+      "feedback": {
+       "Athena": "Athena is her Greek name"
+      }
+     },
+     "solution": "Minerva was the goddess of wisdom (the Greek Athena)",
+     "hint": "In Roman Bath she was linked with the local goddess Sulis"
+    },
+    {
+     "id": "r23",
+     "level": 4,
+     "text": "What did a Roman haruspex do?",
+     "choice": {
+      "options": [
+       "Commanded a group of soldiers",
+       "Taught boys to read and write",
+       "Collected taxes in the provinces",
+       "Examined the insides of sacrificed animals to read omens"
+      ],
+      "correct": 3
+     },
+     "solution": "A haruspex read the will of the gods from the organs of sacrificed animals",
+     "hint": "It was a religious role connected with sacrifice"
+    },
+    {
+     "id": "r24",
+     "level": 4,
+     "text": "What was the Roman name of the town at modern Bath, famous for its hot springs? Give the Latin name.",
+     "short": {
+      "accept": [
+       "Aquae Sulis"
+      ],
+      "form": "strict"
+     },
+     "solution": "Aquae Sulis = the waters of Sulis",
+     "hint": "The name means 'the waters of Sulis'; start with the Latin word for water"
+    },
+    {
+     "id": "r25",
+     "level": 5,
+     "text": "Why were Roman army forts built to a standard plan?",
+     "choice": {
+      "options": [
+       "Soldiers knew where everything was and could build them quickly",
+       "The emperor designed every fort personally",
+       "They had to look like Greek temples",
+       "Only one architect worked for the army"
+      ],
+      "correct": 0
+     },
+     "solution": "A standard layout let soldiers build forts fast and find their way in any fort",
+     "hint": "Think about soldiers who moved from one fort to another"
+    },
+    {
+     "id": "r26",
+     "level": 5,
+     "text": "Which statement about the Vestal Virgins is accurate?",
+     "choice": {
+      "options": [
+       "They lived in Roman Britain",
+       "They tended the sacred fire of Vesta in Rome",
+       "They were the wives of Roman priests",
+       "They served for one year only"
+      ],
+      "correct": 1
+     },
+     "solution": "The Vestals kept the sacred fire of Vesta burning; they served for 30 years",
+     "hint": "Vesta was the goddess of the hearth"
+    },
+    {
+     "id": "r27",
+     "level": 5,
+     "text": "Why was the Roman road network important for controlling Britain?",
+     "choice": {
+      "options": [
+       "Roads were built mainly for chariot racing",
+       "It removed the need for an army",
+       "Troops and supplies could move quickly between forts and towns",
+       "It stopped the Britons from farming"
+      ],
+      "correct": 2
+     },
+     "solution": "Straight, paved roads let the army and supplies move quickly around the province",
+     "hint": "Think about what an army needs in order to react quickly"
+    },
+    {
+     "id": "r28",
+     "level": 5,
+     "text": "In the Aeneid, Aeneas leaves Carthage and its queen to follow his destiny. Who was the queen? Give her name.",
+     "short": {
+      "accept": [
+       "Dido",
+       "Queen Dido"
+      ],
+      "form": "any"
+     },
+     "solution": "Dido, queen of Carthage, fell in love with Aeneas, who left her for Italy",
+     "hint": "She founded the city of Carthage in North Africa"
+    },
+    {
+     "id": "r29",
+     "level": 5,
+     "text": "Which Roman leader was assassinated on the Ides of March, 44 BC? Give his name.",
+     "short": {
+      "accept": [
+       "Julius Caesar",
+       "Caesar",
+       "Gaius Julius Caesar"
+      ],
+      "form": "any"
+     },
+     "solution": "Julius Caesar was assassinated on 15 March 44 BC",
+     "hint": "The month of July is named after him"
+    },
+    {
+     "id": "r30",
+     "level": 5,
+     "text": "Which Roman festival in December involved gift-giving, feasting and relaxed social rules? Give its name.",
+     "short": {
+      "accept": [
+       "Saturnalia",
+       "the Saturnalia"
+      ],
+      "form": "any"
+     },
+     "solution": "The Saturnalia was a December festival in honour of Saturn",
+     "hint": "It honoured the god Saturn"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "latin.y{year}.nouns",
+      "label": "Nouns & cases",
+      "skills": [
+       "latin.nouns"
+      ]
+     },
+     {
+      "id": "latin.y{year}.verbs",
+      "label": "Verbs & tenses",
+      "skills": [
+       "latin.verbs"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "latin.y{year}.vocab",
+      "label": "Vocabulary & translation",
+      "skills": [
+       "latin.vocab"
+      ]
+     },
+     {
+      "id": "latin.y{year}.roman_life",
+      "label": "Roman life & myths",
+      "skills": [
+       "latin.roman_life"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

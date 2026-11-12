@@ -1,0 +1,2462 @@
+{
+ "subject": {
+  "id": "drama",
+  "title": "Drama",
+  "order": 70
+ },
+ "skills": [
+  {
+   "id": "drama.roles_stages",
+   "title": "Theatre roles & stages",
+   "aliases": [
+    "stage types",
+    "proscenium",
+    "thrust stage",
+    "traverse",
+    "in the round",
+    "stage directions",
+    "upstage",
+    "director",
+    "stage manager"
+   ],
+   "questions": [
+    {
+     "id": "rs01",
+     "level": 1,
+     "text": "On which type of stage does the audience sit on every side of the acting area?",
+     "choice": {
+      "options": [
+       "Proscenium arch",
+       "In the round",
+       "Thrust",
+       "End-on"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "A thrust stage has the audience on three sides, not all of them",
+       null
+      ]
+     },
+     "solution": "In-the-round staging has the audience surrounding the acting area on all sides",
+     "hint": "Picture a boxing ring with seats on every side of it"
+    },
+    {
+     "id": "rs02",
+     "level": 1,
+     "text": "Which type of stage has the audience seated on three sides of the acting area? Give the term.",
+     "short": {
+      "accept": [
+       "thrust stage",
+       "thrust",
+       "thrust staging"
+      ],
+      "reject": [
+       "traverse",
+       "in the round",
+       "end on"
+      ],
+      "feedback": {
+       "traverse": "Traverse staging has the audience on two opposite sides",
+       "in the round": "In the round has the audience on all four sides"
+      }
+     },
+     "solution": "A thrust stage juts out into the audience, who sit on three sides of it",
+     "hint": "The stage pushes forward into the audience; the back wall is the only side without seats"
+    },
+    {
+     "id": "rs03",
+     "level": 1,
+     "text": "On stage, which direction is upstage?",
+     "choice": {
+      "options": [
+       "Towards the back, away from the audience",
+       "Towards the front, nearest the audience",
+       "To the actor's left as they face the audience",
+       "To the actor's right as they face the audience"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is downstage, the part nearest the audience",
+       null,
+       null
+      ]
+     },
+     "solution": "Upstage is the back of the stage, furthest from the audience; downstage is the front",
+     "hint": "On old sloping stages, the back of the stage was higher than the front"
+    },
+    {
+     "id": "rs04",
+     "level": 1,
+     "text": "Who has the overall artistic vision for a production, interprets the script and leads the actors in rehearsals? Give the job title.",
+     "short": {
+      "accept": [
+       "director",
+       "theatre director",
+       "the director"
+      ],
+      "reject": [
+       "stage manager",
+       "producer",
+       "playwright"
+      ],
+      "feedback": {
+       "stage manager": "The stage manager organises rehearsals and runs the show backstage, but does not set the artistic vision",
+       "producer": "The producer looks after money and the business side of a production",
+       "playwright": "The playwright writes the script"
+      }
+     },
+     "solution": "The director decides how the play will be interpreted and guides the actors and designers towards that vision",
+     "hint": "This person gives the actors notes and decides how each scene is staged"
+    },
+    {
+     "id": "rs05",
+     "level": 1,
+     "text": "What are the wings of a stage?",
+     "choice": {
+      "options": [
+       "The space above the stage where scenery is hung",
+       "The part of the stage in front of the curtain",
+       "The seating area for the audience",
+       "The hidden offstage areas at the sides of the stage"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "That is the apron",
+       "That is the auditorium",
+       null
+      ]
+     },
+     "solution": "The wings are the offstage spaces to the left and right of the acting area, hidden from the audience",
+     "hint": "Think of where a bird's wings are on its body"
+    },
+    {
+     "id": "rs06",
+     "level": 1,
+     "text": "Which member of a theatre company writes the script of a new play?",
+     "choice": {
+      "options": [
+       "Director",
+       "Playwright",
+       "Producer",
+       "Stage manager"
+      ],
+      "correct": 1
+     },
+     "solution": "The playwright writes the script; 'wright' is an old word for a maker, as in shipwright",
+     "hint": "The job title ends with an old word meaning a maker"
+    },
+    {
+     "id": "rs07",
+     "level": 1,
+     "text": "What is the name of the frame around the opening of a traditional stage, through which the audience watches the action like a picture? Give the term.",
+     "short": {
+      "accept": [
+       "proscenium arch",
+       "proscenium",
+       "proscenium stage",
+       "proscenium arch stage"
+      ]
+     },
+     "solution": "The proscenium arch frames the stage like a picture frame, with the audience on one side",
+     "hint": "The term starts with P and comes from an ancient Greek word meaning 'in front of the scene'"
+    },
+    {
+     "id": "rs08",
+     "level": 1,
+     "text": "Which staging has the audience on two opposite sides, facing each other, with the acting area between them?",
+     "choice": {
+      "options": [
+       "Thrust",
+       "Traverse",
+       "In the round",
+       "End-on"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A thrust stage has the audience on three sides",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "In traverse staging the audience sit on two sides facing each other, like at a catwalk show",
+     "hint": "Think of a fashion catwalk"
+    },
+    {
+     "id": "rs09",
+     "level": 2,
+     "text": "What is the difference between thrust and traverse staging?",
+     "choice": {
+      "options": [
+       "Thrust has the audience on three sides; traverse has it on two opposite sides",
+       "Thrust has the audience on two opposite sides; traverse has it on three sides",
+       "Thrust has the audience on all four sides; traverse has it on one side",
+       "Thrust has the audience on one side; traverse has it on all four sides"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "You have swapped them round",
+       null,
+       null
+      ]
+     },
+     "solution": "A thrust stage has audience on three sides; traverse staging has audience on two opposite sides",
+     "hint": "Picture a stage pushed out into the seats, then a catwalk"
+    },
+    {
+     "id": "rs10",
+     "level": 2,
+     "text": "An actor faces the audience and walks towards their own left. Which direction are they moving?",
+     "choice": {
+      "options": [
+       "Stage right",
+       "House left",
+       "Stage left",
+       "Downstage"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Stage right is the actor's right-hand side",
+       "House left is the audience's left, which is the actor's right",
+       null,
+       null
+      ]
+     },
+     "solution": "Stage left and stage right are given from the actor's point of view as they face the audience",
+     "hint": "Stage directions are given from the actor's point of view, not the audience's"
+    },
+    {
+     "id": "rs11",
+     "level": 2,
+     "text": "Which member of the production team runs the backstage crew and makes sure each performance runs smoothly once the show has opened? Give the job title.",
+     "short": {
+      "accept": [
+       "stage manager",
+       "deputy stage manager",
+       "the stage manager"
+      ],
+      "reject": [
+       "director",
+       "producer"
+      ],
+      "feedback": {
+       "director": "The director's main work is in rehearsals; once the show is running, someone else keeps each performance on track",
+       "producer": "The producer looks after money and the business side, not the running of each show"
+      }
+     },
+     "solution": "The stage manager supervises the crew and the running of every performance, keeping the show as it was rehearsed",
+     "hint": "This person is in charge backstage night after night during the run"
+    },
+    {
+     "id": "rs12",
+     "level": 2,
+     "text": "What is the apron of a stage?",
+     "choice": {
+      "options": [
+       "The part of the stage in front of the main curtain, closest to the audience",
+       "The space above the stage where scenery is raised",
+       "The sloping floor under the audience seating",
+       "A rotating section of the stage floor"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That is the fly tower (the flies)",
+       null
+      ]
+     },
+     "solution": "The apron extends in front of the curtain line or proscenium arch, nearest the audience",
+     "hint": "Like an apron you wear, it is at the front"
+    },
+    {
+     "id": "rs13",
+     "level": 2,
+     "text": "What is the main difference between a producer and a director in theatre?",
+     "choice": {
+      "options": [
+       "The producer manages money and business matters; the director leads the artistic side and rehearsals",
+       "The producer leads rehearsals; the director raises the money",
+       "The producer writes the script; the director builds the set",
+       "The producer operates the lights; the director operates the sound"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "You have swapped them round",
+       null,
+       null
+      ]
+     },
+     "solution": "The producer handles finance, budgets and business; the director shapes the artistic interpretation and runs rehearsals",
+     "hint": "One role is about the business, the other about the art"
+    },
+    {
+     "id": "rs14",
+     "level": 2,
+     "text": "What is the name for the part of a theatre where the audience sits to watch the play? Give the term.",
+     "short": {
+      "accept": [
+       "auditorium",
+       "the auditorium",
+       "house",
+       "the house"
+      ],
+      "reject": [
+       "foyer"
+      ],
+      "feedback": {
+       "foyer": "The foyer is the entrance area where the audience gathers before the show"
+      }
+     },
+     "solution": "The audience sits in the auditorium, also called the house",
+     "hint": "The word comes from the Latin word for 'hearing'"
+    },
+    {
+     "id": "rs15",
+     "level": 2,
+     "text": "What is the name for a section of the stage floor that turns round to change the scene quickly? Give the term.",
+     "short": {
+      "accept": [
+       "revolve",
+       "revolving stage",
+       "turntable",
+       "a revolve"
+      ]
+     },
+     "solution": "A revolve is a turntable built into the stage floor that rotates scenery and actors",
+     "hint": "It begins with R and spins like a record player"
+    },
+    {
+     "id": "rs16",
+     "level": 3,
+     "text": "A set designer is told that nothing taller than a chair can stand anywhere in the acting area, because it would block someone's view wherever it was placed. Which stage type is the production using?",
+     "choice": {
+      "options": [
+       "Thrust",
+       "Traverse",
+       "In the round",
+       "Proscenium arch"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A thrust stage has a back wall where tall scenery can go",
+       "Traverse staging has two open ends where tall scenery can go",
+       null,
+       "A proscenium stage can have tall scenery at the back"
+      ]
+     },
+     "solution": "In the round, every part of the acting area is seen from all sides, so tall scenery would always block someone's view",
+     "hint": "Which stage has no 'back' where tall scenery could stand?"
+    },
+    {
+     "id": "rs17",
+     "level": 3,
+     "text": "Priya is standing downstage centre. The director asks her to move as far from the audience as she can without moving left or right. Where does she end up?",
+     "choice": {
+      "options": [
+       "Downstage left",
+       "Upstage centre",
+       "Centre stage right",
+       "Upstage right"
+      ],
+      "correct": 1
+     },
+     "solution": "Moving away from the audience is moving upstage; keeping her left–right position keeps her in the centre: upstage centre",
+     "hint": "Moving away from the audience means moving 'up' the stage"
+    },
+    {
+     "id": "rs18",
+     "level": 3,
+     "text": "A company performs a play set in a factory inside a real empty factory, chosen because the building suits the story. What is this type of theatre called? Give the term.",
+     "short": {
+      "accept": [
+       "site-specific",
+       "site-specific theatre",
+       "site-specific performance",
+       "site-specific staging"
+      ],
+      "reject": [
+       "promenade"
+      ],
+      "feedback": {
+       "promenade": "Promenade means the audience moves around to follow the action; the key point here is the real location chosen for the story"
+      }
+     },
+     "solution": "Site-specific theatre is performed in a real place outside a theatre, chosen because it fits the play",
+     "hint": "Think about where the performance takes place and why that place was picked"
+    },
+    {
+     "id": "rs19",
+     "level": 3,
+     "text": "During the run of a play, a lead actor is too ill to perform. Who is ready to take over the role because they have learned it in advance?",
+     "choice": {
+      "options": [
+       "The dresser",
+       "The stage manager",
+       "The prompter",
+       "The understudy"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A dresser helps actors with their costumes",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "An understudy learns a role so they can perform it if the usual actor cannot",
+     "hint": "This performer studies the part in case they are needed"
+    },
+    {
+     "id": "rs20",
+     "level": 3,
+     "text": "The audience walks with the actors from room to room in an old house, following the action from scene to scene. What type of staging is this?",
+     "choice": {
+      "options": [
+       "Traverse",
+       "Promenade",
+       "Thrust",
+       "End-on"
+      ],
+      "correct": 1
+     },
+     "solution": "In promenade staging the audience moves around to follow the action",
+     "hint": "The name comes from the French for 'a walk'"
+    },
+    {
+     "id": "rs21",
+     "level": 3,
+     "text": "A director tells an actor to cross from upstage right to the stage position diagonally opposite. Where should the actor finish? Give the stage position.",
+     "short": {
+      "accept": [
+       "downstage left",
+       "down stage left",
+       "dsl",
+       "down left"
+      ],
+      "reject": [
+       "downstage right",
+       "upstage left"
+      ],
+      "feedback": {
+       "downstage right": "That only changes upstage to downstage; diagonally opposite also swaps right and left",
+       "upstage left": "That only swaps right and left; diagonally opposite also swaps upstage and downstage"
+      }
+     },
+     "solution": "Diagonally opposite swaps both parts of the position: upstage becomes downstage and right becomes left",
+     "hint": "Change both parts of the position, not just one"
+    },
+    {
+     "id": "rs22",
+     "level": 4,
+     "text": "Read this description of a performance space: 'The seats are all on one side. There is no frame around the stage, and the front row sits level with the edge of the acting area.' Which stage type is described?",
+     "choice": {
+      "options": [
+       "End-on",
+       "Proscenium arch",
+       "Thrust",
+       "Traverse"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A proscenium stage has a frame (the arch) around it",
+       "A thrust stage has the audience on three sides",
+       null
+      ]
+     },
+     "solution": "Audience on one side only, with no arch framing the stage, is end-on staging",
+     "hint": "First count the sides with seats, then check whether there is a frame"
+    },
+    {
+     "id": "rs23",
+     "level": 4,
+     "text": "A theatre's ground plan shows the audience on three sides and a solid wall behind the stage. The designer wants a tall doorway that every audience member can see past. Where should it go?",
+     "choice": {
+      "options": [
+       "Upstage, against the back wall",
+       "Downstage centre",
+       "Downstage left",
+       "In the middle of the acting area"
+      ],
+      "correct": 0
+     },
+     "solution": "On a thrust stage the back wall is the only side with no audience, so tall pieces go upstage against it",
+     "hint": "Which part of the stage has no audience behind it?"
+    },
+    {
+     "id": "rs24",
+     "level": 4,
+     "text": "From the audience's point of view, where is upstage right?",
+     "choice": {
+      "options": [
+       "At the back, on the audience's right",
+       "At the front, on the audience's left",
+       "At the back, on the audience's left",
+       "At the front, on the audience's right"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Stage right is the actor's right, and the actor faces the audience, so it is the audience's left",
+       "Upstage is the back of the stage, not the front",
+       null,
+       null
+      ]
+     },
+     "solution": "Upstage is the back. Stage right is the actor's right as they face the audience, which is the audience's left",
+     "hint": "First decide back or front, then remember that stage left and right are the actor's"
+    },
+    {
+     "id": "rs25",
+     "level": 4,
+     "text": "A ground plan shows two blocks of seats facing each other with a long, narrow acting area between them. Which staging challenge will the director face most often?",
+     "choice": {
+      "options": [
+       "Tall scenery at the back will block every seat",
+       "The audience will have to walk between scenes",
+       "Actors will often have their backs or sides to one block of the audience",
+       "The proscenium arch will hide actors at the sides"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Traverse staging has no back wall; scenery can stand at the open ends",
+       null,
+       "That describes promenade staging"
+      ]
+     },
+     "solution": "This is traverse staging: with audience on two sides, actors must keep turning so neither side sees only their backs",
+     "hint": "Name the staging first, then think about which way the actors face"
+    },
+    {
+     "id": "rs26",
+     "level": 4,
+     "text": "Read this: 'Scenery is hung on bars and raised out of sight into the tall space above the stage.' What is that space above the stage called? Give the term.",
+     "short": {
+      "accept": [
+       "the flies",
+       "flies",
+       "fly tower",
+       "fly loft",
+       "fly space"
+      ],
+      "reject": [
+       "wings"
+      ],
+      "feedback": {
+       "wings": "The wings are at the sides of the stage; this space is above it"
+      }
+     },
+     "solution": "Scenery is 'flown' up into the flies, the tall fly tower above the stage",
+     "hint": "Look upwards: this scenery travels vertically out of sight"
+    },
+    {
+     "id": "rs27",
+     "level": 4,
+     "text": "Explain one advantage and one disadvantage of staging a play in the round.",
+     "rubric": {
+      "model_answer": "Advantage: every audience member is close to the action, which creates an intimate, involving experience. Disadvantage: some of the audience will always see an actor's back, so the director must keep actors moving and turning, and tall scenery cannot be used because it would block sightlines.",
+      "mark_scheme": "1 mark: a valid advantage (e.g. intimacy, closeness, audience feels involved)\n1 mark: the advantage explained\n1 mark: a valid disadvantage (e.g. actors' backs to some seats, sightlines, no tall set)\n1 mark: the disadvantage explained",
+      "max_marks": 4
+     },
+     "solution": "In the round gives closeness and intimacy, but makes sightlines and set design harder",
+     "hint": "Think about how close the audience is and what each section of seats can see"
+    },
+    {
+     "id": "rs28",
+     "level": 5,
+     "text": "Which statement about the proscenium arch stage is accurate?",
+     "choice": {
+      "options": [
+       "It places the audience on three sides of the acting area",
+       "It frames the action like a picture, which suits naturalistic plays that keep a 'fourth wall'",
+       "It makes it impossible to use tall scenery",
+       "It was the usual stage of ancient Greek open-air theatres"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That describes a thrust stage",
+       null,
+       null,
+       "Tall scenery is easy to place at the back of a proscenium stage"
+      ]
+     },
+     "solution": "The proscenium arch frames the stage like a picture; with the audience on one side it suits the illusion of a 'fourth wall'",
+     "hint": "Think about where the audience sits and what the arch does visually"
+    },
+    {
+     "id": "rs29",
+     "level": 5,
+     "text": "Why do many older theatres have a raked stage that slopes upwards towards the back?",
+     "choice": {
+      "options": [
+       "So that rainwater drains off the stage",
+       "So the audience can see actors at the back of the stage more clearly",
+       "So that actors can slide on and off quickly",
+       "So that the orchestra can sit underneath it"
+      ],
+      "correct": 1
+     },
+     "solution": "A raked stage improves sightlines: actors further back stand higher. This is why the back is called upstage",
+     "hint": "Think about what the people in the front seats can see"
+    },
+    {
+     "id": "rs30",
+     "level": 5,
+     "text": "Which statement about promenade staging is accurate?",
+     "choice": {
+      "options": [
+       "The audience stays seated on two sides of a long acting area",
+       "It can only take place inside a proscenium arch theatre",
+       "The audience moves to follow the action, so the director must guide where they stand and look",
+       "The actors stay still while the audience watches from fixed seats"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That describes traverse staging",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "In promenade staging the audience moves, so the director must guide their focus and movement through the space",
+     "hint": "Remember what the audience does in a promenade performance"
+    },
+    {
+     "id": "rs31",
+     "level": 5,
+     "text": "A director wants the audience to feel as if they are secretly watching a real family through an invisible wall. Which stage type suits this, and why?",
+     "choice": {
+      "options": [
+       "In the round, because the audience surrounds the action on every side",
+       "Promenade, because the audience walks among the actors",
+       "Traverse, because the two halves of the audience can see each other across the stage",
+       "Proscenium arch, because the frame creates a clear 'fourth wall' between audience and action"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Being surrounded by the audience makes an invisible wall hard to imagine",
+       null,
+       null
+      ]
+     },
+     "solution": "The invisible wall is the 'fourth wall'; a proscenium arch keeps the audience on one side, framed off from the action",
+     "hint": "Which stage keeps the audience on one side, behind a frame?"
+    },
+    {
+     "id": "rs32",
+     "level": 5,
+     "text": "Explain why the stage manager, rather than the director, is usually in charge of each performance once a show has opened.",
+     "rubric": {
+      "model_answer": "The director's main job is in rehearsals: shaping the interpretation, the blocking and the performances. Once the show opens, the director often moves on. The stage manager and their team run every performance, oversee the cues and the crew, and make sure the show stays as it was rehearsed, so the stage manager is in charge night after night.",
+      "mark_scheme": "1 mark: the director's main work happens in rehearsal\n1 mark: the director often leaves once the show has opened\n1 mark: the stage manager runs each performance and supervises the crew and cues\n1 mark: the stage manager keeps the show consistent with what was rehearsed",
+      "max_marks": 4
+     },
+     "solution": "The director's work is mainly in rehearsal; the stage manager runs each performance and keeps it as rehearsed",
+     "hint": "Compare when each person does most of their work"
+    }
+   ]
+  },
+  {
+   "id": "drama.practitioners",
+   "title": "Practitioners & styles",
+   "aliases": [
+    "stanislavski",
+    "brecht",
+    "artaud",
+    "frantic assembly",
+    "epic theatre",
+    "naturalism",
+    "physical theatre",
+    "verbatim theatre",
+    "commedia dell'arte"
+   ],
+   "questions": [
+    {
+     "id": "pr01",
+     "level": 1,
+     "text": "Which Russian practitioner developed a 'system' to train actors to create believable, truthful characters? Give the surname.",
+     "short": {
+      "accept": [
+       "Stanislavski",
+       "Stanislavsky",
+       "Konstantin Stanislavski",
+       "Konstantin Stanislavsky",
+       "Stanislavski's system"
+      ],
+      "reject": [
+       "Strasberg"
+      ],
+      "feedback": {
+       "Strasberg": "Lee Strasberg was an American teacher who developed 'the Method' from the Russian practitioner's ideas"
+      }
+     },
+     "solution": "Konstantin Stanislavski developed his system for truthful, realistic acting",
+     "hint": "He co-founded the Moscow Art Theatre in 1898"
+    },
+    {
+     "id": "pr02",
+     "level": 1,
+     "text": "Which practitioner is most closely linked with epic theatre?",
+     "choice": {
+      "options": [
+       "Konstantin Stanislavski",
+       "Antonin Artaud",
+       "Bertolt Brecht",
+       "Augusto Boal"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Stanislavski is linked with naturalism and truthful acting",
+       null,
+       "Artaud is linked with the Theatre of Cruelty"
+      ]
+     },
+     "solution": "Bertolt Brecht developed epic theatre to make audiences think critically about society",
+     "hint": "He was a German playwright and director who founded the Berliner Ensemble"
+    },
+    {
+     "id": "pr03",
+     "level": 1,
+     "text": "Antonin Artaud is known for which style of theatre?",
+     "choice": {
+      "options": [
+       "Epic theatre",
+       "Naturalism",
+       "Commedia dell'arte",
+       "Theatre of Cruelty"
+      ],
+      "correct": 3
+     },
+     "solution": "Artaud's Theatre of Cruelty aimed to shock the audience's senses",
+     "hint": "His theatre aimed to assault the senses"
+    },
+    {
+     "id": "pr04",
+     "level": 1,
+     "text": "Brecht used techniques to stop the audience becoming emotionally absorbed in the story, so that they would think critically about it. What is this effect usually called in English? Give the term.",
+     "short": {
+      "accept": [
+       "alienation effect",
+       "alienation",
+       "distancing effect",
+       "estrangement effect",
+       "verfremdungseffekt",
+       "v-effekt",
+       "v-effect",
+       "verfremdung"
+      ]
+     },
+     "solution": "Brecht's alienation (distancing) effect, Verfremdungseffekt in German, keeps the audience thinking rather than feeling",
+     "hint": "Its name suggests making the familiar seem strange"
+    },
+    {
+     "id": "pr05",
+     "level": 1,
+     "text": "Which theatre company is known for physical theatre exercises such as Chair Duets and Hymn Hands?",
+     "choice": {
+      "options": [
+       "Complicité",
+       "Frantic Assembly",
+       "The Berliner Ensemble",
+       "The Moscow Art Theatre"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "The Berliner Ensemble was Brecht's company"
+      ]
+     },
+     "solution": "Frantic Assembly, a British physical theatre company, uses exercises such as Chair Duets and Hymn Hands",
+     "hint": "It is a British company known for movement-based work"
+    },
+    {
+     "id": "pr06",
+     "level": 1,
+     "text": "In commedia dell'arte, which stock character is a mischievous, acrobatic servant in a diamond-patterned costume?",
+     "choice": {
+      "options": [
+       "Pantalone",
+       "Arlecchino (Harlequin)",
+       "Il Dottore",
+       "Il Capitano"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Pantalone is the greedy old merchant",
+       "Il Dottore is the pompous doctor or scholar"
+      ]
+     },
+     "solution": "Arlecchino (Harlequin) is the nimble, mischievous servant in a patched, diamond-patterned costume",
+     "hint": "In English this character's name is Harlequin"
+    },
+    {
+     "id": "pr07",
+     "level": 1,
+     "text": "What name is given to theatre that uses the exact words of real people, taken from interviews or records, as its script? Give the term.",
+     "short": {
+      "accept": [
+       "verbatim theatre",
+       "verbatim",
+       "verbatim drama"
+      ]
+     },
+     "solution": "Verbatim theatre builds its script from the recorded words of real people",
+     "hint": "The word is Latin for 'word for word'"
+    },
+    {
+     "id": "pr08",
+     "level": 2,
+     "text": "Which description matches naturalism?",
+     "choice": {
+      "options": [
+       "Theatre that tries to create a detailed, believable illusion of real life on stage",
+       "Theatre that keeps reminding the audience they are watching a play",
+       "Theatre that uses masks and improvised comic routines",
+       "Theatre that attacks the audience's senses with sound and light"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That describes Brecht's epic theatre",
+       "That describes commedia dell'arte"
+      ]
+     },
+     "solution": "Naturalism tries to recreate real life on stage as believably as possible",
+     "hint": "Think about the word 'natural'"
+    },
+    {
+     "id": "pr09",
+     "level": 2,
+     "text": "What did Stanislavski mean by the 'magic if'?",
+     "choice": {
+      "options": [
+       "Actors imagine the audience is not there",
+       "Actors ask: 'What would I do if I were in this character's situation?'",
+       "Actors perform a scene as if it were a dream",
+       "Actors improvise a new ending to the play"
+      ],
+      "correct": 1
+     },
+     "solution": "The 'magic if' asks the actor how they would behave if they were in the character's circumstances",
+     "hint": "It is a question an actor asks about themselves and the character"
+    },
+    {
+     "id": "pr10",
+     "level": 2,
+     "text": "In Stanislavski's system, what is the term for what a character wants or is trying to achieve in a scene? Give the term.",
+     "short": {
+      "accept": [
+       "objective",
+       "objectives",
+       "task",
+       "goal"
+      ],
+      "reject": [
+       "super-objective"
+      ],
+      "feedback": {
+       "super-objective": "The super-objective is the character's overall aim across the whole play; in a single scene it is something smaller"
+      }
+     },
+     "solution": "A character's objective is what they want in a scene; the super-objective is their aim across the whole play",
+     "hint": "It is what the character is trying to get or do"
+    },
+    {
+     "id": "pr11",
+     "level": 2,
+     "text": "What is the main difference between Stanislavski's and Brecht's aims for the audience?",
+     "choice": {
+      "options": [
+       "Stanislavski wanted the audience to think critically; Brecht wanted them to empathise",
+       "Both wanted the audience to forget they were in a theatre",
+       "Stanislavski wanted the audience to believe and empathise; Brecht wanted them to think critically",
+       "Both wanted to shock the audience's senses with sound and light"
+      ],
+      "correct": 2,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Stanislavski aimed for belief and empathy; Brecht aimed for critical distance",
+     "hint": "One wanted the audience to feel, the other wanted them to think"
+    },
+    {
+     "id": "pr12",
+     "level": 2,
+     "text": "In commedia dell'arte, what is the name for a rehearsed comic routine or piece of 'business' that can be slotted into a performance? Give the term.",
+     "short": {
+      "accept": [
+       "lazzi",
+       "lazzo"
+      ]
+     },
+     "solution": "Lazzi (singular lazzo) are rehearsed comic routines that commedia performers slot into the action",
+     "hint": "It is an Italian word beginning with L"
+    },
+    {
+     "id": "pr13",
+     "level": 2,
+     "text": "Which statement describes physical theatre?",
+     "choice": {
+      "options": [
+       "A style that tells the story mainly through movement and the body",
+       "A style that uses only the exact words of real people",
+       "A style in which actors read the script while seated",
+       "A style that recreates real life in detailed rooms"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That describes verbatim theatre",
+       null
+      ]
+     },
+     "solution": "Physical theatre puts movement and the body at the centre of storytelling",
+     "hint": "Think about what the word 'physical' refers to"
+    },
+    {
+     "id": "pr14",
+     "level": 2,
+     "text": "Which French practitioner wrote 'The Theatre and Its Double' and wanted theatre to shock the audience's senses? Give the surname.",
+     "short": {
+      "accept": [
+       "Artaud",
+       "Antonin Artaud"
+      ],
+      "reject": [
+       "Brecht"
+      ],
+      "feedback": {
+       "Brecht": "Brecht was German and wanted audiences to think calmly and critically"
+      }
+     },
+     "solution": "Antonin Artaud set out his Theatre of Cruelty in The Theatre and Its Double (1938)",
+     "hint": "He was a French actor, poet and director of the 1920s and 1930s"
+    },
+    {
+     "id": "pr15",
+     "level": 3,
+     "text": "An actor steps out of a scene, holds up a placard saying 'Ten years later', and speaks directly to the audience. Which practitioner's techniques is this most like?",
+     "choice": {
+      "options": [
+       "Konstantin Stanislavski",
+       "Antonin Artaud",
+       "Lee Strasberg",
+       "Bertolt Brecht"
+      ],
+      "correct": 3
+     },
+     "solution": "Placards and direct address are Brechtian techniques that remind the audience they are watching a play",
+     "hint": "Which practitioner wanted to break the illusion of reality?"
+    },
+    {
+     "id": "pr16",
+     "level": 3,
+     "text": "Before a scene, an actor recalls a time she felt nervous herself, to bring real feeling to her character's nerves. Which Stanislavski technique is she using?",
+     "choice": {
+      "options": [
+       "Gestus",
+       "Emotion memory",
+       "Lazzi",
+       "Alienation effect"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Gestus is a Brechtian gesture that shows social attitude",
+       null
+      ]
+     },
+     "solution": "Emotion memory means using a real memory of a similar feeling to make the emotion truthful",
+     "hint": "She is drawing on her own past feelings"
+    },
+    {
+     "id": "pr17",
+     "level": 3,
+     "text": "In a Brechtian performance, one actor plays several different characters and changes role in front of the audience. What is this technique called? Give the term.",
+     "short": {
+      "accept": [
+       "multi-role",
+       "multi-rolling",
+       "multirole",
+       "multirolling",
+       "multi-roling",
+       "multi-role playing"
+      ]
+     },
+     "solution": "Multi-role means one actor playing several characters, often changing role openly",
+     "hint": "The term describes having more than one part"
+    },
+    {
+     "id": "pr18",
+     "level": 3,
+     "text": "Two performers repeat a short sequence of lifts, leans and touches on and around two chairs, building a relationship without words. Whose exercise is this?",
+     "choice": {
+      "options": [
+       "The Moscow Art Theatre",
+       "The Berliner Ensemble",
+       "Antonin Artaud",
+       "Frantic Assembly"
+      ],
+      "correct": 3
+     },
+     "solution": "This is Frantic Assembly's Chair Duets exercise",
+     "hint": "Think of the British physical theatre company"
+    },
+    {
+     "id": "pr19",
+     "level": 3,
+     "text": "A director stages a play in a realistic room with real furniture, and the actors never acknowledge the audience. Which style is this?",
+     "choice": {
+      "options": [
+       "Epic theatre",
+       "Naturalism",
+       "Theatre of Cruelty",
+       "Commedia dell'arte"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Epic theatre deliberately reminds the audience they are in a theatre",
+       null
+      ]
+     },
+     "solution": "Realistic sets and a firm 'fourth wall' are features of naturalism",
+     "hint": "The aim is to look like real life"
+    },
+    {
+     "id": "pr20",
+     "level": 3,
+     "text": "An actor playing a greedy landlord rubs his hands while counting coins, showing his attitude to money and power in one clear gesture. What is Brecht's term for this? Give the term.",
+     "short": {
+      "accept": [
+       "gestus",
+       "gest",
+       "social gestus"
+      ]
+     },
+     "solution": "Gestus is Brecht's term for a gesture or movement that shows a character's social attitude",
+     "hint": "It is a Latin-looking word close to a common English word for a movement of the hands"
+    },
+    {
+     "id": "pr21",
+     "level": 4,
+     "text": "Read this description: 'Performers wear half-masks, play fixed stock characters such as a greedy old merchant and a boastful soldier, and improvise around an outline plot.' Which style is described?",
+     "choice": {
+      "options": [
+       "Naturalism",
+       "Verbatim theatre",
+       "Epic theatre",
+       "Commedia dell'arte"
+      ],
+      "correct": 3
+     },
+     "solution": "Half-masks, stock characters (Pantalone, Il Capitano) and improvisation around a scenario are features of commedia dell'arte",
+     "hint": "Think of the Italian style from the 1500s"
+    },
+    {
+     "id": "pr22",
+     "level": 4,
+     "text": "A director wants the audience to leave arguing about the unfairness shown in a play rather than crying about the characters. Which practitioner's aims match this, and why?",
+     "choice": {
+      "options": [
+       "Stanislavski, because he wanted audiences to believe completely in the characters",
+       "Artaud, because he wanted to overwhelm the audience's senses",
+       "Brecht, because he wanted audiences to think critically about society",
+       "Strasberg, because he wanted actors to use their own memories on screen"
+      ],
+      "correct": 2
+     },
+     "solution": "Brecht wanted audiences to judge what they saw and think about how society could change",
+     "hint": "Which practitioner wanted thinking rather than feeling?"
+    },
+    {
+     "id": "pr23",
+     "level": 4,
+     "text": "Read this note: 'The audience is surrounded by sound; there is screaming, sudden bright light and almost no dialogue.' Which practitioner's ideas does this production follow? Give the surname.",
+     "short": {
+      "accept": [
+       "Artaud",
+       "Antonin Artaud"
+      ],
+      "reject": [
+       "Brecht",
+       "Stanislavski"
+      ],
+      "feedback": {
+       "Brecht": "Brecht wanted calm, critical thinking, not sensory shock",
+       "Stanislavski": "Stanislavski aimed for truthful, realistic acting"
+      }
+     },
+     "solution": "Surrounding the audience and attacking the senses with sound and light are features of Artaud's Theatre of Cruelty",
+     "hint": "Think of the practitioner who wanted to assault the senses"
+    },
+    {
+     "id": "pr24",
+     "level": 4,
+     "text": "Which pair correctly matches a practitioner with one of their ideas?",
+     "choice": {
+      "options": [
+       "Brecht: emotion memory",
+       "Artaud: the magic if",
+       "Stanislavski: given circumstances",
+       "Stanislavski: placards"
+      ],
+      "correct": 2
+     },
+     "solution": "Given circumstances are part of Stanislavski's system; emotion memory and the magic if are his too, placards are Brecht's",
+     "hint": "Check each idea against the practitioner who wanted truthful, realistic acting"
+    },
+    {
+     "id": "pr25",
+     "level": 4,
+     "text": "Before rehearsals, an actor writes down everything the script tells her about her character's age, home, time period and situation. In Stanislavski's system, what is she gathering?",
+     "choice": {
+      "options": [
+       "The given circumstances",
+       "The super-objective",
+       "The alienation effect",
+       "The gestus"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "The super-objective is the character's overall aim, not the facts of their situation",
+       null
+      ]
+     },
+     "solution": "The given circumstances are the facts of the character's world set by the script",
+     "hint": "These are facts that the playwright has 'given'"
+    },
+    {
+     "id": "pr26",
+     "level": 4,
+     "text": "Explain two ways a director could use Brecht's techniques to stop the audience becoming emotionally absorbed in a scene.",
+     "rubric": {
+      "model_answer": "First, an actor could step out of role and speak directly to the audience, reminding them they are watching a play and inviting them to judge the action. Second, placards or projected captions could announce what is about to happen, removing suspense so the audience focuses on why it happens rather than what happens.",
+      "mark_scheme": "1 mark: first valid technique (e.g. direct address, placards, multi-role, songs, visible scene changes)\n1 mark: how it distances the audience\n1 mark: second valid technique\n1 mark: how it distances the audience",
+      "max_marks": 4
+     },
+     "solution": "Direct address, placards, songs, multi-role and visible scene changes all break the illusion",
+     "hint": "Think of techniques that remind the audience they are in a theatre"
+    },
+    {
+     "id": "pr27",
+     "level": 5,
+     "text": "Which statement about Artaud's Theatre of Cruelty is accurate?",
+     "choice": {
+      "options": [
+       "It required actors to use the exact words of real people",
+       "It was mainly about showing graphic violence on stage",
+       "It was designed to make audiences think calmly and logically about politics",
+       "It aimed to shock the audience's senses through sound, light and movement, not necessarily through violence"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "That describes verbatim theatre",
+       null,
+       null
+      ]
+     },
+     "solution": "For Artaud, 'cruelty' meant an intense assault on the senses, not simply violence",
+     "hint": "Think about what Artaud meant by 'cruelty'"
+    },
+    {
+     "id": "pr28",
+     "level": 5,
+     "text": "Why did Brecht use songs that interrupt the action?",
+     "choice": {
+      "options": [
+       "To make the play feel as realistic as possible",
+       "To break the audience's emotional involvement and comment on the action",
+       "To give the actors a rest between scenes",
+       "To hide scene changes from the audience"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Brecht's songs interrupt the story and comment on it, keeping the audience thinking",
+     "hint": "Think about the effect of an interruption on the audience's feelings"
+    },
+    {
+     "id": "pr29",
+     "level": 5,
+     "text": "A student says: 'Naturalism and Stanislavski are the same thing.' Which statement is the most accurate correction?",
+     "choice": {
+      "options": [
+       "Stanislavski's system supports truthful acting in naturalistic plays, but naturalism is a wider style",
+       "Stanislavski invented epic theatre, not naturalism",
+       "Naturalism was invented by Brecht to criticise Stanislavski",
+       "Stanislavski only worked on commedia dell'arte"
+      ],
+      "correct": 0
+     },
+     "solution": "Naturalism is a whole style of theatre; Stanislavski's system is an acting approach closely linked with it",
+     "hint": "One is a style of theatre, the other is a method of acting"
+    },
+    {
+     "id": "pr30",
+     "level": 5,
+     "text": "Which statement about verbatim theatre is accurate?",
+     "choice": {
+      "options": [
+       "Its script is built from the recorded words of real people, often about real events",
+       "It is always improvised with no script",
+       "It uses only movement and no spoken words",
+       "It must be performed in half-masks"
+      ],
+      "correct": 0
+     },
+     "solution": "Verbatim theatre uses the real words of real people, taken from interviews, trials or records",
+     "hint": "Think about what 'verbatim' means"
+    },
+    {
+     "id": "pr31",
+     "level": 5,
+     "text": "Which statement about Frantic Assembly is accurate?",
+     "choice": {
+      "options": [
+       "It was founded in Moscow by Stanislavski",
+       "It created epic theatre in 1920s Germany",
+       "It is a British company known for physical theatre that combines movement, text and design",
+       "It only performs plays in half-masks"
+      ],
+      "correct": 2
+     },
+     "solution": "Frantic Assembly is a British physical theatre company that blends movement with text, music and design",
+     "hint": "Think about the exercises it is known for"
+    },
+    {
+     "id": "pr32",
+     "level": 5,
+     "text": "Compare how Stanislavski and Brecht wanted their audiences to respond to a performance.",
+     "rubric": {
+      "model_answer": "Stanislavski wanted the audience to believe in the characters and feel with them, so actors used techniques such as the magic if and emotion memory to create a truthful illusion behind the 'fourth wall'. Brecht wanted the opposite: through the alienation effect, such as direct address, placards and songs, he kept the audience emotionally distanced so they would think critically and see that society could change.",
+      "mark_scheme": "1 mark: Stanislavski wanted belief and empathy\n1 mark: a Stanislavski technique linked to this (e.g. magic if, emotion memory, fourth wall)\n1 mark: Brecht wanted critical thinking and distance\n1 mark: a Brecht technique linked to this (e.g. direct address, placards, songs, multi-role)\n1 mark: a clear comparison of the two aims",
+      "max_marks": 5
+     },
+     "solution": "Stanislavski aimed for belief and empathy; Brecht aimed for critical distance",
+     "hint": "Start with what each wanted the audience to feel or think"
+    }
+   ]
+  },
+  {
+   "id": "drama.performance",
+   "title": "Performance skills",
+   "aliases": [
+    "vocal skills",
+    "physical skills",
+    "pitch",
+    "pace",
+    "projection",
+    "gesture",
+    "proxemics",
+    "hot seating",
+    "thought tracking",
+    "still image"
+   ],
+   "questions": [
+    {
+     "id": "pf01",
+     "level": 1,
+     "text": "Which vocal skill describes how high or low a voice sounds?",
+     "choice": {
+      "options": [
+       "Pitch",
+       "Pace",
+       "Pause",
+       "Projection"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Pace is the speed of speech",
+       "A pause is a silence or break"
+      ]
+     },
+     "solution": "Pitch is how high or low the voice sounds",
+     "hint": "Think of notes on a musical scale"
+    },
+    {
+     "id": "pf02",
+     "level": 1,
+     "text": "Which vocal skill is the speed at which an actor speaks? Give the term.",
+     "short": {
+      "accept": [
+       "pace",
+       "tempo",
+       "rate"
+      ],
+      "reject": [
+       "pitch",
+       "pause"
+      ],
+      "feedback": {
+       "pitch": "Pitch is how high or low the voice is",
+       "pause": "A pause is a break or silence in speech"
+      }
+     },
+     "solution": "Pace is the speed of speech; changing it can show emotions such as panic or calm",
+     "hint": "It is a four-letter word beginning with P"
+    },
+    {
+     "id": "pf03",
+     "level": 1,
+     "text": "What is proxemics in drama?",
+     "choice": {
+      "options": [
+       "The use of space and distance between characters to show their relationship",
+       "The rise and fall of the voice",
+       "The speed of an actor's movement",
+       "The way an actor uses facial expressions"
+      ],
+      "correct": 0
+     },
+     "solution": "Proxemics is the use of space and distance on stage to show relationships",
+     "hint": "The word is linked to 'proximity', meaning closeness"
+    },
+    {
+     "id": "pf04",
+     "level": 1,
+     "text": "Which drama technique has an actor stay in character and answer questions from the group about their character's life and feelings? Give the term.",
+     "short": {
+      "accept": [
+       "hot seating",
+       "hot-seating",
+       "hotseating",
+       "hot seat",
+       "the hot seat"
+      ],
+      "reject": [
+       "thought tracking"
+      ],
+      "feedback": {
+       "thought tracking": "Thought tracking is speaking a character's thoughts aloud during a freeze"
+      }
+     },
+     "solution": "In hot seating an actor answers questions in role to explore the character",
+     "hint": "The actor sits in a special chair to be questioned"
+    },
+    {
+     "id": "pf05",
+     "level": 1,
+     "text": "What is a still image, also called a tableau or freeze frame?",
+     "choice": {
+      "options": [
+       "A spoken thought during a pause",
+       "A frozen picture made with bodies to show a moment",
+       "A sound collage made with voices",
+       "A quick change of costume"
+      ],
+      "correct": 1
+     },
+     "solution": "A still image is a frozen picture, made by the performers' bodies, that captures a moment",
+     "hint": "Think about what 'freeze' means"
+    },
+    {
+     "id": "pf06",
+     "level": 1,
+     "text": "Which physical skill describes the way a character walks?",
+     "choice": {
+      "options": [
+       "Gait",
+       "Gesture",
+       "Posture",
+       "Proxemics"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "A gesture is a movement of part of the body, such as the hands",
+       "Posture is how the body is held"
+      ]
+     },
+     "solution": "Gait is the way a person walks, for example limping, striding or shuffling",
+     "hint": "It is a short word that sounds like a garden entrance"
+    },
+    {
+     "id": "pf07",
+     "level": 1,
+     "text": "Which vocal skill means making the voice carry clearly to the back of the auditorium without shouting? Give the term.",
+     "short": {
+      "accept": [
+       "projection",
+       "projecting",
+       "vocal projection",
+       "project"
+      ],
+      "reject": [
+       "volume"
+      ],
+      "feedback": {
+       "volume": "Volume is simply how loud; carrying the voice clearly without shouting has its own name"
+      }
+     },
+     "solution": "Projection carries the voice to the whole audience, supported by breath from the diaphragm, without shouting",
+     "hint": "Think of 'throwing' the voice forward to the back row"
+    },
+    {
+     "id": "pf08",
+     "level": 2,
+     "text": "What is the difference between pitch and tone?",
+     "choice": {
+      "options": [
+       "Pitch is how fast the voice is; tone is how loud it is",
+       "Pitch is the accent; tone is the pause before a line",
+       "Pitch is the emotion in the voice; tone is how high or low it is",
+       "Pitch is how high or low the voice is; tone is the emotion or attitude in it"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Pitch is high or low; tone shows feeling or attitude, such as sarcastic, warm or angry",
+     "hint": "One is about musical height, the other about feeling"
+    },
+    {
+     "id": "pf09",
+     "level": 2,
+     "text": "What is the difference between gesture and posture?",
+     "choice": {
+      "options": [
+       "A gesture is how the body is held; posture is a movement of the hands",
+       "A gesture is a way of walking; posture is a facial expression",
+       "A gesture is a vocal sound; posture is the distance between actors",
+       "A gesture is a movement of part of the body to communicate; posture is how the body is held"
+      ],
+      "correct": 3,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "A gesture is a movement such as a wave or a point; posture is the way the body is held, such as hunched or upright",
+     "hint": "One is a movement, the other is a position"
+    },
+    {
+     "id": "pf10",
+     "level": 2,
+     "text": "During a freeze, an actor steps forward and speaks their character's private thoughts aloud. What is this technique called? Give the term.",
+     "short": {
+      "accept": [
+       "thought tracking",
+       "thought-tracking",
+       "thought track",
+       "thoughts tracking"
+      ],
+      "reject": [
+       "hot seating",
+       "aside",
+       "soliloquy"
+      ],
+      "feedback": {
+       "hot seating": "Hot seating is answering questions in role",
+       "aside": "An aside is a quick remark to the audience during the action, not in a freeze",
+       "soliloquy": "A soliloquy is a speech by a character alone on stage, not a rehearsal technique in a freeze"
+      }
+     },
+     "solution": "Thought tracking reveals a character's inner thoughts during a freeze",
+     "hint": "The technique 'tracks' what is going on in the character's mind"
+    },
+    {
+     "id": "pf11",
+     "level": 2,
+     "text": "Which term describes a short remark made directly to the audience that the other characters on stage do not hear?",
+     "choice": {
+      "options": [
+       "Soliloquy",
+       "Monologue",
+       "Dialogue",
+       "Aside"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "A soliloquy is a longer speech by a character alone on stage",
+       null,
+       null
+      ]
+     },
+     "solution": "An aside is a brief comment to the audience that other characters on stage do not hear",
+     "hint": "The actor turns 'to the side' to share it"
+    },
+    {
+     "id": "pf12",
+     "level": 2,
+     "text": "What is the difference between a soliloquy and a monologue?",
+     "choice": {
+      "options": [
+       "A soliloquy shares private thoughts, usually alone on stage; a monologue is a long speech, often to others",
+       "A soliloquy is a short remark; a monologue is a song",
+       "A soliloquy is spoken to other characters; a monologue is always spoken alone",
+       "There is no difference: both words mean an aside"
+      ],
+      "correct": 0
+     },
+     "solution": "In a soliloquy a character, usually alone, speaks their thoughts; a monologue is any long speech by one character",
+     "hint": "Think about whether anyone else is listening"
+    },
+    {
+     "id": "pf13",
+     "level": 2,
+     "text": "Which vocal skill is a deliberate silence or break in speech, used to build tension or show thought? Give the term.",
+     "short": {
+      "accept": [
+       "pause",
+       "pauses",
+       "pausing"
+      ],
+      "reject": [
+       "pace"
+      ],
+      "feedback": {
+       "pace": "Pace is the speed of speech; a silence is something else"
+      }
+     },
+     "solution": "A pause is a deliberate silence that can build tension or show a character thinking",
+     "hint": "It is the opposite of speaking continuously"
+    },
+    {
+     "id": "pf14",
+     "level": 2,
+     "text": "Which physical skill uses the face to show feelings, such as a frown or a raised eyebrow? Give the term.",
+     "short": {
+      "accept": [
+       "facial expression",
+       "facial expressions",
+       "expression",
+       "expressions"
+      ],
+      "reject": [
+       "gesture"
+      ],
+      "feedback": {
+       "gesture": "A gesture uses the hands, arms or head; this skill uses the face"
+      }
+     },
+     "solution": "Facial expression shows a character's feelings through the face",
+     "hint": "Think about which part of the body is used"
+    },
+    {
+     "id": "pf15",
+     "level": 3,
+     "text": "An actor playing an old king who has just lost his power stands with rounded shoulders and a lowered head. Which physical skill is the actor mainly using?",
+     "choice": {
+      "options": [
+       "Projection",
+       "Pitch",
+       "Pace",
+       "Posture"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Projection is a vocal skill",
+       "Pitch is a vocal skill",
+       null
+      ]
+     },
+     "solution": "Posture is how the body is held; rounded shoulders and a lowered head suggest defeat",
+     "hint": "Projection, pitch and pace are vocal skills"
+    },
+    {
+     "id": "pf16",
+     "level": 3,
+     "text": "Two characters who have just argued stand at opposite ends of the stage, as far apart as possible. Which skill is the director using to show their relationship?",
+     "choice": {
+      "options": [
+       "Proxemics",
+       "Intonation",
+       "Thought tracking",
+       "Hot seating"
+      ],
+      "correct": 0
+     },
+     "solution": "Proxemics uses distance on stage; the large gap shows the rift between them",
+     "hint": "Think about the space between the actors"
+    },
+    {
+     "id": "pf17",
+     "level": 3,
+     "text": "As her character starts to panic, an actor says her lines faster and faster. Which vocal skill is she changing? Give the term.",
+     "short": {
+      "accept": [
+       "pace",
+       "tempo",
+       "rate",
+       "speed"
+      ],
+      "reject": [
+       "pitch",
+       "pause"
+      ],
+      "feedback": {
+       "pitch": "Pitch is how high or low the voice is",
+       "pause": "A pause is a silence; here she is speeding up"
+      }
+     },
+     "solution": "Increasing the pace of speech shows rising panic",
+     "hint": "Think about how quickly the words come out"
+    },
+    {
+     "id": "pf18",
+     "level": 3,
+     "text": "In rehearsal, the class makes two lines facing each other. A character walks between them while each person speaks advice or warnings about a decision. What is this technique?",
+     "choice": {
+      "options": [
+       "Hot seating",
+       "Role on the wall",
+       "Marking the moment",
+       "Conscience alley"
+      ],
+      "correct": 3
+     },
+     "solution": "Conscience alley (also called decision alley) voices the arguments a character weighs up before a choice",
+     "hint": "The two lines form a narrow path the character walks down"
+    },
+    {
+     "id": "pf19",
+     "level": 3,
+     "text": "To explore a character, a group draws the outline of a body, writing facts about the character outside it and their feelings inside. What is this technique called? Give the term.",
+     "short": {
+      "accept": [
+       "role on the wall",
+       "role-on-the-wall",
+       "role on wall"
+      ]
+     },
+     "solution": "Role on the wall records what is known about a character outside the outline and their inner feelings inside",
+     "hint": "The outline is usually stuck up for the whole group to see"
+    },
+    {
+     "id": "pf20",
+     "level": 3,
+     "text": "A group freezes at the most important moment of a scene, then adds a spotlight and slow motion to draw the audience's attention to it. Which technique is this?",
+     "choice": {
+      "options": [
+       "Cross-cutting",
+       "Conscience alley",
+       "Marking the moment",
+       "Hot seating"
+      ],
+      "correct": 2
+     },
+     "solution": "Marking the moment highlights a key moment so the audience notices its importance",
+     "hint": "The group is drawing attention to one key moment"
+    },
+    {
+     "id": "pf21",
+     "level": 4,
+     "text": "Read this stage direction: 'Sam whispers, but the whole audience must hear every word.' Which pair of vocal skills must the actor balance?",
+     "choice": {
+      "options": [
+       "Pitch and gait",
+       "Volume and projection",
+       "Pace and posture",
+       "Accent and gesture"
+      ],
+      "correct": 1
+     },
+     "solution": "A whisper needs low volume, but good projection and clear diction let it reach the back row",
+     "hint": "Gait, posture and gesture are physical skills, not vocal ones"
+    },
+    {
+     "id": "pf22",
+     "level": 4,
+     "text": "Read this stage direction: 'Jo moves slowly towards her brother until they are nose to nose.' What does the change in proxemics most likely show?",
+     "choice": {
+      "options": [
+       "Jo has forgotten her lines",
+       "The tension or closeness between them is increasing",
+       "The scene has moved to a new location",
+       "Jo is speaking directly to the audience"
+      ],
+      "correct": 1
+     },
+     "solution": "Closing the distance between characters shows growing tension or intimacy",
+     "hint": "Proxemics is about distance: what does closing the gap suggest?"
+    },
+    {
+     "id": "pf23",
+     "level": 4,
+     "text": "Read this: 'Two scenes, a kitchen and a classroom, are set up on stage at the same time, and the action cuts back and forth between them like editing in a film.' What is this drama technique called? Give the term.",
+     "short": {
+      "accept": [
+       "cross-cutting",
+       "cross cutting",
+       "crosscutting",
+       "cross-cut"
+      ]
+     },
+     "solution": "Cross-cutting switches the action back and forth between two or more scenes on stage",
+     "hint": "The name comes from film editing"
+    },
+    {
+     "id": "pf24",
+     "level": 4,
+     "text": "Read this rehearsal note: 'Lower your pitch, slow your pace and stand tall.' What kind of character is the actor most likely being directed to play?",
+     "choice": {
+      "options": [
+       "A calm, authoritative figure",
+       "A frightened young child",
+       "A panicking messenger",
+       "A giggling friend"
+      ],
+      "correct": 0
+     },
+     "solution": "A low pitch, slow pace and upright posture suggest calm authority and high status",
+     "hint": "Work out what each of the three notes suggests, then combine them"
+    },
+    {
+     "id": "pf25",
+     "level": 4,
+     "text": "A director wants the audience to hear what three characters are privately thinking at the same moment, without the characters speaking to each other. Which technique would do this most directly?",
+     "choice": {
+      "options": [
+       "Thought tracking",
+       "Hot seating",
+       "Proxemics",
+       "Projection"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Hot seating is questioning a character, usually in rehearsal",
+       null
+      ]
+     },
+     "solution": "Thought tracking lets each character in a freeze speak their private thoughts to the audience",
+     "hint": "Which technique reveals inner thoughts during a freeze?"
+    },
+    {
+     "id": "pf26",
+     "level": 4,
+     "text": "Explain how an actor could use two vocal skills to show that a character is furious.",
+     "rubric": {
+      "model_answer": "The actor could raise the volume and use a sharp, harsh tone, so the anger is clearly heard. They could also increase the pace, speaking quickly with sudden emphasis on key words, which shows the character losing control.",
+      "mark_scheme": "1 mark: first vocal skill named (e.g. volume, tone, pace, pitch, emphasis)\n1 mark: how it would be used to show fury\n1 mark: second vocal skill named\n1 mark: how it would be used to show fury",
+      "max_marks": 4
+     },
+     "solution": "Volume, tone, pace, pitch and emphasis can all be used to show anger",
+     "hint": "Choose two vocal skills, then describe exactly how each would sound"
+    },
+    {
+     "id": "pf27",
+     "level": 5,
+     "text": "Which statement about projection is accurate?",
+     "choice": {
+      "options": [
+       "Projection means speaking as quickly as possible",
+       "Projection is only needed in very small studio theatres",
+       "Projection means changing accent to suit a character",
+       "Good projection makes the voice carry to the back of the space, supported by breath, without shouting"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "That describes pace",
+       null,
+       null
+      ]
+     },
+     "solution": "Projection uses breath support so the voice reaches the whole audience without strain or shouting",
+     "hint": "Think about the back row of a large theatre"
+    },
+    {
+     "id": "pf28",
+     "level": 5,
+     "text": "Why might a director use hot seating during rehearsals rather than in the final performance?",
+     "choice": {
+      "options": [
+       "It is the main way to show a set change to the audience",
+       "It deepens the actor's understanding of the character's background and motives",
+       "It replaces the need to learn lines",
+       "It tests whether the lighting rig works"
+      ],
+      "correct": 1
+     },
+     "solution": "Hot seating is an exploratory technique: answering questions in role builds a fuller understanding of the character",
+     "hint": "Think about what the actor learns by answering questions in role"
+    },
+    {
+     "id": "pf29",
+     "level": 5,
+     "text": "A director says: 'Use levels to show status in this scene.' Which choice follows this note most clearly?",
+     "choice": {
+      "options": [
+       "The king stands on a raised platform while the servants kneel below him",
+       "The king speaks more quietly than the servants",
+       "The king wears a red costume",
+       "The king exits stage left"
+      ],
+      "correct": 0
+     },
+     "solution": "Levels means height on stage; placing the king high and the servants low shows his higher status",
+     "hint": "'Levels' refers to height"
+    },
+    {
+     "id": "pf30",
+     "level": 5,
+     "text": "Which statement about still images (freeze frames) is accurate?",
+     "choice": {
+      "options": [
+       "They must always include spoken dialogue",
+       "They can show a key moment clearly, using levels, facial expression and proxemics",
+       "They can only be used at the very end of a play",
+       "They are a lighting effect, not an acting technique"
+      ],
+      "correct": 1
+     },
+     "solution": "Still images freeze a moment; levels, facial expression and proxemics make its meaning clear",
+     "hint": "Think about which skills still work when nobody moves or speaks"
+    },
+    {
+     "id": "pf31",
+     "level": 5,
+     "text": "An actor is told her lines sound flat and monotonous. Which change to her vocal skills would most directly fix this?",
+     "choice": {
+      "options": [
+       "Speak at exactly the same speed throughout",
+       "Stand completely still",
+       "Vary her pitch and intonation",
+       "Make every pause the same length"
+      ],
+      "correct": 2
+     },
+     "solution": "A flat delivery lacks variety; varying pitch and intonation brings the lines to life",
+     "hint": "'Flat' describes a voice that hardly rises or falls"
+    },
+    {
+     "id": "pf32",
+     "level": 5,
+     "text": "Explain how proxemics and posture could be used together to show that one character is more powerful than another.",
+     "rubric": {
+      "model_answer": "The powerful character could stand upright and open, taking up space centre stage, while the weaker character is hunched and closed. Using proxemics, the powerful character could move towards the other and invade their space, while the weaker one backs away towards the edge of the stage, so the audience sees who controls the space.",
+      "mark_scheme": "1 mark: posture of the powerful character\n1 mark: posture of the weaker character\n1 mark: use of distance and space (proxemics)\n1 mark: how the audience reads status from these choices",
+      "max_marks": 4
+     },
+     "solution": "Upright, open posture and control of space show power; hunched posture and retreating show weakness",
+     "hint": "Think about how each character holds their body and who controls the space"
+    }
+   ]
+  },
+  {
+   "id": "drama.design",
+   "title": "Design & technical",
+   "aliases": [
+    "lighting design",
+    "sound design",
+    "set design",
+    "costume",
+    "gobo",
+    "gel",
+    "fresnel",
+    "cyclorama"
+   ],
+   "questions": [
+    {
+     "id": "dz01",
+     "level": 1,
+     "text": "What is the name of the thin metal disc with a pattern cut into it, placed in a lantern to project shapes such as leaves or a window? Give the term.",
+     "short": {
+      "accept": [
+       "gobo",
+       "gobos"
+      ],
+      "reject": [
+       "gel"
+      ],
+      "feedback": {
+       "gel": "A gel changes the colour of the light, not its shape"
+      }
+     },
+     "solution": "A gobo is a cut-out stencil placed in a profile lantern to project a shape or pattern",
+     "hint": "It is a short word beginning with G"
+    },
+    {
+     "id": "dz02",
+     "level": 1,
+     "text": "What is a gel in stage lighting?",
+     "choice": {
+      "options": [
+       "A coloured filter placed in front of a lantern",
+       "A metal stencil that projects a pattern",
+       "A rotating section of stage floor",
+       "A large cloth at the back of the stage"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "That is a gobo",
+       "That is a revolve"
+      ]
+     },
+     "solution": "A gel is a sheet of coloured filter that changes the colour of a lantern's light",
+     "hint": "Think about how designers change the colour of light"
+    },
+    {
+     "id": "dz03",
+     "level": 1,
+     "text": "What is a cyclorama?",
+     "choice": {
+      "options": [
+       "A rotating section of the stage floor",
+       "A large cloth or screen at the back of the stage, often lit to suggest sky or mood",
+       "A lantern with a soft-edged beam",
+       "A list of the costumes for each character"
+      ],
+      "correct": 1
+     },
+     "solution": "A cyclorama (cyc) is a large backcloth or screen, often lit in colour to suggest sky or atmosphere",
+     "hint": "It is usually at the very back of the stage"
+    },
+    {
+     "id": "dz04",
+     "level": 1,
+     "text": "Which type of stage lantern gives a soft-edged beam and has a stepped lens? Give the name.",
+     "short": {
+      "accept": [
+       "fresnel",
+       "fresnel lantern",
+       "fresnel spotlight",
+       "fresnels"
+      ],
+      "reject": [
+       "profile",
+       "profile spot",
+       "parcan"
+      ],
+      "feedback": {
+       "profile": "A profile spot gives a hard-edged beam and can take a gobo",
+       "profile spot": "A profile spot gives a hard-edged beam and can take a gobo"
+      }
+     },
+     "solution": "A fresnel has a stepped lens that gives a soft-edged beam, useful for washes of light",
+     "hint": "It is named after a French physicist who designed the stepped lens"
+    },
+    {
+     "id": "dz05",
+     "level": 1,
+     "text": "In theatre, what are props?",
+     "choice": {
+      "options": [
+       "The wooden frames that hold up the scenery",
+       "The lanterns hung above the audience",
+       "The written cues in the prompt book",
+       "Objects used on stage by the actors or to dress the set"
+      ],
+      "correct": 3
+     },
+     "solution": "Props (short for properties) are objects used by actors or placed to dress the set",
+     "hint": "The word is short for 'properties'"
+    },
+    {
+     "id": "dz06",
+     "level": 1,
+     "text": "What is a flat in set design?",
+     "choice": {
+      "options": [
+       "A lightweight frame covered in canvas or board, painted to form walls",
+       "A rotating section of the floor",
+       "A coloured filter for a lantern",
+       "A soft-edged spotlight"
+      ],
+      "correct": 0
+     },
+     "solution": "Flats are lightweight frames covered with canvas or board, painted and joined to make walls",
+     "hint": "Think of the walls of a room on stage"
+    },
+    {
+     "id": "dz07",
+     "level": 1,
+     "text": "What is the term for music played quietly underneath dialogue or action to create mood? Give the term.",
+     "short": {
+      "accept": [
+       "underscoring",
+       "underscore",
+       "underscored music"
+      ]
+     },
+     "solution": "Underscoring is music played beneath dialogue or action to build mood",
+     "hint": "The music sits beneath the scene"
+    },
+    {
+     "id": "dz08",
+     "level": 2,
+     "text": "What is the difference between a fresnel and a profile spot?",
+     "choice": {
+      "options": [
+       "A fresnel gives a soft-edged beam; a profile gives a hard-edged beam that can be shaped",
+       "A fresnel gives a hard-edged beam; a profile gives a soft-edged beam",
+       "A fresnel is a sound effect; a profile is a lighting effect",
+       "A fresnel lights the audience; a profile lights the foyer"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "You have swapped them round",
+       null,
+       null
+      ]
+     },
+     "solution": "Fresnels give soft-edged washes; profiles give hard-edged beams that can be shaped with shutters or gobos",
+     "hint": "Think about which lantern can project a sharp gobo pattern"
+    },
+    {
+     "id": "dz09",
+     "level": 2,
+     "text": "What is the difference between a blackout and a fade?",
+     "choice": {
+      "options": [
+       "A blackout always happens slowly; a fade is always instant",
+       "A blackout turns all the stage lights off, often instantly; a fade changes the lighting gradually",
+       "A blackout uses coloured gels; a fade uses gobos",
+       "A blackout lights only the cyclorama; a fade lights only the actors"
+      ],
+      "correct": 1
+     },
+     "solution": "A blackout leaves the stage in darkness, usually suddenly; a fade changes the light gradually over time",
+     "hint": "Think about how quickly each change happens"
+    },
+    {
+     "id": "dz10",
+     "level": 2,
+     "text": "What is the name of the drawing that shows the layout of a set from above, including where furniture and entrances are? Give the term.",
+     "short": {
+      "accept": [
+       "ground plan",
+       "groundplan",
+       "floor plan",
+       "stage plan",
+       "ground plans"
+      ]
+     },
+     "solution": "A ground plan shows the set from above, with furniture, entrances and the audience marked",
+     "hint": "It shows the set as if you were looking straight down from above"
+    },
+    {
+     "id": "dz11",
+     "level": 2,
+     "text": "Which colour of light would a designer most likely use to suggest a cold winter night?",
+     "choice": {
+      "options": [
+       "Amber",
+       "Red",
+       "Blue",
+       "Orange"
+      ],
+      "correct": 2
+     },
+     "solution": "Cool blue light is a common convention for night and cold",
+     "hint": "Amber, red and orange are warm colours"
+    },
+    {
+     "id": "dz12",
+     "level": 2,
+     "text": "Which lantern is aimed by an operator to follow a performer around the stage? Give the name.",
+     "short": {
+      "accept": [
+       "follow spot",
+       "followspot",
+       "follow spotlight",
+       "follow light"
+      ]
+     },
+     "solution": "A follow spot is operated by hand so its beam can track a performer",
+     "hint": "An operator moves it by hand to 'chase' the actor"
+    },
+    {
+     "id": "dz13",
+     "level": 2,
+     "text": "What is a costume designer mainly responsible for?",
+     "choice": {
+      "options": [
+       "Designing what the actors wear, including accessories",
+       "Designing the colour and angle of the lighting",
+       "Building and painting the set",
+       "Writing the sound cues for the show"
+      ],
+      "correct": 0
+     },
+     "solution": "The costume designer designs the clothing and accessories that show character, period and status",
+     "hint": "Think about the word 'costume'"
+    },
+    {
+     "id": "dz14",
+     "level": 2,
+     "text": "What is the name for a platform used to create different levels on stage? Give the term.",
+     "short": {
+      "accept": [
+       "rostrum",
+       "rostra",
+       "rostrums",
+       "staging block",
+       "staging blocks",
+       "riser",
+       "risers"
+      ]
+     },
+     "solution": "A rostrum (plural rostra) is a platform used to build levels on stage",
+     "hint": "It is a Latin word beginning with R; its plural ends in -a"
+    },
+    {
+     "id": "dz15",
+     "level": 3,
+     "text": "A designer wants leafy shadows to dapple the stage floor during a forest scene. What should she put into a profile lantern?",
+     "choice": {
+      "options": [
+       "Gel",
+       "Barn doors",
+       "Gauze",
+       "Gobo"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "A gel changes colour, not pattern",
+       "Barn doors are flaps that shape the edge of a fresnel's beam",
+       null
+      ]
+     },
+     "solution": "A gobo with a leaf pattern projects dappled leafy shadows",
+     "hint": "She needs to change the shape of the light, not its colour"
+    },
+    {
+     "id": "dz16",
+     "level": 3,
+     "text": "A scene is set at sunset. Which lighting choice suits it?",
+     "choice": {
+      "options": [
+       "Cold blue light from directly above",
+       "Bright white strobe light",
+       "Warm amber and orange light, low from the side",
+       "Green light from below"
+      ],
+      "correct": 2
+     },
+     "solution": "Sunset light is warm and low, so amber or orange light from a low side angle suggests it",
+     "hint": "Think about the colour and angle of the real sun in the evening"
+    },
+    {
+     "id": "dz17",
+     "level": 3,
+     "text": "A ghost appears behind a thin fabric screen when lit from behind, then vanishes when only the front of the screen is lit. What is this type of fabric called? Give the term.",
+     "short": {
+      "accept": [
+       "gauze",
+       "scrim",
+       "sharkstooth gauze",
+       "sharkstooth"
+      ]
+     },
+     "solution": "A gauze (scrim) looks solid when lit from the front and see-through when the area behind it is lit",
+     "hint": "The fabric looks solid when lit from the front"
+    },
+    {
+     "id": "dz18",
+     "level": 3,
+     "text": "A play needs to change quickly from a kitchen to a garden and back many times. Which piece of staging would let a whole room spin round to reveal the other location?",
+     "choice": {
+      "options": [
+       "Trap door",
+       "Revolve",
+       "Cyclorama",
+       "Gobo"
+      ],
+      "correct": 1
+     },
+     "solution": "A revolve rotates to swap one set for another quickly",
+     "hint": "The room needs to turn round"
+    },
+    {
+     "id": "dz19",
+     "level": 3,
+     "text": "A character must change from a maid's uniform into a ball gown in under a minute backstage. What is a very fast costume change like this called? Give the term.",
+     "short": {
+      "accept": [
+       "quick change",
+       "quick-change",
+       "quick changes"
+      ]
+     },
+     "solution": "A quick change uses hidden fastenings and pre-set costumes so an actor can change in seconds",
+     "hint": "The name describes how fast it happens"
+    },
+    {
+     "id": "dz20",
+     "level": 3,
+     "text": "A designer wants a ghost to rise suddenly through the floor of the stage. Which feature of the stage would make this possible?",
+     "choice": {
+      "options": [
+       "Fly tower",
+       "Cyclorama",
+       "Apron",
+       "Trap door in the stage floor"
+      ],
+      "correct": 3
+     },
+     "solution": "A trap is an opening in the stage floor through which actors or objects can appear",
+     "hint": "The ghost comes up from below"
+    },
+    {
+     "id": "dz21",
+     "level": 4,
+     "text": "Read this design note: 'Lantern 4: profile spot, blue gel, window gobo, focused on the bed.' What will the audience see?",
+     "choice": {
+      "options": [
+       "A soft red wash over the whole stage",
+       "A spotlight following an actor around the stage",
+       "A coloured cloth hanging at the back of the stage",
+       "A blue, window-shaped pattern of light on the bed"
+      ],
+      "correct": 3
+     },
+     "solution": "The gel makes the light blue, the gobo shapes it like a window, and it is focused on the bed",
+     "hint": "Work out what the gel does, then what the gobo does"
+    },
+    {
+     "id": "dz22",
+     "level": 4,
+     "text": "Read this cue sheet (LX = lighting cue, SFX = sound effect cue): 'LX 12: 5-second fade to blackout. SFX 7: thunder, loud.' What happens?",
+     "choice": {
+      "options": [
+       "The lights snap off instantly while soft music plays",
+       "A spotlight follows an actor while rain falls on stage",
+       "The lights fade to darkness over five seconds and a loud thunder sound plays",
+       "Sound effect 12 plays for five seconds"
+      ],
+      "correct": 2
+     },
+     "solution": "LX 12 fades the lights to darkness over 5 seconds; SFX 7 plays loud thunder",
+     "hint": "Read the lighting cue first, then the sound cue"
+    },
+    {
+     "id": "dz23",
+     "level": 4,
+     "text": "Read this: 'The sound of rain starts in the speaker on the left and moves to the speaker on the right, so it seems to travel across the stage.' What is this sound technique called? Give the term.",
+     "short": {
+      "accept": [
+       "panning",
+       "pan",
+       "panned",
+       "sound panning"
+      ]
+     },
+     "solution": "Panning moves a sound between speakers so it seems to travel across the space",
+     "hint": "The same word describes turning a camera from side to side"
+    },
+    {
+     "id": "dz24",
+     "level": 4,
+     "text": "A costume designer dresses a rich character in a crisp, well-fitted suit and a poor character in a faded, patched coat. What is the designer mainly communicating?",
+     "choice": {
+      "options": [
+       "The characters' status and wealth",
+       "The time of day",
+       "The weather in the scene",
+       "The characters' ages"
+      ],
+      "correct": 0
+     },
+     "solution": "The condition and fit of costumes show differences in status and wealth",
+     "hint": "Compare the condition of the two costumes"
+    },
+    {
+     "id": "dz25",
+     "level": 4,
+     "text": "A designer chooses a minimalist set: a bare stage with one chair and a single hanging light bulb. What effect is this choice most likely to have?",
+     "choice": {
+      "options": [
+       "It recreates a fully detailed, realistic room",
+       "It focuses attention on the actors and can suggest emptiness or isolation",
+       "It makes the exact location clear in every detail",
+       "It allows many scene changes using flats"
+      ],
+      "correct": 1
+     },
+     "solution": "A minimalist set strips away detail, focusing attention on the actors and suggesting mood rather than a real place",
+     "hint": "Think about what the audience looks at when there is almost nothing on stage"
+    },
+    {
+     "id": "dz26",
+     "level": 4,
+     "text": "Explain how a lighting designer could use colour and angle to create a frightening atmosphere.",
+     "rubric": {
+      "model_answer": "The designer could use cold colours, such as blue or green gels, to create an unnatural, eerie mood. Lighting the actors from below would throw strange shadows upwards across their faces, making them look distorted and threatening, while leaving much of the stage in darkness so the audience cannot see everything.",
+      "mark_scheme": "1 mark: a colour choice (e.g. cold blue, green, deep red)\n1 mark: the effect of the colour on the atmosphere\n1 mark: an angle or position (e.g. from below, from the side, backlight)\n1 mark: the effect of the angle (e.g. shadows, distortion, silhouette)",
+      "max_marks": 4
+     },
+     "solution": "Cold or unnatural colours and unusual angles such as uplighting create fear",
+     "hint": "Deal with colour first, then think about where the light comes from"
+    },
+    {
+     "id": "dz27",
+     "level": 5,
+     "text": "Which statement about a box set is accurate?",
+     "choice": {
+      "options": [
+       "It is a set made only of cardboard boxes",
+       "It is a set designed for in-the-round staging",
+       "It is a bare stage with no scenery",
+       "It shows a realistic room with three walls, the missing fourth wall facing the audience"
+      ],
+      "correct": 3
+     },
+     "solution": "A box set is a realistic interior with three walls; the audience looks in through the missing fourth wall",
+     "hint": "Think of a room with one wall taken away"
+    },
+    {
+     "id": "dz28",
+     "level": 5,
+     "text": "Why might a set designer build a scale model box before the set is made?",
+     "choice": {
+      "options": [
+       "Because the model is used on stage during the performance",
+       "So the audience can buy it in the foyer",
+       "So the director and team can see and plan the design in three dimensions before building",
+       "Because lanterns are focused using the model"
+      ],
+      "correct": 2
+     },
+     "solution": "A model box lets the whole team see and test the design in three dimensions before money is spent on building",
+     "hint": "Think about planning before building"
+    },
+    {
+     "id": "dz29",
+     "level": 5,
+     "text": "Which statement about sound design is accurate?",
+     "choice": {
+      "options": [
+       "Sound design only means choosing music for the interval",
+       "Sound effects must always be recorded, never live",
+       "Sound can establish location, time and mood, and can be live or recorded",
+       "Sound is only used in musicals"
+      ],
+      "correct": 2
+     },
+     "solution": "Sound design can set location, time and mood, using live or recorded sound",
+     "hint": "Think of all the jobs sound can do in a play"
+    },
+    {
+     "id": "dz30",
+     "level": 5,
+     "text": "A designer must show a play set in three different locations without any scene changes. Which kind of set would allow this?",
+     "choice": {
+      "options": [
+       "Composite set showing all three locations on stage at once",
+       "Box set of a single room",
+       "Cyclorama with no scenery",
+       "Single flat at the back of the stage"
+      ],
+      "correct": 0
+     },
+     "solution": "A composite set shows several locations on stage at the same time, so no scene changes are needed",
+     "hint": "All three places need to be visible at the same time"
+    },
+    {
+     "id": "dz31",
+     "level": 5,
+     "text": "Why do costume designers often attach fabric swatches to their design drawings?",
+     "choice": {
+      "options": [
+       "To prove the costume has been worn before",
+       "To show the colour, texture and weight of the materials to be used",
+       "To show the lighting cues",
+       "To record where actors stand on stage"
+      ],
+      "correct": 1
+     },
+     "solution": "Swatches show the real colour, texture and weight of fabric, which a drawing cannot fully show",
+     "hint": "Think about what a drawing cannot show"
+    },
+    {
+     "id": "dz32",
+     "level": 5,
+     "text": "Explain how a set designer could show time passing between the beginning and the end of a play set in the same room.",
+     "rubric": {
+      "model_answer": "The designer could age the room: at the start it is clean and tidy with new furniture; by the end the wallpaper is faded and peeling, the furniture is worn and dust sheets cover some objects. Small changes such as a calendar, a different season through the window or a dying plant would also show time passing without changing the layout.",
+      "mark_scheme": "1 mark: a valid change to the set (e.g. wear, decay, new objects)\n1 mark: a second valid change\n1 mark: how the audience reads time passing from the changes\n1 mark: practical design detail (e.g. same layout, set dressing, view through a window)",
+      "max_marks": 4
+     },
+     "solution": "Ageing the room, changing set dressing and showing a different season all suggest time passing",
+     "hint": "Think about how a real room changes over many years"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "drama.y{year}.roles_stages",
+      "label": "Roles & stages",
+      "skills": [
+       "drama.roles_stages"
+      ]
+     },
+     {
+      "id": "drama.y{year}.practitioners",
+      "label": "Practitioners & styles",
+      "skills": [
+       "drama.practitioners"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "drama.y{year}.performance",
+      "label": "Performance skills",
+      "skills": [
+       "drama.performance"
+      ]
+     },
+     {
+      "id": "drama.y{year}.design",
+      "label": "Design & technical",
+      "skills": [
+       "drama.design"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

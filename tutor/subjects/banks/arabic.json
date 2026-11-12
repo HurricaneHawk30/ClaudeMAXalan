@@ -1,0 +1,2187 @@
+{
+ "subject": {
+  "id": "arabic",
+  "title": "Arabic",
+  "order": 64
+ },
+ "skills": [
+  {
+   "id": "arabic.grammar",
+   "title": "Grammar & tenses",
+   "aliases": [
+    "arabic grammar",
+    "tenses",
+    "present tense",
+    "past tense",
+    "future tense",
+    "conditional",
+    "verbs",
+    "adjective agreement",
+    "pronouns",
+    "negatives",
+    "root letters",
+    "dual",
+    "الماضي",
+    "المضارع"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which Arabic pronoun means 'I'? Choose the correct word.",
+     "choice": {
+      "options": [
+       "أنا",
+       "أنت",
+       "هو",
+       "نحن"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "أنت means 'you'",
+       "هو means 'he'",
+       "نحن means 'we'"
+      ]
+     },
+     "solution": "أنا = I; أنت = you; هو = he; نحن = we",
+     "hint": "It starts and ends with the letter alif"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "What does the pronoun «هي» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "we",
+       "she",
+       "he",
+       "they"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "هو means 'he'",
+       null
+      ]
+     },
+     "solution": "هي = she; هو = he",
+     "hint": "It is the feminine partner of هو"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "What does the pronoun «نحن» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "we"
+      ],
+      "reject": [
+       "they",
+       "you"
+      ],
+      "form": "any"
+     },
+     "solution": "نحن = we; أنا = I",
+     "hint": "It is the plural of أنا (I)"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Which word means 'this' with a feminine noun, as in «___ مدرسة» (this school)?",
+     "choice": {
+      "options": [
+       "ذلك",
+       "هؤلاء",
+       "هذه",
+       "هذا"
+      ],
+      "correct": 2,
+      "feedback": [
+       "ذلك means 'that' (masculine)",
+       "هؤلاء means 'these'",
+       null,
+       "هذا is used with masculine nouns"
+      ]
+     },
+     "solution": "هذه is used with feminine nouns: هذه مدرسة; هذا is masculine",
+     "hint": "مدرسة ends in ta marbuta (ة), so it is feminine"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "What does «ال» at the start of a word mean, as in «الكتاب»?",
+     "choice": {
+      "options": [
+       "and",
+       "in",
+       "with",
+       "the"
+      ],
+      "correct": 3
+     },
+     "solution": "ال is the definite article: كتاب = a book, الكتاب = the book",
+     "hint": "Compare كتاب (a book) with الكتاب"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "What does «و» mean when it is joined to the front of a word, as in «وأخي»? Answer in English.",
+     "short": {
+      "accept": [
+       "and"
+      ],
+      "reject": [
+       "or",
+       "with"
+      ],
+      "form": "any"
+     },
+     "solution": "و = and: وأخي = and my brother",
+     "hint": "It is the most common joining word, used to link two nouns"
+    },
+    {
+     "id": "g07",
+     "level": 2,
+     "text": "Which word is the feminine form of «طالب» (male student)?",
+     "choice": {
+      "options": [
+       "طالبة",
+       "طلاب",
+       "طالبان",
+       "مطلوب"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "طلاب is the plural (students)",
+       "طالبان means 'two students'",
+       null
+      ]
+     },
+     "solution": "Adding ta marbuta (ة) makes the feminine: طالب → طالبة",
+     "hint": "Most feminine nouns end in ة"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "What is the plural of «كتاب» (book)?",
+     "choice": {
+      "options": [
+       "مكتبة",
+       "كتب",
+       "كاتب",
+       "مكتب"
+      ],
+      "correct": 1,
+      "feedback": [
+       "مكتبة means 'library'",
+       null,
+       "كاتب means 'writer'",
+       "مكتب means 'office' or 'desk'"
+      ]
+     },
+     "solution": "كتاب has a broken plural: كتب (books)",
+     "hint": "Arabic often makes plurals by changing the vowels inside the word"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "What does «لا» mean in «لا أحب القهوة»? Answer in English.",
+     "short": {
+      "accept": [
+       "not",
+       "do not",
+       "don't",
+       "no"
+      ],
+      "reject": [
+       "never"
+      ],
+      "form": "any"
+     },
+     "solution": "لا before a present-tense verb makes it negative: لا أحب القهوة = I don't like coffee",
+     "hint": "It comes before the verb أحب (I like)"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Which word goes before a past-tense verb to make it negative, as in «___ ذهبتُ إلى المدرسة» (I did not go to school)?",
+     "choice": {
+      "options": [
+       "سوف",
+       "هل",
+       "ما",
+       "لن"
+      ],
+      "correct": 2,
+      "feedback": [
+       "سوف shows the future",
+       "هل makes a question",
+       null,
+       "لن makes a future verb negative"
+      ]
+     },
+     "solution": "ما + past tense makes it negative: ما ذهبتُ = I did not go",
+     "hint": "The verb ذهبتُ is in the past tense"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Which word turns a statement into a yes/no question?",
+     "choice": {
+      "options": [
+       "لماذا",
+       "أين",
+       "متى",
+       "هل"
+      ],
+      "correct": 3,
+      "feedback": [
+       "لماذا means 'why'",
+       "أين means 'where'",
+       "متى means 'when'",
+       null
+      ]
+     },
+     "solution": "هل at the start makes a yes/no question: هل تحب الرياضة؟",
+     "hint": "The other words ask 'why', 'where' and 'when'"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "What does «سوف» show when it comes before a present-tense verb? Answer in English with one word: past, present or future.",
+     "short": {
+      "accept": [
+       "future",
+       "future tense",
+       "the future"
+      ],
+      "reject": [
+       "past",
+       "present"
+      ],
+      "form": "any"
+     },
+     "solution": "سوف (or the prefix سـ) + present tense = future: سوف أذهب = I will go",
+     "hint": "It points forward in time"
+    },
+    {
+     "id": "g13",
+     "level": 3,
+     "text": "Choose the correct adjective: «بيت ___» (a big house).",
+     "choice": {
+      "options": [
+       "كبير",
+       "كبيرة",
+       "كبار",
+       "أكبر"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "كبيرة is feminine; بيت is masculine",
+       null,
+       "أكبر means 'bigger'"
+      ]
+     },
+     "solution": "بيت is masculine singular, so the adjective is كبير",
+     "hint": "Is بيت masculine or feminine?"
+    },
+    {
+     "id": "g14",
+     "level": 3,
+     "text": "Choose the correct adjective: «سيارة ___» (a new car).",
+     "choice": {
+      "options": [
+       "قديمة",
+       "جديدة",
+       "جديد",
+       "جدد"
+      ],
+      "correct": 1,
+      "feedback": [
+       "قديمة means 'old'",
+       null,
+       "جديد is masculine; سيارة is feminine",
+       null
+      ]
+     },
+     "solution": "سيارة is feminine, so the adjective takes ة: سيارة جديدة",
+     "hint": "سيارة ends in ة"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "«ذهبتُ إلى السوق.» Which tense is the verb?",
+     "choice": {
+      "options": [
+       "past",
+       "present",
+       "future"
+      ],
+      "correct": 0
+     },
+     "solution": "ذهبتُ = I went: the ending ـتُ marks the past tense",
+     "hint": "Look at the ending ـتُ on the verb"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "What does «سأذهب» mean?",
+     "choice": {
+      "options": [
+       "I go",
+       "I do not go",
+       "I will go",
+       "I went"
+      ],
+      "correct": 2
+     },
+     "solution": "سـ + أذهب = I will go (future)",
+     "hint": "The prefix سـ is a short form of سوف"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "What does «يلعبون» mean?",
+     "choice": {
+      "options": [
+       "he plays",
+       "we play",
+       "she plays",
+       "they play"
+      ],
+      "correct": 3,
+      "feedback": [
+       "'he plays' is يلعب",
+       "'we play' is نلعب",
+       "'she plays' is تلعب",
+       null
+      ]
+     },
+     "solution": "يـ … ـون is the 'they' (masculine plural) form: يلعبون = they play",
+     "hint": "Look at both the prefix يـ and the ending ـون"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "«لن أسافر غدًا.» Is this sentence positive or negative? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "negative"
+      ],
+      "reject": [
+       "positive"
+      ],
+      "form": "any"
+     },
+     "solution": "لن makes a future verb negative: لن أسافر غدًا = I will not travel tomorrow",
+     "hint": "Look at the small word before the verb"
+    },
+    {
+     "id": "g19",
+     "level": 4,
+     "text": "Which sentence means 'I did not go to school yesterday'?",
+     "choice": {
+      "options": [
+       "لم أذهب إلى المدرسة أمس",
+       "لن أذهب إلى المدرسة غدًا",
+       "أذهب إلى المدرسة كل يوم",
+       "ذهبت إلى المدرسة أمس"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "This means 'I will not go to school tomorrow'",
+       null,
+       "This means 'I went to school yesterday'"
+      ]
+     },
+     "solution": "لم + present form gives a negative past: لم أذهب = I did not go; أمس = yesterday",
+     "hint": "Look for أمس (yesterday) and a negative word"
+    },
+    {
+     "id": "g20",
+     "level": 4,
+     "text": "Choose the correct verb: «أختي ___ في المستشفى» (My sister works in the hospital).",
+     "choice": {
+      "options": [
+       "نعمل",
+       "تعمل",
+       "يعمل",
+       "أعمل"
+      ],
+      "correct": 1,
+      "feedback": [
+       "نعمل is 'we work'",
+       null,
+       "يعمل is 'he works'",
+       "أعمل is 'I work'"
+      ]
+     },
+     "solution": "أختي (my sister) is feminine: she works = تعمل",
+     "hint": "The subject is 'she': which prefix goes with 'she'?"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "«لم يذهب أخي إلى المدرسة.» Is this sentence about the past, the present or the future? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "past",
+       "past tense",
+       "the past"
+      ],
+      "reject": [
+       "present",
+       "future"
+      ],
+      "form": "any",
+      "feedback": {
+       "present": "The verb looks present, but لم always gives a past meaning",
+       "future": "The future negative uses لن, not لم"
+      }
+     },
+     "solution": "لم + a present-tense form means 'did not': لم يذهب أخي إلى المدرسة = my brother did not go to school",
+     "hint": "The verb after لم looks like a present-tense form, but think about what لم means"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "Which word is the dual of «ولد» (boy), meaning 'two boys'?",
+     "choice": {
+      "options": [
+       "والد",
+       "مولود",
+       "ولدان",
+       "أولاد"
+      ],
+      "correct": 2,
+      "feedback": [
+       "والد means 'father'",
+       null,
+       null,
+       "أولاد is the plural (three or more boys)"
+      ]
+     },
+     "solution": "The dual ending ـان means 'two': ولد → ولدان",
+     "hint": "The dual ending is ـان"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "Which word means 'my book'?",
+     "choice": {
+      "options": [
+       "كتابك",
+       "كتابه",
+       "كتابها",
+       "كتابي"
+      ],
+      "correct": 3,
+      "feedback": [
+       "كتابك = your book",
+       "كتابه = his book",
+       "كتابها = her book",
+       null
+      ]
+     },
+     "solution": "The suffix ـي means 'my': كتابي = my book",
+     "hint": "Look for the ending that means 'my'"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "«هذا كتابها.» Whose book is it? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "hers",
+       "her",
+       "her book"
+      ],
+      "reject": [
+       "his",
+       "mine",
+       "yours"
+      ],
+      "form": "any",
+      "feedback": {
+       "his": "'his book' would be كتابه"
+      }
+     },
+     "solution": "The suffix ـها means 'her': كتابها = her book",
+     "hint": "Look at the ending joined to كتاب"
+    },
+    {
+     "id": "g25",
+     "level": 5,
+     "text": "«كان أبي يعمل في مصنع.» What does «كان … يعمل» mean?",
+     "choice": {
+      "options": [
+       "used to work",
+       "will work",
+       "works now",
+       "has never worked"
+      ],
+      "correct": 0
+     },
+     "solution": "كان + present-tense verb describes a past habit: my father used to work in a factory",
+     "hint": "كان is the past of 'to be'"
+    },
+    {
+     "id": "g26",
+     "level": 5,
+     "text": "Which sentence means 'If I study, I will succeed'?",
+     "choice": {
+      "options": [
+       "أدرس لأنني نجحت",
+       "إذا درستُ فسأنجح",
+       "درستُ ونجحتُ",
+       "لن أدرس ولن أنجح"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "This means 'I studied and I succeeded'",
+       "This means 'I will not study and I will not succeed'"
+      ]
+     },
+     "solution": "إذا = if; سأنجح = I will succeed",
+     "hint": "Look for إذا, which means 'if'"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "Which word comes from the same root (ك ت ب, 'writing') as «كتاب»?",
+     "choice": {
+      "options": [
+       "ملعب",
+       "مطبخ",
+       "مكتبة",
+       "مدرسة"
+      ],
+      "correct": 2,
+      "feedback": [
+       "ملعب comes from ل ع ب (playing)",
+       null,
+       null,
+       "مدرسة comes from the root د ر س (studying)"
+      ]
+     },
+     "solution": "مكتبة (library) contains the root letters ك ت ب",
+     "hint": "Look for a word that contains the three letters ك, ت and ب in that order"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "«مكتب» comes from the root ك ت ب (writing), and the pattern مَفْعَل often names a place. What does «مكتب» mean?",
+     "choice": {
+      "options": [
+       "writer",
+       "library",
+       "letter",
+       "office"
+      ],
+      "correct": 3,
+      "feedback": [
+       "'writer' is كاتب",
+       "'library' is مكتبة, with ة at the end",
+       null,
+       null
+      ]
+     },
+     "solution": "مكتب = office or desk, a place where you write",
+     "hint": "Which option is a place for writing work?"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "«الطالبات مجتهدات.» How many students are being described: one, two, or more than two? Answer in English.",
+     "short": {
+      "accept": [
+       "more than two",
+       "three or more",
+       "more than 2",
+       "3 or more",
+       "many",
+       "several"
+      ],
+      "reject": [
+       "one",
+       "two"
+      ],
+      "form": "any",
+      "feedback": {
+       "two": "Two students would use the dual: طالبتان"
+      }
+     },
+     "solution": "ـات is the feminine sound plural, used for three or more; two would be the dual ـتان",
+     "hint": "Arabic has a singular, a dual (two) and a plural"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "In «ذهبوا إلى البحر», who went to the sea? Answer in English with one pronoun.",
+     "short": {
+      "accept": [
+       "they",
+       "them"
+      ],
+      "reject": [
+       "we",
+       "he",
+       "you"
+      ],
+      "form": "any"
+     },
+     "solution": "The ending ـوا is the 'they' (masculine plural) form of the past: ذهبوا = they went",
+     "hint": "Look at the ending ـوا on the verb"
+    }
+   ]
+  },
+  {
+   "id": "arabic.people",
+   "title": "People & lifestyle",
+   "aliases": [
+    "arabic family",
+    "family",
+    "friends",
+    "describing people",
+    "personality",
+    "school",
+    "healthy living",
+    "daily routine",
+    "jobs",
+    "future plans"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What does «أب» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "father",
+       "brother",
+       "son",
+       "uncle"
+      ],
+      "correct": 0
+     },
+     "solution": "أب = father; أخ = brother; ابن = son; عم = uncle",
+     "hint": "It is the partner word of أم (mother)"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "What does «أم» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "aunt",
+       "mother",
+       "sister",
+       "daughter"
+      ],
+      "correct": 1
+     },
+     "solution": "أم = mother; أخت = sister; ابنة = daughter; عمة = aunt",
+     "hint": "It is the partner word of أب (father)"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "What does «أخت» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "sister"
+      ],
+      "reject": [
+       "brother"
+      ],
+      "form": "any"
+     },
+     "solution": "أخت = sister; أخ = brother",
+     "hint": "It is أخ (brother) with a feminine ending"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "Which Arabic word means 'brother'?",
+     "choice": {
+      "options": [
+       "ابن",
+       "جد",
+       "أخ",
+       "أب"
+      ],
+      "correct": 2
+     },
+     "solution": "أخ = brother; أب = father; ابن = son; جد = grandfather",
+     "hint": "Remove the ending ت from أخت (sister)"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "What does «مَدْرَسة» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "house",
+       "hospital",
+       "market",
+       "school"
+      ],
+      "correct": 3
+     },
+     "solution": "مَدْرَسة = school (from the root د ر س, studying)",
+     "hint": "It comes from the root د ر س, which is about studying"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "What does «صديق» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "friend",
+       "male friend"
+      ],
+      "form": "any"
+     },
+     "solution": "صديق = (male) friend; صديقة = (female) friend",
+     "hint": "You spend your free time with this person"
+    },
+    {
+     "id": "p07",
+     "level": 2,
+     "text": "What does «طويل» mean when describing a person?",
+     "choice": {
+      "options": [
+       "tall",
+       "short",
+       "young",
+       "old"
+      ],
+      "correct": 0
+     },
+     "solution": "طويل = tall; قصير = short",
+     "hint": "Its opposite is قصير"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "Which Arabic word means 'kind'?",
+     "choice": {
+      "options": [
+       "مضحك",
+       "لطيف",
+       "كسول",
+       "ذكي"
+      ],
+      "correct": 1
+     },
+     "solution": "لطيف = kind, nice; كسول = lazy; ذكي = clever; مضحك = funny",
+     "hint": "The same word can also describe pleasant, mild weather"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "What does «ذكي» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "clever",
+       "intelligent",
+       "smart"
+      ],
+      "form": "any"
+     },
+     "solution": "ذكي = clever, intelligent",
+     "hint": "A student who gets top marks is often called this"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "What does «طبيب» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "teacher",
+       "pilot",
+       "doctor",
+       "engineer"
+      ],
+      "correct": 2
+     },
+     "solution": "طبيب = doctor; مهندس = engineer; معلم = teacher; طيار = pilot",
+     "hint": "This person works in a مستشفى (hospital)"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "Which Arabic word means 'teacher'?",
+     "choice": {
+      "options": [
+       "طبيب",
+       "مهندس",
+       "شرطي",
+       "معلم"
+      ],
+      "correct": 3
+     },
+     "solution": "معلم = teacher; طبيب = doctor; مهندس = engineer; شرطي = police officer",
+     "hint": "It comes from the root ع ل م, which is about knowledge and learning"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "What does «مهندس» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "engineer"
+      ],
+      "form": "any"
+     },
+     "solution": "مهندس = engineer",
+     "hint": "This person designs bridges and buildings"
+    },
+    {
+     "id": "p13",
+     "level": 3,
+     "text": "«أستيقظ في الساعة السادسة.» At what time does the speaker wake up?",
+     "choice": {
+      "options": [
+       "at six o'clock",
+       "at seven o'clock",
+       "at eight o'clock",
+       "at five o'clock"
+      ],
+      "correct": 0
+     },
+     "solution": "السادسة = the sixth (hour), so six o'clock",
+     "hint": "Count: الخامسة, السادسة, السابعة, الثامنة"
+    },
+    {
+     "id": "p14",
+     "level": 3,
+     "text": "«أبي مهندس وأمي طبيبة.» What does the mother do?",
+     "choice": {
+      "options": [
+       "She is a pilot",
+       "She is a doctor",
+       "She is an engineer",
+       "She is a teacher"
+      ],
+      "correct": 1
+     },
+     "solution": "أمي طبيبة = my mother is a doctor; أبي مهندس = my father is an engineer",
+     "hint": "طبيبة is the feminine of طبيب"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "«عندي أخ واحد وأختان.» How many sisters does the speaker have? Answer with a number.",
+     "short": {
+      "accept": [
+       "2",
+       "two",
+       "2 sisters",
+       "two sisters"
+      ],
+      "reject": [
+       "1",
+       "one",
+       "3"
+      ],
+      "form": "any"
+     },
+     "solution": "أختان is the dual of أخت: two sisters (and one brother)",
+     "hint": "The ending ـان on a noun means 'two of them'"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "«أحب الرياضيات لأنها سهلة.» The speaker likes maths because it is…",
+     "choice": {
+      "options": [
+       "fun",
+       "interesting",
+       "easy",
+       "useful"
+      ],
+      "correct": 2
+     },
+     "solution": "سهلة = easy",
+     "hint": "The reason comes after لأنها (because it is)"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "«أشرب الماء كل يوم.» What does the speaker drink every day? Answer in English.",
+     "short": {
+      "accept": [
+       "water"
+      ],
+      "form": "any"
+     },
+     "solution": "أشرب = I drink; الماء = water",
+     "hint": "الماء is a clear drink you need every day"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "«أريد أن أصبح طيارًا في المستقبل.» What does the speaker want to be?",
+     "choice": {
+      "options": [
+       "a doctor",
+       "a farmer",
+       "a lawyer",
+       "a pilot"
+      ],
+      "correct": 3
+     },
+     "solution": "طيار = pilot (from طار, to fly)",
+     "hint": "The word comes from the root ط ي ر, to fly"
+    },
+    {
+     "id": "p19",
+     "level": 4,
+     "text": "«أختي الكبيرة تدرس في الجامعة، وأخي الصغير في المدرسة الابتدائية.» Which statement is true?",
+     "choice": {
+      "options": [
+       "The older sister studies at university",
+       "The younger brother studies at university",
+       "The older sister is at primary school",
+       "The brother is older than the sister"
+      ],
+      "correct": 0
+     },
+     "solution": "أختي الكبيرة = my older sister; تدرس في الجامعة = studies at university",
+     "hint": "الكبيرة means 'the big (older)' and الصغير means 'the small (younger)'"
+    },
+    {
+     "id": "p20",
+     "level": 4,
+     "text": "«أستيقظ مبكرًا، ثم أتناول الفطور وأذهب إلى المدرسة بالحافلة.» How does the speaker go to school?",
+     "choice": {
+      "options": [
+       "by train",
+       "by bus",
+       "on foot",
+       "by car"
+      ],
+      "correct": 1
+     },
+     "solution": "بالحافلة = by bus",
+     "hint": "Look at the last word, which starts with بـ (by)"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "text": "«صديقي مضحك جدًا.» What is the friend like? Answer in English.",
+     "short": {
+      "accept": [
+       "very funny",
+       "funny",
+       "really funny"
+      ],
+      "form": "any"
+     },
+     "solution": "مضحك = funny; جدًا = very",
+     "hint": "مضحك comes from ضحك (to laugh)"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "«لا آكل الحلويات كثيرًا لأنها غير صحية.» Why doesn't the speaker eat sweets often?",
+     "choice": {
+      "options": [
+       "They taste bad",
+       "The doctor said so",
+       "They are unhealthy",
+       "They are expensive"
+      ],
+      "correct": 2
+     },
+     "solution": "غير صحية = unhealthy (literally 'not healthy')",
+     "hint": "غير before an adjective means 'not' or 'un-'"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "«أمارس الرياضة ثلاث مرات في الأسبوع.» How many times a week does the speaker do sport? Answer with a number.",
+     "short": {
+      "accept": [
+       "3",
+       "three",
+       "3 times",
+       "three times"
+      ],
+      "reject": [
+       "2",
+       "4"
+      ],
+      "form": "any"
+     },
+     "solution": "ثلاث مرات = three times; في الأسبوع = a week",
+     "hint": "مرات means 'times'; look at the number word before it"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "«في المستقبل أريد أن أدرس الطب.» What does the speaker want to study?",
+     "choice": {
+      "options": [
+       "engineering",
+       "law",
+       "languages",
+       "medicine"
+      ],
+      "correct": 3
+     },
+     "solution": "الطب = medicine (طبيب = doctor comes from the same root)",
+     "hint": "طبيب (doctor) comes from the same root"
+    },
+    {
+     "id": "p25",
+     "level": 5,
+     "text": "«كان أخي كسولًا، أما الآن فهو يدرس كل يوم.» Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The brother used to be lazy but now studies every day",
+       "The brother has always been lazy",
+       "The brother studied every day in the past",
+       "The brother no longer studies"
+      ],
+      "correct": 0
+     },
+     "solution": "كان كسولًا = he was lazy; الآن يدرس كل يوم = now he studies every day",
+     "hint": "Contrast كان (was) with الآن (now)"
+    },
+    {
+     "id": "p26",
+     "level": 5,
+     "text": "«أنام مبكرًا لأنني أريد أن أكون نشيطًا في الصباح.» Why does the speaker go to bed early?",
+     "choice": {
+      "options": [
+       "To watch less TV",
+       "To be active in the morning",
+       "To finish homework at night",
+       "To get up late"
+      ],
+      "correct": 1
+     },
+     "solution": "أكون نشيطًا في الصباح = to be active in the morning",
+     "hint": "Read what comes after لأنني (because I)"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "text": "«صديقتي سارة صبورة ولا تغضب أبدًا.» What is Sara like?",
+     "choice": {
+      "options": [
+       "shy",
+       "jealous",
+       "patient",
+       "impatient"
+      ],
+      "correct": 2
+     },
+     "solution": "صبورة = patient; لا تغضب أبدًا = she never gets angry",
+     "hint": "Someone who never gets angry has this quality"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "text": "«أحب مادة العلوم، لكن الأستاذ صارم جدًا.» What is the problem with the subject? Answer in English.",
+     "short": {
+      "accept": [
+       "the teacher is very strict",
+       "the teacher is strict",
+       "strict teacher",
+       "very strict teacher",
+       "teacher is strict",
+       "teacher is very strict",
+       "a strict teacher",
+       "a very strict teacher",
+       "the teacher"
+      ],
+      "form": "any"
+     },
+     "solution": "لكن الأستاذ صارم جدًا = but the teacher is very strict",
+     "hint": "The problem comes after لكن (but)"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "«أريد أن أعمل مع الحيوانات، لذلك سأدرس الطب البيطري.» What job does the speaker want? Answer in English.",
+     "short": {
+      "accept": [
+       "vet",
+       "veterinarian",
+       "veterinary surgeon",
+       "animal doctor",
+       "veterinary doctor"
+      ],
+      "form": "any"
+     },
+     "solution": "الطب البيطري = veterinary medicine; working with animals → a vet",
+     "hint": "The speaker wants to work with الحيوانات (animals) and study a kind of medicine"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "«أفضّل العمل في الخارج لأن الراتب أعلى.» Why does the speaker prefer working abroad?",
+     "choice": {
+      "options": [
+       "The weather is better",
+       "The work is easier",
+       "The family lives there",
+       "The salary is higher"
+      ],
+      "correct": 3
+     },
+     "solution": "الراتب أعلى = the salary is higher",
+     "hint": "الراتب is the money you are paid for a job"
+    }
+   ]
+  },
+  {
+   "id": "arabic.culture",
+   "title": "Free time & culture",
+   "aliases": [
+    "arabic free time",
+    "hobbies",
+    "sport",
+    "music",
+    "cinema",
+    "tv",
+    "technology",
+    "social media",
+    "festivals",
+    "food and drink"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What does «كرة القدم» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "football",
+       "basketball",
+       "tennis",
+       "swimming"
+      ],
+      "correct": 0
+     },
+     "solution": "كرة = ball; القدم = the foot, so كرة القدم = football",
+     "hint": "كرة means 'ball' and قدم means 'foot'"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What does «قهوة» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "juice",
+       "coffee",
+       "tea",
+       "milk"
+      ],
+      "correct": 1
+     },
+     "solution": "قهوة = coffee; شاي = tea; حليب = milk; عصير = juice",
+     "hint": "The English word for this drink comes from the Arabic"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "What does «شاي» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "tea"
+      ],
+      "form": "any"
+     },
+     "solution": "شاي = tea; قهوة = coffee",
+     "hint": "Say the word aloud: it sounds like 'shy' or 'chai'"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "Which Arabic word means 'bread'?",
+     "choice": {
+      "options": [
+       "أرز",
+       "جبن",
+       "خبز",
+       "لحم"
+      ],
+      "correct": 2
+     },
+     "solution": "خبز = bread; لحم = meat; أرز = rice; جبن = cheese",
+     "hint": "It is baked in an oven and eaten with most meals"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "What does «سباحة» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "running",
+       "reading",
+       "drawing",
+       "swimming"
+      ],
+      "correct": 3
+     },
+     "solution": "سباحة = swimming; مسبح = swimming pool",
+     "hint": "مسبح (pool) comes from the same root"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "What does «كتاب» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "book"
+      ],
+      "form": "any"
+     },
+     "solution": "كتاب = book (from the root ك ت ب, writing)",
+     "hint": "It comes from the root ك ت ب, which is about writing"
+    },
+    {
+     "id": "c07",
+     "level": 2,
+     "text": "Which Arabic word means 'television'?",
+     "choice": {
+      "options": [
+       "تلفاز",
+       "هاتف",
+       "حاسوب",
+       "مذياع"
+      ],
+      "correct": 0
+     },
+     "solution": "تلفاز = television; هاتف = telephone; حاسوب = computer; مذياع = radio",
+     "hint": "It begins with the letter ت, like the English word"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "What does «عيد» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "journey",
+       "festival",
+       "market",
+       "mosque"
+      ],
+      "correct": 1
+     },
+     "solution": "عيد = festival, feast (e.g. عيد الفطر)",
+     "hint": "Think of Eid al-Fitr"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "What does «فيلم» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "film",
+       "movie"
+      ],
+      "form": "any"
+     },
+     "solution": "فيلم = film; سينما = cinema",
+     "hint": "Say it aloud: it is borrowed from English"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "Which Arabic word means 'rice'?",
+     "choice": {
+      "options": [
+       "سمك",
+       "بيض",
+       "أرز",
+       "خبز"
+      ],
+      "correct": 2
+     },
+     "solution": "أرز = rice; خبز = bread; سمك = fish; بيض = eggs",
+     "hint": "It is often served with chicken in dishes like kabsa"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "What does «حاسوب» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "computer",
+       "PC"
+      ],
+      "form": "any"
+     },
+     "solution": "حاسوب = computer (from حسب, to calculate)",
+     "hint": "It comes from the verb حسب, to calculate"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "What does «أغنية» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "dance",
+       "game",
+       "story",
+       "song"
+      ],
+      "correct": 3
+     },
+     "solution": "أغنية = song; رقصة = dance; لعبة = game; قصة = story",
+     "hint": "A singer performs one"
+    },
+    {
+     "id": "c13",
+     "level": 3,
+     "text": "«ألعب كرة السلة مع أصدقائي.» What does the speaker play?",
+     "choice": {
+      "options": [
+       "basketball",
+       "football",
+       "volleyball",
+       "tennis"
+      ],
+      "correct": 0
+     },
+     "solution": "كرة السلة = basketball (السلة = the basket)",
+     "hint": "السلة means 'the basket'"
+    },
+    {
+     "id": "c14",
+     "level": 3,
+     "text": "«أحب مشاهدة الأفلام في السينما.» What does the speaker like?",
+     "choice": {
+      "options": [
+       "Listening to music",
+       "Watching films at the cinema",
+       "Reading books at home",
+       "Playing games online"
+      ],
+      "correct": 1
+     },
+     "solution": "مشاهدة الأفلام = watching films; في السينما = at the cinema",
+     "hint": "الأفلام is the plural of فيلم"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "«أشرب العصير في الصباح.» What does the speaker drink in the morning? Answer in English.",
+     "short": {
+      "accept": [
+       "juice",
+       "fruit juice"
+      ],
+      "form": "any"
+     },
+     "solution": "العصير = juice; في الصباح = in the morning",
+     "hint": "عصير comes from a verb meaning 'to squeeze'"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "«في رمضان يصوم المسلمون من الفجر إلى غروب الشمس.» When do Muslims fast during Ramadan?",
+     "choice": {
+      "options": [
+       "Only at the weekend",
+       "From noon to midnight",
+       "From dawn to sunset",
+       "From sunset to dawn"
+      ],
+      "correct": 2
+     },
+     "solution": "من الفجر = from dawn; إلى غروب الشمس = until sunset",
+     "hint": "الفجر is the start of the day; غروب الشمس is when the sun goes down"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "«أستعمل الإنترنت كل يوم.» What does the speaker use every day? Answer in English.",
+     "short": {
+      "accept": [
+       "the internet",
+       "internet",
+       "the web"
+      ],
+      "form": "any"
+     },
+     "solution": "أستعمل = I use; الإنترنت = the internet",
+     "hint": "Say the second word aloud: it is borrowed from English"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "«أفضّل الشاي على القهوة.» What does the speaker prefer?",
+     "choice": {
+      "options": [
+       "coffee",
+       "milk",
+       "water",
+       "tea"
+      ],
+      "correct": 3
+     },
+     "solution": "أفضّل X على Y = I prefer X to Y: tea rather than coffee",
+     "hint": "The first drink after أفضّل is the one preferred"
+    },
+    {
+     "id": "c19",
+     "level": 4,
+     "text": "«في عيد الفطر نزور الأقارب ونأكل الحلويات.» What do people do at Eid al-Fitr, according to the text?",
+     "choice": {
+      "options": [
+       "Visit relatives and eat sweets",
+       "Fast all day",
+       "Travel to Mecca",
+       "Go to the cinema"
+      ],
+      "correct": 0
+     },
+     "solution": "نزور الأقارب = we visit relatives; نأكل الحلويات = we eat sweets",
+     "hint": "نزور means 'we visit'"
+    },
+    {
+     "id": "c20",
+     "level": 4,
+     "text": "«كنت ألعب كرة القدم، لكنني الآن أفضّل السباحة.» Which statement is true?",
+     "choice": {
+      "options": [
+       "The speaker cannot swim",
+       "The speaker now prefers swimming",
+       "The speaker still prefers football",
+       "The speaker has never played football"
+      ],
+      "correct": 1
+     },
+     "solution": "كنت ألعب = I used to play; الآن أفضّل السباحة = now I prefer swimming",
+     "hint": "Contrast كنت (I was / used to) with الآن (now)"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "«أقضي ساعتين على وسائل التواصل الاجتماعي كل يوم.» How many hours a day does the speaker spend on social media? Answer with a number.",
+     "short": {
+      "accept": [
+       "2",
+       "two",
+       "2 hours",
+       "two hours"
+      ],
+      "reject": [
+       "1",
+       "3"
+      ],
+      "form": "any"
+     },
+     "solution": "ساعتين is the dual of ساعة: two hours",
+     "hint": "The ending ـين on ساعة shows the dual"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "«طعامي المفضل هو الكسكس.» What is this sentence about?",
+     "choice": {
+      "options": [
+       "A recipe for bread",
+       "A visit to a restaurant",
+       "The speaker's favourite food",
+       "The speaker's favourite sport"
+      ],
+      "correct": 2
+     },
+     "solution": "طعامي المفضل = my favourite food; الكسكس = couscous",
+     "hint": "طعام means 'food' and المفضل means 'favourite'"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "«أعزف على البيانو منذ خمس سنوات.» Which instrument does the speaker play? Answer in English.",
+     "short": {
+      "accept": [
+       "piano",
+       "the piano"
+      ],
+      "form": "any"
+     },
+     "solution": "أعزف على البيانو = I play the piano; منذ خمس سنوات = for five years",
+     "hint": "Say the instrument word aloud"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "«الهاتف الذكي مفيد، لكنه يضيّع الكثير من الوقت.» What is the disadvantage of the smartphone?",
+     "choice": {
+      "options": [
+       "The price is too high",
+       "Nobody finds it useful",
+       "The screen breaks easily",
+       "It wastes a lot of time"
+      ],
+      "correct": 3
+     },
+     "solution": "لكنه يضيّع الكثير من الوقت = but it wastes a lot of time",
+     "hint": "The disadvantage comes after لكن (but); الوقت means 'time'"
+    },
+    {
+     "id": "c25",
+     "level": 5,
+     "text": "«على الرغم من أن الرياضة متعبة، فإنني أمارسها لأنها مفيدة للصحة.» Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The speaker finds sport tiring but does it for health",
+       "The speaker stopped sport as it is tiring",
+       "The speaker thinks sport is bad for health",
+       "The speaker does sport only at the weekend"
+      ],
+      "correct": 0
+     },
+     "solution": "على الرغم من = despite; متعبة = tiring; مفيدة للصحة = good for health",
+     "hint": "على الرغم من introduces a contrast"
+    },
+    {
+     "id": "c26",
+     "level": 5,
+     "text": "«لم أذهب إلى الحفلة لأنني كنت مريضًا.» Why didn't the speaker go to the party?",
+     "choice": {
+      "options": [
+       "He had no ticket",
+       "He was ill",
+       "He was busy",
+       "He did not like the music"
+      ],
+      "correct": 1
+     },
+     "solution": "كنت مريضًا = I was ill",
+     "hint": "The reason comes after لأنني (because I)"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "«أصبحت القراءة أقل شعبية بين الشباب بسبب الإنترنت.» What does the sentence say?",
+     "choice": {
+      "options": [
+       "The internet has no effect on reading",
+       "Older people read less than before",
+       "Young people read less, and the internet is the reason",
+       "Young people read more thanks to the internet"
+      ],
+      "correct": 2
+     },
+     "solution": "القراءة أقل شعبية بين الشباب = reading is less popular among young people; بسبب الإنترنت = because of the internet",
+     "hint": "أقل means 'less' and الشباب means 'young people'"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "«سأذهب إلى المهرجان إذا لم تمطر.» What would stop the speaker going to the festival? Answer in English.",
+     "short": {
+      "accept": [
+       "rain",
+       "if it rains",
+       "raining",
+       "rainy weather",
+       "the rain"
+      ],
+      "form": "any"
+     },
+     "solution": "إذا لم تمطر = if it does not rain, so rain would stop the trip",
+     "hint": "تمطر comes from مطر, a kind of weather"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "«أشاهد المسلسلات على الإنترنت بدلًا من التلفاز.» Instead of what does the speaker watch series online? Answer in English.",
+     "short": {
+      "accept": [
+       "television",
+       "TV",
+       "the TV",
+       "the television",
+       "telly",
+       "the telly"
+      ],
+      "form": "any"
+     },
+     "solution": "بدلًا من التلفاز = instead of the television",
+     "hint": "بدلًا من means 'instead of'"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "«في الصيف أذهب إلى الشاطئ مع عائلتي، أما في الشتاء فأبقى في البيت وأقرأ.» What does the speaker do in winter?",
+     "choice": {
+      "options": [
+       "Goes to the beach",
+       "Travels with family",
+       "Plays football outside",
+       "Stays at home and reads"
+      ],
+      "correct": 3
+     },
+     "solution": "في الشتاء = in winter; أبقى في البيت وأقرأ = I stay at home and read",
+     "hint": "Find في الشتاء (in winter) and read what follows"
+    }
+   ]
+  },
+  {
+   "id": "arabic.world",
+   "title": "Travel & the world",
+   "aliases": [
+    "arabic holidays",
+    "holidays",
+    "travel",
+    "town",
+    "local area",
+    "home",
+    "environment",
+    "global issues",
+    "weather",
+    "directions",
+    "transport",
+    "shopping"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What does «سيارة» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "car",
+       "bus",
+       "train",
+       "plane"
+      ],
+      "correct": 0
+     },
+     "solution": "سيارة = car; حافلة = bus; قطار = train; طائرة = plane",
+     "hint": "You drive it on the road"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "What does «بحر» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "desert",
+       "sea",
+       "river",
+       "mountain"
+      ],
+      "correct": 1
+     },
+     "solution": "بحر = sea; نهر = river; جبل = mountain; صحراء = desert",
+     "hint": "Bahrain's name means 'two seas'"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "What does «بيت» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "house",
+       "home"
+      ],
+      "form": "any"
+     },
+     "solution": "بيت = house, home",
+     "hint": "This is where a family lives"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "Which Arabic word means 'market'?",
+     "choice": {
+      "options": [
+       "مطار",
+       "فندق",
+       "سوق",
+       "مسجد"
+      ],
+      "correct": 2
+     },
+     "solution": "سوق = market; مسجد = mosque; مطار = airport; فندق = hotel",
+     "hint": "Think of the English word 'souk'"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "What does «حار» mean when talking about the weather?",
+     "choice": {
+      "options": [
+       "cold",
+       "rainy",
+       "windy",
+       "hot"
+      ],
+      "correct": 3
+     },
+     "solution": "حار = hot; بارد = cold",
+     "hint": "Its opposite is بارد"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "What does «مطار» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "airport"
+      ],
+      "form": "any"
+     },
+     "solution": "مطار = airport (from طار, to fly)",
+     "hint": "It comes from the verb طار, to fly"
+    },
+    {
+     "id": "w07",
+     "level": 2,
+     "text": "Which Arabic word means 'hotel'?",
+     "choice": {
+      "options": [
+       "فندق",
+       "مطعم",
+       "متحف",
+       "مصرف"
+      ],
+      "correct": 0
+     },
+     "solution": "فندق = hotel; مطعم = restaurant; متحف = museum; مصرف = bank",
+     "hint": "You sleep there on holiday"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "What does «يمين» mean when giving directions?",
+     "choice": {
+      "options": [
+       "behind",
+       "right",
+       "left",
+       "straight on"
+      ],
+      "correct": 1
+     },
+     "solution": "يمين = right; يسار = left",
+     "hint": "Its opposite is يسار"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "What does «يسار» mean when giving directions? Answer in English.",
+     "short": {
+      "accept": [
+       "left",
+       "the left",
+       "on the left",
+       "to the left"
+      ],
+      "reject": [
+       "right"
+      ],
+      "form": "any",
+      "feedback": {
+       "right": "يمين means 'right'"
+      }
+     },
+     "solution": "يسار = left; يمين = right",
+     "hint": "يمين means 'right'; this word is its opposite"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "Which Arabic word means 'train'?",
+     "choice": {
+      "options": [
+       "سفينة",
+       "دراجة",
+       "قطار",
+       "طائرة"
+      ],
+      "correct": 2
+     },
+     "solution": "قطار = train; طائرة = plane; سفينة = ship; دراجة = bicycle",
+     "hint": "It travels on rails"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "What does «مدينة» mean? Answer in English.",
+     "short": {
+      "accept": [
+       "city",
+       "town"
+      ],
+      "form": "any"
+     },
+     "solution": "مدينة = city, town (e.g. المدينة المنورة, the city of Medina)",
+     "hint": "Medina, in Saudi Arabia, takes its name from this word"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "What does «شمس» mean? Choose the correct translation.",
+     "choice": {
+      "options": [
+       "moon",
+       "star",
+       "cloud",
+       "sun"
+      ],
+      "correct": 3
+     },
+     "solution": "شمس = sun; قمر = moon; نجمة = star; غيمة = cloud",
+     "hint": "It shines in the day"
+    },
+    {
+     "id": "w13",
+     "level": 3,
+     "text": "«سافرت إلى مصر بالطائرة.» How did the speaker travel to Egypt?",
+     "choice": {
+      "options": [
+       "by plane",
+       "by boat",
+       "by car",
+       "by train"
+      ],
+      "correct": 0
+     },
+     "solution": "بالطائرة = by plane",
+     "hint": "طائرة comes from the root ط ي ر, to fly"
+    },
+    {
+     "id": "w14",
+     "level": 3,
+     "text": "«الجو بارد وممطر اليوم.» What is the weather like today?",
+     "choice": {
+      "options": [
+       "hot and rainy",
+       "cold and rainy",
+       "hot and sunny",
+       "cold and windy"
+      ],
+      "correct": 1
+     },
+     "solution": "بارد = cold; ممطر = rainy",
+     "hint": "ممطر comes from مطر (rain)"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "«أسكن في شقة صغيرة.» What kind of home does the speaker live in? Answer in English.",
+     "short": {
+      "accept": [
+       "a small flat",
+       "small flat",
+       "a small apartment",
+       "small apartment",
+       "flat",
+       "apartment"
+      ],
+      "form": "any"
+     },
+     "solution": "شقة = flat, apartment; صغيرة = small",
+     "hint": "شقة is a home inside a larger building"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "«المكتبة بجانب المسجد.» Where is the library?",
+     "choice": {
+      "options": [
+       "behind the mosque",
+       "far from the mosque",
+       "beside the mosque",
+       "opposite the mosque"
+      ],
+      "correct": 2
+     },
+     "solution": "بجانب = beside, next to",
+     "hint": "جانب means 'side'"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "«اشتريت قميصًا جديدًا من السوق.» What did the speaker buy? Answer in English.",
+     "short": {
+      "accept": [
+       "a new shirt",
+       "new shirt",
+       "a shirt",
+       "shirt"
+      ],
+      "form": "any"
+     },
+     "solution": "قميصًا جديدًا = a new shirt",
+     "hint": "قميص is a piece of clothing; جديد means 'new'"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "«في العطلة نذهب إلى الجبال.» Where do they go on holiday?",
+     "choice": {
+      "options": [
+       "to the beach",
+       "to the desert",
+       "to the city",
+       "to the mountains"
+      ],
+      "correct": 3
+     },
+     "solution": "الجبال is the plural of جبل (mountain)",
+     "hint": "جبل means 'mountain'"
+    },
+    {
+     "id": "w19",
+     "level": 4,
+     "text": "«خذ الشارع الثاني على اليسار، ثم امشِ إلى الأمام.» What should you do first?",
+     "choice": {
+      "options": [
+       "Take the second street on the left",
+       "Take the first street on the right",
+       "Go straight on",
+       "Take the second street on the right"
+      ],
+      "correct": 0
+     },
+     "solution": "الشارع الثاني على اليسار = the second street on the left; ثم = then",
+     "hint": "ثم means 'then', so the first instruction comes before it"
+    },
+    {
+     "id": "w20",
+     "level": 4,
+     "text": "«مدينتي جميلة، لكن فيها تلوث كثير بسبب السيارات.» What is the problem in the speaker's town?",
+     "choice": {
+      "options": [
+       "Very hot weather",
+       "A lot of pollution from cars",
+       "Too many tourists",
+       "No public transport"
+      ],
+      "correct": 1
+     },
+     "solution": "تلوث كثير = a lot of pollution; بسبب السيارات = because of the cars",
+     "hint": "The problem comes after لكن (but)"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "«قضينا أسبوعًا في فندق قرب البحر.» How long did they stay? Answer in English.",
+     "short": {
+      "accept": [
+       "a week",
+       "one week",
+       "1 week"
+      ],
+      "form": "any"
+     },
+     "solution": "أسبوعًا = a week",
+     "hint": "أسبوع is seven days"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "«يجب علينا أن نحافظ على البيئة وأن نعيد تدوير البلاستيك.» What does the speaker say we must do?",
+     "choice": {
+      "options": [
+       "Travel more by plane",
+       "Build more factories",
+       "Protect the environment and recycle plastic",
+       "Use more plastic"
+      ],
+      "correct": 2
+     },
+     "solution": "نحافظ على البيئة = protect the environment; نعيد تدوير البلاستيك = recycle plastic",
+     "hint": "البيئة means 'the environment'"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "«المتحف مغلق يوم الجمعة.» On which day is the museum closed? Answer in English.",
+     "short": {
+      "accept": [
+       "Friday",
+       "on Friday",
+       "Fridays",
+       "on Fridays"
+      ],
+      "form": "any"
+     },
+     "solution": "يوم الجمعة = Friday",
+     "hint": "الجمعة is the day of the main weekly prayer for Muslims"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "«ذهبنا إلى السوق واشترينا فواكه وخضروات.» What did they buy?",
+     "choice": {
+      "options": [
+       "meat and fish",
+       "clothes and shoes",
+       "bread and cheese",
+       "fruit and vegetables"
+      ],
+      "correct": 3
+     },
+     "solution": "فواكه = fruit; خضروات = vegetables",
+     "hint": "خضروات comes from أخضر (green)"
+    },
+    {
+     "id": "w25",
+     "level": 5,
+     "text": "«أفضّل السفر بالقطار لأنه أرخص من الطائرة، رغم أنه أبطأ.» Which statement is accurate?",
+     "choice": {
+      "options": [
+       "The train is cheaper but slower than the plane",
+       "The train is faster and cheaper",
+       "The plane is cheaper than the train",
+       "The speaker prefers flying"
+      ],
+      "correct": 0
+     },
+     "solution": "أرخص = cheaper; أبطأ = slower; رغم أن = although",
+     "hint": "أرخص and أبطأ are comparatives (cheaper, slower)"
+    },
+    {
+     "id": "w26",
+     "level": 5,
+     "text": "«يعاني كثير من الناس في العالم من الفقر ونقص المياه.» Which global issues are mentioned?",
+     "choice": {
+      "options": [
+       "unemployment and crime",
+       "poverty and water shortage",
+       "war and disease",
+       "pollution and floods"
+      ],
+      "correct": 1
+     },
+     "solution": "الفقر = poverty; نقص المياه = lack of water",
+     "hint": "نقص means 'shortage' and المياه means 'water'"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "«لو كان عندي مال، لسافرت حول العالم.» What does this sentence mean?",
+     "choice": {
+      "options": [
+       "I travelled around the world with my money",
+       "I will never travel around the world",
+       "If I had money, I would travel around the world",
+       "I have money, so I travel around the world"
+      ],
+      "correct": 2
+     },
+     "solution": "لو + past … لـ + past describes an imagined situation: if I had money, I would travel",
+     "hint": "لو introduces something that is not real"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "«كانت الرحلة طويلة ومتعبة، لكن الفندق كان رائعًا.» What was good about the holiday? Answer in English.",
+     "short": {
+      "accept": [
+       "the hotel",
+       "hotel",
+       "the hotel was great",
+       "the hotel was wonderful",
+       "the hotel was amazing",
+       "the hotel was fantastic",
+       "the hotel was excellent",
+       "the hotel was brilliant"
+      ],
+      "form": "any"
+     },
+     "solution": "لكن الفندق كان رائعًا = but the hotel was wonderful; the journey was long and tiring",
+     "hint": "The positive part comes after لكن (but)"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "«الطقس في الصحراء حار جدًا في النهار وبارد في الليل.» What is the desert like at night? Answer in English.",
+     "short": {
+      "accept": [
+       "cold",
+       "cold at night",
+       "chilly"
+      ],
+      "reject": [
+       "hot",
+       "very hot"
+      ],
+      "form": "any",
+      "feedback": {
+       "hot": "حار جدًا describes the daytime"
+      }
+     },
+     "solution": "بارد في الليل = cold at night; حار جدًا في النهار = very hot in the day",
+     "hint": "في الليل means 'at night'; read the adjective just before it"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "«نحتاج إلى مزيد من الحافلات في مدينتنا لتقليل الزحام.» Why does the town need more buses?",
+     "choice": {
+      "options": [
+       "To make more money",
+       "To replace the trains",
+       "To carry more tourists",
+       "To reduce traffic congestion"
+      ],
+      "correct": 3
+     },
+     "solution": "لتقليل الزحام = to reduce congestion",
+     "hint": "لـ before a noun like تقليل can mean 'in order to'"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "arabic.y{year}.grammar",
+      "label": "Grammar & tenses",
+      "skills": [
+       "arabic.grammar"
+      ]
+     },
+     {
+      "id": "arabic.y{year}.people",
+      "label": "People & lifestyle",
+      "skills": [
+       "arabic.people"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "arabic.y{year}.culture",
+      "label": "Free time & culture",
+      "skills": [
+       "arabic.culture"
+      ]
+     },
+     {
+      "id": "arabic.y{year}.world",
+      "label": "Travel & the world",
+      "skills": [
+       "arabic.world"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

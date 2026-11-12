@@ -15,8 +15,13 @@ from decimal import Decimal, InvalidOperation
 from fractions import Fraction
 from typing import Iterator, Sequence
 
-from .base import Answer, Mistake
+from .base import CHOICE_LETTERS, SHORT_FORMS, Answer, Mistake
 from . import mathexpr
+from . import words
+
+NOTE_SPELLING = "Watch the spelling: {answer}"
+NOTE_ACCENTS = "Watch the accents: {answer}"
+FORM_CASE = "Check your capital letters — in symbols and formulae they change the meaning"
 
 FORM_STANDARD = "That's the right value, but it needs to be in standard form (a × 10^n, with 1 ≤ a < 10)"
 FORM_FACTORISED = "That's equivalent, but the question asks you to factorise — write it as brackets multiplied together"
@@ -34,7 +39,8 @@ ZERO_TOL = 1e-12        # ... and |v| <= ZERO_TOL when the exact answer is 0
 @dataclass(frozen=True)
 class Verdict:
     status: str          # "correct" | "wrong" | "unparsed" | "unmarkable"
-    feedback: str = ""   # for "wrong": form-violation text or matched Mistake.feedback; "" otherwise
+    feedback: str = ""   # "wrong": form-violation text or matched Mistake.feedback;
+                         # "correct" (short answers only): NOTE_SPELLING / NOTE_ACCENTS; "" otherwise
 
 
 _CORRECT = Verdict("correct")
@@ -837,6 +843,386 @@ def _check_ratio(a: Answer, text: str) -> Verdict:
     return _CORRECT
 
 
+# ------------------------------------------- word answers: line preparation
+# docs/ARCHITECTURE_V2.md section 2.3 ("shared answer-line preparation")
+
+_REASON_LINE = re.compile(
+    r"^\W*(?:(?:because|since|coz|cuz|this\s+is\s+because|that'?s\s+because)\b|as\s+\S)", re.IGNORECASE)
+_CHECK_LINE_TEXT = re.compile(r"^\W*(?:check(?:ing)?|verify(?:ing)?)\b", re.IGNORECASE)
+# "sub" / "substitute" count as check words only on a line with a digit or "=" (maths working):
+# "substitute goods", "sub-Saharan Africa" are answers, not checks.
+_SUB_LINE = re.compile(r"^\W*(?:sub|substitut\w*)\b", re.IGNORECASE)
+_WORD_CUT = re.compile(r"[,;:]?\s*\(?\b(?:because|coz|cuz|since|check(?:ing)?)\b", re.IGNORECASE)
+_BULLET = re.compile(r"^(?:[•·*>]+|-(?=\s))\s*")
+_FIRST_WORD = re.compile(r"\W*(\w+)")
+_QUESTION_WORDS = frozenset("what why how can could explain tell which who where when does do".split())
+
+_FILLER_COMMON = (
+    "answer:", "answer -", "answer", "ans:", "final answer", "my answer is", "the answer is", "answer is",
+    "i think it's", "i think its", "i think it is", "i think it was", "i think", "i believe", "i guess",
+    "i'd say", "i would say", "it's called", "its called", "it is called", "this is called", "the word is",
+    "the term is", "known as", "it's", "its", "it is", "it was", "is it", "it must be", "must be",
+    "probably", "maybe", "definitely", "actually",
+)
+_FILLER_CHOICE = ("option", "letter", "i choose", "i pick", "i'll go with", "going with")
+
+
+def _filler_regexes(phrases: Sequence[str]) -> tuple[re.Pattern, ...]:
+    out = []
+    for ph in sorted(set(phrases), key=len, reverse=True):
+        body = r"\s+".join(re.escape(w) for w in ph.split())
+        if ph.endswith("-"):
+            tail = r"(?=\s)"
+        elif ph[-1].isalnum():
+            tail = r"(?![\w'])"
+        else:
+            tail = ""
+        out.append(re.compile(r"^" + body + tail + r"\s*(?:[:=]\s*|-\s+)?", re.IGNORECASE))
+    return tuple(out)
+
+
+_FILLER_RX = {False: _filler_regexes(_FILLER_COMMON), True: _filler_regexes(_FILLER_COMMON + _FILLER_CHOICE)}
+_WRAP = {'"': '"', "'": "'", "(": ")", "[": "]", "{": "}", "«": "»"}
+
+
+def _strip_fillers(s: str, choice: bool) -> str:
+    """Strip leading filler phrases, longest first, never down to nothing."""
+    rxs = _FILLER_RX[choice]
+    changed = True
+    while changed and s:
+        changed = False
+        for rx in rxs:
+            m = rx.match(s)
+            if m and m.end() and words.has_alnum(s[m.end():]):
+                s = s[m.end():].strip()
+                changed = True
+                break
+    return s
+
+
+def _unwrap(s: str) -> str:
+    if len(s) >= 2 and s[0] in _WRAP and s[-1] == _WRAP[s[0]]:
+        inner = s[1:-1]
+        o, c = s[0], _WRAP[s[0]]
+        if o not in inner and c not in inner:
+            return inner.strip()
+    return s
+
+
+def _clean_text_line(s: str, choice: bool) -> str:
+    s = _BULLET.sub("", s.strip())
+    for _ in range(4):
+        prev = s
+        s = _strip_fillers(s, choice)
+        s = _strip_junk(s)
+        s = _unwrap(s)
+        if s == prev:
+            break
+    return s
+
+
+@dataclass(frozen=True)
+class _TLine:
+    raw: str          # normalised line before cleaning
+    full: str         # cleaned, nothing cut
+    cut: str          # cleaned, reasons / checks after the answer cut off
+    ignored: bool     # the line starts with a reason or check word
+    question: bool    # ends with "?" or starts with a question word
+
+
+def _prep_str(s: str) -> str:
+    return words.char_normalise(_normalise(s))
+
+
+@functools.lru_cache(maxsize=1024)
+def _text_lines(text: str, choice: bool) -> tuple[_TLine, ...]:
+    text = _prep_str(text[:MAX_TEXT])
+    out: list[_TLine] = []
+    for raw in text.splitlines():
+        raw = raw.strip()
+        if not raw:
+            continue
+        ignored = bool(_REASON_LINE.match(raw) or _CHECK_LINE_TEXT.match(raw)
+                       or (_SUB_LINE.match(raw) and re.search(r"[\d=]", raw)))
+        full = _clean_text_line(raw, choice)
+        cut = full
+        m = _WORD_CUT.search(raw)
+        if m and m.start() > 0 and words.has_alnum(raw[:m.start()]):
+            cut = _clean_text_line(raw[:m.start()], choice)
+        fw = _FIRST_WORD.match(raw)
+        question = raw.endswith("?") or bool(fw and fw.group(1).lower() in _QUESTION_WORDS)
+        out.append(_TLine(raw, full, cut, ignored, question))
+    return tuple(out)
+
+
+# ----------------------------------------------------------- kind: choice
+
+_CH_A = re.compile(r"^\(?([A-Ea-e])\)?[.:]?$")
+_CH_B = re.compile(r"^([A-Ea-e])\s*([).:\-–])\s*(.+)$", re.DOTALL)
+_CH_B2 = re.compile(r"^([A-Ea-e])\s+(.+)$", re.DOTALL)
+
+
+def _wkey(s: str) -> str:
+    """Comparison key of a choice option or line: ``any`` normalisation, then folded."""
+    return words.fold(words.norm_any(s))
+
+
+@functools.lru_cache(maxsize=8192)
+def _choice_keys(options: tuple[str, ...]) -> tuple[frozenset, ...]:
+    """Per option: its key, plus the key of the option cleaned like a student's line."""
+    out = []
+    for opt in options:
+        ks = {_wkey(opt), _wkey(_clean_text_line(_prep_str(opt), True))}
+        ks.discard("")
+        out.append(frozenset(ks))
+    return tuple(out)
+
+
+def _option_hits(s: str, keys: tuple[frozenset, ...]) -> list[int]:
+    k = _wkey(s)
+    return [i for i, ks in enumerate(keys) if k and k in ks] if k else []
+
+
+def _choice_line(ln: _TLine, keys: tuple[frozenset, ...], n: int):
+    """What one line names: a letter index, "conflict", "invalid" or None."""
+    def whole() -> int | None:
+        hits = _option_hits(ln.full, keys)
+        if len(hits) != 1 and ln.cut != ln.full:
+            hits = _option_hits(ln.cut, keys)
+        return hits[0] if len(hits) == 1 else None
+
+    if ln.ignored:
+        return whole()          # a line that is exactly an option ("Because of the war") still counts
+    s = ln.cut
+    if not s:
+        return None
+    m = _CH_A.match(s)
+    if m:
+        i = CHOICE_LETTERS.index(m.group(1).upper())
+        return i if i < n else "invalid"
+    m = _CH_B.match(s)
+    if m:
+        i = CHOICE_LETTERS.index(m.group(1).upper())
+        hits = _option_hits(m.group(3), keys)
+        if i < n and i in hits:
+            return i
+        if hits:
+            return "conflict"
+        w = whole()             # the line is itself an option ("D-Day", "e-commerce")
+        if w is not None:
+            return w
+        return i if i < n else "invalid"
+    m = _CH_B2.match(s)
+    if m:
+        i = CHOICE_LETTERS.index(m.group(1).upper())
+        if i < n and i in _option_hits(m.group(2), keys):
+            return i
+    return whole()
+
+
+def _choice_value(a: Answer) -> tuple[tuple[str, ...], int] | None:
+    v = a.value
+    if not isinstance(v, dict):
+        return None
+    options, correct = v.get("options"), v.get("correct")
+    if (not isinstance(options, (list, tuple)) or not 2 <= len(options) <= len(CHOICE_LETTERS)
+            or any(not isinstance(o, str) for o in options)):
+        return None
+    if isinstance(correct, bool) or not isinstance(correct, int) or not 0 <= correct < len(options):
+        return None
+    return tuple(options), correct
+
+
+def _check_choice(a: Answer, text: str) -> Verdict:
+    cv = _choice_value(a)
+    if cv is None:
+        return _UNMARKABLE
+    options, correct = cv
+    keys = _choice_keys(options)
+    named: set[int] = set()
+    for ln in reversed(_text_lines(text, True)):
+        r = _choice_line(ln, keys, len(options))
+        if r is None:
+            continue
+        if isinstance(r, str):          # "conflict" / "invalid"
+            return _UNPARSED
+        named.add(r)
+    if len(named) != 1:
+        return _UNPARSED
+    return _CORRECT if named.pop() == correct else _WRONG
+
+
+# ------------------------------------------------------------ kind: short
+
+FILLER_WORDS = frozenset(
+    "the a an it its is was are were be called named known as this that process word term answer i think "
+    "believe guess would say they of my final probably maybe definitely type kind example".split())
+_DIGITS = re.compile(r"[0-9]+")
+# §2.3 step 2 "digit tokens": digit runs not glued to a letter ("in 1918", "1914-1918"; not "qq1918qq")
+_DIGIT_TOKENS = re.compile(r"(?<![^\W\d_])[0-9]+(?![^\W\d_])")
+
+
+@dataclass(frozen=True)
+class _ShortInfo:
+    form: str
+    accepts: tuple[str, ...]                 # as written
+    a_set: frozenset                         # normalised accepts (plus their cleaned variants)
+    a_spaced: tuple[str, ...]                # spaced copies (any / strict)
+    a_fold: dict                             # folded accept -> index (any / strict)
+    a_case: frozenset                        # casefolded accepts (case)
+    r_set: frozenset                         # normalised rejects
+    r_fold: frozenset                        # folded rejects (any / strict)
+    r_list: tuple[str, ...]
+    numeric: bool
+    max_words: int
+    eligible: tuple[tuple[int, str], ...]    # typo-eligible accepts (index, key), form any
+
+
+def short_typo_eligible(key: str) -> bool:
+    """§2.3 step 6: a normalised accept made of letters and spaces, >= 6 chars, <= 3 words."""
+    return words.is_letters_spaces(key) and len(key) >= 6 and len(key.split()) <= 3
+
+
+@functools.lru_cache(maxsize=8192)
+def _short_info(accept: tuple[str, ...], reject: tuple[str, ...], form: str) -> _ShortInfo:
+    folding = form in ("any", "strict")
+    a_set: set[str] = set()
+    a_spaced: list[str] = []
+    a_fold: dict[str, int] = {}
+    keys: list[str] = []
+    max_words = 1
+    for i, acc in enumerate(accept):
+        key, spaced = words.norm_form(acc, form)
+        keys.append(key)
+        a_set.add(key)
+        cleaned = words.norm_form(_clean_text_line(_prep_str(acc), False), form)[0]
+        if cleaned:
+            a_set.add(cleaned)
+        a_spaced.append(spaced)
+        max_words = max(max_words, len(spaced.split()))
+        if folding:
+            for f in (words.fold(key), words.fold_german(key)):
+                a_fold.setdefault(f, i)
+    a_set.discard("")
+    r_list = tuple(k for k in (words.norm_form(r, form)[0] for r in reject) if k)
+    r_fold = frozenset(f for r in r_list for f in (words.fold(r), words.fold_german(r))) if folding else frozenset()
+    numeric = bool(keys) and all(_DIGITS.fullmatch(k) for k in keys)
+    eligible = tuple((i, k) for i, k in enumerate(keys) if form == "any" and short_typo_eligible(k))
+    return _ShortInfo(
+        form=form, accepts=accept, a_set=frozenset(a_set), a_spaced=tuple(a_spaced), a_fold=a_fold,
+        a_case=frozenset(k.casefold() for k in keys) if form == "case" else frozenset(),
+        r_set=frozenset(r_list), r_fold=r_fold, r_list=r_list, numeric=numeric, max_words=max_words,
+        eligible=eligible)
+
+
+def _short_value(a: Answer) -> _ShortInfo | None:
+    v = a.value
+    if not isinstance(v, dict) or a.form not in SHORT_FORMS:
+        return None
+    accept, reject = v.get("accept"), v.get("reject", [])
+    if (not isinstance(accept, (list, tuple)) or not accept or any(not isinstance(x, str) for x in accept)
+            or not isinstance(reject, (list, tuple)) or any(not isinstance(x, str) for x in reject)):
+        return None
+    return _short_info(tuple(accept), tuple(reject), a.form)
+
+
+def _contained(tw: list[str], accepts: Sequence[str], folded: bool) -> tuple[bool, int | None]:
+    """(an accept of >= 3 chars occurs as whole words, index of one whose other words are all filler)."""
+    found = False
+    for idx, acc in enumerate(accepts):
+        if len(acc) < 3:
+            continue
+        variants = (acc,) if not folded else (words.fold(acc), words.fold_german(acc))
+        for var in variants:
+            aw = var.split()
+            k = len(aw)
+            if not k:
+                continue
+            for i in range(len(tw) - k + 1):
+                if tw[i:i + k] == aw:
+                    found = True
+                    if all(w in FILLER_WORDS for w in tw[:i] + tw[i + k:]):
+                        return True, idx
+    return found, None
+
+
+def _check_short(a: Answer, text: str) -> Verdict:
+    info = _short_value(a)
+    if info is None:
+        return _UNMARKABLE
+    form = info.form
+    chosen: tuple[str, _TLine] | None = None
+    for ln in reversed(_text_lines(text, False)):
+        if ln.ignored:
+            k = words.norm_form(ln.full, form)[0]
+            if k and (k in info.a_set or k in info.r_set):
+                chosen = (ln.full, ln)          # "Since 1945" as an accepted answer
+                break
+            continue
+        if words.has_alnum(ln.cut):
+            chosen = (ln.cut, ln)
+            break
+    if chosen is None:
+        return _UNPARSED
+    s, ln = chosen
+    t, spaced = words.norm_form(s, form)
+    if not t:
+        return _UNPARSED
+    t_full = words.norm_form(ln.full, form)[0] if ln.full != s else t
+
+    if info.numeric:
+        tokens = _DIGIT_TOKENS.findall(t)
+        if tokens:
+            hit = any(x in info.a_set for x in tokens)
+            others = [x for x in tokens if x not in info.a_set]
+            if hit and not any(len(x) >= 3 for x in others):
+                return _CORRECT
+            return _WRONG
+    else:
+        if t in info.a_set or t_full in info.a_set:
+            return _CORRECT
+        if t in info.r_set or t_full in info.r_set:
+            return _WRONG
+        if form in ("any", "strict"):
+            ft = words.fold(t)
+            idx = info.a_fold.get(ft)
+            if idx is not None:
+                return Verdict("correct", NOTE_ACCENTS.format(answer=info.accepts[idx]))
+            if ft in info.r_fold:
+                return _WRONG
+        elif form == "case" and t.casefold() in info.a_case:
+            return Verdict("wrong", FORM_CASE)
+        if form == "any" and info.eligible and words.is_letters_spaces(t):
+            best: tuple[int, int] | None = None
+            for idx, ak in info.eligible:
+                if t[0] != ak[0]:
+                    continue
+                lim = 2 if len(ak) >= 10 else 1
+                d = words.osa(t, ak, lim)
+                if d > lim or (best is not None and d >= best[0]):
+                    continue
+                if any(words.osa(t, r, d) <= d for r in info.r_list):
+                    continue
+                best = (d, idx)
+            if best is not None:
+                return Verdict("correct", NOTE_SPELLING.format(answer=info.accepts[best[1]]))
+        if form in ("any", "strict"):
+            found, hit = _contained(spaced.split(), info.a_spaced, False)
+            if hit is not None:
+                return _CORRECT
+            if not found:
+                found, hit = _contained(words.fold(spaced).split(), info.a_spaced, True)
+                if hit is not None:
+                    return Verdict("correct", NOTE_ACCENTS.format(answer=info.accepts[hit]))
+            if found:
+                return _UNPARSED
+    if ln.question:
+        return _UNPARSED
+    if len(spaced.split()) > max(6, 2 * info.max_words):
+        return _UNPARSED
+    return _WRONG
+
+
 # -------------------------------------------------------------- dispatcher
 
 _KINDS = {
@@ -846,6 +1232,8 @@ _KINDS = {
     "assign": _check_assign,
     "expr": _check_expr,
     "ratio": _check_ratio,
+    "choice": _check_choice,
+    "short": _check_short,
 }
 
 

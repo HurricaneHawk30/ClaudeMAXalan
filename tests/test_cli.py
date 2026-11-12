@@ -153,5 +153,92 @@ class TestSample(CliCase):
         self.assertIn("physics.ohms_law", r.stderr)
 
 
+class TestAudit(CliCase):
+    FX = helpers.FIXTURES
+    LINE = re.compile(r"^(?P<id>[a-z_0-9.]+): (?P<kind>bank|gen) items=(?P<n>\d+) L1-5=(?P<a>\d+)/(?P<b>\d+)/(?P<c>\d+)/(?P<d>\d+)/(?P<e>\d+) "
+                      r"choice=(?P<x>\d+)% short=(?P<y>\d+)% rubric=(?P<z>\d+)%$")
+
+    def test_valid_bank_fixture_exits_0_and_prints_one_line_per_skill(self):
+        r = self.run_cli("audit", "--file", os.path.join(self.FX, "bank_v2_sample.json"))
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        lines = [l for l in r.stdout.splitlines() if self.LINE.match(l)]
+        self.assertEqual([self.LINE.match(l).group("id") for l in lines], ["v2sample.mixed", "v2sample.levels"], r.stdout)
+        self.assertIn("v2sample.mixed: bank items=5 L1-5=1/1/1/1/1 choice=20% short=40% rubric=20%", r.stdout)
+        self.assertIn("v2sample.levels: bank items=6 L1-5=3/0/2/0/1 choice=0% short=100% rubric=0%", r.stdout)
+        self.assertNotIn("ERROR", r.stdout)
+
+    def test_valid_pack_fixture_exits_0(self):
+        r = self.run_cli("audit", "--file", os.path.join(self.FX, "pack_sample.json"))
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("packsub.facts: bank items=2 L1-5=1/1/0/0/0 choice=50% short=50% rubric=0%", r.stdout)
+
+    def test_invalid_fixtures_exit_1_with_error_lines(self):
+        d = os.path.join(self.FX, "bank_v2_invalid")
+        for name in ("two_options", "unknown_key", "hint_leaks", "duplicate_id", "choice_via_answer_key"):
+            with self.subTest(case=name):
+                r = self.run_cli("audit", "--file", os.path.join(d, name + ".json"))
+                self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+                self.assertIn("ERROR", r.stdout)
+
+    def test_control_fixture_is_clean(self):
+        r = self.run_cli("audit", "--file", os.path.join(self.FX, "bank_v2_invalid", "_control_valid.json"))
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+    def test_missing_file_is_not_a_success(self):
+        r = self.run_cli("audit", "--file", os.path.join(self.tmp.name, "nope.json"))
+        self.assertNotEqual(r.returncode, 0)
+
+    def test_audit_one_subject(self):
+        r = self.run_cli("audit", "--subject", "maths")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        ids = [self.LINE.match(l).group("id") for l in r.stdout.splitlines() if self.LINE.match(l)]
+        self.assertEqual(len(ids), 20)
+        self.assertTrue(all(i.startswith("maths.") for i in ids))
+        self.assertTrue(all(self.LINE.match(l).group("kind") == "gen" for l in r.stdout.splitlines() if self.LINE.match(l)))
+
+    def test_audit_one_bank_subject_has_no_errors(self):
+        r = self.run_cli("audit", "--subject", "english_literature")
+        self.assertEqual(r.returncode, 0, "[content-2a English] " + r.stdout[-2000:] + r.stderr)
+        ids = [self.LINE.match(l).group("id") for l in r.stdout.splitlines() if self.LINE.match(l)]
+        for want in ("english_literature.macbeth", "english_literature.christmas_carol",
+                     "english_literature.inspector_calls", "english_literature.conflict_poetry"):
+            self.assertIn(want, ids)
+
+    def test_audit_unknown_subject_fails(self):
+        r = self.run_cli("audit", "--subject", "klingon")
+        self.assertNotEqual(r.returncode, 0)
+
+    def test_full_audit_has_no_errors(self):
+        r = self.run_cli("audit")
+        errors = [l for l in r.stdout.splitlines() if "ERROR" in l]
+        self.assertEqual((r.returncode, errors[:8]), (0, []), r.stdout[-1500:] + r.stderr[-500:])
+
+
+class TestSampleBank(CliCase):
+    def test_sample_a_bank_skill_prints_options_answer_and_ref(self):
+        r = self.run_cli("sample", "english_language.techniques", "3", "8")
+        self.assertEqual(r.returncode, 0, "[content-2a English] " + r.stderr)
+        self.assertIn("A)", r.stdout)
+        self.assertIn("B)", r.stdout)
+        self.assertIn("english_language.techniques#", r.stdout)
+
+    def test_sample_bank_is_deterministic(self):
+        a = self.run_cli("sample", "history.germany", "1", "2")
+        b = self.run_cli("sample", "history.germany", "1", "2")
+        self.assertEqual(a.returncode, 0, "[content-3 Humanities] " + a.stderr)
+        self.assertEqual(a.stdout, b.stdout)
+        self.assertTrue(a.stdout.strip())
+
+    def test_sample_generator_still_works(self):
+        r = self.run_cli("sample", "further_maths.matrices", "4", "2")
+        self.assertEqual(r.returncode, 0, "[content-1 STEM] " + r.stderr)
+        self.assertIn("A)", r.stdout)                  # level 4 is a choice item (section 5.1)
+
+    def test_unknown_skill_lists_new_ids(self):
+        r = self.run_cli("sample", "history.nope")
+        self.assertEqual(r.returncode, 2)
+        self.assertIn("history.germany", r.stderr)
+
+
 if __name__ == "__main__":
     unittest.main()

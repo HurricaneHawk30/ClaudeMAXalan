@@ -4,7 +4,7 @@ import helpers
 from helpers import (S, snap, send, make_engine, get_codes, verify, to_topic, answer_of, FakeLLM, FLAG_ALERT,
                      DISTRESS, CHEAT, DELETED, CODE_REQUEST, CODE_OK, TOPIC_KB_MATHS_11, SUBJECT_KB_11, YEAR_KB,
                      CHANGE_YEAR, PROBLEM)
-from tutor.intents import is_distress, is_cheat_request
+from tutor.intents import is_distress, is_cheat_request, intent
 
 OWNER = 999
 
@@ -66,6 +66,24 @@ class TestIntentsDistress(unittest.TestCase):
         for t in NOT_CHEATS:
             with self.subTest(text=t):
                 self.assertFalse(is_cheat_request(t), t)
+
+
+class TestV2SkipPhrases(unittest.TestCase):
+    def test_new_exact_skip_phrases(self):
+        for t in ("no clue", "not sure", "im not sure", "i'm not sure", "unsure", "No clue", "NOT SURE", "Unsure!",
+                  "  not sure  ", "I'm not sure."):
+            with self.subTest(text=t):
+                self.assertEqual(intent(t), "skip")
+
+    def test_exact_means_exact(self):
+        for t in ("not sure what photosynthesis is", "I'm not sure what a ribosome is", "no clue what that means",
+                  "unsure about B", "not sure 12"):
+            with self.subTest(text=t):
+                self.assertIsNone(intent(t))
+
+    def test_old_skip_phrases_still_work(self):
+        for t in ("skip", "idk", "i don't know", "no idea", "dunno", "pass", "next", "give up"):
+            self.assertEqual(intent(t), "skip", t)
 
 
 class SafetyCase(unittest.TestCase):

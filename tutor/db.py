@@ -43,7 +43,14 @@ CREATE TABLE IF NOT EXISTS flags (
   text TEXT NOT NULL, ts REAL NOT NULL, reviewed INTEGER NOT NULL DEFAULT 0);
 CREATE TABLE IF NOT EXISTS llm_usage (
   chat_id INTEGER NOT NULL, day TEXT NOT NULL, calls INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (chat_id, day));
+CREATE TABLE IF NOT EXISTS seen (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, chat_id INTEGER NOT NULL, skill TEXT NOT NULL, fp TEXT NOT NULL,
+  UNIQUE (chat_id, skill, fp));
+CREATE INDEX IF NOT EXISTS seen_chat_skill ON seen (chat_id, skill, id);
 """
+
+SCHEMA_VERSION = 2
+SEEN_KEEP = 30          # problems remembered per (chat, skill) for repeat avoidance
 
 
 @dataclass
@@ -117,7 +124,24 @@ class Store:
         if path != ":memory:":
             self.conn.execute("PRAGMA journal_mode = WAL")
         self.conn.executescript(SCHEMA)
-        self.conn.execute("INSERT OR IGNORE INTO meta (key, value) VALUES ('schema_version', '1')")
+        self._migrate()
+
+    def _migrate(self) -> None:
+        """Schema v2 only adds the ``seen`` table (created above), so no ALTERs are needed."""
+        self.conn.execute("INSERT OR IGNORE INTO meta (key, value) VALUES ('schema_version', '2')")
+        self.conn.execute("UPDATE meta SET value = '2' WHERE key = 'schema_version' AND value = '1'")
+        row = self.conn.execute("SELECT value FROM meta WHERE key = 'schema_version'").fetchone()
+        try:
+            version = int(row[0]) if row else SCHEMA_VERSION
+        except ValueError:
+            version = SCHEMA_VERSION
+        if version > SCHEMA_VERSION:
+            log.warning("database schema version %s is newer than this code (%s); continuing",
+                        version, SCHEMA_VERSION)
+
+    def schema_version(self) -> str:
+        row = self.conn.execute("SELECT value FROM meta WHERE key = 'schema_version'").fetchone()
+        return row[0] if row else ""
 
     def close(self) -> None:
         self.conn.close()
@@ -213,7 +237,7 @@ class Store:
     def delete_student_data(self, chat_id: int) -> None:
         """Delete everything about a chat EXCEPT unreviewed safety flags: safeguarding records
         stay (unchanged) until the owner has reviewed them with /flags done."""
-        for table in ("students", "progress", "pending", "attempts", "llm_usage"):
+        for table in ("students", "progress", "pending", "attempts", "llm_usage", "seen"):
             self.conn.execute(f"DELETE FROM {table} WHERE chat_id = ?", (chat_id,))
         self.conn.execute("DELETE FROM flags WHERE chat_id = ? AND reviewed = 1", (chat_id,))
         self.conn.execute("UPDATE codes SET used_by = NULL WHERE used_by = ?", (chat_id,))
@@ -321,3 +345,22 @@ class Store:
     def llm_calls_total(self, day: str) -> int:
         row = self.conn.execute("SELECT COALESCE(SUM(calls), 0) FROM llm_usage WHERE day = ?", (day,)).fetchone()
         return int(row[0])
+
+    # seen problems (repeat avoidance)
+    def recent_seen(self, chat_id: int, skill: str, limit: int = SEEN_KEEP) -> list[str]:
+        """Fingerprints of the problems last shown for (chat, skill), newest first."""
+        rows = self.conn.execute(
+            "SELECT fp FROM seen WHERE chat_id = ? AND skill = ? ORDER BY id DESC LIMIT ?",
+            (chat_id, skill, max(0, int(limit)))).fetchall()
+        return [r[0] for r in rows]
+
+    def add_seen(self, chat_id: int, skill: str, fp: str, keep: int = SEEN_KEEP) -> None:
+        """Remember ``fp`` as the newest problem for (chat, skill); keep only the newest ``keep``."""
+        self.conn.execute("INSERT OR REPLACE INTO seen (chat_id, skill, fp) VALUES (?, ?, ?)", (chat_id, skill, fp))
+        self.conn.execute(
+            "DELETE FROM seen WHERE chat_id = ? AND skill = ? AND id NOT IN "
+            "(SELECT id FROM seen WHERE chat_id = ? AND skill = ? ORDER BY id DESC LIMIT ?)",
+            (chat_id, skill, chat_id, skill, max(0, int(keep))))
+
+    def clear_seen(self, chat_id: int) -> None:
+        self.conn.execute("DELETE FROM seen WHERE chat_id = ?", (chat_id,))

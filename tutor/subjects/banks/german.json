@@ -1,0 +1,2552 @@
+{
+ "subject": {
+  "id": "german",
+  "title": "German",
+  "order": 56
+ },
+ "skills": [
+  {
+   "id": "german.grammar",
+   "title": "Grammar & tenses",
+   "aliases": [
+    "german grammar",
+    "tenses",
+    "present tense",
+    "past tense",
+    "future tense",
+    "conditional",
+    "verbs",
+    "adjective agreement",
+    "pronouns",
+    "negatives",
+    "perfekt",
+    "präteritum",
+    "cases",
+    "word order",
+    "modal verbs"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which German subject pronoun means «we»?",
+     "choice": {
+      "options": [
+       "wir",
+       "ihr",
+       "sie",
+       "du"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Ihr means you (talking to several friends)",
+       null,
+       null
+      ]
+     },
+     "solution": "Wir = we; ihr = you (plural, informal), sie = they or she, du = you (one friend)",
+     "hint": "Its verb forms usually end in -en, just like the infinitive"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "What does «nie» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "never",
+       "not ever"
+      ],
+      "reject": [
+       "always"
+      ],
+      "form": "any",
+      "feedback": {
+       "always": "Always is immer; nie is a negative"
+      }
+     },
+     "solution": "Nie (or niemals) = never; immer = always",
+     "hint": "It is the opposite of immer"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "What does «nichts» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "nothing",
+       "not anything"
+      ],
+      "form": "any"
+     },
+     "solution": "Nichts = nothing; etwas = something",
+     "hint": "It is the opposite of etwas"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Give the «ich» form of «sein» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "bin"
+      ],
+      "reject": [
+       "ist",
+       "bist",
+       "sind",
+       "seid"
+      ],
+      "form": "strict"
+     },
+     "solution": "Sein: ich bin, du bist, er ist, wir sind, ihr seid, sie sind",
+     "hint": "Sein is irregular: think of how you say «I am» in German"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "Give the «er» form of «haben» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "hat"
+      ],
+      "reject": [
+       "habt",
+       "hast",
+       "haben",
+       "habe",
+       "ist"
+      ],
+      "form": "strict",
+      "feedback": {
+       "habt": "Habt goes with ihr",
+       "hast": "Hast goes with du",
+       "ist": "Ist comes from sein; this question asks for haben"
+      }
+     },
+     "solution": "Haben: ich habe, du hast, er hat, wir haben, ihr habt, sie haben",
+     "hint": "Haben loses its b in the du and er forms"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "In the nominative, which word means «the» before a plural noun such as «Bücher»?",
+     "choice": {
+      "options": [
+       "der",
+       "die",
+       "das",
+       "dem"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Der is masculine singular in the nominative",
+       null,
+       "Das is neuter singular",
+       "Dem is dative singular"
+      ]
+     },
+     "solution": "In the nominative and accusative, all plural nouns take die: die Bücher",
+     "hint": "In the plural, all three genders share the same article"
+    },
+    {
+     "id": "g07",
+     "level": 1,
+     "text": "Which word means «my» before a feminine noun such as «Schwester» (nominative)?",
+     "choice": {
+      "options": [
+       "mein",
+       "meinen",
+       "meine",
+       "deine"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Mein is for masculine or neuter nouns",
+       null,
+       null,
+       "Deine means your"
+      ]
+     },
+     "solution": "Feminine nouns take meine: meine Schwester",
+     "hint": "Feminine possessives add -e"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "Choose the correct article: «___ Mädchen ist nett.»",
+     "choice": {
+      "options": [
+       "Die",
+       "Der",
+       "Den",
+       "Das"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Mädchen is neuter, not feminine",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Mädchen is neuter (all nouns ending in -chen are neuter): das Mädchen",
+     "hint": "Nouns ending in -chen are always neuter"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "Which sentence means «I have a brother»?",
+     "choice": {
+      "options": [
+       "Ich habe einen Bruder",
+       "Ich habe ein Bruder",
+       "Ich habe eine Bruder",
+       "Ich habe einem Bruder"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Bruder is masculine and the object, so ein must change to einen",
+       null,
+       "Einem is dative; haben needs the accusative"
+      ]
+     },
+     "solution": "Haben takes the accusative; masculine ein becomes einen: Ich habe einen Bruder",
+     "hint": "The object of haben is in the accusative, and Bruder is masculine"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Translate into German. Include the definite article (der, die or das): the girl",
+     "short": {
+      "accept": [
+       "das Mädchen"
+      ],
+      "reject": [
+       "die Mädchen",
+       "der Mädchen"
+      ],
+      "form": "strict",
+      "feedback": {
+       "die Mädchen": "Die Mädchen is the plural; one girl is neuter",
+       "der Mädchen": "Mädchen is neuter, not masculine"
+      }
+     },
+     "solution": "Mädchen is neuter: das Mädchen",
+     "hint": "German nouns ending in -chen are neuter"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Give the plural of «das Buch», with its article.",
+     "short": {
+      "accept": [
+       "die Bücher"
+      ],
+      "reject": [
+       "die Buchs",
+       "die Buche",
+       "das Bücher"
+      ],
+      "form": "strict",
+      "feedback": {
+       "die Buche": "Die Buche is a beech tree",
+       "das Bücher": "All plural nouns take die"
+      }
+     },
+     "solution": "Das Buch → die Bücher (umlaut + -er)",
+     "hint": "Many neuter nouns add -er in the plural, sometimes with an umlaut"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "Choose the correct word: «Ich fahre mit ___ Bus.»",
+     "choice": {
+      "options": [
+       "den",
+       "dem",
+       "der",
+       "das"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Den is accusative; mit takes the dative",
+       null,
+       null,
+       "Bus is masculine, and mit takes the dative"
+      ]
+     },
+     "solution": "Mit always takes the dative; Bus is masculine: mit dem Bus",
+     "hint": "Mit is always followed by the dative case"
+    },
+    {
+     "id": "g13",
+     "level": 2,
+     "text": "Complete with the correct form of «mein»: «Ich besuche ___ Onkel.» Type the missing word only.",
+     "short": {
+      "accept": [
+       "meinen"
+      ],
+      "reject": [
+       "mein",
+       "meine",
+       "meinem"
+      ],
+      "form": "strict",
+      "feedback": {
+       "mein": "Onkel is masculine and the object of besuchen, so it is accusative",
+       "meinem": "Meinem is dative; besuchen takes the accusative"
+      }
+     },
+     "solution": "Besuchen takes an accusative object; Onkel is masculine: meinen Onkel",
+     "hint": "Onkel is masculine and it is the direct object"
+    },
+    {
+     "id": "g14",
+     "level": 2,
+     "text": "Choose the correct verb: «Meine Schwestern ___ groß.»",
+     "choice": {
+      "options": [
+       "ist",
+       "bist",
+       "sind",
+       "seid"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Ist goes with a singular subject",
+       null,
+       null,
+       "Seid goes with ihr"
+      ]
+     },
+     "solution": "A plural subject takes sind; adjectives after sein (like groß) do not change",
+     "hint": "Schwestern is plural (sie)"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "What does «Ich esse nie Fleisch» mean?",
+     "choice": {
+      "options": [
+       "I always eat meat",
+       "I am not eating meat today",
+       "I eat a lot of meat",
+       "I never eat meat"
+      ],
+      "correct": 3
+     },
+     "solution": "Nie = never, Fleisch = meat: I never eat meat",
+     "hint": "Look at the word straight after the verb"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "What does «Wir werden einen Film sehen» mean?",
+     "choice": {
+      "options": [
+       "We will watch a film",
+       "We watched a film",
+       "We would like to watch a film",
+       "We watch a film every day"
+      ],
+      "correct": 0
+     },
+     "solution": "Werden + infinitive at the end = future: we will watch a film",
+     "hint": "Werden + an infinitive at the end talks about the future"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "Read: «Gestern habe ich mit Paul Tennis gespielt.» When did this happen? Answer in English.",
+     "short": {
+      "accept": [
+       "yesterday"
+      ],
+      "form": "any"
+     },
+     "solution": "Gestern = yesterday",
+     "hint": "Look at the first word of the sentence"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "Read: «Lena trinkt nie Kaffee.» What does Lena never drink? Answer in English.",
+     "short": {
+      "accept": [
+       "coffee"
+      ],
+      "form": "any"
+     },
+     "solution": "Kaffee = coffee: Lena never drinks coffee",
+     "hint": "Look at the noun at the end"
+    },
+    {
+     "id": "g19",
+     "level": 3,
+     "text": "Which sentence is in the perfect tense (Perfekt)?",
+     "choice": {
+      "options": [
+       "Ich spiele Fußball",
+       "Ich habe Fußball gespielt",
+       "Ich werde Fußball spielen",
+       "Ich möchte Fußball spielen"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Werde ... spielen is the future",
+       "Möchte ... spielen means would like to play"
+      ]
+     },
+     "solution": "Perfekt = haben/sein + past participle at the end: ich habe gespielt",
+     "hint": "Look for a past participle starting with ge- at the end"
+    },
+    {
+     "id": "g20",
+     "level": 3,
+     "text": "Read: «Ich mag kein Gemüse.» What does the speaker dislike? Answer in English.",
+     "short": {
+      "accept": [
+       "vegetables",
+       "vegetable",
+       "veg",
+       "veggies"
+      ],
+      "form": "any"
+     },
+     "solution": "Kein Gemüse = no vegetables; Gemüse = vegetables",
+     "hint": "Carrots and peas are examples"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "Complete with the Perfekt: «Gestern ___ wir nach Berlin gefahren.» Type the missing verb only.",
+     "short": {
+      "accept": [
+       "sind"
+      ],
+      "reject": [
+       "haben",
+       "seid",
+       "ist",
+       "waren"
+      ],
+      "form": "strict",
+      "feedback": {
+       "haben": "Verbs of movement like fahren take sein in the Perfekt",
+       "ist": "Ist goes with er/sie/es; the subject here is wir",
+       "waren": "Waren is the simple past of sein; the Perfekt needs the present of sein"
+      }
+     },
+     "solution": "Fahren (movement) takes sein: wir sind gefahren",
+     "hint": "Verbs of movement form the Perfekt with sein"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "Complete with the present tense of «fahren»: «Mein Bruder ___ gern Rad.» Type the verb only.",
+     "short": {
+      "accept": [
+       "fährt"
+      ],
+      "reject": [
+       "fahren",
+       "fahre",
+       "fährst"
+      ],
+      "form": "strict",
+      "feedback": {
+       "fährst": "Fährst goes with du",
+       "fahre": "Fahre goes with ich"
+      }
+     },
+     "solution": "Fahren adds an umlaut with du and er/sie/es: er fährt",
+     "hint": "Fahren is a strong verb: its vowel changes with er"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "Which sentence means «I play football because it is fun»?",
+     "choice": {
+      "options": [
+       "Ich spiele Fußball, weil es macht Spaß",
+       "Ich spiele Fußball, weil macht es Spaß",
+       "Ich spiele Fußball, weil es Spaß macht",
+       "Ich spiele Fußball, weil Spaß es macht"
+      ],
+      "correct": 2
+     },
+     "solution": "Weil sends the verb to the end of its clause: weil es Spaß macht",
+     "hint": "Weil is a conjunction that moves the verb to the end"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "Choose the correct word order: «Am Wochenende ___ ins Kino.»",
+     "choice": {
+      "options": [
+       "ich gehe",
+       "gehe",
+       "ich gehen",
+       "gehe ich"
+      ],
+      "correct": 3,
+      "feedback": [
+       "After a time phrase at the start, the verb comes before the subject",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The verb comes second: Am Wochenende gehe ich ins Kino",
+     "hint": "The verb must be the second idea in the sentence"
+    },
+    {
+     "id": "g25",
+     "level": 4,
+     "text": "Complete with the correct form of «müssen»: «Ich ___ heute meine Hausaufgaben machen.» Type the verb only.",
+     "short": {
+      "accept": [
+       "muss"
+      ],
+      "reject": [
+       "müssen",
+       "musst",
+       "musste"
+      ],
+      "form": "strict",
+      "feedback": {
+       "müssen": "Müssen is the infinitive or the wir/sie form",
+       "musst": "Musst goes with du",
+       "musste": "Musste is the simple past (had to)"
+      }
+     },
+     "solution": "Müssen with ich: ich muss (no umlaut in the singular)",
+     "hint": "Modal verbs lose their umlaut in the singular"
+    },
+    {
+     "id": "g26",
+     "level": 4,
+     "text": "Choose the correct form of «aufstehen»: «Ich ___ morgen früh auf.»",
+     "choice": {
+      "options": [
+       "stehe",
+       "stehen",
+       "aufstehe",
+       "steht"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "In a main clause the prefix separates and goes to the end",
+       "Steht goes with er/sie/es"
+      ]
+     },
+     "solution": "Separable verb: the prefix auf goes to the end: ich stehe morgen früh auf",
+     "hint": "Aufstehen is separable, and the prefix is already at the end"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "Which sentence in the Perfekt is correct?",
+     "choice": {
+      "options": [
+       "Sie hat gestern in die Stadt gefahren",
+       "Sie ist gestern in die Stadt gefahren",
+       "Sie ist gestern in die Stadt gefahrt",
+       "Sie ist gestern in die Stadt fahren"
+      ],
+      "correct": 1
+     },
+     "solution": "Fahren takes sein and its participle is gefahren",
+     "hint": "Check the auxiliary and the past participle"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "Which is the correct translation of «I would like to travel to Spain»?",
+     "choice": {
+      "options": [
+       "Ich möchte reisen nach Spanien",
+       "Ich will nach Spanien gereist",
+       "Ich möchte nach Spanien reisen",
+       "Ich bin nach Spanien gereist"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The infinitive must go to the end of the sentence",
+       null,
+       null,
+       "Ich bin ... gereist means I travelled"
+      ]
+     },
+     "solution": "Möchte + infinitive at the end: Ich möchte nach Spanien reisen",
+     "hint": "After a modal verb, the infinitive goes to the end"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "Ich habe nicht gelesen das Buch",
+       "Ich nicht habe das Buch gelesen",
+       "Ich habe das Buch gelesen nicht",
+       "Ich habe das Buch nicht gelesen"
+      ],
+      "correct": 3
+     },
+     "solution": "Nicht comes before the past participle at the end: Ich habe das Buch nicht gelesen",
+     "hint": "The past participle always stays at the very end"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "Translate into German using the Perfekt: «they went» (on foot)",
+     "short": {
+      "accept": [
+       "sie sind gegangen"
+      ],
+      "reject": [
+       "sie haben gegangen",
+       "sie sind gegeht",
+       "sie sind gehen"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sie haben gegangen": "Gehen takes sein, not haben",
+       "sie sind gegeht": "Gehen is irregular: its participle is not gegeht"
+      }
+     },
+     "solution": "Gehen takes sein and has the irregular participle gegangen",
+     "hint": "Gehen is a verb of movement with an irregular past participle"
+    },
+    {
+     "id": "g31",
+     "level": 5,
+     "text": "Translate into German using werden + infinitive: «I will eat»",
+     "short": {
+      "accept": [
+       "ich werde essen"
+      ],
+      "reject": [
+       "ich werde esse",
+       "ich wird essen",
+       "ich esse"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ich esse": "That is the present; this question asks for werden + infinitive",
+       "ich wird essen": "Wird goes with er/sie/es; with ich use werde"
+      }
+     },
+     "solution": "Future: ich werde + infinitive at the end: ich werde essen",
+     "hint": "Use the ich form of werden, then the infinitive"
+    },
+    {
+     "id": "g32",
+     "level": 5,
+     "text": "Translate into German using würde + infinitive: «we would play»",
+     "short": {
+      "accept": [
+       "wir würden spielen"
+      ],
+      "reject": [
+       "wir werden spielen",
+       "wir würden spielten",
+       "wir würde spielen"
+      ],
+      "form": "strict",
+      "feedback": {
+       "wir werden spielen": "Wir werden spielen is the future (we will play)",
+       "wir würde spielen": "With wir, the form is würden"
+      }
+     },
+     "solution": "Conditional = würden + infinitive: wir würden spielen",
+     "hint": "Use the wir form of würde, then the infinitive"
+    }
+   ]
+  },
+  {
+   "id": "german.people",
+   "title": "People & lifestyle",
+   "aliases": [
+    "german family",
+    "family",
+    "friends",
+    "describing people",
+    "personality",
+    "school",
+    "healthy living",
+    "daily routine",
+    "jobs",
+    "future plans"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What does «der Bruder» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "brother"
+      ],
+      "form": "any"
+     },
+     "solution": "Der Bruder = the brother (plural: die Brüder)",
+     "hint": "Think of the boys in a family"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "What does «die Tante» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "aunt",
+       "auntie",
+       "aunty"
+      ],
+      "reject": [
+       "uncle"
+      ],
+      "form": "any",
+      "feedback": {
+       "uncle": "Uncle is der Onkel; die Tante is female"
+      }
+     },
+     "solution": "Die Tante = the aunt",
+     "hint": "She is your mother's or father's sister"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "Which is the German for «grandfather»?",
+     "choice": {
+      "options": [
+       "der Großvater",
+       "die Großmutter",
+       "der Enkel",
+       "der Onkel"
+      ],
+      "correct": 0
+     },
+     "solution": "Der Großvater (or Opa) = grandfather; die Großmutter = grandmother, der Enkel = grandson, der Onkel = uncle",
+     "hint": "Groß + the word for father"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "What does «der Arzt» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "doctor",
+       "GP"
+      ],
+      "form": "any"
+     },
+     "solution": "Der Arzt / die Ärztin = the doctor",
+     "hint": "This person treats people who are ill"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "Which word means «tired»?",
+     "choice": {
+      "options": [
+       "glücklich",
+       "müde",
+       "krank",
+       "böse"
+      ],
+      "correct": 1
+     },
+     "solution": "Müde = tired; glücklich = happy, krank = ill, böse = angry",
+     "hint": "Think of how you feel after a long day"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "What does «das Frühstück» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "breakfast"
+      ],
+      "form": "any"
+     },
+     "solution": "Das Frühstück = breakfast",
+     "hint": "It's the first meal of the day"
+    },
+    {
+     "id": "p07",
+     "level": 1,
+     "text": "Which word means «funny»?",
+     "choice": {
+      "options": [
+       "schüchtern",
+       "faul",
+       "lustig",
+       "ernst"
+      ],
+      "correct": 2
+     },
+     "solution": "Lustig = funny; schüchtern = shy, faul = lazy, ernst = serious",
+     "hint": "This person makes you laugh"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "False friend! What does «das Gymnasium» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "grammar school",
+       "secondary school",
+       "school",
+       "high school"
+      ],
+      "reject": [
+       "gym",
+       "gymnasium",
+       "sports hall"
+      ],
+      "form": "any",
+      "feedback": {
+       "gym": "False friend: das Gymnasium is an academic secondary school",
+       "gymnasium": "False friend: das Gymnasium is an academic secondary school",
+       "sports hall": "False friend: a sports hall is die Turnhalle"
+      }
+     },
+     "solution": "Das Gymnasium is an academic secondary school, like a grammar school",
+     "hint": "It's a false friend: pupils study there for the Abitur"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "Which is the feminine form of «der Lehrer» (the teacher)?",
+     "choice": {
+      "options": [
+       "die Lehrerinne",
+       "die Lehrere",
+       "der Lehrerin",
+       "die Lehrerin"
+      ],
+      "correct": 3
+     },
+     "solution": "Add -in for a woman: der Lehrer → die Lehrerin",
+     "hint": "Many job words add -in for a woman"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "Translate into German. Include the definite article (der, die or das): the sister",
+     "short": {
+      "accept": [
+       "die Schwester"
+      ],
+      "reject": [
+       "der Schwester",
+       "das Schwester"
+      ],
+      "form": "strict",
+      "feedback": {
+       "der Schwester": "Schwester is feminine (nominative die)",
+       "das Schwester": "Schwester is feminine (nominative die)"
+      }
+     },
+     "solution": "Schwester is feminine: die Schwester",
+     "hint": "Is a sister masculine, feminine or neuter?"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "Which sentence means «I get up at seven o'clock»?",
+     "choice": {
+      "options": [
+       "Ich stehe um sieben Uhr auf",
+       "Ich gehe um sieben Uhr ins Bett",
+       "Ich wache um sieben Uhr auf",
+       "Ich ziehe mich um sieben Uhr an"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Ins Bett gehen means to go to bed",
+       "Ich wache auf means I wake up, not I get up",
+       "Ich ziehe mich an means I get dressed"
+      ]
+     },
+     "solution": "Aufstehen = to get up; aufwachen = to wake up, ins Bett gehen = to go to bed, sich anziehen = to get dressed",
+     "hint": "Which separable verb means to get out of bed?"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "Translate into German. Include «ein» or «eine»: a nurse (a woman)",
+     "short": {
+      "accept": [
+       "eine Krankenschwester",
+       "eine Krankenpflegerin"
+      ],
+      "reject": [
+       "ein Krankenpfleger",
+       "ein Krankenschwester"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ein Krankenpfleger": "Ein Krankenpfleger is a male nurse",
+       "ein Krankenschwester": "Krankenschwester is feminine, so eine"
+      }
+     },
+     "solution": "Eine Krankenschwester (or eine Krankenpflegerin) = a female nurse",
+     "hint": "It is a compound noun starting with krank (ill)"
+    },
+    {
+     "id": "p13",
+     "level": 2,
+     "text": "Choose the correct form: «Ich habe ___ Haare.» (long)",
+     "choice": {
+      "options": [
+       "langen",
+       "lange",
+       "langes",
+       "langer"
+      ],
+      "correct": 1
+     },
+     "solution": "With no article, plural adjectives in the accusative end in -e: lange Haare",
+     "hint": "Haare is plural and has no article in front"
+    },
+    {
+     "id": "p14",
+     "level": 2,
+     "text": "What does «die Augen» mean?",
+     "choice": {
+      "options": [
+       "the ears",
+       "the hair",
+       "the eyes",
+       "the teeth"
+      ],
+      "correct": 2
+     },
+     "solution": "Die Augen = the eyes; die Ohren = ears, die Haare = hair, die Zähne = teeth",
+     "hint": "You see with them"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "What does «Mein Vater ist größer als meine Mutter» mean?",
+     "choice": {
+      "options": [
+       "My father is older than my mother",
+       "My mother is taller than my father",
+       "My father is as tall as my mother",
+       "My father is taller than my mother"
+      ],
+      "correct": 3
+     },
+     "solution": "Größer als = taller than: my father is taller than my mother",
+     "hint": "Groß + -er + als makes a comparison"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "Read: «Mein Bruder ist sehr gesprächig.» What is the brother like? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "chatty",
+       "talkative"
+      ],
+      "form": "any"
+     },
+     "solution": "Gesprächig = chatty or talkative",
+     "hint": "It is related to sprechen (to speak)"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "Read: «Meine Tante ist Rechtsanwältin.» What is the aunt's job? Answer in English.",
+     "short": {
+      "accept": [
+       "lawyer",
+       "solicitor",
+       "attorney",
+       "barrister"
+      ],
+      "form": "any"
+     },
+     "solution": "Rechtsanwältin = lawyer (a woman)",
+     "hint": "Recht means the law"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "What does «Ich muss mein Zimmer aufräumen» mean?",
+     "choice": {
+      "options": [
+       "I have to tidy my room",
+       "I want to tidy my room",
+       "I tidied my room",
+       "I can tidy my room"
+      ],
+      "correct": 0
+     },
+     "solution": "Ich muss = I must / I have to; aufräumen = to tidy up",
+     "hint": "Muss comes from müssen"
+    },
+    {
+     "id": "p19",
+     "level": 3,
+     "text": "Read: «Um fit zu bleiben, esse ich Obst und rauche nicht.» What does the speaker do to stay healthy?",
+     "choice": {
+      "options": [
+       "Eats fruit and goes running",
+       "Eats fruit and does not smoke",
+       "Drinks water and does not smoke",
+       "Sleeps well and eats fruit"
+      ],
+      "correct": 1
+     },
+     "solution": "Ich esse Obst = I eat fruit; ich rauche nicht = I don't smoke",
+     "hint": "Find the two verbs: esse and rauche"
+    },
+    {
+     "id": "p20",
+     "level": 3,
+     "text": "Read: «Morgens dusche ich und trinke Tee.» What does the speaker drink in the morning? Answer in English.",
+     "short": {
+      "accept": [
+       "tea",
+       "some tea",
+       "a cup of tea"
+      ],
+      "form": "any"
+     },
+     "solution": "Ich trinke Tee = I drink tea",
+     "hint": "It's a hot drink, often served with milk in Britain"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "text": "Complete with the reflexive pronoun: «Ich wasche ___ jeden Morgen.» Type the missing word only.",
+     "short": {
+      "accept": [
+       "mich"
+      ],
+      "reject": [
+       "sich",
+       "mir",
+       "dich"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sich": "Sich goes with er, sie, es or sie (they); with ich use the ich pronoun",
+       "mir": "Mir is dative; here the accusative is needed",
+       "dich": "Dich goes with du"
+      }
+     },
+     "solution": "The reflexive pronoun for ich (accusative) is mich: ich wasche mich",
+     "hint": "Which reflexive pronoun goes with ich?"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "Choose the correct verb: «Meine Schwester ___ Ärztin werden.» (wants to)",
+     "choice": {
+      "options": [
+       "willst",
+       "wollen",
+       "will",
+       "wollt"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Willst goes with du",
+       "Wollen goes with wir or sie (they)",
+       null,
+       "Wollt goes with ihr"
+      ]
+     },
+     "solution": "Wollen with sie (she): sie will",
+     "hint": "Meine Schwester = sie (she)"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "Complete with the correct form of «mein»: «Ich wohne mit ___ Mutter.» Type the missing word only.",
+     "short": {
+      "accept": [
+       "meiner"
+      ],
+      "reject": [
+       "meine",
+       "meinem",
+       "meinen"
+      ],
+      "form": "strict",
+      "feedback": {
+       "meine": "Mit takes the dative; feminine meine becomes meiner",
+       "meinem": "Meinem is for masculine or neuter nouns; Mutter is feminine"
+      }
+     },
+     "solution": "Mit takes the dative; Mutter is feminine: mit meiner Mutter",
+     "hint": "Mit is always followed by the dative"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "Choose the correct verb: «Nächstes Jahr ___ mein Bruder an die Uni gehen.» (will)",
+     "choice": {
+      "options": [
+       "werde",
+       "werden",
+       "wirst",
+       "wird"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Werde goes with ich",
+       "Werden goes with wir or sie (they)",
+       "Wirst goes with du",
+       null
+      ]
+     },
+     "solution": "Future with er: er wird + infinitive at the end",
+     "hint": "Mein Bruder = er"
+    },
+    {
+     "id": "p25",
+     "level": 4,
+     "text": "Complete with the simple past (Präteritum) of «sein»: «Als ich klein ___, wohnte ich in Köln.» Type the verb only.",
+     "short": {
+      "accept": [
+       "war"
+      ],
+      "reject": [
+       "bin",
+       "waren",
+       "warst",
+       "wurde"
+      ],
+      "form": "strict",
+      "feedback": {
+       "bin": "Bin is the present",
+       "waren": "Waren goes with wir or sie (they)",
+       "warst": "Warst goes with du"
+      }
+     },
+     "solution": "Präteritum of sein with ich: ich war",
+     "hint": "Sein has an irregular simple past of just three letters"
+    },
+    {
+     "id": "p26",
+     "level": 4,
+     "text": "Choose the correct auxiliary: «Heute Morgen ___ ich um sechs Uhr aufgewacht.»",
+     "choice": {
+      "options": [
+       "bin",
+       "habe",
+       "hat",
+       "ist"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Aufwachen takes sein, not haben",
+       null,
+       "Ist goes with er/sie/es; the subject is ich"
+      ]
+     },
+     "solution": "Aufwachen (a change of state) takes sein in the Perfekt: ich bin aufgewacht",
+     "hint": "Verbs that show a change of state, like waking up, use sein"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "text": "Which sentence is correct?",
+     "choice": {
+      "options": [
+       "Meine Eltern ist sehr nett",
+       "Meine Eltern sind sehr nett",
+       "Meine Eltern sind sehr netten",
+       "Mein Eltern sind sehr nett"
+      ],
+      "correct": 1
+     },
+     "solution": "Eltern is plural: meine Eltern sind; an adjective after sein (nett) does not change",
+     "hint": "Check the possessive, the verb and the adjective"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "text": "Which is the correct translation of «When I am older, I would like to be a vet»?",
+     "choice": {
+      "options": [
+       "Wenn ich älter bin, ich möchte Tierarzt werden",
+       "Wenn ich bin älter, möchte ich Tierarzt werden",
+       "Wenn ich älter bin, möchte ich Tierarzt werden",
+       "Als ich älter war, wollte ich Tierarzt werden"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Als ich älter war means when I was older"
+      ]
+     },
+     "solution": "Wenn sends bin to the end; the main clause then starts with its verb: möchte ich",
+     "hint": "Wenn sends the verb to the end, and the main clause starts with its verb"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "Ich nie gehe spät ins Bett",
+       "Nie ich gehe spät ins Bett",
+       "Ich gehe nie spät in Bett",
+       "Ich gehe nie spät ins Bett"
+      ],
+      "correct": 3
+     },
+     "solution": "The verb stays second, nie follows it, and ins = in das: Ich gehe nie spät ins Bett",
+     "hint": "The verb must be the second idea"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "Translate into German: «she is tall and intelligent»",
+     "short": {
+      "accept": [
+       "sie ist groß und intelligent"
+      ],
+      "reject": [
+       "sie ist große und intelligente",
+       "sie sind groß und intelligent",
+       "sie bist groß und intelligent"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sie ist große und intelligente": "Adjectives after sein do not take endings",
+       "sie sind groß und intelligent": "Sie sind means they are; she is = sie ist"
+      }
+     },
+     "solution": "Adjectives after sein take no endings: sie ist groß und intelligent",
+     "hint": "After ist, adjectives keep their basic form"
+    },
+    {
+     "id": "p31",
+     "level": 5,
+     "text": "Translate into German using werden + infinitive: «I will work»",
+     "short": {
+      "accept": [
+       "ich werde arbeiten"
+      ],
+      "reject": [
+       "ich werde arbeite",
+       "ich wird arbeiten",
+       "ich arbeite"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ich arbeite": "That is the present; this question asks for werden + infinitive"
+      }
+     },
+     "solution": "Ich werde + infinitive at the end: ich werde arbeiten",
+     "hint": "Use the ich form of werden, then the infinitive"
+    },
+    {
+     "id": "p32",
+     "level": 5,
+     "text": "Translate into German: «my brothers are lazy»",
+     "short": {
+      "accept": [
+       "meine Brüder sind faul"
+      ],
+      "reject": [
+       "mein Brüder sind faul",
+       "meine Brüder ist faul",
+       "meine Brüder sind faule",
+       "mein Bruder ist faul"
+      ],
+      "form": "strict",
+      "feedback": {
+       "meine Brüder sind faule": "Adjectives after sein do not take endings",
+       "mein Bruder ist faul": "That is singular (my brother is lazy)"
+      }
+     },
+     "solution": "Plural: meine Brüder sind faul (Bruder → Brüder)",
+     "hint": "Bruder takes an umlaut in the plural; adjectives after sein don't change"
+    }
+   ]
+  },
+  {
+   "id": "german.culture",
+   "title": "Free time & culture",
+   "aliases": [
+    "german free time",
+    "hobbies",
+    "sport",
+    "music",
+    "cinema",
+    "tv",
+    "technology",
+    "social media",
+    "festivals",
+    "food and drink"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What does «das Schwimmen» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "swimming"
+      ],
+      "form": "any"
+     },
+     "solution": "Das Schwimmen = swimming (schwimmen = to swim)",
+     "hint": "It's a sport you do in a pool"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What does «der Käse» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "cheese"
+      ],
+      "form": "any"
+     },
+     "solution": "Der Käse = cheese",
+     "hint": "It's made from milk; you might put it on a sandwich"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "Which is the German for «the mobile phone»?",
+     "choice": {
+      "options": [
+       "das Handy",
+       "der Computer",
+       "das Tablet",
+       "die Fernbedienung"
+      ],
+      "correct": 0
+     },
+     "solution": "Das Handy = the mobile phone; die Fernbedienung = the remote control",
+     "hint": "It looks like an English word, but English does not use it for this"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "What does «das Schach» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "chess"
+      ],
+      "form": "any"
+     },
+     "solution": "Schach spielen = to play chess",
+     "hint": "A board game with kings, queens and knights"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "Which word means «the cake»?",
+     "choice": {
+      "options": [
+       "die Küche",
+       "der Kuchen",
+       "das Brot",
+       "der Fisch"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Die Küche is the kitchen",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Der Kuchen = the cake; die Küche = the kitchen, das Brot = bread, der Fisch = fish",
+     "hint": "You might have one with candles on your birthday"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "What does «das Lied» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "song"
+      ],
+      "form": "any"
+     },
+     "solution": "Das Lied = the song",
+     "hint": "You sing it"
+    },
+    {
+     "id": "c07",
+     "level": 1,
+     "text": "Which word means «Christmas»?",
+     "choice": {
+      "options": [
+       "Ostern",
+       "der Geburtstag",
+       "Weihnachten",
+       "Silvester"
+      ],
+      "correct": 2
+     },
+     "solution": "Weihnachten = Christmas; Ostern = Easter, der Geburtstag = birthday, Silvester = New Year's Eve",
+     "hint": "In Germany it is celebrated on 24–26 December"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "Choose the correct verb: «Ich ___ gern Rad.» (I like cycling)",
+     "choice": {
+      "options": [
+       "spiele",
+       "mache",
+       "gehe",
+       "fahre"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Spielen is used for games and instruments",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Rad fahren = to cycle: ich fahre gern Rad",
+     "hint": "In German you «drive» a bike"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "Choose the correct word: «Ich gehe gern ___ Kino.»",
+     "choice": {
+      "options": [
+       "ins",
+       "im",
+       "in der",
+       "in den"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Im (dative) shows position, not movement",
+       null,
+       "In den is for masculine nouns; Kino is neuter"
+      ]
+     },
+     "solution": "Movement into a place takes the accusative; Kino is neuter: in das = ins",
+     "hint": "Movement towards a place uses the accusative; Kino is neuter"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "Translate into German. Include the definite article (der, die or das): the music",
+     "short": {
+      "accept": [
+       "die Musik"
+      ],
+      "reject": [
+       "der Musik",
+       "das Musik"
+      ],
+      "form": "strict"
+     },
+     "solution": "Musik is feminine: die Musik",
+     "hint": "Most nouns ending in -ik are feminine"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "Translate into German. Include the definite article (der, die or das): the newspaper",
+     "short": {
+      "accept": [
+       "die Zeitung"
+      ],
+      "reject": [
+       "der Zeitung",
+       "das Zeitung",
+       "die Zeit"
+      ],
+      "form": "strict",
+      "feedback": {
+       "die Zeit": "Die Zeit means the time"
+      }
+     },
+     "solution": "Zeitung is feminine, like all nouns ending in -ung: die Zeitung",
+     "hint": "Nouns ending in -ung are always feminine"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "Which word means «cartoons»?",
+     "choice": {
+      "options": [
+       "die Seifenopern",
+       "die Zeichentrickfilme",
+       "die Spielshows",
+       "die Nachrichten"
+      ],
+      "correct": 1
+     },
+     "solution": "Zeichentrickfilme = cartoons; Seifenopern = soap operas, Spielshows = game shows, Nachrichten = the news",
+     "hint": "Zeichnen means to draw"
+    },
+    {
+     "id": "c13",
+     "level": 2,
+     "text": "What does «die Nachrichten» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "news",
+       "TV news"
+      ],
+      "form": "any"
+     },
+     "solution": "Die Nachrichten = the news",
+     "hint": "A programme about what happened in the world today"
+    },
+    {
+     "id": "c14",
+     "level": 2,
+     "text": "Which sentence means «I like reading»?",
+     "choice": {
+      "options": [
+       "Ich gern lese",
+       "Gern ich lese",
+       "Ich lese gern",
+       "Ich lesen gern"
+      ],
+      "correct": 2
+     },
+     "solution": "Verb + gern = to like doing something: ich lese gern",
+     "hint": "Put gern straight after the verb"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "What does «Ich sehe lieber Horrorfilme» mean?",
+     "choice": {
+      "options": [
+       "I hate watching horror films",
+       "I prefer watching comedies",
+       "I watched a horror film",
+       "I prefer watching horror films"
+      ],
+      "correct": 3
+     },
+     "solution": "Verb + lieber = prefer: I prefer watching horror films",
+     "hint": "Verb + lieber shows a preference"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "Read: «Am Samstag gehe ich mit meiner Schwester ins Schwimmbad.» On which day does the speaker go to the pool? Answer in English.",
+     "short": {
+      "accept": [
+       "Saturday",
+       "on Saturday",
+       "Saturdays",
+       "on Saturdays"
+      ],
+      "reject": [
+       "Sunday"
+      ],
+      "form": "any",
+      "feedback": {
+       "Sunday": "Sunday is Sonntag"
+      }
+     },
+     "solution": "Am Samstag = on Saturday",
+     "hint": "It's the day before Sonntag"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "Read: «Mein Lieblingsessen ist Brathähnchen.» What is the speaker's favourite food? Answer in English.",
+     "short": {
+      "accept": [
+       "roast chicken",
+       "chicken",
+       "roasted chicken",
+       "fried chicken"
+      ],
+      "form": "any"
+     },
+     "solution": "Brathähnchen = roast chicken",
+     "hint": "Hähnchen is a bird you eat; braten is a way of cooking it"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "What does «Ich verbringe zu viel Zeit in den sozialen Medien» mean?",
+     "choice": {
+      "options": [
+       "I spend too much time on social media",
+       "I spend very little time on social media",
+       "I never use social media",
+       "I spent a long time on my phone"
+      ],
+      "correct": 0
+     },
+     "solution": "Zeit verbringen = to spend time; zu viel = too much; die sozialen Medien = social media",
+     "hint": "Zu viel means too much"
+    },
+    {
+     "id": "c19",
+     "level": 3,
+     "text": "Read: «Zum Geburtstag haben mir meine Eltern eine Gitarre geschenkt.» What present did the speaker get? Answer in English.",
+     "short": {
+      "accept": [
+       "guitar",
+       "a guitar"
+      ],
+      "form": "any"
+     },
+     "solution": "Eine Gitarre = a guitar",
+     "hint": "It's a musical instrument with strings"
+    },
+    {
+     "id": "c20",
+     "level": 3,
+     "text": "Read: «Ich mag Rap nicht, aber ich liebe Jazz.» Which statement is true?",
+     "choice": {
+      "options": [
+       "The speaker loves rap",
+       "The speaker loves jazz",
+       "The speaker hates jazz",
+       "The speaker likes both rap and jazz"
+      ],
+      "correct": 1
+     },
+     "solution": "Ich mag Rap nicht = I don't like rap; ich liebe Jazz = I love jazz",
+     "hint": "Aber (but) separates the two opinions"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "Complete with the past participle of «sehen»: «Letztes Wochenende haben wir einen tollen Film ___.» Type the past participle only.",
+     "short": {
+      "accept": [
+       "gesehen"
+      ],
+      "reject": [
+       "gesieht",
+       "gesehnt",
+       "sehen",
+       "gesahen"
+      ],
+      "form": "strict",
+      "feedback": {
+       "gesehnt": "Gesehnt comes from sich sehnen (to long for)",
+       "sehen": "Use the past participle, not the infinitive"
+      }
+     },
+     "solution": "Sehen has the participle gesehen: wir haben ... gesehen",
+     "hint": "Strong verbs form the participle with ge- ... -en"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Choose the correct verb: «Morgen ___ wir ins Kino gehen.» (want to)",
+     "choice": {
+      "options": [
+       "will",
+       "willst",
+       "wollen",
+       "wollt"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Will goes with ich or er/sie/es",
+       "Willst goes with du",
+       null,
+       "Wollt goes with ihr"
+      ]
+     },
+     "solution": "Wollen with wir: wir wollen + infinitive at the end",
+     "hint": "The subject is wir: which ending matches the infinitive?"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Complete with the present tense of «lesen»: «Mein Vater ___ jeden Tag die Zeitung.» Type the verb only.",
+     "short": {
+      "accept": [
+       "liest"
+      ],
+      "reject": [
+       "lest",
+       "lese",
+       "lesen",
+       "liesst"
+      ],
+      "form": "strict",
+      "feedback": {
+       "lest": "Lest goes with ihr",
+       "lese": "Lese goes with ich"
+      }
+     },
+     "solution": "Lesen changes e → ie with du and er: er liest",
+     "hint": "Lesen is a strong verb: its vowel changes with er"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Choose the correct pronoun: «Magst du den Film? — Ja, ich finde ___ toll.»",
+     "choice": {
+      "options": [
+       "sie",
+       "es",
+       "ihm",
+       "ihn"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Es replaces a neuter noun; Film is masculine",
+       "Ihm is dative; finden needs an accusative object",
+       null
+      ]
+     },
+     "solution": "Film is masculine and it is the object, so the accusative pronoun is ihn",
+     "hint": "Film is masculine, and the pronoun is the object"
+    },
+    {
+     "id": "c25",
+     "level": 4,
+     "text": "Complete with the simple past (Präteritum) of «haben»: «Früher ___ ich keinen Computer.» Type the verb only.",
+     "short": {
+      "accept": [
+       "hatte"
+      ],
+      "reject": [
+       "habe",
+       "hat",
+       "hattest",
+       "hatten"
+      ],
+      "form": "strict",
+      "feedback": {
+       "habe": "Habe is the present",
+       "hattest": "Hattest goes with du",
+       "hatten": "Hatten goes with wir or sie (they)"
+      }
+     },
+     "solution": "Präteritum of haben with ich: ich hatte",
+     "hint": "Früher = in the past; haben is irregular in the simple past"
+    },
+    {
+     "id": "c26",
+     "level": 4,
+     "text": "Which sentence means «I think that the film is good»?",
+     "choice": {
+      "options": [
+       "Ich denke, dass der Film gut ist",
+       "Ich denke, dass der Film ist gut",
+       "Ich denke, dass ist der Film gut",
+       "Ich denke, dass gut der Film ist"
+      ],
+      "correct": 0
+     },
+     "solution": "Dass sends the verb to the end: dass der Film gut ist",
+     "hint": "Dass is a conjunction that moves the verb"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "Which sentence about last night is correct?",
+     "choice": {
+      "options": [
+       "Gestern Abend haben wir ins Konzert gegangen",
+       "Gestern Abend sind wir ins Konzert gegangen",
+       "Gestern Abend wir sind ins Konzert gegangen",
+       "Gestern Abend sind wir ins Konzert gegeht"
+      ],
+      "correct": 1
+     },
+     "solution": "Gehen takes sein (participle gegangen), and the verb comes second after the time phrase",
+     "hint": "Check the auxiliary, the word order and the participle"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "Which is the correct translation of «I don't like playing computer games»?",
+     "choice": {
+      "options": [
+       "Ich spiele gern nicht Computerspiele",
+       "Ich nicht spiele gern Computerspiele",
+       "Ich spiele nicht gern Computerspiele",
+       "Ich spiele gern Computerspiele nicht"
+      ],
+      "correct": 2
+     },
+     "solution": "Nicht gern = do not like doing: ich spiele nicht gern Computerspiele",
+     "hint": "Nicht goes in front of gern"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Which sentence with «wenn» (if) is correct?",
+     "choice": {
+      "options": [
+       "Wenn ich Geld hätte, ich würde eine Konsole kaufen",
+       "Wenn ich hätte Geld, würde ich eine Konsole kaufen",
+       "Wenn ich Geld hätte, würde ich eine Konsole gekauft",
+       "Wenn ich Geld hätte, würde ich eine Konsole kaufen"
+      ],
+      "correct": 3
+     },
+     "solution": "Wenn sends hätte to the end; the main clause starts with würde, and kaufen goes to the end",
+     "hint": "Watch the word order in both halves of the sentence"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Translate into German: «I play the guitar»",
+     "short": {
+      "accept": [
+       "ich spiele Gitarre",
+       "ich spiele die Gitarre"
+      ],
+      "reject": [
+       "ich spiele Gitarren",
+       "ich spielt Gitarre",
+       "ich spielen Gitarre"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ich spielt Gitarre": "With ich, the verb ends in -e: spiele"
+      }
+     },
+     "solution": "Ich spiele Gitarre (German usually leaves out the article with instruments)",
+     "hint": "Use the ich form of spielen"
+    },
+    {
+     "id": "c31",
+     "level": 5,
+     "text": "Translate into German using the Perfekt: «she watched a film»",
+     "short": {
+      "accept": [
+       "sie hat einen Film gesehen",
+       "sie hat einen Film geschaut",
+       "sie hat sich einen Film angesehen",
+       "sie hat sich einen Film angeschaut"
+      ],
+      "reject": [
+       "sie ist einen Film gesehen",
+       "sie hat ein Film gesehen",
+       "sie hat einen Film gesieht",
+       "sie hat gesehen einen Film"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sie ist einen Film gesehen": "Sehen takes haben, not sein",
+       "sie hat ein Film gesehen": "Film is masculine and the object, so einen",
+       "sie hat gesehen einen Film": "The past participle goes to the end"
+      }
+     },
+     "solution": "Sehen takes haben; Film is masculine accusative (einen); the participle goes to the end",
+     "hint": "Sehen uses haben, and Film is masculine"
+    },
+    {
+     "id": "c32",
+     "level": 5,
+     "text": "Translate into German: «we are going to the restaurant»",
+     "short": {
+      "accept": [
+       "wir gehen ins Restaurant",
+       "wir gehen in das Restaurant",
+       "wir gehen zum Restaurant"
+      ],
+      "reject": [
+       "wir gehen im Restaurant",
+       "wir gehen in dem Restaurant",
+       "wir geht ins Restaurant"
+      ],
+      "form": "strict",
+      "feedback": {
+       "wir gehen im Restaurant": "Im shows position; movement into a place needs ins (accusative)",
+       "wir gehen in dem Restaurant": "Movement into a place needs the accusative: in das (ins)",
+       "wir geht ins Restaurant": "With wir, the verb is gehen"
+      }
+     },
+     "solution": "Movement into a place takes the accusative: in das = ins Restaurant",
+     "hint": "Movement into a place uses the accusative"
+    }
+   ]
+  },
+  {
+   "id": "german.world",
+   "title": "Travel & the world",
+   "aliases": [
+    "german holidays",
+    "holidays",
+    "travel",
+    "town",
+    "local area",
+    "home",
+    "environment",
+    "global issues",
+    "weather",
+    "directions",
+    "transport",
+    "shopping"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What does «der Strand» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "beach",
+       "seaside"
+      ],
+      "form": "any"
+     },
+     "solution": "Der Strand = the beach",
+     "hint": "You find sand and the sea there"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "What does «der Bahnhof» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "station",
+       "railway station",
+       "train station"
+      ],
+      "form": "any"
+     },
+     "solution": "Der Bahnhof = the (railway) station",
+     "hint": "You catch a train there"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "Which is the German for «it is raining»?",
+     "choice": {
+      "options": [
+       "es regnet",
+       "es schneit",
+       "es ist sonnig",
+       "es ist windig"
+      ],
+      "correct": 0
+     },
+     "solution": "Es regnet = it is raining; es schneit = it is snowing, es ist sonnig = it is sunny, es ist windig = it is windy",
+     "hint": "Think of der Regen (rain)"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "What does «die Bäckerei» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "bakery",
+       "baker's",
+       "bakers",
+       "baker's shop"
+      ],
+      "form": "any"
+     },
+     "solution": "Die Bäckerei = the bakery (der Bäcker = the baker)",
+     "hint": "You buy bread and rolls there"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "Which word means «the plane»?",
+     "choice": {
+      "options": [
+       "das Schiff",
+       "das Flugzeug",
+       "das Auto",
+       "der Reisebus"
+      ],
+      "correct": 1
+     },
+     "solution": "Das Flugzeug = the plane; das Schiff = the ship, das Auto = the car, der Reisebus = the coach",
+     "hint": "Fliegen means to fly"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "What does «das Rathaus» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "town hall",
+       "city hall"
+      ],
+      "form": "any"
+     },
+     "solution": "Das Rathaus = the town hall",
+     "hint": "The mayor (der Bürgermeister) works there"
+    },
+    {
+     "id": "w07",
+     "level": 1,
+     "text": "Which word means «the bedroom»?",
+     "choice": {
+      "options": [
+       "die Küche",
+       "das Badezimmer",
+       "das Schlafzimmer",
+       "das Wohnzimmer"
+      ],
+      "correct": 2
+     },
+     "solution": "Das Schlafzimmer = the bedroom; die Küche = the kitchen, das Badezimmer = the bathroom, das Wohnzimmer = the living room",
+     "hint": "Schlafen means to sleep"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "False friend! What does «der Rock» mean?",
+     "choice": {
+      "options": [
+       "the rock",
+       "the jacket",
+       "the shirt",
+       "the skirt"
+      ],
+      "correct": 3,
+      "feedback": [
+       "False friend: a rock is der Felsen or der Stein",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "False friend: der Rock = the skirt; a rock is der Felsen or der Stein",
+     "hint": "It's an item of clothing"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "Translate into German. Include the definite article (der, die or das): the library",
+     "short": {
+      "accept": [
+       "die Bibliothek",
+       "die Bücherei"
+      ],
+      "reject": [
+       "der Bibliothek",
+       "das Bibliothek",
+       "die Buchhandlung"
+      ],
+      "form": "strict",
+      "feedback": {
+       "die Buchhandlung": "Die Buchhandlung is a bookshop"
+      }
+     },
+     "solution": "Die Bibliothek (or die Bücherei) = the library; a bookshop is die Buchhandlung",
+     "hint": "It is feminine, and it is not the word for a bookshop"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "Choose the correct word: «Die Bank ist ___ dem Kino.» (next to)",
+     "choice": {
+      "options": [
+       "neben",
+       "gegenüber",
+       "hinter",
+       "unter"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Gegenüber means opposite",
+       "Hinter means behind",
+       null
+      ]
+     },
+     "solution": "Neben = next to; gegenüber = opposite, hinter = behind, unter = under",
+     "hint": "This preposition shows that something is beside something else"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "Translate into German. Include the definite article (der, die or das): the car",
+     "short": {
+      "accept": [
+       "das Auto",
+       "der Wagen"
+      ],
+      "reject": [
+       "der Auto",
+       "die Auto"
+      ],
+      "form": "strict",
+      "feedback": {
+       "der Auto": "Auto is neuter, so das",
+       "die Auto": "Auto is neuter, so das"
+      }
+     },
+     "solution": "Auto is neuter: das Auto (der Wagen also means car)",
+     "hint": "Is Auto masculine, feminine or neuter?"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "Choose the correct word: «Ich fahre ___ Spanien.» (to Spain)",
+     "choice": {
+      "options": [
+       "in",
+       "nach",
+       "zu",
+       "bei"
+      ],
+      "correct": 1,
+      "feedback": [
+       "In + dative means in a country, not going to it",
+       null,
+       "Zu is used for people and buildings",
+       null
+      ]
+     },
+     "solution": "Travelling to most countries and towns uses nach: nach Spanien",
+     "hint": "Most countries without an article use the same preposition as towns"
+    },
+    {
+     "id": "w13",
+     "level": 2,
+     "text": "What does «die Kreuzung» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "crossroads",
+       "junction",
+       "intersection",
+       "crossing"
+      ],
+      "form": "any"
+     },
+     "solution": "Die Kreuzung = the crossroads (junction)",
+     "hint": "It's where two roads cross"
+    },
+    {
+     "id": "w14",
+     "level": 2,
+     "text": "Which word means «on the left»?",
+     "choice": {
+      "options": [
+       "rechts",
+       "geradeaus",
+       "links",
+       "gegenüber"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Rechts means on the right",
+       "Geradeaus means straight on",
+       null,
+       null
+      ]
+     },
+     "solution": "Links = on the left; rechts = on the right, geradeaus = straight on, gegenüber = opposite",
+     "hint": "It is the opposite of rechts"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "What does «Es ist heiß und sonnig» mean?",
+     "choice": {
+      "options": [
+       "It is cold and sunny",
+       "It is hot and windy",
+       "It is cloudy and hot",
+       "It is hot and sunny"
+      ],
+      "correct": 3
+     },
+     "solution": "Heiß = hot; sonnig = sunny",
+     "hint": "Sonnig contains the word Sonne (sun)"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "Read: «Ich fahre mit dem Rad zur Schule.» How does the speaker travel to school? Answer in English.",
+     "short": {
+      "accept": [
+       "by bike",
+       "bike",
+       "by bicycle",
+       "bicycle",
+       "cycling",
+       "on a bike",
+       "on my bike",
+       "by cycle"
+      ],
+      "form": "any"
+     },
+     "solution": "Mit dem Rad = by bike",
+     "hint": "It has two wheels and pedals"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "Read: «Letzten Sommer bin ich mit meiner Familie nach Italien gefahren.» Which country did the speaker visit? Answer in English.",
+     "short": {
+      "accept": [
+       "Italy"
+      ],
+      "form": "any"
+     },
+     "solution": "Italien = Italy",
+     "hint": "Its capital is Rome"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "What does «Der Bahnhof ist gegenüber der Bank» mean?",
+     "choice": {
+      "options": [
+       "The station is opposite the bank",
+       "The station is next to the bank",
+       "The station is behind the bank",
+       "The bank is opposite the post office"
+      ],
+      "correct": 0
+     },
+     "solution": "Gegenüber = opposite: the station is opposite the bank",
+     "hint": "Gegenüber is a preposition of place: think of facing something"
+    },
+    {
+     "id": "w19",
+     "level": 3,
+     "text": "Read: «In meiner Stadt gibt es zu viel Verkehr.» What problem does the town have? Answer in English.",
+     "short": {
+      "accept": [
+       "traffic",
+       "too much traffic"
+      ],
+      "form": "any"
+     },
+     "solution": "Der Verkehr = traffic: there is too much traffic",
+     "hint": "Think of cars, buses and lorries on the roads"
+    },
+    {
+     "id": "w20",
+     "level": 3,
+     "text": "Read: «Um die Umwelt zu schützen, recycle ich und fahre mit dem Bus.» What does the speaker do?",
+     "choice": {
+      "options": [
+       "Recycles and walks to school",
+       "Recycles and takes the bus",
+       "Saves water and takes the bus",
+       "Turns off the lights and recycles"
+      ],
+      "correct": 1
+     },
+     "solution": "Ich recycle = I recycle; ich fahre mit dem Bus = I go by bus",
+     "hint": "Find the two verbs after um die Umwelt zu schützen"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "Complete with the past participle of «fliegen»: «Meine Eltern sind gestern nach Rom ___.» Type the past participle only.",
+     "short": {
+      "accept": [
+       "geflogen"
+      ],
+      "reject": [
+       "gefliegt",
+       "gefliegen",
+       "fliegen",
+       "geflogt"
+      ],
+      "form": "strict",
+      "feedback": {
+       "fliegen": "Use the past participle, not the infinitive",
+       "gefliegt": "Fliegen is a strong verb: its participle ends in -en with a vowel change"
+      }
+     },
+     "solution": "Fliegen is a strong verb: sie sind geflogen",
+     "hint": "Fliegen is irregular: the vowel changes in the past participle"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "Choose the correct ending: «Wenn das Wetter morgen schön ist, ___»",
+     "choice": {
+      "options": [
+       "wir fahren an den Strand",
+       "wir an den Strand fahren",
+       "fahren wir an den Strand",
+       "fahren an den Strand wir"
+      ],
+      "correct": 2,
+      "feedback": [
+       "After a wenn clause, the verb must come straight after the comma",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "After a wenn clause, the main clause starts with the verb: …, fahren wir an den Strand",
+     "hint": "The whole wenn clause counts as the first idea, so the verb comes next"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "Complete with the present tense of «nehmen»: «Mein Vater ___ den Zug nach Berlin.» Type the verb only.",
+     "short": {
+      "accept": [
+       "nimmt"
+      ],
+      "reject": [
+       "nehmt",
+       "nehme",
+       "nimm",
+       "nehmen"
+      ],
+      "form": "strict",
+      "feedback": {
+       "nehmt": "Nehmt goes with ihr",
+       "nimm": "Nimm is the command form (take!)"
+      }
+     },
+     "solution": "Nehmen is irregular: er nimmt",
+     "hint": "Nehmen changes its vowel and doubles a consonant with er"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "Choose the correct adjective ending: «Ich wohne in einem ___ Haus.» (big)",
+     "choice": {
+      "options": [
+       "große",
+       "großes",
+       "großer",
+       "großen"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Großes is used after ein in the nominative or accusative; einem is dative",
+       null,
+       null
+      ]
+     },
+     "solution": "After einem (dative), the adjective ends in -en: in einem großen Haus",
+     "hint": "In + dative shows position; adjectives after einem end in -en"
+    },
+    {
+     "id": "w25",
+     "level": 4,
+     "text": "Complete with the simple past (Präteritum) of «regnen»: «Im Urlaub ___ es jeden Tag.» Type the verb only.",
+     "short": {
+      "accept": [
+       "regnete"
+      ],
+      "reject": [
+       "regnet",
+       "geregnet",
+       "regnte"
+      ],
+      "form": "strict",
+      "feedback": {
+       "regnet": "Regnet is the present",
+       "geregnet": "Geregnet is the past participle (Perfekt)"
+      }
+     },
+     "solution": "Regular verb in the simple past: es regnete",
+     "hint": "Regular verbs add -te in the simple past"
+    },
+    {
+     "id": "w26",
+     "level": 4,
+     "text": "Which sentence means «I bought it yesterday» (it = das T-Shirt)?",
+     "choice": {
+      "options": [
+       "Ich habe es gestern gekauft",
+       "Ich habe ihn gestern gekauft",
+       "Ich habe sie gestern gekauft",
+       "Ich habe ihm gestern gekauft"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Ihn replaces a masculine noun",
+       "Sie replaces a feminine or plural noun",
+       "Ihm is dative"
+      ]
+     },
+     "solution": "T-Shirt is neuter (das T-Shirt), so the pronoun is es",
+     "hint": "Das T-Shirt is neuter"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "Which sentence about last year is correct?",
+     "choice": {
+      "options": [
+       "Letztes Jahr haben wir nach Spanien gefahren",
+       "Letztes Jahr sind wir nach Spanien gefahren",
+       "Letztes Jahr wir sind nach Spanien gefahren",
+       "Letztes Jahr sind wir nach Spanien fahren"
+      ],
+      "correct": 1
+     },
+     "solution": "Fahren takes sein, the verb comes second, and the participle gefahren goes at the end",
+     "hint": "Check the auxiliary, the word order and the participle"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "Which is the correct translation of «We must protect the environment»?",
+     "choice": {
+      "options": [
+       "Wir müssen schützen die Umwelt",
+       "Wir muss die Umwelt schützen",
+       "Wir müssen die Umwelt schützen",
+       "Wir müssen die Umwelt geschützt"
+      ],
+      "correct": 2
+     },
+     "solution": "Müssen + infinitive at the end: Wir müssen die Umwelt schützen",
+     "hint": "After a modal verb, the infinitive goes to the end"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "Read: «Früher gab es ein Kino in meinem Dorf, aber jetzt gibt es nichts mehr.» Which statement is true?",
+     "choice": {
+      "options": [
+       "There is a new cinema in the village",
+       "There has never been a cinema in the village",
+       "The cinema is going to close soon",
+       "There used to be a cinema, but now there is nothing"
+      ],
+      "correct": 3
+     },
+     "solution": "Früher gab es = there used to be; jetzt gibt es nichts mehr = now there is nothing any more",
+     "hint": "Compare früher (in the past) with jetzt (now)"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "Translate into German using the Perfekt: «I went to the beach»",
+     "short": {
+      "accept": [
+       "ich bin an den Strand gegangen",
+       "ich bin zum Strand gegangen",
+       "ich bin an den Strand gefahren",
+       "ich bin zum Strand gefahren"
+      ],
+      "reject": [
+       "ich habe an den Strand gegangen",
+       "ich bin an dem Strand gegangen",
+       "ich bin am Strand gegangen",
+       "ich habe zum Strand gegangen"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ich habe an den Strand gegangen": "Gehen takes sein, not haben",
+       "ich habe zum Strand gegangen": "Gehen takes sein, not haben",
+       "ich bin an dem Strand gegangen": "Movement needs the accusative: an den Strand",
+       "ich bin am Strand gegangen": "Am Strand shows position; movement needs an den Strand"
+      }
+     },
+     "solution": "Gehen and fahren take sein; an den Strand (accusative) or zum Strand shows movement",
+     "hint": "Use sein, and remember that movement takes the accusative"
+    },
+    {
+     "id": "w31",
+     "level": 5,
+     "text": "Translate into German using werden + infinitive: «it will rain»",
+     "short": {
+      "accept": [
+       "es wird regnen"
+      ],
+      "reject": [
+       "es werde regnen",
+       "es wird regnet",
+       "es regnet"
+      ],
+      "form": "strict",
+      "feedback": {
+       "es regnet": "Es regnet is the present (it is raining)"
+      }
+     },
+     "solution": "Es wird + infinitive: es wird regnen",
+     "hint": "Use the es form of werden, then the infinitive"
+    },
+    {
+     "id": "w32",
+     "level": 5,
+     "text": "Translate into German: «there is a lot of traffic»",
+     "short": {
+      "accept": [
+       "es gibt viel Verkehr",
+       "es ist viel Verkehr"
+      ],
+      "reject": [
+       "es gibt viele Verkehr",
+       "es gibt viel Verkehre"
+      ],
+      "form": "strict",
+      "feedback": {
+       "es gibt viele Verkehr": "Verkehr is uncountable, so use viel, not viele"
+      }
+     },
+     "solution": "Es gibt = there is; Verkehr is uncountable, so viel (not viele)",
+     "hint": "Use es gibt, and the word for a lot that goes with an uncountable noun"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "german.y{year}.grammar",
+      "label": "Grammar & tenses",
+      "skills": [
+       "german.grammar"
+      ]
+     },
+     {
+      "id": "german.y{year}.people",
+      "label": "People & lifestyle",
+      "skills": [
+       "german.people"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "german.y{year}.culture",
+      "label": "Free time & culture",
+      "skills": [
+       "german.culture"
+      ]
+     },
+     {
+      "id": "german.y{year}.world",
+      "label": "Travel & the world",
+      "skills": [
+       "german.world"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

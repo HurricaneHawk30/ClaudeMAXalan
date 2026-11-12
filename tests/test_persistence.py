@@ -1,3 +1,4 @@
+import json
 import os
 import random
 import sqlite3
@@ -328,6 +329,132 @@ class TestStorePendingAttemptsFlags(StoreCase):
         self.assertIsNotNone(self.s.get_student(6))
         self.assertEqual(self.s.get_level(6, "maths", "t"), 3)
         self.s.delete_student_data(12345)      # unknown chat is fine
+
+
+V1_SCHEMA = """
+CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS codes (
+  code TEXT PRIMARY KEY, created_at REAL NOT NULL, used_by INTEGER, used_at REAL);
+CREATE TABLE IF NOT EXISTS students (
+  chat_id INTEGER PRIMARY KEY, first_name TEXT NOT NULL DEFAULT '', username TEXT NOT NULL DEFAULT '',
+  verified INTEGER NOT NULL DEFAULT 0,
+  step TEXT NOT NULL DEFAULT 'code' CHECK (step IN ('code','year','subject','topic','own_topic','lesson')),
+  year INTEGER NOT NULL DEFAULT 11, subject TEXT, topic TEXT,
+  created_at REAL NOT NULL, last_seen REAL NOT NULL);
+CREATE TABLE IF NOT EXISTS progress (
+  chat_id INTEGER NOT NULL, subject TEXT NOT NULL, topic TEXT NOT NULL,
+  level INTEGER NOT NULL CHECK (level BETWEEN 1 AND 5), PRIMARY KEY (chat_id, subject, topic));
+CREATE TABLE IF NOT EXISTS pending (
+  chat_id INTEGER PRIMARY KEY, subject TEXT NOT NULL, topic TEXT NOT NULL, skill TEXT NOT NULL,
+  level INTEGER NOT NULL, gen_level INTEGER NOT NULL, seed INTEGER NOT NULL, problem_no INTEGER NOT NULL,
+  problem_json TEXT NOT NULL, hints_given INTEGER NOT NULL DEFAULT 0, created_at REAL NOT NULL);
+CREATE TABLE IF NOT EXISTS attempts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, chat_id INTEGER NOT NULL, subject TEXT NOT NULL, topic TEXT NOT NULL,
+  skill TEXT NOT NULL, level INTEGER NOT NULL, gen_level INTEGER NOT NULL,
+  correct INTEGER NOT NULL, skipped INTEGER NOT NULL DEFAULT 0, ts REAL NOT NULL);
+CREATE INDEX IF NOT EXISTS attempts_chat_ts ON attempts (chat_id, ts);
+CREATE TABLE IF NOT EXISTS flags (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, chat_id INTEGER NOT NULL, kind TEXT NOT NULL,
+  text TEXT NOT NULL, ts REAL NOT NULL, reviewed INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE IF NOT EXISTS llm_usage (
+  chat_id INTEGER NOT NULL, day TEXT NOT NULL, calls INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (chat_id, day));
+"""
+
+V1_PROBLEM = {"skill_id": "maths.percentages", "level": 2, "seed": 77, "text": "What is 10% of 50?",
+              "answer": {"kind": "number", "display": "5", "value": 5.0, "dp": None, "sf": None, "form": "any",
+                         "ordered": False, "var": "x", "mark_scheme": "", "max_marks": 0},
+              "solution": "10% of 50 = 5", "hint": "Divide by 10", "mistakes": []}      # a v1 row: no "ref"
+
+
+class TestSchemaMigration(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.path = os.path.join(self.tmp.name, "v1.db")
+
+    def build_v1(self, version="1"):
+        conn = sqlite3.connect(self.path)
+        conn.executescript(V1_SCHEMA)
+        conn.execute("INSERT INTO meta (key, value) VALUES ('schema_version', ?)", (version,))
+        conn.execute("INSERT INTO students (chat_id, verified, step, year, subject, topic, created_at, last_seen) "
+                     "VALUES (5, 1, 'lesson', 11, 'maths', 'maths.y11.foundation_number', 1.0, 2.0)")
+        conn.execute("INSERT INTO pending (chat_id, subject, topic, skill, level, gen_level, seed, problem_no, problem_json, "
+                     "hints_given, created_at) VALUES (5, 'maths', 'maths.y11.foundation_number', 'maths.percentages', 2, 2, "
+                     "77, 3, ?, 0, 3.0)", (json.dumps(V1_PROBLEM),))
+        conn.execute("INSERT INTO progress (chat_id, subject, topic, level) VALUES (5, 'maths', 'maths.y11.foundation_number', 2)")
+        conn.commit()
+        conn.close()
+
+    def version(self, store):
+        return store.conn.execute("SELECT value FROM meta WHERE key = 'schema_version'").fetchone()[0]
+
+    def test_v1_database_is_migrated_to_version_2(self):
+        self.build_v1()
+        store = Store(self.path)
+        self.addCleanup(store.close)
+        self.assertEqual(self.version(store), "2")
+        tables = {r[0] for r in store.conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")}
+        self.assertIn("seen", tables)
+        cols = [r[1] for r in store.conn.execute("PRAGMA table_info(seen)")]
+        self.assertEqual(cols, ["id", "chat_id", "skill", "fp"])
+        idx = {r[0] for r in store.conn.execute("SELECT name FROM sqlite_master WHERE type = 'index'")}
+        self.assertIn("seen_chat_skill", idx)
+
+    def test_v1_pending_row_loads_with_empty_ref(self):
+        self.build_v1()
+        store = Store(self.path)
+        self.addCleanup(store.close)
+        p = store.get_pending(5)
+        self.assertIsNotNone(p)
+        self.assertEqual(p.problem.ref, "")
+        self.assertEqual((p.problem.skill_id, p.problem.text, p.problem_no, p.seed), ("maths.percentages", "What is 10% of 50?", 3, 77))
+        self.assertEqual(p.problem.answer.display, "5")
+        self.assertEqual(store.get_level(5, "maths", "maths.y11.foundation_number"), 2)
+        self.assertTrue(store.get_student(5).verified)
+
+    def test_v1_data_survives_and_seen_is_usable(self):
+        self.build_v1()
+        store = Store(self.path)
+        self.addCleanup(store.close)
+        self.assertEqual(store.recent_seen(5, "maths.percentages"), [])
+        store.add_seen(5, "maths.percentages", "t:abc")
+        self.assertEqual(store.recent_seen(5, "maths.percentages"), ["t:abc"])
+
+    def test_engine_continues_a_v1_lesson(self):
+        import random as _r
+        from tutor.engine import Engine
+        self.build_v1()
+        store = Store(self.path)
+        self.addCleanup(store.close)
+        engine = Engine(store, Config(owner_id=999, db_path=self.path), registry=helpers.shared_registry(), llm=None,
+                        clock=FakeClock(START + 60), rng=_r.Random(3))
+        out = send(engine, 5, "5")
+        self.assertEqual(out[0].text, CORRECT("10% of 50 = 5"))
+        self.assertEqual(store.get_pending(5).problem_no, 4)
+
+    def test_reopening_is_idempotent_and_fresh_db_is_version_2(self):
+        Store(self.path).close()
+        store = Store(self.path)
+        self.addCleanup(store.close)
+        self.assertEqual(self.version(store), "2")
+        store.close()
+        store = Store(self.path)
+        self.addCleanup(store.close)
+        self.assertEqual(self.version(store), "2")
+        self.assertEqual(store.conn.execute("SELECT COUNT(*) FROM meta WHERE key = 'schema_version'").fetchone()[0], 1)
+        mem = Store(":memory:")
+        self.addCleanup(mem.close)
+        self.assertEqual(self.version(mem), "2")
+
+    def test_newer_version_warns_and_continues(self):
+        self.build_v1(version="3")
+        with self.assertLogs(level="WARNING"):
+            store = Store(self.path)
+        self.addCleanup(store.close)
+        self.assertEqual(self.version(store), "3")
+        self.assertIsNotNone(store.get_pending(5))
+        store.add_seen(5, "s", "x")
+        self.assertEqual(store.recent_seen(5, "s"), ["x"])
 
 
 if __name__ == "__main__":

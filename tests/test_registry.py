@@ -1,6 +1,11 @@
+import json
+import os
+import tempfile
+import time
 import unittest
 
 import helpers
+import spec
 from tutor.content import (Answer, Problem, Registry, RegistryError, Skill, Subject, Topic, YearSpec,
                            load_registry, PAST_PAPER_LABEL, MY_OWN_TOPIC_LABEL)
 
@@ -54,7 +59,7 @@ class TestLoaded(unittest.TestCase):
         for y in (7, 8, 9):
             self.assertEqual(titles(y), ["Maths"], y)
         for y in (10, 11):
-            self.assertEqual(titles(y), ["Maths", "Physics"], y)
+            self.assertEqual(titles(y), helpers.SUBJECT_TITLES_10_11, y)          # section 4, in order
         for y in (1, 6, 12, 13, 0, -1, 99):
             self.assertEqual(self.reg.subjects_for_year(y), [], y)
 
@@ -64,7 +69,12 @@ class TestLoaded(unittest.TestCase):
         p = self.reg.subject("physics")
         self.assertEqual((p.id, p.title, p.order), ("physics", "Physics", 20))
         self.assertIsNone(self.reg.subject("english"))
+        self.assertEqual(self.reg.subject("english_literature").title, "English Literature")
         self.assertEqual(sorted(self.reg.subject("physics").years), [10, 11])
+        self.assertEqual(len(helpers.SUBJECT_TITLES_10_11), 35)
+        self.assertEqual([s.order for s in self.reg.subjects_for_year(11)],
+                         [x["order"] for x in spec.SUBJECTS])
+        self.assertEqual([s.id for s in self.reg.subjects_for_year(10)], [x["id"] for x in spec.SUBJECTS])
 
     def test_topic_rows_maths(self):
         for y in (10, 11):
@@ -80,6 +90,32 @@ class TestLoaded(unittest.TestCase):
         for y in (10, 11):
             self.assertEqual(self.reg.topic_rows("physics", y),
                              [("Forces & motion", "Energy"), ("Electricity", "Density & pressure")])
+
+    def test_topic_rows_of_every_new_subject(self):
+        fails = []
+        for s in spec.SUBJECTS:
+            if s["rows"] is None:
+                continue
+            want = [tuple(lbl for lbl, _, _ in row) for row in s["rows"]]
+            for y in (10, 11):
+                got = self.reg.topic_rows(s["id"], y)
+                if got != want:
+                    fails.append(f"[{s['owner']}] {s['id']} Y{y}: {got} != {want}")
+            for y in (7, 8, 9, 12, 13):
+                if self.reg.topic_rows(s["id"], y):
+                    fails.append(f"[{s['owner']}] {s['id']} Y{y}: must have no topics")
+        self.assertEqual(fails, [], "\n".join(fails[:10]))
+
+    def test_new_subject_past_paper_topics(self):
+        fails = []
+        for s in spec.SUBJECTS:
+            if s["rows"] is None:
+                continue
+            for y in (10, 11):
+                t = self.reg.topic_by_label(s["id"], y, PAST_PAPER_LABEL)
+                if t is None or not t.exam or t.id != f"{s['id']}.y{y}.past_paper" or t.level_map != (2, 3, 3, 4, 5):
+                    fails.append(f"[{s['owner']}] {s['id']} Y{y}: {t}")
+        self.assertEqual(fails, [], "\n".join(fails[:10]))
 
     def test_physics_absent_for_years_7_to_9_and_unknown_gives_empty(self):
         for y in (7, 8, 9, 12, 13, 5):
@@ -277,6 +313,97 @@ class TestLoaded(unittest.TestCase):
         self.assertEqual(res[0], "maths.percentages")
         self.assertIn("maths.ratio", res)
         self.assertEqual(len(res), len(set(res)))
+
+
+class TestV2Loading(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+
+    def broken(self, text="{ this is not json"):
+        path = os.path.join(self.tmp.name, "broken.json")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
+        return path
+
+    def test_strict_load_raises_on_a_broken_extra_bank(self):
+        with self.assertRaises(Exception):
+            load_registry([self.broken()])
+        with self.assertRaises(Exception):
+            load_registry([self.broken('{"subject": {"id": "x"}}')])
+        with self.assertRaises(Exception):
+            load_registry([os.path.join(self.tmp.name, "missing.json")])
+
+    def test_strict_is_the_default(self):
+        with self.assertRaises(Exception):
+            load_registry(banks=[self.broken()], strict=True)
+
+    def test_non_strict_skips_the_broken_source_and_collects_errors(self):
+        with self.assertLogs(level="WARNING"):
+            reg = load_registry([self.broken()], strict=False)
+        self.assertEqual(len(reg.load_errors), 1)
+        msg = reg.load_errors[0]
+        self.assertTrue(msg.startswith("subject source "), msg)
+        self.assertIn(" failed: ", msg)
+        self.assertEqual([s.title for s in reg.subjects_for_year(10)][:2], ["Maths", "English Language"])
+        self.assertIsNotNone(reg.skill("maths.pythagoras"))
+
+    def test_non_strict_good_bank_plus_bad_bank(self):
+        good = os.path.join(helpers.FIXTURES, "bank_sample.json")
+        with self.assertLogs(level="WARNING"):
+            reg = load_registry([self.broken(), good], strict=False)
+        self.assertEqual(len(reg.load_errors), 1)
+        self.assertIsNotNone(reg.skill("testsubj.adding"))
+
+    def test_shipped_content_loads_without_errors_when_non_strict(self):
+        reg = load_registry(strict=False)
+        self.assertEqual(reg.load_errors, [], "\n".join(reg.load_errors))
+
+    def test_load_errors_empty_for_strict_registry(self):
+        self.assertEqual(load_registry().load_errors, [])
+
+    def test_load_registry_is_fast(self):
+        t0 = time.time()
+        load_registry()
+        self.assertLess(time.time() - t0, 10.0)
+
+    def test_extra_bank_duplicating_a_subject_fails_strictly(self):
+        path = os.path.join(helpers.FIXTURES, "bank_sample.json")
+        with self.assertRaises(Exception):
+            load_registry([path, path])
+
+
+class TestV2Labels(unittest.TestCase):
+    def test_letters_a_to_e_are_reserved(self):
+        for lbl in ("A", "B", "C", "D", "E"):
+            with self.subTest(label=lbl):
+                with self.assertRaises(RegistryError):
+                    one_subject(((topic("t1", lbl, ["s.a"]),),))
+        one_subject(((topic("t1", "F", ["s.a"]),),))               # only A-E
+
+    def test_labels_are_dash_insensitive(self):
+        reg = one_subject(((topic("t1", "Germany 1890–1945", ["s.a"]),),))
+        for text in ("Germany 1890–1945", "germany 1890-1945", "Germany 1890—1945", "  GERMANY 1890-1945 "):
+            with self.subTest(text=text):
+                t = reg.topic_by_label("s", 10, text)
+                self.assertIsNotNone(t)
+                self.assertEqual(t.id, "t1")
+
+    def test_dash_variants_collide_as_duplicate_labels(self):
+        with self.assertRaises(RegistryError):
+            one_subject(((topic("t1", "Germany 1890–1945", ["s.a"]),), (topic("t2", "Germany 1890-1945", ["s.b"]),)))
+
+    def test_aliases_are_accent_insensitive(self):
+        reg = one_subject(((topic("t1", "T", ["s.a"]),),), [sk("s.a", ["passé composé", "foo"]), sk("s.b", ["zzz"])])
+        for text in ("passe compose", "PASSÉ COMPOSÉ", "help with passe compose please", "passé composé"):
+            with self.subTest(text=text):
+                self.assertEqual(reg.match_skills("s", text), ["s.a"])
+        self.assertEqual(reg.match_skills("s", "passe composee"), [])
+
+    def test_shipped_french_alias_without_accents(self):
+        reg = load_registry()
+        res = reg.match_skills("french", "passe compose")
+        self.assertTrue(res and res[0] == "french.grammar", f"[content-5a Languages-a] {res}")
 
 
 class TestMatchOrdering(unittest.TestCase):

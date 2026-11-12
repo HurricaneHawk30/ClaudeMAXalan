@@ -22,11 +22,11 @@ def user_msg(p, student_text):
 
 
 class LLMEngineCase(unittest.TestCase):
-    def mk(self, responses=(), limit=40, registry=None, global_limit=1000):
+    def mk(self, responses=(), limit=40, registry=None, global_limit=1000, llm_marking=False):
         self.llm = FakeLLM(responses)
         self.engine, self.store, self.clock = make_engine(llm=self.llm, limit=limit,
                                                           registry=registry or demo_registry(), flood=100000,
-                                                          global_limit=global_limit)
+                                                          global_limit=global_limit, llm_marking=llm_marking)
         self.addCleanup(self.store.close)
 
     def adding(self, chat=CH):
@@ -250,6 +250,19 @@ class TestDailyLimit(LLMEngineCase):
 
 
 class TestRubricViaEngine(LLMEngineCase):
+    def mk(self, responses=(), **kw):
+        kw.setdefault("llm_marking", True)           # v2: rubric marking is off unless TUTOR_LLM_MARKING is set
+        super().mk(responses, **kw)
+
+    def test_rubric_not_marked_when_llm_marking_is_off(self):
+        self.mk(['{"marks": 2, "feedback": "Great"}'], llm_marking=False)
+        self.written()
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, "Plants use light energy to make food")
+        self.assertEqual(out[0].text, UNMARKABLE(p.problem.answer.display))
+        self.assertEqual(self.llm.calls, [])
+        self.assertEqual(self.store.recent_attempts(CH), [])
+
     def written(self):
         to_demo_topic(self.engine, CH, "Written")
         return self.store.get_pending(CH)
@@ -300,6 +313,85 @@ class TestRubricViaEngine(LLMEngineCase):
         to_demo_topic(engine, CH, "Written")
         d = store.get_pending(CH).problem.answer.display
         self.assertEqual(send(engine, CH, "my essay")[0].text, UNMARKABLE(d))
+
+
+class TestV2ChatAndLeaks(LLMEngineCase):
+    def test_choice_unparsed_uses_llm_chat_with_letter_row(self):
+        from helpers import v2_registry, to_v2_topic, v2_kb
+        reg = v2_registry()
+        self.mk(["Think about where cells release energy"], registry=reg)
+        to_v2_topic(self.engine, CH, "Choice")
+        out = send(self.engine, CH, "can you explain what an organelle is?")
+        self.assertEqual(snap(out), [S(CH, "Think about where cells release energy", v2_kb(reg, 4))])
+
+    def test_choice_chat_that_leaks_the_option_falls_back_to_choice_unparsed(self):
+        from helpers import v2_registry, to_v2_topic, v2_kb, CHOICE_UNPARSED
+        reg = v2_registry()
+        self.mk(["It is the mitochondria of course"], registry=reg)
+        to_v2_topic(self.engine, CH, "Choice")
+        out = send(self.engine, CH, "can you explain what an organelle is?")
+        self.assertEqual(snap(out), [S(CH, CHOICE_UNPARSED("A, B, C or D"), v2_kb(reg, 4))])
+
+    def test_short_chat_that_leaks_falls_back_to_short_unparsed(self):
+        from helpers import v2_registry, to_v2_topic, v2_kb, SHORT_UNPARSED
+        reg = v2_registry()
+        self.mk(["It is photosynthesis"], registry=reg)
+        to_v2_topic(self.engine, CH, "Short")
+        out = send(self.engine, CH, "can you explain what a plant needs?")
+        self.assertEqual(snap(out), [S(CH, SHORT_UNPARSED, v2_kb(reg))])
+
+
+class TestLeaksAnswerV2(unittest.TestCase):
+    OPTS = ["Nucleus", "Mitochondria", "Ribosome", "Cell membrane"]
+
+    def choice(self, opts=None, correct=1):
+        opts = opts or self.OPTS
+        return Answer("choice", f"{'ABCDE'[correct]}) {opts[correct]}", {"options": list(opts), "correct": correct})
+
+    def test_choice_option_text_leaks(self):
+        a = self.choice()
+        for t in ("It is the mitochondria", "MITOCHONDRIA!", "so mitochondria it is", "Mitochondria release energy"):
+            with self.subTest(text=t):
+                self.assertTrue(leaks_answer(t, a))
+
+    def test_choice_letter_phrases_leak(self):
+        a = self.choice()
+        for t in ("The answer is B", "answer B", "option b", "Option (B)", "letter B is right", "choice B", "I would pick B) here",
+                  "it is B) for sure"):
+            with self.subTest(text=t):
+                self.assertTrue(leaks_answer(t, a), t)
+
+    def test_choice_does_not_leak_wrong_letters_or_other_options(self):
+        a = self.choice()
+        for t in ("Think about respiration", "Look at option A", "The answer is not A or C", "The letter C is wrong",
+                  "Nucleus is not it", "Where does respiration happen?", "Bobby", "a bee"):
+            with self.subTest(text=t):
+                self.assertFalse(leaks_answer(t, a), t)
+
+    def test_choice_skips_the_v1_value_test(self):
+        a = self.choice(["120", "150", "200"], 1)
+        self.assertTrue(leaks_answer("it is about 150", a))
+        self.assertFalse(leaks_answer("it is about 120", a))
+        self.assertFalse(leaks_answer("", a))
+        short_opts = self.choice(["12", "15", "20"], 1)
+        self.assertFalse(leaks_answer("it is 15", short_opts))             # option text shorter than 3 chars
+
+    def test_short_accept_leaks_as_whole_words(self):
+        a = Answer("short", "photosynthesis", {"accept": ["photosynthesis", "light reaction"], "reject": []})
+        for t in ("It is photosynthesis", "photosynthesis.", "PHOTOSYNTHESIS", "the light reaction maybe"):
+            with self.subTest(text=t):
+                self.assertTrue(leaks_answer(t, a), t)
+        for t in ("Think about light", "photosynthesise", "a reaction to light", "", "photo synthesis"):
+            with self.subTest(text=t):
+                self.assertFalse(leaks_answer(t, a), t)
+
+    def test_short_accept_shorter_than_three_chars_does_not_count(self):
+        a = Answer("short", "O2", {"accept": ["O2"], "reject": []}, form="case")
+        self.assertFalse(leaks_answer("it is O2", a))
+
+    def test_short_normalises_accents_and_punctuation(self):
+        a = Answer("short", "l'été", {"accept": ["l'été"], "reject": []}, form="strict")
+        self.assertTrue(leaks_answer("Say l'été please", a))
 
 
 class TestOwnTopicPick(unittest.TestCase):

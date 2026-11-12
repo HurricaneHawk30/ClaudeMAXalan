@@ -96,6 +96,7 @@ def handle_owner(cmd: str, args: list[str], *, store: Store, now: float, registr
         st.step = "code"
         store.save_student(st)
         store.clear_pending(chat_id)
+        store.clear_seen(chat_id)
         return [T.RESET_OK.format(chat_id=chat_id)]
 
     if cmd == "/flags":

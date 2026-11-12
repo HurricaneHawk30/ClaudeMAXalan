@@ -1,0 +1,82 @@
+{
+ "subject": {
+  "id": "badsub",
+  "title": "Bad Sub",
+  "order": 96
+ },
+ "skills": [
+  {
+   "id": "badsub.sk",
+   "title": "Bad skill",
+   "aliases": [
+    "bad skill",
+    "bad",
+    "badly"
+   ],
+   "questions": [
+    {
+     "id": "q1",
+     "level": 1,
+     "text": "Which organelle releases energy by respiration?",
+     "choice": {
+      "options": [
+       "Nucleus",
+       "Mitochondria",
+       "Ribosome",
+       "Cell membrane"
+      ],
+      "correct": 1,
+      "feedback": [
+       "The nucleus stores the DNA",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Mitochondria release energy",
+     "hint": "Think about where respiration happens"
+    },
+    {
+     "id": "q2",
+     "level": 2,
+     "text": "Name the hydrocarbon family with only single bonds. Give the term.",
+     "short": {
+      "accept": [],
+      "reject": [
+       "alkene"
+      ]
+     },
+     "solution": "Alkanes have single bonds only",
+     "hint": "It ends in ane"
+    },
+    {
+     "id": "q3",
+     "level": 5,
+     "text": "Explain why the sky is blue.",
+     "rubric": {
+      "model_answer": "Blue light scatters most.",
+      "mark_scheme": "1 mark: scattering",
+      "max_marks": 1
+     },
+     "solution": "Blue light is scattered most",
+     "hint": "Think about wavelengths"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10": {
+   "rows": [
+    [
+     {
+      "id": "badsub.y10.t",
+      "label": "Bad topic",
+      "skills": [
+       "badsub.sk"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

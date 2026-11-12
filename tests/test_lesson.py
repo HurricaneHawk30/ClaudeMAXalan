@@ -7,7 +7,10 @@ from helpers import (S, snap, send, make_engine, verify, to_topic, to_demo_topic
                      DEMO_FLAGS, DEMO_TOPIC_KB, TOPIC_KB_MATHS_11, TOPIC_KB_KS3, HIGHER_ALGEBRA, FOUNDATION_NUMBER,
                      CORRECT, WRONG, WHY_FALLBACK, HINT, HINT_AGAIN, SKIP, UNPARSED, OFFTOPIC, UNMARKABLE, ERROR,
                      FORM_SIMPLEST, FORM_STANDARD, PROBLEM, PROBLEM_EXAM, TOPIC_START, TOPIC_ASK, FakeLLM,
-                     CHANGE_YEAR)
+                     CHANGE_YEAR, v2_registry, to_v2_topic, v2_kb, choice_row, FORM_CASE, NOTE_SPELLING,
+                     CORRECT_NOTE, CHOICE_UNPARSED, SHORT_UNPARSED, WHY_FACT, LETTERS_TEXT, PROBLEM_CHOICE,
+                     PROBLEM_CHOICE_EXAM, PROBLEM_SHORT, PROBLEM_SHORT_EXAM, PROBLEM_RUBRIC, CHEAT, DISTRESS, TEXT_ONLY,
+                     V2_FB_NUCLEUS, V2_SOLUTION_CHOICE, V2_SOLUTION_SHORT)
 
 CH = 1
 
@@ -474,6 +477,278 @@ class TestRubricAndErrors(unittest.TestCase):
         out = send(self.engine, CH, p.problem.answer.display)
         self.assertEqual(out[0].text, f"✅ Correct! {p.problem.solution}.")
         self.assertEqual(self.store.get_pending(CH).skill, "demo.add")      # only one skill in the topic
+
+
+class V2Case(unittest.TestCase):
+    def mk(self, kinds=("choice", "choice_plain", "short", "shortcase", "number", "essay"), **kw):
+        self.reg = v2_registry(kinds)
+        self.engine, self.store, self.clock = make_engine(registry=self.reg, flood=100000, **kw)
+        self.addCleanup(self.store.close)
+
+    def start(self, topic, chat=CH):
+        return to_v2_topic(self.engine, chat, topic)
+
+    def letter_of(self, option, chat=CH):
+        return "ABCDE"[self.store.get_pending(chat).problem.answer.value["options"].index(option)]
+
+    def kb(self, out):
+        return None if out.keyboard is None else tuple(tuple(r) for r in out.keyboard)
+
+
+class TestChoiceLesson(V2Case):
+    def setUp(self):
+        self.mk()
+
+    def test_choice_problem_message_and_keyboard(self):
+        out = self.start("Choice")
+        self.assertEqual(out[0].text, TOPIC_START("Choice"))
+        p = self.store.get_pending(CH)
+        self.assertEqual(p.problem.answer.kind, "choice")
+        self.assertEqual(out[1].text, PROBLEM_CHOICE(1, p.problem.text))
+        self.assertEqual(self.kb(out[1]), v2_kb(self.reg, 4))
+        self.assertEqual(self.kb(out[1])[0], ("A", "B", "C", "D"))
+        self.assertTrue(p.problem.ref.startswith("demo2.choice#"))
+
+    def test_tapping_the_letter_marks_and_levels_up(self):
+        self.start("Choice")
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, self.letter_of("Mitochondria"))
+        self.assertEqual(out[0].text, CORRECT(V2_SOLUTION_CHOICE))
+        self.assertEqual(self.store.get_pending(CH).level, 2)
+        self.assertEqual(out[1].text, PROBLEM_CHOICE(2, self.store.get_pending(CH).problem.text))
+        self.assertEqual(self.kb(out[1]), v2_kb(self.reg, 4))
+        self.assertEqual(self.store.get_level(CH, "demo2", "demo2.y11.choice"), 2)
+        self.assertEqual(len(self.store.recent_attempts(CH)), 1)
+
+    def test_lower_case_letter_and_option_text_are_accepted(self):
+        self.start("Choice")
+        out = send(self.engine, CH, self.letter_of("Mitochondria").lower())
+        self.assertEqual(out[0].text, CORRECT(V2_SOLUTION_CHOICE))
+        out = send(self.engine, CH, "mitochondria")
+        self.assertEqual(out[0].text, CORRECT(V2_SOLUTION_CHOICE))
+
+    def test_distractor_feedback_is_used_in_wrong(self):
+        self.start("Choice")
+        send(self.engine, CH, self.letter_of("Mitochondria"))             # level 2
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, self.letter_of("Nucleus"))
+        self.assertEqual(out[0].text, WRONG(V2_FB_NUCLEUS, p.problem.answer.display))
+        self.assertEqual(self.store.get_level(CH, "demo2", "demo2.y11.choice"), 1)
+        self.assertEqual([a.correct for a in self.store.recent_attempts(CH)], [False, True])
+        self.assertEqual(self.kb(out[1]), v2_kb(self.reg, 4))
+
+    def test_why_fact_fallback_without_feedback(self):
+        self.start("Choice plain")
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, self.letter_of("Nucleus"))
+        self.assertEqual(out[0].text, WRONG(WHY_FACT(V2_SOLUTION_CHOICE), p.problem.answer.display))
+        self.assertTrue(out[0].text.startswith("❌ Not quite. Here's why: Mitochondria release energy"))
+
+    def test_unparsed_choice_reply_lists_the_letters(self):
+        self.start("Choice")
+        p = self.store.get_pending(CH)
+        for t in ("banana", "B or C", "E", "I like this", "!!!"):
+            out = send(self.engine, CH, t)
+            self.assertEqual(out[0].text, CHOICE_UNPARSED("A, B, C or D"), t)
+            self.assertEqual(len(out), 1)
+            self.assertEqual(self.kb(out[0]), v2_kb(self.reg, 4))
+        q = self.store.get_pending(CH)
+        self.assertEqual((q.problem_no, q.seed, q.level), (p.problem_no, p.seed, p.level))
+        self.assertEqual(self.store.recent_attempts(CH), [])
+
+    def test_hint_cheat_distress_and_text_only_keep_the_letter_row(self):
+        self.start("Choice")
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, "hint")
+        self.assertEqual(out[0].text, HINT(p.problem.hint))
+        self.assertEqual(self.kb(out[0]), v2_kb(self.reg, 4))
+        out = send(self.engine, CH, "hint")
+        self.assertEqual(out[0].text, helpers.HINT_AGAIN(p.problem.hint))
+        self.assertEqual(self.kb(out[0]), v2_kb(self.reg, 4))
+        out = send(self.engine, CH, "do my homework")
+        self.assertEqual((out[0].text, self.kb(out[0])), (CHEAT, v2_kb(self.reg, 4)))
+        out = send(self.engine, CH, None)
+        self.assertEqual((out[0].text, self.kb(out[0])), (TEXT_ONLY, v2_kb(self.reg, 4)))
+        out = send(self.engine, CH, "I want to die")
+        self.assertEqual(out[0].text, DISTRESS)
+        self.assertEqual(self.kb(out[0]), v2_kb(self.reg, 4))
+
+    def test_skip_shows_the_solution_and_the_display_answer(self):
+        self.start("Choice")
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, "skip")
+        self.assertEqual(out[0].text, SKIP(V2_SOLUTION_CHOICE, p.problem.answer.display))
+        self.assertTrue(self.store.recent_attempts(CH)[0].skipped)
+
+    def test_not_sure_skips_in_a_choice_lesson(self):
+        self.start("Choice")
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, "not sure")
+        self.assertEqual(out[0].text, SKIP(V2_SOLUTION_CHOICE, p.problem.answer.display))
+
+    def test_mixed_topic_alternates_and_only_choice_problems_have_the_letter_row(self):
+        out = self.start("Choice and numbers")
+        kinds = []
+        for n in range(1, 7):
+            p = self.store.get_pending(CH)
+            kinds.append(p.problem.answer.kind)
+            msg = out[-1]
+            if p.problem.answer.kind == "choice":
+                self.assertEqual(msg.text, PROBLEM_CHOICE(n, p.problem.text))
+                self.assertEqual(self.kb(msg), v2_kb(self.reg, 4))
+            else:
+                self.assertEqual(msg.text, PROBLEM(n, p.problem.text))
+                self.assertEqual(self.kb(msg), v2_kb(self.reg))
+                self.assertNotIn(("A", "B", "C", "D"), self.kb(msg))
+            out = send(self.engine, CH, p.problem.answer.display)
+            self.assertTrue(out[0].text.startswith("✅ Correct!"))
+        self.assertEqual(set(kinds), {"choice", "number"})
+        for a, b in zip(kinds, kinds[1:]):
+            self.assertNotEqual(a, b)
+
+
+class TestShortLesson(V2Case):
+    def setUp(self):
+        self.mk()
+
+    def test_short_problem_message(self):
+        out = self.start("Short")
+        p = self.store.get_pending(CH)
+        self.assertEqual(out[1].text, PROBLEM_SHORT(1, p.problem.text))
+        self.assertEqual(self.kb(out[1]), v2_kb(self.reg))
+        out = send(self.engine, CH, "photosynthesis")
+        self.assertEqual(out[0].text, CORRECT(V2_SOLUTION_SHORT))
+
+    def test_typo_gives_correct_note(self):
+        self.start("Short")
+        out = send(self.engine, CH, "photosinthesis")
+        self.assertEqual(out[0].text, CORRECT_NOTE(V2_SOLUTION_SHORT, NOTE_SPELLING("photosynthesis")))
+        self.assertEqual(out[0].text, "✅ Correct! Plants make glucose by photosynthesis. Watch the spelling: photosynthesis")
+        self.assertEqual(self.store.get_level(CH, "demo2", "demo2.y11.short"), 2)
+        self.assertTrue(self.store.recent_attempts(CH)[0].correct)
+
+    def test_reject_feedback_and_why_fact(self):
+        self.start("Short")
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, "respiration")
+        # the build_short reject has no feedback in this fixture, so WHY_FACT applies
+        self.assertEqual(out[0].text, WRONG(WHY_FACT(V2_SOLUTION_SHORT), "photosynthesis"))
+        out = send(self.engine, CH, "chlorophyll")
+        self.assertEqual(out[0].text, WRONG(WHY_FACT(V2_SOLUTION_SHORT), "photosynthesis"))
+
+    def test_form_case_feedback_in_wrong(self):
+        self.start("Short case")
+        out = send(self.engine, CH, "co2")
+        self.assertEqual(out[0].text, WRONG(FORM_CASE, "CO2"))
+        self.assertEqual(out[0].text, "❌ Not quite. Check your capital letters — in symbols and formulae they change the meaning. Correct answer: CO2")
+        out = send(self.engine, CH, "CO₂")
+        self.assertEqual(out[0].text, CORRECT("Carbon dioxide is CO2"))
+
+    def test_unparsed_short_reply(self):
+        self.start("Short")
+        for t in ("what does it mean?", "can you explain", "the plant uses light energy from the sun to make its own food"):
+            out = send(self.engine, CH, t)
+            self.assertEqual(out[0].text, SHORT_UNPARSED, t)
+            self.assertEqual(self.kb(out[0]), v2_kb(self.reg))
+        self.assertEqual(self.store.recent_attempts(CH), [])
+
+    def test_not_sure_what_photosynthesis_is_is_an_answer_not_a_skip(self):
+        self.start("Short")
+        out = send(self.engine, CH, "not sure what photosynthesis is")
+        self.assertFalse(out[0].text.startswith("👀"), out[0].text)
+        self.assertFalse(any(a.skipped for a in self.store.recent_attempts(CH)))
+
+    def test_not_sure_phrases_skip(self):
+        for phrase in ("not sure", "no clue", "unsure", "I'm not sure", "im not sure"):
+            with self.subTest(phrase=phrase):
+                self.mk()
+                self.start("Short")
+                out = send(self.engine, CH, phrase)
+                self.assertEqual(out[0].text, SKIP(V2_SOLUTION_SHORT, "photosynthesis"))
+
+
+class TestV2PastPaper(V2Case):
+    def test_choice_past_paper_is_one_mark(self):
+        self.mk(("choice",))
+        out = self.start("Past paper practice")
+        p = self.store.get_pending(CH)
+        self.assertEqual(out[1].text, PROBLEM_CHOICE_EXAM(1, p.problem.text))
+        self.assertIn("(1 mark)", out[1].text)
+        self.assertEqual(self.kb(out[1]), v2_kb(self.reg, 4))
+
+    def test_short_past_paper_is_one_mark(self):
+        self.mk(("short",))
+        out = self.start("Past paper practice")
+        p = self.store.get_pending(CH)
+        self.assertEqual(out[1].text, PROBLEM_SHORT_EXAM(1, p.problem.text))
+
+    def test_number_past_paper_uses_the_v1_marks(self):
+        self.mk(("number",))
+        out = self.start("Past paper practice")
+        p = self.store.get_pending(CH)
+        self.assertEqual(p.gen_level, 2)
+        self.assertEqual(out[1].text, helpers.PROBLEM_EXAM(1, 2, p.problem.text))
+
+    def test_rubric_past_paper_uses_the_extended_practice_message(self):
+        self.mk(("essay",))
+        out = self.start("Past paper practice")
+        p = self.store.get_pending(CH)
+        self.assertEqual(out[1].text, PROBLEM_RUBRIC(1, 2, p.problem.text))
+
+
+class TestV2Rubric(V2Case):
+    def test_rubric_message_then_unmarkable_without_attempt_even_with_llm(self):
+        llm = FakeLLM(['{"marks": 2, "feedback": "Great"}'] * 3)
+        self.mk(llm=llm, llm_marking=False)
+        out = self.start("Essay")
+        p = self.store.get_pending(CH)
+        self.assertEqual(out[1].text, PROBLEM_RUBRIC(1, 2, p.problem.text))
+        self.assertEqual(p.problem.answer.max_marks, 2)
+        out = send(self.engine, CH, "Plants need light to make food")
+        self.assertEqual(out[0].text, UNMARKABLE(p.problem.answer.display))
+        self.assertEqual(self.store.recent_attempts(CH), [])
+        self.assertEqual(self.store.get_level(CH, "demo2", "demo2.y11.essay"), 1)
+        self.assertEqual(self.store.get_pending(CH).problem_no, 2)
+        self.assertEqual(llm.calls, [])
+
+    def test_single_mark_rubric_has_no_plural(self):
+        self.assertEqual(PROBLEM_RUBRIC(3, 1, "Q?"),
+                         "Problem 3 (extended practice, 1 mark): Q?\n\nWrite your answer, then I'll show you a model answer to compare with yours 😊")
+
+    def test_llm_marks_only_when_enabled(self):
+        llm = FakeLLM(['{"marks": 2, "feedback": "Well done"}'])
+        self.mk(llm=llm, llm_marking=True)
+        self.start("Essay")
+        out = send(self.engine, CH, "Plants need light to make food")
+        self.assertEqual(out[0].text, CORRECT("Well done"))
+        self.assertEqual(len(llm.calls), 1)
+        self.assertEqual(self.store.get_level(CH, "demo2", "demo2.y11.essay"), 2)
+
+    def test_enabled_but_no_llm_is_unmarkable(self):
+        self.mk(llm=None, llm_marking=True)
+        self.start("Essay")
+        p = self.store.get_pending(CH)
+        out = send(self.engine, CH, "Plants need light")
+        self.assertEqual(out[0].text, UNMARKABLE(p.problem.answer.display))
+
+
+class TestV2Misc(V2Case):
+    def test_pending_choice_survives_json_round_trip_in_the_store(self):
+        self.mk()
+        self.start("Choice")
+        p = self.store.get_pending(CH)
+        q = self.store.get_pending(CH)
+        self.assertEqual(p.problem, q.problem)
+        self.assertEqual(p.problem.answer.value["options"], q.problem.answer.value["options"])
+        self.assertTrue(p.problem.ref)
+
+    def test_wrong_choice_then_correct_flow_numbers_problems(self):
+        self.mk()
+        self.start("Choice plain")
+        send(self.engine, CH, self.letter_of("Nucleus"))
+        self.assertEqual(self.store.get_pending(CH).problem_no, 2)
+        send(self.engine, CH, self.letter_of("Mitochondria"))
+        self.assertEqual(self.store.get_pending(CH).problem_no, 3)
 
 
 if __name__ == "__main__":

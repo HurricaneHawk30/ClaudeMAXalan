@@ -1,0 +1,2560 @@
+{
+ "subject": {
+  "id": "spanish",
+  "title": "Spanish",
+  "order": 54
+ },
+ "skills": [
+  {
+   "id": "spanish.grammar",
+   "title": "Grammar & tenses",
+   "aliases": [
+    "spanish grammar",
+    "tenses",
+    "present tense",
+    "past tense",
+    "future tense",
+    "conditional",
+    "verbs",
+    "adjective agreement",
+    "pronouns",
+    "negatives",
+    "pretérito",
+    "preterite",
+    "imperfecto",
+    "ser and estar",
+    "futuro"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which Spanish subject pronoun means «we» (a group of boys)?",
+     "choice": {
+      "options": [
+       "nosotros",
+       "vosotros",
+       "ellos",
+       "usted"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Vosotros means you (plural, informal)",
+       null,
+       null
+      ]
+     },
+     "solution": "Nosotros = we; vosotros = you (plural, informal), ellos = they, usted = you (polite)",
+     "hint": "Its verb forms end in -mos"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "What does «nunca» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "never",
+       "not ever"
+      ],
+      "reject": [
+       "always"
+      ],
+      "form": "any",
+      "feedback": {
+       "always": "Always is siempre; nunca is a negative"
+      }
+     },
+     "solution": "Nunca = never, e.g. nunca como carne = I never eat meat",
+     "hint": "It is the opposite of siempre"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "What does «nada» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "nothing",
+       "not anything"
+      ],
+      "form": "any"
+     },
+     "solution": "Nada = nothing, e.g. no hago nada = I do nothing / I don't do anything",
+     "hint": "It is the opposite of algo (something)"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Give the «yo» form of «tener» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "tengo"
+      ],
+      "reject": [
+       "tiene",
+       "tienes",
+       "teno",
+       "tenemos"
+      ],
+      "form": "strict"
+     },
+     "solution": "Tener: tengo, tienes, tiene, tenemos, tenéis, tienen",
+     "hint": "It is irregular in the yo form: it contains a g"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "Give the «ellos» form of «ser» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "son"
+      ],
+      "reject": [
+       "están",
+       "es",
+       "somos",
+       "sois"
+      ],
+      "form": "strict",
+      "feedback": {
+       "están": "Están comes from estar; this question asks for ser"
+      }
+     },
+     "solution": "Ser: soy, eres, es, somos, sois, son",
+     "hint": "Ser is irregular; think of how you say «they are» for nationality"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "Which word means «the» before a feminine plural noun such as «casas»?",
+     "choice": {
+      "options": [
+       "los",
+       "las",
+       "la",
+       "unas"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Los is masculine plural",
+       null,
+       null,
+       "Unas means some"
+      ]
+     },
+     "solution": "Las is the feminine plural article: las casas",
+     "hint": "Casas is feminine and plural"
+    },
+    {
+     "id": "g07",
+     "level": 1,
+     "text": "Which word means «my» before a plural noun such as «hermanos»?",
+     "choice": {
+      "options": [
+       "mi",
+       "tus",
+       "mis",
+       "nuestro"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Mi is only used with singular nouns",
+       "Tus means your",
+       null,
+       null
+      ]
+     },
+     "solution": "Mis is used with plural nouns: mis hermanos",
+     "hint": "Hermanos is plural"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "Choose the correct word: «___ problema es difícil.»",
+     "choice": {
+      "options": [
+       "La",
+       "Los",
+       "Una",
+       "El"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Problema is masculine even though it ends in -a",
+       null,
+       "Problema is masculine, so una is wrong",
+       null
+      ]
+     },
+     "solution": "Problema ends in -a but is masculine: el problema",
+     "hint": "Some nouns ending in -ma (from Greek) are masculine"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "Choose the correct verb: «Madrid ___ en España.»",
+     "choice": {
+      "options": [
+       "está",
+       "es",
+       "son",
+       "están"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Ser is not used for where a place is; use estar",
+       null,
+       null
+      ]
+     },
+     "solution": "Location uses estar: Madrid está en España",
+     "hint": "Ser or estar? Think about which one is used for location"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Translate into Spanish. Include the definite article (el, la, los or las): the water",
+     "short": {
+      "accept": [
+       "el agua"
+      ],
+      "reject": [
+       "la agua",
+       "los aguas"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la agua": "Agua is feminine, but it takes el because it starts with a stressed a-"
+      }
+     },
+     "solution": "Agua is feminine but takes el in the singular because it starts with a stressed a- (el agua fría)",
+     "hint": "Feminine nouns starting with a stressed a- sound take a different article in the singular"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Give the plural of «el lápiz», with its article.",
+     "short": {
+      "accept": [
+       "los lápices"
+      ],
+      "reject": [
+       "los lápizes",
+       "los lápizs",
+       "las lápices"
+      ],
+      "form": "strict",
+      "feedback": {
+       "los lápizes": "Before -es, z changes to c"
+      }
+     },
+     "solution": "Nouns ending in -z change z to c and add -es: los lápices",
+     "hint": "Words ending in -z change spelling in the plural, like la voz → las voces"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "Choose the correct word: «Voy ___ cine.»",
+     "choice": {
+      "options": [
+       "a la",
+       "al",
+       "del",
+       "a los"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Cine is masculine, so a la is wrong",
+       null,
+       "Del means of the or from the",
+       null
+      ]
+     },
+     "solution": "Cine is masculine, and a + el = al: voy al cine",
+     "hint": "What happens when a meets el?"
+    },
+    {
+     "id": "g13",
+     "level": 2,
+     "text": "Complete with the correct form of «ser» or «estar»: «Hoy mi madre ___ cansada.» Type the verb only.",
+     "short": {
+      "accept": [
+       "está"
+      ],
+      "reject": [
+       "es",
+       "son",
+       "están"
+      ],
+      "form": "strict",
+      "feedback": {
+       "es": "Temporary states and feelings like cansada use estar"
+      }
+     },
+     "solution": "Feelings and temporary states use estar: mi madre está cansada",
+     "hint": "Being tired is a temporary state"
+    },
+    {
+     "id": "g14",
+     "level": 2,
+     "text": "Choose the correct adjective: «Mis hermanas son ___.» (tall)",
+     "choice": {
+      "options": [
+       "altos",
+       "alta",
+       "altas",
+       "alto"
+      ],
+      "correct": 2
+     },
+     "solution": "Hermanas is feminine plural: altas",
+     "hint": "Hermanas is feminine and plural"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "What does «Nunca como carne» mean?",
+     "choice": {
+      "options": [
+       "I always eat meat",
+       "I am not eating meat today",
+       "I eat a lot of meat",
+       "I never eat meat"
+      ],
+      "correct": 3
+     },
+     "solution": "Nunca = never: I never eat meat",
+     "hint": "Look at the first word"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "What does «Vamos a ver una película» mean?",
+     "choice": {
+      "options": [
+       "We are going to watch a film",
+       "We watched a film",
+       "We would like to watch a film",
+       "We watch a film every day"
+      ],
+      "correct": 0
+     },
+     "solution": "Ir a + infinitive is the near future: we are going to watch a film",
+     "hint": "Vamos a + an infinitive talks about the future"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "Read: «Ayer jugué al tenis con Pablo.» When did this happen? Answer in English.",
+     "short": {
+      "accept": [
+       "yesterday"
+      ],
+      "form": "any"
+     },
+     "solution": "Ayer means yesterday",
+     "hint": "Look at the first word of the sentence"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "Read: «Lucía nunca bebe café.» What does Lucía never drink? Answer in English.",
+     "short": {
+      "accept": [
+       "coffee"
+      ],
+      "form": "any"
+     },
+     "solution": "Café = coffee: Lucía never drinks coffee",
+     "hint": "Look at the noun after the verb bebe"
+    },
+    {
+     "id": "g19",
+     "level": 3,
+     "text": "Which sentence is in the preterite (simple past)?",
+     "choice": {
+      "options": [
+       "Como paella",
+       "Comí paella",
+       "Comeré paella",
+       "Comía paella"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Comía is the imperfect (I used to eat / I was eating)"
+      ]
+     },
+     "solution": "Comí is the preterite; como is present, comeré is future and comía is imperfect",
+     "hint": "The preterite yo form of -er verbs ends in an accented -í"
+    },
+    {
+     "id": "g20",
+     "level": 3,
+     "text": "Read: «No me gusta nada el pescado.» What does the speaker dislike? Answer in English.",
+     "short": {
+      "accept": [
+       "fish"
+      ],
+      "form": "any"
+     },
+     "solution": "No me gusta nada el pescado = I don't like fish at all",
+     "hint": "Pescado is food from the sea or a river"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "Complete with the preterite of «ir»: «Ayer mis padres ___ al mercado.» Type the verb only.",
+     "short": {
+      "accept": [
+       "fueron"
+      ],
+      "reject": [
+       "fue",
+       "fuimos",
+       "iban",
+       "van"
+      ],
+      "form": "strict",
+      "feedback": {
+       "iban": "Iban is the imperfect; a single completed action uses the preterite",
+       "fue": "Fue is the él/ella form; mis padres needs the ellos form"
+      }
+     },
+     "solution": "Ir is irregular in the preterite: ellos fueron",
+     "hint": "In the preterite, ir has the same forms as ser"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "Complete with the present tense of «querer»: «Nosotros ___ ir a la playa.» Type the verb only.",
+     "short": {
+      "accept": [
+       "queremos"
+      ],
+      "reject": [
+       "quieremos",
+       "quieren",
+       "queréis"
+      ],
+      "form": "strict",
+      "feedback": {
+       "quieremos": "The e→ie change does not happen in the nosotros form"
+      }
+     },
+     "solution": "Querer changes e→ie, but not in the nosotros form: queremos",
+     "hint": "Stem-changing verbs do not change in the nosotros form"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "Choose the correct verb: «Cuando era pequeño, ___ en el parque todos los días.»",
+     "choice": {
+      "options": [
+       "jugué",
+       "jugaré",
+       "jugaba",
+       "juego"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Jugué is the preterite, for single completed actions",
+       "Jugaré is the future",
+       null,
+       null
+      ]
+     },
+     "solution": "A repeated past habit uses the imperfect: jugaba",
+     "hint": "Todos los días in the past describes a habit"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "Choose the correct form: «A mi hermano le ___ los videojuegos.»",
+     "choice": {
+      "options": [
+       "gusta",
+       "gusto",
+       "gustamos",
+       "gustan"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Gusta is for one thing; los videojuegos is plural",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Gustar agrees with the thing liked; los videojuegos is plural: le gustan",
+     "hint": "With gustar, the verb agrees with the thing that is liked"
+    },
+    {
+     "id": "g25",
+     "level": 4,
+     "text": "Complete with the future tense of «tener»: «El año que viene ___ un perro.» (yo) Type the verb only.",
+     "short": {
+      "accept": [
+       "tendré"
+      ],
+      "reject": [
+       "tendría",
+       "teneré",
+       "tengo"
+      ],
+      "form": "strict",
+      "feedback": {
+       "tendría": "Tendría is the conditional (I would have)",
+       "teneré": "Tener has an irregular future stem (tendr-)"
+      }
+     },
+     "solution": "Tener has the irregular future stem tendr-: tendré",
+     "hint": "Tener has an irregular future stem with a d in it"
+    },
+    {
+     "id": "g26",
+     "level": 4,
+     "text": "Replace «la tele» with a pronoun: «Veo la tele.» → «___ veo.»",
+     "choice": {
+      "options": [
+       "La",
+       "Lo",
+       "Le",
+       "Las"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Lo replaces a masculine noun",
+       null,
+       "Las replaces a feminine plural noun"
+      ]
+     },
+     "solution": "La tele is feminine singular, so the direct object pronoun is la: la veo",
+     "hint": "Tele is feminine and it is the direct object"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "Which sentence with «ser» or «estar» is correct?",
+     "choice": {
+      "options": [
+       "Mi hermana es enferma hoy",
+       "Mi hermana está enferma hoy",
+       "Mi hermana está enfermo hoy",
+       "Mi hermana están enferma hoy"
+      ],
+      "correct": 1
+     },
+     "solution": "A temporary state uses estar, and hermana is feminine: está enferma",
+     "hint": "Check ser or estar first, then the adjective ending"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "Which is the correct translation of «I would like to travel to Mexico»?",
+     "choice": {
+      "options": [
+       "Me gustaría viajar en México",
+       "Voy a viajar a México",
+       "Me gustaría viajar a México",
+       "Viajé a México"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Going to a place uses a, not en",
+       "Voy a viajar means I am going to travel",
+       null,
+       "Viajé means I travelled"
+      ]
+     },
+     "solution": "Would like = me gustaría; travelling to a place uses a",
+     "hint": "Look for the conditional of gustar and the preposition for going to a place"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "He no comido nada",
+       "No he comido algo",
+       "No comido he nada",
+       "No he comido nada"
+      ],
+      "correct": 3
+     },
+     "solution": "No goes before the auxiliary, and Spanish uses a double negative: no he comido nada",
+     "hint": "Spanish negatives go before haber and need nada, not algo"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "Translate into Spanish using the preterite: «they ate»",
+     "short": {
+      "accept": [
+       "comieron",
+       "ellos comieron",
+       "ellas comieron"
+      ],
+      "reject": [
+       "comían",
+       "comen",
+       "comimos",
+       "ellos comían"
+      ],
+      "form": "strict",
+      "feedback": {
+       "comían": "Comían is the imperfect (they used to eat)",
+       "comen": "Comen is the present",
+       "ellos comían": "Comían is the imperfect (they used to eat)"
+      }
+     },
+     "solution": "Preterite of comer with ellos: comieron",
+     "hint": "Use the ellos ending for -er verbs in the preterite"
+    },
+    {
+     "id": "g31",
+     "level": 5,
+     "text": "Translate into Spanish using ir a + infinitive: «I am going to eat»",
+     "short": {
+      "accept": [
+       "voy a comer",
+       "yo voy a comer"
+      ],
+      "reject": [
+       "voy comer",
+       "voy a como",
+       "comeré"
+      ],
+      "form": "strict",
+      "feedback": {
+       "comeré": "That is the simple future; this question asks for ir a + infinitive",
+       "voy comer": "You need a between voy and the infinitive"
+      }
+     },
+     "solution": "Near future = ir + a + infinitive: voy a comer",
+     "hint": "Use the yo form of ir, then a, then the infinitive"
+    },
+    {
+     "id": "g32",
+     "level": 5,
+     "text": "Translate into Spanish using the conditional: «we would go»",
+     "short": {
+      "accept": [
+       "iríamos",
+       "nosotros iríamos",
+       "nosotras iríamos"
+      ],
+      "reject": [
+       "iremos",
+       "íbamos",
+       "vamos"
+      ],
+      "form": "strict",
+      "feedback": {
+       "iremos": "Iremos is the future (we will go)",
+       "íbamos": "Íbamos is the imperfect (we used to go)",
+       "vamos": "Vamos is the present (we go)"
+      }
+     },
+     "solution": "Conditional = infinitive + -ía endings: iríamos",
+     "hint": "Add the conditional ending for nosotros to the infinitive ir"
+    }
+   ]
+  },
+  {
+   "id": "spanish.people",
+   "title": "People & lifestyle",
+   "aliases": [
+    "spanish family",
+    "family",
+    "friends",
+    "describing people",
+    "personality",
+    "school",
+    "healthy living",
+    "daily routine",
+    "jobs",
+    "future plans"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What does «el hermano» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "brother"
+      ],
+      "reject": [
+       "sister"
+      ],
+      "form": "any",
+      "feedback": {
+       "sister": "Sister is la hermana; -o shows it is male"
+      }
+     },
+     "solution": "El hermano = the brother",
+     "hint": "Think of the boys in a family"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "What does «la abuela» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "grandmother",
+       "grandma",
+       "granny",
+       "gran",
+       "nan",
+       "nana"
+      ],
+      "reject": [
+       "grandfather",
+       "grandpa",
+       "grandad"
+      ],
+      "form": "any",
+      "feedback": {
+       "grandfather": "Grandfather is el abuelo; the -a ending shows a woman",
+       "grandpa": "Grandpa is el abuelo; the -a ending shows a woman",
+       "grandad": "Grandad is el abuelo; the -a ending shows a woman"
+      }
+     },
+     "solution": "La abuela = the grandmother (el abuelo = the grandfather)",
+     "hint": "She is your mother's or father's mother"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "Which is the Spanish for «uncle»?",
+     "choice": {
+      "options": [
+       "el tío",
+       "la tía",
+       "el primo",
+       "el sobrino"
+      ],
+      "correct": 0
+     },
+     "solution": "El tío = uncle; la tía = aunt, el primo = cousin, el sobrino = nephew",
+     "hint": "It is the masculine form of tía"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "What does «el bombero» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "firefighter",
+       "fireman",
+       "fire fighter"
+      ],
+      "form": "any"
+     },
+     "solution": "El bombero = the firefighter",
+     "hint": "This person puts out fires"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "Which word means «tired»?",
+     "choice": {
+      "options": [
+       "contento",
+       "cansado",
+       "enfermo",
+       "enfadado"
+      ],
+      "correct": 1
+     },
+     "solution": "Cansado = tired; contento = happy, enfermo = ill, enfadado = angry",
+     "hint": "Think of how you feel after a long day"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "What does «el desayuno» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "breakfast"
+      ],
+      "form": "any"
+     },
+     "solution": "El desayuno = breakfast (desayunar = to have breakfast)",
+     "hint": "It's the first meal of the day"
+    },
+    {
+     "id": "p07",
+     "level": 1,
+     "text": "Which word means «funny»?",
+     "choice": {
+      "options": [
+       "tímido",
+       "perezoso",
+       "gracioso",
+       "serio"
+      ],
+      "correct": 2
+     },
+     "solution": "Gracioso = funny; tímido = shy, perezoso = lazy, serio = serious",
+     "hint": "This person makes you laugh"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "False friend! What does «la carpeta» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "folder",
+       "file",
+       "ring binder",
+       "binder"
+      ],
+      "reject": [
+       "carpet"
+      ],
+      "form": "any",
+      "feedback": {
+       "carpet": "False friend: a carpet is una alfombra; la carpeta is for keeping papers in"
+      }
+     },
+     "solution": "La carpeta = the folder (a carpet is una alfombra)",
+     "hint": "You keep your school papers in it"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "What is the feminine form of «trabajador» (hard-working)?",
+     "choice": {
+      "options": [
+       "trabajadore",
+       "trabajadorea",
+       "trabajador",
+       "trabajadora"
+      ],
+      "correct": 3
+     },
+     "solution": "Adjectives ending in -or add -a in the feminine: trabajadora",
+     "hint": "Adjectives ending in -or add one letter in the feminine"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "Translate into Spanish. Include the definite article (el, la, los or las): the hand",
+     "short": {
+      "accept": [
+       "la mano"
+      ],
+      "reject": [
+       "el mano",
+       "las manos"
+      ],
+      "form": "strict",
+      "feedback": {
+       "el mano": "Mano is an exception: it ends in -o but is feminine",
+       "las manos": "Las manos is plural (the hands)"
+      }
+     },
+     "solution": "Mano is feminine even though it ends in -o: la mano",
+     "hint": "This noun is an exception: it ends in -o but is feminine"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "Which sentence means «I get up at seven o'clock»?",
+     "choice": {
+      "options": [
+       "Me levanto a las siete",
+       "Me acuesto a las siete",
+       "Me despierto a las siete",
+       "Me visto a las siete"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Me acuesto means I go to bed",
+       "Me despierto means I wake up, not I get up",
+       "Me visto means I get dressed"
+      ]
+     },
+     "solution": "Levantarse = to get up; despertarse = to wake up, acostarse = to go to bed, vestirse = to get dressed",
+     "hint": "Which reflexive verb means to get out of bed?"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "Translate into Spanish. Include «un» or «una»: a nurse (a woman)",
+     "short": {
+      "accept": [
+       "una enfermera"
+      ],
+      "reject": [
+       "un enfermero",
+       "una enfermero",
+       "un enfermera"
+      ],
+      "form": "strict",
+      "feedback": {
+       "un enfermero": "Un enfermero is a male nurse"
+      }
+     },
+     "solution": "Enfermero becomes enfermera for a woman: una enfermera",
+     "hint": "Start from the word for a male nurse and make it feminine"
+    },
+    {
+     "id": "p13",
+     "level": 2,
+     "text": "Choose the correct verb: «Mi padre ___ alto y delgado.»",
+     "choice": {
+      "options": [
+       "está",
+       "es",
+       "son",
+       "tiene"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Estar is for temporary states and location",
+       null,
+       "Son goes with a plural subject",
+       null
+      ]
+     },
+     "solution": "Permanent physical description uses ser: mi padre es alto y delgado",
+     "hint": "Ser or estar? Height is a permanent characteristic"
+    },
+    {
+     "id": "p14",
+     "level": 2,
+     "text": "Choose the correct word: «Tengo ___ ojos azules.» (I have blue eyes)",
+     "choice": {
+      "options": [
+       "las",
+       "el",
+       "los",
+       "la"
+      ],
+      "correct": 2
+     },
+     "solution": "Ojos is masculine plural: tengo los ojos azules",
+     "hint": "Ojo is masculine, and here it is plural"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "What does «Mi padre es más alto que mi madre» mean?",
+     "choice": {
+      "options": [
+       "My father is older than my mother",
+       "My mother is taller than my father",
+       "My father is as tall as my mother",
+       "My father is taller than my mother"
+      ],
+      "correct": 3
+     },
+     "solution": "Más alto que = taller than: my father is taller than my mother",
+     "hint": "Más ... que makes a comparison: more ... than"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "Read: «Mi hermana es muy habladora.» What is the sister like? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "chatty",
+       "talkative"
+      ],
+      "form": "any"
+     },
+     "solution": "Habladora = chatty or talkative (hablar = to speak)",
+     "hint": "It comes from the verb hablar"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "Read: «Mi tía es abogada.» What is the aunt's job? Answer in English.",
+     "short": {
+      "accept": [
+       "lawyer",
+       "solicitor",
+       "attorney",
+       "barrister"
+      ],
+      "form": "any"
+     },
+     "solution": "Abogada = lawyer (a woman); abogado for a man",
+     "hint": "She works in courts"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "What does «Tengo que ordenar mi dormitorio» mean?",
+     "choice": {
+      "options": [
+       "I have to tidy my bedroom",
+       "I want to tidy my bedroom",
+       "I tidied my bedroom",
+       "I can tidy my bedroom"
+      ],
+      "correct": 0
+     },
+     "solution": "Tener que + infinitive = to have to: I have to tidy my bedroom",
+     "hint": "Tener que means to have to"
+    },
+    {
+     "id": "p19",
+     "level": 3,
+     "text": "Read: «Para llevar una vida sana, como fruta y no fumo.» What does the speaker do to stay healthy?",
+     "choice": {
+      "options": [
+       "Eats fruit and goes running",
+       "Eats fruit and does not smoke",
+       "Drinks water and does not smoke",
+       "Sleeps well and eats fruit"
+      ],
+      "correct": 1
+     },
+     "solution": "Como fruta = I eat fruit; no fumo = I don't smoke",
+     "hint": "Find the two verbs: como and fumo"
+    },
+    {
+     "id": "p20",
+     "level": 3,
+     "text": "Read: «Por la mañana, me ducho y bebo té.» What does the speaker drink in the morning? Answer in English.",
+     "short": {
+      "accept": [
+       "tea",
+       "some tea",
+       "a cup of tea"
+      ],
+      "form": "any"
+     },
+     "solution": "Bebo té = I drink tea",
+     "hint": "It's a hot drink, often served with milk in Britain"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "text": "Complete with the present tense of «levantarse»: «Mi hermano ___ a las ocho.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "se levanta"
+      ],
+      "reject": [
+       "me levanto",
+       "se levantó",
+       "levanta",
+       "se levantan"
+      ],
+      "form": "strict",
+      "feedback": {
+       "me levanto": "Me levanto is for yo; mi hermano needs the él form",
+       "se levantó": "Levantó is the preterite (he got up)",
+       "levanta": "Reflexive verbs need their pronoun (se with él)"
+      }
+     },
+     "solution": "Reflexive verb with él: se levanta",
+     "hint": "Use the reflexive pronoun for él, then the él form of levantar"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "Choose the correct verb: «Mi hermana ___ ser médica.» (wants to)",
+     "choice": {
+      "options": [
+       "quiero",
+       "queremos",
+       "quiere",
+       "quieren"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Quiero goes with yo",
+       null,
+       null,
+       "Quieren goes with ellos/ellas"
+      ]
+     },
+     "solution": "Querer (e→ie) with ella: quiere",
+     "hint": "Mi hermana = ella; which form of querer goes with ella?"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "Complete with the correct form of «simpático»: «Mis primas son muy ___.» Type the adjective only.",
+     "short": {
+      "accept": [
+       "simpáticas"
+      ],
+      "reject": [
+       "simpáticos",
+       "simpática",
+       "simpático"
+      ],
+      "form": "strict"
+     },
+     "solution": "Primas is feminine plural: simpáticas",
+     "hint": "Primas is feminine and plural"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "Choose the correct verb: «El año que viene, mi hermano ___ a la universidad.» (will go)",
+     "choice": {
+      "options": [
+       "iría",
+       "iba",
+       "fue",
+       "irá"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Iría is the conditional (would go)",
+       "Iba is the imperfect",
+       "Fue is the preterite",
+       null
+      ]
+     },
+     "solution": "Future of ir with él: irá",
+     "hint": "El año que viene = next year"
+    },
+    {
+     "id": "p25",
+     "level": 4,
+     "text": "Complete with the imperfect of «ser»: «Cuando ___ pequeño, vivía en Madrid.» (yo) Type the verb only.",
+     "short": {
+      "accept": [
+       "era"
+      ],
+      "reject": [
+       "fui",
+       "soy",
+       "será",
+       "eras"
+      ],
+      "form": "strict",
+      "feedback": {
+       "fui": "Fui is the preterite; descriptions in the past use the imperfect",
+       "soy": "Soy is the present"
+      }
+     },
+     "solution": "Ser is irregular in the imperfect: yo era",
+     "hint": "Ser has an irregular imperfect; this is the yo form"
+    },
+    {
+     "id": "p26",
+     "level": 4,
+     "text": "Choose the correct form of «despertarse»: «Esta mañana me ___ a las seis.»",
+     "choice": {
+      "options": [
+       "desperté",
+       "despierto",
+       "despertaré",
+       "despertamos"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Despierto is the present",
+       "Despertaré is the future",
+       null
+      ]
+     },
+     "solution": "A single finished action this morning uses the preterite: me desperté",
+     "hint": "Esta mañana describes one finished action in the past"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "text": "Which sentence is correct?",
+     "choice": {
+      "options": [
+       "Mis padres son simpáticas",
+       "Mis padres son simpáticos",
+       "Mis padres es simpáticos",
+       "Mis padres son simpático"
+      ],
+      "correct": 1
+     },
+     "solution": "Padres is masculine plural: son simpáticos",
+     "hint": "Check the verb and the adjective ending"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "text": "Which is the correct translation of «When I am older, I would like to be a vet»?",
+     "choice": {
+      "options": [
+       "Cuando era mayor, me gustaba ser veterinario",
+       "Cuando sea mayor, fui veterinario",
+       "Cuando sea mayor, me gustaría ser veterinario",
+       "Cuando sea mayor, soy veterinario"
+      ],
+      "correct": 2
+     },
+     "solution": "Cuando + subjunctive (sea) talks about the future, and me gustaría means I would like",
+     "hint": "Look for the conditional of gustar"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "Me nunca acuesto tarde",
+       "Nunca acuesto me tarde",
+       "Me acuesto nunca tarde",
+       "Nunca me acuesto tarde"
+      ],
+      "correct": 3
+     },
+     "solution": "Nunca goes before the reflexive pronoun and the verb: nunca me acuesto tarde",
+     "hint": "The reflexive pronoun stays right in front of the verb"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "Translate into Spanish: «she is tall and nice»",
+     "short": {
+      "accept": [
+       "es alta y simpática",
+       "ella es alta y simpática"
+      ],
+      "reject": [
+       "es alto y simpático",
+       "ella es alto y simpático",
+       "ella está alta y simpática",
+       "ella es alta y simpático"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ella es alto y simpático": "Both adjectives must be feminine to agree with ella",
+       "es alto y simpático": "Both adjectives must be feminine to agree with ella",
+       "ella está alta y simpática": "Descriptions of character and looks use ser",
+       "ella es alta y simpático": "Simpático must agree with ella too"
+      }
+     },
+     "solution": "Both adjectives agree with ella: alta, simpática; descriptions use ser",
+     "hint": "Use ser and make both adjectives feminine"
+    },
+    {
+     "id": "p31",
+     "level": 5,
+     "text": "Translate into Spanish using ir a + infinitive: «I am going to work»",
+     "short": {
+      "accept": [
+       "voy a trabajar",
+       "yo voy a trabajar"
+      ],
+      "reject": [
+       "voy trabajar",
+       "trabajaré",
+       "voy a trabajo"
+      ],
+      "form": "strict",
+      "feedback": {
+       "trabajaré": "That is the simple future; this question asks for ir a + infinitive",
+       "voy trabajar": "You need a between voy and the infinitive"
+      }
+     },
+     "solution": "Near future: voy a + infinitive trabajar",
+     "hint": "Use the yo form of ir, then a, then the infinitive"
+    },
+    {
+     "id": "p32",
+     "level": 5,
+     "text": "Translate into Spanish: «my brothers are lazy»",
+     "short": {
+      "accept": [
+       "mis hermanos son perezosos"
+      ],
+      "reject": [
+       "mis hermanos son perezosas",
+       "mis hermanos es perezosos",
+       "mis hermanos están perezosos",
+       "mi hermano es perezoso"
+      ],
+      "form": "strict",
+      "feedback": {
+       "mis hermanos están perezosos": "Personality traits use ser",
+       "mi hermano es perezoso": "That is singular (my brother is lazy)"
+      }
+     },
+     "solution": "Masculine plural: mis hermanos son perezosos",
+     "hint": "Plural possessive, ser in the ellos form and a masculine plural adjective"
+    }
+   ]
+  },
+  {
+   "id": "spanish.culture",
+   "title": "Free time & culture",
+   "aliases": [
+    "spanish free time",
+    "hobbies",
+    "sport",
+    "music",
+    "cinema",
+    "tv",
+    "technology",
+    "social media",
+    "festivals",
+    "food and drink"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What does «la natación» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "swimming"
+      ],
+      "form": "any"
+     },
+     "solution": "La natación = swimming (nadar = to swim)",
+     "hint": "It's a sport you do in a pool"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What does «el queso» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "cheese"
+      ],
+      "form": "any"
+     },
+     "solution": "El queso = cheese",
+     "hint": "Manchego is a famous Spanish one"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "Which is the Spanish for «the mobile phone»?",
+     "choice": {
+      "options": [
+       "el móvil",
+       "el ordenador",
+       "la tableta",
+       "el mando"
+      ],
+      "correct": 0
+     },
+     "solution": "El móvil = the mobile phone; el ordenador = the computer, la tableta = the tablet, el mando = the remote control",
+     "hint": "Think of a phone you carry around: it moves with you"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "What does «el ajedrez» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "chess"
+      ],
+      "form": "any"
+     },
+     "solution": "Jugar al ajedrez = to play chess",
+     "hint": "A board game with kings, queens and knights"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "Which word means «the cake»?",
+     "choice": {
+      "options": [
+       "el pan",
+       "la tarta",
+       "el pescado",
+       "el pollo"
+      ],
+      "correct": 1
+     },
+     "solution": "La tarta (or el pastel) = the cake; el pan = bread, el pescado = fish, el pollo = chicken",
+     "hint": "You might have one with candles on your birthday"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "What does «la canción» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "song"
+      ],
+      "form": "any"
+     },
+     "solution": "La canción = the song (cantar = to sing)",
+     "hint": "It's related to cantar, to sing"
+    },
+    {
+     "id": "c07",
+     "level": 1,
+     "text": "Which word means «Christmas»?",
+     "choice": {
+      "options": [
+       "la Semana Santa",
+       "el cumpleaños",
+       "la Navidad",
+       "la Nochevieja"
+      ],
+      "correct": 2
+     },
+     "solution": "La Navidad = Christmas; Semana Santa = Easter week, el cumpleaños = birthday, Nochevieja = New Year's Eve",
+     "hint": "It is celebrated on 25 December"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "Choose the correct verb: «Mi hermano ___ la guitarra.» (plays)",
+     "choice": {
+      "options": [
+       "juega",
+       "hace",
+       "pone",
+       "toca"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Jugar is used for sports and games, not instruments",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Instruments use tocar: toca la guitarra; sports and games use jugar",
+     "hint": "Spanish uses different verbs for instruments and for sports"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "Choose the correct word: «Juego ___ fútbol.»",
+     "choice": {
+      "options": [
+       "al",
+       "el",
+       "a la",
+       "del"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Fútbol is masculine, so a la is wrong",
+       "Del means of the or from the"
+      ]
+     },
+     "solution": "Jugar is followed by a, and a + el = al: juego al fútbol",
+     "hint": "Jugar is followed by a; what does a + el become?"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "Translate into Spanish. Include the definite article (el, la, los or las): the music",
+     "short": {
+      "accept": [
+       "la música"
+      ],
+      "reject": [
+       "el música"
+      ],
+      "form": "strict",
+      "feedback": {
+       "el música": "Música is feminine, so it takes la"
+      }
+     },
+     "solution": "Música is feminine: la música",
+     "hint": "Nouns ending in -a are usually feminine"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "Translate into Spanish. Include the definite article (el, la, los or las): the newspaper",
+     "short": {
+      "accept": [
+       "el periódico",
+       "el diario"
+      ],
+      "reject": [
+       "la periódico"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la periódico": "Periódico is masculine, so it takes el"
+      }
+     },
+     "solution": "El periódico (or el diario) = the newspaper",
+     "hint": "It is masculine"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "Which phrase means «cartoons»?",
+     "choice": {
+      "options": [
+       "la telenovela",
+       "los dibujos animados",
+       "el concurso",
+       "las noticias"
+      ],
+      "correct": 1
+     },
+     "solution": "Los dibujos animados = cartoons; la telenovela = soap opera, el concurso = game show, las noticias = the news",
+     "hint": "Animados suggests animation"
+    },
+    {
+     "id": "c13",
+     "level": 2,
+     "text": "What does «las noticias» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "news",
+       "TV news"
+      ],
+      "form": "any"
+     },
+     "solution": "Las noticias = the news",
+     "hint": "A programme about what happened in the world today"
+    },
+    {
+     "id": "c14",
+     "level": 2,
+     "text": "Choose the correct word: «Me gusta ___ cine.»",
+     "choice": {
+      "options": [
+       "al",
+       "la",
+       "el",
+       "los"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Al means to the; gustar needs the article el",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "With gustar, Spanish uses the definite article: me gusta el cine",
+     "hint": "Cine is masculine singular"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "What does «Prefiero ver películas de terror» mean?",
+     "choice": {
+      "options": [
+       "I hate watching horror films",
+       "I prefer watching comedies",
+       "I watched a horror film",
+       "I prefer watching horror films"
+      ],
+      "correct": 3
+     },
+     "solution": "Prefiero = I prefer; películas de terror = horror films",
+     "hint": "Prefiero looks like an English verb"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "Read: «Los sábados voy a la piscina con mi hermana.» On which day does the speaker go to the pool? Answer in English.",
+     "short": {
+      "accept": [
+       "Saturday",
+       "Saturdays",
+       "on Saturday",
+       "on Saturdays",
+       "every Saturday"
+      ],
+      "reject": [
+       "Sunday"
+      ],
+      "form": "any",
+      "feedback": {
+       "Sunday": "Sunday is domingo"
+      }
+     },
+     "solution": "Los sábados = on Saturdays",
+     "hint": "It's the day before domingo"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "Read: «Mi plato favorito es el pollo asado.» What is the speaker's favourite dish? Answer in English.",
+     "short": {
+      "accept": [
+       "roast chicken",
+       "chicken",
+       "roasted chicken"
+      ],
+      "form": "any"
+     },
+     "solution": "El pollo asado = roast chicken",
+     "hint": "Pollo is a bird you eat; asado is a way of cooking it"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "What does «Paso demasiado tiempo en las redes sociales» mean?",
+     "choice": {
+      "options": [
+       "I spend too much time on social media",
+       "I spend very little time on social media",
+       "I never use social media",
+       "I spent a long time on my phone"
+      ],
+      "correct": 0
+     },
+     "solution": "Pasar tiempo = to spend time; demasiado = too much; las redes sociales = social media",
+     "hint": "Demasiado means too much"
+    },
+    {
+     "id": "c19",
+     "level": 3,
+     "text": "Read: «Para mi cumpleaños, mis padres me regalaron una guitarra.» What present did the speaker get? Answer in English.",
+     "short": {
+      "accept": [
+       "guitar",
+       "a guitar"
+      ],
+      "form": "any"
+     },
+     "solution": "Una guitarra = a guitar",
+     "hint": "It's a musical instrument with strings"
+    },
+    {
+     "id": "c20",
+     "level": 3,
+     "text": "Read: «No me gusta el rap, pero me encanta el jazz.» Which statement is true?",
+     "choice": {
+      "options": [
+       "The speaker loves rap",
+       "The speaker loves jazz",
+       "The speaker hates jazz",
+       "The speaker likes both rap and jazz"
+      ],
+      "correct": 1
+     },
+     "solution": "No me gusta el rap = I don't like rap; me encanta el jazz = I love jazz",
+     "hint": "Pero (but) separates the two opinions"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "Complete with the preterite of «ver»: «El fin de semana pasado ___ una película muy buena.» (nosotros) Type the verb only.",
+     "short": {
+      "accept": [
+       "vimos"
+      ],
+      "reject": [
+       "vemos",
+       "veíamos",
+       "vieron",
+       "veremos"
+      ],
+      "form": "strict",
+      "feedback": {
+       "vemos": "Vemos is the present",
+       "veíamos": "Veíamos is the imperfect",
+       "vieron": "Vieron goes with ellos/ellas"
+      }
+     },
+     "solution": "Ver in the preterite: vi, viste, vio, vimos, visteis, vieron",
+     "hint": "Ver is regular in the preterite and has no accents"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Choose the correct verb: «Mañana ___ al tenis con mis amigos.» (yo)",
+     "choice": {
+      "options": [
+       "jugaba",
+       "jugué",
+       "jugaré",
+       "jugarán"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Jugaba is the imperfect",
+       "Jugué is the preterite",
+       null,
+       "Jugarán goes with ellos/ellas"
+      ]
+     },
+     "solution": "Mañana points to the future: jugaré",
+     "hint": "Which tense goes with mañana, and which ending goes with yo?"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Complete with the present tense of «hacer»: «Los domingos ___ deporte con mi padre.» (yo) Type the verb only.",
+     "short": {
+      "accept": [
+       "hago"
+      ],
+      "reject": [
+       "hace",
+       "haco",
+       "hacer",
+       "hice"
+      ],
+      "form": "strict",
+      "feedback": {
+       "hice": "Hice is the preterite",
+       "hace": "Hace goes with él/ella"
+      }
+     },
+     "solution": "Hacer is irregular in the yo form: hago",
+     "hint": "Hacer has an irregular yo form with a g"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Choose the correct pronoun: «¿Te gustan las patatas fritas? — Sí, ___ como mucho.»",
+     "choice": {
+      "options": [
+       "la",
+       "los",
+       "les",
+       "las"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Los replaces a masculine plural noun",
+       "Les is an indirect pronoun (to them)",
+       null
+      ]
+     },
+     "solution": "Las patatas fritas is feminine plural: las como",
+     "hint": "Patatas is feminine plural"
+    },
+    {
+     "id": "c25",
+     "level": 4,
+     "text": "Complete with the imperfect of «ver»: «Antes ___ la tele todas las noches.» (yo) Type the verb only.",
+     "short": {
+      "accept": [
+       "veía"
+      ],
+      "reject": [
+       "vi",
+       "veo",
+       "veré"
+      ],
+      "form": "strict",
+      "feedback": {
+       "vi": "Vi is the preterite; a past habit uses the imperfect",
+       "veo": "Veo is the present"
+      }
+     },
+     "solution": "Ver is irregular in the imperfect: yo veía",
+     "hint": "Antes + todas las noches describes a past habit"
+    },
+    {
+     "id": "c26",
+     "level": 4,
+     "text": "Choose the correct adjective: «Es un ___ programa.» (great)",
+     "choice": {
+      "options": [
+       "gran",
+       "grande",
+       "grandes",
+       "granda"
+      ],
+      "correct": 0
+     },
+     "solution": "Before a singular noun, grande shortens to gran: un gran programa",
+     "hint": "Grande changes form when it comes before a singular noun"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "Which sentence about last night is correct?",
+     "choice": {
+      "options": [
+       "Fuimos a el concierto anoche",
+       "Fuimos al concierto anoche",
+       "Vamos al concierto anoche",
+       "Fuimos en el concierto anoche"
+      ],
+      "correct": 1
+     },
+     "solution": "Anoche needs the preterite (fuimos), and a + el = al",
+     "hint": "Check the tense and the contraction"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "Which is the correct translation of «I don't like playing video games»?",
+     "choice": {
+      "options": [
+       "No me gusto jugar a los videojuegos",
+       "Me no gusta jugar a los videojuegos",
+       "No me gusta jugar a los videojuegos",
+       "No me gusta jugando a los videojuegos"
+      ],
+      "correct": 2
+     },
+     "solution": "No goes before me gusta, and gustar is followed by the infinitive",
+     "hint": "Gustar is followed by an infinitive, not an -ing form"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Which sentence with «si» (if) is correct?",
+     "choice": {
+      "options": [
+       "Si tendría dinero, compraría una consola",
+       "Si tengo dinero, compraría una consola",
+       "Si tuviera dinero, compraré una consola",
+       "Si tuviera dinero, compraría una consola"
+      ],
+      "correct": 3
+     },
+     "solution": "Si + imperfect subjunctive (tuviera), then the conditional (compraría)",
+     "hint": "After si, Spanish never uses the conditional"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Translate into Spanish: «I play the guitar»",
+     "short": {
+      "accept": [
+       "toco la guitarra",
+       "yo toco la guitarra",
+       "toco guitarra",
+       "yo toco guitarra"
+      ],
+      "reject": [
+       "juego la guitarra",
+       "juego a la guitarra",
+       "yo juego la guitarra"
+      ],
+      "form": "strict",
+      "feedback": {
+       "juego la guitarra": "Instruments use tocar, not jugar",
+       "juego a la guitarra": "Instruments use tocar, not jugar",
+       "yo juego la guitarra": "Instruments use tocar, not jugar"
+      }
+     },
+     "solution": "Instruments use tocar: toco la guitarra",
+     "hint": "Spanish uses a special verb for playing instruments"
+    },
+    {
+     "id": "c31",
+     "level": 5,
+     "text": "Translate into Spanish using the preterite: «she watched a film»",
+     "short": {
+      "accept": [
+       "vio una película",
+       "ella vio una película",
+       "miró una película",
+       "ella miró una película"
+      ],
+      "reject": [
+       "veía una película",
+       "ve una película",
+       "ella veía una película"
+      ],
+      "form": "strict",
+      "feedback": {
+       "veía una película": "Veía is the imperfect (she used to watch)",
+       "ella veía una película": "Veía is the imperfect (she used to watch)",
+       "ve una película": "Ve is the present"
+      }
+     },
+     "solution": "Ver in the preterite with ella: vio (no accent)",
+     "hint": "Use the preterite of ver for ella"
+    },
+    {
+     "id": "c32",
+     "level": 5,
+     "text": "Translate into Spanish using ir a + infinitive: «we are going to eat paella»",
+     "short": {
+      "accept": [
+       "vamos a comer paella",
+       "nosotros vamos a comer paella",
+       "nosotras vamos a comer paella"
+      ],
+      "reject": [
+       "vamos comer paella",
+       "vamos a comemos paella",
+       "comeremos paella"
+      ],
+      "form": "strict",
+      "feedback": {
+       "vamos comer paella": "You need a between vamos and the infinitive",
+       "comeremos paella": "That is the simple future; this question asks for ir a + infinitive"
+      }
+     },
+     "solution": "Near future: vamos a + the infinitive comer",
+     "hint": "Use the nosotros form of ir, then a, then the infinitive"
+    }
+   ]
+  },
+  {
+   "id": "spanish.world",
+   "title": "Travel & the world",
+   "aliases": [
+    "spanish holidays",
+    "holidays",
+    "travel",
+    "town",
+    "local area",
+    "home",
+    "environment",
+    "global issues",
+    "weather",
+    "directions",
+    "transport",
+    "shopping"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What does «la playa» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "beach",
+       "seaside"
+      ],
+      "form": "any"
+     },
+     "solution": "La playa = the beach",
+     "hint": "You find sand and the sea there"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "What does «la estación de tren» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "train station",
+       "railway station",
+       "station"
+      ],
+      "form": "any"
+     },
+     "solution": "La estación de tren = the train station",
+     "hint": "You catch the train there"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "Which is the Spanish for «it is raining»?",
+     "choice": {
+      "options": [
+       "llueve",
+       "nieva",
+       "hace sol",
+       "hace viento"
+      ],
+      "correct": 0
+     },
+     "solution": "Llueve = it is raining; nieva = it is snowing, hace sol = it is sunny, hace viento = it is windy",
+     "hint": "Think of the verb llover"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "What does «la panadería» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "bakery",
+       "baker's",
+       "bakers",
+       "baker's shop"
+      ],
+      "form": "any"
+     },
+     "solution": "La panadería = the bakery (el pan = bread)",
+     "hint": "It comes from pan, bread"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "Which word means «the plane»?",
+     "choice": {
+      "options": [
+       "el barco",
+       "el avión",
+       "el coche",
+       "el autocar"
+      ],
+      "correct": 1
+     },
+     "solution": "El avión = the plane; el barco = the boat, el coche = the car, el autocar = the coach",
+     "hint": "You get on it at an airport"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "What does «el ayuntamiento» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "town hall",
+       "city hall",
+       "council",
+       "town council",
+       "city council"
+      ],
+      "form": "any"
+     },
+     "solution": "El ayuntamiento = the town hall (or the town council)",
+     "hint": "The mayor (el alcalde) works there"
+    },
+    {
+     "id": "w07",
+     "level": 1,
+     "text": "Which word means «the bedroom»?",
+     "choice": {
+      "options": [
+       "la cocina",
+       "el cuarto de baño",
+       "el dormitorio",
+       "el salón"
+      ],
+      "correct": 2
+     },
+     "solution": "El dormitorio = the bedroom; la cocina = the kitchen, el cuarto de baño = the bathroom, el salón = the living room",
+     "hint": "It comes from dormir, to sleep"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "False friend! What does «la librería» mean?",
+     "choice": {
+      "options": [
+       "the library",
+       "the bakery",
+       "the newsagent",
+       "the bookshop"
+      ],
+      "correct": 3,
+      "feedback": [
+       "False friend: the library is la biblioteca",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "False friend: la librería is a bookshop; a library is la biblioteca",
+     "hint": "It's a false friend: think about where you buy books"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "Translate into Spanish. Include the definite article (el, la, los or las): the library",
+     "short": {
+      "accept": [
+       "la biblioteca"
+      ],
+      "reject": [
+       "la librería",
+       "el biblioteca"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la librería": "La librería is a bookshop (false friend)",
+       "el biblioteca": "Biblioteca is feminine, so it takes la"
+      }
+     },
+     "solution": "La biblioteca = the library; la librería is a bookshop",
+     "hint": "It's feminine and it is not the false friend librería"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "Choose the correct phrase: «El banco está ___ la farmacia.» (next to)",
+     "choice": {
+      "options": [
+       "al lado de",
+       "enfrente de",
+       "detrás de",
+       "debajo de"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Enfrente de means opposite",
+       "Detrás de means behind",
+       null
+      ]
+     },
+     "solution": "Al lado de = next to; enfrente de = opposite, detrás de = behind, debajo de = under",
+     "hint": "Lado means side"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "Translate into Spanish. Include the definite article (el, la, los or las): the car",
+     "short": {
+      "accept": [
+       "el coche",
+       "el carro",
+       "el auto",
+       "el automóvil"
+      ],
+      "reject": [
+       "la coche"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la coche": "Coche is masculine, so it takes el"
+      }
+     },
+     "solution": "El coche = the car (el carro or el auto in Latin America)",
+     "hint": "It is masculine"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "Choose the correct sentence: «I live in London.»",
+     "choice": {
+      "options": [
+       "Vivo a Londres",
+       "Vivo en Londres",
+       "Vivo al Londres",
+       "Vivo de Londres"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A shows movement towards a place (voy a Londres)",
+       null,
+       null,
+       "De means from or of"
+      ]
+     },
+     "solution": "Living in a place uses en: vivo en Londres",
+     "hint": "Which preposition means in?"
+    },
+    {
+     "id": "w13",
+     "level": 2,
+     "text": "What does «las afueras» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "outskirts",
+       "the outskirts",
+       "suburbs"
+      ],
+      "form": "any"
+     },
+     "solution": "Las afueras = the outskirts of a town",
+     "hint": "It comes from fuera, outside"
+    },
+    {
+     "id": "w14",
+     "level": 2,
+     "text": "Which phrase means «on the left»?",
+     "choice": {
+      "options": [
+       "a la derecha",
+       "todo recto",
+       "a la izquierda",
+       "enfrente"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A la derecha means on the right",
+       "Todo recto means straight on",
+       null,
+       null
+      ]
+     },
+     "solution": "A la izquierda = on the left; a la derecha = on the right, todo recto = straight on, enfrente = opposite",
+     "hint": "It is the opposite of a la derecha"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "What does «Hace calor y hace sol» mean?",
+     "choice": {
+      "options": [
+       "It is cold and sunny",
+       "It is hot and windy",
+       "It is cloudy and hot",
+       "It is hot and sunny"
+      ],
+      "correct": 3
+     },
+     "solution": "Hace calor = it is hot; hace sol = it is sunny",
+     "hint": "Calor is linked to heat"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "Read: «Voy al instituto en bici.» How does the speaker travel to school? Answer in English.",
+     "short": {
+      "accept": [
+       "by bike",
+       "bike",
+       "by bicycle",
+       "bicycle",
+       "cycling",
+       "on a bike",
+       "on my bike",
+       "by cycle"
+      ],
+      "form": "any"
+     },
+     "solution": "En bici = by bike",
+     "hint": "It has two wheels and pedals"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "Read: «El verano pasado fui a Italia con mi familia.» Which country did the speaker visit? Answer in English.",
+     "short": {
+      "accept": [
+       "Italy"
+      ],
+      "form": "any"
+     },
+     "solution": "Italia = Italy",
+     "hint": "Its capital is Rome"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "What does «La estación está enfrente del banco» mean?",
+     "choice": {
+      "options": [
+       "The station is opposite the bank",
+       "The station is next to the bank",
+       "The station is behind the bank",
+       "The bank is opposite the post office"
+      ],
+      "correct": 0
+     },
+     "solution": "Enfrente de = opposite: the station is opposite the bank",
+     "hint": "Enfrente de is a preposition of place: think of facing something"
+    },
+    {
+     "id": "w19",
+     "level": 3,
+     "text": "Read: «En mi ciudad hay demasiada contaminación.» What problem does the town have? Answer in English.",
+     "short": {
+      "accept": [
+       "pollution",
+       "too much pollution",
+       "contamination"
+      ],
+      "form": "any"
+     },
+     "solution": "La contaminación = pollution",
+     "hint": "It is bad for the air and for the environment"
+    },
+    {
+     "id": "w20",
+     "level": 3,
+     "text": "Read: «Para proteger el medio ambiente, reciclo y voy en autobús.» What does the speaker do?",
+     "choice": {
+      "options": [
+       "Recycles and walks to school",
+       "Recycles and takes the bus",
+       "Saves water and takes the bus",
+       "Turns off the lights and recycles"
+      ],
+      "correct": 1
+     },
+     "solution": "Reciclo = I recycle; voy en autobús = I go by bus",
+     "hint": "Find the two verbs after para proteger el medio ambiente"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "Complete with the preterite of «salir»: «Mis padres ___ de vacaciones ayer.» Type the verb only.",
+     "short": {
+      "accept": [
+       "salieron"
+      ],
+      "reject": [
+       "salían",
+       "salen",
+       "salimos",
+       "salió"
+      ],
+      "form": "strict",
+      "feedback": {
+       "salían": "Salían is the imperfect",
+       "salen": "Salen is the present",
+       "salió": "Salió is the él/ella form"
+      }
+     },
+     "solution": "Salir in the preterite with ellos: salieron",
+     "hint": "Use the regular -ir preterite ending for ellos"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "Choose the correct verb: «Si hace buen tiempo mañana, ___ a la playa.» (nosotros)",
+     "choice": {
+      "options": [
+       "iríamos",
+       "íbamos",
+       "iremos",
+       "fuimos"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Iríamos is the conditional; it goes with si + imperfect subjunctive",
+       null,
+       null,
+       "Fuimos is the preterite"
+      ]
+     },
+     "solution": "Si + present, then future: iremos",
+     "hint": "Si + present tense is followed by the future"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "Complete with the present tense of «volver»: «Mi padre ___ a casa a las seis.» Type the verb only.",
+     "short": {
+      "accept": [
+       "vuelve"
+      ],
+      "reject": [
+       "volve",
+       "vuelvo",
+       "vuelven",
+       "volvió"
+      ],
+      "form": "strict",
+      "feedback": {
+       "volve": "Volver is stem-changing: o becomes ue",
+       "volvió": "Volvió is the preterite"
+      }
+     },
+     "solution": "Volver changes o→ue: él vuelve",
+     "hint": "Volver is a stem-changing verb: the o changes in the él form"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "Choose the correct adjective: «Vivo en una casa muy ___.» (pretty)",
+     "choice": {
+      "options": [
+       "bonito",
+       "bonitas",
+       "bonitos",
+       "bonita"
+      ],
+      "correct": 3
+     },
+     "solution": "Casa is feminine singular: bonita",
+     "hint": "Casa is feminine"
+    },
+    {
+     "id": "w25",
+     "level": 4,
+     "text": "Complete with the imperfect of «hacer»: «Durante las vacaciones, ___ mucho calor.» Type the verb only.",
+     "short": {
+      "accept": [
+       "hacía"
+      ],
+      "reject": [
+       "hace",
+       "hizo",
+       "hará",
+       "hacían"
+      ],
+      "form": "strict",
+      "feedback": {
+       "hizo": "Hizo is the preterite; this question asks for the imperfect",
+       "hace": "Hace is the present"
+      }
+     },
+     "solution": "Imperfect of hacer for describing the weather: hacía",
+     "hint": "Use the imperfect -er ending for él"
+    },
+    {
+     "id": "w26",
+     "level": 4,
+     "text": "Choose the correct pronoun: «¿Compraste la camiseta? — Sí, ___ compré ayer.»",
+     "choice": {
+      "options": [
+       "la",
+       "lo",
+       "le",
+       "las"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Lo replaces a masculine noun",
+       "Le is an indirect pronoun (to him / to her)",
+       null
+      ]
+     },
+     "solution": "La camiseta is feminine singular: la compré",
+     "hint": "Camiseta is feminine and it is the direct object"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "Which sentence about last year is correct?",
+     "choice": {
+      "options": [
+       "El año pasado vamos a España",
+       "El año pasado fuimos a España",
+       "El año pasado fuimos en España",
+       "El año pasado iremos a España"
+      ],
+      "correct": 1
+     },
+     "solution": "El año pasado needs the preterite (fuimos), and going to a country uses a",
+     "hint": "Check the tense and the preposition"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "Which is the correct translation of «We must protect the planet»?",
+     "choice": {
+      "options": [
+       "Debemos proteger la planeta",
+       "Debemos protegemos el planeta",
+       "Debemos proteger el planeta",
+       "Deber proteger el planeta"
+      ],
+      "correct": 2
+     },
+     "solution": "Deber + infinitive: debemos proteger; planeta is masculine (el planeta)",
+     "hint": "After deber, the next verb is an infinitive"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "Read: «Antes había un cine en mi pueblo, pero ahora ya no hay nada.» Which statement is true?",
+     "choice": {
+      "options": [
+       "There is a new cinema in the village",
+       "There has never been a cinema in the village",
+       "The cinema is going to close soon",
+       "There used to be a cinema, but now there is nothing"
+      ],
+      "correct": 3
+     },
+     "solution": "Había = there was / there used to be; ya no hay nada = there is nothing any more",
+     "hint": "Compare the imperfect había with the present hay"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "Translate into Spanish: «I went to the beach»",
+     "short": {
+      "accept": [
+       "fui a la playa",
+       "yo fui a la playa"
+      ],
+      "reject": [
+       "iba a la playa",
+       "fui al playa",
+       "voy a la playa",
+       "fui en la playa"
+      ],
+      "form": "strict",
+      "feedback": {
+       "iba a la playa": "Iba is the imperfect (I used to go / I was going)",
+       "fui al playa": "Playa is feminine, so a la, not al",
+       "voy a la playa": "Voy is the present (I go)"
+      }
+     },
+     "solution": "Preterite of ir (fui) + a la playa",
+     "hint": "Use the preterite of ir; playa is feminine"
+    },
+    {
+     "id": "w31",
+     "level": 5,
+     "text": "Translate into Spanish using the future tense: «it will rain»",
+     "short": {
+      "accept": [
+       "lloverá"
+      ],
+      "reject": [
+       "llovería",
+       "llueve",
+       "va a llover"
+      ],
+      "form": "strict",
+      "feedback": {
+       "va a llover": "That is ir a + infinitive; this question asks for the future tense",
+       "llovería": "Llovería is the conditional (it would rain)",
+       "llueve": "Llueve is the present"
+      }
+     },
+     "solution": "Future of llover: lloverá",
+     "hint": "Add the future ending for él to the infinitive"
+    },
+    {
+     "id": "w32",
+     "level": 5,
+     "text": "Translate into Spanish: «there is a lot of traffic»",
+     "short": {
+      "accept": [
+       "hay mucho tráfico"
+      ],
+      "reject": [
+       "hay mucha tráfico",
+       "es mucho tráfico",
+       "está mucho tráfico"
+      ],
+      "form": "strict",
+      "feedback": {
+       "hay mucha tráfico": "Tráfico is masculine, so mucho",
+       "es mucho tráfico": "There is = hay",
+       "está mucho tráfico": "There is = hay"
+      }
+     },
+     "solution": "Hay = there is; tráfico is masculine: mucho tráfico",
+     "hint": "Use hay, and make the word for a lot agree with a masculine noun"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "spanish.y{year}.grammar",
+      "label": "Grammar & tenses",
+      "skills": [
+       "spanish.grammar"
+      ]
+     },
+     {
+      "id": "spanish.y{year}.people",
+      "label": "People & lifestyle",
+      "skills": [
+       "spanish.people"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "spanish.y{year}.culture",
+      "label": "Free time & culture",
+      "skills": [
+       "spanish.culture"
+      ]
+     },
+     {
+      "id": "spanish.y{year}.world",
+      "label": "Travel & the world",
+      "skills": [
+       "spanish.world"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

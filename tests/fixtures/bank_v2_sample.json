@@ -1,0 +1,213 @@
+{
+ "subject": {
+  "id": "v2sample",
+  "title": "V2 Sample",
+  "order": 98
+ },
+ "skills": [
+  {
+   "id": "v2sample.mixed",
+   "title": "Mixed kinds",
+   "aliases": [
+    "mixed kinds",
+    "mixed",
+    "kinds"
+   ],
+   "questions": [
+    {
+     "id": "m01",
+     "level": 1,
+     "topic_note": "Cells",
+     "text": "Which organelle releases energy by respiration?",
+     "choice": {
+      "options": [
+       "Nucleus",
+       "Mitochondria",
+       "Ribosome",
+       "Cell membrane"
+      ],
+      "correct": 1,
+      "feedback": [
+       "The nucleus stores the DNA.",
+       null,
+       null,
+       "The membrane controls what enters the cell."
+      ]
+     },
+     "solution": "Mitochondria release energy by respiration.",
+     "hint": "Think about where respiration happens."
+    },
+    {
+     "id": "m02",
+     "level": 2,
+     "text": "Name the process by which plants make glucose using light. Give the term.",
+     "short": {
+      "accept": [
+       "photosynthesis"
+      ],
+      "reject": [
+       "respiration"
+      ],
+      "feedback": {
+       "respiration": "Respiration releases energy rather than storing it."
+      }
+     },
+     "solution": "Plants make glucose by photosynthesis.",
+     "hint": "The name starts with photo, meaning light."
+    },
+    {
+     "id": "m03",
+     "level": 3,
+     "text": "What is 7 + 5?",
+     "answer": {
+      "kind": "number",
+      "display": "12",
+      "value": 12
+     },
+     "solution": "7 + 5 = 12",
+     "hint": "Count on from 7",
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "11",
+        "value": 11
+       },
+       "feedback": "Count again carefully"
+      }
+     ]
+    },
+    {
+     "id": "m04",
+     "level": 4,
+     "text": "Give the chemical formula of carbon dioxide.",
+     "short": {
+      "accept": [
+       "CO2"
+      ],
+      "form": "case"
+     },
+     "solution": "Carbon dioxide is CO2",
+     "hint": "One carbon atom and some oxygen atoms"
+    },
+    {
+     "id": "m05",
+     "level": 5,
+     "text": "Explain why the sky is blue.",
+     "rubric": {
+      "model_answer": "Air molecules scatter short wavelength blue light more than red light.",
+      "mark_scheme": "1 mark: scattering. 1 mark: blue scatters most.",
+      "max_marks": 2
+     },
+     "solution": "Blue light is scattered most",
+     "hint": "Think about wavelengths of sunlight"
+    }
+   ]
+  },
+  {
+   "id": "v2sample.levels",
+   "title": "Levels",
+   "aliases": [
+    "levels",
+    "level test",
+    "selection"
+   ],
+   "questions": [
+    {
+     "id": "a1",
+     "level": 1,
+     "text": "Level one question alpha: name the first month. Give the month.",
+     "short": {
+      "accept": [
+       "January"
+      ]
+     },
+     "solution": "Counting from the start of the year",
+     "hint": "Count the months on a calendar"
+    },
+    {
+     "id": "a2",
+     "level": 1,
+     "text": "Level one question beta: name the second month. Give the month.",
+     "short": {
+      "accept": [
+       "February"
+      ]
+     },
+     "solution": "Counting from the start of the year",
+     "hint": "Count the months on a calendar"
+    },
+    {
+     "id": "a3",
+     "level": 1,
+     "text": "Level one question gamma: name the third month. Give the month.",
+     "short": {
+      "accept": [
+       "March"
+      ]
+     },
+     "solution": "Counting from the start of the year",
+     "hint": "Count the months on a calendar"
+    },
+    {
+     "id": "b1",
+     "level": 3,
+     "text": "Level three question delta: name the fourth month. Give the month.",
+     "short": {
+      "accept": [
+       "April"
+      ]
+     },
+     "solution": "Counting from the start of the year",
+     "hint": "Count the months on a calendar"
+    },
+    {
+     "id": "b2",
+     "level": 3,
+     "text": "Level three question epsilon: name the fifth month. Give the month.",
+     "short": {
+      "accept": [
+       "May"
+      ]
+     },
+     "solution": "Counting from the start of the year",
+     "hint": "Count the months on a calendar"
+    },
+    {
+     "id": "c1",
+     "level": 5,
+     "text": "Level five question zeta: name the sixth month. Give the month.",
+     "short": {
+      "accept": [
+       "June"
+      ]
+     },
+     "solution": "Counting from the start of the year",
+     "hint": "Count the months on a calendar"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "v2sample.y{year}.mixed",
+      "label": "Mixed kinds",
+      "skills": [
+       "v2sample.mixed"
+      ]
+     },
+     {
+      "id": "v2sample.y{year}.levels",
+      "label": "Levels",
+      "skills": [
+       "v2sample.levels"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

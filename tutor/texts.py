@@ -1,8 +1,10 @@
-"""All user-facing texts and keyboards, verbatim from docs/ARCHITECTURE.md section 4."""
+"""All user-facing texts and keyboards, verbatim from docs/ARCHITECTURE.md section 4
+and docs/ARCHITECTURE_V2.md section 3.1."""
 from __future__ import annotations
 
 from typing import Iterable, Sequence
 
+from .content import CHOICE_LETTERS
 from .messages import Keyboard
 
 # 4.1 kept from the original flow
@@ -37,6 +39,19 @@ TEXT_ONLY = "📝 I can only read text for now — please type your answer."
 DELETED = "🗑️ Done — I've deleted your data. If you'd like to come back, send /start and enter a new access code."
 ERROR = "⚠️ Sorry, something went wrong. Please try again."
 
+# v2 (docs/ARCHITECTURE_V2.md section 3.1)
+PROBLEM_CHOICE = "Problem {n}: {text}\n\nReply with the letter of your answer — tap a button below 😊"
+PROBLEM_CHOICE_EXAM = "Problem {n} (1 mark): {text}\n\nReply with the letter of your answer — tap a button below 😊"
+PROBLEM_SHORT = "Problem {n}: {text}\n\nSend me your answer — just the word or short phrase 😊"
+PROBLEM_SHORT_EXAM = "Problem {n} (1 mark): {text}\n\nSend me your answer — just the word or short phrase 😊"
+PROBLEM_RUBRIC = ("Problem {n} (extended practice, {marks} mark{s}): {text}\n\n"
+                  "Write your answer, then I'll show you a model answer to compare with yours 😊")
+CORRECT_NOTE = "✅ Correct! {solution}. {note}"
+CHOICE_UNPARSED = "🤔 Please reply with just one letter: {letters}. Or type «hint» for a hint, or «skip» to see the solution."
+SHORT_UNPARSED = ("🤔 I couldn't find one clear answer in that. Send just the word or short phrase — "
+                  "or type «hint» for a hint, or «skip» to see the solution.")
+WHY_FACT = "Here's why: {solution}"
+
 # Keyboards
 CHANGE_YEAR = "🎓 Change year"
 CHANGE_SUBJECT = "📘 Change subject"
@@ -62,6 +77,11 @@ def topic_kb(rows: Sequence[Sequence[str]]) -> Keyboard:
         (PAST_PAPER, MY_OWN_TOPIC),
         (CHANGE_YEAR, CHANGE_SUBJECT),
     )
+
+
+def choice_kb(n: int, rows: Sequence[Sequence[str]]) -> Keyboard:
+    """The letter row (A..) on top of the usual lesson keyboard."""
+    return (tuple(CHOICE_LETTERS[:n]),) + topic_kb(rows)
 
 
 # 4.3 owner texts

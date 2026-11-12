@@ -9,7 +9,7 @@ from typing import Callable
 
 from . import texts as T
 from .config import Config
-from .content import MY_OWN_TOPIC_LABEL, Registry, Topic, check, load_registry
+from .content import MY_OWN_TOPIC_LABEL, Problem, Registry, Topic, check, fingerprint, letters_text, load_registry
 from .db import Attempt, Pending, Store, Student
 from .intents import (command_name, intent, is_cheat_request, is_distress, normalize_code,
                       parse_year)
@@ -20,6 +20,7 @@ from .owner import OWNER_COMMANDS, handle_owner
 log = logging.getLogger(__name__)
 
 EXAM_MARKS = {1: 1, 2: 2, 3: 2, 4: 3, 5: 4}
+REROLL_TRIES = 40               # candidate seeds tried when choosing the next problem (repeat avoidance)
 MATH_CHARS = "=+-*/^²√π"
 BAD_CODE_ALERT_AFTER = 10       # wrong codes from one chat within BAD_CODE_WINDOW -> one owner alert
 BAD_CODE_WINDOW = 3600.0
@@ -44,13 +45,37 @@ def _day(now: float) -> str:
     return time.strftime("%Y-%m-%d", time.gmtime(now))
 
 
+def _choice_count(problem: Problem) -> int:
+    """Number of options of a choice problem (0 if the value is malformed)."""
+    v = problem.answer.value
+    opts = v.get("options") if isinstance(v, dict) else None
+    return len(opts) if isinstance(opts, (list, tuple)) and 1 <= len(opts) <= 5 else 0
+
+
+def _problem_message(problem: Problem, number: int, exam: bool, gen: int) -> str:
+    """The problem text for each answer kind (docs/ARCHITECTURE_V2.md section 3.2)."""
+    kind = problem.answer.kind
+    if kind == "choice":
+        return (T.PROBLEM_CHOICE_EXAM if exam else T.PROBLEM_CHOICE).format(n=number, text=problem.text)
+    if kind == "short":
+        return (T.PROBLEM_SHORT_EXAM if exam else T.PROBLEM_SHORT).format(n=number, text=problem.text)
+    if kind == "rubric":
+        marks = problem.answer.max_marks
+        return T.PROBLEM_RUBRIC.format(n=number, marks=marks, s="" if marks == 1 else "s", text=problem.text)
+    if exam:
+        marks = EXAM_MARKS[gen]
+        return T.PROBLEM_EXAM.format(n=number, marks=marks, s="" if marks == 1 else "s", text=problem.text)
+    return T.PROBLEM.format(n=number, text=problem.text)
+
+
 class Engine:
     def __init__(self, store: Store, config: Config, registry: Registry | None = None,
                  llm: LLM | None = None, clock: Callable[[], float] = time.time,
                  rng: random.Random | None = None) -> None:
         self.store = store
         self.config = config
-        self.registry = registry if registry is not None else load_registry()
+        # a broken content file never stops the bot: it is logged and skipped (docs/ARCHITECTURE_V2.md D7)
+        self.registry = registry if registry is not None else load_registry(strict=False)
         self.llm = llm
         self.clock = clock
         self.rng = rng if rng is not None else random.Random()
@@ -250,7 +275,20 @@ class Engine:
             if self.registry.subjects_for_year(st.year):
                 return self._subject_kb(st)
             return T.YEAR_KB
+        if st.step == "lesson":
+            p = self.store.get_pending(st.chat_id)
+            if p is not None:
+                return self._lesson_kb(st, p.problem)
         return self._topic_kb(st)
+
+    def _lesson_kb(self, st: Student, problem: Problem | None) -> Keyboard:
+        """topic_kb, with the letter row on top while a multiple-choice problem is open."""
+        rows = self.registry.topic_rows(st.subject, st.year)
+        if problem is not None and problem.answer.kind == "choice":
+            n = _choice_count(problem)
+            if n:
+                return T.choice_kb(n, rows)
+        return T.topic_kb(rows)
 
     def _subject_reply(self, st: Student) -> list[Outgoing]:
         if not self.registry.subjects_for_year(st.year):
@@ -319,28 +357,43 @@ class Engine:
                 self._next_problem(st, topic, skill_id, level, 1, None)]
 
     def _next_problem(self, st: Student, topic: Topic, skill_id: str, level: int, number: int,
-                      prev_text: str | None) -> Outgoing:
+                      prev: Problem | None) -> Outgoing:
         skill = self.registry.skill(skill_id)
         if skill is None:
             raise RuntimeError(f"unknown skill {skill_id}")
         gen = topic.level_map[level - 1]
-        problem = None
-        seed = 0
-        for _ in range(4):
-            seed = self.rng.randrange(1, 2 ** 31)
-            problem = skill.generate(gen, seed)
-            if problem.text != prev_text:
-                break
+        seed, problem = self._choose(st.chat_id, skill, gen, prev)
+        self.store.add_seen(st.chat_id, skill_id, fingerprint(problem))
         self.store.set_pending(Pending(
             chat_id=st.chat_id, subject=st.subject, topic=topic.id, skill=skill_id, level=level,
             gen_level=gen, seed=seed, problem_no=number, problem=problem, hints_given=0,
             created_at=self._now))
-        if topic.exam:
-            marks = EXAM_MARKS[gen]
-            body = T.PROBLEM_EXAM.format(n=number, marks=marks, s="" if marks == 1 else "s", text=problem.text)
-        else:
-            body = T.PROBLEM.format(n=number, text=problem.text)
-        return Outgoing(st.chat_id, body, keyboard=self._topic_kb(st))
+        return Outgoing(st.chat_id, _problem_message(problem, number, topic.exam, gen),
+                        keyboard=self._lesson_kb(st, problem))
+
+    def _choose(self, chat_id: int, skill, gen: int, prev: Problem | None) -> tuple[int, Problem]:
+        """Repeat avoidance (docs/ARCHITECTURE_V2.md section 3.2): never the previous problem, never two
+        extended-practice problems in a row, and the least recently seen problem when all were seen."""
+        recent = self.store.recent_seen(chat_id, skill.id)
+        base = self.rng.randrange(1, 2 ** 31 - REROLL_TRIES)
+        prev_fp = fingerprint(prev) if prev is not None else None
+        fallback: tuple[int, int, Problem] | None = None       # (index in recent, seed, problem)
+        for k in range(REROLL_TRIES):
+            seed = base + k
+            p = skill.generate(gen, seed)
+            fp = fingerprint(p)
+            if prev is not None and (fp == prev_fp or p.text == prev.text):
+                continue
+            if prev is not None and prev.answer.kind == "rubric" and p.answer.kind == "rubric":
+                continue
+            if fp not in recent:
+                return seed, p
+            idx = recent.index(fp)
+            if fallback is None or idx > fallback[0]:
+                fallback = (idx, seed, p)
+        if fallback is not None:
+            return fallback[1], fallback[2]
+        return base, skill.generate(gen, base)          # last resort; may repeat
 
     def _record(self, st: Student, p: Pending, correct: bool, skipped: bool) -> None:
         self.store.add_attempt(Attempt(
@@ -363,7 +416,7 @@ class Engine:
             return self._topic_ask(st)
         problem = p.problem
         answer = problem.answer
-        kb = self._topic_kb(st)
+        kb = self._lesson_kb(st, problem)
         want = intent(text)
 
         if want == "hint":
@@ -380,7 +433,7 @@ class Engine:
             self._record(st, p, False, True)
             level = self._set_level(st, p, p.level - 1)
             return [Outgoing(st.chat_id, T.SKIP.format(solution=_trim(problem.solution), answer=answer.display)),
-                    self._next_problem(st, topic, p.skill, level, p.problem_no + 1, problem.text)]
+                    self._next_problem(st, topic, p.skill, level, p.problem_no + 1, problem)]
 
         if answer.kind == "rubric":
             return self._rubric_reply(st, p, topic, text)
@@ -390,9 +443,14 @@ class Engine:
         if verdict.status == "correct":
             self._record(st, p, True, False)
             level = self._set_level(st, p, p.level + 1)
-            return [Outgoing(st.chat_id, T.CORRECT.format(solution=_trim(problem.solution))),
+            note = _trim(verdict.feedback)
+            if note:
+                body = T.CORRECT_NOTE.format(solution=_trim(problem.solution), note=verdict.feedback.strip())
+            else:
+                body = T.CORRECT.format(solution=_trim(problem.solution))
+            return [Outgoing(st.chat_id, body),
                     self._next_problem(st, topic, self._other_skill(topic, p.skill), level,
-                                       p.problem_no + 1, problem.text)]
+                                       p.problem_no + 1, problem)]
 
         if verdict.status == "wrong":
             self._record(st, p, False, False)
@@ -401,9 +459,10 @@ class Engine:
             if not why:
                 why = _trim(self._tutor("feedback", st, p, text) or "")
             if not why:
-                why = _trim(T.WHY_FALLBACK.format(solution=_trim(problem.solution)))
+                fallback = T.WHY_FACT if answer.kind in ("choice", "short") else T.WHY_FALLBACK
+                why = _trim(fallback.format(solution=_trim(problem.solution)))
             return [Outgoing(st.chat_id, T.WRONG.format(why=why, answer=answer.display)),
-                    self._next_problem(st, topic, p.skill, level, p.problem_no + 1, problem.text)]
+                    self._next_problem(st, topic, p.skill, level, p.problem_no + 1, problem)]
 
         if verdict.status == "unmarkable":
             return self._unmarkable(st, p, topic)
@@ -412,6 +471,11 @@ class Engine:
         chat = self._tutor("chat", st, p, text)
         if chat:
             return [Outgoing(st.chat_id, T.LLM_CHAT.format(text=chat), keyboard=kb)]
+        if answer.kind == "choice":
+            return [Outgoing(st.chat_id, T.CHOICE_UNPARSED.format(letters=letters_text(_choice_count(problem) or 3)),
+                             keyboard=kb)]
+        if answer.kind == "short":
+            return [Outgoing(st.chat_id, T.SHORT_UNPARSED, keyboard=kb)]
         if any(c.isdigit() for c in text) or any(c in text for c in MATH_CHARS):
             return [Outgoing(st.chat_id, T.UNPARSED, keyboard=kb)]
         subj = self.registry.subject(p.subject)
@@ -420,11 +484,11 @@ class Engine:
 
     def _unmarkable(self, st: Student, p: Pending, topic: Topic) -> list[Outgoing]:
         return [Outgoing(st.chat_id, T.UNMARKABLE.format(answer=p.problem.answer.display)),
-                self._next_problem(st, topic, p.skill, p.level, p.problem_no + 1, p.problem.text)]
+                self._next_problem(st, topic, p.skill, p.level, p.problem_no + 1, p.problem)]
 
     def _rubric_reply(self, st: Student, p: Pending, topic: Topic, text: str) -> list[Outgoing]:
         marked = None
-        if self._llm_allowed(st.chat_id):
+        if self.config.llm_marking and self._llm_allowed(st.chat_id):
             self._count_llm(st.chat_id)
             marked = mark_rubric(self.llm, p.problem, text)
         if marked is None:
@@ -436,8 +500,8 @@ class Engine:
             level = self._set_level(st, p, p.level + 1)
             return [Outgoing(st.chat_id, T.CORRECT.format(solution=_trim(fb or p.problem.solution))),
                     self._next_problem(st, topic, self._other_skill(topic, p.skill), level,
-                                       p.problem_no + 1, p.problem.text)]
+                                       p.problem_no + 1, p.problem)]
         level = self._set_level(st, p, p.level - 1)
         why = _trim(fb) or _trim(T.WHY_FALLBACK.format(solution=_trim(p.problem.solution)))
         return [Outgoing(st.chat_id, T.WRONG.format(why=why, answer=p.problem.answer.display)),
-                self._next_problem(st, topic, p.skill, level, p.problem_no + 1, p.problem.text)]
+                self._next_problem(st, topic, p.skill, level, p.problem_no + 1, p.problem)]

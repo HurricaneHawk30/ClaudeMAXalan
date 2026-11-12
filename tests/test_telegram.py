@@ -504,7 +504,7 @@ class TestRunPolling(unittest.TestCase):
         self.assertEqual(texts[1], helpers.CODE_OK)
         self.assertEqual(texts[2], helpers.SUBJECT_ASK(11))
         self.assertEqual(json.loads(api.sent[2]["reply_markup"])["keyboard"],
-                         [[{"text": "Maths"}, {"text": "Physics"}], [{"text": "🎓 Change year"}]])
+                         [[{"text": t} for t in row] for row in helpers.SUBJECT_KB_10_11])      # v2: 35 subjects
 
 
 if __name__ == "__main__":

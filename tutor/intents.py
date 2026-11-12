@@ -141,7 +141,8 @@ _CHEAT_RE = tuple(re.compile(p) for p in (
 ))
 
 _SKIP_EXACT = {"skip", "next", "pass", "i don't know", "i dont know", "idk", "dunno", "no idea",
-               "give up", "i give up", "show answer", "show me the answer"}
+               "give up", "i give up", "show answer", "show me the answer",
+               "no clue", "not sure", "im not sure", "i'm not sure", "unsure"}
 _HINT_EXACT = {"hint", "a hint", "give me a hint", "help", "help me", "stuck", "i'm stuck", "im stuck",
                "i don't get it", "i dont get it", "i don't understand", "i dont understand",
                "how do i start", "what do i do", "explain", "?"}
@@ -183,9 +184,10 @@ def intent(text: str) -> str | None:
     norm = normalize(text)
     if not norm:
         return None
-    if norm in _SKIP_EXACT:
+    bare = norm.strip(" .,")               # "I'm not sure." is the exact phrase "i'm not sure"
+    if norm in _SKIP_EXACT or bare in _SKIP_EXACT:
         return "skip"
-    if norm in _HINT_EXACT:
+    if norm in _HINT_EXACT or bare in _HINT_EXACT:
         return "hint"
     if any(_contains(norm, p) for p in _HINT_WORDS):
         return "hint"

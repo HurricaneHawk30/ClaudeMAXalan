@@ -1,0 +1,23 @@
+{
+  "subject_id": "statistics",
+  "skills": [
+    {"id": "statistics.data_collection", "title": "Collecting data & sampling",
+     "aliases": ["sampling methods", "sample", "questionnaire", "types of data", "hypothesis", "bias", "census", "pilot study"],
+     "questions": [
+       {"id": "dc01", "level": 1,
+        "text": "What is the name for a survey that collects data from every member of a population?",
+        "choice": {"options": ["A census", "A sample", "A pilot study", "A hypothesis"], "correct": 0},
+        "solution": "A census collects data from every member of the population, while a sample uses only part of it",
+        "hint": "Think about the survey the government carries out of every household"}
+     ]},
+    {"id": "statistics.diagrams", "title": "Diagrams & correlation",
+     "aliases": ["scatter diagram", "correlation", "line of best fit", "histogram", "box plot", "interpolation", "causation"],
+     "questions": [
+       {"id": "dg01", "level": 1,
+        "text": "On a scatter diagram, the points go up from left to right. What type of correlation is shown?",
+        "choice": {"options": ["Positive correlation", "Negative correlation", "No correlation"], "correct": 0},
+        "solution": "When one variable increases as the other increases, the correlation is positive",
+        "hint": "Think about what happens to y as x gets bigger"}
+     ]}
+  ]
+}

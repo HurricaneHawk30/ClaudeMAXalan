@@ -3,6 +3,7 @@ import re
 import unittest
 
 import helpers
+import spec
 from helpers import boundary_variants, perturb
 from tutor.content import check, load_registry, problem_to_json, problem_from_json
 
@@ -14,14 +15,18 @@ MATHS = [
 ]
 PHYSICS = ["speed", "acceleration", "force", "weight", "kinetic_energy", "gpe", "power", "ohms_law",
            "electrical_power", "charge", "density", "pressure"]
-REQUIRED = [f"maths.{n}" for n in MATHS] + [f"physics.{n}" for n in PHYSICS]
-KINDS = ("number", "fraction", "set", "assign", "expr", "ratio", "rubric")
+# v2 section 7: REQUIRED = v1 ids plus every generator (G) skill of section 5 except the optional extras
+V2_GENERATORS = [sid for sid, info in spec.SKILLS.items() if info["kind"] == "G" and sid not in spec.OPTIONAL_EXTRAS]
+REQUIRED = [f"maths.{n}" for n in MATHS] + [f"physics.{n}" for n in PHYSICS] + V2_GENERATORS
+KINDS = ("number", "fraction", "set", "assign", "expr", "ratio", "rubric", "choice", "short")
 FORMS = {"number": ("any", "standard"), "fraction": ("any", "simplest", "mixed"),
          "expr": ("any", "expanded", "factorised"), "ratio": ("any", "simplest"), "set": ("any",),
-         "assign": ("any",), "rubric": ("any",)}
-# 60 seeds per skill and level keep the whole suite under a minute; run with TUTOR_FULL_TESTS=1
-# (300 seeds) before every deploy.
-SEEDS = 300 if os.environ.get("TUTOR_FULL_TESTS") == "1" else 60
+         "assign": ("any",), "rubric": ("any",), "choice": ("any",), "short": ("any", "strict", "case", "pinyin")}
+GEN_SUBJECTS = ["maths", "physics"] + [s["id"] for s in spec.SUBJECTS
+                                       if any(i["kind"] == "G" and k.startswith(s["id"] + ".") for k, i in spec.SKILLS.items())]
+OWNER = {s["id"]: s["owner"] for s in spec.SUBJECTS}
+# 30 seeds per skill and level by default (docs/ARCHITECTURE_V2.md section 7); TUTOR_FULL_TESTS=1 runs 300.
+SEEDS = 300 if os.environ.get("TUTOR_FULL_TESTS") == "1" else 30
 
 
 def problems_for(skill):
@@ -80,9 +85,13 @@ def audit(skill):
                     bad(level, seed, "json round-trip differs")
             except Exception as e:  # noqa: BLE001
                 bad(level, seed, f"json round-trip raised {e}")
+            if a.kind == "choice" and not p.ref.startswith(skill.id + "#"):
+                bad(level, seed, f"choice problem without a ref '<skill_id>#...': {p.ref!r}")
+            if a.kind == "choice" and not 3 <= len(a.value["options"]) <= 5:
+                bad(level, seed, f"{len(a.value['options'])} options")
             if a.kind != "rubric":
                 v = check(a, a.display)
-                if v.status != "correct":
+                if v.status != "correct" or v.feedback:
                     bad(level, seed, f"display {a.display!r} judged {v.status} ({v.feedback})")
                 pt = perturb(a)
                 v = check(a, pt, p.mistakes)
@@ -91,6 +100,12 @@ def audit(skill):
                 for near in boundary_variants(a):
                     if check(a, near).status == "correct":
                         bad(level, seed, f"near miss {near!r} of {a.display!r} judged correct")
+                if a.kind == "choice":
+                    for j, opt in enumerate(a.value["options"]):
+                        if j != a.value["correct"] and check(a, "ABCDE"[j], p.mistakes).status != "wrong":
+                            bad(level, seed, f"wrong letter {'ABCDE'[j]} not judged wrong")
+                        if len(opt) >= 4 and j == a.value["correct"] and re.search(r"(?i)\b" + re.escape(opt) + r"\b", p.hint):
+                            bad(level, seed, f"hint contains the correct option {opt!r}")
                 if len(a.display) >= 3 and a.display in p.hint:
                     bad(level, seed, f"hint contains display {a.display!r}")
             for m in p.mistakes:
@@ -167,65 +182,161 @@ def content_audit(skill):
     return fails
 
 
+# Ladder kinds written in section 5.1 ("Ladder L1 -> L5"): skill -> {level: (kind, dp, sf, form)}; None = not stated
+LADDER = {
+    "further_maths.functions": {3: ("expr", None, None, None), 4: ("expr", None, None, "expanded"), 5: ("set", None, None, None)},
+    "further_maths.polynomials": {3: ("assign", None, None, None), 4: ("assign", None, None, None), 5: ("set", None, None, None)},
+    "further_maths.coordinates": {1: ("assign", None, None, None), 2: ("fraction", None, None, None),
+                                  3: ("fraction", None, None, None), 4: ("number", 1, None, None),
+                                  5: ("assign", None, None, None)},
+    "further_maths.calculus": {1: ("expr", None, None, None), 2: ("expr", None, None, None), 3: ("number", None, None, None),
+                               4: ("set", None, None, None), 5: ("assign", None, None, None)},
+    "further_maths.matrices": {3: ("assign", None, None, None), 4: ("choice", None, None, None), 5: ("assign", None, None, None)},
+    "further_maths.trigonometry": {1: ("choice", None, None, None), 2: ("fraction", None, None, None),
+                                   3: ("set", 1, None, None), 4: ("set", None, None, None), 5: ("fraction", None, None, None)},
+    "statistics.stratified": {1: ("fraction", None, None, "simplest"), 4: ("set", None, None, None)},
+    "statistics.averages": {4: ("number", 1, None, None)},
+    "statistics.spread": {5: ("number", 2, None, None)},
+    "statistics.spearman": {3: ("number", 2, None, None), 4: ("number", 2, None, None), 5: ("number", 3, None, None)},
+    "statistics.probability": {1: ("fraction", None, None, "simplest")},
+    "biology.magnification": {5: ("number", None, 3, "standard")},
+    "biology.data_maths": {1: ("number", 1, None, None), 4: ("number", None, 3, None), 5: ("number", None, 3, None)},
+    "biology.punnett": {1: ("fraction", None, None, None), 4: ("ratio", None, None, "simplest")},
+    "chemistry.mr": {4: ("number", 1, None, None), 5: ("number", 1, None, None)},
+    "chemistry.moles": {3: ("number", None, 3, None), 4: ("number", None, 3, None), 5: ("number", None, 3, "standard")},
+    "chemistry.concentration": {4: ("number", None, 3, None)},
+    "chemistry.yield_economy": {1: ("number", 1, None, None), 3: ("number", None, 3, None)},
+    "chemistry.rates": {4: ("number", None, 3, None)},
+    "chemistry.rf_values": {1: ("number", 2, None, None), 5: ("choice", None, None, None)},
+    "computer_science.binary": {1: ("number", None, None, None), 2: ("short", None, None, None), 5: ("short", None, None, None)},
+    "computer_science.data_units": {4: ("number", None, 3, None)},
+    "computer_science.logic": {1: ("number", None, None, None), 3: ("choice", None, None, None)},
+    "astronomy.orbits": {1: ("number", None, 3, "standard")},
+    "astronomy.distances": {5: ("number", 1, None, None)},
+    "geography.skills_stats": {3: ("number", 1, None, None)},
+    "economics.elasticity": {1: ("number", 1, None, None), 2: ("number", 2, None, None)},
+    "economics.firms_maths": {4: ("number", 2, None, None)},
+    "economics.interest": {2: ("number", 2, None, None)},
+    "economics.macro_maths": {4: ("number", 2, None, None)},
+    "business.finance_maths": {4: ("number", 1, None, None)},
+    "psychology.stats": {3: ("number", 1, None, None), 4: ("ratio", None, None, "simplest")},
+}
+
+
 class TestSkills(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.reg = load_registry()
 
+    def owner(self, sid):
+        return OWNER.get(sid.split(".")[0], "frozen")
+
     def test_required_ids_exist(self):
-        self.assertEqual(len(REQUIRED), 32)
-        for sid in REQUIRED:
-            with self.subTest(skill=sid):
-                self.assertIsNotNone(self.reg.skill(sid))
+        self.assertEqual(len(REQUIRED), 32 + len(V2_GENERATORS))
+        self.assertGreaterEqual(len(V2_GENERATORS), 40)
+        missing = [f"[{self.owner(s)}] {s}" for s in REQUIRED if self.reg.skill(s) is None]
+        self.assertEqual(missing, [], f"{len(missing)} required generator skill(s) missing: {missing[:12]}")
+
+    def test_required_generators_have_no_items(self):
+        bad = [f"[{self.owner(s)}] {s}" for s in REQUIRED if self.reg.skill(s) is not None and self.reg.skill(s).items]
+        self.assertEqual(bad, [])
 
     def test_every_skill_belongs_to_its_subject(self):
-        for sub in ("maths", "physics"):
+        for sub in GEN_SUBJECTS:
             for sk in self.reg.skills_of(sub):
                 self.assertEqual(sk.subject, sub)
                 self.assertTrue(sk.id.startswith(sub + "."))
                 self.assertTrue(sk.title.strip())
                 self.assertTrue(sk.aliases)
 
+    def generators(self, subject_id):
+        return [sk for sk in self.reg.skills_of(subject_id) if not sk.items]
+
     def _run_subject(self, subject_id):
         fails = []
-        skills = self.reg.skills_of(subject_id)
-        self.assertTrue(skills)
+        skills = self.generators(subject_id)
+        if not skills:
+            self.fail(f"[{self.owner(subject_id)}] no generator skills loaded for {subject_id}")
         for sk in skills:
-            fails.extend(audit(sk))
-        self.assertEqual(len(fails), 0,
-                         f"{len(fails)} failure(s); first 10:\n" + "\n".join(fails[:10]))
+            fails.extend(f"[{self.owner(sk.id)}] {f}" for f in audit(sk))
+        self.assertEqual(len(fails), 0, f"{len(fails)} failure(s); first 10:\n" + "\n".join(fails[:10]))
 
     def _run_rounding(self, subject_id):
         fails = []
-        for sk in self.reg.skills_of(subject_id):
-            fails.extend(rounding_audit(sk))
+        for sk in self.generators(subject_id):
+            fails.extend(f"[{self.owner(sk.id)}] {f}" for f in rounding_audit(sk))
         by_skill = sorted({f.split(" L")[0] for f in fails})
         self.assertEqual(len(fails), 0,
                          f"{len(fails)} problem(s) in skills {by_skill}; first 5:\n" + "\n".join(fails[:5]))
 
-    def test_maths_rounding_stated(self):
-        self._run_rounding("maths")
-
-    def test_physics_rounding_stated(self):
-        self._run_rounding("physics")
-
     def _run_content(self, subject_id):
         fails = []
-        for sk in self.reg.skills_of(subject_id):
-            fails.extend(content_audit(sk))
+        for sk in self.generators(subject_id):
+            fails.extend(f"[{self.owner(sk.id)}] {f}" for f in content_audit(sk))
         self.assertEqual(len(fails), 0, f"{len(fails)} problem(s); first 10:\n" + "\n".join(fails[:10]))
 
-    def test_maths_content(self):
-        self._run_content("maths")
+    def test_ladder_kinds(self):
+        fails = []
+        seeds = range(min(SEEDS, 20))
+        for sid, levels in LADDER.items():
+            sk = self.reg.skill(sid)
+            if sk is None:
+                fails.append(f"[{self.owner(sid)}] {sid}: missing")
+                continue
+            for level, (kind, dp, sf, form) in levels.items():
+                for seed in seeds:
+                    a = sk.generate(level, seed).answer
+                    got = (a.kind, a.dp, a.sf, a.form)
+                    if a.kind != kind or (dp is not None and a.dp != dp) or (sf is not None and a.sf != sf) \
+                            or (form is not None and a.form != form):
+                        fails.append(f"[{self.owner(sid)}] {sid} L{level} seed={seed}: {got} != {(kind, dp, sf, form)}")
+                        break
+        self.assertEqual(len(fails), 0, f"{len(fails)} ladder deviation(s); first 12:\n" + "\n".join(fails[:12]))
 
-    def test_physics_content(self):
-        self._run_content("physics")
+    def test_computer_science_states_the_kilobyte_convention(self):
+        fails = []
+        sk = self.reg.skill("computer_science.data_units")
+        if sk is None:
+            self.fail("[content-1 STEM] computer_science.data_units missing")
+        for level in range(1, 6):
+            for seed in range(SEEDS):
+                t = sk.generate(level, seed).text
+                if re.search(r"(?i)\b(kilobytes?|kb|megabytes?|mb|gigabytes?|gb)\b", t) and "1 kilobyte = 1000 bytes" not in t:
+                    fails.append(f"L{level} seed={seed}: {t[:80]!r}")
+        self.assertEqual(fails, [], f"[content-1 STEM] data-size questions must say 'Use 1 kilobyte = 1000 bytes': {fails[:3]}")
 
-    def test_maths_property(self):
-        self._run_subject("maths")
+    def test_computer_science_code_has_no_double_star(self):
+        for sk in self.generators("computer_science"):
+            for level in range(1, 6):
+                for seed in range(min(SEEDS, 30)):
+                    p = sk.generate(level, seed)
+                    self.assertNotIn("**", p.text + p.solution + p.hint, f"[content-1 STEM] {sk.id}")
 
-    def test_physics_property(self):
-        self._run_subject("physics")
+    def test_choice_generator_problems_vary_and_have_refs(self):
+        fails = []
+        for sid in ("further_maths.matrices", "further_maths.trigonometry", "computer_science.logic", "chemistry.rf_values"):
+            sk = self.reg.skill(sid)
+            if sk is None:
+                continue
+            for level in range(1, 6):
+                for seed in range(min(SEEDS, 30)):
+                    p = sk.generate(level, seed)
+                    if p.answer.kind == "choice" and not p.ref.startswith(sid + "#"):
+                        fails.append(f"[{self.owner(sid)}] {sid} L{level} seed={seed}: ref {p.ref!r}")
+                        break
+        self.assertEqual(fails, [])
+
+
+def _add_subject_tests():
+    for sub in GEN_SUBJECTS:
+        for name, fn in (("property", "_run_subject"), ("rounding_stated", "_run_rounding"), ("content", "_run_content")):
+            def t(self, sub=sub, fn=fn):
+                getattr(self, fn)(sub)
+            t.__name__ = f"test_{sub}_{name}"
+            setattr(TestSkills, t.__name__, t)
+
+
+_add_subject_tests()
 
 
 if __name__ == "__main__":

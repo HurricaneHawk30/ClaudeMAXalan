@@ -1,0 +1,2492 @@
+{
+ "subject": {
+  "id": "french",
+  "title": "French",
+  "order": 52
+ },
+ "skills": [
+  {
+   "id": "french.grammar",
+   "title": "Grammar & tenses",
+   "aliases": [
+    "french grammar",
+    "tenses",
+    "present tense",
+    "past tense",
+    "future tense",
+    "conditional",
+    "verbs",
+    "adjective agreement",
+    "pronouns",
+    "negatives",
+    "passé composé",
+    "imparfait",
+    "futur proche",
+    "conditionnel"
+   ],
+   "questions": [
+    {
+     "id": "g01",
+     "level": 1,
+     "text": "Which French subject pronoun means «we»?",
+     "choice": {
+      "options": [
+       "nous",
+       "vous",
+       "ils",
+       "elles"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Vous means you (plural or polite)",
+       null,
+       null
+      ]
+     },
+     "solution": "Nous means we; vous is you (plural or polite) and ils/elles mean they",
+     "hint": "Its verb forms usually end in -ons"
+    },
+    {
+     "id": "g02",
+     "level": 1,
+     "text": "What does «ne ... jamais» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "never",
+       "not ever"
+      ],
+      "reject": [
+       "always"
+      ],
+      "form": "any",
+      "feedback": {
+       "always": "Always is toujours; ne ... jamais is a negative"
+      }
+     },
+     "solution": "Ne ... jamais means never, e.g. je ne mange jamais de viande = I never eat meat",
+     "hint": "It is the negative opposite of toujours"
+    },
+    {
+     "id": "g03",
+     "level": 1,
+     "text": "What does «ne ... rien» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "nothing",
+       "not anything"
+      ],
+      "form": "any"
+     },
+     "solution": "Ne ... rien means nothing, e.g. je ne fais rien = I do nothing / I don't do anything",
+     "hint": "It is the negative opposite of quelque chose"
+    },
+    {
+     "id": "g04",
+     "level": 1,
+     "text": "Give the «je» form of «être» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "suis"
+      ],
+      "reject": [
+       "es",
+       "est",
+       "sommes",
+       "êtes",
+       "sont"
+      ],
+      "form": "strict"
+     },
+     "solution": "Être: je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont",
+     "hint": "Être is irregular: think of how you say «I am» in French"
+    },
+    {
+     "id": "g05",
+     "level": 1,
+     "text": "Give the «ils» form of «avoir» in the present tense. Type the verb only.",
+     "short": {
+      "accept": [
+       "ont"
+      ],
+      "reject": [
+       "sont",
+       "avons",
+       "avez"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sont": "Sont comes from être (ils sont = they are); this question asks for avoir"
+      }
+     },
+     "solution": "Avoir: j'ai, tu as, il a, nous avons, vous avez, ils ont",
+     "hint": "Avoir is irregular; this form has just three letters"
+    },
+    {
+     "id": "g06",
+     "level": 1,
+     "text": "Which word means «the» before a plural noun such as «livres»?",
+     "choice": {
+      "options": [
+       "le",
+       "les",
+       "la",
+       "des"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Des means some or any, not the"
+      ]
+     },
+     "solution": "Les is the plural definite article: les livres = the books (des means some)",
+     "hint": "Le and la are only used with singular nouns"
+    },
+    {
+     "id": "g07",
+     "level": 1,
+     "text": "Which word means «my» before a feminine singular noun such as «sœur»?",
+     "choice": {
+      "options": [
+       "mon",
+       "mes",
+       "ma",
+       "ta"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Mon is for masculine nouns (or feminine nouns starting with a vowel)",
+       null,
+       null,
+       "Ta means your"
+      ]
+     },
+     "solution": "Ma sœur = my sister; mon is for masculine nouns, mes is plural and ta means your",
+     "hint": "Sœur is feminine and singular"
+    },
+    {
+     "id": "g08",
+     "level": 2,
+     "text": "Choose the correct word: «___ maison est grande.»",
+     "choice": {
+      "options": [
+       "Le",
+       "Les",
+       "Un",
+       "La"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Maison is feminine, so le is wrong",
+       null,
+       "Un is masculine; maison is feminine",
+       null
+      ]
+     },
+     "solution": "Maison is feminine and singular, so it takes la: la maison est grande",
+     "hint": "Is maison masculine or feminine? Singular or plural?"
+    },
+    {
+     "id": "g09",
+     "level": 2,
+     "text": "Which phrase is correct for «a little girl»?",
+     "choice": {
+      "options": [
+       "une petite fille",
+       "un petit fille",
+       "une petit fille",
+       "un petite fille"
+      ],
+      "correct": 0
+     },
+     "solution": "Fille is feminine, so the article and the adjective are both feminine: une petite fille",
+     "hint": "Fille is feminine: check both the article and the adjective"
+    },
+    {
+     "id": "g10",
+     "level": 2,
+     "text": "Translate into French. Include the definite article (le, la, l' or les): the school",
+     "short": {
+      "accept": [
+       "l'école"
+      ],
+      "reject": [
+       "la école",
+       "le école"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la école": "Before a vowel, la shortens to l'",
+       "le école": "Before a vowel, le and la shorten to l'"
+      }
+     },
+     "solution": "École is feminine, but before a vowel la shortens to l': l'école",
+     "hint": "The French noun starts with a vowel"
+    },
+    {
+     "id": "g11",
+     "level": 2,
+     "text": "Give the plural of «le cheval», with its article.",
+     "short": {
+      "accept": [
+       "les chevaux"
+      ],
+      "reject": [
+       "les chevals",
+       "le chevaux"
+      ],
+      "form": "strict",
+      "feedback": {
+       "les chevals": "Most nouns ending in -al change to -aux in the plural"
+      }
+     },
+     "solution": "Nouns ending in -al usually change to -aux in the plural: le cheval, les chevaux",
+     "hint": "Nouns ending in -al have an irregular plural, like le journal → les journaux"
+    },
+    {
+     "id": "g12",
+     "level": 2,
+     "text": "Choose the correct word: «Je vais ___ cinéma.»",
+     "choice": {
+      "options": [
+       "à la",
+       "au",
+       "aux",
+       "du"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Cinéma is masculine, so à la is wrong",
+       null,
+       "Aux is used with plural nouns",
+       null
+      ]
+     },
+     "solution": "Cinéma is masculine, and à + le becomes au: je vais au cinéma",
+     "hint": "Cinéma is masculine and singular; what happens when à meets le?"
+    },
+    {
+     "id": "g13",
+     "level": 2,
+     "text": "Complete with the word for «my»: «___ amie s'appelle Léa.» Type the missing word only.",
+     "short": {
+      "accept": [
+       "Mon"
+      ],
+      "reject": [
+       "ma",
+       "mes"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ma": "Before a feminine noun starting with a vowel, French uses mon (mon amie)"
+      }
+     },
+     "solution": "Amie is feminine but starts with a vowel, so French uses mon: mon amie",
+     "hint": "Amie begins with a vowel sound"
+    },
+    {
+     "id": "g14",
+     "level": 2,
+     "text": "Choose the correct adjective: «Mes sœurs sont ___.» (tall)",
+     "choice": {
+      "options": [
+       "grands",
+       "grande",
+       "grandes",
+       "grand"
+      ],
+      "correct": 2
+     },
+     "solution": "Sœurs is feminine plural, so add -e and -s: grandes",
+     "hint": "Sœurs is feminine and plural"
+    },
+    {
+     "id": "g15",
+     "level": 3,
+     "text": "What does «Je ne mange jamais de viande» mean?",
+     "choice": {
+      "options": [
+       "I always eat meat",
+       "I am not eating meat today",
+       "I eat a lot of meat",
+       "I never eat meat"
+      ],
+      "correct": 3
+     },
+     "solution": "Ne ... jamais = never, so: I never eat meat",
+     "hint": "Look at the negative around the verb"
+    },
+    {
+     "id": "g16",
+     "level": 3,
+     "text": "What does «Nous allons regarder un film» mean?",
+     "choice": {
+      "options": [
+       "We are going to watch a film",
+       "We watched a film",
+       "We would like to watch a film",
+       "We watch a film every day"
+      ],
+      "correct": 0
+     },
+     "solution": "Aller + infinitive is the near future: we are going to watch a film",
+     "hint": "Allons + an infinitive talks about the future"
+    },
+    {
+     "id": "g17",
+     "level": 3,
+     "text": "Read: «Hier, j'ai joué au tennis avec Paul.» When did this happen? Answer in English.",
+     "short": {
+      "accept": [
+       "yesterday"
+      ],
+      "form": "any"
+     },
+     "solution": "Hier means yesterday",
+     "hint": "Look at the first word of the sentence"
+    },
+    {
+     "id": "g18",
+     "level": 3,
+     "text": "Read: «Léo ne boit jamais de café.» What does Léo never drink? Answer in English.",
+     "short": {
+      "accept": [
+       "coffee"
+      ],
+      "form": "any"
+     },
+     "solution": "Café = coffee: Léo never drinks coffee",
+     "hint": "Look at the noun after de"
+    },
+    {
+     "id": "g19",
+     "level": 3,
+     "text": "Which sentence is in the future tense?",
+     "choice": {
+      "options": [
+       "Je jouais au foot",
+       "Je jouerai au foot",
+       "J'ai joué au foot",
+       "Je joue au foot"
+      ],
+      "correct": 1
+     },
+     "solution": "Jouerai is the future (infinitive jouer + -ai); jouais is imperfect, j'ai joué is perfect, je joue is present",
+     "hint": "The future is formed from the infinitive plus endings like -ai"
+    },
+    {
+     "id": "g20",
+     "level": 3,
+     "text": "Read: «Nous avons fini nos devoirs.» Which tense is this: present, perfect or future? Answer in English.",
+     "short": {
+      "accept": [
+       "perfect",
+       "perfect tense",
+       "passé composé",
+       "past",
+       "past tense"
+      ],
+      "reject": [
+       "present",
+       "present tense",
+       "future",
+       "future tense",
+       "imperfect"
+      ],
+      "form": "any",
+      "feedback": {
+       "present": "Avons on its own is present, but avons + fini forms a compound past tense",
+       "imperfect": "The imperfect would be finissions; avons + fini is a compound tense"
+      }
+     },
+     "solution": "Avons + fini (avoir + past participle) is the perfect tense, the passé composé",
+     "hint": "Look at the helper verb avons followed by fini"
+    },
+    {
+     "id": "g21",
+     "level": 4,
+     "text": "Complete with the passé composé of «aller»: «Hier, elle ___ au marché.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "est allée"
+      ],
+      "reject": [
+       "est allé",
+       "a allé",
+       "a allée"
+      ],
+      "form": "strict",
+      "feedback": {
+       "est allé": "With être, the past participle agrees with the subject: elle needs an extra -e",
+       "a allé": "Aller takes être, not avoir, in the passé composé",
+       "a allée": "Aller takes être, not avoir, in the passé composé"
+      }
+     },
+     "solution": "Aller takes être and the participle agrees with elle: elle est allée",
+     "hint": "Aller is one of the verbs that use être, and the subject is feminine"
+    },
+    {
+     "id": "g22",
+     "level": 4,
+     "text": "Complete with the present tense of «finir»: «Nous ___ à cinq heures.» Type the verb only.",
+     "short": {
+      "accept": [
+       "finissons"
+      ],
+      "reject": [
+       "finons",
+       "finissez",
+       "finissent"
+      ],
+      "form": "strict"
+     },
+     "solution": "Finir is a regular -ir verb: nous finissons",
+     "hint": "Regular -ir verbs add -iss- in the plural"
+    },
+    {
+     "id": "g23",
+     "level": 4,
+     "text": "Choose the correct verb: «Quand j'étais petit, je ___ au parc tous les jours.»",
+     "choice": {
+      "options": [
+       "jouerai",
+       "joue",
+       "jouais",
+       "jouerais"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Jouerai is the future",
+       "Joue is the present",
+       null,
+       "Jouerais is the conditional"
+      ]
+     },
+     "solution": "A repeated action in the past uses the imperfect: je jouais",
+     "hint": "«Tous les jours» in the past describes a habit"
+    },
+    {
+     "id": "g24",
+     "level": 4,
+     "text": "Choose the correct adjective: «Les filles sont très ___.» (sporty)",
+     "choice": {
+      "options": [
+       "sportifs",
+       "sportive",
+       "sportif",
+       "sportives"
+      ],
+      "correct": 3
+     },
+     "solution": "Adjectives ending in -if become -ive in the feminine; filles is plural: sportives",
+     "hint": "Filles is feminine plural, and -if changes in the feminine"
+    },
+    {
+     "id": "g25",
+     "level": 4,
+     "text": "Complete with the future tense of «avoir»: «Demain, j'___ beaucoup de devoirs.» Type the missing verb only.",
+     "short": {
+      "accept": [
+       "aurai"
+      ],
+      "reject": [
+       "aurais",
+       "aura",
+       "avais"
+      ],
+      "form": "strict",
+      "feedback": {
+       "aurais": "Aurais is the conditional (I would have)",
+       "avais": "Avais is the imperfect"
+      }
+     },
+     "solution": "The future stem of avoir is aur-, plus -ai for je: j'aurai",
+     "hint": "Avoir has an irregular future stem: aur-"
+    },
+    {
+     "id": "g26",
+     "level": 4,
+     "text": "Replace «la télé» with a pronoun: «Je regarde la télé.» → «Je ___ regarde.»",
+     "choice": {
+      "options": [
+       "la",
+       "le",
+       "lui",
+       "les"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Lui replaces an indirect object (à + a person)",
+       "Les replaces a plural noun"
+      ]
+     },
+     "solution": "La télé is a feminine singular direct object, so the pronoun is la: je la regarde",
+     "hint": "Télé is feminine and it is the direct object"
+    },
+    {
+     "id": "g27",
+     "level": 5,
+     "text": "Which sentence in the passé composé is correct?",
+     "choice": {
+      "options": [
+       "Elle a allée en ville hier",
+       "Elle est allée en ville hier",
+       "Elle est allé en ville hier",
+       "Elle a allé en ville hier"
+      ],
+      "correct": 1
+     },
+     "solution": "Aller takes être, and the participle agrees with elle: elle est allée",
+     "hint": "Check the auxiliary verb first, then the agreement"
+    },
+    {
+     "id": "g28",
+     "level": 5,
+     "text": "Which is the correct translation of «I would like to travel to Spain»?",
+     "choice": {
+      "options": [
+       "Je voudrais voyager au Espagne",
+       "Je vais voyager en Espagne",
+       "Je voudrais voyager en Espagne",
+       "J'ai voyagé en Espagne"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Espagne is feminine, so it takes en, not au",
+       "Je vais voyager means I am going to travel",
+       null,
+       "J'ai voyagé means I travelled"
+      ]
+     },
+     "solution": "«Would like» is je voudrais, and feminine countries take en: en Espagne",
+     "hint": "Look for the conditional of vouloir and the right preposition for a feminine country"
+    },
+    {
+     "id": "g29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "Je n'ai mangé pas",
+       "Je ne pas ai mangé",
+       "Je pas ai mangé",
+       "Je n'ai pas mangé"
+      ],
+      "correct": 3
+     },
+     "solution": "In the passé composé, ne ... pas goes around the auxiliary: je n'ai pas mangé",
+     "hint": "The negative wraps around avoir, not around the past participle"
+    },
+    {
+     "id": "g30",
+     "level": 5,
+     "text": "Translate into French using the passé composé: «they arrived» (a group of boys)",
+     "short": {
+      "accept": [
+       "ils sont arrivés"
+      ],
+      "reject": [
+       "ils ont arrivé",
+       "ils sont arrivé",
+       "ils sont arrivées"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ils ont arrivé": "Arriver takes être, not avoir",
+       "ils sont arrivé": "With être, the participle agrees: add -s for ils",
+       "ils sont arrivées": "The boys are masculine, so no -e: arrivés"
+      }
+     },
+     "solution": "Arriver takes être and agrees with ils: ils sont arrivés",
+     "hint": "Arriver uses être; make the participle agree with a masculine plural subject"
+    },
+    {
+     "id": "g31",
+     "level": 5,
+     "text": "Translate into French using aller + infinitive: «I am going to eat»",
+     "short": {
+      "accept": [
+       "je vais manger"
+      ],
+      "reject": [
+       "je vais mangé",
+       "je mangerai",
+       "je vais mangeais"
+      ],
+      "form": "strict",
+      "feedback": {
+       "je mangerai": "That is the simple future; this question asks for aller + infinitive",
+       "je vais mangé": "After aller, use the infinitive (-er), not the past participle"
+      }
+     },
+     "solution": "Near future = present of aller + infinitive: je vais manger",
+     "hint": "Use the je form of aller, then the infinitive"
+    },
+    {
+     "id": "g32",
+     "level": 5,
+     "text": "Translate into French using the conditional: «we would go»",
+     "short": {
+      "accept": [
+       "nous irions",
+       "on irait"
+      ],
+      "reject": [
+       "nous irons",
+       "nous allions",
+       "nous allons"
+      ],
+      "form": "strict",
+      "feedback": {
+       "nous irons": "Irons is the future (we will go); the conditional ends in -ions",
+       "nous allions": "Allions is the imperfect (we used to go)",
+       "nous allons": "Allons is the present (we go)"
+      }
+     },
+     "solution": "The conditional uses the future stem ir- with imperfect endings: nous irions",
+     "hint": "Aller has the irregular stem ir- in the future and the conditional"
+    }
+   ]
+  },
+  {
+   "id": "french.people",
+   "title": "People & lifestyle",
+   "aliases": [
+    "french family",
+    "family",
+    "friends",
+    "describing people",
+    "personality",
+    "school",
+    "healthy living",
+    "daily routine",
+    "jobs",
+    "future plans"
+   ],
+   "questions": [
+    {
+     "id": "p01",
+     "level": 1,
+     "text": "What does «le frère» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "brother"
+      ],
+      "form": "any"
+     },
+     "solution": "Le frère = the brother",
+     "hint": "Think of the boys in a family"
+    },
+    {
+     "id": "p02",
+     "level": 1,
+     "text": "What does «la tante» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "aunt",
+       "auntie",
+       "aunty"
+      ],
+      "reject": [
+       "uncle"
+      ],
+      "form": "any",
+      "feedback": {
+       "uncle": "Uncle is l'oncle; la tante is female"
+      }
+     },
+     "solution": "La tante = the aunt",
+     "hint": "She is your mother's or father's sister"
+    },
+    {
+     "id": "p03",
+     "level": 1,
+     "text": "Which is the French for «grandfather»?",
+     "choice": {
+      "options": [
+       "le grand-père",
+       "la grand-mère",
+       "le petit-fils",
+       "l'oncle"
+      ],
+      "correct": 0
+     },
+     "solution": "Le grand-père = grandfather; la grand-mère = grandmother, le petit-fils = grandson, l'oncle = uncle",
+     "hint": "Grand + the word for father"
+    },
+    {
+     "id": "p04",
+     "level": 1,
+     "text": "What does «le médecin» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "doctor",
+       "GP"
+      ],
+      "form": "any"
+     },
+     "solution": "Le médecin = the doctor",
+     "hint": "This person works in a surgery or hospital and treats illnesses"
+    },
+    {
+     "id": "p05",
+     "level": 1,
+     "text": "Which word means «tired»?",
+     "choice": {
+      "options": [
+       "content",
+       "fatigué",
+       "malade",
+       "fâché"
+      ],
+      "correct": 1
+     },
+     "solution": "Fatigué = tired; content = happy, malade = ill, fâché = angry",
+     "hint": "Think of how you feel after a long day"
+    },
+    {
+     "id": "p06",
+     "level": 1,
+     "text": "What does «le petit-déjeuner» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "breakfast"
+      ],
+      "form": "any"
+     },
+     "solution": "Le petit-déjeuner = breakfast",
+     "hint": "It's the first meal of the day"
+    },
+    {
+     "id": "p07",
+     "level": 1,
+     "text": "Which word means «funny»?",
+     "choice": {
+      "options": [
+       "timide",
+       "paresseux",
+       "drôle",
+       "sérieux"
+      ],
+      "correct": 2
+     },
+     "solution": "Drôle = funny; timide = shy, paresseux = lazy, sérieux = serious",
+     "hint": "This person makes you laugh"
+    },
+    {
+     "id": "p08",
+     "level": 2,
+     "text": "False friend! What does «le collège» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "secondary school",
+       "school",
+       "high school",
+       "middle school"
+      ],
+      "reject": [
+       "college"
+      ],
+      "form": "any",
+      "feedback": {
+       "college": "False friend: le collège is a secondary school for pupils aged about 11–15"
+      }
+     },
+     "solution": "Le collège is a secondary school for pupils aged about 11–15",
+     "hint": "French pupils go there from about age 11 to 15"
+    },
+    {
+     "id": "p09",
+     "level": 2,
+     "text": "What is the feminine form of «paresseux» (lazy)?",
+     "choice": {
+      "options": [
+       "paresseuxe",
+       "paresseusse",
+       "paresseux",
+       "paresseuse"
+      ],
+      "correct": 3
+     },
+     "solution": "Adjectives ending in -eux change to -euse in the feminine: paresseuse",
+     "hint": "Think of heureux → heureuse"
+    },
+    {
+     "id": "p10",
+     "level": 2,
+     "text": "Translate into French. Include the definite article (le, la, l' or les): the sister",
+     "short": {
+      "accept": [
+       "la sœur"
+      ],
+      "reject": [
+       "le sœur",
+       "les sœurs"
+      ],
+      "form": "strict",
+      "feedback": {
+       "le sœur": "Sœur is feminine, so it takes la",
+       "les sœurs": "Les sœurs is plural (the sisters)"
+      }
+     },
+     "solution": "Sœur is feminine: la sœur",
+     "hint": "Is a sister masculine or feminine?"
+    },
+    {
+     "id": "p11",
+     "level": 2,
+     "text": "Which sentence means «I get up at seven o'clock»?",
+     "choice": {
+      "options": [
+       "Je me lève à sept heures",
+       "Je me couche à sept heures",
+       "Je me réveille à sept heures",
+       "Je m'habille à sept heures"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Je me couche means I go to bed",
+       "Je me réveille means I wake up, not I get up",
+       "Je m'habille means I get dressed"
+      ]
+     },
+     "solution": "Se lever = to get up; se réveiller = to wake up, se coucher = to go to bed, s'habiller = to get dressed",
+     "hint": "Which reflexive verb means to get out of bed?"
+    },
+    {
+     "id": "p12",
+     "level": 2,
+     "text": "Translate into French. Include «un» or «une»: a waitress",
+     "short": {
+      "accept": [
+       "une serveuse"
+      ],
+      "reject": [
+       "un serveur",
+       "une serveur",
+       "un serveuse"
+      ],
+      "form": "strict",
+      "feedback": {
+       "un serveur": "Un serveur is a waiter (male)"
+      }
+     },
+     "solution": "The feminine of serveur is serveuse: une serveuse",
+     "hint": "Start from the word for a waiter and make it feminine"
+    },
+    {
+     "id": "p13",
+     "level": 2,
+     "text": "Choose the correct word: «J'ai ___ cheveux longs.» (I have long hair)",
+     "choice": {
+      "options": [
+       "le",
+       "les",
+       "la",
+       "un"
+      ],
+      "correct": 1
+     },
+     "solution": "Cheveux is plural, and French says j'ai les cheveux longs",
+     "hint": "Cheveux (hair) is plural in French"
+    },
+    {
+     "id": "p14",
+     "level": 2,
+     "text": "What does «les yeux» mean?",
+     "choice": {
+      "options": [
+       "the ears",
+       "the hair",
+       "the eyes",
+       "the teeth"
+      ],
+      "correct": 2
+     },
+     "solution": "Les yeux = the eyes (singular l'œil); ears = les oreilles, hair = les cheveux, teeth = les dents",
+     "hint": "The singular is l'œil: you see with them"
+    },
+    {
+     "id": "p15",
+     "level": 3,
+     "text": "What does «Mon père est plus grand que ma mère» mean?",
+     "choice": {
+      "options": [
+       "My father is older than my mother",
+       "My mother is taller than my father",
+       "My father is as tall as my mother",
+       "My father is taller than my mother"
+      ],
+      "correct": 3
+     },
+     "solution": "Plus grand que = taller than: my father is taller than my mother",
+     "hint": "Plus ... que makes a comparison: more ... than"
+    },
+    {
+     "id": "p16",
+     "level": 3,
+     "text": "Read: «Mon frère est très bavard.» What is the brother like? Answer in English with one word.",
+     "short": {
+      "accept": [
+       "chatty",
+       "talkative"
+      ],
+      "form": "any"
+     },
+     "solution": "Bavard = chatty or talkative",
+     "hint": "He never stops talking!"
+    },
+    {
+     "id": "p17",
+     "level": 3,
+     "text": "Read: «Ma mère est infirmière.» What is the mother's job? Answer in English.",
+     "short": {
+      "accept": [
+       "nurse"
+      ],
+      "form": "any"
+     },
+     "solution": "Infirmière = nurse (masculine: infirmier)",
+     "hint": "She looks after patients in a hospital"
+    },
+    {
+     "id": "p18",
+     "level": 3,
+     "text": "What does «Je dois ranger ma chambre» mean?",
+     "choice": {
+      "options": [
+       "I have to tidy my bedroom",
+       "I want to tidy my bedroom",
+       "I tidied my bedroom",
+       "I can tidy my bedroom"
+      ],
+      "correct": 0
+     },
+     "solution": "Je dois (from devoir) = I must / I have to: I have to tidy my bedroom",
+     "hint": "Dois comes from the verb devoir"
+    },
+    {
+     "id": "p19",
+     "level": 3,
+     "text": "Read: «Pour rester en forme, je mange des fruits et je ne fume pas.» What does the speaker do to stay healthy?",
+     "choice": {
+      "options": [
+       "Eats fruit and goes running",
+       "Eats fruit and does not smoke",
+       "Drinks water and does not smoke",
+       "Sleeps well and eats fruit"
+      ],
+      "correct": 1
+     },
+     "solution": "Je mange des fruits = I eat fruit; je ne fume pas = I don't smoke",
+     "hint": "Find the two verbs: mange and fume"
+    },
+    {
+     "id": "p20",
+     "level": 3,
+     "text": "Read: «Le matin, je prends une douche et je bois du thé.» What does the speaker drink in the morning? Answer in English.",
+     "short": {
+      "accept": [
+       "tea",
+       "some tea",
+       "a cup of tea"
+      ],
+      "form": "any"
+     },
+     "solution": "Du thé = (some) tea",
+     "hint": "It's a hot drink, often served with milk in Britain"
+    },
+    {
+     "id": "p21",
+     "level": 4,
+     "text": "Complete with the present tense of «se lever»: «Je ___ à sept heures.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "me lève"
+      ],
+      "reject": [
+       "se lève",
+       "me lever",
+       "lève"
+      ],
+      "form": "strict",
+      "feedback": {
+       "se lève": "With je, the reflexive pronoun is me",
+       "me lever": "Use the conjugated verb, not the infinitive",
+       "lève": "Reflexive verbs need their pronoun (me with je)"
+      }
+     },
+     "solution": "Se lever with je: je me lève (note the grave accent)",
+     "hint": "Reflexive verb: use the pronoun for je, then the je form of lever"
+    },
+    {
+     "id": "p22",
+     "level": 4,
+     "text": "Choose the correct verb: «Ma sœur ___ être médecin.» (wants to)",
+     "choice": {
+      "options": [
+       "veux",
+       "voulons",
+       "veut",
+       "veulent"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Veux goes with je or tu",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Vouloir with il/elle: elle veut",
+     "hint": "Ma sœur = elle; which form of vouloir goes with elle?"
+    },
+    {
+     "id": "p23",
+     "level": 4,
+     "text": "Complete with the correct form of «gentil»: «Mes cousines sont très ___.» Type the adjective only.",
+     "short": {
+      "accept": [
+       "gentilles"
+      ],
+      "reject": [
+       "gentils",
+       "gentille",
+       "gentil"
+      ],
+      "form": "strict"
+     },
+     "solution": "Cousines is feminine plural; gentil doubles the l in the feminine: gentilles",
+     "hint": "Feminine plural, and gentil doubles its final consonant"
+    },
+    {
+     "id": "p24",
+     "level": 4,
+     "text": "Choose the correct verb: «L'année prochaine, mon frère ___ au lycée.» (will go)",
+     "choice": {
+      "options": [
+       "irait",
+       "allait",
+       "est allé",
+       "ira"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Irait is the conditional (would go)",
+       "Allait is the imperfect",
+       "Est allé is the passé composé",
+       null
+      ]
+     },
+     "solution": "Future of aller: il ira (irregular stem ir-)",
+     "hint": "Aller has an irregular future stem: ir-"
+    },
+    {
+     "id": "p25",
+     "level": 4,
+     "text": "Complete with the imperfect of «être»: «Quand j'___ petit, j'habitais à Paris.» Type the verb only.",
+     "short": {
+      "accept": [
+       "étais"
+      ],
+      "reject": [
+       "été",
+       "suis",
+       "serai",
+       "était"
+      ],
+      "form": "strict",
+      "feedback": {
+       "était": "Était is for il/elle; with je the ending is -ais",
+       "été": "Été is the past participle (j'ai été = I have been)"
+      }
+     },
+     "solution": "Imperfect of être with je: j'étais",
+     "hint": "The imperfect of être is irregular: its stem is ét-"
+    },
+    {
+     "id": "p26",
+     "level": 4,
+     "text": "Choose the correct form of «se réveiller» in the passé composé: «Ce matin, je ___ à six heures.»",
+     "choice": {
+      "options": [
+       "me suis réveillé",
+       "m'ai réveillé",
+       "me suis réveiller",
+       "suis réveillé"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Reflexive verbs take être, not avoir",
+       "Use the past participle (-é), not the infinitive",
+       "The reflexive pronoun me is missing"
+      ]
+     },
+     "solution": "Reflexive verbs use être in the passé composé: je me suis réveillé(e)",
+     "hint": "Reflexive verbs take être: pronoun + être + past participle"
+    },
+    {
+     "id": "p27",
+     "level": 5,
+     "text": "Which sentence is correct?",
+     "choice": {
+      "options": [
+       "Mes parents sont gentilles",
+       "Mes parents sont gentils",
+       "Mes parents est gentils",
+       "Mes parents sont gentil"
+      ],
+      "correct": 1
+     },
+     "solution": "Parents is masculine plural: sont (ils form) + gentils",
+     "hint": "Check the verb and the adjective ending"
+    },
+    {
+     "id": "p28",
+     "level": 5,
+     "text": "Which is the correct translation of «When I am older, I would like to be a vet»?",
+     "choice": {
+      "options": [
+       "Quand j'étais plus âgé, je voulais être vétérinaire",
+       "Quand je serai plus âgé, j'ai été vétérinaire",
+       "Quand je serai plus âgé, je voudrais être vétérinaire",
+       "Quand je serai plus âgé, je suis vétérinaire"
+      ],
+      "correct": 2
+     },
+     "solution": "French uses the future after quand for future time (je serai) and the conditional for would like (je voudrais)",
+     "hint": "Look for the future after quand and the conditional of vouloir"
+    },
+    {
+     "id": "p29",
+     "level": 5,
+     "text": "Which negative sentence is correct?",
+     "choice": {
+      "options": [
+       "Je me ne lève jamais tôt",
+       "Je ne lève me jamais tôt",
+       "Je ne me jamais lève tôt",
+       "Je ne me lève jamais tôt"
+      ],
+      "correct": 3
+     },
+     "solution": "Ne goes before the reflexive pronoun and jamais after the verb: je ne me lève jamais tôt",
+     "hint": "Ne comes before the pronoun me; jamais follows the verb"
+    },
+    {
+     "id": "p30",
+     "level": 5,
+     "text": "Translate into French: «she is tall and intelligent»",
+     "short": {
+      "accept": [
+       "elle est grande et intelligente"
+      ],
+      "reject": [
+       "elle est grand et intelligent",
+       "elle est grande et intelligent",
+       "elle est grand et intelligente"
+      ],
+      "form": "strict",
+      "feedback": {
+       "elle est grand et intelligent": "Both adjectives must agree with elle (add -e)",
+       "elle est grande et intelligent": "Intelligent must agree with elle too (add -e)",
+       "elle est grand et intelligente": "Grand must agree with elle too (add -e)"
+      }
+     },
+     "solution": "Both adjectives agree with elle: grande, intelligente",
+     "hint": "Make both adjectives feminine"
+    },
+    {
+     "id": "p31",
+     "level": 5,
+     "text": "Translate into French using aller + infinitive: «I am going to work»",
+     "short": {
+      "accept": [
+       "je vais travailler"
+      ],
+      "reject": [
+       "je vais travaillé",
+       "je travaillerai"
+      ],
+      "form": "strict",
+      "feedback": {
+       "je vais travaillé": "After aller, use the infinitive (-er), not the past participle",
+       "je travaillerai": "That is the simple future; this question asks for aller + infinitive"
+      }
+     },
+     "solution": "Near future: je vais + the infinitive travailler",
+     "hint": "Use the je form of aller, then the infinitive of the verb for to work"
+    },
+    {
+     "id": "p32",
+     "level": 5,
+     "text": "Translate into French: «my brothers are lazy»",
+     "short": {
+      "accept": [
+       "mes frères sont paresseux"
+      ],
+      "reject": [
+       "mes frères sont paresseuses",
+       "mes frères est paresseux",
+       "mon frère est paresseux"
+      ],
+      "form": "strict",
+      "feedback": {
+       "mes frères sont paresseuses": "Frères is masculine, so the adjective stays paresseux",
+       "mon frère est paresseux": "That is singular (my brother is lazy)"
+      }
+     },
+     "solution": "Frères is masculine plural: mes frères sont paresseux (paresseux does not change in the masculine plural)",
+     "hint": "Plural possessive, plural verb and a masculine plural adjective"
+    }
+   ]
+  },
+  {
+   "id": "french.culture",
+   "title": "Free time & culture",
+   "aliases": [
+    "french free time",
+    "hobbies",
+    "sport",
+    "music",
+    "cinema",
+    "tv",
+    "technology",
+    "social media",
+    "festivals",
+    "food and drink"
+   ],
+   "questions": [
+    {
+     "id": "c01",
+     "level": 1,
+     "text": "What does «la natation» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "swimming"
+      ],
+      "form": "any"
+     },
+     "solution": "La natation = swimming",
+     "hint": "It's a sport you do in a pool"
+    },
+    {
+     "id": "c02",
+     "level": 1,
+     "text": "What does «le fromage» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "cheese"
+      ],
+      "form": "any"
+     },
+     "solution": "Le fromage = cheese",
+     "hint": "France makes hundreds of kinds, like brie and camembert"
+    },
+    {
+     "id": "c03",
+     "level": 1,
+     "text": "Which is the French for «the mobile phone»?",
+     "choice": {
+      "options": [
+       "le portable",
+       "l'ordinateur",
+       "la tablette",
+       "la télécommande"
+      ],
+      "correct": 0
+     },
+     "solution": "Le portable (le téléphone portable) = the mobile phone; l'ordinateur = the computer, la télécommande = the remote control",
+     "hint": "It comes from the French word for carrying"
+    },
+    {
+     "id": "c04",
+     "level": 1,
+     "text": "What does «les échecs» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "chess"
+      ],
+      "form": "any"
+     },
+     "solution": "Jouer aux échecs = to play chess",
+     "hint": "A board game with kings, queens and knights"
+    },
+    {
+     "id": "c05",
+     "level": 1,
+     "text": "Which word means «the cake»?",
+     "choice": {
+      "options": [
+       "le pain",
+       "le gâteau",
+       "le poisson",
+       "le poulet"
+      ],
+      "correct": 1
+     },
+     "solution": "Le gâteau = the cake; le pain = bread, le poisson = fish, le poulet = chicken",
+     "hint": "You might have one with candles on your birthday"
+    },
+    {
+     "id": "c06",
+     "level": 1,
+     "text": "What does «la chanson» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "song"
+      ],
+      "form": "any"
+     },
+     "solution": "La chanson = the song (chanter = to sing)",
+     "hint": "It's related to chanter, to sing"
+    },
+    {
+     "id": "c07",
+     "level": 1,
+     "text": "Which word means «Christmas»?",
+     "choice": {
+      "options": [
+       "Pâques",
+       "la fête",
+       "Noël",
+       "le jour férié"
+      ],
+      "correct": 2
+     },
+     "solution": "Noël = Christmas; Pâques = Easter, la fête = party or festival, le jour férié = bank holiday",
+     "hint": "Père ___ brings presents on 25 December"
+    },
+    {
+     "id": "c08",
+     "level": 2,
+     "text": "Choose the correct word: «Je joue ___ piano.»",
+     "choice": {
+      "options": [
+       "au",
+       "de la",
+       "à la",
+       "du"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Au is used for sports and games (jouer au foot)",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Instruments use jouer de: de + le = du piano",
+     "hint": "Sports take jouer à, but instruments take jouer de"
+    },
+    {
+     "id": "c09",
+     "level": 2,
+     "text": "Choose the correct word: «Je joue ___ football.»",
+     "choice": {
+      "options": [
+       "au",
+       "du",
+       "à la",
+       "de la"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Du is used for instruments (jouer du piano)",
+       null,
+       null
+      ]
+     },
+     "solution": "Sports and games use jouer à: à + le = au football",
+     "hint": "Sports and games take jouer à"
+    },
+    {
+     "id": "c10",
+     "level": 2,
+     "text": "Translate into French. Include the definite article (le, la, l' or les): the music",
+     "short": {
+      "accept": [
+       "la musique"
+      ],
+      "reject": [
+       "le musique"
+      ],
+      "form": "strict",
+      "feedback": {
+       "le musique": "Musique is feminine, so it takes la"
+      }
+     },
+     "solution": "Musique is feminine: la musique",
+     "hint": "Most nouns ending in -ique are feminine"
+    },
+    {
+     "id": "c11",
+     "level": 2,
+     "text": "Translate into French. Include the definite article (le, la, l' or les): the newspaper",
+     "short": {
+      "accept": [
+       "le journal"
+      ],
+      "reject": [
+       "la journal",
+       "la journée"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la journée": "La journée means the day",
+       "la journal": "Journal is masculine"
+      }
+     },
+     "solution": "Le journal = the newspaper (plural les journaux)",
+     "hint": "It is masculine and ends in -al"
+    },
+    {
+     "id": "c12",
+     "level": 2,
+     "text": "Which phrase means «the cartoon»?",
+     "choice": {
+      "options": [
+       "le feuilleton",
+       "le dessin animé",
+       "le jeu télévisé",
+       "les infos"
+      ],
+      "correct": 1
+     },
+     "solution": "Le dessin animé = cartoon; le feuilleton = soap opera, le jeu télévisé = game show, les infos = the news",
+     "hint": "Animé suggests animation"
+    },
+    {
+     "id": "c13",
+     "level": 2,
+     "text": "What does «le feuilleton» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "soap opera",
+       "soap",
+       "serial",
+       "series",
+       "TV series"
+      ],
+      "form": "any"
+     },
+     "solution": "Un feuilleton is a soap opera or TV serial",
+     "hint": "Think of a long-running TV drama with new episodes every week"
+    },
+    {
+     "id": "c14",
+     "level": 2,
+     "text": "Choose the correct word: «Je fais ___ vélo.» (I go cycling)",
+     "choice": {
+      "options": [
+       "au",
+       "de la",
+       "du",
+       "le"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Au goes with jouer à (games), not with faire",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Faire de + le vélo = faire du vélo (to go cycling)",
+     "hint": "Activities with faire use de: faire de + le …"
+    },
+    {
+     "id": "c15",
+     "level": 3,
+     "text": "What does «Je préfère regarder des films d'horreur» mean?",
+     "choice": {
+      "options": [
+       "I hate watching horror films",
+       "I prefer watching comedies",
+       "I watched a horror film",
+       "I prefer watching horror films"
+      ],
+      "correct": 3
+     },
+     "solution": "Je préfère = I prefer; des films d'horreur = horror films",
+     "hint": "Préfère looks like an English verb"
+    },
+    {
+     "id": "c16",
+     "level": 3,
+     "text": "Read: «Le samedi, je vais à la piscine avec ma sœur.» On which day does the speaker go to the pool? Answer in English.",
+     "short": {
+      "accept": [
+       "Saturday",
+       "Saturdays",
+       "on Saturday",
+       "on Saturdays",
+       "every Saturday"
+      ],
+      "reject": [
+       "Sunday"
+      ],
+      "form": "any",
+      "feedback": {
+       "Sunday": "Sunday is dimanche"
+      }
+     },
+     "solution": "Le samedi = on Saturdays",
+     "hint": "It's the day before dimanche"
+    },
+    {
+     "id": "c17",
+     "level": 3,
+     "text": "Read: «Mon plat préféré, c'est le poulet rôti.» What is the speaker's favourite dish? Answer in English.",
+     "short": {
+      "accept": [
+       "roast chicken",
+       "chicken",
+       "roasted chicken"
+      ],
+      "form": "any"
+     },
+     "solution": "Le poulet rôti = roast chicken",
+     "hint": "Poulet is a bird you eat; rôti is a way of cooking it"
+    },
+    {
+     "id": "c18",
+     "level": 3,
+     "text": "What does «Je passe trop de temps sur les réseaux sociaux» mean?",
+     "choice": {
+      "options": [
+       "I spend too much time on social media",
+       "I spend very little time on social media",
+       "I never use social media",
+       "I spent a long time on my phone"
+      ],
+      "correct": 0
+     },
+     "solution": "Passer du temps = to spend time; trop de = too much; les réseaux sociaux = social media",
+     "hint": "Trop de means too much"
+    },
+    {
+     "id": "c19",
+     "level": 3,
+     "text": "Read: «Pour mon anniversaire, mes parents m'ont offert une guitare.» What present did the speaker get? Answer in English.",
+     "short": {
+      "accept": [
+       "guitar",
+       "a guitar"
+      ],
+      "form": "any"
+     },
+     "solution": "Une guitare = a guitar",
+     "hint": "It's a musical instrument with strings"
+    },
+    {
+     "id": "c20",
+     "level": 3,
+     "text": "Read: «Je n'aime pas le rap, mais j'adore le jazz.» Which statement is true?",
+     "choice": {
+      "options": [
+       "The speaker loves rap",
+       "The speaker loves jazz",
+       "The speaker hates jazz",
+       "The speaker likes both rap and jazz"
+      ],
+      "correct": 1
+     },
+     "solution": "Je n'aime pas le rap = I don't like rap; j'adore le jazz = I love jazz",
+     "hint": "Mais (but) separates the two opinions"
+    },
+    {
+     "id": "c21",
+     "level": 4,
+     "text": "Complete with the passé composé of «voir»: «Le week-end dernier, nous ___ un bon film.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "avons vu"
+      ],
+      "reject": [
+       "sommes vus",
+       "avons voir",
+       "avons vus"
+      ],
+      "form": "strict",
+      "feedback": {
+       "sommes vus": "Voir takes avoir, not être",
+       "avons voir": "Use the past participle, not the infinitive"
+      }
+     },
+     "solution": "Voir takes avoir and its past participle is vu: nous avons vu",
+     "hint": "Voir uses avoir; its past participle is irregular"
+    },
+    {
+     "id": "c22",
+     "level": 4,
+     "text": "Choose the correct verb: «Demain, nous ___ au tennis.»",
+     "choice": {
+      "options": [
+       "jouions",
+       "avons joué",
+       "jouerons",
+       "joueront"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Jouions is the imperfect",
+       "Avons joué is the passé composé",
+       null,
+       "Joueront goes with ils/elles"
+      ]
+     },
+     "solution": "Demain points to the future: nous jouerons (infinitive jouer + -ons)",
+     "hint": "Demain means tomorrow; which tense is that, and which ending goes with nous?"
+    },
+    {
+     "id": "c23",
+     "level": 4,
+     "text": "Complete with the present tense of «faire»: «Mes amis ___ du ski en hiver.» Type the verb only.",
+     "short": {
+      "accept": [
+       "font"
+      ],
+      "reject": [
+       "faisent",
+       "fait",
+       "faites",
+       "sont"
+      ],
+      "form": "strict",
+      "feedback": {
+       "faites": "Faites goes with vous",
+       "fait": "Fait goes with il/elle"
+      }
+     },
+     "solution": "Faire is irregular: ils/elles font",
+     "hint": "Faire is irregular in the ils/elles form: it rhymes with sont"
+    },
+    {
+     "id": "c24",
+     "level": 4,
+     "text": "Choose the correct pronoun: «Tu aimes les chips? — Oui, je ___ adore.»",
+     "choice": {
+      "options": [
+       "la",
+       "le",
+       "leur",
+       "les"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "Leur is an indirect pronoun (to them)",
+       null
+      ]
+     },
+     "solution": "Les chips is plural, so the direct object pronoun is les: je les adore",
+     "hint": "Chips is plural"
+    },
+    {
+     "id": "c25",
+     "level": 4,
+     "text": "Complete with the imperfect of «regarder»: «Avant, je ___ la télé tous les soirs.» Type the verb only.",
+     "short": {
+      "accept": [
+       "regardais"
+      ],
+      "reject": [
+       "regardé",
+       "regarderai",
+       "regardait",
+       "regarde"
+      ],
+      "form": "strict",
+      "feedback": {
+       "regardait": "Regardait is for il/elle; with je the ending is -ais"
+      }
+     },
+     "solution": "Imperfect for a past habit: je regardais",
+     "hint": "Avant + tous les soirs describes a past habit"
+    },
+    {
+     "id": "c26",
+     "level": 4,
+     "text": "Choose the correct adjective: «C'est une ___ émission.» (good)",
+     "choice": {
+      "options": [
+       "bonne",
+       "bon",
+       "bons",
+       "bonnes"
+      ],
+      "correct": 0
+     },
+     "solution": "Émission is feminine singular: une bonne émission",
+     "hint": "Émission is feminine"
+    },
+    {
+     "id": "c27",
+     "level": 5,
+     "text": "Which sentence about last night is correct?",
+     "choice": {
+      "options": [
+       "Nous avons allé au concert hier soir",
+       "Nous sommes allés au concert hier soir",
+       "Nous sommes allé au concert hier soir",
+       "Nous allons au concert hier soir"
+      ],
+      "correct": 1
+     },
+     "solution": "Aller takes être and agrees with nous (plural): nous sommes allés",
+     "hint": "Check the auxiliary, the agreement and the time phrase"
+    },
+    {
+     "id": "c28",
+     "level": 5,
+     "text": "Which is the correct translation of «I don't like playing video games»?",
+     "choice": {
+      "options": [
+       "Je n'aime pas jouer des jeux vidéo",
+       "Je ne aime pas jouer aux jeux vidéo",
+       "Je n'aime pas jouer aux jeux vidéo",
+       "Je n'aime jouer pas aux jeux vidéo"
+      ],
+      "correct": 2
+     },
+     "solution": "Ne becomes n' before aime, pas follows the verb, and games take jouer à: aux jeux vidéo",
+     "hint": "Check the negative, and whether games take à or de"
+    },
+    {
+     "id": "c29",
+     "level": 5,
+     "text": "Which sentence with «si» (if) is correct?",
+     "choice": {
+      "options": [
+       "Si j'aurais de l'argent, j'achèterais une console",
+       "Si j'avais de l'argent, j'achèterai une console",
+       "Si j'ai de l'argent, j'achèterais une console",
+       "Si j'avais de l'argent, j'achèterais une console"
+      ],
+      "correct": 3
+     },
+     "solution": "Si + imperfect, then conditional: si j'avais…, j'achèterais…",
+     "hint": "After si, French never uses the conditional"
+    },
+    {
+     "id": "c30",
+     "level": 5,
+     "text": "Translate into French: «I play the guitar»",
+     "short": {
+      "accept": [
+       "je joue de la guitare"
+      ],
+      "reject": [
+       "je joue à la guitare",
+       "je joue la guitare",
+       "je joue du guitare"
+      ],
+      "form": "strict",
+      "feedback": {
+       "je joue à la guitare": "Instruments take jouer de, not jouer à",
+       "je joue du guitare": "Guitare is feminine, so de la, not du"
+      }
+     },
+     "solution": "Instruments take jouer de: je joue de la guitare (guitare is feminine)",
+     "hint": "Instruments use jouer de; guitare is feminine"
+    },
+    {
+     "id": "c31",
+     "level": 5,
+     "text": "Translate into French using the passé composé: «she watched a film»",
+     "short": {
+      "accept": [
+       "elle a regardé un film"
+      ],
+      "reject": [
+       "elle est regardée un film",
+       "elle a regardée un film",
+       "elle a regarder un film"
+      ],
+      "form": "strict",
+      "feedback": {
+       "elle est regardée un film": "Regarder takes avoir, not être",
+       "elle a regardée un film": "With avoir, the participle does not agree with the subject"
+      }
+     },
+     "solution": "Regarder takes avoir, so there is no agreement: elle a regardé un film",
+     "hint": "Regarder uses avoir, so the participle does not agree with elle"
+    },
+    {
+     "id": "c32",
+     "level": 5,
+     "text": "Translate into French: «we are going to eat at the restaurant»",
+     "short": {
+      "accept": [
+       "nous allons manger au restaurant",
+       "on va manger au restaurant"
+      ],
+      "reject": [
+       "nous allons manger à le restaurant",
+       "nous allons mangé au restaurant"
+      ],
+      "form": "strict",
+      "feedback": {
+       "nous allons manger à le restaurant": "À + le always contracts to au"
+      }
+     },
+     "solution": "Near future (nous allons + infinitive) and à + le = au: nous allons manger au restaurant",
+     "hint": "Use aller + infinitive, and remember what à + le becomes"
+    }
+   ]
+  },
+  {
+   "id": "french.world",
+   "title": "Travel & the world",
+   "aliases": [
+    "french holidays",
+    "holidays",
+    "travel",
+    "town",
+    "local area",
+    "home",
+    "environment",
+    "global issues",
+    "weather",
+    "directions",
+    "transport",
+    "shopping"
+   ],
+   "questions": [
+    {
+     "id": "w01",
+     "level": 1,
+     "text": "What does «la plage» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "beach",
+       "seaside"
+      ],
+      "form": "any"
+     },
+     "solution": "La plage = the beach",
+     "hint": "You find sand and the sea there"
+    },
+    {
+     "id": "w02",
+     "level": 1,
+     "text": "What does «la gare» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "station",
+       "railway station",
+       "train station"
+      ],
+      "form": "any"
+     },
+     "solution": "La gare = the (railway) station",
+     "hint": "You catch a train there"
+    },
+    {
+     "id": "w03",
+     "level": 1,
+     "text": "Which is the French for «it is raining»?",
+     "choice": {
+      "options": [
+       "il pleut",
+       "il neige",
+       "il fait beau",
+       "il y a du vent"
+      ],
+      "correct": 0
+     },
+     "solution": "Il pleut = it is raining; il neige = it is snowing, il fait beau = it is fine, il y a du vent = it is windy",
+     "hint": "Think of the verb pleuvoir"
+    },
+    {
+     "id": "w04",
+     "level": 1,
+     "text": "What does «la boulangerie» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "bakery",
+       "baker's",
+       "bakers",
+       "baker's shop"
+      ],
+      "form": "any"
+     },
+     "solution": "La boulangerie = the bakery (le boulanger = the baker)",
+     "hint": "You buy bread and croissants there"
+    },
+    {
+     "id": "w05",
+     "level": 1,
+     "text": "Which word means «the plane»?",
+     "choice": {
+      "options": [
+       "le bateau",
+       "l'avion",
+       "la voiture",
+       "le car"
+      ],
+      "correct": 1
+     },
+     "solution": "L'avion = the plane; le bateau = the boat, la voiture = the car, le car = the coach",
+     "hint": "You get on it at an airport"
+    },
+    {
+     "id": "w06",
+     "level": 1,
+     "text": "What does «la mairie» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "town hall",
+       "city hall"
+      ],
+      "form": "any"
+     },
+     "solution": "La mairie = the town hall (le maire = the mayor)",
+     "hint": "The mayor works there"
+    },
+    {
+     "id": "w07",
+     "level": 1,
+     "text": "Which word means «the bedroom»?",
+     "choice": {
+      "options": [
+       "la cuisine",
+       "la salle de bains",
+       "la chambre",
+       "le salon"
+      ],
+      "correct": 2
+     },
+     "solution": "La chambre = the bedroom; la cuisine = the kitchen, la salle de bains = the bathroom, le salon = the living room",
+     "hint": "You sleep there"
+    },
+    {
+     "id": "w08",
+     "level": 2,
+     "text": "False friend! What does «la librairie» mean?",
+     "choice": {
+      "options": [
+       "the library",
+       "the bakery",
+       "the newsagent",
+       "the bookshop"
+      ],
+      "correct": 3,
+      "feedback": [
+       "False friend: the library is la bibliothèque",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "False friend: la librairie is a bookshop; a library is la bibliothèque",
+     "hint": "It's a false friend: think about where you buy books"
+    },
+    {
+     "id": "w09",
+     "level": 2,
+     "text": "Translate into French. Include the definite article (le, la, l' or les): the library",
+     "short": {
+      "accept": [
+       "la bibliothèque"
+      ],
+      "reject": [
+       "la librairie",
+       "le bibliothèque"
+      ],
+      "form": "strict",
+      "feedback": {
+       "la librairie": "La librairie is a bookshop (false friend)",
+       "le bibliothèque": "Bibliothèque is feminine, so it takes la"
+      }
+     },
+     "solution": "La bibliothèque = the library; la librairie is a bookshop",
+     "hint": "It's feminine and it is not the false friend librairie"
+    },
+    {
+     "id": "w10",
+     "level": 2,
+     "text": "Choose the correct phrase: «J'habite ___.» (in London)",
+     "choice": {
+      "options": [
+       "à Londres",
+       "en Londres",
+       "au Londres",
+       "aux Londres"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "En is used before feminine countries (en France)",
+       "Au is used before masculine countries (au Canada)",
+       null
+      ]
+     },
+     "solution": "Use à before towns and cities: j'habite à Londres",
+     "hint": "Towns and cities take a different preposition from countries"
+    },
+    {
+     "id": "w11",
+     "level": 2,
+     "text": "Translate into French. Include the definite article (le, la, l' or les): the car",
+     "short": {
+      "accept": [
+       "la voiture"
+      ],
+      "reject": [
+       "le voiture"
+      ],
+      "form": "strict",
+      "feedback": {
+       "le voiture": "Voiture is feminine, so it takes la"
+      }
+     },
+     "solution": "Voiture is feminine: la voiture",
+     "hint": "Is voiture masculine or feminine?"
+    },
+    {
+     "id": "w12",
+     "level": 2,
+     "text": "Choose the correct word: «Je vais ___ France cet été.»",
+     "choice": {
+      "options": [
+       "au",
+       "en",
+       "à la",
+       "aux"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Au is for masculine countries (au Portugal)",
+       null,
+       null,
+       "Aux is for plural countries (aux États-Unis)"
+      ]
+     },
+     "solution": "Feminine countries take en: en France",
+     "hint": "France is a feminine country"
+    },
+    {
+     "id": "w13",
+     "level": 2,
+     "text": "What does «le magasin» mean in English? Answer in English.",
+     "short": {
+      "accept": [
+       "shop",
+       "store"
+      ],
+      "reject": [
+       "magazine"
+      ],
+      "form": "any",
+      "feedback": {
+       "magazine": "False friend: a magazine is un magazine; le magasin is somewhere you buy things"
+      }
+     },
+     "solution": "Le magasin = the shop; a magazine is un magazine",
+     "hint": "It's a false friend: you buy things there"
+    },
+    {
+     "id": "w14",
+     "level": 2,
+     "text": "Which phrase means «on the left»?",
+     "choice": {
+      "options": [
+       "à droite",
+       "tout droit",
+       "à gauche",
+       "en face"
+      ],
+      "correct": 2,
+      "feedback": [
+       "À droite means on the right",
+       "Tout droit means straight on",
+       null,
+       null
+      ]
+     },
+     "solution": "À gauche = on the left; à droite = on the right, tout droit = straight on, en face = opposite",
+     "hint": "It is the opposite of à droite"
+    },
+    {
+     "id": "w15",
+     "level": 3,
+     "text": "What does «Il fait chaud et il y a du soleil» mean?",
+     "choice": {
+      "options": [
+       "It is cold and sunny",
+       "It is hot and windy",
+       "It is cloudy and hot",
+       "It is hot and sunny"
+      ],
+      "correct": 3
+     },
+     "solution": "Il fait chaud = it is hot; il y a du soleil = it is sunny",
+     "hint": "Chaud is a false friend: it does not mean cold"
+    },
+    {
+     "id": "w16",
+     "level": 3,
+     "text": "Read: «Je vais au collège à vélo.» How does the speaker travel to school? Answer in English.",
+     "short": {
+      "accept": [
+       "by bike",
+       "bike",
+       "by bicycle",
+       "bicycle",
+       "cycling",
+       "on a bike",
+       "on my bike",
+       "by cycle"
+      ],
+      "form": "any"
+     },
+     "solution": "À vélo = by bike",
+     "hint": "It has two wheels and pedals"
+    },
+    {
+     "id": "w17",
+     "level": 3,
+     "text": "Read: «L'été dernier, je suis allé en Italie avec ma famille.» Which country did the speaker visit? Answer in English.",
+     "short": {
+      "accept": [
+       "Italy"
+      ],
+      "form": "any"
+     },
+     "solution": "L'Italie = Italy",
+     "hint": "Its capital is Rome"
+    },
+    {
+     "id": "w18",
+     "level": 3,
+     "text": "What does «La gare est en face de la banque» mean?",
+     "choice": {
+      "options": [
+       "The station is opposite the bank",
+       "The station is next to the bank",
+       "The station is behind the bank",
+       "The bank is opposite the post office"
+      ],
+      "correct": 0
+     },
+     "solution": "En face de = opposite: the station is opposite the bank",
+     "hint": "En face de is a preposition of place: think of facing something"
+    },
+    {
+     "id": "w19",
+     "level": 3,
+     "text": "Read: «Dans ma ville, il y a trop de pollution.» What problem does the town have? Answer in English.",
+     "short": {
+      "accept": [
+       "pollution",
+       "too much pollution"
+      ],
+      "form": "any"
+     },
+     "solution": "Il y a trop de pollution = there is too much pollution",
+     "hint": "It's a cognate: the word looks like English"
+    },
+    {
+     "id": "w20",
+     "level": 3,
+     "text": "Read: «Pour protéger l'environnement, je recycle et je prends le bus.» What does the speaker do?",
+     "choice": {
+      "options": [
+       "Recycles and walks to school",
+       "Recycles and takes the bus",
+       "Saves water and takes the bus",
+       "Turns off the lights and recycles"
+      ],
+      "correct": 1
+     },
+     "solution": "Je recycle = I recycle; je prends le bus = I take the bus",
+     "hint": "Find the two verbs after pour protéger l'environnement"
+    },
+    {
+     "id": "w21",
+     "level": 4,
+     "text": "Complete with the passé composé of «partir»: «Mes parents ___ en vacances hier.» Type the two missing words.",
+     "short": {
+      "accept": [
+       "sont partis"
+      ],
+      "reject": [
+       "ont parti",
+       "sont parti",
+       "sont parties"
+      ],
+      "form": "strict",
+      "feedback": {
+       "ont parti": "Partir takes être, not avoir",
+       "sont parti": "With être, the participle agrees: add -s for a plural subject",
+       "sont parties": "Parents is masculine plural, so no -e"
+      }
+     },
+     "solution": "Partir takes être and agrees with mes parents (masculine plural): sont partis",
+     "hint": "Partir uses être; make the participle agree with a masculine plural subject"
+    },
+    {
+     "id": "w22",
+     "level": 4,
+     "text": "Choose the correct verb: «S'il fait beau demain, nous ___ à la plage.»",
+     "choice": {
+      "options": [
+       "irions",
+       "allions",
+       "irons",
+       "sommes allés"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Irions is the conditional; that needs si + imperfect",
+       "Allions is the imperfect",
+       null,
+       null
+      ]
+     },
+     "solution": "Si + present, then future: s'il fait beau, nous irons",
+     "hint": "Si + present tense is followed by the future"
+    },
+    {
+     "id": "w23",
+     "level": 4,
+     "text": "Complete with the present tense of «prendre»: «Nous ___ le train pour aller à Paris.» Type the verb only.",
+     "short": {
+      "accept": [
+       "prenons"
+      ],
+      "reject": [
+       "prendons",
+       "prennent",
+       "prenez",
+       "prend"
+      ],
+      "form": "strict"
+     },
+     "solution": "Prendre is irregular: nous prenons",
+     "hint": "Prendre is irregular: the d disappears in the plural"
+    },
+    {
+     "id": "w24",
+     "level": 4,
+     "text": "Choose the correct adjective: «J'habite dans une ___ maison.» (beautiful)",
+     "choice": {
+      "options": [
+       "beau",
+       "bel",
+       "beaux",
+       "belle"
+      ],
+      "correct": 3
+     },
+     "solution": "Maison is feminine: une belle maison (beau and bel are masculine)",
+     "hint": "Maison is feminine"
+    },
+    {
+     "id": "w25",
+     "level": 4,
+     "text": "Complete with the imperfect of «faire»: «Pendant les vacances, il ___ très chaud.» Type the verb only.",
+     "short": {
+      "accept": [
+       "faisait"
+      ],
+      "reject": [
+       "fait",
+       "faisais",
+       "fera",
+       "faisaient"
+      ],
+      "form": "strict",
+      "feedback": {
+       "fait": "Fait is the present; this question asks for the imperfect",
+       "faisais": "Faisais is for je/tu; with il the ending is -ait"
+      }
+     },
+     "solution": "Imperfect for the weather in the past: il faisait",
+     "hint": "Take the nous form (faisons), drop -ons and add the il ending"
+    },
+    {
+     "id": "w26",
+     "level": 4,
+     "text": "Choose the correct reply: «Tu vas à Paris?» (Yes, I'm going there tomorrow)",
+     "choice": {
+      "options": [
+       "Oui, j'y vais demain",
+       "Oui, j'en vais demain",
+       "Oui, je le vais demain",
+       "Oui, je lui vais demain"
+      ],
+      "correct": 0
+     },
+     "solution": "Y replaces a place introduced by à: j'y vais = I'm going there",
+     "hint": "Which pronoun replaces à + a place?"
+    },
+    {
+     "id": "w27",
+     "level": 5,
+     "text": "Which sentence is correct?",
+     "choice": {
+      "options": [
+       "L'année dernière, nous avons allé en Espagne",
+       "L'année dernière, nous sommes allés en Espagne",
+       "L'année dernière, nous sommes allés au Espagne",
+       "L'année dernière, nous allons en Espagne"
+      ],
+      "correct": 1
+     },
+     "solution": "Aller takes être and agrees with nous, and feminine countries take en",
+     "hint": "Check the auxiliary, the agreement and the preposition before the country"
+    },
+    {
+     "id": "w28",
+     "level": 5,
+     "text": "Which is the correct translation of «We must protect the planet»?",
+     "choice": {
+      "options": [
+       "Nous devons protéger le planète",
+       "Nous devons protégeons la planète",
+       "Nous devons protéger la planète",
+       "Nous devoir protéger la planète"
+      ],
+      "correct": 2
+     },
+     "solution": "Devoir + infinitive: nous devons protéger; planète is feminine",
+     "hint": "After devoir, the next verb stays in the infinitive"
+    },
+    {
+     "id": "w29",
+     "level": 5,
+     "text": "Read: «Avant, il y avait un cinéma dans mon village, mais maintenant il n'y a plus rien.» Which statement is true?",
+     "choice": {
+      "options": [
+       "There is a new cinema in the village",
+       "There has never been a cinema in the village",
+       "The cinema is going to close soon",
+       "There used to be a cinema, but now there is nothing"
+      ],
+      "correct": 3
+     },
+     "solution": "Il y avait = there was / there used to be; il n'y a plus rien = there is nothing any more",
+     "hint": "Compare the imperfect il y avait with the present tense after maintenant"
+    },
+    {
+     "id": "w30",
+     "level": 5,
+     "text": "Translate into French: «I went to the beach» (the speaker is a boy)",
+     "short": {
+      "accept": [
+       "je suis allé à la plage"
+      ],
+      "reject": [
+       "j'ai allé à la plage",
+       "je suis allée à la plage",
+       "je suis allé au plage"
+      ],
+      "form": "strict",
+      "feedback": {
+       "j'ai allé à la plage": "Aller takes être, not avoir",
+       "je suis allée à la plage": "The speaker is a boy, so no extra -e",
+       "je suis allé au plage": "Plage is feminine, so à la, not au"
+      }
+     },
+     "solution": "Aller takes être: je suis allé (masculine) + à la plage",
+     "hint": "Aller uses être; plage is feminine"
+    },
+    {
+     "id": "w31",
+     "level": 5,
+     "text": "Translate into French using the future tense (futur simple): «it will rain»",
+     "short": {
+      "accept": [
+       "il pleuvra"
+      ],
+      "reject": [
+       "il pleuvrait",
+       "il pleut",
+       "il va pleuvoir"
+      ],
+      "form": "strict",
+      "feedback": {
+       "il va pleuvoir": "That is the near future; this question asks for the futur simple",
+       "il pleuvrait": "Pleuvrait is the conditional (it would rain)",
+       "il pleut": "Il pleut is the present"
+      }
+     },
+     "solution": "Pleuvoir has the irregular future stem pleuvr-: il pleuvra",
+     "hint": "Pleuvoir has an irregular future stem: pleuvr-"
+    },
+    {
+     "id": "w32",
+     "level": 5,
+     "text": "Translate into French: «there is a lot of traffic»",
+     "short": {
+      "accept": [
+       "il y a beaucoup de circulation",
+       "il y a beaucoup de trafic"
+      ],
+      "reject": [
+       "il y a beaucoup du circulation",
+       "il y a beaucoup de la circulation"
+      ],
+      "form": "strict",
+      "feedback": {
+       "il y a beaucoup du circulation": "After beaucoup, use de (not du or de la)",
+       "il y a beaucoup de la circulation": "After beaucoup, use de (not du or de la)"
+      }
+     },
+     "solution": "Beaucoup is followed by de: il y a beaucoup de circulation",
+     "hint": "Use il y a, and remember what follows beaucoup"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "french.y{year}.grammar",
+      "label": "Grammar & tenses",
+      "skills": [
+       "french.grammar"
+      ]
+     },
+     {
+      "id": "french.y{year}.people",
+      "label": "People & lifestyle",
+      "skills": [
+       "french.people"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "french.y{year}.culture",
+      "label": "Free time & culture",
+      "skills": [
+       "french.culture"
+      ]
+     },
+     {
+      "id": "french.y{year}.world",
+      "label": "Travel & the world",
+      "skills": [
+       "french.world"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

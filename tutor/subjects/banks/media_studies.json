@@ -1,0 +1,2404 @@
+{
+ "subject": {
+  "id": "media_studies",
+  "title": "Media Studies",
+  "order": 48
+ },
+ "skills": [
+  {
+   "id": "media_studies.language",
+   "title": "Media language",
+   "aliases": [
+    "media language",
+    "semiotics",
+    "denotation",
+    "connotation",
+    "genre codes",
+    "narrative theory",
+    "todorov",
+    "propp",
+    "binary opposition",
+    "masthead"
+   ],
+   "questions": [
+    {
+     "id": "ml01",
+     "level": 1,
+     "text": "What is the name of the title of a magazine or newspaper, printed in large type at the top of the front cover? Give the term.",
+     "short": {
+      "accept": [
+       "masthead",
+       "mast head",
+       "nameplate"
+      ],
+      "reject": [
+       "cover line",
+       "headline"
+      ],
+      "feedback": {
+       "cover line": "Cover lines tell readers about stories inside; the title of the publication has another name",
+       "headline": "A headline is the title of a story, not of the whole publication"
+      }
+     },
+     "solution": "The masthead is the title of the publication, usually in a large, recognisable font at the top of the cover",
+     "hint": "It shares its name with the top part of a ship"
+    },
+    {
+     "id": "ml02",
+     "level": 1,
+     "text": "In semiotics, what is denotation?",
+     "choice": {
+      "options": [
+       "The associated or emotional meanings of a sign",
+       "The literal, obvious meaning of a sign",
+       "The target audience of a text",
+       "The order in which a story is told"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "That is connotation",
+       null
+      ]
+     },
+     "solution": "Denotation is the literal meaning of a sign, for example a red rose denotes a flower",
+     "hint": "It is the 'dictionary' meaning"
+    },
+    {
+     "id": "ml03",
+     "level": 1,
+     "text": "Which theorist suggested that many stories move from equilibrium, through disruption, to a new equilibrium?",
+     "choice": {
+      "options": [
+       "Tzvetan Todorov",
+       "Vladimir Propp",
+       "Claude Lévi-Strauss",
+       "Stuart Hall"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Propp identified character types in folk tales",
+       "Lévi-Strauss is known for binary oppositions"
+      ]
+     },
+     "solution": "Tzvetan Todorov's narrative theory moves from equilibrium through disruption to a new equilibrium",
+     "hint": "He was a Bulgarian-French theorist of narrative"
+    },
+    {
+     "id": "ml04",
+     "level": 1,
+     "text": "Which theorist identified character types such as the hero, the villain, the donor and the princess by studying Russian folk tales? Give the surname.",
+     "short": {
+      "accept": [
+       "Propp",
+       "Vladimir Propp"
+      ],
+      "reject": [
+       "Todorov"
+      ],
+      "feedback": {
+       "Todorov": "Todorov's theory is about equilibrium and disruption, not character types"
+      }
+     },
+     "solution": "Vladimir Propp analysed Russian folk tales and identified recurring character types and functions",
+     "hint": "He was a Russian scholar who published his study in 1928"
+    },
+    {
+     "id": "ml05",
+     "level": 1,
+     "text": "What does the term 'semiotics' mean?",
+     "choice": {
+      "options": [
+       "The study of how media companies are owned",
+       "The measurement of audience size",
+       "The study of camera movement only",
+       "The study of signs and how they create meaning"
+      ],
+      "correct": 3
+     },
+     "solution": "Semiotics is the study of signs (words, images, colours, sounds) and how they make meaning",
+     "hint": "Think about signs and symbols"
+    },
+    {
+     "id": "ml06",
+     "level": 1,
+     "text": "Which theorist is most closely associated with the idea of binary oppositions in narratives?",
+     "choice": {
+      "options": [
+       "Tzvetan Todorov",
+       "Vladimir Propp",
+       "Laura Mulvey",
+       "Claude Lévi-Strauss"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Claude Lévi-Strauss argued that narratives are built around pairs of opposites, such as good and evil",
+     "hint": "He was a French anthropologist who studied myths"
+    },
+    {
+     "id": "ml07",
+     "level": 1,
+     "text": "What is the term for the associated, emotional or cultural meanings a sign suggests beyond its literal meaning? Give the term.",
+     "short": {
+      "accept": [
+       "connotation",
+       "connotations",
+       "connotative meaning"
+      ],
+      "reject": [
+       "denotation"
+      ],
+      "feedback": {
+       "denotation": "Denotation is the literal meaning; the suggested meanings are something else"
+      }
+     },
+     "solution": "Connotation is the set of associated meanings, for example a red rose connotes love",
+     "hint": "It is the opposite of denotation"
+    },
+    {
+     "id": "ml08",
+     "level": 2,
+     "text": "What is the difference between denotation and connotation?",
+     "choice": {
+      "options": [
+       "Denotation is the associated meaning; connotation is the literal meaning",
+       "Denotation is the literal meaning; connotation is the associated meaning",
+       "Denotation is about sound; connotation is about images",
+       "Denotation is used in print; connotation is used only in film"
+      ],
+      "correct": 1,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Denotation is what a sign literally shows; connotation is what it suggests",
+     "hint": "One is literal, the other is suggested"
+    },
+    {
+     "id": "ml09",
+     "level": 2,
+     "text": "In Propp's character types, what does the donor do?",
+     "choice": {
+      "options": [
+       "Sends the hero off on the quest",
+       "Tries to stop the hero from succeeding",
+       "Gives the hero something, such as a magic object or advice, that is needed later",
+       "Pretends to be the hero to take the reward"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That is the dispatcher",
+       null,
+       "That is the villain"
+      ]
+     },
+     "solution": "Propp's donor prepares the hero or gives them a magical object or advice",
+     "hint": "Think about what 'donate' means"
+    },
+    {
+     "id": "ml10",
+     "level": 2,
+     "text": "In Todorov's narrative theory, what is the name for the calm, balanced situation at the start of a story? Give the term.",
+     "short": {
+      "accept": [
+       "equilibrium",
+       "state of equilibrium"
+      ],
+      "reject": [
+       "disruption",
+       "new equilibrium"
+      ],
+      "feedback": {
+       "disruption": "The disruption is the event that upsets the calm situation",
+       "new equilibrium": "The new equilibrium comes at the end of the story"
+      }
+     },
+     "solution": "A story begins in equilibrium, a state of balance, before a disruption",
+     "hint": "It means a state of balance"
+    },
+    {
+     "id": "ml11",
+     "level": 2,
+     "text": "What is anchorage in media language?",
+     "choice": {
+      "options": [
+       "The main image on a magazine cover",
+       "The speed at which a film is edited",
+       "Text, such as a caption, that fixes the meaning of an image",
+       "A small picture in the corner of a newspaper page"
+      ],
+      "correct": 2
+     },
+     "solution": "Anchorage (Barthes) is text that 'anchors' an image to one preferred meaning",
+     "hint": "Think about what an anchor does to a boat"
+    },
+    {
+     "id": "ml12",
+     "level": 2,
+     "text": "What term describes the way a text speaks to its audience, for example directly using 'you', or in a formal, distant way? Give the term.",
+     "short": {
+      "accept": [
+       "mode of address",
+       "modes of address"
+      ]
+     },
+     "solution": "Mode of address is how a text speaks to its audience, for example direct, informal, formal or friendly",
+     "hint": "Think about how a text 'speaks to' its reader"
+    },
+    {
+     "id": "ml13",
+     "level": 2,
+     "text": "On a magazine front cover, what is a cover line?",
+     "choice": {
+      "options": [
+       "The name of the magazine at the top",
+       "The barcode and price",
+       "The photographer's name in tiny print",
+       "Text on the cover that tells readers about stories inside"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "That is the masthead",
+       null,
+       null
+      ]
+     },
+     "solution": "Cover lines advertise the stories and features inside the magazine",
+     "hint": "It 'sells' what is inside"
+    },
+    {
+     "id": "ml14",
+     "level": 2,
+     "text": "What is the term for a media text that mixes the conventions of two or more genres, such as a sci-fi western? Give the term.",
+     "short": {
+      "accept": [
+       "hybrid",
+       "hybrid genre",
+       "hybridity",
+       "genre hybrid",
+       "hybrid text"
+      ]
+     },
+     "solution": "A hybrid genre combines conventions of two or more genres",
+     "hint": "The same word is used for a car that runs on both petrol and electricity"
+    },
+    {
+     "id": "ml33",
+     "level": 2,
+     "text": "Which French theorist described five narrative codes, including the enigma code and the action code? Give the surname.",
+     "short": {
+      "accept": [
+       "Barthes",
+       "Roland Barthes"
+      ]
+     },
+     "solution": "Roland Barthes described five codes, including the enigma (hermeneutic) code and the action (proairetic) code",
+     "hint": "He is also known for denotation, connotation and anchorage"
+    },
+    {
+     "id": "ml15",
+     "level": 3,
+     "text": "A perfume advert shows a red rose. The rose denotes a flower. What does it most likely connote?",
+     "choice": {
+      "options": [
+       "A gardening tip",
+       "Romance and passion",
+       "The name of the perfume company",
+       "The time the advert was filmed"
+      ],
+      "correct": 1
+     },
+     "solution": "Red roses are conventionally associated with love, romance and passion",
+     "hint": "Think about when people give red roses"
+    },
+    {
+     "id": "ml16",
+     "level": 3,
+     "text": "A detective drama opens with an unanswered question: who sent the mysterious letter? Which of Barthes' codes is this?",
+     "choice": {
+      "options": [
+       "Action code",
+       "Enigma code",
+       "Semantic code",
+       "Symbolic code"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "The action code is about actions that lead to further action",
+       null
+      ]
+     },
+     "solution": "The enigma (hermeneutic) code sets up a mystery or question that makes the audience want to find out more",
+     "hint": "Which code is about puzzles and questions?"
+    },
+    {
+     "id": "ml17",
+     "level": 3,
+     "text": "In a superhero film the hero is good, brave and selfless, while the villain is evil, cowardly and greedy. What term describes this pairing of opposites? Give the term.",
+     "short": {
+      "accept": [
+       "binary opposition",
+       "binary oppositions",
+       "binary opposites",
+       "binaries"
+      ]
+     },
+     "solution": "Binary oppositions (Lévi-Strauss) are pairs of opposites, such as good and evil, that create conflict",
+     "hint": "Think of Lévi-Strauss"
+    },
+    {
+     "id": "ml18",
+     "level": 3,
+     "text": "A horror film poster uses a dark background, a dripping red font and a shadowy figure in a doorway. What are these examples of?",
+     "choice": {
+      "options": [
+       "Audience demographics",
+       "Media regulation",
+       "Vertical integration",
+       "Genre codes and conventions"
+      ],
+      "correct": 3
+     },
+     "solution": "Dark colours, blood-red fonts and shadowy figures are codes and conventions of the horror genre",
+     "hint": "They tell you what kind of film it is"
+    },
+    {
+     "id": "ml19",
+     "level": 3,
+     "text": "In a fantasy story, a wise old woman gives the hero a magic sword, which he later uses to defeat the villain. Which of Propp's character types is the old woman? Give the term.",
+     "short": {
+      "accept": [
+       "donor",
+       "the donor",
+       "provider"
+      ],
+      "reject": [
+       "helper",
+       "dispatcher"
+      ],
+      "feedback": {
+       "helper": "The helper travels with the hero and aids them on the quest; giving a magical object is a different role",
+       "dispatcher": "The dispatcher sends the hero on the quest"
+      }
+     },
+     "solution": "In Propp's theory the donor gives the hero a magical object or advice",
+     "hint": "She 'donates' something the hero needs"
+    },
+    {
+     "id": "ml20",
+     "level": 3,
+     "text": "A newspaper front page shows a photo of a crying child with the caption 'Forgotten by the council'. What does the caption do?",
+     "choice": {
+      "options": [
+       "It denotes the time the photo was taken",
+       "It shows the paper's sales figures",
+       "It anchors the image, steering readers towards one meaning",
+       "It acts as the masthead"
+      ],
+      "correct": 2
+     },
+     "solution": "The caption anchors the image: it tells readers how to read the photo, here as a story of neglect",
+     "hint": "How would you read the photo without the caption?"
+    },
+    {
+     "id": "ml21",
+     "level": 4,
+     "text": "Read this film summary: 'A quiet village is attacked by a dragon. A young farmer realises what is happening, sets out to defeat it, and the village is rebuilt, stronger than before.' Which stage of Todorov's theory is 'the village is rebuilt'?",
+     "choice": {
+      "options": [
+       "Disruption",
+       "Recognition of the disruption",
+       "Attempt to repair the disruption",
+       "New equilibrium"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "The disruption is the dragon's attack",
+       null,
+       null
+      ]
+     },
+     "solution": "Rebuilding the village, changed and stronger, is the new equilibrium at the end of the story",
+     "hint": "Match each sentence of the summary to a stage, in order"
+    },
+    {
+     "id": "ml22",
+     "level": 4,
+     "text": "Read this description of a magazine cover: 'The model looks straight at the camera, and the cover line says: You deserve this summer.' Which technique is used in both the image and the text?",
+     "choice": {
+      "options": [
+       "Direct mode of address",
+       "Binary opposition",
+       "Restricted narration",
+       "Vertical integration"
+      ],
+      "correct": 0
+     },
+     "solution": "Eye contact and the word 'you' both speak directly to the reader: direct mode of address",
+     "hint": "Who are the model and the cover line speaking to?"
+    },
+    {
+     "id": "ml23",
+     "level": 4,
+     "text": "Read this: 'In the opening scene of a TV drama, a car speeds away and a door slams; the audience wonders what will happen next in the chase.' Which of Barthes' codes creates suspense through actions that lead to further action? Give the name of the code.",
+     "short": {
+      "accept": [
+       "action code",
+       "proairetic code",
+       "proairetic"
+      ],
+      "reject": [
+       "enigma code",
+       "enigma"
+      ],
+      "feedback": {
+       "enigma code": "The enigma code is a question or mystery; actions that lead to further action are a different code",
+       "enigma": "The enigma code is a question or mystery; actions that lead to further action are a different code"
+      }
+     },
+     "solution": "Barthes' action (proairetic) code creates suspense through actions that make us expect what will happen next",
+     "hint": "The code is named after what happens physically"
+    },
+    {
+     "id": "ml24",
+     "level": 4,
+     "text": "A Western film poster shows a cowboy hat, a horse, a desert and a saloon. What is the term for familiar objects and settings like these that signal the genre?",
+     "choice": {
+      "options": [
+       "Anchorage",
+       "Demographics",
+       "Synergy",
+       "Iconography"
+      ],
+      "correct": 3
+     },
+     "solution": "Iconography is the set of visual signs (props, costumes, settings) that signal a genre",
+     "hint": "The word contains 'icon', meaning an image"
+    },
+    {
+     "id": "ml25",
+     "level": 4,
+     "text": "Which pair of signs on a front cover would most clearly connote luxury?",
+     "choice": {
+      "options": [
+       "Gold lettering and a model in an expensive evening dress",
+       "A cartoon dog and bright primary colours",
+       "Handwritten text and a messy bedroom",
+       "A muddy football boot and a torn shirt"
+      ],
+      "correct": 0
+     },
+     "solution": "Gold and expensive evening wear are conventionally associated with wealth and luxury",
+     "hint": "Work out what each pair connotes, then pick the one linked to wealth"
+    },
+    {
+     "id": "ml26",
+     "level": 4,
+     "text": "Explain how the front cover of a magazine uses media language to attract its target audience. Use two examples of codes or conventions.",
+     "rubric": {
+      "model_answer": "The masthead is large and bold in the magazine's house style, so regular readers recognise it instantly. The main image uses direct mode of address: the model makes eye contact with the reader, creating a personal connection. Cover lines using words such as 'you' and 'exclusive' promise content that suits the audience's interests.",
+      "mark_scheme": "1 mark: first code or convention identified\n1 mark: how it attracts the target audience\n1 mark: second code or convention identified\n1 mark: how it attracts the target audience",
+      "max_marks": 4
+     },
+     "solution": "Masthead, main image, mode of address, cover lines, colour and typography all attract the audience",
+     "hint": "Pick two features of the cover, then explain who each one appeals to and why"
+    },
+    {
+     "id": "ml27",
+     "level": 5,
+     "text": "Which statement about Todorov's narrative theory is accurate?",
+     "choice": {
+      "options": [
+       "It says every story must have exactly eight character types",
+       "It argues that audiences decode texts in three different ways",
+       "It describes a pattern from equilibrium through disruption to a new equilibrium that differs from the start",
+       "It states that the new equilibrium is always identical to the first"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Character types come from Propp",
+       null,
+       "Three readings come from Stuart Hall"
+      ]
+     },
+     "solution": "Todorov's pattern ends in a new equilibrium: the situation is stable again but changed",
+     "hint": "Think about whether the ending is the same as the beginning"
+    },
+    {
+     "id": "ml28",
+     "level": 5,
+     "text": "Why might a producer use familiar genre conventions in a new TV crime drama?",
+     "choice": {
+      "options": [
+       "It makes the drama exempt from regulation",
+       "It guarantees the drama will win awards",
+       "Audiences recognise them quickly, which sets up expectations and reduces financial risk",
+       "It means no script needs to be written"
+      ],
+      "correct": 2
+     },
+     "solution": "Familiar conventions attract audiences who know and like the genre, making success more likely",
+     "hint": "Think about what audiences expect and what producers want to avoid"
+    },
+    {
+     "id": "ml29",
+     "level": 5,
+     "text": "Which statement about Propp's theory is accurate?",
+     "choice": {
+      "options": [
+       "It explains how audiences are directly affected by violent media",
+       "It describes the five stages of equilibrium and disruption",
+       "It is a theory of media ownership",
+       "It identifies character functions, such as hero, villain and donor, that recur across folk tales"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "That is Todorov's theory",
+       null
+      ]
+     },
+     "solution": "Propp found that Russian folk tales reuse the same character functions, such as hero, villain and donor",
+     "hint": "Remember what Propp studied"
+    },
+    {
+     "id": "ml30",
+     "level": 5,
+     "text": "A critic says a superhero film reinforces the binary opposition of order versus chaos. What does this mean?",
+     "choice": {
+      "options": [
+       "The film has two separate endings",
+       "The film was shot in two different countries",
+       "The film is aimed at two different age groups",
+       "The story is built on a conflict between two opposed ideas, order and chaos"
+      ],
+      "correct": 3
+     },
+     "solution": "A binary opposition is a pair of opposed ideas; the conflict between them drives the story",
+     "hint": "Think about what 'binary' means"
+    },
+    {
+     "id": "ml31",
+     "level": 5,
+     "text": "Why do magazine covers often show the model looking directly at the reader?",
+     "choice": {
+      "options": [
+       "It is required by the press regulator",
+       "It hides the barcode",
+       "It makes the cover lines easier to print",
+       "Direct eye contact creates a personal relationship that draws the reader in"
+      ],
+      "correct": 3
+     },
+     "solution": "Direct address through eye contact makes the reader feel personally spoken to",
+     "hint": "Think about how it feels when someone looks straight at you"
+    },
+    {
+     "id": "ml32",
+     "level": 5,
+     "text": "Explain how binary oppositions can create conflict in a narrative. Refer to an example of your own.",
+     "rubric": {
+      "model_answer": "Lévi-Strauss argued that narratives are organised around pairs of opposites, such as good/evil or nature/technology. In a superhero film, the hero represents order and safety while the villain represents chaos. The clash between these opposites drives the conflict, and the resolution usually shows which value the text favours, revealing its ideology.",
+      "mark_scheme": "1 mark: binary oppositions explained as pairs of opposites (Lévi-Strauss)\n1 mark: a relevant example of a binary opposition\n1 mark: how the opposition creates conflict in the story\n1 mark: how the resolution reveals the values or ideology of the text",
+      "max_marks": 4
+     },
+     "solution": "Pairs of opposites drive conflict, and the ending shows which side the text favours",
+     "hint": "Start with a pair of opposites in a story you know"
+    }
+   ]
+  },
+  {
+   "id": "media_studies.representation",
+   "title": "Representation",
+   "aliases": [
+    "stereotypes",
+    "representation",
+    "gender representation",
+    "mediation",
+    "selection",
+    "construction"
+   ],
+   "questions": [
+    {
+     "id": "mr01",
+     "level": 1,
+     "text": "In media studies, what is a stereotype?",
+     "choice": {
+      "options": [
+       "An oversimplified, generalised image of a group of people",
+       "A completely accurate picture of every individual",
+       "A type of camera shot",
+       "A company that owns many media brands"
+      ],
+      "correct": 0
+     },
+     "solution": "A stereotype reduces a group of people to a few simple, generalised traits",
+     "hint": "Think about 'oversimplified'"
+    },
+    {
+     "id": "mr02",
+     "level": 1,
+     "text": "What term describes the way the media 'stand in the middle' between real events and the audience, shaping how events are presented? Give the term.",
+     "short": {
+      "accept": [
+       "mediation"
+      ]
+     },
+     "solution": "Mediation is the process by which producers select and shape reality before it reaches the audience",
+     "hint": "The word shares its root with 'media' and 'medium'"
+    },
+    {
+     "id": "mr03",
+     "level": 1,
+     "text": "Who introduced the idea of the 'male gaze' in film?",
+     "choice": {
+      "options": [
+       "Stuart Hall",
+       "David Gauntlett",
+       "Laura Mulvey",
+       "Vladimir Propp"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Stuart Hall is known for representation and reception theory",
+       null,
+       "David Gauntlett is known for identity theory"
+      ]
+     },
+     "solution": "Laura Mulvey introduced the male gaze in her 1975 essay on narrative cinema",
+     "hint": "She is a British feminist film theorist"
+    },
+    {
+     "id": "mr04",
+     "level": 1,
+     "text": "What term describes a representation that deliberately goes against a stereotype, such as a female engineer in a male-dominated field? Give the term.",
+     "short": {
+      "accept": [
+       "countertype",
+       "counter-type",
+       "counter-stereotype",
+       "anti-stereotype"
+      ]
+     },
+     "solution": "A countertype challenges a stereotype by showing a group in an unexpected way",
+     "hint": "Its name suggests going against the usual 'type'"
+    },
+    {
+     "id": "mr05",
+     "level": 1,
+     "text": "In media studies, which phrase defines representation?",
+     "choice": {
+      "options": [
+       "The number of people who watch a programme",
+       "The legal control of media content",
+       "The order of events in a story",
+       "The way the media re-present people, places, groups and ideas to an audience"
+      ],
+      "correct": 3
+     },
+     "solution": "Representation is how the media re-present the world: people, places, groups, events and ideas",
+     "hint": "Split the word: re-present"
+    },
+    {
+     "id": "mr06",
+     "level": 1,
+     "text": "What does 'misrepresentation' mean?",
+     "choice": {
+      "options": [
+       "Showing a group often and fairly",
+       "Measuring the size of an audience",
+       "Giving a film an age certificate",
+       "Showing a person or group in an inaccurate or distorted way"
+      ],
+      "correct": 3
+     },
+     "solution": "Misrepresentation is showing a person or group inaccurately or in a distorted way",
+     "hint": "The prefix 'mis-' means wrongly"
+    },
+    {
+     "id": "mr07",
+     "level": 1,
+     "text": "Which theorist argued that the media give people 'tools' to build their own sense of identity? Give the surname.",
+     "short": {
+      "accept": [
+       "Gauntlett",
+       "David Gauntlett"
+      ]
+     },
+     "solution": "David Gauntlett argues that audiences use media as resources, or tools, to construct their identities",
+     "hint": "He is a British theorist who writes about identity and creativity"
+    },
+    {
+     "id": "mr08",
+     "level": 2,
+     "text": "What is the difference between selection and construction in representation?",
+     "choice": {
+      "options": [
+       "Selection is how material is put together; construction is choosing what to leave out",
+       "Selection is choosing what to include or leave out; construction is how the material is put together",
+       "Selection is about the audience; construction is about regulation",
+       "There is no difference: both are words for a stereotype"
+      ],
+      "correct": 1,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Producers select what to include, then construct it into a text through editing, framing and layout",
+     "hint": "One happens before the other"
+    },
+    {
+     "id": "mr09",
+     "level": 2,
+     "text": "In Stuart Hall's view, how does stereotyping work?",
+     "choice": {
+      "options": [
+       "It happens only in advertising aimed at children",
+       "It reduces people to a few simple traits, and tends to occur where there are inequalities of power",
+       "It always gives a fair and complete picture of a group",
+       "It is caused only by audiences, never by producers"
+      ],
+      "correct": 1
+     },
+     "solution": "Hall argued that stereotyping reduces people to a few simple characteristics and is linked to inequalities of power",
+     "hint": "Think about who usually has the power to represent others"
+    },
+    {
+     "id": "mr10",
+     "level": 2,
+     "text": "What is the term for including just one person from an under-represented group in a cast, mainly to appear diverse? Give the term.",
+     "short": {
+      "accept": [
+       "tokenism",
+       "token",
+       "tokenistic",
+       "token character"
+      ]
+     },
+     "solution": "Tokenism is a small, symbolic effort to include a group without real representation",
+     "hint": "It comes from the phrase for a small symbolic gesture"
+    },
+    {
+     "id": "mr11",
+     "level": 2,
+     "text": "What did Laura Mulvey mean by the 'male gaze'?",
+     "choice": {
+      "options": [
+       "Films often position the audience to look at women as objects, from a male point of view",
+       "Men watch more films than women do",
+       "Male directors use more close-ups than female directors",
+       "Male characters always look directly at the camera"
+      ],
+      "correct": 0
+     },
+     "solution": "Mulvey argued mainstream cinema often frames women as objects to be looked at, from a male point of view",
+     "hint": "Think about whose point of view the camera takes"
+    },
+    {
+     "id": "mr12",
+     "level": 2,
+     "text": "What is the name of the test which asks whether a film has at least two named women who talk to each other about something other than a man? Give the name.",
+     "short": {
+      "accept": [
+       "Bechdel test",
+       "Bechdel",
+       "Bechdel-Wallace test"
+      ]
+     },
+     "solution": "The Bechdel test is a simple check of how women are represented in films",
+     "hint": "It is named after an American cartoonist"
+    },
+    {
+     "id": "mr13",
+     "level": 2,
+     "text": "What is self-representation?",
+     "choice": {
+      "options": [
+       "When people create and share their own image, for example on social media",
+       "When the media show a group only through stereotypes",
+       "When a regulator decides how groups are shown",
+       "When a news story is told from the police's point of view"
+      ],
+      "correct": 0
+     },
+     "solution": "Self-representation is people presenting themselves, for example through social media posts and profiles",
+     "hint": "Who is doing the representing?"
+    },
+    {
+     "id": "mr14",
+     "level": 2,
+     "text": "What term describes the way news producers choose a particular angle and emphasis that shapes how a story is understood? Give the term.",
+     "short": {
+      "accept": [
+       "framing",
+       "news framing"
+      ],
+      "reject": [
+       "agenda setting"
+      ],
+      "feedback": {
+       "agenda setting": "Agenda setting is about which stories get covered; the angle and emphasis of one story is something else"
+      }
+     },
+     "solution": "Framing is presenting a story from a particular angle, which shapes how audiences understand it",
+     "hint": "Think of what the border of a picture does to what you see"
+    },
+    {
+     "id": "mr15",
+     "level": 3,
+     "text": "A TV advert for cleaning products shows only women doing housework while men relax. What is this an example of?",
+     "choice": {
+      "options": [
+       "A countertype",
+       "Self-representation",
+       "A gender stereotype",
+       "Vertical integration"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "A countertype would go against the stereotype",
+       null,
+       null
+      ]
+     },
+     "solution": "Showing only women doing housework repeats a traditional gender stereotype",
+     "hint": "Is this an expected or an unexpected image of women?"
+    },
+    {
+     "id": "mr16",
+     "level": 3,
+     "text": "A news report about a protest shows only images of a small group damaging property, not the thousands marching peacefully. Which process of representation does this show most clearly?",
+     "choice": {
+      "options": [
+       "Hybridity",
+       "Synergy",
+       "Selection",
+       "Convergence"
+      ],
+      "correct": 2
+     },
+     "solution": "The editors selected some images and left others out, shaping how the protest is represented",
+     "hint": "Think about what was chosen and what was left out"
+    },
+    {
+     "id": "mr17",
+     "level": 3,
+     "text": "A study finds that older people appear in very few of a TV channel's programmes compared with how many older people there are in the population. What term describes this? Give the term.",
+     "short": {
+      "accept": [
+       "under-representation",
+       "underrepresentation",
+       "under-represented",
+       "underrepresented"
+      ]
+     },
+     "solution": "Under-representation means a group appears in the media far less than it does in real life",
+     "hint": "The group appears less than it should"
+    },
+    {
+     "id": "mr18",
+     "level": 3,
+     "text": "A music video shows a female rapper as powerful and in control of her career. How does this relate to stereotypes?",
+     "choice": {
+      "options": [
+       "It is an example of the male gaze",
+       "It is an example of vertical integration",
+       "It reinforces the stereotype that women are passive",
+       "It challenges stereotypes of women as passive"
+      ],
+      "correct": 3
+     },
+     "solution": "Showing a woman as powerful and in control challenges the stereotype of women as passive",
+     "hint": "Compare the image with the traditional stereotype"
+    },
+    {
+     "id": "mr19",
+     "level": 3,
+     "text": "A series of films always shows scientists as older men in white lab coats with wild hair. What are these repeated, oversimplified images of scientists an example of? Give the term.",
+     "short": {
+      "accept": [
+       "stereotype",
+       "stereotypes",
+       "stereotyping",
+       "stereotypical representation"
+      ],
+      "reject": [
+       "archetype"
+      ],
+      "feedback": {
+       "archetype": "An archetype is a universal original model of a character; repeated, oversimplified images of a group have another name"
+      }
+     },
+     "solution": "Repeated, oversimplified images of a group are stereotypes",
+     "hint": "The word was first used in printing, for a plate that made identical copies"
+    },
+    {
+     "id": "mr20",
+     "level": 3,
+     "text": "An advert shows an elderly woman skateboarding confidently. How does this representation relate to stereotypes of older people?",
+     "choice": {
+      "options": [
+       "It reinforces them by presenting older people as frail",
+       "It is an example of the male gaze",
+       "It challenges them by presenting older people as active and capable",
+       "It is an example of media regulation"
+      ],
+      "correct": 2
+     },
+     "solution": "Showing an older person as active and confident goes against the stereotype of older people as frail",
+     "hint": "Compare the advert with the usual stereotype of older people"
+    },
+    {
+     "id": "mr21",
+     "level": 4,
+     "text": "Read this headline and photo description: 'TEEN THUGS RUN RIOT', above a photo of three hooded teenagers in a dark street. How are young people represented?",
+     "choice": {
+      "options": [
+       "Positively, as active members of the community",
+       "Neutrally, with no connotations",
+       "Negatively, as threatening and lawless, reinforcing a stereotype",
+       "As a countertype to the usual image of teenagers"
+      ],
+      "correct": 2
+     },
+     "solution": "The words 'thugs' and 'riot', hoods and darkness all connote threat, reinforcing a negative stereotype of youth",
+     "hint": "Look at the connotations of the words and the image separately, then together"
+    },
+    {
+     "id": "mr22",
+     "level": 4,
+     "text": "Read this: 'In a sample of 50 adverts, 40 showed women at home and 10 showed women at work.' What percentage showed women at work, and what does this suggest?",
+     "choice": {
+      "options": [
+       "80%, suggesting women were mostly represented in work roles",
+       "10%, suggesting women were never shown at work",
+       "20%, suggesting women were mostly represented in domestic roles",
+       "25%, suggesting an equal balance of roles"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "80% is the share showing women at home",
+       null,
+       "10 is the number of adverts, not the percentage"
+      ]
+     },
+     "solution": "10 out of 50 is 20%, so 80% showed women at home: a mainly domestic representation",
+     "hint": "First work out 10 out of 50 as a percentage"
+    },
+    {
+     "id": "mr23",
+     "level": 4,
+     "text": "Read this: 'A documentary editor removes every interview that disagrees with the film's argument.' Which process of representation is the editor using? Give the term.",
+     "short": {
+      "accept": [
+       "selection",
+       "selecting",
+       "omission"
+      ],
+      "reject": [
+       "construction"
+      ],
+      "feedback": {
+       "construction": "Construction is how the chosen material is put together; deciding what to leave out comes first"
+      }
+     },
+     "solution": "The editor is selecting what to include and leaving out other views, which shapes the representation",
+     "hint": "Think about what is being kept and what is being cut"
+    },
+    {
+     "id": "mr24",
+     "level": 4,
+     "text": "A magazine digitally edits a model's photo to remove every skin blemish and wrinkle. Which concern about representation does this raise?",
+     "choice": {
+      "options": [
+       "It makes the magazine illegal to sell",
+       "It constructs an unrealistic image that audiences may come to see as normal",
+       "It is an example of vertical integration",
+       "It proves the magazine is aimed at men"
+      ],
+      "correct": 1
+     },
+     "solution": "Digital editing constructs an idealised image; repeated exposure can make unrealistic standards seem normal",
+     "hint": "Is the edited photo a realistic image of a person?"
+    },
+    {
+     "id": "mr25",
+     "level": 4,
+     "text": "Read this description: 'A news bulletin about a city lists crime figures, and every image shows run-down streets; no parks, schools or businesses are shown.' What effect is this representation of the city most likely to have?",
+     "choice": {
+      "options": [
+       "It gives a complete and balanced picture of the city",
+       "It presents the city as threatening and deprived, leaving out other aspects",
+       "It challenges negative stereotypes of the city",
+       "It is an example of self-representation"
+      ],
+      "correct": 1
+     },
+     "solution": "By selecting only crime and run-down streets, the bulletin constructs a narrow, negative image of the city",
+     "hint": "Notice what was shown and what was left out"
+    },
+    {
+     "id": "mr26",
+     "level": 4,
+     "text": "Explain how a media text could challenge a stereotype of a social group. Use an example of your own.",
+     "rubric": {
+      "model_answer": "A TV drama could show a teenage character as responsible and caring, for example looking after a younger sibling and doing well at school, rather than as lazy or antisocial. By giving the character depth, positive actions and a central role, the text offers a countertype that encourages the audience to question the usual negative image of teenagers.",
+      "mark_scheme": "1 mark: a relevant stereotype identified\n1 mark: how the text presents the group differently (a countertype)\n1 mark: the media language used to do this (e.g. role, narrative, camera, dialogue)\n1 mark: the possible effect on the audience's view of the group",
+      "max_marks": 4
+     },
+     "solution": "A countertype gives the group depth and positive, unexpected qualities",
+     "hint": "Start by naming the stereotype, then describe how a text could show the opposite"
+    },
+    {
+     "id": "mr27",
+     "level": 5,
+     "text": "Which statement about representation is accurate?",
+     "choice": {
+      "options": [
+       "Documentaries show reality exactly as it is, with no choices made",
+       "Only fictional texts contain representations",
+       "Representations never affect how audiences see real groups",
+       "All media representations are constructed, so they always involve choices by producers"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Documentary makers still choose what to film, include and leave out",
+       null,
+       null
+      ]
+     },
+     "solution": "Every representation, even in news and documentary, is constructed through selection and choices",
+     "hint": "Think about whether any text can show reality with no choices at all"
+    },
+    {
+     "id": "mr28",
+     "level": 5,
+     "text": "Why might advertisers rely on stereotypes?",
+     "choice": {
+      "options": [
+       "They are required by the Advertising Standards Authority",
+       "They always show groups accurately",
+       "They communicate quickly and clearly in a short time, using ideas the audience already recognises",
+       "They make adverts longer and more detailed"
+      ],
+      "correct": 2
+     },
+     "solution": "Adverts are short, so stereotypes are a quick shorthand that audiences recognise instantly",
+     "hint": "Think about how long an advert lasts"
+    },
+    {
+     "id": "mr29",
+     "level": 5,
+     "text": "Which statement about Tessa Perkins' view of stereotypes is accurate?",
+     "choice": {
+      "options": [
+       "She argued that stereotypes are always false and only about minority groups",
+       "She argued that stereotypes are not always negative or completely false, and can change over time",
+       "She introduced the idea of the male gaze",
+       "She argued that audiences are always passive"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "The male gaze comes from Laura Mulvey"
+      ]
+     },
+     "solution": "Perkins (1979) argued that stereotypes are not always negative, not always about minorities and not always false",
+     "hint": "Perkins questioned common assumptions about stereotypes"
+    },
+    {
+     "id": "mr30",
+     "level": 5,
+     "text": "Why can social media change how groups are represented?",
+     "choice": {
+      "options": [
+       "Social media posts are not mediated in any way",
+       "Members of groups can create self-representations instead of relying on traditional media producers",
+       "Social media are banned from showing people",
+       "Social media only show celebrities"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "People still select, edit and filter what they post, so it is still mediated",
+       null
+      ]
+     },
+     "solution": "Social media lets people represent themselves, though their posts are still selected and constructed",
+     "hint": "Think about who is creating the content"
+    },
+    {
+     "id": "mr31",
+     "level": 5,
+     "text": "A news channel always chooses a middle-aged white man to comment on the economy. What is the most accurate criticism?",
+     "choice": {
+      "options": [
+       "It breaks the 9pm watershed rule",
+       "It is an example of a countertype",
+       "It shows the channel uses vertical integration",
+       "It may suggest that only one kind of person has expertise, under-representing others"
+      ],
+      "correct": 3
+     },
+     "solution": "Always choosing the same kind of expert under-represents other groups and suggests only they have expertise",
+     "hint": "Think about who is missing"
+    },
+    {
+     "id": "mr32",
+     "level": 5,
+     "text": "Explain how mediation affects the representation of real events in the news.",
+     "rubric": {
+      "model_answer": "News is never a direct window on reality. Journalists and editors select which events count as news and which images and interviews to use or leave out. They then construct the story through headlines, framing, camera angles and editing. Each choice reflects news values and the outlet's viewpoint, so audiences receive a shaped version of the event that can make some groups or views seem more important than others.",
+      "mark_scheme": "1 mark: mediation explained as the media shaping reality between event and audience\n1 mark: selection explained (what is included or left out)\n1 mark: construction explained (e.g. headlines, framing, editing)\n1 mark: the effect on the audience's understanding\n1 mark: link to the values or viewpoint of the producer",
+      "max_marks": 5
+     },
+     "solution": "Selection and construction shape news, so audiences get a version of events, not reality itself",
+     "hint": "Follow a story from the real event, through the newsroom, to the audience"
+    }
+   ]
+  },
+  {
+   "id": "media_studies.industries",
+   "title": "Media industries",
+   "aliases": [
+    "media ownership",
+    "conglomerate",
+    "vertical integration",
+    "regulation",
+    "ofcom",
+    "bbfc",
+    "pegi",
+    "convergence",
+    "public service broadcasting"
+   ],
+   "questions": [
+    {
+     "id": "mi01",
+     "level": 1,
+     "text": "What is a media conglomerate?",
+     "choice": {
+      "options": [
+       "A small independent production company",
+       "A large company that owns many different media businesses",
+       "A government body that regulates the press",
+       "A type of camera shot"
+      ],
+      "correct": 1
+     },
+     "solution": "A conglomerate is a large corporation that owns many companies across different media",
+     "hint": "The word suggests things gathered together"
+    },
+    {
+     "id": "mi02",
+     "level": 1,
+     "text": "Which UK organisation gives age certificates such as U, PG, 12A, 15 and 18 to films? Give the name or abbreviation.",
+     "short": {
+      "accept": [
+       "BBFC",
+       "British Board of Film Classification"
+      ],
+      "reject": [
+       "Ofcom",
+       "PEGI"
+      ],
+      "feedback": {
+       "Ofcom": "Ofcom regulates TV, radio and on-demand services, not film certificates",
+       "PEGI": "PEGI rates video games"
+      }
+     },
+     "solution": "The BBFC (British Board of Film Classification) classifies films and videos in the UK",
+     "hint": "Its full name begins 'British Board of'"
+    },
+    {
+     "id": "mi03",
+     "level": 1,
+     "text": "Which UK organisation regulates the content of adverts in all media?",
+     "choice": {
+      "options": [
+       "British Board of Film Classification (BBFC)",
+       "Pan European Game Information (PEGI)",
+       "Advertising Standards Authority (ASA)",
+       "Broadcasters' Audience Research Board (BARB)"
+      ],
+      "correct": 2
+     },
+     "solution": "The Advertising Standards Authority (ASA) regulates advertising across UK media",
+     "hint": "Look for the word 'advertising' in the name"
+    },
+    {
+     "id": "mi04",
+     "level": 1,
+     "text": "Which system gives age ratings such as 3, 7, 12, 16 and 18 to video games in the UK and Europe?",
+     "choice": {
+      "options": [
+       "PEGI",
+       "BBFC",
+       "Ofcom",
+       "IPSO"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "The BBFC classifies films and videos",
+       "Ofcom regulates broadcasting"
+      ]
+     },
+     "solution": "PEGI (Pan European Game Information) gives age ratings to video games",
+     "hint": "Its name refers to games across Europe"
+    },
+    {
+     "id": "mi05",
+     "level": 1,
+     "text": "John Reith, who set out the aim to 'inform, educate and entertain', was the first Director-General of which UK broadcaster? Give the name.",
+     "short": {
+      "accept": [
+       "BBC",
+       "British Broadcasting Corporation",
+       "the BBC"
+      ]
+     },
+     "solution": "John Reith was the first Director-General of the BBC, and his aim shaped public service broadcasting",
+     "hint": "It began radio broadcasts in 1922"
+    },
+    {
+     "id": "mi06",
+     "level": 1,
+     "text": "What is convergence in the media?",
+     "choice": {
+      "options": [
+       "A government ban on certain programmes",
+       "The coming together of different media technologies and industries, such as phones that stream TV",
+       "The process of giving a film an age rating",
+       "The way a story moves from disruption to equilibrium"
+      ],
+      "correct": 1
+     },
+     "solution": "Convergence is the merging of media technologies and industries, for example one device for TV, music and news",
+     "hint": "Think of one device that does many media jobs"
+    },
+    {
+     "id": "mi07",
+     "level": 1,
+     "text": "What term describes one company owning businesses at different stages of the same process, such as making, distributing and showing films? Give the term.",
+     "short": {
+      "accept": [
+       "vertical integration",
+       "vertically integrated",
+       "vertical"
+      ],
+      "reject": [
+       "horizontal integration",
+       "horizontal"
+      ],
+      "feedback": {
+       "horizontal integration": "Horizontal integration means owning several companies at the same stage, such as rival studios",
+       "horizontal": "Horizontal integration means owning several companies at the same stage, such as rival studios"
+      }
+     },
+     "solution": "Vertical integration means owning several stages of the chain, such as production, distribution and exhibition",
+     "hint": "Picture the stages as a ladder from making to showing"
+    },
+    {
+     "id": "mi08",
+     "level": 2,
+     "text": "What is the difference between vertical and horizontal integration?",
+     "choice": {
+      "options": [
+       "Vertical: owning several firms at the same stage; horizontal: owning different stages of one process",
+       "Vertical: owning different stages of one process; horizontal: owning several firms at the same stage",
+       "Vertical: working in one country; horizontal: working worldwide",
+       "Vertical: print media; horizontal: online media"
+      ],
+      "correct": 1,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Vertical integration covers different stages of a process; horizontal integration covers firms at the same stage",
+     "hint": "Think of a ladder (stages) and a row (rivals side by side)"
+    },
+    {
+     "id": "mi09",
+     "level": 2,
+     "text": "What does the 9pm watershed on UK television mean?",
+     "choice": {
+      "options": [
+       "All programmes must end by 9pm",
+       "Material unsuitable for children should not normally be shown before 9pm",
+       "Adverts are banned after 9pm",
+       "Children's channels must close at 9pm"
+      ],
+      "correct": 1
+     },
+     "solution": "The watershed means content unsuitable for children should generally not be shown before 9pm",
+     "hint": "It is a rule designed to protect children"
+    },
+    {
+     "id": "mi10",
+     "level": 2,
+     "text": "What is the term for a strategy in which different parts of one company work together to promote a product, such as a film, its soundtrack and its toys? Give the term.",
+     "short": {
+      "accept": [
+       "synergy"
+      ]
+     },
+     "solution": "Synergy is cross-promotion across a company's different products and platforms",
+     "hint": "The word comes from Greek for 'working together'"
+    },
+    {
+     "id": "mi11",
+     "level": 2,
+     "text": "Which independent organisation regulates most UK newspapers and magazines that choose to join it?",
+     "choice": {
+      "options": [
+       "IPSO (Independent Press Standards Organisation)",
+       "BBFC (British Board of Film Classification)",
+       "PEGI (Pan European Game Information)",
+       "BARB (Broadcasters' Audience Research Board)"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "IPSO regulates the majority of UK newspapers and magazines through its Editors' Code",
+     "hint": "Look for the word 'press' in the name"
+    },
+    {
+     "id": "mi12",
+     "level": 2,
+     "text": "What term describes broadcasting that aims to serve the whole public by informing, educating and entertaining, rather than mainly making a profit? Give the term.",
+     "short": {
+      "accept": [
+       "public service broadcasting",
+       "public service broadcaster",
+       "public service",
+       "PSB"
+      ],
+      "reject": [
+       "commercial broadcasting"
+      ],
+      "feedback": {
+       "commercial broadcasting": "Commercial broadcasting is mainly run to make a profit"
+      }
+     },
+     "solution": "Public service broadcasting (PSB) aims to serve all audiences and the public interest",
+     "hint": "Its abbreviation is three letters, starting with P"
+    },
+    {
+     "id": "mi13",
+     "level": 2,
+     "text": "Which of these is an example of self-regulation?",
+     "choice": {
+      "options": [
+       "A government passing a law banning a magazine",
+       "A court sending a journalist to prison",
+       "Newspapers agreeing to follow a code of practice run by an industry body",
+       "A viewer switching off a programme"
+      ],
+      "correct": 2
+     },
+     "solution": "Self-regulation means an industry sets and enforces its own rules, as the press does through IPSO",
+     "hint": "Who makes and enforces the rules in self-regulation?"
+    },
+    {
+     "id": "mi14",
+     "level": 2,
+     "text": "Which regulator deals with complaints about UK TV and radio programmes and was set up in 2003? Give the name.",
+     "short": {
+      "accept": [
+       "Ofcom",
+       "Office of Communications"
+      ],
+      "reject": [
+       "BBFC",
+       "IPSO"
+      ],
+      "feedback": {
+       "BBFC": "The BBFC classifies films and videos",
+       "IPSO": "IPSO regulates newspapers and magazines"
+      }
+     },
+     "solution": "Ofcom regulates UK broadcasting, as well as phone and postal services",
+     "hint": "It also regulates phone and postal services"
+    },
+    {
+     "id": "mi15",
+     "level": 3,
+     "text": "A film studio also owns a chain of cinemas where its films are shown. What is this an example of?",
+     "choice": {
+      "options": [
+       "Horizontal integration",
+       "Self-representation",
+       "Vertical integration",
+       "Hybridity"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Horizontal integration means owning several businesses at the same stage",
+       null,
+       null
+      ]
+     },
+     "solution": "Owning both production and exhibition is vertical integration",
+     "hint": "Are the businesses at the same stage or at different stages?"
+    },
+    {
+     "id": "mi16",
+     "level": 3,
+     "text": "A video game includes realistic violence and strong language. Which system would give it an age rating in the UK?",
+     "choice": {
+      "options": [
+       "BBFC",
+       "Ofcom",
+       "PEGI",
+       "IPSO"
+      ],
+      "correct": 2
+     },
+     "solution": "Video games in the UK are given PEGI age ratings",
+     "hint": "Which system is designed for games?"
+    },
+    {
+     "id": "mi17",
+     "level": 3,
+     "text": "A newspaper owner buys two rival newspapers. Which type of integration is this? Give the term.",
+     "short": {
+      "accept": [
+       "horizontal integration",
+       "horizontal",
+       "horizontally integrated"
+      ],
+      "reject": [
+       "vertical integration",
+       "vertical"
+      ],
+      "feedback": {
+       "vertical integration": "Vertical integration is owning different stages of a process; buying rivals at the same stage is different",
+       "vertical": "Vertical integration is owning different stages of a process; buying rivals at the same stage is different"
+      }
+     },
+     "solution": "Buying rivals at the same stage of the industry is horizontal integration",
+     "hint": "The businesses are side by side at the same stage"
+    },
+    {
+     "id": "mi18",
+     "level": 3,
+     "text": "A streaming service charges a monthly payment for access to its films and series. Which funding model is this?",
+     "choice": {
+      "options": [
+       "Licence fee",
+       "Subscription",
+       "Advertising only",
+       "Public donations"
+      ],
+      "correct": 1
+     },
+     "solution": "A regular payment for access is a subscription model",
+     "hint": "Think about what you pay every month"
+    },
+    {
+     "id": "mi19",
+     "level": 3,
+     "text": "A smartphone lets its user watch TV, read a newspaper and listen to the radio on one device. Which industry trend does this show? Give the term.",
+     "short": {
+      "accept": [
+       "convergence",
+       "media convergence",
+       "technological convergence"
+      ]
+     },
+     "solution": "Convergence is the coming together of different media on one device or platform",
+     "hint": "Several media have come together in one place"
+    },
+    {
+     "id": "mi20",
+     "level": 3,
+     "text": "A TV channel shows a programme with strong violence at 7pm, and viewers complain. Which organisation would investigate?",
+     "choice": {
+      "options": [
+       "BBFC",
+       "PEGI",
+       "ASA",
+       "Ofcom"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "The BBFC classifies films and videos, not TV broadcasts",
+       null,
+       null
+      ]
+     },
+     "solution": "Ofcom regulates TV and enforces rules such as the 9pm watershed",
+     "hint": "Which regulator covers TV programmes?"
+    },
+    {
+     "id": "mi21",
+     "level": 4,
+     "text": "Read this: 'Company X owns a film studio, a film distribution company and a cinema chain. It also owns two other film studios.' Which types of integration does Company X show?",
+     "choice": {
+      "options": [
+       "Vertical integration only",
+       "Horizontal integration only",
+       "Neither type of integration",
+       "Vertical and horizontal integration"
+      ],
+      "correct": 3
+     },
+     "solution": "Studio, distributor and cinemas are different stages (vertical); three studios are at the same stage (horizontal)",
+     "hint": "Check the different stages first, then check for several firms at one stage"
+    },
+    {
+     "id": "mi22",
+     "level": 4,
+     "text": "Read this: 'A small independent games studio launches its game online, using social media and fan communities instead of expensive TV adverts.' Why might the studio choose this marketing method?",
+     "choice": {
+      "options": [
+       "It is required by PEGI",
+       "It reaches a large audience cheaply, which suits a smaller budget",
+       "TV adverts for games are illegal in the UK",
+       "Social media marketing guarantees higher sales than any other method"
+      ],
+      "correct": 1
+     },
+     "solution": "Online and fan-based marketing is low-cost and can reach many people, ideal for a small budget",
+     "hint": "Think about the studio's budget"
+    },
+    {
+     "id": "mi23",
+     "level": 4,
+     "text": "Read this: 'A 2011 scandal about journalists hacking phones led to a public inquiry into the culture and ethics of the British press.' What was this inquiry called? Give the name.",
+     "short": {
+      "accept": [
+       "Leveson Inquiry",
+       "Leveson",
+       "Leveson report"
+      ]
+     },
+     "solution": "The Leveson Inquiry (2011–2012) examined the culture, practices and ethics of the British press",
+     "hint": "It was named after the judge who led it"
+    },
+    {
+     "id": "mi24",
+     "level": 4,
+     "text": "Read this: 'Channel 4 is publicly owned but is funded mainly by advertising.' Which statement follows from this?",
+     "choice": {
+      "options": [
+       "Channel 4 is a public service broadcaster with a commercial funding model",
+       "Channel 4 is funded by the licence fee",
+       "Channel 4 is owned by a private conglomerate",
+       "Channel 4 is not regulated by Ofcom"
+      ],
+      "correct": 0
+     },
+     "solution": "Public ownership with advertising income means a public service broadcaster funded commercially",
+     "hint": "Use both facts in the statement: who owns it, and how it is funded"
+    },
+    {
+     "id": "mi25",
+     "level": 4,
+     "text": "A media company buys a rival so that it controls most of its market. Why might regulators be concerned?",
+     "choice": {
+      "options": [
+       "It makes the company's products cheaper to regulate",
+       "It automatically breaks the 9pm watershed",
+       "Less competition may mean less choice and fewer viewpoints for audiences",
+       "It means the company must close its websites"
+      ],
+      "correct": 2
+     },
+     "solution": "Concentrated ownership reduces competition, which can limit choice and the range of viewpoints",
+     "hint": "Think about what happens to competition"
+    },
+    {
+     "id": "mi26",
+     "level": 4,
+     "text": "Explain why media regulation is needed. Give two reasons.",
+     "rubric": {
+      "model_answer": "Regulation protects children from unsuitable content, for example through BBFC age ratings and the 9pm watershed. It also protects the public from inaccurate or unfair content, such as misleading adverts (ASA) or press intrusion into privacy (IPSO), so that audiences can trust what they see and people's rights are respected.",
+      "mark_scheme": "1 mark: first reason (e.g. protecting children)\n1 mark: developed with an example of a regulator or rule\n1 mark: second reason (e.g. accuracy, fairness, privacy, honest advertising)\n1 mark: developed with an example of a regulator or rule",
+      "max_marks": 4
+     },
+     "solution": "Regulation protects children and protects the public from misleading, unfair or intrusive content",
+     "hint": "Think about who regulation protects and from what"
+    },
+    {
+     "id": "mi27",
+     "level": 5,
+     "text": "Which statement about public service broadcasting in the UK is accurate?",
+     "choice": {
+      "options": [
+       "It aims to serve the public interest, with duties such as news and programmes for different audiences",
+       "It is broadcasting that is free from all regulation",
+       "It only shows programmes that make a profit",
+       "It is only available through paid subscription services"
+      ],
+      "correct": 0
+     },
+     "solution": "Public service broadcasters have duties to serve the public, such as impartial news and varied programming",
+     "hint": "Think about the aim to inform, educate and entertain"
+    },
+    {
+     "id": "mi28",
+     "level": 5,
+     "text": "Why do large conglomerates often have an advantage over small independent media companies?",
+     "choice": {
+      "options": [
+       "They are exempt from regulation by Ofcom",
+       "They are not allowed to advertise",
+       "They can spread financial risk across many products and use synergy to promote them",
+       "They never need to attract an audience"
+      ],
+      "correct": 2
+     },
+     "solution": "Conglomerates can absorb losses on some products and cross-promote across their many platforms",
+     "hint": "Think about money and promotion"
+    },
+    {
+     "id": "mi29",
+     "level": 5,
+     "text": "Which statement about the BBFC is accurate?",
+     "choice": {
+      "options": [
+       "It regulates newspapers and magazines",
+       "It gives age ratings to video games across Europe",
+       "It classifies films and videos in the UK, giving age ratings and content advice",
+       "It is the BBC's own film studio"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That is IPSO",
+       null,
+       "That is PEGI"
+      ]
+     },
+     "solution": "The BBFC classifies films and videos with age ratings and short content advice",
+     "hint": "Remember what the letters BBFC stand for"
+    },
+    {
+     "id": "mi30",
+     "level": 5,
+     "text": "Why might a newspaper put its website content behind a paywall?",
+     "choice": {
+      "options": [
+       "To earn money from readers as print sales and advertising income fall",
+       "Because IPSO requires all newspapers to charge online",
+       "To stop the paper from being regulated",
+       "Because paywalls increase the number of free readers"
+      ],
+      "correct": 0
+     },
+     "solution": "Paywalls bring in subscription money to replace falling print sales and advertising income",
+     "hint": "Think about where newspapers get their money"
+    },
+    {
+     "id": "mi31",
+     "level": 5,
+     "text": "Which statement best explains how convergence has changed the media industry?",
+     "choice": {
+      "options": [
+       "Convergence means each company may only use one platform",
+       "Audiences access content across many devices, so companies produce for many platforms at once",
+       "Convergence has stopped people using smartphones for media",
+       "Convergence means films can no longer be shown in cinemas"
+      ],
+      "correct": 1
+     },
+     "solution": "Because audiences use many devices, companies now make and distribute content across platforms",
+     "hint": "Think about how you access media on different devices"
+    },
+    {
+     "id": "mi32",
+     "level": 5,
+     "text": "Explain how media ownership can affect the content that audiences receive.",
+     "rubric": {
+      "model_answer": "When a few large conglomerates own many outlets, they can shape what is produced. Owners may favour content that makes the most profit, such as sequels and franchises, so riskier or niche content gets less funding. Concentrated ownership may also reduce the range of viewpoints, as outlets with the same owner may share similar values. Synergy lets one company cross-promote its own products across its platforms.",
+      "mark_scheme": "1 mark: concentration of ownership explained\n1 mark: the profit motive leads to safe or mainstream content\n1 mark: a reduced range of viewpoints or diversity\n1 mark: synergy or cross-promotion of the owner's products\n1 mark: a clear link to what audiences receive",
+      "max_marks": 5
+     },
+     "solution": "Ownership affects content through profit motives, the range of viewpoints and synergy",
+     "hint": "Think about what owners want and how that shapes what gets made"
+    }
+   ]
+  },
+  {
+   "id": "media_studies.audiences",
+   "title": "Audiences",
+   "aliases": [
+    "target audience",
+    "demographics",
+    "psychographics",
+    "uses and gratifications",
+    "hypodermic needle",
+    "two-step flow",
+    "cultivation theory",
+    "reception theory"
+   ],
+   "questions": [
+    {
+     "id": "ma01",
+     "level": 1,
+     "text": "What is a target audience?",
+     "choice": {
+      "options": [
+       "The specific group of people a media text is aimed at",
+       "Everyone who lives in the UK",
+       "The people who make a media text",
+       "The regulator that checks a text"
+      ],
+      "correct": 0
+     },
+     "solution": "A target audience is the particular group a text is designed to appeal to",
+     "hint": "Think of a 'target' that is aimed at"
+    },
+    {
+     "id": "ma02",
+     "level": 1,
+     "text": "Which term describes classifying an audience by facts such as age, gender, income and occupation? Give the term.",
+     "short": {
+      "accept": [
+       "demographics",
+       "demographic",
+       "demographic profiling"
+      ],
+      "reject": [
+       "psychographics",
+       "psychographic"
+      ],
+      "feedback": {
+       "psychographics": "Psychographics groups people by values, attitudes and lifestyles",
+       "psychographic": "Psychographics groups people by values, attitudes and lifestyles"
+      }
+     },
+     "solution": "Demographics group audiences by measurable facts such as age, gender, income and occupation",
+     "hint": "The word begins with a Greek root meaning 'people'"
+    },
+    {
+     "id": "ma03",
+     "level": 1,
+     "text": "Which model suggests that the media 'inject' messages directly into a passive audience?",
+     "choice": {
+      "options": [
+       "Uses and gratifications theory",
+       "The two-step flow model",
+       "The hypodermic needle model",
+       "Reception theory"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Uses and gratifications sees the audience as active",
+       null,
+       null
+      ]
+     },
+     "solution": "The hypodermic needle model sees the audience as passive, with messages 'injected' directly",
+     "hint": "Think of an injection"
+    },
+    {
+     "id": "ma04",
+     "level": 1,
+     "text": "Which term describes classifying an audience by their values, attitudes, interests and lifestyles? Give the term.",
+     "short": {
+      "accept": [
+       "psychographics",
+       "psychographic",
+       "psychographic profiling"
+      ],
+      "reject": [
+       "demographics",
+       "demographic"
+      ],
+      "feedback": {
+       "demographics": "Demographics groups people by facts such as age, gender and income",
+       "demographic": "Demographics groups people by facts such as age, gender and income"
+      }
+     },
+     "solution": "Psychographics groups audiences by values, attitudes and lifestyles rather than facts like age",
+     "hint": "The word begins with a root linked to the mind"
+    },
+    {
+     "id": "ma05",
+     "level": 1,
+     "text": "Who developed the uses and gratifications theory?",
+     "choice": {
+      "options": [
+       "Blumler and Katz",
+       "Lazarsfeld and Mulvey",
+       "Gerbner and Todorov",
+       "Propp and Hall"
+      ],
+      "correct": 0
+     },
+     "solution": "Jay Blumler and Elihu Katz developed uses and gratifications theory in the 1970s",
+     "hint": "The theorists' surnames begin with B and K"
+    },
+    {
+     "id": "ma06",
+     "level": 1,
+     "text": "Which theorist is linked with cultivation theory?",
+     "choice": {
+      "options": [
+       "George Gerbner",
+       "Stuart Hall",
+       "Vladimir Propp",
+       "Laura Mulvey"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Stuart Hall is linked with reception theory",
+       null
+      ]
+     },
+     "solution": "George Gerbner developed cultivation theory about the long-term effects of heavy TV viewing",
+     "hint": "He studied the long-term effects of television"
+    },
+    {
+     "id": "ma07",
+     "level": 1,
+     "text": "In the two-step flow model, what name is given to the people who receive media messages first and then pass them on to others, with their own interpretation? Give the term.",
+     "short": {
+      "accept": [
+       "opinion leaders",
+       "opinion leader"
+      ]
+     },
+     "solution": "In the two-step flow model, opinion leaders interpret media messages and pass them on to others",
+     "hint": "They are respected people whose views others follow"
+    },
+    {
+     "id": "ma08",
+     "level": 2,
+     "text": "What is the difference between a mass audience and a niche audience?",
+     "choice": {
+      "options": [
+       "A mass audience is small and specialised; a niche audience is large and varied",
+       "A mass audience is large and varied; a niche audience is a small, specialised group",
+       "A mass audience only reads print; a niche audience only uses social media",
+       "A mass audience is always older; a niche audience is always younger"
+      ],
+      "correct": 1,
+      "feedback": [
+       "You have swapped them round",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Mass audiences are large and varied; niche audiences are small groups with specific interests",
+     "hint": "Think of a mass of people and a small niche"
+    },
+    {
+     "id": "ma09",
+     "level": 2,
+     "text": "In uses and gratifications theory, what is the 'diversion' (entertainment) need?",
+     "choice": {
+      "options": [
+       "Using media to find out what is happening in the world",
+       "Using media to escape everyday problems and relax",
+       "Using media to compare oneself with characters",
+       "Using media to have something to talk about with friends"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "That is the information (surveillance) need",
+       "That is the personal identity need"
+      ]
+     },
+     "solution": "Diversion is using media for escapism, entertainment and relaxation",
+     "hint": "To 'divert' is to turn away from something"
+    },
+    {
+     "id": "ma10",
+     "level": 2,
+     "text": "In Stuart Hall's reception theory, what is the name for the reading that accepts the meaning the producer intended? Give the term.",
+     "short": {
+      "accept": [
+       "preferred reading",
+       "dominant reading",
+       "dominant-hegemonic reading",
+       "preferred",
+       "dominant"
+      ],
+      "reject": [
+       "negotiated reading",
+       "oppositional reading",
+       "negotiated",
+       "oppositional"
+      ],
+      "feedback": {
+       "negotiated reading": "A negotiated reading accepts some of the message but not all of it",
+       "oppositional reading": "An oppositional reading rejects the intended meaning"
+      }
+     },
+     "solution": "The preferred (dominant) reading accepts the meaning the producer encoded",
+     "hint": "It is the meaning the producer wanted the audience to take"
+    },
+    {
+     "id": "ma11",
+     "level": 2,
+     "text": "What is an active audience?",
+     "choice": {
+      "options": [
+       "An audience that does physical exercise while watching",
+       "An audience that accepts every message without thinking",
+       "An audience that interprets, questions and chooses the media texts it uses",
+       "An audience that only watches live television"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "That describes a passive audience"
+      ]
+     },
+     "solution": "An active audience makes choices and interprets texts rather than simply absorbing them",
+     "hint": "The opposite of a passive audience"
+    },
+    {
+     "id": "ma12",
+     "level": 2,
+     "text": "What is the term for a person who both consumes and produces media content, such as a vlogger who also watches other people's videos? Give the term.",
+     "short": {
+      "accept": [
+       "prosumer",
+       "prosumers",
+       "produser"
+      ]
+     },
+     "solution": "A prosumer both produces and consumes media",
+     "hint": "The word blends 'producer' and 'consumer'"
+    },
+    {
+     "id": "ma13",
+     "level": 2,
+     "text": "What is the difference between a primary and a secondary audience?",
+     "choice": {
+      "options": [
+       "A primary audience is the main group a text is aimed at; a secondary audience is another group that also uses it",
+       "A primary audience is the youngest viewers; a secondary audience is the oldest",
+       "A primary audience watches live; a secondary audience records programmes",
+       "A primary audience pays for the text; a secondary audience is the regulator"
+      ],
+      "correct": 0
+     },
+     "solution": "The primary audience is the main target; a secondary audience is another group that also consumes the text",
+     "hint": "Think about who the text is mainly aimed at"
+    },
+    {
+     "id": "ma14",
+     "level": 2,
+     "text": "Which UK organisation measures television audience figures? Give the name or abbreviation.",
+     "short": {
+      "accept": [
+       "BARB",
+       "Broadcasters' Audience Research Board"
+      ],
+      "reject": [
+       "RAJAR",
+       "Ofcom"
+      ],
+      "feedback": {
+       "RAJAR": "RAJAR measures radio audiences",
+       "Ofcom": "Ofcom regulates broadcasting; it does not produce the audience figures"
+      }
+     },
+     "solution": "BARB (Broadcasters' Audience Research Board) measures UK TV audiences",
+     "hint": "Its four-letter abbreviation starts with B"
+    },
+    {
+     "id": "ma15",
+     "level": 3,
+     "text": "A viewer watches a cookery programme to learn new recipes. Which need from uses and gratifications theory is being met?",
+     "choice": {
+      "options": [
+       "Diversion",
+       "Personal identity",
+       "Social interaction",
+       "Information (surveillance)"
+      ],
+      "correct": 3
+     },
+     "solution": "Learning something useful from the media meets the information (surveillance) need",
+     "hint": "Is the viewer escaping, learning, comparing themselves, or socialising?"
+    },
+    {
+     "id": "ma16",
+     "level": 3,
+     "text": "A viewer watches a reality TV show so she has something to discuss with her friends at school the next day. Which need is being met?",
+     "choice": {
+      "options": [
+       "Diversion",
+       "Information (surveillance)",
+       "Social interaction (personal relationships)",
+       "Personal identity"
+      ],
+      "correct": 2
+     },
+     "solution": "Using media to have something to share with others meets the social interaction need",
+     "hint": "Think about why her friends matter here"
+    },
+    {
+     "id": "ma17",
+     "level": 3,
+     "text": "A gamer reads a review that criticises a game's violence. He agrees the game is too violent for young children, but still thinks it is mostly harmless fun. In Hall's reception theory, what kind of reading is this? Give the term.",
+     "short": {
+      "accept": [
+       "negotiated reading",
+       "negotiated",
+       "negotiated decoding"
+      ],
+      "reject": [
+       "oppositional reading",
+       "preferred reading",
+       "dominant reading",
+       "oppositional",
+       "preferred",
+       "dominant"
+      ],
+      "feedback": {
+       "oppositional reading": "An oppositional reading rejects the message completely; he agrees with part of it",
+       "preferred reading": "A preferred reading accepts the whole message; he only agrees with part of it"
+      }
+     },
+     "solution": "A negotiated reading accepts part of the message and rejects part of it",
+     "hint": "He accepts some of the review's message but not all of it"
+    },
+    {
+     "id": "ma18",
+     "level": 3,
+     "text": "A teenager who watches many crime dramas starts to believe that her quiet town is much more dangerous than it really is. Which theory explains this?",
+     "choice": {
+      "options": [
+       "Cultivation theory",
+       "Uses and gratifications",
+       "Two-step flow",
+       "Reception theory"
+      ],
+      "correct": 0
+     },
+     "solution": "Cultivation theory suggests heavy viewing gradually shapes beliefs about reality, the 'mean world' effect",
+     "hint": "The belief has grown slowly through heavy viewing"
+    },
+    {
+     "id": "ma19",
+     "level": 3,
+     "text": "A viewer watches a political advert and completely rejects its message, deciding the opposite is true. In Hall's reception theory, what kind of reading is this? Give the term.",
+     "short": {
+      "accept": [
+       "oppositional reading",
+       "oppositional",
+       "oppositional decoding"
+      ],
+      "reject": [
+       "negotiated reading",
+       "preferred reading",
+       "negotiated",
+       "preferred"
+      ],
+      "feedback": {
+       "negotiated reading": "A negotiated reading accepts part of the message; this viewer rejects all of it"
+      }
+     },
+     "solution": "An oppositional reading rejects the producer's intended meaning",
+     "hint": "The viewer completely disagrees with the intended message"
+    },
+    {
+     "id": "ma20",
+     "level": 3,
+     "text": "A magazine describes its readers as '18–30, urban, interested in sustainable fashion and ethical living'. Which part of this description is psychographic?",
+     "choice": {
+      "options": [
+       "Aged 18–30",
+       "Interested in sustainable fashion and ethical living",
+       "Living in urban areas",
+       "Being readers of a magazine"
+      ],
+      "correct": 1
+     },
+     "solution": "Interests and values are psychographic; age and location are demographic",
+     "hint": "Psychographics is about values and interests, not facts like age"
+    },
+    {
+     "id": "ma21",
+     "level": 4,
+     "text": "Read these audience figures for a TV series: 'Episode 1: 4.2 million viewers. Episode 6: 2.1 million viewers.' What is the percentage change from episode 1 to episode 6?",
+     "choice": {
+      "options": [
+       "A fall of 50%",
+       "A rise of 50%",
+       "A fall of 21%",
+       "A fall of 2.1%"
+      ],
+      "correct": 0
+     },
+     "solution": "The audience fell by 2.1 million from 4.2 million: 2.1 ÷ 4.2 = 0.5, a fall of 50%",
+     "hint": "Work out the change, then divide by the original figure"
+    },
+    {
+     "id": "ma22",
+     "level": 4,
+     "text": "Read this: 'Researchers in the 1940s found that most voters were influenced more by people they knew than directly by newspapers and radio.' Which model was developed from findings like these?",
+     "choice": {
+      "options": [
+       "The hypodermic needle model",
+       "Cultivation theory",
+       "The male gaze",
+       "The two-step flow model"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "The hypodermic needle model says media affect people directly",
+       null,
+       null
+      ]
+     },
+     "solution": "Lazarsfeld and Katz's two-step flow model says media influence often passes through opinion leaders",
+     "hint": "The influence came through other people, not directly"
+    },
+    {
+     "id": "ma23",
+     "level": 4,
+     "text": "Read this: 'In 1938, a radio drama about an alien invasion was reported to have caused panic among some listeners.' Critics have used this example to support which model of media effects? Give the name.",
+     "short": {
+      "accept": [
+       "hypodermic needle",
+       "hypodermic needle model",
+       "hypodermic needle theory",
+       "magic bullet",
+       "magic bullet theory",
+       "hypodermic syringe model"
+      ]
+     },
+     "solution": "The reported panic was used to support the hypodermic needle (magic bullet) model of direct effects",
+     "hint": "The model compares media messages to an injection"
+    },
+    {
+     "id": "ma24",
+     "level": 4,
+     "text": "Read this: 'Heavy viewers of TV news are more likely than light viewers to say the world is a frightening place.' Which theory does this finding support?",
+     "choice": {
+      "options": [
+       "Uses and gratifications theory",
+       "The two-step flow model",
+       "Propp's character theory",
+       "Cultivation theory"
+      ],
+      "correct": 3
+     },
+     "solution": "Cultivation theory predicts that heavy viewers come to see the world as more threatening ('mean world syndrome')",
+     "hint": "Compare heavy and light viewers"
+    },
+    {
+     "id": "ma25",
+     "level": 4,
+     "text": "Read this audience profile: 'Mainly social grades A and B; aged 35–55; reads long articles on politics and business.' Which product is most likely aimed at this audience?",
+     "choice": {
+      "options": [
+       "A celebrity gossip magazine for teenagers",
+       "A children's comic",
+       "A gaming channel for under-12s",
+       "A quality newspaper with in-depth news"
+      ],
+      "correct": 3
+     },
+     "solution": "Grades A and B are professional and managerial; older readers interested in politics and business suit a quality newspaper",
+     "hint": "Use the age, the social grades and the interests together"
+    },
+    {
+     "id": "ma26",
+     "level": 4,
+     "text": "Explain how uses and gratifications theory sees audiences differently from the hypodermic needle model.",
+     "rubric": {
+      "model_answer": "The hypodermic needle model sees the audience as passive: media messages are 'injected' and directly change behaviour, affecting everyone in the same way. Uses and gratifications (Blumler and Katz) sees the audience as active: people choose media to meet their own needs, such as information, personal identity, social interaction and diversion, so different people use the same text in different ways.",
+      "mark_scheme": "1 mark: hypodermic needle model sees a passive audience\n1 mark: direct, uniform effects explained\n1 mark: uses and gratifications sees an active audience choosing media\n1 mark: at least one named need (information, identity, social interaction, diversion)",
+      "max_marks": 4
+     },
+     "solution": "One model has a passive audience receiving direct effects; the other an active audience meeting its own needs",
+     "hint": "Start with whether each model sees the audience as active or passive"
+    },
+    {
+     "id": "ma27",
+     "level": 5,
+     "text": "What is the main criticism of the hypodermic needle model?",
+     "choice": {
+      "options": [
+       "It suggests audiences are too active",
+       "It only applies to video games",
+       "It ignores that audiences are active and interpret messages in different ways",
+       "It was developed by Ofcom"
+      ],
+      "correct": 2
+     },
+     "solution": "Critics argue the model wrongly treats audiences as passive and identical",
+     "hint": "Think about how the model sees the audience"
+    },
+    {
+     "id": "ma28",
+     "level": 5,
+     "text": "Which statement about cultivation theory is accurate?",
+     "choice": {
+      "options": [
+       "It argues that one advert can instantly change behaviour",
+       "It argues that audiences always reject media messages",
+       "It argues that heavy, long-term viewing can gradually shape people's view of reality",
+       "It is mainly about how stories are structured"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Instant, direct effects are the idea of the hypodermic needle model",
+       null,
+       null
+      ]
+     },
+     "solution": "Cultivation theory is about slow, cumulative effects of heavy viewing on beliefs about the world",
+     "hint": "Think about the word 'cultivate', as in growing something slowly"
+    },
+    {
+     "id": "ma29",
+     "level": 5,
+     "text": "Why do media producers research the demographics and psychographics of their audience?",
+     "choice": {
+      "options": [
+       "Because Ofcom requires every company to publish them",
+       "To decide which regulator they belong to",
+       "To shape content and advertising that appeal to the people they want to reach",
+       "To guarantee that every viewer enjoys the text"
+      ],
+      "correct": 2
+     },
+     "solution": "Knowing who the audience is lets producers tailor content, marketing and advertising to them",
+     "hint": "Think about how producers make texts that sell"
+    },
+    {
+     "id": "ma30",
+     "level": 5,
+     "text": "Which statement about Hall's reception theory is accurate?",
+     "choice": {
+      "options": [
+       "It suggests the same text can be decoded in different ways, depending on the audience",
+       "It says audiences always take the preferred reading",
+       "It explains how films are given age ratings",
+       "It describes the five stages of a narrative"
+      ],
+      "correct": 0
+     },
+     "solution": "Hall's encoding/decoding model says audiences may take a preferred, negotiated or oppositional reading",
+     "hint": "Remember the three kinds of reading"
+    },
+    {
+     "id": "ma31",
+     "level": 5,
+     "text": "Why has social media made audiences more active?",
+     "choice": {
+      "options": [
+       "Social media users cannot choose what they see",
+       "Social media removes all advertising",
+       "Users can comment on, share, remix and create content, not only consume it",
+       "Social media audiences are always passive"
+      ],
+      "correct": 2
+     },
+     "solution": "Social media lets audiences respond to, share and create content, so they participate rather than just watch",
+     "hint": "Think about what users can do on social media besides watching"
+    },
+    {
+     "id": "ma32",
+     "level": 5,
+     "text": "Explain how cultivation theory could be used to argue that heavy TV viewing affects how people see the world.",
+     "rubric": {
+      "model_answer": "Gerbner's cultivation theory argues that repeated, long-term exposure to television gradually shapes viewers' beliefs. Because TV often shows crime and conflict, heavy viewers may come to believe the real world is more threatening than it is ('mean world syndrome'). The effect builds up slowly rather than instantly, and is strongest for heavy viewers who rely on TV for their picture of reality.",
+      "mark_scheme": "1 mark: Gerbner named or the theory summarised\n1 mark: long-term, repeated exposure\n1 mark: an example of the effect (e.g. mean world syndrome)\n1 mark: the effect is cumulative and strongest for heavy viewers",
+      "max_marks": 4
+     },
+     "solution": "Long-term heavy viewing slowly shapes beliefs, for example seeing the world as more threatening",
+     "hint": "Think about time: one programme, or years of viewing?"
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "media_studies.y{year}.language",
+      "label": "Media language",
+      "skills": [
+       "media_studies.language"
+      ]
+     },
+     {
+      "id": "media_studies.y{year}.representation",
+      "label": "Representation",
+      "skills": [
+       "media_studies.representation"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "media_studies.y{year}.industries",
+      "label": "Media industries",
+      "skills": [
+       "media_studies.industries"
+      ]
+     },
+     {
+      "id": "media_studies.y{year}.audiences",
+      "label": "Audiences",
+      "skills": [
+       "media_studies.audiences"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

@@ -21,6 +21,10 @@ class Config:
     llm_daily_limit: int = 40
     flood_per_minute: int = 20
     llm_global_daily_limit: int = 1000
+    llm_marking: bool = False          # TUTOR_LLM_MARKING: the LLM marks rubric (extended practice) answers
+
+
+_TRUE = frozenset({"1", "true", "yes", "on"})
 
 
 def _read_env_file(path: str) -> dict[str, str]:
@@ -97,4 +101,5 @@ def load_config(environ: Mapping[str, str] | None = None) -> Config:
         db_path=db_path,
         llm_daily_limit=limit,
         llm_global_daily_limit=global_limit,
+        llm_marking=(get("TUTOR_LLM_MARKING") or "").strip().lower() in _TRUE,
     )

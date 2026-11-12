@@ -1,0 +1,2861 @@
+{
+ "subject": {
+  "id": "design_technology",
+  "title": "Design & Tech",
+  "order": 72
+ },
+ "skills": [
+  {
+   "id": "design_technology.materials",
+   "title": "Materials & properties",
+   "aliases": [
+    "properties of materials",
+    "hardwoods",
+    "softwoods",
+    "manufactured boards",
+    "ferrous metals",
+    "alloys",
+    "thermoplastics",
+    "textiles",
+    "smart materials",
+    "composites"
+   ],
+   "questions": [
+    {
+     "id": "m01",
+     "level": 1,
+     "text": "Where do hardwoods come from?",
+     "solution": "Hardwoods come from deciduous, broad-leaved trees such as oak, beech and mahogany",
+     "hint": "Think of oak: what kind of leaves does an oak tree have?",
+     "choice": {
+      "options": [
+       "Deciduous (broad-leaved) trees",
+       "Coniferous trees with needles",
+       "Recycled wood fibres glued together",
+       "Trees that grow only in the UK"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Coniferous trees give softwoods",
+       "That describes a manufactured board such as MDF",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m02",
+     "level": 1,
+     "text": "Which of these is a softwood?",
+     "solution": "Pine comes from a coniferous tree, so it is a softwood; oak, beech and mahogany are hardwoods",
+     "hint": "Look for the wood that comes from an evergreen tree with needles",
+     "choice": {
+      "options": [
+       "Oak",
+       "Pine",
+       "Beech",
+       "Mahogany"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Oak is a hardwood",
+       null,
+       "Beech is a hardwood",
+       "Mahogany is a hardwood"
+      ]
+     }
+    },
+    {
+     "id": "m03",
+     "level": 1,
+     "text": "Which of these is a manufactured board?",
+     "solution": "MDF (medium density fibreboard) is a manufactured board made from wood fibres and resin",
+     "hint": "Look for the material made in a factory from wood fibres and glue",
+     "choice": {
+      "options": [
+       "Oak",
+       "Pine",
+       "MDF",
+       "Ash"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Oak is a natural hardwood",
+       "Pine is a natural softwood",
+       null,
+       "Ash is a natural hardwood"
+      ]
+     }
+    },
+    {
+     "id": "m04",
+     "level": 1,
+     "text": "What does MDF stand for? Give the full name.",
+     "solution": "MDF stands for medium density fibreboard",
+     "hint": "The F stands for a board made from fibres",
+     "short": {
+      "accept": [
+       "medium density fibreboard",
+       "medium density fiberboard",
+       "medium-density fibreboard"
+      ]
+     }
+    },
+    {
+     "id": "m05",
+     "level": 1,
+     "text": "What is a ferrous metal?",
+     "solution": "Ferrous metals, such as mild steel and cast iron, contain iron; most of them rust and are magnetic",
+     "hint": "The word comes from the Latin 'ferrum'",
+     "choice": {
+      "options": [
+       "A metal that contains no iron",
+       "A mixture of a metal and a plastic",
+       "A metal that never rusts",
+       "A metal that contains iron"
+      ],
+      "correct": 3,
+      "feedback": [
+       "That is a non-ferrous metal, such as copper or aluminium",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m06",
+     "level": 1,
+     "text": "What is the name for a mixture of a metal with at least one other element, such as brass or steel? Give the term.",
+     "solution": "An alloy is a mixture of a metal with other elements, such as brass (copper and zinc)",
+     "hint": "Mixing metals often makes them stronger or harder than the pure metal",
+     "short": {
+      "accept": [
+       "alloy",
+       "alloys"
+      ]
+     }
+    },
+    {
+     "id": "m07",
+     "level": 1,
+     "text": "Which type of plastic can be reheated and reshaped many times?",
+     "solution": "Thermoplastics such as acrylic soften when heated and can be reshaped again and again",
+     "hint": "The name starts with 'thermo', meaning heat",
+     "choice": {
+      "options": [
+       "Thermoplastic",
+       "Thermosetting plastic",
+       "Composite",
+       "Hardwood"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Thermosetting plastics set permanently and cannot be reshaped",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m08",
+     "level": 2,
+     "text": "Which property describes how easily a material can be drawn out into a thin wire?",
+     "solution": "Ductility is the ability to be drawn or stretched into a wire; copper is very ductile",
+     "hint": "Think about how electrical wires are made",
+     "choice": {
+      "options": [
+       "Malleability",
+       "Ductility",
+       "Hardness",
+       "Toughness"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Malleability is being shaped by hammering or pressing without cracking",
+       null,
+       "Hardness is resistance to scratching and wear",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m09",
+     "level": 2,
+     "text": "Which property describes resistance to scratching, cutting and wear?",
+     "solution": "Hardness is the ability to resist scratching, cutting, indentation and wear",
+     "hint": "Think about a material that a knife cannot scratch",
+     "choice": {
+      "options": [
+       "Toughness",
+       "Elasticity",
+       "Hardness",
+       "Ductility"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Toughness is absorbing impact without breaking",
+       "Elasticity is returning to shape after being stretched",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m10",
+     "level": 2,
+     "text": "Name the property that lets a material absorb a sudden impact without breaking.",
+     "solution": "Toughness is the ability to absorb a sudden shock or impact without breaking",
+     "hint": "It is the opposite of brittleness",
+     "short": {
+      "accept": [
+       "toughness",
+       "tough"
+      ],
+      "reject": [
+       "hardness",
+       "hard"
+      ],
+      "feedback": {
+       "hardness": "Hardness is resistance to scratching and wear"
+      }
+     }
+    },
+    {
+     "id": "m11",
+     "level": 2,
+     "text": "Which of these is a thermosetting plastic?",
+     "solution": "Urea formaldehyde is a thermosetting plastic used for electrical fittings",
+     "hint": "Thermosetting plastics are often used for electrical fittings and pan handles",
+     "choice": {
+      "options": [
+       "Acrylic",
+       "Polypropylene",
+       "HIPS",
+       "Urea formaldehyde"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Acrylic is a thermoplastic",
+       "Polypropylene is a thermoplastic",
+       "HIPS is a thermoplastic used for vacuum forming",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m12",
+     "level": 2,
+     "text": "Brass is an alloy of copper and which other metal?",
+     "solution": "Brass is copper and zinc; bronze is copper and tin",
+     "hint": "Bronze is copper and tin, so brass must be different",
+     "choice": {
+      "options": [
+       "Zinc",
+       "Tin",
+       "Iron",
+       "Aluminium"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Copper and tin make bronze",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m13",
+     "level": 2,
+     "text": "Which of these is a natural fibre that comes from an animal?",
+     "solution": "Wool comes from sheep (an animal); cotton comes from a plant; polyester and nylon are synthetic",
+     "hint": "Think about which fibre comes from sheep",
+     "choice": {
+      "options": [
+       "Cotton",
+       "Wool",
+       "Polyester",
+       "Nylon"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Cotton is natural, but it comes from a plant",
+       null,
+       "Polyester is a synthetic fibre",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m14",
+     "level": 2,
+     "text": "Which natural fibre comes from the seed pods of a plant and is used for jeans and T-shirts? Give the fibre.",
+     "solution": "Cotton comes from the fluffy seed pods (bolls) of the cotton plant",
+     "hint": "Denim is woven from this plant fibre",
+     "short": {
+      "accept": [
+       "cotton"
+      ]
+     }
+    },
+    {
+     "id": "m15",
+     "level": 3,
+     "text": "A designer needs a lightweight metal that resists corrosion for drinks cans. Which metal is most suitable?",
+     "solution": "Aluminium is lightweight and resists corrosion, so it is used for drinks cans",
+     "hint": "Which metal is light and does not rust?",
+     "choice": {
+      "options": [
+       "Cast iron",
+       "Lead",
+       "Aluminium",
+       "Mild steel"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Lead is very heavy and toxic",
+       null,
+       "Mild steel is heavier and rusts unless coated"
+      ]
+     }
+    },
+    {
+     "id": "m16",
+     "level": 3,
+     "text": "Which smart material changes colour when its temperature changes?",
+     "solution": "Thermochromic pigments change colour with temperature, as in colour-changing mugs and baby spoons",
+     "hint": "'Thermo' means heat and 'chromic' means colour",
+     "choice": {
+      "options": [
+       "Photochromic pigment",
+       "Shape memory alloy",
+       "Carbon fibre",
+       "Thermochromic pigment"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Photochromic pigments respond to light, not heat",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m17",
+     "level": 3,
+     "text": "Sunglasses that darken in bright sunlight use which type of smart material? Give the term.",
+     "solution": "Photochromic materials change colour when exposed to light (UV)",
+     "hint": "'Photo' means light and 'chromic' means colour",
+     "short": {
+      "accept": [
+       "photochromic",
+       "photochromic pigment",
+       "photochromic lenses",
+       "photochromic material"
+      ],
+      "reject": [
+       "thermochromic"
+      ],
+      "feedback": {
+       "thermochromic": "Thermochromic materials respond to temperature, not light"
+      }
+     }
+    },
+    {
+     "id": "m18",
+     "level": 3,
+     "text": "Which pair of properties makes copper suitable for electrical wires?",
+     "solution": "Copper conducts electricity very well and is ductile, so it can be drawn into wires",
+     "hint": "Electricity must flow through it, and it must be stretched into wire",
+     "choice": {
+      "options": [
+       "Good electrical conductor and ductile",
+       "Electrical insulator and brittle",
+       "Hard and brittle",
+       "Magnetic and corrodes easily"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "An insulator would stop the current flowing",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m19",
+     "level": 3,
+     "text": "A chair seat has a built-in 'living hinge' that can bend thousands of times without breaking. Which plastic is it most likely made from?",
+     "solution": "Polypropylene resists fatigue, so it is used for living hinges such as on lunch boxes and bottle caps",
+     "hint": "The plastic is tough and flexible, unlike a brittle one",
+     "choice": {
+      "options": [
+       "Acrylic",
+       "Polypropylene",
+       "Urea formaldehyde",
+       "Polystyrene"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Acrylic is brittle and would crack",
+       null,
+       "Urea formaldehyde is a rigid thermoset",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m20",
+     "level": 3,
+     "text": "Which manufactured board is made by gluing thin layers of wood veneer with the grain of each layer at 90° to the next? Give the name.",
+     "solution": "Plywood is made from layers (plies) of veneer glued with the grain at 90°, making it strong",
+     "hint": "Each thin layer is called a ply",
+     "short": {
+      "accept": [
+       "plywood",
+       "ply"
+      ]
+     }
+    },
+    {
+     "id": "m21",
+     "level": 3,
+     "text": "Which of these is a composite material?",
+     "solution": "GRP combines glass fibres and resin, so it is a composite",
+     "hint": "A composite combines two or more different materials to get better properties",
+     "choice": {
+      "options": [
+       "Mild steel",
+       "Pine",
+       "Glass reinforced plastic (GRP)",
+       "Acrylic"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Mild steel is an alloy (iron and carbon), not a composite",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m22",
+     "level": 4,
+     "text": "A racing bike frame must be stiff, strong and very light. Which material is best suited?",
+     "solution": "Carbon fibre reinforced plastic has a very high strength-to-weight ratio, so it suits racing bikes",
+     "hint": "Look for the composite with a very high strength-to-weight ratio",
+     "choice": {
+      "options": [
+       "Cast iron",
+       "Lead",
+       "Low-density polyethylene",
+       "Carbon fibre reinforced plastic"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Cast iron is heavy and brittle",
+       null,
+       "LDPE is soft and flexible",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m23",
+     "level": 4,
+     "text": "Why are oak garden benches usually fixed with brass or stainless steel screws instead of plain steel screws?",
+     "solution": "Oak contains tannic acid, which corrodes plain steel and causes black stains; outdoors, steel would also rust",
+     "hint": "Think about what oak contains and what happens to steel outside",
+     "choice": {
+      "options": [
+       "Acid in oak corrodes plain steel, and plain steel would rust outdoors",
+       "Oak is too soft to hold steel screws",
+       "Steel screws are not strong enough for wood",
+       "Brass is magnetic and grips the wood better"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Brass is not magnetic"
+      ]
+     }
+    },
+    {
+     "id": "m24",
+     "level": 4,
+     "text": "Mild steel is cheap and strong but rusts easily. Which finish coats it with zinc by dipping it in molten zinc?",
+     "solution": "Galvanising coats steel with zinc, which protects it from rusting",
+     "hint": "The name comes from the scientist Galvani",
+     "choice": {
+      "options": [
+       "Anodising",
+       "Galvanising",
+       "Varnishing",
+       "Powder coating"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Anodising is used on aluminium",
+       null,
+       "Varnish is mainly used on wood",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m25",
+     "level": 4,
+     "text": "A shape memory alloy returns to its original shape when heated. Give the trade name of the common nickel–titanium shape memory alloy.",
+     "solution": "Nitinol is a nickel–titanium alloy used in glasses frames and medical stents",
+     "hint": "Its name is made from the letters of nickel, titanium and the place where it was developed",
+     "short": {
+      "accept": [
+       "nitinol"
+      ]
+     }
+    },
+    {
+     "id": "m26",
+     "level": 4,
+     "text": "In a test, a material snaps cleanly under a sharp knock without bending first. Which property is it showing?",
+     "solution": "A material that breaks suddenly without bending is brittle, like glass or cast iron",
+     "hint": "Think of glass breaking",
+     "choice": {
+      "options": [
+       "Toughness",
+       "Ductility",
+       "Brittleness",
+       "Elasticity"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A tough material would absorb the knock without breaking",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m27",
+     "level": 4,
+     "text": "Which manufactured board is made from wood chips bonded with resin and is often covered with a veneer or laminate for kitchen units?",
+     "solution": "Chipboard is made from wood chips and resin; it is cheap and usually covered with a veneer or laminate",
+     "hint": "The name tells you what it is made from",
+     "choice": {
+      "options": [
+       "Plywood",
+       "MDF",
+       "Hardboard",
+       "Chipboard"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Plywood is made from layers of veneer",
+       "MDF is made from fine wood fibres",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m28",
+     "level": 4,
+     "text": "Steel is mainly iron mixed with a small amount of which non-metal element? Give the element.",
+     "solution": "Steel is an alloy of iron and a small amount of carbon",
+     "hint": "The same element is found in charcoal and diamonds",
+     "short": {
+      "accept": [
+       "carbon"
+      ]
+     }
+    },
+    {
+     "id": "m29",
+     "level": 5,
+     "text": "Which statement about softwoods and hardwoods is accurate?",
+     "solution": "Hardwood and softwood describe the tree type (deciduous or coniferous), not hardness: balsa is a soft hardwood",
+     "hint": "Remember that the classification is based on the tree, not on how hard the wood feels",
+     "choice": {
+      "options": [
+       "The names describe the type of tree, so balsa is a hardwood even though it is very soft",
+       "Hardwoods are always harder than softwoods",
+       "Softwoods come from deciduous trees",
+       "Balsa is a softwood, being easy to cut"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Balsa is a hardwood but is very soft",
+       "Softwoods come from coniferous trees",
+       null
+      ]
+     }
+    },
+    {
+     "id": "m30",
+     "level": 5,
+     "text": "Why is a thermosetting plastic such as melamine formaldehyde used for kitchen worktop laminates instead of a thermoplastic?",
+     "solution": "Thermosets have cross-links that stop them softening when reheated, so they resist heat from hot pans",
+     "hint": "Think about what happens when a hot pan is put on the surface",
+     "choice": {
+      "options": [
+       "Thermosets can be melted and recycled easily",
+       "Thermosets do not soften when heated again, so hot pans will not damage them",
+       "Thermosets are natural materials",
+       "Thermosets are the cheapest plastics and bend easily"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Thermosets cannot be remelted",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m31",
+     "level": 5,
+     "text": "Why is cast iron suitable for the heavy base of a machine vice but not for the head of a hammer?",
+     "solution": "Cast iron is hard and strong in compression, but brittle, so it can crack under sharp impacts",
+     "hint": "Compare a part that just sits under load with a part that is hit again and again",
+     "choice": {
+      "options": [
+       "Cast iron is too soft to be used as a hammer",
+       "Cast iron is too light for a hammer head",
+       "Cast iron is strong in compression but brittle, so a hammer head could crack under repeated impacts",
+       "Cast iron melts when it is hit"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Cast iron is hard; the problem is that it is brittle",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m32",
+     "level": 5,
+     "text": "Which statement about stainless steel is accurate?",
+     "solution": "Stainless steel is an alloy of iron, carbon and chromium (often with nickel); the chromium resists corrosion",
+     "hint": "Think about why cutlery and sinks do not rust",
+     "choice": {
+      "options": [
+       "Stainless steel is a pure metal with no iron",
+       "Stainless steel is a thermoplastic",
+       "Stainless steel rusts more easily than mild steel",
+       "Stainless steel is an alloy containing chromium, which helps it resist corrosion"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Steel is mostly iron, so stainless steel is a ferrous alloy",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "m33",
+     "level": 5,
+     "text": "Which modern material is a single layer of carbon atoms, extremely strong and an excellent conductor? Give the name.",
+     "solution": "Graphene is a single layer of carbon atoms in a hexagonal lattice",
+     "hint": "Its name is related to graphite, the 'lead' in pencils",
+     "short": {
+      "accept": [
+       "graphene"
+      ]
+     }
+    },
+    {
+     "id": "m34",
+     "level": 5,
+     "text": "Sportswear must stretch and then recover its shape. Which fibre is usually added to give this property?",
+     "solution": "Elastane (often sold as Lycra) can stretch to several times its length and recover its shape",
+     "hint": "The fibre's name sounds like the property you need",
+     "choice": {
+      "options": [
+       "Elastane",
+       "Linen",
+       "Cotton",
+       "Wool"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Linen is strong but creases and does not stretch much",
+       null,
+       null
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_technology.energy_systems",
+   "title": "Energy, systems & mechanisms",
+   "aliases": [
+    "gear ratio",
+    "energy generation",
+    "renewable energy",
+    "batteries",
+    "input process output",
+    "sensors",
+    "levers",
+    "linkages",
+    "cams",
+    "pulleys",
+    "types of motion"
+   ],
+   "questions": [
+    {
+     "id": "y01",
+     "level": 1,
+     "text": "Which of these is a renewable energy source?",
+     "solution": "Wind will not run out, so it is renewable; coal, oil and natural gas are fossil fuels",
+     "hint": "Which one will never run out?",
+     "choice": {
+      "options": [
+       "Wind",
+       "Coal",
+       "Natural gas",
+       "Oil"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Coal is a fossil fuel and will run out",
+       null,
+       "Oil is a fossil fuel and will run out"
+      ]
+     }
+    },
+    {
+     "id": "y02",
+     "level": 1,
+     "text": "What are the three main blocks of a systems diagram?",
+     "solution": "A system diagram shows input → process → output",
+     "hint": "Think of a switch, a control circuit and a buzzer",
+     "choice": {
+      "options": [
+       "Design, make, evaluate",
+       "Input, process, output",
+       "Start, middle, end",
+       "Power, switch, bulb"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "y03",
+     "level": 1,
+     "text": "What type of motion is movement in a straight line in one direction? Give the term.",
+     "solution": "Movement in a straight line in one direction is linear motion",
+     "hint": "The word comes from 'line'",
+     "short": {
+      "accept": [
+       "linear",
+       "linear motion"
+      ],
+      "reject": [
+       "rotary",
+       "reciprocating",
+       "oscillating"
+      ]
+     }
+    },
+    {
+     "id": "y04",
+     "level": 1,
+     "text": "What type of motion is swinging backwards and forwards in an arc, like a pendulum?",
+     "solution": "Swinging back and forth in an arc is oscillating motion",
+     "hint": "Think of a clock pendulum or a swing",
+     "choice": {
+      "options": [
+       "Reciprocating",
+       "Rotary",
+       "Oscillating",
+       "Linear"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Reciprocating is backwards and forwards in a straight line",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y05",
+     "level": 1,
+     "text": "What type of motion is turning in a circle, like a wheel? Give the term.",
+     "solution": "Turning in a circle is rotary motion",
+     "hint": "Think of something that rotates",
+     "short": {
+      "accept": [
+       "rotary",
+       "rotary motion",
+       "rotation",
+       "rotational"
+      ]
+     }
+    },
+    {
+     "id": "y06",
+     "level": 1,
+     "text": "What is the name of the point that a lever pivots around? Give the term.",
+     "solution": "A lever turns about its pivot point, called the fulcrum",
+     "hint": "On a see-saw, it is the point in the middle",
+     "short": {
+      "accept": [
+       "fulcrum"
+      ],
+      "reject": [
+       "load",
+       "effort"
+      ],
+      "feedback": {
+       "load": "The load is the weight being moved",
+       "effort": "The effort is the force you apply"
+      }
+     }
+    },
+    {
+     "id": "y07",
+     "level": 1,
+     "text": "What does LED stand for? Give the full term.",
+     "solution": "LED stands for light emitting diode, an output that gives light",
+     "hint": "The D is a component that lets current flow one way only",
+     "short": {
+      "accept": [
+       "light emitting diode",
+       "light-emitting diode"
+      ]
+     }
+    },
+    {
+     "id": "y08",
+     "level": 2,
+     "text": "Which statement about reciprocating and oscillating motion is accurate?",
+     "solution": "Reciprocating motion moves back and forth in a straight line (a saw); oscillating swings in an arc (a pendulum)",
+     "hint": "Compare a sewing machine needle with a pendulum",
+     "choice": {
+      "options": [
+       "Reciprocating is backwards and forwards in an arc; oscillating is backwards and forwards in a straight line",
+       "Both mean turning in a full circle",
+       "Both mean moving in one direction only",
+       "Reciprocating is backwards and forwards in a straight line; oscillating is backwards and forwards in an arc"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Turning in a circle is rotary motion",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y09",
+     "level": 2,
+     "text": "Which of these components is an output device?",
+     "solution": "A buzzer produces sound, so it is an output; the others are inputs",
+     "hint": "Outputs do something you can see, hear or feel",
+     "choice": {
+      "options": [
+       "Buzzer",
+       "Thermistor",
+       "Push switch",
+       "Light dependent resistor"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A thermistor senses temperature, so it is an input",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y10",
+     "level": 2,
+     "text": "Name the input component whose resistance changes with temperature.",
+     "solution": "A thermistor's resistance changes with temperature, so it is used as a temperature sensor",
+     "hint": "Its name begins with 'therm', meaning heat",
+     "short": {
+      "accept": [
+       "thermistor"
+      ]
+     }
+    },
+    {
+     "id": "y11",
+     "level": 2,
+     "text": "A wheelbarrow is which class of lever?",
+     "solution": "In a wheelbarrow the wheel is the fulcrum, the load is in the middle and the effort is at the handles: second class",
+     "hint": "Find the fulcrum, load and effort: which one is in the middle?",
+     "choice": {
+      "options": [
+       "First class",
+       "Second class",
+       "Third class",
+       "Not a lever at all"
+      ],
+      "correct": 1,
+      "feedback": [
+       "In a first-class lever the fulcrum is in the middle",
+       null,
+       "In a third-class lever the effort is in the middle",
+       null
+      ]
+     }
+    },
+    {
+     "id": "y12",
+     "level": 2,
+     "text": "Which mechanism changes rotary motion into reciprocating motion?",
+     "solution": "A rotating cam pushes the follower up and down, changing rotary motion to reciprocating motion",
+     "hint": "Look for the mechanism that makes something go up and down",
+     "choice": {
+      "options": [
+       "Spur gears",
+       "Belt and pulley",
+       "Cam and follower",
+       "Bevel gears"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Spur gears change speed, but the motion stays rotary",
+       null,
+       null,
+       "Bevel gears turn rotary motion through 90°"
+      ]
+     }
+    },
+    {
+     "id": "y13",
+     "level": 2,
+     "text": "Name the device that stores chemical energy and supplies electrical energy to a portable circuit.",
+     "solution": "A battery (made of one or more cells) stores chemical energy",
+     "hint": "Torches and remote controls need one of these",
+     "short": {
+      "accept": [
+       "battery",
+       "batteries",
+       "cell",
+       "cells"
+      ]
+     }
+    },
+    {
+     "id": "y14",
+     "level": 2,
+     "text": "Which energy source uses heat from hot rocks deep underground?",
+     "solution": "Geothermal energy uses heat from rocks deep underground",
+     "hint": "'Geo' means Earth and 'thermal' means heat",
+     "choice": {
+      "options": [
+       "Biomass",
+       "Tidal",
+       "Hydroelectric",
+       "Geothermal"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Biomass uses plant or animal material as fuel",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y15",
+     "level": 2,
+     "text": "Which arrangement is correctly ordered as input, then process, then output?",
+     "solution": "The switch is the input, the microcontroller processes the signal and the buzzer is the output",
+     "hint": "Which component does the user press first?",
+     "choice": {
+      "options": [
+       "Push switch → microcontroller → buzzer",
+       "Buzzer → microcontroller → push switch",
+       "Microcontroller → push switch → buzzer",
+       "Push switch → buzzer → microcontroller"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "y16",
+     "level": 3,
+     "text": "A driver gear with 10 teeth turns a driven gear with 30 teeth. The driver turns at 300 rpm. How fast does the driven gear turn? Give the answer in rpm.",
+     "solution": "Gear ratio = 30 ÷ 10 = 3, so output speed = 300 ÷ 3 = 100 rpm",
+     "hint": "Work out the gear ratio (driven teeth ÷ driver teeth) first",
+     "answer": {
+      "kind": "number",
+      "display": "100 rpm",
+      "value": 100
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "900 rpm",
+        "value": 900
+       },
+       "feedback": "A bigger driven gear turns more slowly, so divide by the gear ratio"
+      }
+     ]
+    },
+    {
+     "id": "y17",
+     "level": 3,
+     "text": "A driver gear has 15 teeth and the driven gear has 45 teeth. What is the gear ratio?",
+     "solution": "Gear ratio = driven teeth ÷ driver teeth = 45 ÷ 15 = 3, written 3:1",
+     "hint": "Divide the number of teeth on the driven gear by the number on the driver",
+     "choice": {
+      "options": [
+       "1:3",
+       "3:1",
+       "45:1",
+       "15:1"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Put the driven gear first: 45 ÷ 15 = 3, so 3:1",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y18",
+     "level": 3,
+     "text": "A lever lifts a 100 N load with a 20 N effort. What is the mechanical advantage?",
+     "solution": "Mechanical advantage = load ÷ effort = 100 ÷ 20 = 5",
+     "hint": "Divide the load by the effort",
+     "choice": {
+      "options": [
+       "0.2",
+       "80",
+       "5",
+       "120"
+      ],
+      "correct": 2,
+      "feedback": [
+       "You divided effort by load; it is load ÷ effort",
+       "Divide, do not subtract",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y19",
+     "level": 3,
+     "text": "A pair of scissors is which class of lever?",
+     "solution": "Scissors have the pivot (fulcrum) between the effort at the handles and the load at the blades: first class",
+     "hint": "Where is the pivot compared with your fingers and the paper?",
+     "choice": {
+      "options": [
+       "Second class",
+       "Third class",
+       "Not a lever at all",
+       "First class"
+      ],
+      "correct": 3,
+      "feedback": [
+       "In a second-class lever the load is in the middle",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y20",
+     "level": 3,
+     "text": "A light must switch on automatically when it gets dark. Which input sensor is needed?",
+     "solution": "An LDR's resistance changes with light level, so it can detect darkness",
+     "hint": "Which sensor responds to light?",
+     "choice": {
+      "options": [
+       "Light dependent resistor (LDR)",
+       "Thermistor",
+       "Moisture sensor",
+       "Push switch"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "A thermistor senses temperature",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y21",
+     "level": 3,
+     "text": "A wind turbine changes the kinetic energy of the wind into which form of energy? Give the form of energy.",
+     "solution": "A wind turbine turns kinetic energy into electrical energy using a generator",
+     "hint": "The turbine drives a generator connected to the grid",
+     "short": {
+      "accept": [
+       "electrical",
+       "electrical energy",
+       "electricity",
+       "electric",
+       "electric energy"
+      ]
+     }
+    },
+    {
+     "id": "y22",
+     "level": 3,
+     "text": "Which mechanism changes rotary motion into linear motion, as in some car steering systems?",
+     "solution": "A rack and pinion changes rotary motion (pinion) into linear motion (rack)",
+     "hint": "One part is a round gear and the other is a straight toothed bar",
+     "choice": {
+      "options": [
+       "Bevel gears",
+       "Rack and pinion",
+       "Belt and pulley",
+       "Ratchet and pawl"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "A ratchet and pawl lets something turn in one direction only"
+      ]
+     }
+    },
+    {
+     "id": "y23",
+     "level": 4,
+     "text": "A driver pulley of diameter 50 mm turns a driven pulley of diameter 150 mm. The driver turns at 900 rpm. What is the speed of the driven pulley? Give the answer in rpm.",
+     "solution": "Ratio = 150 ÷ 50 = 3, so driven speed = 900 ÷ 3 = 300 rpm",
+     "hint": "Find how many times bigger the driven pulley is first",
+     "answer": {
+      "kind": "number",
+      "display": "300 rpm",
+      "value": 300
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "2700 rpm",
+        "value": 2700
+       },
+       "feedback": "A bigger driven pulley turns more slowly, so divide by the ratio"
+      }
+     ]
+    },
+    {
+     "id": "y24",
+     "level": 4,
+     "text": "Why is an idler gear placed between a driver gear and a driven gear?",
+     "solution": "An idler gear reverses the direction again, so the driven gear turns the same way as the driver; it does not change the ratio",
+     "hint": "Two meshing gears turn in opposite directions. What happens with three?",
+     "choice": {
+      "options": [
+       "To double the speed of the driven gear",
+       "To change rotary motion into linear motion",
+       "To make the driven gear turn in the same direction as the driver",
+       "To stop the gears wearing out"
+      ],
+      "correct": 2,
+      "feedback": [
+       "An idler gear does not change the gear ratio",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y25",
+     "level": 4,
+     "text": "Which statement about a worm gear and wheel is accurate?",
+     "solution": "A worm and wheel gives a very large speed reduction, and the wheel cannot turn the worm, which makes it self-locking",
+     "hint": "One turn of the worm moves the wheel on by only one tooth",
+     "choice": {
+      "options": [
+       "The output speed is greatly increased",
+       "Rotary motion is changed into reciprocating motion",
+       "The wheel always drives the worm",
+       "There is a large reduction in speed, and the wheel cannot drive the worm"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A worm gear reduces speed a lot",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y26",
+     "level": 4,
+     "text": "Two pulleys are joined by a crossed belt. What is the effect?",
+     "solution": "Crossing the belt reverses the direction of the driven pulley",
+     "hint": "Draw the belt crossing over between the pulleys and follow its direction",
+     "choice": {
+      "options": [
+       "The driven pulley turns in the opposite direction",
+       "The driven pulley turns faster in the same direction",
+       "The belt can no longer slip",
+       "Both pulleys stop turning"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "y27",
+     "level": 4,
+     "text": "Which linkage changes the direction of motion through 90°?",
+     "solution": "A bell crank turns the direction of motion through 90°, as in bicycle brakes",
+     "hint": "This linkage is used to send a brake cable round a corner",
+     "choice": {
+      "options": [
+       "Reverse motion linkage",
+       "Bell crank",
+       "Parallel motion linkage",
+       "Crank and slider"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A reverse motion linkage makes the output move in the opposite direction",
+       null,
+       "A parallel motion linkage makes the output move in the same direction",
+       null
+      ]
+     }
+    },
+    {
+     "id": "y28",
+     "level": 4,
+     "text": "Name the cam shape that lets the follower rise slowly and then drop suddenly. Give the name.",
+     "solution": "A snail (drop) cam gives a slow rise and then a sudden drop",
+     "hint": "It is named after a garden creature with a spiral shell",
+     "short": {
+      "accept": [
+       "snail cam",
+       "snail",
+       "drop cam"
+      ],
+      "reject": [
+       "pear cam",
+       "pear"
+      ]
+     }
+    },
+    {
+     "id": "y29",
+     "level": 4,
+     "text": "A driver gear has 12 teeth and the driven gear has 36 teeth. Which statement is accurate?",
+     "solution": "Gear ratio = 36 ÷ 12 = 3:1, so the driven gear turns at a third of the driver's speed, in the opposite direction",
+     "hint": "Work out the gear ratio first",
+     "choice": {
+      "options": [
+       "The driven gear turns three times faster than the driver",
+       "Both gears turn in the same direction",
+       "The driven gear turns at one third of the driver's speed",
+       "The driven gear turns at the same speed as the driver"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Two meshing gears turn in opposite directions",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y30",
+     "level": 5,
+     "text": "Why does a bicycle use a chain and sprockets instead of a belt and pulleys?",
+     "solution": "Chain and sprocket gives a positive drive that cannot slip, which suits the large forces from pedalling",
+     "hint": "Think about what could happen to a belt when you pedal hard uphill",
+     "choice": {
+      "options": [
+       "Chains need no lubrication or maintenance",
+       "A chain makes the wheel turn in the opposite direction",
+       "Chains are always quieter than belts",
+       "The chain cannot slip under heavy loads, so the drive is positive"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Chains need regular oiling",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y31",
+     "level": 5,
+     "text": "Which statement about nuclear power is accurate?",
+     "solution": "Nuclear power is non-renewable (finite uranium) and low-carbon, but produces radioactive waste",
+     "hint": "Think about the fuel, the emissions and the waste separately",
+     "choice": {
+      "options": [
+       "Uranium fuel will run out, so nuclear power is non-renewable, but very little carbon dioxide is released while running",
+       "Nuclear power is renewable",
+       "Nuclear power stations release large amounts of carbon dioxide",
+       "Nuclear power produces no waste"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Nuclear power produces radioactive waste that must be stored safely"
+      ]
+     }
+    },
+    {
+     "id": "y32",
+     "level": 5,
+     "text": "Which statement about rechargeable batteries compared with disposable alkaline batteries is accurate?",
+     "solution": "Rechargeable batteries cost more at first but can be recharged hundreds of times, so less waste is produced",
+     "hint": "Compare the cost of buying once with the cost over many uses",
+     "choice": {
+      "options": [
+       "They can never be recycled",
+       "They cost more to buy but can be reused many times, reducing waste",
+       "They contain no chemicals",
+       "They always have to be thrown away after one use"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "All batteries store energy in chemicals",
+       null
+      ]
+     }
+    },
+    {
+     "id": "y33",
+     "level": 5,
+     "text": "Tweezers are a third-class lever. Which statement is accurate?",
+     "solution": "In a third-class lever the effort is in the middle; the mechanical advantage is less than 1, but movement is precise",
+     "hint": "Find where you squeeze the tweezers compared with the hinge and the tips",
+     "choice": {
+      "options": [
+       "The load is between the effort and the fulcrum, giving a large mechanical advantage",
+       "The fulcrum is between the effort and the load",
+       "The effort is between the fulcrum and the load, so they give control rather than a mechanical advantage",
+       "They multiply the force applied"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That is a first-class lever",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "y34",
+     "level": 5,
+     "text": "Why might a designer use a solar cell and a rechargeable battery in a garden light?",
+     "solution": "The solar cell generates electricity in daylight and stores it in the battery for use after dark",
+     "hint": "When is the light needed, and when is the sun shining?",
+     "choice": {
+      "options": [
+       "Solar cells produce more energy at night",
+       "The battery makes sunlight renewable",
+       "Solar cells only work with disposable batteries",
+       "The solar cell charges the battery in daylight so the light can work at night"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "y35",
+     "level": 5,
+     "text": "A system measures its output and uses the result to adjust the process, like a thermostat. Give the term for this.",
+     "solution": "Feedback (a closed-loop system) uses information about the output to control the process",
+     "hint": "Information goes back from the output to the process",
+     "short": {
+      "accept": [
+       "feedback",
+       "feedback loop",
+       "closed loop",
+       "closed loop control",
+       "closed loop system"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_technology.making",
+   "title": "Making & manufacturing",
+   "aliases": [
+    "scales of production",
+    "batch production",
+    "mass production",
+    "cad",
+    "cam",
+    "cnc",
+    "3d printing",
+    "jigs",
+    "moulds",
+    "tolerances",
+    "finishes"
+   ],
+   "questions": [
+    {
+     "id": "k01",
+     "level": 1,
+     "text": "Which scale of production makes a single, unique product for one client?",
+     "solution": "One-off (bespoke or job) production makes a single unique product, such as a made-to-measure wedding dress",
+     "hint": "Think of a made-to-measure item",
+     "choice": {
+      "options": [
+       "One-off production",
+       "Batch production",
+       "Mass production",
+       "Continuous production"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Batch production makes a set number of identical products",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k02",
+     "level": 1,
+     "text": "What does CAD stand for? Give the full term.",
+     "solution": "CAD stands for computer aided design",
+     "hint": "The D is the stage before making",
+     "short": {
+      "accept": [
+       "computer aided design",
+       "computer assisted design"
+      ],
+      "reject": [
+       "computer aided manufacture",
+       "computer aided manufacturing"
+      ],
+      "feedback": {
+       "computer aided manufacture": "That is CAM; CAD is the design stage"
+      }
+     }
+    },
+    {
+     "id": "k03",
+     "level": 1,
+     "text": "What does CAM stand for? Give the full term.",
+     "solution": "CAM stands for computer aided manufacture, using machines such as laser cutters",
+     "hint": "The M is the stage after designing",
+     "short": {
+      "accept": [
+       "computer aided manufacture",
+       "computer aided manufacturing",
+       "computer assisted manufacture"
+      ],
+      "reject": [
+       "computer aided design"
+      ],
+      "feedback": {
+       "computer aided design": "That is CAD; CAM is the making stage"
+      }
+     }
+    },
+    {
+     "id": "k04",
+     "level": 1,
+     "text": "Name the hand saw with a thin blade in a C-shaped frame, designed for cutting curves in wood and plastic.",
+     "solution": "A coping saw has a thin blade in a frame, so it can cut curves",
+     "hint": "Its name begins with 'cop'",
+     "short": {
+      "accept": [
+       "coping saw",
+       "coping"
+      ],
+      "reject": [
+       "tenon saw",
+       "hacksaw",
+       "fret saw"
+      ],
+      "feedback": {
+       "tenon saw": "A tenon saw cuts straight lines in wood",
+       "hacksaw": "A hacksaw cuts metal"
+      }
+     }
+    },
+    {
+     "id": "k05",
+     "level": 1,
+     "text": "Which piece of personal protective equipment protects your eyes when using a pillar drill?",
+     "solution": "Goggles protect the eyes from flying swarf and dust",
+     "hint": "Which part of the body is named in the question?",
+     "choice": {
+      "options": [
+       "Leather apron",
+       "Safety goggles",
+       "Ear defenders",
+       "Steel toe-cap boots"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "k06",
+     "level": 1,
+     "text": "What is a jig used for?",
+     "solution": "A jig guides a tool (for example, a drill) so identical parts can be made accurately and quickly",
+     "hint": "Think about drilling the same hole in 50 identical parts",
+     "choice": {
+      "options": [
+       "Measuring the temperature of a material",
+       "Joining two metals with heat",
+       "Guiding a tool so the same process can be repeated accurately",
+       "Polishing a finished product"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "k07",
+     "level": 1,
+     "text": "What does CNC stand for? Give the full term.",
+     "solution": "CNC stands for computer numerical control: machines follow coded instructions from a computer",
+     "hint": "The N stands for numbers (coordinates) that control the machine",
+     "short": {
+      "accept": [
+       "computer numerical control",
+       "computer numerically controlled",
+       "computer numeric control",
+       "computerised numerical control"
+      ]
+     }
+    },
+    {
+     "id": "k08",
+     "level": 2,
+     "text": "Which statement about batch and mass production is accurate?",
+     "solution": "Batch production makes a set quantity (such as 100 chairs); mass production makes thousands, often on a production line",
+     "hint": "Compare a bakery making 200 loaves with a car factory",
+     "choice": {
+      "options": [
+       "Batch makes one unique product; mass makes a set number of products",
+       "Batch makes very large numbers on an assembly line; mass makes a set number",
+       "Batch and mass production both make one product at a time by hand",
+       "Batch makes a set number of identical products; mass makes very large numbers, often on an assembly line"
+      ],
+      "correct": 3,
+      "feedback": [
+       "One unique product is one-off production",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k09",
+     "level": 2,
+     "text": "Which process heats a thermoplastic sheet and then sucks it down over a mould?",
+     "solution": "Vacuum forming heats a plastic sheet (often HIPS) and sucks out the air so it forms over a mould",
+     "hint": "Air is removed from underneath the soft sheet",
+     "choice": {
+      "options": [
+       "Vacuum forming",
+       "Injection moulding",
+       "Blow moulding",
+       "Extrusion"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Injection moulding forces melted plastic granules into a closed mould",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k10",
+     "level": 2,
+     "text": "Which of these is an additive manufacturing process?",
+     "solution": "3D printing builds a product layer by layer, adding material; the others remove material",
+     "hint": "Additive means building up, not cutting away",
+     "choice": {
+      "options": [
+       "Laser cutting",
+       "3D printing",
+       "CNC milling",
+       "Turning on a lathe"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Laser cutting removes material, so it is subtractive",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k11",
+     "level": 2,
+     "text": "Which saw has a fine-toothed blade held in a frame and is used for cutting metal? Give the name.",
+     "solution": "A hacksaw (or junior hacksaw) is used for cutting metal",
+     "hint": "Its name starts with 'hack'",
+     "short": {
+      "accept": [
+       "hacksaw",
+       "hack saw",
+       "junior hacksaw"
+      ],
+      "reject": [
+       "coping saw",
+       "tenon saw"
+      ]
+     }
+    },
+    {
+     "id": "k12",
+     "level": 2,
+     "text": "Which finish colours and protects aluminium by thickening its oxide layer?",
+     "solution": "Anodising thickens the oxide layer on aluminium and can add colour",
+     "hint": "This finish is used on coloured aluminium water bottles",
+     "choice": {
+      "options": [
+       "Galvanising",
+       "Varnishing",
+       "Anodising",
+       "Waxing"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Galvanising coats steel with zinc",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k13",
+     "level": 2,
+     "text": "Which wood joint uses interlocking wedge-shaped tails and pins and is often used for drawers?",
+     "solution": "A dovetail joint has interlocking tails and pins, so it resists being pulled apart",
+     "hint": "The shape looks like a bird's tail",
+     "choice": {
+      "options": [
+       "Butt joint",
+       "Dowel joint",
+       "Mitre joint",
+       "Dovetail joint"
+      ],
+      "correct": 3,
+      "feedback": [
+       "A butt joint is two flat ends glued together, and it is weak",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k14",
+     "level": 2,
+     "text": "Which process forces melted plastic granules into a closed mould under pressure to make complex parts such as toy bricks? Give the process.",
+     "solution": "Injection moulding forces melted plastic into a mould under high pressure",
+     "hint": "The plastic is 'injected', like a syringe",
+     "short": {
+      "accept": [
+       "injection moulding",
+       "injection molding"
+      ],
+      "reject": [
+       "blow moulding",
+       "vacuum forming"
+      ],
+      "feedback": {
+       "blow moulding": "Blow moulding makes hollow shapes such as bottles"
+      }
+     }
+    },
+    {
+     "id": "k15",
+     "level": 3,
+     "text": "A part should be 40 mm long with a tolerance of ±0.5 mm. What is the largest acceptable length? Give the answer in mm.",
+     "solution": "Largest length = 40 + 0.5 = 40.5 mm",
+     "hint": "The tolerance tells you how far above or below 40 mm is allowed",
+     "answer": {
+      "kind": "number",
+      "display": "40.5 mm",
+      "value": 40.5
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "39.5 mm",
+        "value": 39.5
+       },
+       "feedback": "That is the smallest acceptable length; add the tolerance for the largest"
+      }
+     ]
+    },
+    {
+     "id": "k16",
+     "level": 3,
+     "text": "A shelf is designed to be 600 mm long with a tolerance of ±2 mm. What is the smallest acceptable length? Give the answer in mm.",
+     "solution": "Smallest length = 600 − 2 = 598 mm",
+     "hint": "Subtract the tolerance from the design size",
+     "answer": {
+      "kind": "number",
+      "display": "598 mm",
+      "value": 598
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "602 mm",
+        "value": 602
+       },
+       "feedback": "That is the largest acceptable length; subtract for the smallest"
+      }
+     ]
+    },
+    {
+     "id": "k17",
+     "level": 3,
+     "text": "A school needs 30 identical wooden name plates. Which scale of production is most suitable?",
+     "solution": "A set number of identical items is batch production",
+     "hint": "The number of items is fixed and not very large",
+     "choice": {
+      "options": [
+       "Batch production",
+       "One-off production",
+       "Mass production",
+       "Continuous production"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Mass production is for thousands of items",
+       null
+      ]
+     }
+    },
+    {
+     "id": "k18",
+     "level": 3,
+     "text": "A designer wants to cut and engrave 50 identical acrylic keyrings accurately. Which machine is most suitable?",
+     "solution": "A laser cutter (CAM) cuts and engraves sheet materials such as acrylic accurately and repeatedly",
+     "hint": "Which CAM machine both cuts and engraves sheet material?",
+     "choice": {
+      "options": [
+       "Coping saw",
+       "Laser cutter",
+       "Wood lathe",
+       "Pillar drill"
+      ],
+      "correct": 1,
+      "feedback": [
+       "A coping saw is a hand tool, so 50 identical keyrings would be slow and less accurate",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k19",
+     "level": 3,
+     "text": "A plastic drinks bottle with a narrow neck is made by which process?",
+     "solution": "Blow moulding blows air into a hot plastic tube inside a mould, making hollow shapes such as bottles",
+     "hint": "Air is blown inside the hot plastic",
+     "choice": {
+      "options": [
+       "Vacuum forming",
+       "Line bending",
+       "Blow moulding",
+       "Laminating"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Vacuum forming makes open shapes such as trays, not narrow-necked bottles",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k20",
+     "level": 3,
+     "text": "A long plastic pipe with the same cross-section all the way along is made by pushing melted plastic through a shaped die. Give the process.",
+     "solution": "Extrusion pushes material through a die to make long, constant profiles",
+     "hint": "Think of squeezing toothpaste out of a tube",
+     "short": {
+      "accept": [
+       "extrusion",
+       "extruding",
+       "extruded"
+      ]
+     }
+    },
+    {
+     "id": "k21",
+     "level": 3,
+     "text": "Which tool is used to mark a line parallel to the edge of a piece of wood?",
+     "solution": "A marking gauge scratches a line parallel to the edge of the wood",
+     "hint": "The tool slides along the edge as you mark",
+     "choice": {
+      "options": [
+       "Centre punch",
+       "Try square",
+       "Coping saw",
+       "Marking gauge"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "A try square marks lines at 90° to an edge",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k22",
+     "level": 4,
+     "text": "A factory changes from batch to mass production for a popular toy. What is the most likely effect?",
+     "solution": "Mass production spreads the high set-up cost over many products, so each one costs less",
+     "hint": "Think about economies of scale",
+     "choice": {
+      "options": [
+       "A lower cost per toy, but a high set-up cost for tooling and machines",
+       "A higher cost per toy and less use of machines",
+       "Each toy can be customised for each customer",
+       "No need for quality control"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Mass production still needs quality control"
+      ]
+     }
+    },
+    {
+     "id": "k23",
+     "level": 4,
+     "text": "Which is an advantage of using CAM rather than making parts by hand?",
+     "solution": "CAM machines follow the same file each time, giving accuracy and consistency",
+     "hint": "Think about making 100 identical parts",
+     "choice": {
+      "options": [
+       "Machines never need maintenance",
+       "Identical, accurate parts can be made quickly and repeatedly",
+       "No design file is needed",
+       "CAM is always cheaper for a single one-off product"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "CAM needs a CAD file to follow",
+       null
+      ]
+     }
+    },
+    {
+     "id": "k24",
+     "level": 4,
+     "text": "Brackets must be 25 mm ± 0.2 mm long. One bracket measures 25.3 mm. By how many mm is it over the upper limit? Give the answer in mm.",
+     "solution": "Upper limit = 25 + 0.2 = 25.2 mm; 25.3 − 25.2 = 0.1 mm over",
+     "hint": "Find the upper limit first",
+     "answer": {
+      "kind": "number",
+      "display": "0.1 mm",
+      "value": 0.1
+     },
+     "mistakes": [
+      {
+       "answer": {
+        "kind": "number",
+        "display": "0.3 mm",
+        "value": 0.3
+       },
+       "feedback": "Compare with the upper limit (25.2 mm), not with 25 mm"
+      }
+     ]
+    },
+    {
+     "id": "k25",
+     "level": 4,
+     "text": "Before drilling a hole in mild steel, which tool makes a small dent so the drill bit does not wander?",
+     "solution": "A centre punch makes a small dent in metal to locate the drill bit",
+     "hint": "It is hit with a hammer",
+     "choice": {
+      "options": [
+       "Scriber",
+       "Bradawl",
+       "Centre punch",
+       "Countersink bit"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A scriber marks lines on metal",
+       "A bradawl starts holes in wood",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k26",
+     "level": 4,
+     "text": "Why is just-in-time (JIT) manufacturing used?",
+     "solution": "JIT orders materials to arrive just before they are needed, saving storage space and money",
+     "hint": "Think about what the name says about timing",
+     "choice": {
+      "options": [
+       "Products are made only by hand",
+       "Large stocks are stored in case of delays",
+       "Products are made slowly so each one is unique",
+       "Materials arrive only when needed, cutting storage costs and waste"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "JIT avoids keeping large stocks",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k27",
+     "level": 4,
+     "text": "Give the term for the allowed range of sizes for a part, such as 50 mm ± 1 mm.",
+     "solution": "A tolerance is the acceptable range of size above and below the design size",
+     "hint": "It is how much variation you will 'put up with'",
+     "short": {
+      "accept": [
+       "tolerance",
+       "tolerances"
+      ]
+     }
+    },
+    {
+     "id": "k28",
+     "level": 4,
+     "text": "Which joining process uses a filler metal with a lower melting point than the parts and is used on circuit boards?",
+     "solution": "Soldering joins components on circuit boards with a low-melting-point filler metal",
+     "hint": "This process uses an iron and a reel of thin metal wire",
+     "choice": {
+      "options": [
+       "Soldering",
+       "Welding",
+       "Riveting",
+       "Bolting"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Welding melts the parts themselves together",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k29",
+     "level": 5,
+     "text": "Why is injection moulding suitable for mass production but not for a one-off product?",
+     "solution": "The high cost of the steel mould is only worth paying when it is spread over thousands of parts",
+     "hint": "Compare the cost of the mould with the cost of each part",
+     "choice": {
+      "options": [
+       "The mould can only be used once",
+       "The mould is very expensive to make, but each part after that is cheap and quick",
+       "Only simple flat shapes can be made",
+       "Each part takes several days to cool"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Injection moulding can make very complex shapes",
+       null
+      ]
+     }
+    },
+    {
+     "id": "k30",
+     "level": 5,
+     "text": "Which statement about quality control is accurate?",
+     "solution": "Quality control inspects and tests products during and after making, often using tolerances",
+     "hint": "Think about when and how products are inspected",
+     "choice": {
+      "options": [
+       "Products are only checked once they have been sold",
+       "Quality control means the designer approves the first sketch",
+       "Products or parts are checked during and after manufacture against set standards",
+       "Quality control removes the need for tolerances"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Tolerances are used in quality control checks"
+      ]
+     }
+    },
+    {
+     "id": "k31",
+     "level": 5,
+     "text": "Why would a maker use a template when cutting out 40 identical wooden shapes?",
+     "solution": "A template is drawn around to mark the same shape again and again, saving time and improving accuracy",
+     "hint": "Think about drawing around a stencil",
+     "choice": {
+      "options": [
+       "To hold the drill at a set angle",
+       "To join the pieces together",
+       "To give the wood a waterproof finish",
+       "To mark out the same shape quickly and consistently each time"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Guiding a tool is the job of a jig",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "k32",
+     "level": 5,
+     "text": "Why are finishes such as varnish applied to outdoor wooden furniture?",
+     "solution": "Varnish seals the surface, keeping out moisture to prevent rot, and makes the wood look better",
+     "hint": "Think about rain and sunshine on garden furniture",
+     "choice": {
+      "options": [
+       "To protect the wood from moisture and decay and improve its appearance",
+       "To make the wood heavier",
+       "To make the wood conduct electricity",
+       "To soften the wood for bending"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "k33",
+     "level": 5,
+     "text": "Which is a disadvantage of 3D printing for making many identical products?",
+     "solution": "3D printing is ideal for prototypes and complex one-offs, but slow for large numbers of identical items",
+     "hint": "Think about the time it takes to build an item layer by layer",
+     "choice": {
+      "options": [
+       "Complex shapes cannot be made",
+       "Each item is slow to print compared with injection moulding",
+       "A different mould is needed for every item",
+       "CAD files cannot be used"
+      ],
+      "correct": 1,
+      "feedback": [
+       "3D printing is very good at complex shapes",
+       null,
+       "3D printing does not use moulds",
+       null
+      ]
+     }
+    },
+    {
+     "id": "k34",
+     "level": 5,
+     "text": "Which process shapes metal by pouring it, molten, into a mould and leaving it to set? Give the process.",
+     "solution": "Casting pours molten metal into a mould; sand casting and die casting are types of casting",
+     "hint": "The same word is used for the actors chosen for a film",
+     "short": {
+      "accept": [
+       "casting",
+       "sand casting",
+       "die casting",
+       "metal casting"
+      ]
+     }
+    },
+    {
+     "id": "k35",
+     "level": 5,
+     "text": "A company uses CNC machines to make kitchen doors to each customer's own measurements. Which term describes this?",
+     "solution": "Mass customisation uses automated (CNC) production to make products tailored to each customer",
+     "hint": "It combines automated production with personal choices",
+     "choice": {
+      "options": [
+       "One-off hand production",
+       "Continuous production",
+       "Mass customisation",
+       "Just-in-time stock control"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Continuous production makes identical products non-stop",
+       null,
+       null
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_technology.design",
+   "title": "Design & sustainability",
+   "aliases": [
+    "iterative design",
+    "design strategies",
+    "user-centred design",
+    "specification",
+    "the 6 rs",
+    "life cycle assessment",
+    "planned obsolescence",
+    "ergonomics",
+    "anthropometrics",
+    "famous designers"
+   ],
+   "questions": [
+    {
+     "id": "d01",
+     "level": 1,
+     "text": "What does 'ergonomics' mean in design?",
+     "solution": "Ergonomics is about how people interact with products: comfort, safety and ease of use",
+     "hint": "Think of a computer mouse shaped to fit the hand",
+     "choice": {
+      "options": [
+       "Designing products so they are comfortable, safe and easy for people to use",
+       "Measuring the sizes of the human body",
+       "Making products from recycled materials",
+       "Making products look attractive"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is anthropometrics",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d02",
+     "level": 1,
+     "text": "What is the term for the study of human body measurements used in design? Give the term.",
+     "solution": "Anthropometrics is the study of human body measurements, such as hand size or height",
+     "hint": "It begins with 'anthropo', meaning human",
+     "short": {
+      "accept": [
+       "anthropometrics",
+       "anthropometry",
+       "anthropometric data"
+      ],
+      "reject": [
+       "ergonomics"
+      ],
+      "feedback": {
+       "ergonomics": "Ergonomics uses body data to make products easy to use; the measurements themselves are anthropometrics"
+      }
+     }
+    },
+    {
+     "id": "d03",
+     "level": 1,
+     "text": "Which of the 6 Rs means using a product again, for the same or a different purpose?",
+     "solution": "Reuse means using a product again, such as a jam jar used for storage",
+     "hint": "Think of a glass jar used again to hold pens",
+     "choice": {
+      "options": [
+       "Recycle",
+       "Reuse",
+       "Refuse",
+       "Rethink"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Recycling breaks the material down to make something new",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d04",
+     "level": 1,
+     "text": "Which designer created the London Underground map in 1931? Give the surname.",
+     "solution": "Harry Beck designed the Tube map in 1931, using straight lines and even spacing instead of true distances",
+     "hint": "His first name is Harry",
+     "short": {
+      "accept": [
+       "Beck",
+       "Harry Beck",
+       "Henry Beck"
+      ]
+     }
+    },
+    {
+     "id": "d05",
+     "level": 1,
+     "text": "What is a design specification?",
+     "solution": "A specification lists the requirements (often measurable) that the product must meet",
+     "hint": "It is written after research and used to judge design ideas",
+     "choice": {
+      "options": [
+       "A sketch of the final product",
+       "A short statement of the problem to be solved",
+       "A list of criteria that the product must meet",
+       "A record of tests on the finished product"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "That is a design brief",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d06",
+     "level": 1,
+     "text": "Who designed the bagless cyclonic vacuum cleaner?",
+     "solution": "James Dyson developed the bagless cyclonic vacuum cleaner after making thousands of prototypes",
+     "hint": "The company that makes these cleaners has the designer's surname",
+     "choice": {
+      "options": [
+       "Philippe Starck",
+       "Harry Beck",
+       "Alec Issigonis",
+       "James Dyson"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Harry Beck designed the London Underground map",
+       "Issigonis designed the Mini car",
+       null
+      ]
+     }
+    },
+    {
+     "id": "d07",
+     "level": 1,
+     "text": "Which of the 6 Rs means not buying a product at all if it is not needed or is not sustainable? Give the word.",
+     "solution": "Refuse means saying no to products that are unnecessary or unsustainable",
+     "hint": "It means saying 'no thanks'",
+     "short": {
+      "accept": [
+       "refuse"
+      ],
+      "reject": [
+       "reduce",
+       "reuse"
+      ],
+      "feedback": {
+       "reuse": "Reuse means using something again",
+       "reduce": "Reduce means using less"
+      }
+     }
+    },
+    {
+     "id": "d08",
+     "level": 2,
+     "text": "Which statement about a design brief and a specification is accurate?",
+     "solution": "The brief is a short statement of the problem; the specification lists the requirements in detail",
+     "hint": "Which one comes first in the design process?",
+     "choice": {
+      "options": [
+       "A brief states the problem; a specification lists the criteria the design must meet",
+       "A specification states the problem; a brief lists the criteria the design must meet",
+       "Both are final drawings of the product",
+       "A brief is written after the product is made"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the wrong way round",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d09",
+     "level": 2,
+     "text": "Which design approach puts the needs of the user at the centre of every stage and involves them in testing?",
+     "solution": "User-centred design involves users throughout, so the product meets their needs",
+     "hint": "The answer names the person who will use the product",
+     "choice": {
+      "options": [
+       "Planned obsolescence",
+       "User-centred design",
+       "Design fixation",
+       "Mass production"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Design fixation is getting stuck on one idea, which is a problem, not an approach",
+       null
+      ]
+     }
+    },
+    {
+     "id": "d10",
+     "level": 2,
+     "text": "Which designer created the original Mini car, launched in 1959?",
+     "solution": "Alec Issigonis designed the Mini, a small car with a lot of space inside for its size",
+     "hint": "He was a car engineer, not a furniture or product designer",
+     "choice": {
+      "options": [
+       "James Dyson",
+       "Philippe Starck",
+       "Alec Issigonis",
+       "Charles Rennie Mackintosh"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Mackintosh was an Art Nouveau architect and furniture designer"
+      ]
+     }
+    },
+    {
+     "id": "d11",
+     "level": 2,
+     "text": "Which French designer created the Juicy Salif lemon squeezer? Give the surname.",
+     "solution": "Philippe Starck designed the Juicy Salif (1990) for Alessi",
+     "hint": "His first name is Philippe",
+     "short": {
+      "accept": [
+       "Starck",
+       "Philippe Starck",
+       "Philip Starck"
+      ]
+     }
+    },
+    {
+     "id": "d12",
+     "level": 2,
+     "text": "In a life cycle assessment (LCA), which stage comes first?",
+     "solution": "LCA follows a product from raw material extraction to manufacture, transport, use and disposal",
+     "hint": "Think about where the materials come from before anything is made",
+     "choice": {
+      "options": [
+       "Disposal",
+       "Manufacture",
+       "Use by the customer",
+       "Extraction of raw materials"
+      ],
+      "correct": 3
+     }
+    },
+    {
+     "id": "d13",
+     "level": 2,
+     "text": "What is the term for designing a product so that it will become out of date or stop working after a certain time? Give the term.",
+     "solution": "Planned obsolescence is designing a product to have a limited life so that people buy a replacement",
+     "hint": "The second word means 'becoming out of date'",
+     "short": {
+      "accept": [
+       "planned obsolescence",
+       "built-in obsolescence",
+       "obsolescence",
+       "designed obsolescence"
+      ]
+     }
+    },
+    {
+     "id": "d14",
+     "level": 2,
+     "text": "Which of the 6 Rs means mending a product rather than throwing it away?",
+     "solution": "Repair means fixing a product to make it last longer",
+     "hint": "Think about fixing a bike puncture",
+     "choice": {
+      "options": [
+       "Repair",
+       "Recycle",
+       "Reduce",
+       "Refuse"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Recycling breaks the material down to make something new",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d15",
+     "level": 3,
+     "text": "A chair seat height is chosen to suit people from the 5th to the 95th percentile. What data is the designer using?",
+     "solution": "Percentile tables of body measurements are anthropometric data",
+     "hint": "Percentiles describe human body measurements",
+     "choice": {
+      "options": [
+       "Life cycle data",
+       "Anthropometric data",
+       "Sales data",
+       "Material property data"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Life cycle data is about environmental impact",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d16",
+     "level": 3,
+     "text": "A phone's battery cannot be replaced and it stops getting software updates after a few years. Which term describes this?",
+     "solution": "Designing a product to have a limited useful life is planned obsolescence",
+     "hint": "The phone becomes out of date on purpose",
+     "choice": {
+      "options": [
+       "Iterative design",
+       "Ergonomics",
+       "Planned obsolescence",
+       "Biomimicry"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "d17",
+     "level": 3,
+     "text": "A designer makes a prototype, tests it with users, improves it and tests again several times. Which design strategy is this?",
+     "solution": "Iterative design is a cycle of prototyping, testing, evaluating and refining",
+     "hint": "'Iterate' means to repeat",
+     "choice": {
+      "options": [
+       "Planned obsolescence",
+       "Mass production",
+       "Life cycle assessment",
+       "Iterative design"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "LCA measures environmental impact, not a design cycle",
+       null
+      ]
+     }
+    },
+    {
+     "id": "d18",
+     "level": 3,
+     "text": "A kettle handle is designed to fit the hand comfortably and keep the wrist straight when pouring. Which area of design is this?",
+     "solution": "Designing for comfort and ease of use is ergonomics",
+     "hint": "This area of design is about people using products comfortably",
+     "choice": {
+      "options": [
+       "Ergonomics",
+       "Planned obsolescence",
+       "Life cycle assessment",
+       "Batch production"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "d19",
+     "level": 3,
+     "text": "Which Scottish designer is known for Art Nouveau furniture with tall ladder-back chairs and designed the Glasgow School of Art? Give the surname.",
+     "solution": "Charles Rennie Mackintosh designed the Glasgow School of Art and tall ladder-back chairs",
+     "hint": "His surname is also the name of a raincoat",
+     "short": {
+      "accept": [
+       "Mackintosh",
+       "Charles Rennie Mackintosh",
+       "Rennie Mackintosh"
+      ]
+     }
+    },
+    {
+     "id": "d20",
+     "level": 3,
+     "text": "A product is broken down into its raw materials, which are then used to make new products. Which of the 6 Rs is this? Give the word.",
+     "solution": "Breaking a material down and making it into something new is recycling",
+     "hint": "Aluminium cans are melted down and made into new cans",
+     "short": {
+      "accept": [
+       "recycle",
+       "recycling"
+      ],
+      "reject": [
+       "reuse",
+       "reduce"
+      ],
+      "feedback": {
+       "reuse": "Reusing keeps the product as it is; this breaks it down"
+      }
+     }
+    },
+    {
+     "id": "d21",
+     "level": 3,
+     "text": "A specification point says: 'The torch must have a mass of less than 200 g.' Why is this a good specification point?",
+     "solution": "Good specification points are measurable, so the final product can be tested against them",
+     "hint": "How could you check whether the torch meets this point?",
+     "choice": {
+      "options": [
+       "The point describes the colour of the torch",
+       "The point can be measured, so it can be tested",
+       "The point is only a personal opinion",
+       "The point names the manufacturing process"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "d22",
+     "level": 4,
+     "text": "Anthropometric data show seat heights from 400 mm (5th percentile) to 500 mm (95th percentile). Which design would suit 90% of users?",
+     "solution": "The 5th to 95th percentile covers 90% of users, so the seat must adjust across the whole range",
+     "hint": "The range from the 5th to the 95th percentile covers 90% of people",
+     "choice": {
+      "options": [
+       "A fixed seat at 400 mm",
+       "A fixed seat at 500 mm",
+       "An adjustable seat from 400 mm to 500 mm",
+       "An adjustable seat from 300 mm to 400 mm"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "d23",
+     "level": 4,
+     "text": "Which product is linked with the Bauhaus and the designer Marcel Breuer?",
+     "solution": "Marcel Breuer designed the Wassily chair (1925) at the Bauhaus using bent tubular steel",
+     "hint": "Breuer was inspired by bicycle handlebars",
+     "choice": {
+      "options": [
+       "The Juicy Salif lemon squeezer",
+       "The Mini car",
+       "The Red Blue Chair",
+       "The Wassily chair, made from tubular steel"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "The Red Blue Chair was designed by Gerrit Rietveld (De Stijl)",
+       null
+      ]
+     }
+    },
+    {
+     "id": "d24",
+     "level": 4,
+     "text": "Which statement about the 6 Rs is accurate?",
+     "solution": "Reduce means cutting down the materials and energy used in making and using a product",
+     "hint": "Check each definition carefully against the meaning of the word",
+     "choice": {
+      "options": [
+       "Reduce means using fewer materials or less energy",
+       "Rethink means always recycling",
+       "Refuse means mending broken products",
+       "Reuse means melting materials down to make new products"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Mending is repair",
+       "That is recycling"
+      ]
+     }
+    },
+    {
+     "id": "d25",
+     "level": 4,
+     "text": "A life cycle assessment shows that most of a kettle's environmental impact happens while it is being used. Which change would reduce this impact the most?",
+     "solution": "If most impact is in use, saving energy during use (insulation, boiling only what is needed) makes the biggest difference",
+     "hint": "Focus on the stage of the life cycle with the biggest impact",
+     "choice": {
+      "options": [
+       "A different colour of packaging",
+       "Better insulation and a design that boils only the water needed",
+       "A heavier kettle body",
+       "A new logo on the side"
+      ],
+      "correct": 1
+     }
+    },
+    {
+     "id": "d26",
+     "level": 4,
+     "text": "Which De Stijl designer made the Red Blue Chair? Give the surname.",
+     "solution": "Gerrit Rietveld designed the Red Blue Chair (about 1918–1923), linked with De Stijl",
+     "hint": "His first name is Gerrit",
+     "short": {
+      "accept": [
+       "Rietveld",
+       "Gerrit Rietveld"
+      ]
+     }
+    },
+    {
+     "id": "d27",
+     "level": 4,
+     "text": "Which statement about anthropometrics and ergonomics is accurate?",
+     "solution": "Anthropometrics provides the body measurements; ergonomics uses them to make products comfortable and easy to use",
+     "hint": "One provides the data and the other uses it",
+     "choice": {
+      "options": [
+       "Ergonomics is the measurement of body sizes",
+       "Anthropometrics is only about colour and style",
+       "Anthropometric data are used to make products ergonomic",
+       "They are exactly the same thing"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Body measurements are anthropometrics",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d28",
+     "level": 4,
+     "text": "A designer copies ideas from nature, such as burrs that inspired hook-and-loop fasteners. Give the term for this approach.",
+     "solution": "Biomimicry (biomimetics) copies solutions from nature, such as burrs inspiring hook-and-loop fasteners",
+     "hint": "'Bio' means life and 'mimic' means copy",
+     "short": {
+      "accept": [
+       "biomimicry",
+       "biomimetics",
+       "biomimetic design"
+      ]
+     }
+    },
+    {
+     "id": "d29",
+     "level": 5,
+     "text": "Which statement about planned obsolescence is accurate?",
+     "solution": "Products designed to fail or date quickly are replaced sooner, increasing sales but also waste",
+     "hint": "Think about what happens to the old products",
+     "choice": {
+      "options": [
+       "Planned obsolescence always makes products last longer",
+       "Planned obsolescence reduces electronic waste",
+       "Planned obsolescence is a way of using recycled materials",
+       "Planned obsolescence can increase sales but creates more waste and uses more resources"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Replacing products sooner increases waste",
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d30",
+     "level": 5,
+     "text": "Why is design for disassembly helpful for sustainability?",
+     "solution": "Products that are easy to take apart can be repaired and their materials separated for recycling",
+     "hint": "Think about what happens at the end of a product's life",
+     "choice": {
+      "options": [
+       "Parts can be separated easily for repair, reuse or recycling",
+       "The product cannot be taken apart, so it is safer",
+       "The product is cheaper to advertise",
+       "The product is made from one material only"
+      ],
+      "correct": 0
+     }
+    },
+    {
+     "id": "d31",
+     "level": 5,
+     "text": "Which statement about user-centred design is accurate?",
+     "solution": "In user-centred design, users are involved at every stage, from research to testing prototypes",
+     "hint": "Who is at the centre of this approach?",
+     "choice": {
+      "options": [
+       "The designer works alone and shows users only the finished product",
+       "Users are consulted and involved in testing throughout, so the final product meets their needs",
+       "Only the cost of materials is considered",
+       "Products are designed to go out of date quickly"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is the opposite of user-centred design",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d32",
+     "level": 5,
+     "text": "Which statement about Fairtrade is accurate?",
+     "solution": "The Fairtrade mark shows producers were paid a fair price and work in better conditions",
+     "hint": "Think about the people who grow the cotton or make the product",
+     "choice": {
+      "options": [
+       "Fairtrade means a product is made from recycled materials",
+       "Fairtrade guarantees a product is organic",
+       "Fairtrade aims to give farmers and workers in developing countries a fair price and better conditions",
+       "Fairtrade is a British safety standard for toys"
+      ],
+      "correct": 2
+     }
+    },
+    {
+     "id": "d33",
+     "level": 5,
+     "text": "A designer keeps producing ideas that are only small changes to their first idea. Which problem does this describe?",
+     "solution": "Design fixation is sticking too closely to one idea; strategies such as collaboration help avoid it",
+     "hint": "The designer is 'fixed' on one idea",
+     "choice": {
+      "options": [
+       "Iterative design",
+       "Ergonomics",
+       "Planned obsolescence",
+       "Design fixation"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Iterative design improves ideas through testing; it is not a problem",
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    {
+     "id": "d34",
+     "level": 5,
+     "text": "Which German designer, who worked for Braun, is known for the phrase 'less, but better' and ten principles of good design? Give the surname.",
+     "solution": "Dieter Rams designed many Braun products and wrote ten principles of good design",
+     "hint": "His first name is Dieter",
+     "short": {
+      "accept": [
+       "Rams",
+       "Dieter Rams"
+      ]
+     }
+    },
+    {
+     "id": "d35",
+     "level": 5,
+     "text": "Why do designers often use the 5th to 95th percentile range of anthropometric data?",
+     "solution": "Designing for every possible size is impractical; the 5th–95th percentile range suits 90% of people",
+     "hint": "Work out the percentage of people between the 5th and 95th percentiles",
+     "choice": {
+      "options": [
+       "Designing for the extremes of everyone is impractical, so this range suits 90% of users",
+       "This range covers 100% of all users",
+       "This range includes only people aged 5 to 95",
+       "This range is the prices customers will pay"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "5th to 95th percentile covers 90%, not 100%",
+       null,
+       null
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "years": {
+  "10,11": {
+   "rows": [
+    [
+     {
+      "id": "design_technology.y{year}.materials",
+      "label": "Materials & properties",
+      "skills": [
+       "design_technology.materials"
+      ]
+     },
+     {
+      "id": "design_technology.y{year}.energy_systems",
+      "label": "Energy, systems & mechanisms",
+      "skills": [
+       "design_technology.energy_systems"
+      ]
+     }
+    ],
+    [
+     {
+      "id": "design_technology.y{year}.making",
+      "label": "Making & manufacturing",
+      "skills": [
+       "design_technology.making"
+      ]
+     },
+     {
+      "id": "design_technology.y{year}.design",
+      "label": "Design & sustainability",
+      "skills": [
+       "design_technology.design"
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

@@ -9,7 +9,8 @@ import urllib.error
 import urllib.request
 from typing import Protocol
 
-from .content import Answer, Problem, check
+from .content import CHOICE_LETTERS, Answer, Problem, check
+from .content import words
 
 log = logging.getLogger(__name__)
 
@@ -112,6 +113,41 @@ def _candidates(text: str, answer: Answer) -> list[str]:
     return [m.group(0).strip() for m in _NUM_TOKEN.finditer(text)]
 
 
+def _choice_leak(text: str, answer: Answer) -> bool:
+    v = answer.value if isinstance(answer.value, dict) else {}
+    options, c = v.get("options"), v.get("correct")
+    if not isinstance(options, (list, tuple)) or not isinstance(c, int) or not 0 <= c < len(options):
+        return False
+    option = str(options[c]).strip().casefold()
+    if len(option) >= 3 and option in (text or "").casefold():
+        return True
+    letter = re.escape(CHOICE_LETTERS[c])
+    # "option B", "answer (B)", "the answer is B", "letter: b", "B)" - case-insensitive, erring on the safe side
+    pattern = (rf"\b(?:option|answer|letter|choice)\s*(?:is\s+|:\s*|=\s*|-\s*)?\(?{letter}\b"
+               rf"|\b{letter}\)")
+    return re.search(pattern, text or "", re.IGNORECASE) is not None
+
+
+def _short_leak(text: str, answer: Answer) -> bool:
+    v = answer.value if isinstance(answer.value, dict) else {}
+    accept = v.get("accept")
+    if not isinstance(accept, (list, tuple)):
+        return False
+    hay = " " + words.fold(words.norm_any(text or "")) + " "
+    squashed = words.norm_pinyin(text or "") if answer.form == "pinyin" else ""
+    for a in accept:
+        if not isinstance(a, str):
+            continue
+        k = words.fold(words.norm_any(a))
+        if len(k) >= 3 and f" {k} " in hay:
+            return True
+        if squashed:
+            pk = words.norm_pinyin(a)
+            if len(pk) >= 4 and pk in squashed:
+                return True
+    return False
+
+
 def leaks_answer(text: str, answer: Answer, problem_text: str = "") -> bool:
     """True if ``text`` gives away the answer.
 
@@ -121,6 +157,10 @@ def leaks_answer(text: str, answer: Answer, problem_text: str = "") -> bool:
     7.07 for 7.1, 1,200 for 1200). Numbers and expressions copied from the question are ignored by
     the value test.
     """
+    if answer.kind == "choice":                    # docs/ARCHITECTURE_V2.md 3.4; no v1 value test
+        return _choice_leak(text, answer)
+    if answer.kind == "short":
+        return _short_leak(text, answer)
     display = (answer.display or "").lower()
     squashed = re.sub(r"\s+", "", display)
     low = (text or "").lower()
