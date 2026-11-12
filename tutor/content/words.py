@@ -16,7 +16,9 @@ _SUBSUP = str.maketrans({
     "⁰": "0", "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5", "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9",
     "⁺": "+", "⁻": "-", "₊": "+", "₋": "-",
 })
-_QUOTES = str.maketrans({"’": "'", "‘": "'", "ʼ": "'", "´": "'", "`": "'", "“": '"', "”": '"', "„": '"'})
+_QUOTES = str.maketrans({"’": "'", "‘": "'", "ʼ": "'", "´": "'", "`": "'", "“": '"', "”": '"', "„": '"',
+                         # minus and dash look-alikes, as in the v1 text normalisation ("−18" == "-18")
+                         "−": "-", "‒": "-", "–": "-", "‐": "-", "‑": "-"})
 _YO = str.maketrans({"ё": "е", "Ё": "Е"})
 
 
@@ -124,10 +126,15 @@ def casefold(s: str) -> str:
 
 
 @functools.lru_cache(maxsize=65536)
+def norm_basic(s: str) -> str:
+    """Form ``any`` without the article rule: casefold and punctuation removed."""
+    return _collapse(_punct_to_space(casefold(char_normalise(s)).translate(_YO)))
+
+
+@functools.lru_cache(maxsize=65536)
 def norm_any(s: str) -> str:
     """Form ``any``: casefold, punctuation removed, one leading article dropped."""
-    s = casefold(char_normalise(s)).translate(_YO)
-    s = _collapse(_punct_to_space(s))
+    s = norm_basic(s)
     m = _ARTICLE.match(s)
     if m:
         s = s[m.end():]

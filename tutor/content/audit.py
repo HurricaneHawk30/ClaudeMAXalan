@@ -166,6 +166,12 @@ def _check_choice_problem(rep: Report, key: str, where: str, p: Problem) -> None
         else:
             if v.status != "wrong":
                 rep.error(key, f"{where}: letter {CHOICE_LETTERS[j]} is judged {v.status}")
+            vo = check(a, o, p.mistakes)
+            if vo.status == "correct":
+                rep.error(key, f"{where}: typing the wrong option text {o!r} is judged correct")
+            elif vo.status != "wrong":
+                rep.warn(key, f"{where}: typing the wrong option text {o!r} is judged {vo.status} "
+                              "(it looks like another option)")
             want = fb.get(f"{CHOICE_LETTERS[j]}) {o}", "")
             if v.feedback != want:
                 rep.error(key, f"{where}: letter {CHOICE_LETTERS[j]} feedback {v.feedback!r} != {want!r}")

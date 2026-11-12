@@ -102,6 +102,8 @@ def _choice_semantics(options: tuple[str, ...], correct: int) -> str | None:
     for j in range(len(shown)):
         if j != c and check(ans, CHOICE_LETTERS[j]).status != "wrong":
             return f"letter {CHOICE_LETTERS[j]} is not judged wrong"
+        if j != c and check(ans, shown[j]).status == "correct":     # safety invariant: never correct
+            return f"typing the wrong option {shown[j]!r} is judged correct"
     return None
 
 

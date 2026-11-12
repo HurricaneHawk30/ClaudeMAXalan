@@ -25,8 +25,8 @@ FORMS = {"number": ("any", "standard"), "fraction": ("any", "simplest", "mixed")
 GEN_SUBJECTS = ["maths", "physics"] + [s["id"] for s in spec.SUBJECTS
                                        if any(i["kind"] == "G" and k.startswith(s["id"] + ".") for k, i in spec.SKILLS.items())]
 OWNER = {s["id"]: s["owner"] for s in spec.SUBJECTS}
-# 30 seeds per skill and level by default (docs/ARCHITECTURE_V2.md section 7); TUTOR_FULL_TESTS=1 runs 300.
-SEEDS = 300 if os.environ.get("TUTOR_FULL_TESTS") == "1" else 30
+# 20 seeds per skill and level by default (lowered from 30: the default run exceeded the budget; section 7 allows 20); TUTOR_FULL_TESTS=1 runs 300.
+SEEDS = 300 if os.environ.get("TUTOR_FULL_TESTS") == "1" else 20
 
 
 def problems_for(skill):

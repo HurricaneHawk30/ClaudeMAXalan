@@ -56,22 +56,14 @@ def _cmd_codes(n: int) -> int:
     return 0
 
 
-def _load_registry_or_report():
-    """Strict registry for the CLI; on failure print every broken source and return None."""
-    from .content import load_registry
-    try:
-        return load_registry()
-    except Exception as e:      # noqa: BLE001 - shown to the user, not a crash
-        print(f"Content failed to load: {type(e).__name__}: {e}", file=sys.stderr)
-        for line in load_registry(strict=False).load_errors:
-            print(line, file=sys.stderr)
-        return None
-
-
 def _cmd_sample(skill_id: str, level: int | None, n: int) -> int:
-    reg = _load_registry_or_report()
-    if reg is None:
-        return 1
+    # non-strict: a broken file of another subject must not block spot checks (lead decision);
+    # broken sources are listed on stderr
+    from .content import load_registry
+    logging.getLogger("tutor.content").setLevel(logging.ERROR)   # printed below instead, once
+    reg = load_registry(strict=False)
+    for line in reg.load_errors:
+        print(line, file=sys.stderr)
     skill = reg.skill(skill_id)
     if skill is None:
         ids = sorted({s.id for subj in _all_subject_ids(reg) for s in reg.skills_of(subj)})

@@ -921,9 +921,21 @@ def _clean_text_line(s: str, choice: bool) -> str:
     return s
 
 
+def _bare_line(s: str) -> str:
+    """Like _clean_text_line but keeps leading filler words (the line exactly as an option would be typed)."""
+    s = _BULLET.sub("", s.strip())
+    for _ in range(4):
+        prev = s
+        s = _unwrap(_strip_junk(s))
+        if s == prev:
+            break
+    return s
+
+
 @dataclass(frozen=True)
 class _TLine:
     raw: str          # normalised line before cleaning
+    bare: str         # junk and wrapping removed, filler words kept, nothing cut
     full: str         # cleaned, nothing cut
     cut: str          # cleaned, reasons / checks after the answer cut off
     ignored: bool     # the line starts with a reason or check word
@@ -951,48 +963,114 @@ def _text_lines(text: str, choice: bool) -> tuple[_TLine, ...]:
             cut = _clean_text_line(raw[:m.start()], choice)
         fw = _FIRST_WORD.match(raw)
         question = raw.endswith("?") or bool(fw and fw.group(1).lower() in _QUESTION_WORDS)
-        out.append(_TLine(raw, full, cut, ignored, question))
+        out.append(_TLine(raw, _bare_line(raw), full, cut, ignored, question))
     return tuple(out)
 
 
 # ----------------------------------------------------------- kind: choice
+#
+# A line is read in this order (first match wins):
+#   1. the whole line is exactly one option's text (no article stripping) -> that option;
+#      tiers: as typed / filler words removed / option with filler words removed; a tier that
+#      matches two options names nothing;
+#   2. the letter rules (a), (b), (b') of section 2.3;
+#   3. fallback: with a leading article removed the line equals exactly one option, and what is
+#      left is not itself shaped like a letter answer ("the mitochondria").
+# So typing an option's text always names that option: never correct for a wrong option.
 
 _CH_A = re.compile(r"^\(?([A-Ea-e])\)?[.:]?$")
 _CH_B = re.compile(r"^([A-Ea-e])\s*([).:\-–])\s*(.+)$", re.DOTALL)
 _CH_B2 = re.compile(r"^([A-Ea-e])\s+(.+)$", re.DOTALL)
+_LETTER_SHAPED = re.compile(r"^[a-e](?:\s|$)")
+_AMBIGUOUS = "ambiguous"
+
+
+def _bkey(s: str) -> str:
+    """Exact key: ``any`` normalisation WITHOUT the article rule, then folded."""
+    return words.fold(words.norm_basic(s))
 
 
 def _wkey(s: str) -> str:
-    """Comparison key of a choice option or line: ``any`` normalisation, then folded."""
+    """Fallback key: ``any`` normalisation (leading article dropped), then folded."""
     return words.fold(words.norm_any(s))
 
 
+@dataclass(frozen=True)
+class _OptKeys:
+    primary: tuple[str, ...]          # option as typed
+    cleaned: tuple[str, ...]          # option with leading filler words removed
+    stripped: tuple[frozenset, ...]   # article-stripped keys (fallback only)
+
+
 @functools.lru_cache(maxsize=8192)
-def _choice_keys(options: tuple[str, ...]) -> tuple[frozenset, ...]:
-    """Per option: its key, plus the key of the option cleaned like a student's line."""
-    out = []
+def _choice_keys(options: tuple[str, ...]) -> _OptKeys:
+    primary, cleaned, stripped = [], [], []
     for opt in options:
-        ks = {_wkey(opt), _wkey(_clean_text_line(_prep_str(opt), True))}
+        o = _prep_str(opt)
+        bare, clean = _bare_line(o), _clean_text_line(o, True)
+        primary.append(_bkey(bare))
+        cleaned.append(_bkey(clean))
+        ks = {_wkey(bare), _wkey(clean)}
         ks.discard("")
-        out.append(frozenset(ks))
-    return tuple(out)
+        stripped.append(frozenset(ks))
+    return _OptKeys(tuple(primary), tuple(cleaned), tuple(stripped))
 
 
-def _option_hits(s: str, keys: tuple[frozenset, ...]) -> list[int]:
-    k = _wkey(s)
-    return [i for i, ks in enumerate(keys) if k and k in ks] if k else []
+def _exact_hits(key: str, table: tuple[str, ...]) -> list[int]:
+    return [i for i, k in enumerate(table) if key and k == key]
 
 
-def _choice_line(ln: _TLine, keys: tuple[frozenset, ...], n: int):
+def _whole_line(ln: _TLine, keys: _OptKeys):
+    """Step 1: an option index, _AMBIGUOUS, or None."""
+    tries = [(ln.bare, keys.primary), (ln.full, keys.primary), (ln.cut, keys.primary),
+             (ln.full, keys.cleaned), (ln.cut, keys.cleaned)]
+    seen: set[tuple[str, int]] = set()
+    for text, table in tries:
+        k = _bkey(text)
+        if not k or (k, id(table)) in seen:
+            continue
+        seen.add((k, id(table)))
+        hits = _exact_hits(k, table)
+        if len(hits) == 1:
+            return hits[0]
+        if hits:
+            return _AMBIGUOUS
+    return None
+
+
+def _fallback(ln: _TLine, keys: _OptKeys) -> int | None:
+    """Step 3: article stripping, only when it gives exactly one option."""
+    for text in dict.fromkeys((ln.full, ln.cut)):
+        k = _wkey(text)
+        if not k or _LETTER_SHAPED.match(k):
+            continue
+        hits = [i for i, ks in enumerate(keys.stripped) if k in ks]
+        if len(hits) == 1:
+            return hits[0]
+        if hits:
+            return None
+    return None
+
+
+def _rest_hits(rest: str, keys: _OptKeys) -> list[int]:
+    """Options equal to the text after a letter: exact keys first, then article-stripped keys."""
+    k = _bkey(rest)
+    hits = [i for i in range(len(keys.primary)) if k and k in (keys.primary[i], keys.cleaned[i])]
+    if hits:
+        return hits
+    k = _wkey(rest)
+    return [i for i, ks in enumerate(keys.stripped) if k and k in ks]
+
+
+def _choice_line(ln: _TLine, keys: _OptKeys, n: int):
     """What one line names: a letter index, "conflict", "invalid" or None."""
-    def whole() -> int | None:
-        hits = _option_hits(ln.full, keys)
-        if len(hits) != 1 and ln.cut != ln.full:
-            hits = _option_hits(ln.cut, keys)
-        return hits[0] if len(hits) == 1 else None
-
+    w = _whole_line(ln, keys)
+    if w == _AMBIGUOUS:
+        return None
+    if w is not None:
+        return w
     if ln.ignored:
-        return whole()          # a line that is exactly an option ("Because of the war") still counts
+        return _fallback(ln, keys)       # a reason/check line counts only if it is an option
     s = ln.cut
     if not s:
         return None
@@ -1003,25 +1081,19 @@ def _choice_line(ln: _TLine, keys: tuple[frozenset, ...], n: int):
     m = _CH_B.match(s)
     if m:
         i = CHOICE_LETTERS.index(m.group(1).upper())
-        if s[1:2] in ("-", "–"):
-            w = whole()         # "e-books", "D-Day", "B-cells": a hyphenated option, not a letter
-            if w is not None:
-                return w
-        hits = _option_hits(m.group(3), keys)
+        hits = _rest_hits(m.group(3), keys)
         if i < n and i in hits:
             return i
         if hits:
             return "conflict"
-        w = whole()             # the line is itself an option ("D-Day", "e-commerce")
-        if w is not None:
-            return w
         return i if i < n else "invalid"
     m = _CH_B2.match(s)
     if m:
         i = CHOICE_LETTERS.index(m.group(1).upper())
-        if i < n and i in _option_hits(m.group(2), keys):
+        k = _bkey(m.group(2))
+        if i < n and k and k in (keys.primary[i], keys.cleaned[i]):
             return i
-    return whole()
+    return _fallback(ln, keys)
 
 
 def _choice_value(a: Answer) -> tuple[tuple[str, ...], int] | None:

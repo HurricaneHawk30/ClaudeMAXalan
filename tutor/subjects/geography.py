@@ -19,7 +19,7 @@ from typing import Callable
 
 from ..content import Answer, Mistake, Problem, Skill, Subject, Topic, YearSpec, load_pack
 from ..content.fmt import (
-    build, check_level, fmt_dp, fmt_num, group, near_half, num_answer, num_mistake, retry,
+    build, check_level, fmt_dp, fmt_num, group, near_half, num_answer, retry,
 )
 
 SUBJECT_ID = "geography"
