@@ -293,7 +293,7 @@
         "hint": "The threat relies on people being tricked"},
        {"id": "nw22", "level": 4, "text": "Which of these helps to prevent SQL injection?",
         "choice": {"options": ["Validating user input before it is used in a database query", "Using a mesh topology", "Using a larger monitor", "Turning off the firewall"], "correct": 0},
-        "solution": "Checking (validating) input before it reaches a query stops attackers running their own SQL",
+        "solution": "Checking (validating and sanitising) input before it reaches a query helps to stop attackers running their own SQL",
         "hint": "The attack comes through what users type in"},
        {"id": "nw23", "level": 4,
         "text": "Which type of malware encrypts a user's files and demands payment to unlock them? Give the term.",
