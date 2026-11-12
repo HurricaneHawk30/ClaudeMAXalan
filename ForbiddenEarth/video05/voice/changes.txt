@@ -1,0 +1,79 @@
+Forbidden Earth - video05 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS -> WORDS
+1725       seventeen twenty-five
+1000       one thousand
+1450       fourteen fifty
+150        one hundred and fifty
+1906       nineteen oh six
+1970       nineteen seventy
+859        eight fifty-nine
+1963       nineteen sixty-three
+2016       twenty sixteen
+705        seven oh five
+52         fifty-two
+35         thirty-five
+548        five forty-eight
+565        five sixty-five
+125        one twenty-five
+43         forty-three
+609        six oh nine
+256        two fifty-six
+668,000    six hundred and sixty-eight thousand
+33         thirty-three
+427        four hundred and twenty-seven
+300        three hundred
+22         twenty-two
+4          four
+1300       thirteen hundred
+1190       eleven ninety
+3000       three thousand
+1923       nineteen twenty-three
+
+2) SYMBOLS AND ABBREVIATIONS
+US government    -> U S government
+BC               -> B C
+
+3) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Sobrino      /sObɹˈinO/
+Botín        /bOtˈin/
+Mayor        /mɑjˈɔɹ/
+Calle        /kˈɑjA/
+Cuchilleros  /kˌuʧijˈɛɹOs/
+Jean         /ʒˈɑn/
+Botíns       /bOtˈinz/
+Hemingway    /hˈɛmɪŋwˌA/
+Taos         /tˈWs/
+Sangre       /sˈɑŋɡɹA/
+Cristo       /kɹˈistO/
+Qarawiyyin   /kˌɑɹəwijˈin/
+Fatima       /fˈɑtimə/
+Fihri        /fˈɪhɹi/
+Kairouan     /kˌɛɹwˈɑn/
+Nishiyama    /nˌiʃijˈɑmə/
+Onsen        /ˈOnsɛn/
+Keiunkan     /kAˈunkɑn/
+Yamanashi    /jˌɑmənˈɑʃi/
+Fuji         /fˈuʤi/
+Fujiwara     /fˌuʤiwˈɑɹə/
+Mahito       /məhˈitO/
+Ieyasu       /ˌiɛjˈɑsu/
+Sinaiticus   /sˌInAˈɪtɪkəs/
+Agrippa      /əɡɹˈɪpə/
+Dujiangyan   /dˌuʤjɑŋjˈɛn/
+qanat        /kɑnˈɑt/
+Qanats       /kɑnˈɑts/
+Gonabad      /ɡˌOnəbˈɑd/
+Qasabeh      /kəsˈɑbɛ/
+Arkadiko     /ɑɹkˈɑdikO/
+Cyclopes     /sIklˈOpiz/
+Tiryns       /tˈIɹɪnz/
+Epidaurus    /ˌɛpɪdˈɔɹəs/
+biblion      /bˈɪbliɑn/
+biblia       /bˈɪbliə/
+Ahiram       /əhˈiɹəm/
+
+4) WHISPER CHECK (faster-whisper small.en): all numbers, years and BC dates recognised correctly.
+'qanat' was first read kuh-NAHT and heard as 'cannot' -> phoneme changed to ka-NAHT, narration rebuilt.
+Names heard as: Calle de Cuchierros, Al-Qarwiyin, Karwan (Kairouan), Keyunkan, Duchangyan, Khanat, Ghonabad, Kasabe (Qasabeh), Tyrans (Tiryns), Biblas (Byblos) - close to the planned pronunciation.

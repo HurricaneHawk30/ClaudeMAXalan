@@ -358,7 +358,7 @@
 - **byblos** — папируса из Библа нет, будет египетский лист папируса (MET, CC0).
 - Остальные (taos, qarawiyyin, catherine, pantheon, dujiangyan, arkadiko) — кадров достаточно; Голубого озера (закрыто для посторонних) нет — вместо него горы Сангре-де-Кристо.
 
-## 11. Озвучка и полное видео video05 — TODO
+## 11. Озвучка и полное видео video05 — DONE
 
 Делается после задачи 10. Название: **The Oldest Places Still in Use Today**. Текст: `ForbiddenEarth/video05/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, плашки с возрастом, две схемы и произношение: `ForbiddenEarth/video05/script/visuals_plan.md`.
 
@@ -375,3 +375,30 @@
 - `video05/youtube/chapters.txt`: `0:00 Intro`, `#10 Sobrino de Botín, Madrid` … `#1 Byblos, Lebanon`, `Outro`.
 
 Срок: видео нужно Алану 20 ноября (выход 21 ноября). В отчёте — длина, что послушать и проверить глазами.
+
+**Отчёт.**
+
+Озвучка (`video05/voice/`): Kokoro `am_michael`, 0.95, 12 разделов + `full.mp3`, **12:21.2**. Разделы: 00_hook 34.1 с · 01_botin 56.4 · 02_taos 71.0 · 03_qarawiyyin 62.6 · 04_keiunkan 66.7 · 05_catherine 67.6 · 06_pantheon 64.7 · 07_dujiangyan 65.6 · 08_qanat 69.0 · 09_arkadiko 66.4 · 10_byblos 87.6 · 11_outro 21.0.
+- Числа и годы → слова (28 штук: «seventeen twenty-five», «eight fifty-nine», «seven oh five», «five forty-eight and five sixty-five», «the year one twenty-five», «six oh nine», «two fifty-six B C», «thirteen hundred and eleven ninety B C», «three thousand B C», «six hundred and sixty-eight thousand» и др.); «US government» → «U S government», BC → «B C».
+- Фонемы для 37 слов по списку из `visuals_plan.md`; полный список — `voice/changes.txt`.
+- Whisper: числа и даты распознаны верно. Найдена и исправлена ошибка: «qanat» звучал как «kuh-NAHT», Whisper слышал «cannot» — дана фонема «ka-NAHT», озвучка пересобрана.
+
+Видео: **12:22.4**, 1920×1080, 30 fps, H.264 + AAC, **−16.2 LUFS**. Алану отправлен файлом в чат `ForbiddenEarth_video05_1080p.mp4` (380 МиБ, ≈4.3 Мбит/с); мастер `full_1080p.mp4` (701 МиБ) — в облаке. `render/review_720p.mp4` — 42 МБ (−16.1 LUFS); `render/contact_sheet_full.jpg`; `visuals/credits.txt` (126 изображений; схемы нарисованы кодом и в титрах не указаны), `visuals/credits_youtube.txt` — **3702 символа**; `youtube/chapters.txt` — 12 глав (0:00 Intro … 10:31 #1 Byblos, Lebanon, 12:00 Outro).
+- Плашки с возрастом — на каждом месте в левом нижнем углу, появляются вместе с карточкой «#N» и держатся ~6 с (до нижней подписи).
+- Схемы: 7:38–7:47 Дуцзянъянь (сухой сезон → паводок), 8:48–8:55 разрез каната с Эйфелевой башней.
+
+Стоит послушать:
+- 0:35 Sobrino de Botín, 0:40 Calle de Cuchilleros.
+- 1:33 Taos (как «house»), 2:45 al-Qarawiyyin и 2:51 Fatima al-Fihri, Kairouan.
+- 3:48 Nishiyama Onsen Keiunkan, 4:28 Tokugawa Ieyasu.
+- 8:16 и далее qanat (ka-NAHT), Gonabad, Qasabeh.
+- 9:46 Cyclopes, 10:02 Tiryns, Epidaurus; 10:32 Byblos (BIB-los), 11:14 biblion / ta biblia, 11:21 Ahiram.
+
+Проверить глазами:
+- 1:15 — на фразе про печь вывеска «HORNO DE ASAR» (снимка самой печи нет); 1:20 — молочный поросёнок из Сеговии, не из Ботина.
+- 3:53 и 4:28 — Фудзи с МКС; 4:42–4:54 — купальни соседних онсэнов (купален Кэйункана со свободной лицензией нет).
+- 8:55 — цепочка шахт-«кратеров» с воздуха — иранский канат, но не Гонабад.
+- 11:02 — египетский лист папируса (MET), не из Библа.
+- 11:14 — на «biblion… Bible» страница Синайского кодекса (та же, что в 5:49).
+- Тексты плашек: «~500 BC · ~2,500 YEARS» (канаты) и «~5000 BC · ~7,000 YEARS» (Библ) — по таблице `visuals_plan.md`.
+

@@ -1,0 +1,16 @@
+Forbidden Earth - video05 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:34.050   34.050s
+01_botin         00:34.850  01:31.275   56.425s
+02_taos          01:32.075  02:43.075   71.000s
+03_qarawiyyin    02:43.875  03:46.425   62.550s
+04_keiunkan      03:47.225  04:53.875   66.650s
+05_catherine     04:54.675  06:02.225   67.550s
+06_pantheon      06:03.025  07:07.675   64.650s
+07_dujiangyan    07:08.475  08:14.075   65.600s
+08_qanat         08:14.875  09:23.825   68.950s
+09_arkadiko      09:24.625  10:30.975   66.350s
+10_byblos        10:31.775  11:59.375   87.600s
+11_outro         12:00.175  12:21.175   21.000s
+
+TOTAL            12:21.175  (741.175s)
