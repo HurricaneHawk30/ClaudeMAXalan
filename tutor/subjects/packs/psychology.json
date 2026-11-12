@@ -1,0 +1,2440 @@
+{
+ "subject_id": "psychology",
+ "skills": [
+  {
+   "id": "psychology.memory_perception",
+   "title": "Memory & perception",
+   "aliases": [
+    "multi-store model",
+    "memory",
+    "perception",
+    "short-term memory",
+    "long-term memory",
+    "reconstructive memory",
+    "serial position effect",
+    "visual illusions",
+    "perceptual set"
+   ],
+   "questions": [
+    {
+     "id": "mp01",
+     "level": 1,
+     "text": "In the multi-store model of memory, which store does information from the senses enter first?",
+     "choice": {
+      "options": [
+       "Sensory memory",
+       "Short-term memory",
+       "Long-term memory",
+       "Working memory"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Information only reaches short-term memory after attention in the first store",
+       null,
+       "Working memory is a different model (Baddeley and Hitch), not part of the multi-store model"
+      ]
+     },
+     "solution": "In the multi-store model, information from the senses enters sensory memory first. If we pay attention to it, it passes to short-term memory",
+     "hint": "Think about what happens to sights and sounds before you pay attention to them"
+    },
+    {
+     "id": "mp02",
+     "level": 1,
+     "text": "In the multi-store model, which process moves information from short-term memory into long-term memory? Give the term.",
+     "short": {
+      "accept": [
+       "rehearsal",
+       "maintenance rehearsal",
+       "rehearsing"
+      ],
+      "reject": [
+       "retrieval"
+      ],
+      "feedback": {
+       "retrieval": "Retrieval brings information back OUT of long-term memory — the question asks how it gets in"
+      }
+     },
+     "solution": "Rehearsal (repeating information) transfers it from short-term memory to long-term memory",
+     "hint": "It means going over the information again and again"
+    },
+    {
+     "id": "mp03",
+     "level": 1,
+     "text": "Which psychologist carried out the 'War of the Ghosts' study of reconstructive memory? Give the surname.",
+     "short": {
+      "accept": [
+       "Bartlett",
+       "Frederic Bartlett",
+       "Sir Frederic Bartlett"
+      ]
+     },
+     "solution": "Frederic Bartlett (1932) asked British participants to recall a Native American folk tale called 'The War of the Ghosts'",
+     "hint": "He was a British psychologist working at Cambridge in the 1930s"
+    },
+    {
+     "id": "mp04",
+     "level": 1,
+     "text": "What is perception?",
+     "choice": {
+      "options": [
+       "Detecting light and sound with the sense organs",
+       "Making sense of the information picked up by the senses",
+       "Storing information for a long time",
+       "Repeating information so it is remembered"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That is sensation — perception is what the brain does with the information next",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Sensation is detecting stimuli with the sense organs; perception is the brain interpreting that information",
+     "hint": "Compare it with sensation, which is just detecting a stimulus"
+    },
+    {
+     "id": "mp05",
+     "level": 1,
+     "text": "What name is given to depth cues that need only one eye to work? Give the term.",
+     "short": {
+      "accept": [
+       "monocular depth cues",
+       "monocular",
+       "monocular cues",
+       "monocular depth cue"
+      ],
+      "reject": [
+       "binocular",
+       "binocular depth cues",
+       "binocular cues"
+      ],
+      "feedback": {
+       "binocular": "Binocular cues need both eyes",
+       "binocular depth cues": "Binocular cues need both eyes",
+       "binocular cues": "Binocular cues need both eyes"
+      }
+     },
+     "solution": "Monocular depth cues (such as relative size, occlusion, height in plane and linear perspective) work with one eye",
+     "hint": "'Mono' means one"
+    },
+    {
+     "id": "mp06",
+     "level": 1,
+     "text": "Who developed the multi-store model of memory?",
+     "choice": {
+      "options": [
+       "Baddeley and Hitch",
+       "Loftus and Palmer",
+       "Atkinson and Shiffrin",
+       "Bruner and Minturn"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Baddeley and Hitch developed the working memory model",
+       "Loftus and Palmer studied leading questions and eyewitness memory",
+       null,
+       "Bruner and Minturn studied perceptual set"
+      ]
+     },
+     "solution": "Atkinson and Shiffrin proposed the multi-store model in 1968",
+     "hint": "Their model was published in 1968"
+    },
+    {
+     "id": "mp07",
+     "level": 2,
+     "text": "According to the multi-store model, what is the approximate capacity of short-term memory?",
+     "choice": {
+      "options": [
+       "About 2 items",
+       "About 20 items",
+       "Unlimited",
+       "About 7 items (plus or minus 2)"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "Long-term memory is the store thought to have unlimited capacity",
+       null
+      ]
+     },
+     "solution": "Short-term memory holds about 7 ± 2 items (Miller), while long-term memory is thought to be unlimited",
+     "hint": "Think of the length of a phone number you can just about hold in your head"
+    },
+    {
+     "id": "mp08",
+     "level": 2,
+     "text": "According to the multi-store model, how is information mainly encoded in long-term memory?",
+     "choice": {
+      "options": [
+       "Semantically (by meaning)",
+       "Acoustically (by sound)",
+       "Only as pictures",
+       "It is not encoded at all"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Acoustic coding is mainly linked to short-term memory",
+       null,
+       null
+      ]
+     },
+     "solution": "Long-term memory mainly encodes semantically (by meaning); short-term memory mainly encodes acoustically",
+     "hint": "Think about what you remember about a conversation from last week: the exact sounds, or what it was about?"
+    },
+    {
+     "id": "mp09",
+     "level": 2,
+     "text": "Which type of long-term memory holds knowledge of how to do things, such as riding a bike?",
+     "choice": {
+      "options": [
+       "Episodic memory",
+       "Procedural memory",
+       "Semantic memory",
+       "Sensory memory"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Episodic memory stores personal events",
+       null,
+       "Semantic memory stores facts and knowledge",
+       null
+      ]
+     },
+     "solution": "Procedural memory stores skills and actions, which we can often do without thinking about them",
+     "hint": "This type of memory is about skills and actions"
+    },
+    {
+     "id": "mp10",
+     "level": 2,
+     "text": "What is the name for the finding that the first few words in a list are recalled better than words in the middle? Give the term.",
+     "short": {
+      "accept": [
+       "primacy effect",
+       "primacy",
+       "the primacy effect"
+      ],
+      "reject": [
+       "recency effect",
+       "recency",
+       "serial position effect"
+      ],
+      "feedback": {
+       "recency effect": "The recency effect is about the LAST words in a list",
+       "recency": "The recency effect is about the LAST words in a list",
+       "serial position effect": "That's the name for the whole curve — give the effect for the START of the list"
+      }
+     },
+     "solution": "The primacy effect: the first words are rehearsed more, so they pass into long-term memory",
+     "hint": "It comes from a word meaning 'first'"
+    },
+    {
+     "id": "mp11",
+     "level": 2,
+     "text": "Which of these is a binocular depth cue?",
+     "choice": {
+      "options": [
+       "Height in plane",
+       "Occlusion",
+       "Retinal disparity",
+       "Linear perspective"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Height in plane works with one eye, so it is monocular",
+       "Occlusion works with one eye, so it is monocular",
+       null,
+       "Linear perspective works with one eye, so it is monocular"
+      ]
+     },
+     "solution": "Retinal disparity (each eye sees a slightly different image) needs two eyes; the others are monocular cues",
+     "hint": "Binocular cues need two eyes working together"
+    },
+    {
+     "id": "mp12",
+     "level": 2,
+     "text": "Gibson's theory says perception comes directly from the information in what we see, without needing past experience. Is Gibson's theory 'top-down' or 'bottom-up'? Type one of these.",
+     "short": {
+      "accept": [
+       "bottom-up",
+       "bottom up"
+      ],
+      "reject": [
+       "top-down",
+       "top down"
+      ],
+      "feedback": {
+       "top-down": "Top-down processing uses past experience — that is Gregory's view, not Gibson's",
+       "top down": "Top-down processing uses past experience — that is Gregory's view, not Gibson's"
+      }
+     },
+     "solution": "Gibson's direct theory is bottom-up: perception is built from the sensory information itself. Gregory's theory is top-down",
+     "hint": "Top-down processing uses knowledge and experience; which does Gibson say we don't need?"
+    },
+    {
+     "id": "mp13",
+     "level": 3,
+     "text": "Priya is shown a list of 20 words and asked to recall them straight away, in any order. Which words is she most likely to recall best?",
+     "choice": {
+      "options": [
+       "Words from the middle of the list",
+       "Only words from the middle and the end",
+       "Every word equally, whatever its position",
+       "Words from the start and the end of the list"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Middle words are usually recalled worst",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The serial position effect: the first words (primacy) and the last words (recency) are recalled best",
+     "hint": "Think about the shape of the serial position curve"
+    },
+    {
+     "id": "mp14",
+     "level": 3,
+     "text": "In a picture, a house is drawn partly hidden behind a tree, so the house looks further away. Which depth cue is this?",
+     "choice": {
+      "options": [
+       "Occlusion",
+       "Relative size",
+       "Height in plane",
+       "Retinal disparity"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Retinal disparity needs two eyes looking at a real scene, not a picture"
+      ]
+     },
+     "solution": "Occlusion (superimposition): an object partly covered by another is seen as further away",
+     "hint": "One object is blocking part of the other"
+    },
+    {
+     "id": "mp15",
+     "level": 3,
+     "text": "Participants were shown a series of letters, then an ambiguous figure that could be read as the letter 'B' or the number '13'. Most saw it as 'B'. Which factor affecting perception does this show?",
+     "choice": {
+      "options": [
+       "Motivation",
+       "Expectation",
+       "Emotion",
+       "Retinal disparity"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Motivation is about needs such as hunger",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "This is perceptual set caused by expectation: after seeing letters, people expected another letter (Bruner and Minturn)",
+     "hint": "What were the participants ready to see after a run of letters?"
+    },
+    {
+     "id": "mp16",
+     "level": 3,
+     "text": "Hungry participants rated pictures of food as brighter than participants who had just eaten. Which factor affecting perception does this show?",
+     "choice": {
+      "options": [
+       "Culture",
+       "Expectation",
+       "Motivation",
+       "Convergence"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Convergence is a binocular depth cue, not a factor in perceptual set"
+      ]
+     },
+     "solution": "Motivation (here, hunger) affected perception — Gilchrist and Nesberg found this perceptual set effect",
+     "hint": "Think about what hunger does to what we pay attention to"
+    },
+    {
+     "id": "mp17",
+     "level": 3,
+     "text": "After reading a folk tale from another culture, Sam retells it. He leaves out parts that seem strange to him and changes details to fit his own culture. What type of memory does this show? Give the term.",
+     "short": {
+      "accept": [
+       "reconstructive memory",
+       "reconstructive",
+       "reconstruction",
+       "memory reconstruction"
+      ]
+     },
+     "solution": "Reconstructive memory: we rebuild memories using our schemas, so details change to fit what we expect (Bartlett)",
+     "hint": "Memories are rebuilt each time we recall them, rather than replayed like a recording"
+    },
+    {
+     "id": "mp18",
+     "level": 3,
+     "text": "Divers learned words underwater and recalled more of them when tested underwater than on land. This shows that recall is better when the setting matches the learning setting. Complete the term: '______-dependent memory'. Type the missing word.",
+     "short": {
+      "accept": [
+       "context",
+       "context-dependent",
+       "context dependent",
+       "context-dependent memory"
+      ],
+      "reject": [
+       "state",
+       "state-dependent"
+      ],
+      "feedback": {
+       "state": "State-dependent memory is about your internal state (such as mood), not the place",
+       "state-dependent": "State-dependent memory is about your internal state (such as mood), not the place"
+      }
+     },
+     "solution": "Context-dependent memory: the environment at learning acts as a cue at recall (Godden and Baddeley)",
+     "hint": "The missing word means the setting or surroundings"
+    },
+    {
+     "id": "mp19",
+     "level": 4,
+     "text": "In a free recall study, words in positions 1–3 of a 20-word list were recalled by 70% of participants, words in positions 8–12 by 25%, and words in positions 18–20 by 80%. Which conclusion matches these results?",
+     "choice": {
+      "options": [
+       "Only a primacy effect was found",
+       "Only a recency effect was found",
+       "Position in the list made no difference",
+       "Both a primacy effect and a recency effect were found"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Recall at the end (80%) was also high, so there was a recency effect too",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Recall was high at the start (70%, primacy) and at the end (80%, recency) but low in the middle (25%)",
+     "hint": "Compare the start and the end of the list with the middle"
+    },
+    {
+     "id": "mp20",
+     "level": 4,
+     "text": "A man with severe amnesia cannot remember what happened earlier in the day, but he can still play the piano well. Which type of long-term memory is shown to be working in this example?",
+     "choice": {
+      "options": [
+       "Procedural memory",
+       "Episodic memory",
+       "Sensory memory",
+       "Short-term memory"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Remembering events of the day is episodic memory, which is the part that is damaged here",
+       null,
+       null
+      ]
+     },
+     "solution": "Playing the piano is a skill stored in procedural memory, which can survive damage that destroys episodic memory",
+     "hint": "Which type of memory stores skills?"
+    },
+    {
+     "id": "mp21",
+     "level": 4,
+     "text": "In the Ponzo illusion, two identical lines are drawn between two lines that come together like railway tracks. The upper line looks longer. How does Gregory's theory explain this?",
+     "choice": {
+      "options": [
+       "The figure is ambiguous, so it flips between two different shapes",
+       "The brain reads the converging lines as a depth cue, so the upper line is seen as further away and therefore bigger",
+       "The brain fills in a shape that is not actually there",
+       "Each eye receives a different image of the two lines"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Ambiguity explains figures such as the Necker cube",
+       null,
+       "Seeing something that is not there is 'fiction', as in the Kanizsa triangle",
+       null
+      ]
+     },
+     "solution": "The converging lines act like linear perspective; the brain assumes the upper line is further away and scales it up (misinterpreted depth cues)",
+     "hint": "Think of railway tracks meeting in the distance"
+    },
+    {
+     "id": "mp22",
+     "level": 4,
+     "text": "Gregory explained the Müller-Lyer illusion by saying the line with outward-spreading fins looks like the inside corner of a room. Why does this make that line look longer?",
+     "choice": {
+      "options": [
+       "It is seen as nearer, so the brain scales it down",
+       "Each eye sees a different line",
+       "It is seen as further away, so the brain scales it up",
+       "The fins hide part of the line"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Nearer objects are scaled down — that explains why the other line looks shorter",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "An inside corner is further away; using size constancy, the brain enlarges a line it thinks is distant, so it looks longer",
+     "hint": "Think about size constancy: how does the brain treat things it thinks are far away?"
+    },
+    {
+     "id": "mp23",
+     "level": 4,
+     "text": "A photo shows two people of similar height. One looks much smaller in the image, so we judge that person to be further away. Which monocular depth cue is this? Give the term.",
+     "short": {
+      "accept": [
+       "relative size"
+      ],
+      "reject": [
+       "size constancy"
+      ],
+      "feedback": {
+       "size constancy": "Size constancy is knowing an object stays the same size — the cue for distance here is the difference in image size"
+      }
+     },
+     "solution": "Relative size: when objects are expected to be similar in size, the one that looks smaller is judged to be further away",
+     "hint": "The cue compares how big the two people look"
+    },
+    {
+     "id": "mp24",
+     "level": 4,
+     "text": "Describe the multi-store model of memory.",
+     "rubric": {
+      "model_answer": "Information from the senses enters sensory memory, which holds a lot of information for a very short time. If we pay attention to it, it passes to short-term memory, which has a capacity of about 7 items, lasts up to about 30 seconds without rehearsal and mainly codes acoustically. If it is rehearsed, it is transferred to long-term memory, which has a very large capacity, can last a lifetime and mainly codes semantically. Information is retrieved from long-term memory back into short-term memory when needed. Information that is not attended to or rehearsed is lost.",
+      "mark_scheme": "1 mark: information enters sensory memory first and is held very briefly\n1 mark: attention passes it to short-term memory\n1 mark: a correct feature of short-term memory (capacity about 7 items, short duration or acoustic coding)\n1 mark: rehearsal transfers it to long-term memory, which has a large capacity and lasts a long time\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Sensory memory → (attention) → short-term memory → (rehearsal) → long-term memory, with retrieval back to short-term memory",
+     "hint": "Start with the three stores and the processes that move information between them"
+    },
+    {
+     "id": "mp25",
+     "level": 5,
+     "text": "Which statement about the multi-store model is accurate?",
+     "choice": {
+      "options": [
+       "Long-term memory has a capacity of about 7 items",
+       "Information goes straight from sensory memory into long-term memory",
+       "Short-term memory lasts for several days",
+       "Information that is not paid attention to in sensory memory is quickly lost"
+      ],
+      "correct": 3,
+      "feedback": [
+       "About 7 items is the capacity of short-term memory",
+       "Information has to pass through short-term memory first",
+       null,
+       null
+      ]
+     },
+     "solution": "Without attention, information in sensory memory decays almost at once; attention moves it to short-term memory",
+     "hint": "Check each statement against the order of the stores and their features"
+    },
+    {
+     "id": "mp26",
+     "level": 5,
+     "text": "A critic argues: 'If perception were direct, we would not be fooled by visual illusions.' Which theory does this criticism support?",
+     "choice": {
+      "options": [
+       "Gregory's constructivist theory",
+       "Gibson's direct theory",
+       "Bartlett's theory of reconstructive memory",
+       "The multi-store model"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "The criticism is aimed AT Gibson's direct theory",
+       "Bartlett's theory is about memory, not perception",
+       null
+      ]
+     },
+     "solution": "Illusions suggest the brain makes wrong guesses using past experience, which supports Gregory's top-down theory over Gibson's",
+     "hint": "Which theory says perception involves the brain making a best guess?"
+    },
+    {
+     "id": "mp27",
+     "level": 5,
+     "text": "In a serial position study, why are the first words in a list often recalled well, according to the multi-store model?",
+     "choice": {
+      "options": [
+       "They are still in short-term memory when recall begins",
+       "They were rehearsed more, so they passed into long-term memory",
+       "They are stored in sensory memory for longer",
+       "They are always the most interesting words"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Being in short-term memory at recall explains the recency effect (the last words)",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The first words get the most rehearsal, so they are transferred to long-term memory: this explains the primacy effect",
+     "hint": "How does information get into long-term memory in this model?"
+    },
+    {
+     "id": "mp28",
+     "level": 5,
+     "text": "Which is a weakness of Bartlett's 'War of the Ghosts' study?",
+     "choice": {
+      "options": [
+       "It used participants from many different cultures",
+       "It was a laboratory study with very strict controls",
+       "Participants were not given standardised instructions, so the procedure was poorly controlled",
+       "It used brain scans to measure memory"
+      ],
+      "correct": 2,
+      "feedback": [
+       null,
+       "Strict controls would be a strength, and Bartlett's study was not strictly controlled",
+       null,
+       null
+      ]
+     },
+     "solution": "Bartlett's procedure was informal: participants were not told to be accurate and instructions were not standardised",
+     "hint": "Think about how carefully the procedure was controlled"
+    },
+    {
+     "id": "mp29",
+     "level": 5,
+     "text": "Learning a new phone number makes it harder to remember your old one. What is the name for this type of interference? Give the term.",
+     "short": {
+      "accept": [
+       "retroactive interference",
+       "retroactive"
+      ],
+      "reject": [
+       "proactive interference",
+       "proactive"
+      ],
+      "feedback": {
+       "proactive interference": "Proactive interference is when OLD learning disrupts NEW learning",
+       "proactive": "Proactive interference is when OLD learning disrupts NEW learning"
+      }
+     },
+     "solution": "Retroactive interference: new learning disrupts the recall of older information",
+     "hint": "'Retro' means backwards: new learning works backwards on old memories"
+    },
+    {
+     "id": "mp30",
+     "level": 5,
+     "text": "Explain how Gregory's constructivist theory explains visual illusions. Use one example in your answer.",
+     "rubric": {
+      "model_answer": "Gregory said perception is top-down: the brain uses past experience to make a 'best guess' (hypothesis) about what the senses detect. Usually this works, but illusions happen when the brain applies a rule that does not fit. In the Müller-Lyer illusion, the line with outward-spreading fins looks like the inside corner of a room, so the brain treats it as further away. Using size constancy, it scales the line up, so it looks longer than the other line, even though both are the same length.",
+      "mark_scheme": "1 mark: perception is top-down / uses past experience\n1 mark: the brain makes an inference or hypothesis about sensory data\n1 mark: illusions occur when the wrong hypothesis is applied\n1 mark: a named example (e.g. Müller-Lyer, Ponzo)\n2 marks: a clear explanation of how the example fools the brain (e.g. depth cues and size constancy)\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Gregory: perception is top-down guessing from past experience; illusions are wrong guesses, e.g. Müller-Lyer lines read as near and far corners",
+     "hint": "Start with what 'top-down' means, then choose one illusion you can describe"
+    }
+   ]
+  },
+  {
+   "id": "psychology.development_brain",
+   "title": "Development & the brain",
+   "aliases": [
+    "brain development",
+    "piaget",
+    "mindset",
+    "learning styles",
+    "neuropsychology",
+    "neurons",
+    "synapse",
+    "lobes of the brain"
+   ],
+   "questions": [
+    {
+     "id": "db01",
+     "level": 1,
+     "text": "According to Piaget, what is the first stage of cognitive development, from birth to about 2 years?",
+     "choice": {
+      "options": [
+       "Sensorimotor stage",
+       "Pre-operational stage",
+       "Concrete operational stage",
+       "Formal operational stage"
+      ],
+      "correct": 0
+     },
+     "solution": "Piaget's stages: sensorimotor (0–2), pre-operational (2–7), concrete operational (7–11), formal operational (11+)",
+     "hint": "Babies learn about the world through their senses and movements"
+    },
+    {
+     "id": "db02",
+     "level": 1,
+     "text": "What name did Piaget give to a mental structure that holds our knowledge about something, such as 'dogs'? Give the term.",
+     "short": {
+      "accept": [
+       "schema",
+       "schemas",
+       "schemata",
+       "scheme",
+       "schemes"
+      ]
+     },
+     "solution": "A schema is a mental structure of knowledge about an object or idea; schemas grow and change as we learn",
+     "hint": "It is a mental 'file' of knowledge"
+    },
+    {
+     "id": "db03",
+     "level": 1,
+     "text": "Which part of the brain develops first in the foetus and controls basic functions such as breathing and heart rate? Give the term.",
+     "short": {
+      "accept": [
+       "brainstem",
+       "brain stem"
+      ]
+     },
+     "solution": "The brainstem develops first and controls automatic functions such as breathing, heart rate and swallowing",
+     "hint": "It sits at the base of the brain, connecting it to the spinal cord"
+    },
+    {
+     "id": "db04",
+     "level": 1,
+     "text": "Which part of the nervous system is made up of the brain and the spinal cord?",
+     "choice": {
+      "options": [
+       "The peripheral nervous system",
+       "The central nervous system",
+       "The autonomic nervous system",
+       "The somatic nervous system"
+      ],
+      "correct": 1,
+      "feedback": [
+       "The peripheral nervous system is all the nerves outside the brain and spinal cord",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The central nervous system (CNS) is the brain and spinal cord; the peripheral nervous system connects it to the rest of the body",
+     "hint": "Think 'central': it is in the middle of everything"
+    },
+    {
+     "id": "db05",
+     "level": 1,
+     "text": "Which lobe of the brain contains the visual area? Give the name of the lobe.",
+     "short": {
+      "accept": [
+       "occipital lobe",
+       "occipital"
+      ],
+      "reject": [
+       "parietal lobe",
+       "parietal",
+       "temporal lobe",
+       "temporal",
+       "frontal lobe",
+       "frontal"
+      ],
+      "feedback": {
+       "temporal lobe": "The temporal lobe contains the auditory area (hearing)",
+       "temporal": "The temporal lobe contains the auditory area (hearing)",
+       "parietal lobe": "The parietal lobe processes touch (the somatosensory area)",
+       "parietal": "The parietal lobe processes touch (the somatosensory area)"
+      }
+     },
+     "solution": "The occipital lobe, at the back of the brain, contains the visual area",
+     "hint": "It is at the back of the brain"
+    },
+    {
+     "id": "db06",
+     "level": 1,
+     "text": "In Dweck's mindset theory, what is a growth mindset?",
+     "choice": {
+      "options": [
+       "Believing that intelligence is fixed at birth",
+       "Believing that you must be taught in your preferred learning style",
+       "Believing that ability can be developed through effort and practice",
+       "Believing that the brain stops changing after age 7"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That describes a fixed mindset",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "A growth mindset is the belief that abilities can improve with effort; a fixed mindset is the belief that they cannot",
+     "hint": "The word 'growth' is the clue: can ability change?"
+    },
+    {
+     "id": "db07",
+     "level": 2,
+     "text": "Which of these lists Piaget's stages in the correct order?",
+     "choice": {
+      "options": [
+       "Pre-operational, sensorimotor, concrete operational, formal operational",
+       "Sensorimotor, concrete operational, pre-operational, formal operational",
+       "Sensorimotor, pre-operational, formal operational, concrete operational",
+       "Sensorimotor, pre-operational, concrete operational, formal operational"
+      ],
+      "correct": 3
+     },
+     "solution": "Sensorimotor (0–2), pre-operational (2–7), concrete operational (7–11), formal operational (11+)",
+     "hint": "Babies come first; abstract thinking comes last"
+    },
+    {
+     "id": "db08",
+     "level": 2,
+     "text": "Which statement describes accommodation in Piaget's theory?",
+     "choice": {
+      "options": [
+       "Changing an existing schema, or making a new one, to fit new information",
+       "Fitting new information into an existing schema without changing it",
+       "Feeling balanced because new information fits what you already know",
+       "Repeating information so that it is stored"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is assimilation",
+       "That is equilibrium",
+       null
+      ]
+     },
+     "solution": "Accommodation changes schemas to fit new information; assimilation fits new information into existing schemas",
+     "hint": "Accommodation is the process that changes the schema itself"
+    },
+    {
+     "id": "db09",
+     "level": 2,
+     "text": "In Piaget's theory, what is the name for understanding that an amount stays the same even when its appearance changes, such as water poured into a taller glass? Give the term.",
+     "short": {
+      "accept": [
+       "conservation"
+      ]
+     },
+     "solution": "Conservation is the understanding that quantity stays the same despite changes in appearance; Piaget said it develops at about age 7",
+     "hint": "Children in the pre-operational stage think the taller glass holds more"
+    },
+    {
+     "id": "db10",
+     "level": 2,
+     "text": "Which type of neuron carries messages from the central nervous system to muscles?",
+     "choice": {
+      "options": [
+       "Sensory neuron",
+       "Motor neuron",
+       "Relay neuron",
+       "Receptor cell"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Sensory neurons carry messages TO the central nervous system",
+       null,
+       "Relay neurons connect neurons inside the central nervous system",
+       null
+      ]
+     },
+     "solution": "Motor neurons carry messages from the CNS to effectors such as muscles; sensory neurons carry messages to the CNS",
+     "hint": "Which neuron makes something move?"
+    },
+    {
+     "id": "db11",
+     "level": 2,
+     "text": "Which part of the autonomic nervous system produces the 'fight or flight' response?",
+     "choice": {
+      "options": [
+       "The parasympathetic nervous system",
+       "The somatic nervous system",
+       "The sympathetic nervous system",
+       "The central nervous system"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The parasympathetic system returns the body to a calm, resting state",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The sympathetic branch raises heart rate and prepares the body for action; the parasympathetic branch calms the body ('rest and digest')",
+     "hint": "One branch speeds the body up; the other calms it down"
+    },
+    {
+     "id": "db12",
+     "level": 2,
+     "text": "What is the name of the tiny gap between two neurons, into which neurotransmitters are released? Give the term.",
+     "short": {
+      "accept": [
+       "synapse",
+       "synaptic gap",
+       "synaptic cleft",
+       "synapses"
+      ]
+     },
+     "solution": "Neurotransmitters are released into the synapse (synaptic gap) and bind to receptors on the next neuron",
+     "hint": "Chemical messengers cross this gap to pass on the signal"
+    },
+    {
+     "id": "db13",
+     "level": 3,
+     "text": "A 4-year-old is shown two equal rows of 6 counters. When one row is spread out, she says it has more counters. According to Piaget, which stage is she in?",
+     "choice": {
+      "options": [
+       "Sensorimotor stage",
+       "Concrete operational stage",
+       "Formal operational stage",
+       "Pre-operational stage"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "Children in the concrete operational stage CAN conserve",
+       null,
+       null
+      ]
+     },
+     "solution": "She cannot yet conserve number, which Piaget said is typical of the pre-operational stage (2–7 years)",
+     "hint": "Which stage comes before children can conserve?"
+    },
+    {
+     "id": "db14",
+     "level": 3,
+     "text": "A baby keeps looking for a toy after it has been hidden under a blanket. According to Piaget, what has the baby developed?",
+     "choice": {
+      "options": [
+       "Object permanence",
+       "Conservation",
+       "Abstract reasoning",
+       "Reversibility"
+      ],
+      "correct": 0
+     },
+     "solution": "Object permanence is knowing an object still exists when it is out of sight; Piaget said it develops in the sensorimotor stage",
+     "hint": "The baby knows the toy still exists even though it cannot see it"
+    },
+    {
+     "id": "db15",
+     "level": 3,
+     "text": "A child has a schema for 'dog'. She sees a cat for the first time and calls it a dog. Which process is this?",
+     "choice": {
+      "options": [
+       "Accommodation",
+       "Assimilation",
+       "Equilibrium",
+       "Conservation"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Accommodation would mean changing her schema, for example making a new one for cats",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "She fits the new animal into her existing 'dog' schema without changing it: assimilation",
+     "hint": "Is she changing her schema, or fitting the cat into the schema she already has?"
+    },
+    {
+     "id": "db16",
+     "level": 3,
+     "text": "After a stroke, a patient understands what people say but has great difficulty producing speech. Which area of the brain is most likely to be damaged?",
+     "choice": {
+      "options": [
+       "Wernicke's area",
+       "The occipital lobe",
+       "Broca's area",
+       "The cerebellum"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Damage to Wernicke's area mainly affects understanding language",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Broca's area, in the frontal lobe (usually the left), is linked to speech production",
+     "hint": "One language area is for producing speech and one is for understanding it"
+    },
+    {
+     "id": "db17",
+     "level": 3,
+     "text": "A teacher praises a student: 'You worked really hard on this.' According to Dweck, praising effort like this encourages which mindset? Give the term.",
+     "short": {
+      "accept": [
+       "growth mindset",
+       "growth"
+      ],
+      "reject": [
+       "fixed mindset",
+       "fixed"
+      ],
+      "feedback": {
+       "fixed mindset": "Praising talent ('you're so clever') is linked to a fixed mindset — this praise is about effort",
+       "fixed": "Praising talent ('you're so clever') is linked to a fixed mindset — this praise is about effort"
+      }
+     },
+     "solution": "Praising effort encourages a growth mindset: the belief that ability improves with work",
+     "hint": "Dweck contrasted a fixed mindset with another one"
+    },
+    {
+     "id": "db18",
+     "level": 3,
+     "text": "Jack touches a hot pan. Which type of neuron carries the message from his skin to his spinal cord? Give the type.",
+     "short": {
+      "accept": [
+       "sensory neuron",
+       "sensory",
+       "sensory neurone",
+       "sensory neurons"
+      ],
+      "reject": [
+       "motor neuron",
+       "motor",
+       "relay neuron",
+       "relay"
+      ],
+      "feedback": {
+       "motor neuron": "Motor neurons carry messages FROM the CNS to muscles",
+       "motor": "Motor neurons carry messages FROM the CNS to muscles",
+       "relay neuron": "Relay neurons work inside the CNS, linking sensory and motor neurons",
+       "relay": "Relay neurons work inside the CNS, linking sensory and motor neurons"
+      }
+     },
+     "solution": "Sensory neurons carry messages from receptors (here, in the skin) to the central nervous system",
+     "hint": "The message starts at a receptor in the skin"
+    },
+    {
+     "id": "db19",
+     "level": 4,
+     "text": "In McGarrigle and Donaldson's 'Naughty Teddy' study, more young children conserved number when a teddy 'accidentally' messed up the counters than when an adult moved them on purpose. What does this suggest?",
+     "choice": {
+      "options": [
+       "Children cannot conserve until age 11",
+       "Piaget's stages happen in a random order",
+       "Young children can never conserve number",
+       "Piaget may have underestimated what young children can do"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "Many young children DID conserve in the teddy version",
+       null
+      ]
+     },
+     "solution": "When the change seemed accidental, more children conserved, suggesting Piaget's method made the task harder than it needed to be",
+     "hint": "Compare how many children conserved in each version of the task"
+    },
+    {
+     "id": "db20",
+     "level": 4,
+     "text": "Hughes's policeman doll study found that most children aged 3½ to 5 could hide a doll so that two policemen could not see it. Which part of Piaget's theory does this challenge?",
+     "choice": {
+      "options": [
+       "That pre-operational children are egocentric",
+       "That babies develop object permanence",
+       "That conservation develops in the concrete operational stage",
+       "That teenagers can think abstractly"
+      ],
+      "correct": 0
+     },
+     "solution": "Hiding the doll means taking the policemen's point of view, so the study challenges Piaget's claim that pre-operational children are egocentric",
+     "hint": "To hide the doll, the child must imagine what the policemen can see"
+    },
+    {
+     "id": "db21",
+     "level": 4,
+     "text": "In Tulving's 'gold' memory study, scans showed more activity at the front of the brain when participants thought about personal events, and more towards the back when they thought about facts. What does this suggest?",
+     "choice": {
+      "options": [
+       "Episodic and semantic memories use exactly the same brain areas",
+       "Episodic and semantic memories are linked to different brain areas",
+       "Personal events are stored mainly at the back of the brain",
+       "Memory is not linked to brain activity"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "Personal (episodic) memories were linked to more activity at the FRONT",
+       null
+      ]
+     },
+     "solution": "Episodic memories were linked to more frontal activity and semantic memories to more activity towards the back, so the two types seem to involve different areas",
+     "hint": "Personal events are episodic; facts are semantic"
+    },
+    {
+     "id": "db22",
+     "level": 4,
+     "text": "A brain scan shows strong activity in the temporal lobe while a person listens to music. Which function of the temporal lobe does this fit?",
+     "choice": {
+      "options": [
+       "Processing touch (the somatosensory area)",
+       "Controlling movement (the motor area)",
+       "Processing sound (the auditory area)",
+       "Processing vision (the visual area)"
+      ],
+      "correct": 2,
+      "feedback": [
+       "The somatosensory area is in the parietal lobe",
+       "The motor area is in the frontal lobe",
+       null,
+       "The visual area is in the occipital lobe"
+      ]
+     },
+     "solution": "The temporal lobe contains the auditory area, which processes sound",
+     "hint": "Listening to music involves which sense?"
+    },
+    {
+     "id": "db23",
+     "level": 4,
+     "text": "Which scanning technique uses a radioactive tracer injected into the bloodstream to show which brain areas are most active? Give the abbreviation.",
+     "short": {
+      "accept": [
+       "PET",
+       "PET scan",
+       "positron emission tomography"
+      ],
+      "reject": [
+       "CT",
+       "CT scan",
+       "fMRI",
+       "MRI"
+      ],
+      "feedback": {
+       "CT": "CT scans use X-rays to show brain structure, not activity",
+       "CT scan": "CT scans use X-rays to show brain structure, not activity",
+       "fMRI": "fMRI shows activity through changes in blood oxygen — no tracer is injected",
+       "MRI": "MRI uses magnets and radio waves — no tracer is injected"
+      }
+     },
+     "solution": "PET (positron emission tomography) tracks a radioactive tracer to show active brain areas",
+     "hint": "The first letter of this three-letter scan stands for 'positron'"
+    },
+    {
+     "id": "db24",
+     "level": 4,
+     "text": "Describe how Piaget said a child's schemas develop. Refer to assimilation, accommodation and equilibrium.",
+     "rubric": {
+      "model_answer": "Piaget said children build schemas, which are mental structures of knowledge. When a child meets new information that fits an existing schema, they assimilate it, for example calling a new breed of dog a dog. When new information does not fit, the child feels disequilibrium and must accommodate, changing the schema or making a new one, for example creating a 'cat' schema. Once the new information fits, the child returns to equilibrium, a state of balance. This cycle makes schemas more complex over time.",
+      "mark_scheme": "1 mark: schemas are mental structures of knowledge\n1 mark: assimilation = fitting new information into an existing schema\n1 mark: accommodation = changing a schema or creating a new one\n1 mark: equilibrium = balance when information fits; disequilibrium drives change\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Schemas change through assimilation (fit in), accommodation (change the schema) and equilibrium (balance restored)",
+     "hint": "Define a schema first, then explain each process with a simple example"
+    },
+    {
+     "id": "db25",
+     "level": 5,
+     "text": "Which statement about Willingham's view of learning styles is accurate?",
+     "choice": {
+      "options": [
+       "He argued every student should be taught only in their preferred learning style",
+       "He argued kinaesthetic learners cannot learn from reading",
+       "He argued learning styles are controlled by the brainstem",
+       "He argued there is little evidence that teaching to a student's preferred learning style improves learning"
+      ],
+      "correct": 3
+     },
+     "solution": "Willingham argued that matching teaching to a preferred style (visual, auditory, kinaesthetic) is not supported by evidence; content should decide the method",
+     "hint": "Willingham was a critic of the learning styles idea"
+    },
+    {
+     "id": "db26",
+     "level": 5,
+     "text": "Which statement about the James-Lange theory of emotion is accurate?",
+     "choice": {
+      "options": [
+       "Physical changes in the body happen first, and the emotion comes from noticing them",
+       "The emotion is felt first and then causes physical changes",
+       "Emotions are produced only by the cerebellum",
+       "Emotions are learned only by copying others"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the common-sense view that the James-Lange theory argued against",
+       null,
+       null
+      ]
+     },
+     "solution": "James-Lange: an event causes physical arousal, and we then experience the emotion ('we are afraid because we tremble')",
+     "hint": "In this theory, which comes first: the body's reaction or the feeling?"
+    },
+    {
+     "id": "db27",
+     "level": 5,
+     "text": "Which statement fits Hebb's theory of learning?",
+     "choice": {
+      "options": [
+       "The number of connections between neurons is fixed, so learning cannot change the brain",
+       "Repeated activity strengthens the connections between neurons, forming cell assemblies",
+       "Learning happens only in the sensorimotor stage",
+       "Neurotransmitters stop working once something has been learned"
+      ],
+      "correct": 1
+     },
+     "solution": "Hebb said learning strengthens connections between neurons that fire together, forming cell assemblies: the brain is 'plastic'",
+     "hint": "Hebb believed the brain changes physically when we learn"
+    },
+    {
+     "id": "db28",
+     "level": 5,
+     "text": "Which finding supports the role of nurture (the environment) in brain development?",
+     "choice": {
+      "options": [
+       "The brainstem develops before the cortex in healthy foetuses",
+       "Identical twins share all of their genes",
+       "Rats raised in cages with toys and other rats developed a thicker cortex than rats raised alone",
+       "Babies are born with a sucking reflex"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A fixed order of development in every foetus points to nature",
+       null,
+       null,
+       "A reflex present at birth points to nature"
+      ]
+     },
+     "solution": "An enriched environment changed the rats' brains, so experience (nurture) affects brain development",
+     "hint": "Look for the finding where the environment was changed"
+    },
+    {
+     "id": "db29",
+     "level": 5,
+     "text": "A child can solve problems about real, physical objects but cannot yet reason about abstract or hypothetical ideas. According to Piaget, which stage is the child in? Give the stage name.",
+     "short": {
+      "accept": [
+       "concrete operational",
+       "concrete operational stage",
+       "concrete operations",
+       "concrete"
+      ],
+      "reject": [
+       "formal operational",
+       "formal operational stage",
+       "formal"
+      ],
+      "feedback": {
+       "formal operational": "Formal operational thinkers CAN reason about abstract ideas",
+       "formal operational stage": "Formal operational thinkers CAN reason about abstract ideas",
+       "formal": "Formal operational thinkers CAN reason about abstract ideas"
+      }
+     },
+     "solution": "The concrete operational stage (7–11): logical thinking about real objects, but not yet abstract reasoning",
+     "hint": "Abstract reasoning develops in the final stage, so think about the stage before it"
+    },
+    {
+     "id": "db30",
+     "level": 5,
+     "text": "Evaluate Piaget's theory of cognitive development.",
+     "rubric": {
+      "model_answer": "A strength is that Piaget's theory has been very influential in education: it led to child-centred, discovery learning and the idea of readiness. His tasks, such as conservation tasks, showed clear age differences. However, Piaget may have underestimated young children. McGarrigle and Donaldson found more children conserved when a 'naughty teddy' changed the counters, and Hughes found most young children could hide a doll from policemen, challenging egocentrism. Piaget also used small samples, including his own children, so results may not generalise.",
+      "mark_scheme": "1 mark: a relevant strength identified (e.g. influence on education)\n1 mark: the strength explained or supported\n1 mark: a relevant weakness identified (e.g. underestimates children)\n1 mark: supporting evidence named (e.g. McGarrigle and Donaldson, Hughes)\n1 mark: a second weakness (e.g. small or biased samples, task wording)\n1 mark: a balanced conclusion\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Strengths: influence on education, clear age-related findings. Weaknesses: underestimates children (Naughty Teddy, policeman doll), small samples",
+     "hint": "Give at least one strength and two weaknesses, each backed by evidence"
+    }
+   ]
+  },
+  {
+   "id": "psychology.social_influence",
+   "title": "Social influence",
+   "aliases": [
+    "conformity",
+    "social influence",
+    "obedience",
+    "bystander effect",
+    "crowd behaviour",
+    "deindividuation",
+    "prosocial behaviour"
+   ],
+   "questions": [
+    {
+     "id": "si01",
+     "level": 1,
+     "text": "What is the term for changing your behaviour or opinions to fit in with a group? Give the term.",
+     "short": {
+      "accept": [
+       "conformity",
+       "conforming",
+       "conform"
+      ],
+      "reject": [
+       "obedience"
+      ],
+      "feedback": {
+       "obedience": "Obedience is following a direct order from an authority figure — this is about fitting in with a group"
+      }
+     },
+     "solution": "Conformity is going along with the majority, either to fit in or because you think the group is right",
+     "hint": "Asch studied this with a line-judging task"
+    },
+    {
+     "id": "si02",
+     "level": 1,
+     "text": "What is the term for following a direct order from a person in authority? Give the term.",
+     "short": {
+      "accept": [
+       "obedience",
+       "obeying",
+       "obey"
+      ],
+      "reject": [
+       "conformity"
+      ],
+      "feedback": {
+       "conformity": "Conformity is going along with a group — here there is a direct order from an authority figure"
+      }
+     },
+     "solution": "Obedience is doing what an authority figure tells you to do; Milgram studied it",
+     "hint": "Milgram studied this with a fake shock machine"
+    },
+    {
+     "id": "si03",
+     "level": 1,
+     "text": "In Milgram's 1963 study, who did the real participants believe they were giving electric shocks to?",
+     "choice": {
+      "options": [
+       "A 'learner' who was actually a confederate working with Milgram",
+       "Another real participant chosen at random",
+       "A prisoner who had volunteered",
+       "The researcher in charge"
+      ],
+      "correct": 0
+     },
+     "solution": "The 'learner' was a confederate (an actor); no real shocks were given, but participants believed they were real",
+     "hint": "The learner was not really a participant at all"
+    },
+    {
+     "id": "si04",
+     "level": 1,
+     "text": "What task did participants do in Asch's conformity study?",
+     "choice": {
+      "options": [
+       "Estimate how many beans were in a jar",
+       "Judge which of three lines matched a standard line in length",
+       "Give electric shocks to a learner",
+       "Recall a list of words"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Estimating the number of beans in a jar was Jenness's study",
+       null,
+       "That was Milgram's obedience study",
+       null
+      ]
+     },
+     "solution": "Asch's participants judged line lengths after hearing confederates give wrong answers on critical trials",
+     "hint": "The correct answer was obvious when people did the task alone"
+    },
+    {
+     "id": "si05",
+     "level": 1,
+     "text": "What is the term for losing your sense of personal identity when you are part of a crowd, often because you feel anonymous? Give the term.",
+     "short": {
+      "accept": [
+       "deindividuation",
+       "de-individuation",
+       "de individuation"
+      ]
+     },
+     "solution": "Deindividuation: in a crowd, people can feel anonymous and less personally responsible, so they may act in ways they normally would not",
+     "hint": "Think about losing your individual identity"
+    },
+    {
+     "id": "si06",
+     "level": 1,
+     "text": "What is the 'bystander effect'?",
+     "choice": {
+      "options": [
+       "People are more likely to intervene in an emergency when other people are present",
+       "People always obey a person in uniform",
+       "People are less likely to intervene in an emergency when other people are present",
+       "People change their answers to match a group"
+      ],
+      "correct": 2
+     },
+     "solution": "The bystander effect: the more bystanders there are, the less likely any one of them is to intervene",
+     "hint": "Think about what happens to each person's sense of responsibility in a crowd"
+    },
+    {
+     "id": "si07",
+     "level": 2,
+     "text": "Roughly what proportion of participants in Asch's study conformed at least once on the critical trials?",
+     "choice": {
+      "options": [
+       "About one tenth",
+       "About one third",
+       "Every participant",
+       "About three quarters"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       "About a third of all critical-trial ANSWERS conformed — but more participants than that conformed at least once",
+       "About a quarter of participants never conformed",
+       null
+      ]
+     },
+     "solution": "About 75% conformed at least once; about a third of all answers on critical trials conformed; about 25% never conformed",
+     "hint": "Remember that about a quarter of participants never conformed"
+    },
+    {
+     "id": "si08",
+     "level": 2,
+     "text": "In Milgram's original study, what percentage of participants went all the way to the highest shock level (450 volts)?",
+     "choice": {
+      "options": [
+       "65%",
+       "10%",
+       "35%",
+       "100%"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       null,
+       "All participants went to at least 300 volts, but not all went to 450 volts"
+      ]
+     },
+     "solution": "65% (26 of 40) went to 450 volts, and all 40 went to at least 300 volts",
+     "hint": "It was much higher than experts predicted: almost two thirds"
+    },
+    {
+     "id": "si09",
+     "level": 2,
+     "text": "Which is a dispositional factor affecting obedience?",
+     "choice": {
+      "options": [
+       "The authority figure wearing a uniform",
+       "Having an authoritarian personality",
+       "The location of the study",
+       "How close the authority figure is"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Uniform is a situational factor",
+       null,
+       "Location is a situational factor",
+       "Proximity is a situational factor"
+      ]
+     },
+     "solution": "Dispositional factors are about the person (personality); situational factors are about the setting, such as uniform, location and proximity",
+     "hint": "'Dispositional' means to do with the individual's personality"
+    },
+    {
+     "id": "si10",
+     "level": 2,
+     "text": "In Piliavin's New York subway study, which 'victim' was assisted more often?",
+     "choice": {
+      "options": [
+       "The victim who appeared drunk",
+       "Both were assisted equally often",
+       "The victim who carried a cane",
+       "Neither victim was ever assisted"
+      ],
+      "correct": 2
+     },
+     "solution": "The cane (ill) victim was assisted on almost every trial; the 'drunk' victim was assisted on about half of trials",
+     "hint": "Think about who passengers might see as deserving or as less costly to approach"
+    },
+    {
+     "id": "si11",
+     "level": 2,
+     "text": "Bickman's study of the power of a uniform found that people were most likely to obey a stranger dressed as what?",
+     "choice": {
+      "options": [
+       "A milkman",
+       "A person in everyday clothes",
+       "A waiter",
+       "A guard"
+      ],
+      "correct": 3
+     },
+     "solution": "Bickman found people obeyed the person dressed as a guard most, because the uniform signals authority",
+     "hint": "Which uniform suggests the most authority?"
+    },
+    {
+     "id": "si12",
+     "level": 2,
+     "text": "In agency theory, what is the name for the state in which a person acts on behalf of an authority figure and does not feel responsible for their actions? Give the term.",
+     "short": {
+      "accept": [
+       "agentic state",
+       "agentic",
+       "the agentic state"
+      ],
+      "reject": [
+       "autonomous state",
+       "autonomous"
+      ],
+      "feedback": {
+       "autonomous state": "In the autonomous state people act on their own free will and feel responsible",
+       "autonomous": "In the autonomous state people act on their own free will and feel responsible"
+      }
+     },
+     "solution": "In the agentic state, people see themselves as agents carrying out someone else's wishes, so they feel less responsible (Milgram)",
+     "hint": "The person becomes an 'agent' of the authority figure"
+    },
+    {
+     "id": "si13",
+     "level": 2,
+     "text": "What term describes the idea that when many people are present, each person feels less responsible for acting? Give the term.",
+     "short": {
+      "accept": [
+       "diffusion of responsibility",
+       "diffusion"
+      ]
+     },
+     "solution": "Diffusion of responsibility: responsibility is spread across everyone present, so each person feels less need to act",
+     "hint": "The responsibility is 'spread out' among the people present"
+    },
+    {
+     "id": "si14",
+     "level": 3,
+     "text": "Grace is sure the answer to a quiz question is 'Paris', but everyone else in her group says 'Rome'. She says 'Rome' too, even though she still thinks it is Paris. What is this an example of?",
+     "choice": {
+      "options": [
+       "Normative social influence (wanting to fit in)",
+       "Informational social influence (wanting to be right)",
+       "Obedience to authority",
+       "Deindividuation"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Informational influence happens when you think the group knows better — Grace still thinks she is right",
+       null,
+       null
+      ]
+     },
+     "solution": "She goes along with the group publicly but does not change her private view, because she wants to fit in: normative influence",
+     "hint": "Has Grace changed her mind, or only what she says?"
+    },
+    {
+     "id": "si15",
+     "level": 3,
+     "text": "A security guard tells shoppers to move away from a door, and they do. A man in casual clothes gives the same order and most people ignore him. Which factor affecting obedience does this show?",
+     "choice": {
+      "options": [
+       "Group size",
+       "Uniform (a sign of authority)",
+       "Task difficulty",
+       "Personality"
+      ],
+      "correct": 1
+     },
+     "solution": "The uniform signals legitimate authority, so people are more likely to obey (as Bickman found)",
+     "hint": "What is different about the two people giving the order?"
+    },
+    {
+     "id": "si16",
+     "level": 3,
+     "text": "At a football match, fans in masks and face paint, who feel they cannot be identified, shout insults they would never say on their own. Which concept explains this?",
+     "choice": {
+      "options": [
+       "Obedience",
+       "Informational social influence",
+       "Deindividuation",
+       "Agentic state"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Nobody in authority gave them an order",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Anonymity in a crowd reduces self-awareness and personal responsibility: deindividuation",
+     "hint": "The key clue is that the fans feel they cannot be identified"
+    },
+    {
+     "id": "si17",
+     "level": 3,
+     "text": "In a variation of Asch's study, one confederate gave the correct answer. What happened to conformity?",
+     "choice": {
+      "options": [
+       "It rose sharply",
+       "It stayed the same",
+       "It rose to 100%",
+       "It fell sharply"
+      ],
+      "correct": 3
+     },
+     "solution": "When one other person disagreed with the majority, conformity dropped sharply: the group was no longer unanimous",
+     "hint": "Think about how much easier it is to disagree when someone else does too"
+    },
+    {
+     "id": "si18",
+     "level": 3,
+     "text": "What term describes authority that is seen as having the right to give orders, such as a teacher in a school or a police officer? Give the two-word term.",
+     "short": {
+      "accept": [
+       "legitimate authority",
+       "legitimacy of authority",
+       "legitimacy",
+       "legitimate"
+      ]
+     },
+     "solution": "Legitimate authority: people are more likely to obey someone they believe has the right to give orders",
+     "hint": "The first word means 'lawful' or 'proper'"
+    },
+    {
+     "id": "si19",
+     "level": 3,
+     "text": "Ben sees a stranger drop their shopping in a busy street. He walks on, thinking someone else will pick it up. What is the name for this effect? Give the term.",
+     "short": {
+      "accept": [
+       "bystander effect",
+       "the bystander effect",
+       "bystander apathy",
+       "diffusion of responsibility"
+      ]
+     },
+     "solution": "The bystander effect (caused by diffusion of responsibility): with others around, Ben feels less personally responsible",
+     "hint": "There are lots of other people around who could step in"
+    },
+    {
+     "id": "si20",
+     "level": 4,
+     "text": "In a study, participants were in a group with 1, 2, 3 or 6 confederates who all gave the same wrong answer. Conformity was 3% with 1 confederate, 13% with 2, 32% with 3 and 33% with 6. What do these results show?",
+     "choice": {
+      "options": [
+       "Conformity rose as the group grew to 3, then levelled off",
+       "Conformity kept rising steadily as the group grew",
+       "Group size had no effect on conformity",
+       "Conformity was highest with one confederate"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Going from 3 to 6 confederates only raised conformity from 32% to 33%",
+       null,
+       null
+      ]
+     },
+     "solution": "Conformity rose from 3% to 32% as the group grew to 3, but adding more people (33% with 6) made little difference",
+     "hint": "Compare the change from 1 to 3 with the change from 3 to 6"
+    },
+    {
+     "id": "si21",
+     "level": 4,
+     "text": "In variations of a Milgram-style study, full obedience was 65% at a university, 48% in a run-down office building, 40% when the teacher and learner were in the same room, and 30% when the teacher had to hold the learner's hand on a shock plate. Which conclusion is supported?",
+     "choice": {
+      "options": [
+       "Obedience rose when the study moved to an office building",
+       "Obedience fell as the teacher got physically closer to the learner",
+       "Location had no effect on obedience",
+       "Obedience was highest with the closest contact"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Obedience fell from 65% to 48% in the office building",
+       null,
+       "Obedience changed from 65% to 48% when the location changed",
+       null
+      ]
+     },
+     "solution": "Obedience dropped from 40% (same room) to 30% (physical contact): closer proximity to the learner reduced obedience. The less prestigious location also lowered it (65% to 48%)",
+     "hint": "Compare the same-room and hand-on-plate figures"
+    },
+    {
+     "id": "si22",
+     "level": 4,
+     "text": "Piliavin found no diffusion of responsibility on the subway: larger groups of passengers did not intervene less. Which explanation fits this finding?",
+     "choice": {
+      "options": [
+       "Passengers were ordered by an authority figure to intervene",
+       "Passengers were all trained first-aiders",
+       "Passengers could clearly see the victim in a closed carriage, so it was hard to assume someone else would act",
+       "The victim was always a friend of the passengers"
+      ],
+      "correct": 2
+     },
+     "solution": "In a closed carriage the emergency was obvious and impossible to ignore, unlike studies where people could not see the victim",
+     "hint": "Think about how the subway carriage differs from hearing an emergency over an intercom"
+    },
+    {
+     "id": "si23",
+     "level": 4,
+     "text": "Zimbardo found that participants wearing hoods and lab coats gave longer electric shocks than participants who wore name tags. What does this suggest?",
+     "choice": {
+      "options": [
+       "Wearing any uniform always makes people kinder",
+       "People obey more when they can be identified",
+       "Name tags make people more aggressive",
+       "Anonymity can increase antisocial behaviour"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "The participants with name tags gave SHORTER shocks",
+       null
+      ]
+     },
+     "solution": "The hooded, anonymous participants were deindividuated and gave longer shocks: anonymity can increase antisocial behaviour",
+     "hint": "Which group could not be identified?"
+    },
+    {
+     "id": "si24",
+     "level": 4,
+     "text": "In Milgram's study, the experimenter said phrases such as 'Please continue' and 'The experiment requires that you continue' when a participant hesitated. What were these phrases called? Give the term.",
+     "short": {
+      "accept": [
+       "prods",
+       "verbal prods",
+       "prod"
+      ]
+     },
+     "solution": "Milgram used four standard verbal prods, ending with 'You have no other choice, you must go on'",
+     "hint": "The experimenter used them to nudge or push participants to carry on"
+    },
+    {
+     "id": "si25",
+     "level": 4,
+     "text": "Describe Asch's study of conformity.",
+     "rubric": {
+      "model_answer": "Asch tested male American students in groups. Only one person in each group was a real participant; the others were confederates. Each person said aloud which of three comparison lines matched a standard line. On critical trials, the confederates all gave the same wrong answer before the real participant answered. About a third of answers on critical trials conformed to the wrong majority, about 75% of participants conformed at least once and about 25% never conformed. In a control group, almost no mistakes were made.",
+      "mark_scheme": "1 mark: one real participant with a group of confederates\n1 mark: the line-judging task, answers given aloud\n1 mark: confederates gave the same wrong answer on critical trials\n1 mark: a correct result (about a third of answers conformed, 75% at least once, or 25% never)\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "One real participant, confederates giving wrong answers on a line task; about a third of answers conformed, 75% conformed at least once",
+     "hint": "Describe who took part, what they did, and what was found"
+    },
+    {
+     "id": "si26",
+     "level": 5,
+     "text": "Which is an ethical criticism of Milgram's study?",
+     "choice": {
+      "options": [
+       "Participants were deceived about the true aim and were put under severe stress",
+       "Participants were not paid anything at all",
+       "The sample was made up of children",
+       "Participants were not allowed to give any shocks"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Participants were paid for taking part",
+       "The participants were men aged 20–50",
+       null
+      ]
+     },
+     "solution": "Participants were told it was a study of learning and many showed extreme stress; they were debriefed afterwards",
+     "hint": "Think about what participants were told and how they felt during the study"
+    },
+    {
+     "id": "si27",
+     "level": 5,
+     "text": "Which statement about Asch's study is accurate?",
+     "choice": {
+      "options": [
+       "Every participant conformed on every critical trial",
+       "About a quarter of participants never conformed on any critical trial",
+       "Conformity rose when one confederate gave the right answer",
+       "The task was so hard that people usually got it wrong when alone"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       "A supporter who broke the majority made conformity FALL",
+       "Alone, people almost never made mistakes"
+      ]
+     },
+     "solution": "About 25% of participants never conformed; alone (in the control condition), people almost never made mistakes",
+     "hint": "Remember the overall pattern: many conformed at least once, but not everyone"
+    },
+    {
+     "id": "si28",
+     "level": 5,
+     "text": "Which is a limitation of Asch's study when applying its findings to other people?",
+     "choice": {
+      "options": [
+       "There was no control group to compare with",
+       "It took place in a natural setting with no controls",
+       "All participants were American male students, so the results may not apply to women or other cultures",
+       "Participants were told the true aim at the start"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Asch did use a control group, who answered alone",
+       "It was a laboratory study",
+       null,
+       "Participants were deceived about the aim"
+      ]
+     },
+     "solution": "The sample was American male students, so the findings may not generalise to other groups or cultures",
+     "hint": "Think about who the participants were"
+    },
+    {
+     "id": "si29",
+     "level": 5,
+     "text": "Which statement about situational and dispositional explanations of obedience is accurate?",
+     "choice": {
+      "options": [
+       "Dispositional explanations focus on uniform and location",
+       "Situational explanations say only personality matters",
+       "Both explanations ignore the role of authority figures",
+       "Situational ones focus on the setting (e.g. uniform, location); dispositional ones focus on personality"
+      ],
+      "correct": 3
+     },
+     "solution": "Situational = features of the setting (uniform, location, proximity); dispositional = features of the person (e.g. authoritarian personality)",
+     "hint": "'Situation' means the setting; 'disposition' means personality"
+    },
+    {
+     "id": "si30",
+     "level": 5,
+     "text": "Milgram said people can shift from acting on their own free will to acting for an authority figure. What is the name of the state in which people act on their own free will and feel responsible for their actions? Give the term.",
+     "short": {
+      "accept": [
+       "autonomous state",
+       "autonomous",
+       "autonomy"
+      ],
+      "reject": [
+       "agentic state",
+       "agentic"
+      ],
+      "feedback": {
+       "agentic state": "In the agentic state people act for the authority figure and feel LESS responsible",
+       "agentic": "In the agentic state people act for the authority figure and feel LESS responsible"
+      }
+     },
+     "solution": "In the autonomous state people feel responsible for their own actions; in the agentic state they act for the authority figure",
+     "hint": "It is the opposite of the agentic state"
+    },
+    {
+     "id": "si31",
+     "level": 5,
+     "text": "Explain how situational factors can affect obedience. Use evidence in your answer.",
+     "rubric": {
+      "model_answer": "Situational factors are features of the setting. Proximity matters: in Milgram's variations, obedience fell when the teacher was in the same room as the learner and fell further when they had to touch the learner. Location matters: obedience was lower in a run-down office than at a prestigious university, as the authority seemed less legitimate. Uniform matters: Bickman found people were more likely to obey a stranger dressed as a guard than one in everyday clothes, because a uniform signals authority.",
+      "mark_scheme": "1 mark: situational factors defined (features of the setting)\n1 mark: proximity explained\n1 mark: evidence for proximity (Milgram variation)\n1 mark: location or uniform explained\n1 mark: evidence (Milgram's office building or Bickman's guard)\n1 mark: clear link to legitimacy of authority\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Proximity, location and uniform all change obedience: Milgram's variations and Bickman's guard uniform study",
+     "hint": "Choose two or three factors and back each one with a study"
+    }
+   ]
+  },
+  {
+   "id": "psychology.research_methods",
+   "title": "Research methods",
+   "aliases": [
+    "independent variable",
+    "research methods",
+    "hypothesis",
+    "dependent variable",
+    "experimental design",
+    "sampling",
+    "ethics",
+    "reliability",
+    "validity"
+   ],
+   "questions": [
+    {
+     "id": "rm01",
+     "level": 1,
+     "text": "In an experiment, what is the name of the variable that the researcher changes or manipulates? Give the term.",
+     "short": {
+      "accept": [
+       "independent variable",
+       "IV",
+       "the independent variable"
+      ],
+      "reject": [
+       "dependent variable",
+       "DV"
+      ],
+      "feedback": {
+       "dependent variable": "The dependent variable is the one that is MEASURED",
+       "DV": "The dependent variable is the one that is MEASURED"
+      }
+     },
+     "solution": "The independent variable (IV) is changed by the researcher; the dependent variable (DV) is measured",
+     "hint": "It is the cause the researcher sets up, not the outcome"
+    },
+    {
+     "id": "rm02",
+     "level": 1,
+     "text": "In an experiment, what is the name of the variable that is measured? Give the term.",
+     "short": {
+      "accept": [
+       "dependent variable",
+       "DV",
+       "the dependent variable"
+      ],
+      "reject": [
+       "independent variable",
+       "IV"
+      ],
+      "feedback": {
+       "independent variable": "The independent variable is the one the researcher CHANGES",
+       "IV": "The independent variable is the one the researcher CHANGES"
+      }
+     },
+     "solution": "The dependent variable (DV) is measured to see whether it has been affected by the independent variable",
+     "hint": "Its value 'depends' on the change the researcher makes"
+    },
+    {
+     "id": "rm03",
+     "level": 1,
+     "text": "What is a hypothesis?",
+     "choice": {
+      "options": [
+       "A testable prediction about what will happen in a study",
+       "A summary of the results after a study",
+       "A list of the participants in a study",
+       "A question asked in an interview"
+      ],
+      "correct": 0
+     },
+     "solution": "A hypothesis is a clear, testable statement predicting the outcome of a study",
+     "hint": "It is written before the study starts"
+    },
+    {
+     "id": "rm04",
+     "level": 1,
+     "text": "Which sampling method uses a method such as picking names out of a hat, so that every member of the target population has an equal chance of being chosen?",
+     "choice": {
+      "options": [
+       "Opportunity sampling",
+       "Random sampling",
+       "Volunteer sampling",
+       "Systematic sampling"
+      ],
+      "correct": 1,
+      "feedback": [
+       null,
+       null,
+       null,
+       "Systematic sampling picks every nth person from a list"
+      ]
+     },
+     "solution": "Random sampling gives everyone in the target population an equal chance of selection, for example by drawing names",
+     "hint": "Picking from a hat is down to chance"
+    },
+    {
+     "id": "rm05",
+     "level": 1,
+     "text": "Which ethical guideline means participants must be told that they can leave a study at any time? Give the term.",
+     "short": {
+      "accept": [
+       "right to withdraw",
+       "the right to withdraw",
+       "withdrawal",
+       "right to withdrawal"
+      ]
+     },
+     "solution": "The right to withdraw: participants can leave at any point and can ask for their data to be removed",
+     "hint": "Participants have the 'right' to do something"
+    },
+    {
+     "id": "rm06",
+     "level": 1,
+     "text": "What does 'debriefing' mean in research?",
+     "choice": {
+      "options": [
+       "Asking participants to agree to take part before the study starts",
+       "Keeping participants' names secret",
+       "Telling participants the true aim of the study and answering their questions at the end",
+       "Choosing participants at random"
+      ],
+      "correct": 2,
+      "feedback": [
+       "That is informed consent",
+       "That is confidentiality",
+       null,
+       null
+      ]
+     },
+     "solution": "Debriefing happens at the end: participants are told the real aim and any deception is explained",
+     "hint": "It happens after the study is finished"
+    },
+    {
+     "id": "rm07",
+     "level": 2,
+     "text": "Which experimental design uses the SAME participants in every condition?",
+     "choice": {
+      "options": [
+       "Independent groups design",
+       "Matched pairs design",
+       "Opportunity design",
+       "Repeated measures design"
+      ],
+      "correct": 3,
+      "feedback": [
+       "Independent groups uses different participants in each condition",
+       "Matched pairs uses different but matched participants in each condition",
+       null,
+       null
+      ]
+     },
+     "solution": "In repeated measures, every participant does every condition, so participant variables are controlled but order effects can occur",
+     "hint": "Each participant does the task more than once"
+    },
+    {
+     "id": "rm08",
+     "level": 2,
+     "text": "What is a confounding variable?",
+     "choice": {
+      "options": [
+       "A variable other than the IV that has affected the results",
+       "The variable that the researcher changes",
+       "The variable that the researcher measures",
+       "A prediction about the results"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "That is the independent variable",
+       "That is the dependent variable",
+       null
+      ]
+     },
+     "solution": "A confounding variable is an extra variable that has changed the DV, so we cannot be sure the IV caused the result",
+     "hint": "It 'confuses' the results"
+    },
+    {
+     "id": "rm09",
+     "level": 2,
+     "text": "Which of these is an example of qualitative data?",
+     "choice": {
+      "options": [
+       "The number of words recalled",
+       "A participant's description of how they felt during a task",
+       "Reaction time in seconds",
+       "A score out of 20 on a test"
+      ],
+      "correct": 1
+     },
+     "solution": "Qualitative data is in words (descriptions, feelings); quantitative data is in numbers",
+     "hint": "Qualitative data is not in numbers"
+    },
+    {
+     "id": "rm10",
+     "level": 2,
+     "text": "Which type of experiment takes place in a controlled, artificial environment, where the researcher manipulates the IV?",
+     "choice": {
+      "options": [
+       "Field experiment",
+       "Natural experiment",
+       "Laboratory experiment",
+       "Naturalistic observation"
+      ],
+      "correct": 2,
+      "feedback": [
+       "A field experiment takes place in a natural, everyday setting",
+       "In a natural experiment the IV changes naturally; the researcher does not manipulate it",
+       null,
+       null
+      ]
+     },
+     "solution": "A laboratory experiment has high control in an artificial setting; a field experiment manipulates the IV in a natural setting",
+     "hint": "Think about where the most control is possible"
+    },
+    {
+     "id": "rm11",
+     "level": 2,
+     "text": "Which sampling method selects people who happen to be available at the time, such as students in a school canteen? Give the term.",
+     "short": {
+      "accept": [
+       "opportunity sampling",
+       "opportunity sample",
+       "opportunity"
+      ]
+     },
+     "solution": "Opportunity sampling uses whoever is available and willing at the time; it is quick but may be biased",
+     "hint": "The researcher takes the chance to use whoever is there"
+    },
+    {
+     "id": "rm12",
+     "level": 2,
+     "text": "What name is given to a small trial run of a study, carried out before the main study to find problems? Give the term.",
+     "short": {
+      "accept": [
+       "pilot study",
+       "pilot",
+       "pilot test",
+       "pilot studies"
+      ]
+     },
+     "solution": "A pilot study tests the procedure on a few participants so that problems can be fixed before the main study",
+     "hint": "It is like a practice run before the real thing"
+    },
+    {
+     "id": "rm13",
+     "level": 3,
+     "text": "A researcher tests whether music affects concentration. Participants complete a puzzle with music and without music, and their puzzle scores are recorded. What is the independent variable?",
+     "choice": {
+      "options": [
+       "The puzzle scores",
+       "The number of participants",
+       "The time of day",
+       "Whether music is played or not"
+      ],
+      "correct": 3,
+      "feedback": [
+       "The puzzle score is what is measured, so it is the dependent variable",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "The IV is what the researcher changes: music or no music. The puzzle score is the DV",
+     "hint": "What does the researcher change between the two conditions?"
+    },
+    {
+     "id": "rm14",
+     "level": 3,
+     "text": "A psychologist investigates whether sleep affects memory. One group sleeps 8 hours and another group sleeps 4 hours; then both groups take a memory test. What is the dependent variable?",
+     "choice": {
+      "options": [
+       "The scores on the memory test",
+       "The number of hours of sleep",
+       "Which group each participant is in",
+       "The type of memory test chosen"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Hours of sleep is what the psychologist changes, so it is the IV",
+       null,
+       null
+      ]
+     },
+     "solution": "The DV is what is measured: memory test scores. The IV is the hours of sleep",
+     "hint": "What is measured at the end?"
+    },
+    {
+     "id": "rm15",
+     "level": 3,
+     "text": "Participants take a memory test in the morning and the same type of test again in the evening. Some do better in the evening simply because they have had practice. What is this problem called?",
+     "choice": {
+      "options": [
+       "A demand characteristic",
+       "An order effect",
+       "Social desirability",
+       "Ecological validity"
+      ],
+      "correct": 1
+     },
+     "solution": "Practice (or fatigue) from doing one condition first is an order effect, a problem in repeated measures designs",
+     "hint": "The problem comes from the order in which the conditions were done"
+    },
+    {
+     "id": "rm16",
+     "level": 3,
+     "text": "To reduce order effects in a repeated measures design, half the participants do condition 1 then condition 2, and the other half do condition 2 then condition 1. What is this technique called?",
+     "choice": {
+      "options": [
+       "Random allocation",
+       "Standardisation",
+       "Counterbalancing",
+       "Debriefing"
+      ],
+      "correct": 2
+     },
+     "solution": "Counterbalancing balances out order effects across the two conditions",
+     "hint": "The two orders 'balance' each other out"
+    },
+    {
+     "id": "rm17",
+     "level": 3,
+     "text": "Hypothesis: 'Students who revise with music will recall fewer words than students who revise in silence.' This states the direction of the difference. What type of hypothesis is it? Give the term.",
+     "short": {
+      "accept": [
+       "directional",
+       "directional hypothesis",
+       "one-tailed",
+       "one tailed",
+       "one-tailed hypothesis"
+      ],
+      "reject": [
+       "non-directional",
+       "non directional",
+       "two-tailed",
+       "two tailed",
+       "null"
+      ],
+      "feedback": {
+       "non-directional": "A non-directional hypothesis predicts a difference without saying which way",
+       "non directional": "A non-directional hypothesis predicts a difference without saying which way",
+       "two-tailed": "A two-tailed hypothesis predicts a difference without saying which way",
+       "two tailed": "A two-tailed hypothesis predicts a difference without saying which way",
+       "null": "A null hypothesis predicts NO difference"
+      }
+     },
+     "solution": "It is directional (one-tailed) because it predicts which group will do better",
+     "hint": "Does it say which group will recall more?"
+    },
+    {
+     "id": "rm18",
+     "level": 3,
+     "text": "A researcher puts up a poster asking for people to take part in a study, and uses everyone who replies. Which sampling method is this? Give the term.",
+     "short": {
+      "accept": [
+       "volunteer sampling",
+       "volunteer sample",
+       "volunteer",
+       "self-selected sampling",
+       "self-selected sample",
+       "self-selected"
+      ]
+     },
+     "solution": "Volunteer (self-selected) sampling: participants choose to take part by replying to an advert",
+     "hint": "The participants put themselves forward"
+    },
+    {
+     "id": "rm19",
+     "level": 4,
+     "text": "In a study, the mean number of words recalled was 14 in the 'silence' condition and 9 in the 'music' condition. Which conclusion fits these results?",
+     "choice": {
+      "options": [
+       "Music improved recall",
+       "There was no difference between the conditions",
+       "Every participant recalled more words in silence",
+       "On average, participants recalled more words in silence than with music"
+      ],
+      "correct": 3,
+      "feedback": [
+       null,
+       null,
+       "A mean is an average — some individuals may have done better with music",
+       null
+      ]
+     },
+     "solution": "The mean was higher in silence (14 vs 9), so on average recall was better in silence. A mean does not tell us about every individual",
+     "hint": "Compare the two means, and remember what a mean does and does not show"
+    },
+    {
+     "id": "rm20",
+     "level": 4,
+     "text": "A researcher watches children in a playground from a hidden position, so the children do not know they are being studied. What type of observation is this?",
+     "choice": {
+      "options": [
+       "Covert observation",
+       "Overt observation",
+       "Controlled observation",
+       "Participant observation"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Overt means the participants know they are being observed",
+       null,
+       "The researcher is not joining in with the children"
+      ]
+     },
+     "solution": "Covert means hidden: the children do not know they are being observed, so they behave naturally",
+     "hint": "Do the children know they are being watched?"
+    },
+    {
+     "id": "rm21",
+     "level": 4,
+     "text": "Two observers watch the same video of children playing and both record the number of aggressive acts. Their tallies are very similar. What does this show?",
+     "choice": {
+      "options": [
+       "The observation has low validity",
+       "The observation has good inter-observer reliability",
+       "The observation has good ecological validity",
+       "The study used a matched pairs design"
+      ],
+      "correct": 1
+     },
+     "solution": "When different observers record similar results, the observation has good inter-observer (inter-rater) reliability",
+     "hint": "Reliability is about consistency"
+    },
+    {
+     "id": "rm22",
+     "level": 4,
+     "text": "A study finds that as hours spent on social media go up, hours of sleep go down. What type of correlation is this?",
+     "choice": {
+      "options": [
+       "Positive correlation",
+       "No correlation",
+       "Negative correlation",
+       "Perfect positive correlation"
+      ],
+      "correct": 2,
+      "feedback": [
+       "In a positive correlation both variables increase together",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "As one variable increases the other decreases: a negative correlation",
+     "hint": "Do the two variables move in the same direction or opposite directions?"
+    },
+    {
+     "id": "rm23",
+     "level": 4,
+     "text": "A test gives similar scores when the same participants take it again a week later. Which quality of the test does this show? Give the term.",
+     "short": {
+      "accept": [
+       "reliability",
+       "reliable",
+       "test-retest reliability",
+       "test retest reliability"
+      ],
+      "reject": [
+       "validity",
+       "valid"
+      ],
+      "feedback": {
+       "validity": "Validity is whether a test measures what it claims to measure — consistency is a different quality",
+       "valid": "Validity is whether a test measures what it claims to measure — consistency is a different quality"
+      }
+     },
+     "solution": "Getting consistent results when a test is repeated shows reliability (test-retest reliability)",
+     "hint": "This quality is about consistency"
+    },
+    {
+     "id": "rm24",
+     "level": 4,
+     "text": "Explain one strength and one weakness of using a laboratory experiment.",
+     "rubric": {
+      "model_answer": "Strength: the researcher has high control over extraneous variables, for example using the same room, instructions and timing for everyone. This makes it easier to show that the IV caused the change in the DV, and the study can be repeated to check reliability. Weakness: the setting is artificial, so people may not behave as they would in everyday life. This means the study may have low ecological validity, and participants may show demand characteristics because they know they are being studied.",
+      "mark_scheme": "1 mark: strength identified (e.g. high control, can be replicated)\n1 mark: strength explained (e.g. cause and effect can be established)\n1 mark: weakness identified (e.g. artificial setting)\n1 mark: weakness explained (e.g. low ecological validity or demand characteristics)\n(Maximum 4 marks)",
+      "max_marks": 4
+     },
+     "solution": "Strength: control of variables, so cause and effect can be shown. Weakness: artificial setting, so low ecological validity",
+     "hint": "Think about control (good) and how realistic the setting is (bad)"
+    },
+    {
+     "id": "rm25",
+     "level": 5,
+     "text": "A study finds a strong positive correlation between ice cream sales and the number of people swimming outdoors. Which conclusion is valid?",
+     "choice": {
+      "options": [
+       "Eating ice cream causes people to go swimming",
+       "Swimming causes people to buy ice cream",
+       "There is no relationship between the variables",
+       "The two variables are related, but this does not show that one causes the other"
+      ],
+      "correct": 3
+     },
+     "solution": "Correlation does not show cause and effect; a third variable, such as hot weather, may affect both",
+     "hint": "Can a correlation tell us what causes what?"
+    },
+    {
+     "id": "rm26",
+     "level": 5,
+     "text": "Why might a researcher use a matched pairs design rather than an independent groups design?",
+     "choice": {
+      "options": [
+       "To reduce the effect of participant variables between the conditions",
+       "To avoid needing any participants",
+       "So that each participant can do every condition",
+       "To make the study quicker to set up"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       null,
+       "Doing every condition describes repeated measures",
+       "Matching takes extra time to set up"
+      ]
+     },
+     "solution": "Matching participants on key features (such as age or IQ) reduces participant variables while avoiding order effects",
+     "hint": "What is the risk when two different groups of people are compared?"
+    },
+    {
+     "id": "rm27",
+     "level": 5,
+     "text": "Which statement about ecological validity is accurate?",
+     "choice": {
+      "options": [
+       "It is how consistent results are when a study is repeated",
+       "It is how far findings can be applied to real-life settings",
+       "It means the study was carried out outdoors",
+       "It is the number of participants in a study"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Consistency when repeated is reliability",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Ecological validity is how well findings generalise to everyday, real-life settings",
+     "hint": "'Ecological' refers to the environment people normally live in"
+    },
+    {
+     "id": "rm28",
+     "level": 5,
+     "text": "Participants guess the aim of a study and change their behaviour to please the researcher. What is this called, and which procedure can reduce it?",
+     "choice": {
+      "options": [
+       "Order effects — reduced by counterbalancing",
+       "Investigator effects — reduced by random sampling",
+       "Demand characteristics — reduced by a single-blind procedure",
+       "Social desirability — reduced by a pilot study"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Counterbalancing reduces order effects, but the problem described is about guessing the aim",
+       null,
+       null,
+       null
+      ]
+     },
+     "solution": "Demand characteristics are cues that reveal the aim; a single-blind procedure (participants don't know the aim or condition) reduces them",
+     "hint": "First name the problem, then think about what participants would need NOT to know"
+    },
+    {
+     "id": "rm29",
+     "level": 5,
+     "text": "A researcher knows which condition each participant is in and may treat them differently without realising. Which procedure, in which neither the participants nor the person running the study know the conditions, would reduce this? Give the term.",
+     "short": {
+      "accept": [
+       "double-blind",
+       "double blind",
+       "double-blind procedure",
+       "double blind procedure",
+       "double-blind technique"
+      ],
+      "reject": [
+       "single-blind",
+       "single blind"
+      ],
+      "feedback": {
+       "single-blind": "In a single-blind procedure only the participants are unaware — here the researcher must be unaware too",
+       "single blind": "In a single-blind procedure only the participants are unaware — here the researcher must be unaware too"
+      }
+     },
+     "solution": "A double-blind procedure reduces both investigator effects and demand characteristics",
+     "hint": "Two groups of people are kept unaware"
+    },
+    {
+     "id": "rm30",
+     "level": 5,
+     "text": "A psychologist wants to find out whether students recall more words when they revise in silence or with music. Describe how she could carry out an experiment to test this.",
+     "rubric": {
+      "model_answer": "Use an opportunity sample of 30 students from one school, randomly allocated to two conditions (independent groups) to avoid order effects. IV: silence or music. Each group studies the same list of 20 words for 2 minutes in the same room, with standardised instructions. Then each student writes down as many words as they can in 2 minutes. DV: number of words recalled. Compare the mean scores. Ethics: get informed consent, give the right to withdraw, keep data confidential and debrief at the end.",
+      "mark_scheme": "1 mark: suitable sample and sampling method\n1 mark: experimental design with a reason (e.g. independent groups to avoid order effects)\n1 mark: IV clearly operationalised\n1 mark: DV clearly operationalised (number of words recalled)\n1 mark: standardised procedure / controls\n1 mark: an ethical issue and how it is dealt with\n(Maximum 6 marks)",
+      "max_marks": 6
+     },
+     "solution": "Sample, design, IV (music vs silence), DV (words recalled), controls such as the same list and timing, and ethics",
+     "hint": "Plan the who, the conditions, what is measured, the controls and the ethics"
+    }
+   ]
+  }
+ ]
+}

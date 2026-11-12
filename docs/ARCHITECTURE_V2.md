@@ -810,3 +810,17 @@ R14 Before handing in: "python3 -m tutor audit --file <your file>" (or "--subjec
 - /home/claude/claudemaxalan/tests/helpers.py
 - /home/claude/claudemaxalan/tests/test_skills.py
 - /home/claude/claudemaxalan/docs/ARCHITECTURE.md
+## 10. Implementation notes (lead, 12 Nov 2026 — these amend the sections above)
+
+- **Choice shuffle salt (§2.2, §2.4):** `shuffle_order(n, seed, salt="")`. Bank items call it with `salt=ref`, so letter positions do not depend on where authors put the correct option in the file. Without a salt the §2.2 formula is unchanged.
+- **Option text with a hyphen (§2.3 choice):** a line such as `e-books` or `D-Day` that equals an option as a whole names that option; it is not read as the letter E/D. `A - Mitochondria` (spaced) is still rule (b).
+- **Accepts with fillers:** accepts are also compared after filler stripping, so an accept such as `it is carried` can match. Audit WARNs on such accepts and ERRORs if any accept is not judged correct.
+- **ß:** survives casefolding; `strasse` for `straße` is correct with NOTE_ACCENTS. **Pinyin:** `v` = `ü`.
+- **Numeric short answers:** digit tokens are digit groups not glued to letters (`qq1918qq` is not 1918).
+- **Reason/check lines:** `sub`/`substitute` count as check words only with a digit or `=` on the line; `as` counts as a reason word only when text follows; a line that equals an option/accept is never discarded as a reason line. Fillers never consume a whole line.
+- **`leaks_answer` (§3.4):** for choice/short only the §3.4 rules apply (no v1 substring test); the letter pattern is case-insensitive.
+- **Skip phrases:** exact skip phrases ignore trailing `.,`.
+- **Auto-rejects:** exclude plural variants both ways, are sorted by distance, and are built only for typo-eligible accepts.
+- **`/reset`** also clears the student's `seen` rows.
+- **Audit:** shipped-content rules (L1–L4, L6, L8, L9, L11, kind mixes, the §4 table) apply only to `banks/`, `packs/` and subject modules, not to test fixtures. Audit WARNs on short items whose stem starts with "Why".
+- **Known contract limit:** options or accept/reject pairs that differ only by an apostrophe (its / it's) cannot coexist.

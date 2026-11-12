@@ -357,10 +357,10 @@
      "text": "'The city was a beast that never slept, its streets roaring with traffic.' What does the metaphor suggest about the city?",
      "choice": {
       "options": [
-       "It is peaceful and calm",
+       "It is peaceful, sleepy and welcoming at night",
        "It is noisy, restless and slightly threatening",
-       "It is empty and abandoned",
-       "It is small and old-fashioned"
+       "It is empty, silent and slowly falling apart",
+       "It is small, old-fashioned and rather dull"
       ],
       "correct": 1
      },
@@ -373,10 +373,10 @@
      "text": "A writer describes a storm with the words 'invaded', 'attacked', 'retreated' and 'battered'. What does this semantic field suggest about the storm?",
      "choice": {
       "options": [
-       "It is gentle and soothing",
-       "It is a joyful celebration",
+       "It is like a lullaby: gentle and soothing",
+       "It is like a party: joyful and lively",
        "It is like an army: powerful and hostile",
-       "It is dull and ordinary"
+       "It is like a library: quiet and orderly"
       ],
       "correct": 2
      },
@@ -480,10 +480,10 @@
      "text": "In 'The crowd was a sea of faces', why is the word 'sea' effective?",
      "choice": {
       "options": [
-       "It suggests the crowd is wet from the rain",
-       "It shows the crowd is standing on a beach",
-       "It suggests the crowd is huge and moves together like waves",
-       "It shows the crowd is silent and still"
+       "It suggests the crowd is wet from the heavy rain",
+       "It shows the crowd is standing on a sandy beach",
+       "It suggests the crowd is huge and moves like waves",
+       "It shows the crowd is small, silent and still"
       ],
       "correct": 2
      },
@@ -582,10 +582,10 @@
      "text": "What is foreshadowing?",
      "choice": {
       "options": [
-       "A scene set in the past",
+       "A scene that goes back to events in the past",
        "A clue early in a text about something that happens later",
-       "A story told by a narrator who uses 'I'",
-       "A detailed description of a setting"
+       "A story told by a narrator who uses 'I' and 'me'",
+       "A detailed description of the setting of a story"
       ],
       "correct": 1,
       "feedback": [
@@ -620,10 +620,10 @@
      "text": "What is a cyclical structure?",
      "choice": {
       "options": [
-       "The events are told in strict time order",
-       "The story is told by several narrators in turn",
-       "The story stops at a tense, unresolved moment",
-       "The text ends where it began, returning to the opening idea or setting"
+       "The events are told in strict time order from start to end",
+       "The story is told by several different narrators in turn",
+       "The story stops at a tense moment with nothing resolved",
+       "The text ends where it began, returning to the opening"
       ],
       "correct": 3,
       "feedback": [
@@ -775,9 +775,9 @@
      "text": "'Years later, Sam would remember that morning: the frost on the window, the empty kitchen, the note on the table.' What does this opening suggest?",
      "choice": {
       "options": [
-       "That morning was important and something significant happened",
-       "Sam has forgotten everything about that morning",
-       "The story is set on another planet",
+       "That morning was important: something significant happened",
+       "Sam has forgotten everything about that particular morning",
+       "The story is set on another planet, far in the future",
        "Sam is speaking directly to the reader as 'you'"
       ],
       "correct": 0
@@ -874,10 +874,10 @@
      "text": "Read: 'The house had been empty for years. Ivy crept over the windows. Inside, dust lay thick on every surface. Ellie pushed open the nursery door. In the corner, a rocking chair was moving.' How does the final sentence change the mood?",
      "choice": {
       "options": [
-       "It adds sudden tension by suggesting someone or something is there",
-       "It calms the reader by showing nothing is wrong",
-       "It reveals how the whole story ends",
-       "It makes the extract light-hearted and funny"
+       "It adds sudden tension: someone or something is there",
+       "It calms the reader by showing that nothing is wrong",
+       "It reveals exactly how the whole story is going to end",
+       "It makes the extract light-hearted, silly and funny"
       ],
       "correct": 0
      },
@@ -970,10 +970,10 @@
      "text": "Which statement about a third-person limited narrator is accurate?",
      "choice": {
       "options": [
-       "The reader follows events through one character's thoughts and feelings",
-       "The narrator uses 'I' throughout",
+       "The reader follows one character's thoughts and feelings",
+       "The narrator uses 'I' throughout and is a character",
        "The narrator reveals every character's private thoughts",
-       "The story is told entirely through dialogue"
+       "The story is told entirely through dialogue and letters"
       ],
       "correct": 0,
       "feedback": [
@@ -1024,10 +1024,10 @@
      "text": "A novel's first chapter is set in 2020. Chapter two begins: 'Thirty years earlier...' Which statement about this structure is accurate?",
      "choice": {
       "options": [
-       "Chapter two foreshadows the future",
-       "The novel must have a cyclical structure",
+       "Chapter two foreshadows events in the far future",
+       "The novel must have a cyclical structure overall",
        "Chapter two must be told in the second person",
-       "Chapter two is a flashback that may shed light on events in chapter one"
+       "Chapter two is a flashback that may shed light on the present"
       ],
       "correct": 3
      },
@@ -1317,10 +1317,10 @@
      "text": "Which sentence uses a colon correctly?",
      "choice": {
       "options": [
-       "You will: need a pen.",
-       "My favourite: colour is blue.",
-       "You will need three things: a pen, a ruler and a calculator.",
-       "She ran: quickly home."
+       "My favourite colour: is blue, and my brother's is green.",
+       "She ran: quickly all the way home from the station.",
+       "Bring three things: a pen, a ruler and a calculator.",
+       "The dog barked: loudly at the postman this morning."
       ],
       "correct": 2
      },
@@ -1507,10 +1507,10 @@
      "text": "What is the function of the commas in 'My brother, who is a chef, cooked dinner.'?",
      "choice": {
       "options": [
-       "They separate items in a list",
-       "They show where speech begins",
+       "They separate the items in a list of nouns",
+       "They show where the direct speech begins",
        "They mark off extra information (parenthesis)",
-       "They join two main clauses"
+       "They join two main clauses into one sentence"
       ],
       "correct": 2
      },
@@ -1614,10 +1614,10 @@
      "text": "What is a discourse marker?",
      "choice": {
       "options": [
-       "A punctuation mark that ends a sentence",
-       "A word or phrase that links ideas and guides the reader, such as 'however'",
-       "The headline at the top of an article",
-       "A word that describes a noun"
+       "A punctuation mark, such as a full stop, that ends a sentence",
+       "A word or phrase, such as 'however', that links ideas",
+       "A heading, such as a headline, at the top of an article",
+       "A word, such as 'tall', that describes a noun"
       ],
       "correct": 1
      },
@@ -1705,7 +1705,7 @@
      "choice": {
       "options": [
        "I am writing to express my concern about the proposed changes.",
-       "Hey, just wanted to say the changes are rubbish.",
+       "Hey, just wanted to say these changes are totally rubbish, mate.",
        "OMG, these changes are so annoying!",
        "Gonna tell you why these changes are a joke."
       ],
@@ -1812,10 +1812,10 @@
      "text": "A student is writing to the head teacher to argue for a longer lunch break. Which opening suits this audience and purpose?",
      "choice": {
       "options": [
-       "Dear Mrs Patel, I am writing to propose a longer lunch break for all students.",
-       "Yo Mrs Patel, lunch is way too short lol.",
-       "Once upon a time, there was a very short lunch break.",
-       "LUNCH BREAK SHOCK!"
+       "Dear Mrs Patel, I am writing to propose a longer lunch break.",
+       "Yo Mrs Patel, lunch is way too short and everyone hates it lol.",
+       "Once upon a time, in a school far away, there was a short lunch break.",
+       "LUNCH BREAK SHOCK: STUDENTS SAY THIRTY MINUTES IS NOT ENOUGH!"
       ],
       "correct": 0
      },
@@ -1904,10 +1904,10 @@
      "text": "Read: 'Every day, plastic pours into our oceans. Imagine a baby turtle tangled in your rubbish. Is that the world you want? We must act now.' Which technique is 'Imagine a baby turtle tangled in your rubbish'?",
      "choice": {
       "options": [
-       "Emotive language with direct address",
-       "Statistic",
-       "Expert opinion",
-       "Counter-argument"
+       "Emotive language and direct address",
+       "Statistics and factual evidence",
+       "Expert opinion and a quotation",
+       "Counter-argument and rebuttal"
       ],
       "correct": 0
      },
@@ -1920,10 +1920,10 @@
      "text": "A speech argues that school uniform should be scrapped. Which sentence is a counter-argument?",
      "choice": {
       "options": [
-       "Uniform is uncomfortable and expensive.",
-       "Some people claim uniform stops students judging each other's clothes.",
-       "Students should be free to express themselves.",
-       "Scrapping uniform would save families money."
+       "Uniform is uncomfortable, expensive and impractical for sport.",
+       "Some argue uniform stops students judging each other's clothes.",
+       "Students should be free to express themselves through clothes.",
+       "Scrapping uniform would save many families a lot of money."
       ],
       "correct": 1
      },
@@ -1995,10 +1995,10 @@
      "text": "Which statement about the conventions of a formal letter is accurate?",
      "choice": {
       "options": [
-       "If you begin with the person's name, you usually end with 'Yours sincerely'",
-       "You must always end with 'Yours faithfully'",
-       "You should never use paragraphs",
-       "Slang makes a formal letter more convincing"
+       "If you name the person, you usually end with 'Yours sincerely'",
+       "You must always end with 'Yours faithfully', whoever you write to",
+       "You should never use paragraphs in a formal letter",
+       "Slang and text speak make a formal letter more convincing"
       ],
       "correct": 0
      },
@@ -2027,10 +2027,10 @@
      "text": "Why do writers include a counter-argument in persuasive writing?",
      "choice": {
       "options": [
-       "To change their mind halfway through",
-       "To make the writing longer without adding ideas",
-       "To show they have considered other views, so their case seems stronger when they rebut them",
-       "To agree completely with the opposing side"
+       "To change their mind halfway through the argument",
+       "To make the writing longer without adding new ideas",
+       "To show they have considered other views before rebutting them",
+       "To agree completely with the people on the other side"
       ],
       "correct": 2
      },
@@ -2043,10 +2043,10 @@
      "text": "An article moves from a personal story about one family's flooded home to national figures about flooding. What is the main effect of this structure?",
      "choice": {
       "options": [
-       "It confuses the reader by changing the topic",
-       "It turns the article into a fictional story",
-       "It removes all emotion from the article",
-       "It moves from a human example to the bigger picture, so the issue feels personal and widespread"
+       "It makes the article confusing by changing topic",
+       "It turns the factual article into a fictional story",
+       "It removes emotion so the article seems neutral",
+       "It makes the issue feel both personal and widespread"
       ],
       "correct": 3
      },

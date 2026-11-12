@@ -171,10 +171,10 @@
      "text": "What do the witches prophesy for Banquo?",
      "choice": {
       "options": [
-       "He will become Thane of Cawdor",
-       "He will be killed by Macduff",
-       "His descendants will be kings, though he will not be king himself",
-       "He will become King of England"
+       "He will become Thane of Cawdor and then king",
+       "He will be killed by Macduff in a battle",
+       "His descendants will be kings, but he will not be king",
+       "He will become King of England after Edward"
       ],
       "correct": 2
      },
@@ -262,10 +262,10 @@
      "text": "Lady Macbeth calls on spirits to 'unsex me here'. What does she want?",
      "choice": {
       "options": [
-       "To be protected from the witches",
-       "To lose her feminine gentleness so she can be cruel enough to kill",
-       "To be forgiven for her sins",
-       "To become Queen of England"
+       "To be protected from the witches and their magic",
+       "To lose her feminine gentleness so she can be cruel",
+       "To be forgiven by God for her husband's sins",
+       "To become Queen of England instead of Scotland"
       ],
       "correct": 1
      },
@@ -279,10 +279,10 @@
      "text": "Why does Macbeth kill Duncan's guards (the chamberlains)?",
      "choice": {
       "options": [
-       "Because they attacked Lady Macbeth",
-       "Because Banquo ordered him to",
-       "To silence them, while claiming he acted out of fury and love for Duncan",
-       "Because they were spies from Norway"
+       "Because they had attacked Lady Macbeth in the night",
+       "Because Banquo ordered him to do it straight away",
+       "To silence them, while pretending he acted out of loyal fury",
+       "Because he discovered they were spies from Norway"
       ],
       "correct": 2
      },
@@ -296,9 +296,9 @@
      "text": "The apparitions in Act 4 Scene 1 say that no man born of a woman can harm Macbeth, and that he will not be defeated until Birnam Wood comes to Dunsinane. How does this make Macbeth feel?",
      "choice": {
       "options": [
-       "Terrified, so he surrenders to Malcolm",
-       "Guilty, so he confesses to Macduff",
-       "Uninterested, so he ignores the witches",
+       "Terrified, so he surrenders to Malcolm at once",
+       "Guilty, so he confesses everything to Macduff",
+       "Uninterested, so he ignores the witches' words",
        "Overconfident, because he thinks he cannot be defeated"
       ],
       "correct": 3
@@ -342,10 +342,10 @@
      "text": "'Will all great Neptune's ocean wash this blood / Clean from my hand?' What does this show about Macbeth just after the murder?",
      "choice": {
       "options": [
-       "He feels overwhelming guilt that he believes can never be washed away",
-       "He is proud of what he has done",
-       "He wants to escape by sea",
-       "He blames Banquo for the murder"
+       "He feels guilt so great that it can never be washed away",
+       "He is proud of what he has done and feels no regret",
+       "He wants to escape from Scotland by sea at once",
+       "He blames Banquo for the murder and wants revenge"
       ],
       "correct": 0
      },
@@ -359,10 +359,10 @@
      "text": "Compare Lady Macbeth's 'A little water clears us of this deed' (Act 2) with her sleepwalking in Act 5. What change does this show?",
      "choice": {
       "options": [
-       "She becomes calmer and more ruthless",
+       "She becomes calmer, colder and even more ruthless",
        "She moves from confident control to being overwhelmed by guilt",
-       "She forgets the murder completely",
-       "She confesses publicly to Malcolm"
+       "She forgets the murder completely by the final act",
+       "She confesses publicly to Malcolm and the lords"
       ],
       "correct": 1
      },
@@ -376,10 +376,10 @@
      "text": "Why does Macbeth arrange Banquo's murder?",
      "choice": {
       "options": [
-       "Banquo tried to steal Lady Macbeth's crown",
-       "The witches told him Banquo would kill him",
-       "He fears Banquo's suspicions and the prophecy that Banquo's descendants will be kings",
-       "Duncan's ghost ordered him to"
+       "Banquo tried to steal Lady Macbeth's crown at the banquet",
+       "The witches told him that Banquo would kill him",
+       "He fears Banquo's suspicions and the prophecy about his heirs",
+       "Duncan's ghost appeared and ordered him to do it"
       ],
       "correct": 2
      },
@@ -393,10 +393,10 @@
      "text": "Why does the prophecy that 'none of woman born' shall harm Macbeth fail to protect him?",
      "choice": {
       "options": [
-       "Macduff is a ghost",
-       "Malcolm breaks the spell with a charm",
-       "The witches take the prophecy back",
-       "Macduff was not born in the natural way, so the prophecy does not cover him"
+       "Macduff is protected by a witch's charm",
+       "Malcolm breaks the spell with a holy relic",
+       "The witches take back the prophecy in Act 5",
+       "Macduff was not born in the natural way"
       ],
       "correct": 3
      },
@@ -438,9 +438,9 @@
      "text": "Which statement about the Jacobean context of Macbeth is accurate?",
      "choice": {
       "options": [
-       "King James I believed in witchcraft and was thought to be descended from Banquo",
-       "The play was written for Queen Elizabeth I's coronation",
-       "King James I banned all plays about Scotland",
+       "James I believed in witches and claimed Banquo as an ancestor",
+       "The play was written to celebrate Queen Elizabeth I's coronation",
+       "King James I banned all plays about Scottish history",
        "Shakespeare wrote the play after King James I had died"
       ],
       "correct": 0
@@ -455,10 +455,10 @@
      "text": "Killing a king was seen as an especially terrible crime in Shakespeare's time. Why?",
      "choice": {
       "options": [
-       "Kings were elected by Parliament every year",
-       "Kings were believed to be chosen by God (the Divine Right of Kings)",
-       "Kings were believed to be immortal",
-       "Only witches were allowed to choose kings"
+       "Kings were elected by Parliament for a single year",
+       "Kings were believed to be chosen by God (Divine Right)",
+       "Kings were believed to be immortal and unable to die",
+       "Only witches were allowed to choose new kings"
       ],
       "correct": 1
      },
@@ -472,10 +472,10 @@
      "text": "In Act 2 Scene 4, Ross and an Old Man describe darkness in the daytime and Duncan's horses eating each other. What do these details suggest?",
      "choice": {
       "options": [
-       "Scotland is having an ordinary winter",
-       "The witches have started a war with England",
-       "Nature is disturbed because the natural order has been broken by the king's murder",
-       "Duncan's horses were badly trained"
+       "Scotland is simply having an ordinary, stormy winter",
+       "The witches have started a war between Scotland and England",
+       "Killing the king has disturbed the natural order",
+       "Duncan's horses were badly trained and hungry"
       ],
       "correct": 2
      },
@@ -694,10 +694,10 @@
      "text": "Who is Belle?",
      "choice": {
       "options": [
-       "Scrooge's younger sister",
-       "Bob Cratchit's wife",
-       "The young woman who ends her engagement to Scrooge because he loves money more",
-       "Fred's housekeeper"
+       "Scrooge's younger sister, who fetches him from school",
+       "Bob Cratchit's wife, who cooks the Christmas dinner",
+       "The young woman who ends her engagement to Scrooge",
+       "Fred's housekeeper, who serves the Christmas dinner"
       ],
       "correct": 2,
       "feedback": [
@@ -717,9 +717,9 @@
      "text": "What is Marley's ghost wrapped in?",
      "choice": {
       "options": [
-       "A wreath of holly with icicles",
-       "A green robe bordered with white fur",
-       "A black hooded garment",
+       "A wreath of holly decorated with shining icicles",
+       "A deep green robe bordered with soft white fur",
+       "A black hooded garment that hides his whole body",
        "A long chain of cash-boxes, keys, padlocks and ledgers"
       ],
       "correct": 3,
@@ -768,10 +768,10 @@
      "text": "When the charity collectors ask for money, Scrooge asks 'Are there no prisons?' What does this show?",
      "choice": {
       "options": [
-       "He thinks the poor should be dealt with by harsh institutions, not charity",
-       "He wants to visit a prison",
-       "He has just been released from prison",
-       "He is worried about rising crime"
+       "He thinks prisons and workhouses are enough for the poor",
+       "He wants to visit a prison to give money to the inmates",
+       "He has just been released from a debtors' prison",
+       "He is worried that crime is rising in London"
       ],
       "correct": 0
      },
@@ -819,10 +819,10 @@
      "text": "What does Scrooge do on Christmas morning in Stave 5?",
      "choice": {
       "options": [
-       "Sacks Bob Cratchit",
-       "Leaves London for ever",
-       "Marries Belle",
-       "Sends a prize turkey to the Cratchits without saying who sent it"
+       "Sacks Bob Cratchit and closes the counting-house",
+       "Leaves London for ever to live in the country",
+       "Marries Belle at a church in the city",
+       "Sends a prize turkey to the Cratchits anonymously"
       ],
       "correct": 3
      },
@@ -879,10 +879,10 @@
      "text": "Dickens describes Scrooge as 'solitary as an oyster' and 'hard and sharp as flint'. What do these similes suggest?",
      "choice": {
       "options": [
-       "He is cold, unfeeling and cut off from other people",
-       "He is warm and generous",
-       "He is fond of the sea",
-       "He is brave and adventurous"
+       "He is cold, unfeeling and cut off from others",
+       "He is warm, generous and popular with others",
+       "He is fond of the sea and of collecting stones",
+       "He is brave, adventurous and full of energy"
       ],
       "correct": 0
      },
@@ -896,10 +896,10 @@
      "text": "After watching Fezziwig's ball, Scrooge says he would like to say a word or two to his clerk. What does this show?",
      "choice": {
       "options": [
-       "He wants to complain about Bob's work",
+       "He wants to complain about the quality of Bob's work",
        "He is starting to regret how he treats Bob Cratchit",
-       "He wants Bob to organise a party",
-       "He is planning to sack Bob"
+       "He wants Bob to organise a Christmas party for him",
+       "He is planning to sack Bob as soon as he gets back"
       ],
       "correct": 1
      },
@@ -913,10 +913,10 @@
      "text": "When Scrooge asks if Tiny Tim will live, the Ghost of Christmas Present repeats Scrooge's words about the 'surplus population'. Why?",
      "choice": {
       "options": [
-       "To praise his good business sense",
-       "To remind him to pay his taxes",
+       "To praise him for his good sense in business matters",
+       "To remind him to pay his taxes before the new year",
        "To make him ashamed of his cruel attitude to the poor",
-       "To show that he was right all along"
+       "To show him that he was right about the poor all along"
       ],
       "correct": 2
      },
@@ -930,10 +930,10 @@
      "text": "In Stave 4, people sell a dead man's belongings at Old Joe's shop. What does this scene show Scrooge?",
      "choice": {
       "options": [
-       "That Old Joe is his long-lost brother",
-       "That Tiny Tim has recovered",
-       "That Belle has become rich",
-       "How little anyone cared for the dead man, who turns out to be Scrooge himself"
+       "That Old Joe is Scrooge's long-lost brother",
+       "That Tiny Tim has recovered and is now well",
+       "That Marley's ghost is still haunting the city",
+       "That the dead man, who is Scrooge, died unloved"
       ],
       "correct": 3
      },
@@ -992,10 +992,10 @@
      "text": "What is the main purpose of Ignorance and Want in Stave 3?",
      "choice": {
       "options": [
-       "To add comedy to a sad stave",
-       "To warn readers that neglecting poor children will lead society to disaster",
-       "To show Scrooge's own childhood",
-       "To reveal Marley's secret"
+       "To add some comedy to a sad and serious stave",
+       "To warn that neglecting poor children will ruin society",
+       "To show what Scrooge was like as a lonely child",
+       "To reveal the secret of how Marley really died"
       ],
       "correct": 1
      },
@@ -1009,10 +1009,10 @@
      "text": "Why does Dickens make Scrooge's transformation so complete in Stave 5?",
      "choice": {
       "options": [
-       "To show that ghosts are dangerous",
-       "To prove that money is the key to happiness",
-       "To show that anyone, even the meanest person, can change and become generous",
-       "To show that Scrooge has lost his memory"
+       "To show that ghosts are dangerous and should be feared",
+       "To prove that money is the true key to happiness",
+       "To show that anyone, even the meanest person, can change",
+       "To show that Scrooge has lost his memory of the past"
       ],
       "correct": 2
      },
@@ -1026,10 +1026,10 @@
      "text": "Which statement about the structure of A Christmas Carol is accurate?",
      "choice": {
       "options": [
-       "It has three acts and is written as a play",
-       "It is narrated in the first person by Scrooge",
+       "It has three acts and is written as a stage play",
+       "It is narrated in the first person by Scrooge himself",
        "It begins on Christmas Day and ends on New Year's Eve",
-       "It has five staves and moves through past, present and future before Scrooge's change"
+       "It has five staves covering past, present and future"
       ],
       "correct": 3
      },
@@ -1210,10 +1210,10 @@
      "text": "Why did Mr Birling sack Eva Smith from his factory?",
      "choice": {
       "options": [
-       "She stole money from the office",
+       "She stole money from the office to pay her rent",
        "She was one of the leaders of a strike for higher wages",
-       "She was rude to Sheila in a shop",
-       "She was always late for work"
+       "She was rude to Sheila while serving her in a shop",
+       "She was always late for work and often absent"
       ],
       "correct": 1,
       "feedback": [
@@ -1314,10 +1314,10 @@
      "text": "How does Sheila react when she realises her part in Eva's story?",
      "choice": {
       "options": [
-       "She denies everything and blames Eva",
+       "She denies everything and blames Eva for what happened",
        "She feels genuinely guilty and accepts responsibility",
-       "She laughs and leaves the house",
-       "She insists the Inspector is lying"
+       "She laughs it off and leaves the house to see a friend",
+       "She insists that the Inspector is lying to them all"
       ],
       "correct": 1
      },
@@ -1393,10 +1393,10 @@
      "text": "Why did Priestley set the play in 1912 but write it for an audience in 1945?",
      "choice": {
       "options": [
-       "So the audience could see how wrong Birling's confident predictions were and learn from the past",
-       "Because the law required plays to be set in the past",
-       "Because he did not know about events after 1912",
-       "To make the costumes cheaper"
+       "So the audience could see how wrong Birling's predictions were",
+       "Because the law required all plays to be set in the past",
+       "Because he knew nothing about events after 1912",
+       "To make the costumes and the set cheaper to produce"
       ],
       "correct": 0
      },
@@ -1410,10 +1410,10 @@
      "text": "How do Sheila and Eric differ from their parents by the end of the play?",
      "choice": {
       "options": [
-       "The parents feel more guilty than their children",
-       "The younger generation accepts responsibility, while the parents mostly refuse to change",
-       "Everyone in the family changes equally",
-       "Sheila and Eric decide that nothing happened"
+       "The parents feel far more guilty than their children",
+       "The children accept responsibility; the parents mostly do not",
+       "Everyone in the family changes equally by the end",
+       "Sheila and Eric decide that nothing really happened"
       ],
       "correct": 1
      },
@@ -1427,10 +1427,10 @@
      "text": "What news does the final phone call of the play bring?",
      "choice": {
       "options": [
-       "Eva Smith is alive and working at Milwards",
-       "Gerald has been arrested",
-       "Another young woman's death has been reported, and a real police inspector is coming to question them",
-       "Mr Birling has been given his knighthood"
+       "News that Eva Smith is alive and working at Milwards",
+       "News that Gerald has been arrested by the police",
+       "News of another young woman's death and a real inspector coming",
+       "News that Mr Birling has been given his knighthood"
       ],
       "correct": 2
      },
@@ -1489,10 +1489,10 @@
      "text": "Which statement about Priestley's views is accurate?",
      "choice": {
       "options": [
-       "He was a socialist who believed society should take collective responsibility for its members",
-       "He was a capitalist who agreed with Mr Birling",
+       "He was a socialist who believed in collective responsibility",
+       "He was a capitalist who shared Mr Birling's views",
        "He believed the class system should never change",
-       "He thought women should not work"
+       "He thought women should stay at home and not work"
       ],
       "correct": 0
      },
@@ -1506,9 +1506,9 @@
      "text": "What is the main dramatic purpose of the Inspector?",
      "choice": {
       "options": [
-       "To arrest Eric for theft",
-       "To act as Priestley's mouthpiece, challenging the Birlings to accept responsibility",
-       "To provide comic relief",
+       "To arrest Eric for stealing from his father's firm",
+       "To voice Priestley's message of social responsibility",
+       "To provide comic relief in a serious, tense play",
        "To make sure Mr Birling gets his knighthood"
       ],
       "correct": 1
@@ -1540,10 +1540,10 @@
      "text": "Why is Eva Smith important in the play beyond being a single character?",
      "choice": {
       "options": [
-       "She is secretly Sheila's sister",
-       "She is the Inspector in disguise",
+       "She is secretly Sheila's long-lost sister",
+       "She is the Inspector's daughter in disguise",
        "She is a famous actress the Birlings admire",
-       "She represents the many working-class people affected by the actions of the powerful"
+       "She represents the working class as a whole"
       ],
       "correct": 3
      },
@@ -1726,10 +1726,10 @@
      "text": "In 'Ozymandias', what remains of the king's statue?",
      "choice": {
       "options": [
-       "A complete statue on a golden throne",
-       "Two huge stone legs and a broken face half-buried in the sand",
+       "A complete statue sitting on a golden throne",
+       "Two huge stone legs and a broken face in the sand",
        "Only an empty pedestal with no words on it",
-       "A ruined palace full of treasure"
+       "A ruined palace still full of gold treasure"
       ],
       "correct": 1
      },
@@ -1811,10 +1811,10 @@
      "text": "Blake hears 'mind-forg'd manacles' in 'London'. What does this image suggest?",
      "choice": {
       "options": [
-       "People are trapped by ways of thinking and by the society around them",
-       "People are making chains in factories",
-       "Prisoners are escaping from jail",
-       "Blacksmiths are the happiest workers in London"
+       "People are trapped by society and by their own minds",
+       "People are making iron chains in London's factories",
+       "Prisoners are escaping from the jails of London",
+       "Blacksmiths are the happiest workers in the city"
       ],
       "correct": 0
      },
@@ -1847,8 +1847,8 @@
       "options": [
        "Great kings are always remembered",
        "Travelling in the desert is dangerous",
-       "Human power and pride are temporary; time and nature outlast them",
-       "Egypt was a peaceful country"
+       "Human power and pride are temporary",
+       "Egypt was a peaceful, wealthy country"
       ],
       "correct": 2
      },
@@ -1865,7 +1865,7 @@
        "Learning to drive a tank",
        "Writing letters to a pen friend",
        "Missing his family's farm",
-       "The memory of a man he shot, which keeps coming back"
+       "The memory of a man he shot"
       ],
       "correct": 3
      },
@@ -1907,10 +1907,10 @@
      "text": "In 'Exposure', Owen repeats the line 'But nothing happens.' What is the effect?",
      "choice": {
       "options": [
-       "It emphasises the boredom and hopelessness of waiting in the freezing trenches",
-       "It shows the soldiers are enjoying a peaceful rest",
-       "It suggests the war has ended",
-       "It shows the enemy has surrendered"
+       "It stresses the boredom and hopelessness of waiting",
+       "It shows the soldiers enjoying a peaceful night's rest",
+       "It suggests that the war has finally come to an end",
+       "It shows that the enemy has quietly surrendered"
       ],
       "correct": 0
      },
@@ -1924,10 +1924,10 @@
      "text": "In 'The Charge of the Light Brigade', what does 'Someone had blunder'd' reveal?",
      "choice": {
       "options": [
-       "The soldiers were cowards",
-       "The charge happened because of a mistake by commanders",
-       "The enemy made a tactical error",
-       "The poet himself gave the order"
+       "The soldiers were cowards who refused to fight",
+       "Commanders made a mistake that caused the charge",
+       "The enemy made a serious tactical error",
+       "The poet himself gave the order to charge"
       ],
       "correct": 1
      },
@@ -1941,10 +1941,10 @@
      "text": "How do 'Ozymandias' and 'My Last Duchess' present powerful men in a similar way?",
      "choice": {
       "options": [
-       "Both celebrate the kindness of powerful leaders",
-       "Both are set during the First World War",
-       "Both show proud, controlling rulers whose arrogance is exposed to the reader",
-       "Both are written by Wilfred Owen"
+       "Both celebrate the kindness and wisdom of powerful leaders",
+       "Both are set on the battlefields of the First World War",
+       "Both show proud, controlling rulers whose arrogance is exposed",
+       "Both are dramatic monologues written by Wilfred Owen"
       ],
       "correct": 2
      },
@@ -1958,10 +1958,10 @@
      "text": "In 'London', Blake describes the streets and the Thames as 'charter'd'. What is he criticising?",
      "choice": {
       "options": [
-       "That London has too many bridges",
-       "That the river is too clean",
-       "That the streets are badly mapped",
-       "That even public spaces and nature are owned and controlled by the powerful"
+       "That London has far too many bridges over the river",
+       "That the river Thames floods the streets every winter",
+       "That the streets of London are badly mapped and named",
+       "That the rich and powerful own and control everything"
       ],
       "correct": 3
      },
@@ -2004,10 +2004,10 @@
      "text": "Which statement about 'War Photographer' by Carol Ann Duffy is accurate?",
      "choice": {
       "options": [
-       "It contrasts suffering in war zones with the indifference of people at home",
-       "It is spoken by a soldier in the trenches",
-       "It celebrates the excitement of war",
-       "It is set in Victorian London"
+       "It contrasts suffering in war zones with indifference at home",
+       "It is spoken by a soldier fighting in the trenches",
+       "It celebrates the excitement and glory of war",
+       "It is set in the streets of Victorian London"
       ],
       "correct": 0
      },
@@ -2021,9 +2021,9 @@
      "text": "Which statement about 'Kamikaze' by Beatrice Garland is accurate?",
      "choice": {
       "options": [
-       "A British pilot is celebrated for a bombing raid",
-       "A Japanese pilot turns back from his mission and is then rejected by his family and community",
-       "It describes a nurse in wartime London",
+       "A British pilot is celebrated for a daring bombing raid",
+       "A Japanese pilot turns back and is then shunned by his family",
+       "A nurse describes caring for soldiers in wartime London",
        "The pilot completes his mission and is honoured as a hero"
       ],
       "correct": 1
@@ -2038,10 +2038,10 @@
      "text": "Which statement about 'Poppies' by Jane Weir is accurate?",
      "choice": {
       "options": [
-       "A soldier describes fighting in the Crimean War",
-       "A Duke describes his collection of paintings",
-       "A mother describes her feelings as her son leaves home, with links to war and remembrance",
-       "A child describes a storm on an island"
+       "A soldier describes charging into battle in the Crimean War",
+       "A Duke describes his collection of fine paintings",
+       "A mother describes her feelings as her son leaves home",
+       "A child describes a frightening storm on an island"
       ],
       "correct": 2
      },
@@ -2055,10 +2055,10 @@
      "text": "How do 'Exposure' and 'Storm on the Island' both present nature?",
      "choice": {
       "options": [
-       "As gentle and comforting",
+       "As gentle and comforting to those who suffer",
        "As a beautiful backdrop for a love story",
        "As something people have completely tamed",
-       "As a powerful, hostile force that people cannot control"
+       "As a hostile force that people cannot control"
       ],
       "correct": 3
      },
@@ -2372,10 +2372,10 @@
      "text": "Why does Romeo never receive Friar Laurence's letter explaining the plan?",
      "choice": {
       "options": [
-       "Balthasar loses it on the road",
-       "Tybalt steals it",
-       "Friar John is shut in a house because of the plague and cannot deliver it",
-       "Juliet forgets to send it"
+       "Balthasar loses the letter on the road to Mantua",
+       "Paris intercepts the letter and burns it",
+       "Friar John is quarantined because of the plague",
+       "Juliet forgets to tell the Friar to send it"
       ],
       "correct": 2
      },
@@ -2389,9 +2389,9 @@
      "text": "What happens in Act 3 Scene 1?",
      "choice": {
       "options": [
-       "Romeo and Tybalt become friends",
-       "Tybalt is banished by the Prince",
-       "Juliet marries Paris",
+       "Romeo and Tybalt make peace and become friends",
+       "Tybalt is banished to Mantua by the Prince",
+       "Juliet secretly marries Paris at the church",
        "After Tybalt kills Mercutio, Romeo kills Tybalt"
       ],
       "correct": 3
@@ -2456,10 +2456,10 @@
      "text": "How does the Prologue shape the audience's response to the play?",
      "choice": {
       "options": [
-       "It hides the ending to create a surprise",
-       "It reveals that the lovers will die, creating dramatic irony and a sense of fate",
-       "It introduces a comic subplot",
-       "It lists the actors in order of appearance"
+       "It hides the ending to create a big surprise at the end",
+       "It reveals the ending, creating dramatic irony and a sense of fate",
+       "It introduces a comic subplot about the servants",
+       "It lists the actors and characters in order of appearance"
       ],
       "correct": 1
      },
@@ -2473,10 +2473,10 @@
      "text": "When Romeo and Juliet first meet, their first fourteen lines together form a sonnet. What does this suggest?",
      "choice": {
       "options": [
-       "They are arguing about the feud",
-       "They are reading from a book",
-       "Their love is perfectly matched, as they complete each other's lines",
-       "They dislike each other"
+       "They are arguing bitterly about the family feud",
+       "They are reading lines aloud from a book of poems",
+       "Their love is perfectly matched and in harmony",
+       "They dislike each other from the very first moment"
       ],
       "correct": 2
      },
@@ -2544,9 +2544,9 @@
      "text": "Which statement about fate in Romeo and Juliet is accurate?",
      "choice": {
       "options": [
-       "The Prologue calls them 'star-cross'd lovers', suggesting their deaths are fated",
-       "Fate is never mentioned in the play",
-       "Romeo always accepts his fate calmly",
+       "The Prologue calls them 'star-cross'd lovers', suggesting fate",
+       "Fate and the stars are never mentioned in the play",
+       "Romeo always accepts his fate calmly and quietly",
        "The ending is caused only by the Nurse's lies"
       ],
       "correct": 0
@@ -2562,9 +2562,9 @@
      "choice": {
       "options": [
        "Daughters freely chose their own husbands in Elizabethan England",
-       "Fathers expected daughters to obey them over marriage, but his threats to disown her are extreme",
-       "Capulet wants Juliet to marry Romeo",
-       "Fathers had no say in marriages at that time"
+       "Fathers expected obedience in marriage, but his threats are extreme",
+       "Capulet actually wants Juliet to marry Romeo instead",
+       "Fathers had no say in their daughters' marriages then"
       ],
       "correct": 1
      },
@@ -2578,10 +2578,10 @@
      "text": "How is the feud resolved at the end of the play?",
      "choice": {
       "options": [
-       "The Prince banishes both families",
-       "Paris marries Juliet's cousin",
-       "Montague and Capulet are reconciled and promise golden statues of each other's child",
-       "The feud continues, worse than before"
+       "The Prince banishes both families from Verona for ever",
+       "Paris marries Juliet's cousin to unite the families",
+       "The fathers make peace and promise golden statues of the lovers",
+       "The feud continues and becomes worse than before"
       ],
       "correct": 2
      },
@@ -2595,10 +2595,10 @@
      "text": "Which statement about how Shakespeare presents Tybalt is accurate?",
      "choice": {
       "options": [
-       "He is a gentle peacemaker like Benvolio",
-       "He is secretly in love with Juliet",
-       "He is Romeo's closest friend",
-       "He is proud and aggressive, saying he hates the word 'peace'"
+       "He is a gentle peacemaker, just like Benvolio",
+       "He is secretly in love with his cousin Juliet",
+       "He is Romeo's closest friend and loyal ally",
+       "He is proud and aggressive, and says he hates peace"
       ],
       "correct": 3
      },
@@ -2765,9 +2765,9 @@
      "choice": {
       "options": [
        "He tramples over a young girl in the street",
-       "He robs a bank",
-       "He attacks Sir Danvers Carew",
-       "He sets fire to a house"
+       "He robs a bank in the middle of the night",
+       "He attacks Sir Danvers Carew with a cane",
+       "He sets fire to a house on a quiet street"
       ],
       "correct": 0,
       "feedback": [
@@ -2890,10 +2890,10 @@
      "text": "How do people react when they see Hyde?",
      "choice": {
       "options": [
-       "They find him handsome and charming",
-       "They feel instant disgust, though they cannot say exactly why",
-       "They think he looks just like Jekyll",
-       "They do not notice him at all"
+       "They find him handsome, charming and polite",
+       "They feel instant disgust but cannot say why",
+       "They think he looks exactly like Dr Jekyll",
+       "They hardly notice him at all in the street"
       ],
       "correct": 1
      },
@@ -2907,10 +2907,10 @@
      "text": "Mr Guest, Utterson's clerk, compares a note from Jekyll with a letter signed by Hyde. What does he notice?",
      "choice": {
       "options": [
-       "One of them is written in French",
-       "Neither of them is signed",
+       "One note is written in French and the other in English",
+       "Neither of the two documents has a signature at the end",
        "The handwriting is almost identical, only sloped differently",
-       "Hyde's letter is written in pencil"
+       "Hyde's letter is written in pencil rather than in ink"
       ],
       "correct": 2
      },
@@ -2924,10 +2924,10 @@
      "text": "In 'Incident at the Window', what do Utterson and Enfield see?",
      "choice": {
       "options": [
-       "Hyde climbing out of the window",
-       "Lanyon waving from a carriage",
-       "Poole arguing with Hyde",
-       "Jekyll at a window, whose face suddenly shows terror before the window is shut"
+       "Hyde climbing out of the window into the yard",
+       "Lanyon waving at them from a passing carriage",
+       "Poole arguing angrily with Hyde at the door",
+       "Jekyll at a window, suddenly looking terrified"
       ],
       "correct": 3
      },
@@ -2968,9 +2968,9 @@
      "choice": {
       "options": [
        "Secrecy and mystery, as the truth is hidden",
-       "That it is the middle of summer",
-       "That London is clean and modern",
-       "That Hyde is a sailor"
+       "That it is a hot, bright day in midsummer",
+       "That London is a clean and modern city",
+       "That Hyde works as a sailor on the river"
       ],
       "correct": 0
      },
@@ -2984,10 +2984,10 @@
      "text": "Why is Utterson reluctant to expose Jekyll's secret?",
      "choice": {
       "options": [
-       "He is secretly working with Hyde",
-       "He wants to protect his friend's reputation and avoid scandal",
-       "He is too ill to leave his house",
-       "He has never met Jekyll"
+       "He is secretly working with Hyde for money",
+       "He wants to protect his friend's reputation",
+       "He is too ill to leave his house in London",
+       "He does not know Jekyll well enough to care"
       ],
       "correct": 1
      },
@@ -3001,10 +3001,10 @@
      "text": "In Jekyll's full statement, why did he first make the potion?",
      "choice": {
       "options": [
-       "To cure Lanyon's illness",
-       "To become invisible",
+       "To cure his friend Lanyon of a serious illness",
+       "To make himself invisible so he could spy on people",
        "To separate the good and evil sides of his nature",
-       "To become rich"
+       "To make himself rich by selling the medicine"
       ],
       "correct": 2
      },
@@ -3018,10 +3018,10 @@
      "text": "Why does Jekyll lose control of the transformations near the end?",
      "choice": {
       "options": [
-       "Poole hides the potion from him",
-       "Utterson destroys his laboratory",
-       "Lanyon steals his notes",
-       "He turns into Hyde without the potion, and new supplies of the salt do not work"
+       "Poole hides the potion and refuses to give it back",
+       "Utterson destroys his laboratory to protect him",
+       "Lanyon steals his notes and the recipe for the potion",
+       "He transforms without the potion, and his special salt runs out"
       ],
       "correct": 3
      },
@@ -3082,10 +3082,10 @@
      "text": "Hyde is described as 'ape-like'. Which Victorian fear does this reflect?",
      "choice": {
       "options": [
-       "That apes were escaping from London Zoo",
-       "That humans might be closer to animals than they believed and could become more primitive",
-       "That electricity would make cities dangerous",
-       "That machines would replace workers"
+       "That apes were escaping from London Zoo at night",
+       "That humans might slide back into a primitive, animal state",
+       "That electricity would make cities too dangerous",
+       "That machines would soon replace all workers"
       ],
       "correct": 1
      },
@@ -3099,10 +3099,10 @@
      "text": "Why does Stevenson tell most of the story through Utterson rather than Jekyll?",
      "choice": {
       "options": [
-       "Because Utterson is the villain",
-       "Because Jekyll cannot write",
-       "So the reader shares Utterson's confusion and the mystery lasts until the final chapters",
-       "So the ending is revealed in the first chapter"
+       "Because Utterson is secretly the villain of the story",
+       "Because Jekyll is too busy to write his own story",
+       "So the reader shares his confusion and the mystery lasts",
+       "So the ending can be revealed in the first chapter"
       ],
       "correct": 2
      },
@@ -3117,9 +3117,9 @@
      "choice": {
       "options": [
        "It is told entirely in letters between Jekyll and Hyde",
-       "It opens with Jekyll's confession",
-       "It is a play in five acts",
-       "It ends with two documents, Lanyon's narrative and Jekyll's statement, that reveal the truth"
+       "It opens with Jekyll's full confession of his crimes",
+       "It is a play in five acts set in a single room",
+       "It ends with Lanyon's and Jekyll's written accounts"
       ],
       "correct": 3
      },
