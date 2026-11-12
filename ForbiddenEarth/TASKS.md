@@ -342,3 +342,21 @@
 Правила — как в README и задачах 2–3: Wikimedia Commons (PD, CC0, CC BY, CC BY-SA, OGL v3.0), госсайты США (NPS и др.), без NC/ND, без водяных знаков, без портретов и крупных лиц, без тел.
 
 Результат — как в задаче 8: `ForbiddenEarth/video05/visuals/src/<папка>/` (12–15 кандидатов с JSON), `video05/visuals/maps/` (карты для 10 мест), `video05/render/candidates_<папка>.jpg`, скрипты сборки скопированы в `video05/visuals/`. В отчёте — где кадров мало.
+
+## 11. Озвучка и полное видео video05 — TODO
+
+Делается после задачи 10. Название: **The Oldest Places Still in Use Today**. Текст: `ForbiddenEarth/video05/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, плашки с возрастом, две схемы и произношение: `ForbiddenEarth/video05/script/visuals_plan.md`.
+
+Озвучка — как в задаче 9: `voice_build.py` со словарями под этот текст (числа и годы → слова: «1725» → «seventeen twenty-five», «859» → «eight fifty-nine», «705» → «seven oh five», «548 and 565», «the year 125», «609», «256 BC» → «two fifty-six B C», «1300 and 1190 BC», «3000 BC» → «three thousand B C», «668,000 hectares», «33 kilometers», «427 wells», «1963», «2016», «1906», «1970», «1923», «52 generations», «35 rooms», «150 people», «43 meters», «22 meters»); фонемы по списку, Kokoro `am_michael`, 0.95, проверка Whisper. Результат в `video05/voice/`.
+
+Видео — как в задаче 9, из кадров задачи 10, плюс:
+- плашка с возрастом на каждом месте (тексты в таблице `visuals_plan.md`), появляется вместе с «Number …» и держится ~6 с;
+- две схемы кодом: разделение реки в Дуцзянъяне (раздел 07) и разрез каната с Эйфелевой башней (раздел 08).
+
+Результат:
+- полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS — Алану файлом в чат (до 400 МиБ);
+- `video05/render/review_720p.mp4` (до 45 МБ), `video05/render/contact_sheet_full.jpg`;
+- `video05/visuals/credits.txt` и `video05/visuals/credits_youtube.txt` (не больше 3800 символов);
+- `video05/youtube/chapters.txt`: `0:00 Intro`, `#10 Sobrino de Botín, Madrid` … `#1 Byblos, Lebanon`, `Outro`.
+
+Срок: видео нужно Алану 20 ноября (выход 21 ноября). В отчёте — длина, что послушать и проверить глазами.
