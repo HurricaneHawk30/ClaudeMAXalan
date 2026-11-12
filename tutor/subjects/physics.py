@@ -27,7 +27,19 @@ Draft = dict
 
 # ================================================================ helpers
 
+MAX_EXACT_SF = 4      # exact answers with more significant figures ask for rounding
+
+
 def _q(text: str, answer: Answer, solution: str, hint: str, mistakes=()) -> Draft:
+    """Assemble a draft; long exact answers (e.g. 22736 J) get an explicit s.f. instruction."""
+    if (answer.kind == "number" and answer.dp is None and answer.sf is None
+            and answer.form == "any" and sig_digits(answer.value) > MAX_EXACT_SF):
+        sf = next(k for k in (3, 4, 5, 6) if not near_half(answer.value, sf=k))
+        u = answer.display.split(" ", 1)[1] if " " in answer.display else ""
+        shown = unit(fmt_sf(answer.value, sf), u)
+        text = f"{text} Give your answer to {sf} significant figures."
+        solution = f"{solution} = {shown} ({sf} s.f.)"
+        answer = num_answer(answer.value, shown, sf=sf)
     return {"text": text, "answer": answer, "solution": solution, "hint": hint,
             "mistakes": list(mistakes)}
 
@@ -51,7 +63,8 @@ def _terminating(v: Fraction) -> bool:
 
 
 def _is_short(v) -> bool:
-    return isinstance(v, (int, Fraction)) and _terminating(Fraction(v)) and sig_digits(Fraction(v)) <= 3
+    return (isinstance(v, (int, Fraction)) and _terminating(Fraction(v))
+            and sig_digits(Fraction(v)) <= MAX_EXACT_SF)
 
 
 def _final(v, u: str, sf: int = 3) -> tuple[Answer, str, str]:
@@ -276,7 +289,7 @@ def _acc_3(rng):
 def _acc_4(rng):
     def make(r):
         a = _choice(r, ("0.05", "0.1", "0.2", "0.25", "0.5"))
-        mins = _choice(r, ("0.5", "1", "1.5", "2", "3"))
+        mins = _choice(r, ("1", "1.5", "2", "2.5", "3"))
         dv = a * 60 * mins
         if dv > 50 or dv * 2 != int(dv * 2):
             return None
@@ -391,9 +404,10 @@ def _force_5(rng):
                    _m(m * (v - u), "N", "Divide the change in velocity by the time to get the acceleration first")])
 
     def make(r):
-        m = r.randrange(6, 21) * 100
-        drive = r.randrange(10, 61) * 100
-        resist = r.randrange(2, drive // 100) * 100
+        m = r.randrange(8, 21) * 100
+        resist = r.randrange(3, 16) * 100
+        a_target = Fraction(r.randrange(2, 15), 4)            # 0.5 .. 3.5 m/s²
+        drive = int(round((m * a_target + resist) / 100)) * 100
         return Fraction(drive - resist, m), m, drive, resist
     a, m, drive, resist = _picked(rng, make)
     ans, tail, shown = _final(a, "m/s²")

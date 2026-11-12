@@ -13,9 +13,9 @@ from typing import Callable
 
 from ..content.base import Answer, Mistake, Problem, Skill, Subject, Topic, YearSpec
 from ..content.fmt import (
-    acosd, asind, atand, build, check_level, cosd, fmt_dp, fmt_num, frac_str, group,
+    acosd, asind, atand, build, check_level, coef_term, cosd, fmt_dp, fmt_num, frac_str, group,
     is_whole, lin_factor, mixed_str, money, money_text, near_half, num_answer,
-    num_mistake, poly, poly_mul, retry, sig_digits, signed, sind, std_answer,
+    num_mistake, poly, poly_mul, retry, safe_exact, sig_digits, signed, sind, std_answer,
     std_mistake, sup, tand, terms, unit,
 )
 
@@ -40,6 +40,20 @@ def _q(text: str, answer: Answer, solution: str, hint: str,
 
 def _cap(s: str) -> str:
     return s[:1].upper() + s[1:]
+
+
+def _pn(n) -> str:
+    """A number inside a product: negatives in brackets, e.g. 8 × (-3)."""
+    return f"({fmt_num(n)})" if n < 0 else fmt_num(n)
+
+
+def _cx(c: int, name: str = "x") -> str:
+    """Coefficient times a letter: 1 -> 'x', -1 -> '-x', 5 -> '5x'."""
+    return terms([(c, name)])
+
+
+def _parts(k: int) -> str:
+    return "1 part" if k == 1 else f"{k} parts"
 
 
 def _disp(v, u: str = "", dp: int | None = None) -> str:
@@ -284,7 +298,7 @@ def _pct_4(rng: random.Random) -> Draft:
     if rng.random() < 0.5:
         text = (f"The price of {rng.choice(ITEMS)} changes from {money_text(orig)} to "
                 f"{money_text(new)}. Work out the percentage {word}.")
-        o_s, c_s = money(orig), money(change)
+        o_s, c_s = money_text(orig), money_text(change)
     else:
         place = rng.choice(("a museum", "a zoo", "a cinema", "a theme park", "a library"))
         text = (f"The number of visitors to {place} went from {group(orig)} one year to "
@@ -343,7 +357,7 @@ def _pct_5(rng: random.Random) -> Draft:
     P, rate, n, m, A = retry(pick, rng)
     ms_, rs = fmt_num(m), fmt_num(rate)
     shown = "£" + fmt_dp(A, 2)
-    sol_tail = f"{money(P)} × {ms_}{sup(n)} = {shown} (to the nearest penny)"
+    sol_tail = f"{money_text(P)} × {ms_}{sup(n)} = {shown} (to the nearest penny)"
     if kind == "compound":
         text = (f"{money_text(P)} is invested in a savings account that pays {rs}% compound interest "
                 f"per year. Work out the value of the investment after {n} years. "
@@ -358,7 +372,7 @@ def _pct_5(rng: random.Random) -> Draft:
         sol = f"Multiplier = 1 − {rs} ÷ 100 = {ms_}. {sol_tail}"
         ms = [_mis(P * (1 - rate * n / 100), "£",
                    f"That takes {rs}% of the original price off every year — the {rs}% comes off the new, lower value each year, so multiply by {ms_} once for every year", dp=2),
-              _mis(P - A, "£", f"That's how much value the car has lost — take it away from {money(P)}", dp=2)]
+              _mis(P - A, "£", f"That's how much value the car has lost — take it away from {money_text(P)}", dp=2)]
     return _q(text, num_answer(A, shown, dp=2), sol, f"Each year the amount is multiplied by {ms_}", ms)
 
 
@@ -687,8 +701,9 @@ def _ratio_5(rng: random.Random) -> Draft:
     n1, n2 = rng.sample(NAMES, 2)
     head = (f"{n1} and {n2} share some money in the ratio {a} : {b}. "
             f"{n1} gets {money_text(diff)} more than {n2}. ")
-    start = f"The difference is {a} − {b} = {a - b} parts = {money(diff)}, so 1 part = {money(u)}. "
-    hint = f"The difference between their shares is {a} − {b} = {a - b} parts"
+    start = (f"The difference is {a} − {b} = {_parts(a - b)} = {money(diff)}"
+             + (f", so 1 part = {money(u)}. " if a - b > 1 else ". "))
+    hint = f"The difference between their shares is {a} − {b} = {_parts(a - b)}"
     common = [_mis(u, "£", "That's the value of 1 part — now multiply it by the number of parts you need")]
     one_part = f"The difference {money(diff)} is {a - b} parts, not 1 part — divide by {a - b} first"
     if rng.random() < 0.5:
@@ -814,7 +829,7 @@ def _hcf_5(rng: random.Random) -> Draft:
             text = (f"Two lights flash at the same moment. One flashes every {a} seconds and the other every "
                     f"{b} seconds. After how many seconds will they next flash at the same time?")
             u = "seconds"
-        return _q(text, _ans(L, u), f"This is the LCM of {a} and {b}: {_pf_str(_pf(a))} and {_pf_str(_pf(b))} give {_pf_str(_pf(L))} = {L}",
+        return _q(text, _ans(L, u), f"This is the lowest common multiple of {a} and {b}. Using prime factors ({_pf_str(_pf(a))} and {_pf_str(_pf(b))}), the LCM is {_pf_str(_pf(L))} = {L}",
                   f"You need the first number that both {a} and {b} divide into",
                   [_mis(a * b, u, f"They do meet again after {a * b} {u}, but they meet earlier than that — find the lowest common multiple"),
                    _mis(math.gcd(a, b), u, f"That's the HCF — you need a number that both {a} and {b} divide into (the LCM)")])
@@ -878,11 +893,14 @@ def _sf_1(rng: random.Random) -> Draft:
 
 
 def _sf_2(rng: random.Random) -> Draft:
-    digits = rng.choice((1, 2, 2, 3))
-    m_int = _mantissa(rng, digits)
-    e = rng.randrange(-7, -1)
-    mant = Fraction(m_int, 10 ** (digits - 1))
-    value = mant * Fraction(10) ** e
+    def pick(r):
+        digits = r.choice((1, 2, 2, 3))
+        m_int = _mantissa(r, digits)
+        e = r.randrange(-5, -1)
+        mant = Fraction(m_int, 10 ** (digits - 1))
+        value = mant * Fraction(10) ** e
+        return (mant, e, value) if safe_exact(value) else None
+    mant, e, value = retry(pick, rng)
     ans = std_answer(value)
     return _q(f"Write {fmt_num(value)} in standard form.", ans,
               f"Move the decimal point {-e} places to the right to get {fmt_num(mant)}, so the power of 10 is {e}: {ans.display}",
@@ -892,11 +910,14 @@ def _sf_2(rng: random.Random) -> Draft:
 
 
 def _sf_3(rng: random.Random) -> Draft:
-    digits = rng.choice((2, 2, 3))
-    m_int = _mantissa(rng, digits)
-    mant = Fraction(m_int, 10 ** (digits - 1))
-    e = rng.randrange(2, 8) if rng.random() < 0.5 else rng.randrange(-5, 0)
-    value = mant * Fraction(10) ** e
+    def pick(r):
+        digits = r.choice((2, 2, 3))
+        m_int = _mantissa(r, digits)
+        mant = Fraction(m_int, 10 ** (digits - 1))
+        e = r.randrange(2, 8) if r.random() < 0.5 else r.randrange(-4, 0)
+        value = mant * Fraction(10) ** e
+        return (mant, e, value) if safe_exact(value) else None
+    mant, e, value = retry(pick, rng)
     disp = group(value) if is_whole(value) else fmt_num(value)
     way = "right" if e > 0 else "left"
     fb = f"Move the decimal point exactly {abs(e)} places to the {way}"
@@ -908,10 +929,13 @@ def _sf_3(rng: random.Random) -> Draft:
 
 def _sf_4(rng: random.Random) -> Draft:
     if rng.random() < 0.5:
-        m1, m2 = rng.choice(_MANT), rng.choice(_MANT)
-        e1, e2 = rng.randrange(-4, 9), rng.randrange(-4, 9)
-        prod, s = m1 * m2, e1 + e2
-        value = prod * Fraction(10) ** s
+        def pick_mul(r):
+            m1, m2 = r.choice(_MANT), r.choice(_MANT)
+            e1, e2 = r.choice([e for e in range(-4, 9) if e]), r.choice([e for e in range(-4, 9) if e])
+            prod, s = m1 * m2, e1 + e2
+            value = prod * Fraction(10) ** s
+            return (m1, m2, e1, e2, prod, s, value) if safe_exact(value) else None
+        m1, m2, e1, e2, prod, s, value = retry(pick_mul, rng)
         ans = std_answer(value)
         sol = (f"{fmt_num(m1)} × {fmt_num(m2)} = {fmt_num(prod)} and 10^{e1} × 10^{e2} = 10^{s}, "
                f"so {_std_txt(prod, s)}")
@@ -929,9 +953,13 @@ def _sf_4(rng: random.Random) -> Draft:
         q = m1 / m2
         return (m1, m2, q) if m1 != m2 and _terminating(q) and sig_digits(q) <= 3 else None
     m1, m2, q = retry(pick, rng)
-    e1, e2 = rng.randrange(3, 10), rng.randrange(-3, 7)
+
+    def pick_exp(r):
+        e1, e2 = r.randrange(3, 10), r.choice([e for e in range(-3, 7) if e])
+        val = q * Fraction(10) ** (e1 - e2)
+        return (e1, e2, val) if safe_exact(val) else None
+    e1, e2, value = retry(pick_exp, rng)
     s = e1 - e2
-    value = q * Fraction(10) ** s
     ans = std_answer(value)
     sol = f"{fmt_num(m1)} ÷ {fmt_num(m2)} = {fmt_num(q)} and 10^{e1} ÷ 10^{e2} = 10^{s}, so {_std_txt(q, s)}"
     if q < 1:
@@ -945,13 +973,15 @@ def _sf_4(rng: random.Random) -> Draft:
 def _sf_5(rng: random.Random) -> Draft:
     def pick(r):
         neg = r.random() < 0.25
-        e1 = r.randrange(-6, -1) if neg else r.randrange(3, 9)
+        e1 = r.randrange(-3, 0) if neg else r.randrange(3, 9)
         gap = r.choice((0, 1, 1, 2))
         e2 = e1 - gap
         m1, m2 = Fraction(_mantissa(r, 2), 10), Fraction(_mantissa(r, 2), 10)
         A, B = m1 * Fraction(10) ** e1, m2 * Fraction(10) ** e2
         op = r.choice("+-")
         if op == "-" and A <= B:
+            return None
+        if not safe_exact(A + B if op == "+" else A - B):
             return None
         return m1, e1, m2, e2, A, B, op
     m1, e1, m2, e2, A, B, op = retry(pick, rng)
@@ -1393,7 +1423,7 @@ def _ci_5(rng: random.Random) -> Draft:
     v, d = _dp1_pick(rng, lambda r: (lambda x: (math.pi * x / 2 + x, x))(r.randrange(4, 31)))
     curve = math.pi * d / 2
     return _q(f"A semicircle has a diameter of {d} {u}. Work out its perimeter. Give your answer to 1 decimal place.",
-              _ans(v, u, 1), f"Curved edge = π × {d} ÷ 2 = {_approx(curve)}. Perimeter = {_approx(curve)} + {d} = {_disp(v, u, 1)} (1 d.p.)",
+              _ans(v, u, 1), f"Curved edge = π × {d} ÷ 2 = {_approx(curve)}, so perimeter = {_approx(curve)} + {d} = {_disp(v, u, 1)} (1 d.p.)",
               "The perimeter is half of the circumference plus the straight edge",
               [_mis(curve, u, f"Don't forget to add the straight edge (the diameter, {d} {u})", dp=1),
                _mis(math.pi * d + d, u, f"Only half of the circle is curved — use π × {d} ÷ 2", dp=1)])
@@ -1435,10 +1465,10 @@ def _le_2(rng: random.Random) -> Draft:
     x = rng.randrange(-10, 16)
     b = rng.choice([v for v in range(-20, 21) if v])
     c = a * x + b
-    undo = f"subtract {b}" if b > 0 else f"add {-b}"
+    undo = f"subtract {b} from both sides" if b > 0 else f"add {-b} to both sides"
     return _q(f"Solve {a}x {signed(b)} = {c}.", _x_answer(Fraction(x)),
-              f"{_cap(undo)} on both sides: {a}x = {c - b}. Divide by {a}: x = {x}",
-              f"First {undo} on both sides",
+              f"{_cap(undo)}: {a}x = {c - b}. Divide by {a}: x = {x}",
+              f"First {undo}",
               [_x_mis(Fraction(c + b, a), f"To undo {signed(b)}, you need to {undo} — check the sign"),
                _x_mis(Fraction(c, a) - b, f"Undo the {signed(b)} first, then divide by {a}")])
 
@@ -1475,10 +1505,10 @@ def _le_4(rng: random.Random) -> Draft:
     a, b, c, d, x = retry(pick, rng)
     lhs, rhs = poly([a, b])[0], poly([c, d])[0]
     return _q(f"Solve {lhs} = {rhs}.", _x_answer(Fraction(x)),
-              f"Subtract {c}x from both sides: {a - c}x {signed(b)} = {d}. Then {a - c}x = {d - b}, so x = {x}",
-              f"Get the x terms on one side: subtract {c}x from both sides",
+              f"Subtract {_cx(c)} from both sides: {_cx(a - c)} {signed(b)} = {d}. Then {_cx(a - c)} = {d - b}, so x = {x}",
+              f"Get the x terms on one side: subtract {_cx(c)} from both sides",
               [_x_mis(Fraction(d + b, a - c), f"When you move {signed(b)} to the other side it becomes {signed(-b)}"),
-               _x_mis(Fraction(d - b, a + c), f"Subtract {c}x from both sides — don't add it")])
+               _x_mis(Fraction(d - b, a + c), f"Subtract {_cx(c)} from both sides — don't add it")])
 
 
 def _frac_expr(top: str, den: int) -> str:
@@ -1520,7 +1550,7 @@ def _le_5(rng: random.Random) -> Draft:
         x = L * t
         c = x // p + x // q
         return _q(f"Solve x/{p} + x/{q} = {c}.", _x_answer(Fraction(x)),
-                  f"Multiply every term by {L}: {L // p}x + {L // q}x = {c * L}, so {L // p + L // q}x = {c * L} and x = {x}",
+                  f"Multiply every term by {L}: {_cx(L // p)} + {_cx(L // q)} = {c * L}, so {L // p + L // q}x = {c * L} and x = {x}",
                   f"Multiply every term by {L}, the lowest common multiple of {p} and {q}",
                   [_x_mis(Fraction(c * (p + q)), f"You can't add the denominators — multiply every term by {L} first")])
 
@@ -1537,9 +1567,9 @@ def _le_5(rng: random.Random) -> Draft:
     wrong = _safe_div(d * c - b * a, b - d)
     return _q(f"Solve {_frac_expr(lt, b)} = {_frac_expr(rt, d)}.", _x_answer(Fraction(x)),
               f"Cross-multiply: {d}({lt}) = {b}({rt}), so {poly([d, d * a])[0]} = {poly([b, b * c])[0]}. "
-              f"Then {d - b}x = {b * c - d * a}, so x = {x}",
+              f"Then {_cx(d - b)} = {b * c - d * a}, so x = {x}",
               f"Multiply both sides by {b} and by {d} (cross-multiply)",
-              [_x_mis(wrong, f"Multiply each side by the OTHER side's denominator: {d}({lt}) = {b}({rt})")])
+              [_x_mis(wrong, f"Multiply each side by the other side's denominator: {d}({lt}) = {b}({rt})")])
 
 
 # ======================================================== expand brackets
@@ -1549,7 +1579,7 @@ def _ex_1(rng: random.Random) -> Draft:
     co = poly_mul([1, a], [1, b])
     ans = _expr_answer(co)
     return _q(f"Expand and simplify (x + {a})(x + {b}).", ans,
-              f"x × x = x², x × {b} = {b}x, {a} × x = {a}x, {a} × {b} = {a * b}. So x² + {a}x + {b}x + {a * b} = {ans.display}",
+              f"x × x = x², x × {b} = {_cx(b)}, {a} × x = {_cx(a)}, {a} × {b} = {a * b}. So x² + {_cx(a)} + {_cx(b)} + {a * b} = {ans.display}",
               "Multiply each term in the first bracket by each term in the second (a grid or FOIL helps)",
               [_expr_mis([1, 0, a * b], f"Don't forget the middle terms: x × {b} and {a} × x"),
                _expr_mis([1, a + b, a + b], f"The last term is {a} × {b}, not {a} + {b}"),
@@ -1569,10 +1599,10 @@ def _ex_2(rng: random.Random) -> Draft:
     ans = _expr_answer(co)
     f1, f2 = lin_factor(1, a)[0], lin_factor(1, b)[0]
     return _q(f"Expand and simplify {f1}{f2}.", ans,
-              f"x² {signed(b)}x {signed(a)}x {signed(a * b)} = {ans.display}",
+              f"x²" + coef_term(b, "x", False) + coef_term(a, "x", False) + f" {signed(a * b)} = {ans.display}",
               "Multiply each term in the first bracket by each term in the second — watch the signs",
-              [_expr_mis([1, -(a + b), a * b], f"Check the middle term: {a}x + {b}x = {a + b}x"),
-               _expr_mis([1, a + b, -(a * b)], f"Check the sign of the last term: {a} × {b} = {a * b}"),
+              [_expr_mis([1, -(a + b), a * b], f"Check the middle term: {_cx(a)}{coef_term(b, 'x', False)} = {_cx(a + b)}"),
+               _expr_mis([1, a + b, -(a * b)], f"Check the sign of the last term: {_pn(a)} × {_pn(b)} = {a * b}"),
                _expr_mis([1, 0, a * b], "Don't forget the two middle terms")])
 
 
@@ -1583,11 +1613,11 @@ def _ex_3(rng: random.Random) -> Draft:
     ans = _expr_answer(co)
     f1, f2 = lin_factor(a, b)[0], lin_factor(1, c)[0]
     return _q(f"Expand and simplify {f1}{f2}.", ans,
-              f"{a}x × x = {a}x², {a}x × {c} = {a * c}x, {b} × x = {b}x, {b} × {c} = {b * c}. So {ans.display}",
+              f"{a}x × x = {a}x², {a}x × {_pn(c)} = {_cx(a * c)}, {_pn(b)} × x = {_cx(b)}, {_pn(b)} × {_pn(c)} = {b * c}. So {ans.display}",
               f"Multiply {a}x by both terms in the second bracket, then {b} by both terms",
-              [_expr_mis([a, b + c, b * c], f"Multiply {a}x by {c} as well: {a}x × {c} = {a * c}x"),
+              [_expr_mis([a, b + c, b * c], f"Multiply {a}x by {_pn(c)} as well: {a}x × {_pn(c)} = {_cx(a * c)}"),
                _expr_mis([1, a * c + b, b * c], f"{a}x × x = {a}x², not x²"),
-               _expr_mis([a, a * c + b, -(b * c)], f"Check the sign of the last term: {b} × {c} = {b * c}")])
+               _expr_mis([a, a * c + b, -(b * c)], f"Check the sign of the last term: {_pn(b)} × {_pn(c)} = {b * c}")])
 
 
 def _ex_4(rng: random.Random) -> Draft:
@@ -1611,11 +1641,11 @@ def _ex_4(rng: random.Random) -> Draft:
     ans = _expr_answer(co)
     f1, f2 = lin_factor(a, b)[0], lin_factor(c, d)[0]
     return _q(f"Expand and simplify {f1}{f2}.", ans,
-              f"{a}x × {c}x = {a * c}x², {a}x × {d} = {a * d}x, {b} × {c}x = {b * c}x, {b} × {d} = {b * d}. So {ans.display}",
+              f"{a}x × {c}x = {a * c}x², {a}x × {_pn(d)} = {_cx(a * d)}, {_pn(b)} × {c}x = {_cx(b * c)}, {_pn(b)} × {_pn(d)} = {b * d}. So {ans.display}",
               "Multiply each term in the first bracket by each term in the second",
-              [_expr_mis([a * c, a * d, b * d], f"Remember both middle terms: {a}x × {d} and {b} × {c}x"),
-               _expr_mis([a * c, b + d, b * d], f"Multiply across properly: the x terms are {a}x × {d} and {b} × {c}x"),
-               _expr_mis([a * c, a * d + b * c, -(b * d)], f"Check the sign of the last term: {b} × {d} = {b * d}")])
+              [_expr_mis([a * c, a * d, b * d], f"Remember both middle terms: {a}x × {_pn(d)} and {_pn(b)} × {c}x"),
+               _expr_mis([a * c, b + d, b * d], f"Multiply across properly: the x terms are {a}x × {_pn(d)} and {_pn(b)} × {c}x"),
+               _expr_mis([a * c, a * d + b * c, -(b * d)], f"Check the sign of the last term: {_pn(b)} × {_pn(d)} = {b * d}")])
 
 
 def _ex_5(rng: random.Random) -> Draft:
@@ -1629,7 +1659,7 @@ def _ex_5(rng: random.Random) -> Draft:
               f"First {lin_factor(1, a)[0]}{lin_factor(1, b)[0]} = {qd}. Then ({qd}){lin_factor(1, c)[0]} = {ans.display}",
               "Expand two of the brackets first, then multiply the result by the third bracket",
               [_expr_mis([1, quad[1], quad[2] + c], f"Multiply every term of ({qd}) by both x and {c}"),
-               _expr_mis(co[:-1] + [-co[-1]], f"Check the sign of the number term: {a} × {b} × {c} = {a * b * c}")])
+               _expr_mis(co[:-1] + [-co[-1]], f"Check the sign of the number term: {_pn(a)} × {_pn(b)} × {_pn(c)} = {a * b * c}")])
 
 
 # ================================================== factorising quadratics
@@ -1678,7 +1708,7 @@ def _fa_3(rng: random.Random) -> Draft:
     if k > 1:
         ms.append(_fact_mis([(1, a), (1, -a)], f"{k * k}x² = ({k}x)², so each bracket needs {k}x"))
     return _q(f"Factorise {ex}.", ans,
-              f"This is a difference of two squares: ({kx})² − {a}², so {ans.display}",
+              f"This is a difference of two squares: {'x' if k == 1 else '(' + kx + ')'}² − {a}², so {ans.display}",
               "Look for a difference of two squares: a² − b² = (a + b)(a − b)", ms)
 
 
@@ -1707,7 +1737,7 @@ def _fa_ax(rng: random.Random, negatives: bool) -> Draft:
     A, B, C = m * n, m * q + n * p, p * q
     ex = poly([A, B, C])[0]
     ans = _fact_answer([(m, p), (n, q)])
-    split = f"{A}x² {signed(m * q)}x {signed(n * p)}x {signed(C)}"
+    split = f"{A}x²" + coef_term(m * q, "x", False) + coef_term(n * p, "x", False) + f" {signed(C)}"
     ms: list[Mistake | None] = [
         _fact_mis([(m, -p), (n, -q)], f"Check the signs: expanding should give {signed(B)}x and {signed(C)}"),
         _fact_mis([(m, q), (n, p)], f"Expand your brackets to check — the middle term should be {B}x"),
@@ -1715,9 +1745,9 @@ def _fa_ax(rng: random.Random, negatives: bool) -> Draft:
     if negatives:
         ms.append(_fact_mis([(m, -p), (n, q)], f"Check the signs: expanding should give {signed(B)}x and {signed(C)}"))
     return _q(f"Factorise {ex}.", ans,
-              f"{A} × {C} = {A * C}; two numbers that multiply to {A * C} and add to {B} are {m * q} and {n * p}. "
+              f"{A} × {_pn(C)} = {A * C}; two numbers that multiply to {A * C} and add to {B} are {m * q} and {n * p}. "
               f"Split the middle term: {split}, then group to get {ans.display}",
-              f"Multiply {A} × {C} = {A * C}, then find two numbers that multiply to {A * C} and add to {B}", ms)
+              f"Multiply {A} × {_pn(C)} = {A * C}, then find two numbers that multiply to {A * C} and add to {B}", ms)
 
 
 def _fa_4(rng: random.Random) -> Draft:
@@ -1861,11 +1891,11 @@ def _si_2(rng: random.Random) -> Draft:
     e1, e2 = _eq(a, b, c1), _eq(d, b2, c2)
     if same:
         k = a - d
-        sol = f"Subtract the second equation from the first: {terms([(k, 'x')])} = {c1 - c2}, so x = {x}. Substitute into the first: {a * x} {signed(b)}y = {c1}, so y = {y}"
+        sol = f"Subtract the second equation from the first: {terms([(k, 'x')])} = {c1 - c2}, so x = {x}. Substitute into the first: {a * x}{coef_term(b, 'y', False)} = {c1}, so y = {y}"
         hint = "The y terms are the same, so subtract one equation from the other"
     else:
         k = a + d
-        sol = f"Add the equations: {k}x = {c1 + c2}, so x = {x}. Substitute into the first: {a * x} {signed(b)}y = {c1}, so y = {y}"
+        sol = f"Add the equations: {k}x = {c1 + c2}, so x = {x}. Substitute into the first: {a * x}{coef_term(b, 'y', False)} = {c1}, so y = {y}"
         hint = "The y terms have opposite signs, so add the two equations"
     return _q(_sim_text(e1, e2), _assign(x, y), sol, hint, _sim_ms(x, y, e1))
 
@@ -1884,7 +1914,7 @@ def _si_3(rng: random.Random) -> Draft:
     e1, e2 = _eq(a, b, c1), _eq(d, e, c2)
     m = _eq(k * d, k * e, k * c2)
     diff = a - k * d
-    sol = (f"Multiply the second equation by {k}: {m}. Subtract it from the first: {diff}x = {c1 - k * c2}, "
+    sol = (f"Multiply the second equation by {k}: {m}. Subtract it from the first: {_cx(diff)} = {c1 - k * c2}, "
            f"so x = {x}. Substitute x = {x} into either equation to get y = {y}")
     return _q(_sim_text(e1, e2), _assign(x, y), sol,
               f"Multiply the second equation by {k} so that the y terms match", _sim_ms(x, y, e2))
@@ -1909,11 +1939,20 @@ def _si_4(rng: random.Random) -> Draft:
         k, rhs, how = a * m1 - d * m2, c1 * m1 - c2 * m2, "Subtract"
     else:
         k, rhs, how = a * m1 + d * m2, c1 * m1 + c2 * m2, "Add"
-    sol = (f"Multiply the first by {m1} and the second by {m2}: {n1} and {n2}. {how}: {k}x = {rhs}, "
+    sol = (f"Multiply the first by {m1} and the second by {m2}: {n1} and {n2}. {how}: {_cx(k)} = {rhs}, "
            f"so x = {x}. Substitute to get y = {y}")
     return _q(_sim_text(e1, e2), _assign(x, y), sol,
               f"Multiply the first equation by {m1} and the second by {m2} so the y terms are the same size",
               _sim_ms(x, y, e1))
+
+
+def _mx(m: int, x: int) -> str:
+    """m times a number in working: 1 -> '-5', -1 -> '-(-5)', 4 -> '4(-5)'."""
+    if m == 1:
+        return str(x)
+    if m == -1:
+        return f"-({x})"
+    return f"{m}({x})"
 
 
 def _si_5(rng: random.Random) -> Draft:
@@ -1929,9 +1968,9 @@ def _si_5(rng: random.Random) -> Draft:
     line = f"y = {poly([m, k])[0]}"
     e2 = _eq(a, b, c)
     sol = (f"Substitute {line} into {e2}: {terms([(a, 'x')])} {signed(b)}({poly([m, k])[0]}) = {c}, so "
-           f"{terms([(a + b * m, 'x')])} {signed(b * k)} = {c}, giving x = {x}. Then y = {m}({x}) {signed(k)} = {y}")
+           f"{terms([(a + b * m, 'x')])} {signed(b * k)} = {c}, giving x = {x}. Then y = {_mx(m, x)} {signed(k)} = {y}")
     if k == 0:
-        sol = (f"Substitute {line} into {e2}: {terms([(a + b * m, 'x')])} = {c}, giving x = {x}. Then y = {m} × {x} = {y}")
+        sol = (f"Substitute {line} into {e2}: {terms([(a + b * m, 'x')])} = {c}, giving x = {x}. Then y = {_mx(m, x)} = {y}")
     return _q(_sim_text(line, e2), _assign(x, y), sol,
               f"Substitute the expression for y into the other equation",
               _sim_ms(x, y, e2))
@@ -1968,7 +2007,7 @@ def _nt_2(rng: random.Random) -> Draft:
                    f"Each term is {diff_txt}, so the nth term is {ans.display}",
               "The difference between the terms tells you the number in front of n",
               [_expr_mis([1, d], f"The difference ({d}) goes in front of n: {d}n", var="n"),
-               _expr_mis([d, a], f"Check with n = 1: {d} × 1 + {a} = {d + a}, but the first term is {a} — the number on the end comes from the term before the first one", var="n")])
+               _expr_mis([d, a], f"Check with n = 1: {d} × 1 {signed(a)} = {d + a}, but the first term is {a} — the number on the end comes from the term before the first one", var="n")])
 
 
 def _nt_3(rng: random.Random) -> Draft:
@@ -2460,7 +2499,7 @@ def _arc_4(rng: random.Random) -> Draft:
     v, r_, t = _trig_pick(rng, lambda r: (lambda x, t: (t / 360 * 2 * math.pi * x + 2 * x, x, t))(r.randrange(2, 21), _arc_angle(r)))
     arc = t / 360 * 2 * math.pi * r_
     return _q(f"A sector of a circle has radius {r_} {u} and angle {t}°. Work out the perimeter of the sector. Give your answer to 1 decimal place.",
-              _ans(v, u, 1), f"Arc = {t}/360 × 2 × π × {r_} = {_approx(arc)}. Perimeter = arc + 2 radii = {_approx(arc)} + {2 * r_} = {_approx(v)} = {fmt_dp(v, 1)} {u} (1 d.p.)",
+              _ans(v, u, 1), f"Arc = {t}/360 × 2 × π × {r_} = {_approx(arc)}, so perimeter = arc + 2 radii = {_approx(arc)} + {2 * r_} = {_approx(v)} = {fmt_dp(v, 1)} {u} (1 d.p.)",
               "The perimeter of a sector is the arc plus the two straight radii",
               [_mis(arc, u, "That's just the arc — add the two straight radii as well", dp=1),
                _mis(arc + r_, u, f"There are two radii, so add 2 × {r_}", dp=1)])

@@ -8,6 +8,7 @@ through the real checker (docs/ARCHITECTURE.md section 5, general rules).
 from __future__ import annotations
 
 import math
+import re
 from decimal import ROUND_HALF_UP, Decimal, localcontext
 from fractions import Fraction
 from typing import Iterable, Union
@@ -286,19 +287,21 @@ def atand(x: float) -> float:
 
 # ---------------------------------------------------------------- answers
 
-EXACT_SF = 6
+EXACT_QUANTUM = Decimal("0.00001")
 
 
-def exact_sf(value: Number) -> int | None:
-    """Tolerance device for EXACT small answers (no rounding asked for).
+def safe_exact(value: Number) -> bool:
+    """True if an EXACT answer (no dp/sf) is safe under the checker's default tolerance.
 
-    The checker's default tolerance is 1e-6 * max(1, |exact|), i.e. absolute for
-    |exact| < 1, which would accept 4.5 × 10^-8 for 4.5 × 10^-7.  For such values
-    we set sf=6, which makes the tolerance relative (half a unit in the 6th s.f.)
-    so only the exact value (written in any form) is accepted.
+    With neither dp nor sf the checker accepts |v - exact| <= 1e-6 * max(1, |exact|),
+    which is an ABSOLUTE 1e-6 for |exact| < 1 (e.g. it would accept 4.5 × 10^-8 for
+    4.5 × 10^-7).  So exact answers below 1 must be multiples of 0.00001: then every
+    other value written to the same precision differs by at least 10x the tolerance.
     """
-    v = abs(float(value))
-    return EXACT_SF if 0 < v < 0.1 else None
+    d = dec(value)
+    if abs(d) >= 1:
+        return True
+    return (d / EXACT_QUANTUM) == (d / EXACT_QUANTUM).to_integral_value()
 
 
 def num_answer(value: Number, display: str, dp: int | None = None, sf: int | None = None,
@@ -310,8 +313,6 @@ def num_answer(value: Number, display: str, dp: int | None = None, sf: int | Non
         raise ValueError(f"dp must be 0..3, got {dp}")
     if sf is not None and sf < 2:
         raise ValueError(f"sf must be >= 2, got {sf}")
-    if dp is None and sf is None:
-        sf = exact_sf(v)
     return Answer(kind="number", display=display, value=v, dp=dp, sf=sf, form=form)
 
 
@@ -335,7 +336,6 @@ def num_mistake(value: Number, u: str, feedback: str, dp: int | None = None,
         shown = fmt_sf(value, sf) if v != 0 else "0"
     else:
         shown = fmt_num(value)
-        sf = exact_sf(v)
     if u == "£":
         shown = shown if dp is not None or is_whole(value) else fmt_dp(value, 2)
     return Mistake(Answer(kind="number", display=unit(shown, u), value=v, dp=dp, sf=sf), feedback)
@@ -354,8 +354,7 @@ def std_answer(value: Number, u: str = "", round_to_sf: int | None = None) -> An
         return Answer(kind="number", display=disp, value=float(dec(value)), sf=round_to_sf,
                       form="standard")
     disp = unit(fmt_std(value), u)
-    v = float(dec(value))
-    return Answer(kind="number", display=disp, value=v, sf=exact_sf(v), form="standard")
+    return Answer(kind="number", display=disp, value=float(dec(value)), form="standard")
 
 
 def std_mistake(value: Number, u: str, feedback: str,
@@ -367,8 +366,7 @@ def std_mistake(value: Number, u: str, feedback: str,
     if round_to_sf is not None:
         return Mistake(Answer(kind="number", display=unit(fmt_std(value, round_to_sf), u),
                               value=v, sf=round_to_sf), feedback)
-    return Mistake(Answer(kind="number", display=unit(fmt_std(value), u), value=v,
-                          sf=exact_sf(v)), feedback)
+    return Mistake(Answer(kind="number", display=unit(fmt_std(value), u), value=v), feedback)
 
 
 def mistake(answer: Answer, feedback: str) -> Mistake:
@@ -376,6 +374,22 @@ def mistake(answer: Answer, feedback: str) -> Mistake:
 
 
 # ------------------------------------------------------------------ build
+
+# "a"/"A" before a vowel sound: eight..., eleven, eighteen (and their thousands), a/e/i/o words.
+_AN_NEXT = r"(?=(?:8|11(?!\d)|18(?!\d)|11\d{3}(?!\d)|18\d{3}(?!\d)|[aeioAEIO]))"
+_ARTICLE_UPPER = re.compile(r"(^|[.!?]\s+|\n)A " + _AN_NEXT)
+_ARTICLE_LOWER = re.compile(r"(?<![\w'])a " + _AN_NEXT)
+
+
+def fix_articles(s: str) -> str:
+    """'A 800 kg car' -> 'An 800 kg car', 'a apple' -> 'an apple'.
+
+    Uppercase 'A' is changed only at the start of a sentence, so point labels such
+    as 'angle A is acute' are never touched.
+    """
+    s = _ARTICLE_UPPER.sub(lambda m: m.group(1) + "An ", s)
+    return _ARTICLE_LOWER.sub("an ", s)
+
 
 def _clean(s: str) -> str:
     s = s.strip()
@@ -393,9 +407,9 @@ def build(skill_id: str, level: int, seed: int, text: str, answer: Answer, solut
     """
     from .checker import check   # local import: checker is a sibling module
 
-    text = text.strip()
-    solution = _clean(solution)
-    hint = _clean(hint)
+    text = fix_articles(text.strip())
+    solution = fix_articles(_clean(solution))
+    hint = fix_articles(_clean(hint))
     fallback_hint = _clean(fallback_hint)
     if not text or not solution or not hint:
         raise ValueError(f"{skill_id} L{level} seed {seed}: empty text/solution/hint")
