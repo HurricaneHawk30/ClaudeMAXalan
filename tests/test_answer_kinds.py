@@ -166,6 +166,32 @@ SHORT_ROWS = [
 ]
 
 
+class TestCapitalLetterOptions(unittest.TestCase):
+    """Options such as 'C minor' must not be read as the letter answer C."""
+    OPTS = ["A major", "D major", "C minor", "G major"]
+    ans = choice_answer(OPTS, 1)
+
+    def test_option_texts(self):
+        self.assertEqual(check(self.ans, "D major").status, "correct")
+        self.assertEqual(check(self.ans, "d major").status, "correct")
+        self.assertEqual(check(self.ans, "C minor").status, "wrong")
+        self.assertEqual(check(self.ans, "A major").status, "wrong")
+        self.assertEqual(check(self.ans, "G major").status, "wrong")
+
+    def test_letters_still_work(self):
+        self.assertEqual(check(self.ans, "B").status, "correct")
+        self.assertEqual(check(self.ans, "d").status, "wrong")           # displayed letter D is "G major"
+        self.assertEqual(check(self.ans, "C").status, "wrong")
+
+    def test_unicode_minus_equals_hyphen(self):
+        self.assertEqual(check(Answer("number", "-18", -18.0), "\u221218").status, "correct")
+        self.assertEqual(check(Answer("number", "-18", -18.0), "-18").status, "correct")
+        self.assertEqual(check(short_answer(["-18"]), "\u221218").status, "correct")
+        a = choice_answer(["-18", "18", "-8"], 0)
+        self.assertEqual(check(a, "\u221218").status, "correct")
+        self.assertEqual(check(a, "\u22128").status, "wrong")
+
+
 class TestShortTable(unittest.TestCase):
     """Acceptance table: short (section 2.3). Every cell is asserted exactly."""
 

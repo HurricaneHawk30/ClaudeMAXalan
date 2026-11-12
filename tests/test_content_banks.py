@@ -333,6 +333,9 @@ class TestBankItems(unittest.TestCase):
                             if check(a, o, p.mistakes).status != "correct":
                                 fails.append(f"{where}: correct option text {o!r} not accepted")
                         else:
+                            vt = check(a, o, p.mistakes)
+                            if vt.status == "correct":
+                                fails.append(f"{where}: wrong option text {o!r} judged correct")
                             if v.status != "wrong":
                                 fails.append(f"{where}: letter {LETTERS[j]} judged {v.status}")
                             want = fb.get(f"{LETTERS[j]}) {o}", "")
