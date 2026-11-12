@@ -98,7 +98,8 @@
      "short": {
       "accept": [
        "franchisor",
-       "the franchisor"
+       "the franchisor",
+       "franchiser"
       ],
       "reject": [
        "franchisee"
@@ -2004,10 +2005,20 @@
     {
      "id": "fn17",
      "level": 3,
-     "text": "A business has fixed costs of £600. Each product sells for £10 and costs £4 to make. Calculate the break-even output in units. Give the number.",
-     "short": {
-      "accept": [
-       "100"
+     "text": "A business has fixed costs of £600. Each product sells for £10 and costs £4 to make. What is its break-even output, in units?",
+     "choice": {
+      "options": [
+       "100",
+       "60",
+       "150",
+       "43"
+      ],
+      "correct": 0,
+      "feedback": [
+       null,
+       "Divide by the contribution per unit (£10 − £4), not by the selling price",
+       "Divide by the contribution per unit (£10 − £4), not by the variable cost",
+       "Contribution per unit is the selling price MINUS the variable cost, not plus"
       ]
      },
      "solution": "Contribution per unit = £10 − £4 = £6. Break-even = £600 ÷ £6 = 100 units",
@@ -2110,10 +2121,20 @@
     {
      "id": "fn23",
      "level": 4,
-     "text": "A business sells 50 units at £20 each. Its total costs are £700. Calculate its profit in pounds. Give the number.",
-     "short": {
-      "accept": [
-       "300"
+     "text": "A business sells 50 units at £20 each. Its total costs are £700. What profit or loss does it make?",
+     "choice": {
+      "options": [
+       "A profit of £1,000",
+       "A loss of £300",
+       "A profit of £1,700",
+       "A profit of £300"
+      ],
+      "correct": 3,
+      "feedback": [
+       "£1,000 is the revenue — take the total costs away from it",
+       "Revenue (£1,000) is more than total costs (£700), so this is a profit, not a loss",
+       "Take the costs away from the revenue — don't add them",
+       null
       ]
      },
      "solution": "Revenue = 50 × £20 = £1,000. Profit = £1,000 − £700 = £300",

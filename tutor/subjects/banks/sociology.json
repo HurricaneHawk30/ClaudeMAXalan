@@ -424,7 +424,8 @@
        "Delphy & Leonard",
        "Delphy",
        "Leonard and Delphy",
-       "Delphy Leonard"
+       "Delphy Leonard",
+       "Leonard"
       ]
      },
      "solution": "Christine Delphy and Diana Leonard argued the family is a patriarchal institution in which men exploit women's labour",
@@ -1901,7 +1902,7 @@
       ]
      },
      "solution": "Quota sampling fills set numbers (quotas) of each type of person; it is quick but not random",
-     "hint": "Each group has a fixed number, called a ..."
+     "hint": "Each type of person has a set number of places that must be filled"
     },
     {
      "id": "sm12",

@@ -901,13 +901,23 @@
     {
      "id": "fi17",
      "level": 3,
-     "text": "A firm makes 600 units a day with 20 workers. Calculate labour productivity in units per worker per day. Give the number.",
-     "short": {
-      "accept": [
-       "30"
+     "text": "A firm makes 600 units a day with 20 workers. What is its labour productivity, in units per worker per day?",
+     "choice": {
+      "options": [
+       "12,000",
+       "580",
+       "30",
+       "600"
+      ],
+      "correct": 2,
+      "feedback": [
+       "Divide the output by the number of workers — don't multiply",
+       "Divide the output by the number of workers — don't subtract",
+       null,
+       "600 is the total output — share it between the 20 workers"
       ]
      },
-     "solution": "Labour productivity = 600 ÷ 20 = 30 units per worker per day",
+     "solution": "Labour productivity = output ÷ number of workers = 600 ÷ 20 = 30 units per worker per day",
      "hint": "Divide the total output by the number of workers"
     },
     {
@@ -1008,14 +1018,24 @@
     {
      "id": "fi23",
      "level": 4,
-     "text": "A firm's total cost of producing 400 units is £2,000. Calculate the average cost per unit in pounds. Give the number.",
-     "short": {
-      "accept": [
-       "5"
+     "text": "A firm has fixed costs of £1,200 and a variable cost of £2 per unit. It produces 400 units. What is its average cost per unit?",
+     "choice": {
+      "options": [
+       "£3",
+       "£5",
+       "£2",
+       "£2,000"
+      ],
+      "correct": 1,
+      "feedback": [
+       "That's average fixed cost (£1,200 ÷ 400) — add the variable cost per unit too",
+       null,
+       "That's only the variable cost per unit — the fixed costs must be shared over the 400 units too",
+       "That's the total cost — divide it by the 400 units"
       ]
      },
-     "solution": "Average cost = total cost ÷ output = £2,000 ÷ 400 = £5 per unit",
-     "hint": "Divide the total cost by the number of units"
+     "solution": "Total cost = £1,200 + £2 × 400 = £2,000. Average cost = £2,000 ÷ 400 = £5 per unit",
+     "hint": "Work out the total cost first, then divide it by the number of units"
     },
     {
      "id": "fi24",
@@ -1427,10 +1447,20 @@
     {
      "id": "mw17",
      "level": 3,
-     "text": "Aisha earns £20 per hour and works 30 hours a week. What is her gross weekly pay in pounds? Give the number.",
-     "short": {
-      "accept": [
-       "600"
+     "text": "Aisha earns £20 per hour and works 30 hours a week. What is her gross weekly pay?",
+     "choice": {
+      "options": [
+       "£50",
+       "£600",
+       "£2,400",
+       "£1.50"
+      ],
+      "correct": 1,
+      "feedback": [
+       "Multiply the hourly rate by the number of hours — don't add them",
+       null,
+       "That's 4 weeks of pay — the question asks for one week",
+       "Multiply the hourly rate by the number of hours — don't divide"
       ]
      },
      "solution": "Gross weekly pay = £20 × 30 hours = £600",
@@ -1537,10 +1567,20 @@
     {
      "id": "mw23",
      "level": 4,
-     "text": "Suppose the first £12,000 of a person's yearly income is tax-free and the rest is taxed at 20%. A worker earns £15,000 a year. How much income tax do they pay in a year? Give the number of pounds.",
-     "short": {
-      "accept": [
-       "600"
+     "text": "Suppose the first £12,000 of a person's yearly income is tax-free and the rest is taxed at 20%. A worker earns £15,000 a year. How much income tax do they pay in a year?",
+     "choice": {
+      "options": [
+       "£3,000",
+       "£2,400",
+       "£600",
+       "£14,400"
+      ],
+      "correct": 2,
+      "feedback": [
+       "£3,000 is the taxable income (it is also 20% of the whole £15,000) — the tax is 20% of that £3,000",
+       "Only the income ABOVE £12,000 is taxed",
+       null,
+       "That's the income left after tax — the question asks for the tax"
       ]
      },
      "solution": "Taxable income = £15,000 − £12,000 = £3,000. Tax = 20% of £3,000 = £600",
@@ -1924,7 +1964,7 @@
       }
      },
      "solution": "An appreciation is a rise in a currency's value; a depreciation is a fall",
-     "hint": "When something rises in value, we say it ..."
+     "hint": "Think of the word used when a house or a painting goes up in value"
     },
     {
      "id": "na13",
