@@ -22,11 +22,15 @@ class FlowCase(unittest.TestCase):
     def student(self, chat=CH):
         return self.store.get_student(chat)
 
-    def assert_problem_msg(self, out, chat, n=1):
-        """out: one Outgoing; checks it is 'Problem n: <pending text>' with the topic keyboard."""
+    def assert_problem_msg(self, out, chat, n=1, exam=False):
+        """out: one Outgoing; checks it is 'Problem n: <pending text>' (or the exam form)."""
         p = self.store.get_pending(chat)
         self.assertIsNotNone(p)
-        self.assertEqual(out.text, f"Problem {n}: {p.problem.text}{ASK_ANSWER_TAIL}")
+        if exam:
+            marks = {1: 1, 2: 2, 3: 2, 4: 3, 5: 4}[p.gen_level]
+            self.assertEqual(out.text, helpers.PROBLEM_EXAM(n, marks, p.problem.text))
+        else:
+            self.assertEqual(out.text, f"Problem {n}: {p.problem.text}{ASK_ANSWER_TAIL}")
         self.assertEqual(p.problem_no, n)
 
     def reach(self, chat, step):
@@ -188,7 +192,7 @@ class TestSubjectAndTopic(FlowCase):
             with self.subTest(label=label):
                 out = send(self.engine, CH, label)
                 self.assertEqual(out[0].text, TOPIC_START(label))
-                self.assert_problem_msg(out[-1], CH, 1)
+                self.assert_problem_msg(out[-1], CH, 1, exam=(label == "Past paper practice"))
 
     def test_topic_step_garbage_repeats_topic_ask(self):
         send(self.engine, CH, "Maths")

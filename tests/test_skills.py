@@ -68,10 +68,6 @@ def audit(skill):
                 bad(level, seed, f"dp {a.dp}")
             if a.sf is not None and a.sf < 2:
                 bad(level, seed, f"sf {a.sf}")
-            if a.dp is not None and a.dp >= 1 and not any(k in p.text.lower() for k in ("decimal place", "nearest", "d.p")):
-                bad(level, seed, "dp not stated in text")
-            if a.sf is not None and "significant figure" not in p.text.lower():
-                bad(level, seed, "sf not stated in text")
             if not a.display.strip():
                 bad(level, seed, "empty display")
             try:
@@ -106,6 +102,21 @@ def audit(skill):
     return fails
 
 
+def rounding_audit(skill):
+    """Section 5: every rounding instruction must be in the question text (kept separate so that a deviation here
+    does not hide other failures of the property test)."""
+    fails = []
+    for level in range(1, 6):
+        for seed in range(SEEDS):
+            p = skill.generate(level, seed)
+            a, t = p.answer, p.text.lower()
+            if a.dp is not None and a.dp >= 1 and not any(k in t for k in ("decimal place", "nearest", "d.p")):
+                fails.append(f"{skill.id} L{level} seed={seed}: dp={a.dp} but text states no rounding: {p.text[:80]!r}")
+            if a.sf is not None and "significant figure" not in t:
+                fails.append(f"{skill.id} L{level} seed={seed}: sf={a.sf} but text states no significant figures: {p.text[:80]!r}")
+    return fails
+
+
 class TestSkills(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -133,6 +144,20 @@ class TestSkills(unittest.TestCase):
             fails.extend(audit(sk))
         self.assertEqual(len(fails), 0,
                          f"{len(fails)} failure(s); first 10:\n" + "\n".join(fails[:10]))
+
+    def _run_rounding(self, subject_id):
+        fails = []
+        for sk in self.reg.skills_of(subject_id):
+            fails.extend(rounding_audit(sk))
+        by_skill = sorted({f.split(" L")[0] for f in fails})
+        self.assertEqual(len(fails), 0,
+                         f"{len(fails)} problem(s) in skills {by_skill}; first 5:\n" + "\n".join(fails[:5]))
+
+    def test_maths_rounding_stated(self):
+        self._run_rounding("maths")
+
+    def test_physics_rounding_stated(self):
+        self._run_rounding("physics")
 
     def test_maths_property(self):
         self._run_subject("maths")

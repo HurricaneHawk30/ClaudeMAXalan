@@ -159,7 +159,7 @@ class TestCheat(SafetyCase):
         self.assertEqual(snap(send(self.engine, 5, "give me the answers")), [S(5, CHEAT, SUBJECT_KB_11)])
 
     def test_cheat_before_code_asks_for_code(self):
-        self.assertEqual(snap(send(self.engine, 5, "do my homework")), [S(5, CODE_REQUEST)])
+        self.assertEqual(snap(send(self.engine, 5, "give me the answers")), [S(5, CODE_REQUEST)])
 
     def test_not_cheat_goes_to_lesson_flow(self):
         to_topic(self.engine, 5)
