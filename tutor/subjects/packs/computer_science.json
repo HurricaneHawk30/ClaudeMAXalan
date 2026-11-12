@@ -259,7 +259,7 @@
         "text": "A website receives so much traffic from an attacker that real users cannot reach it. Give the name of this type of attack.",
         "short": {"accept": ["denial of service", "denial of service attack", "dos", "dos attack", "ddos", "ddos attack", "distributed denial of service", "distributed denial of service attack"]},
         "solution": "A denial of service (DoS) attack floods a server with traffic so that real users are denied the service",
-        "hint": "Real users are denied the service"},
+        "hint": "Think about what the flood of traffic does for the genuine users of the website"},
        {"id": "nw16", "level": 3,
         "text": "A hacker uses a program that tries every possible password until one works. Which attack is this?",
         "choice": {"options": ["Brute force attack", "SQL injection", "Phishing", "Shoulder surfing"], "correct": 0},
