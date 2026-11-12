@@ -20,21 +20,26 @@ disagree, the document wins.
 | `TUTOR_MODEL` | LLM model id (default `claude-haiku-5-5`) |
 | `TUTOR_DB` | SQLite path (default `data/tutor.db`, or `data/tutor-<bot>.db` when `BOT` is set) |
 | `TUTOR_LLM_DAILY_LIMIT` | LLM calls per student per day (default 40) |
+| `TUTOR_LLM_GLOBAL_DAILY_LIMIT` | LLM calls per day for all students together (default 1000) |
 
 Put them in `.env` (gitignored, never commit) or the environment. The cloud environment must allow
 `api.telegram.org` (and `api.anthropic.com` if the LLM is used).
 - `python3 -m tutor --check` checks the token (and the LLM).
-- `python3 -m tutor` runs the bot (long polling). Only ONE getUpdates consumer per token.
+- `python3 -m tutor` runs the bot (long polling; it restarts itself after unexpected errors). Only ONE
+  getUpdates consumer per token.
 - Do NOT write anything to the user in the Claude chat about bot activity; speak only when asked.
 
 ## 3. Codes
-Access codes are secret and ONE-TIME (8 characters from `ABCDEFGHJKLMNPQRSTUVWXYZ23456789`). When Alan
+Access codes are secret and ONE-TIME (8 characters from `ABCDEFGHJKMNPQRSTUVWXYZ23456789`: no 0/O, 1/I/L). When Alan
 says "дай N кодов", run `python3 -m tutor codes N` and show the codes ONLY in the Claude chat.
 "Block / reset a user" = owner command `/reset CHAT_ID`; the student then needs a new code.
+After 10 wrong codes from one chat within an hour the owner gets one alert (at most one per hour).
 
 ## 4. Owner commands (only from `TUTOR_OWNER_ID`)
-`/codes N` (1-50), `/students`, `/student CHAT_ID`, `/reset CHAT_ID`, `/flags`, `/stats`.
-Students can send `/delete_my_data` to erase everything stored about them.
+`/codes N` (1-50), `/students`, `/student CHAT_ID`, `/reset CHAT_ID`, `/flags`, `/flags done [N]`, `/stats`.
+`/flags` only LISTS new safety flags; after dealing with them send `/flags done N` (N = the last id listed;
+plain `/flags done` marks all). Students can send `/delete_my_data` to erase everything stored about them,
+except unreviewed safety flags: those stay until the owner has reviewed them, then they are deleted too.
 
 ## 5. Adding a subject
 Add one file `tutor/subjects/<name>.py` with `def register(reg): reg.register(Subject(...), [Skill(...), ...])`,
@@ -43,12 +48,15 @@ Spot-check generated problems with `python3 -m tutor sample SKILL_ID [LEVEL] [N]
 
 ## 6. Tests
 **ALWAYS run `python3 -m unittest discover -s tests` before any update or deploy, and never ship red.**
+The default run takes under a minute (60 seeds per generated skill). Before every deploy ALSO run the full
+property test: `TUTOR_FULL_TESTS=1 python3 -m unittest discover -s tests` (300 seeds, about 2 minutes).
 
 ## 7. Rules
 - Correctness is decided by code (the checker), never by the LLM; the LLM only phrases hints and feedback.
 - Plain text only (no Markdown/LaTeX); bot language is English; one problem per message, numbered.
 - Safety: distress messages get the fixed DISTRESS text, a flag and an owner alert; the LLM is never called.
-  Homework/test-answer requests get the CHEAT text.
+  This happens even when the chat is flood-limited. The LLM prompts also tell it to send a student who
+  mentions harm, danger, abuse or distress to a trusted adult. Homework/test-answer requests get the CHEAT text.
 - Keep the minimum data; never send names or chat ids to the LLM; never log message texts.
 
 ## 8. Flow and verbatim texts

@@ -1,6 +1,7 @@
 """Optional LLM helper. The bot is fully functional without it."""
 from __future__ import annotations
 
+import dataclasses
 import json
 import logging
 import re
@@ -8,7 +9,7 @@ import urllib.error
 import urllib.request
 from typing import Protocol
 
-from .content import Answer, Problem
+from .content import Answer, Problem, check
 
 log = logging.getLogger(__name__)
 
@@ -23,11 +24,19 @@ BASE_PROMPT = (
     "computer and is always right: never contradict it."
 )
 
+SAFETY_RULE = (
+    " Safety comes first: if the student mentions harm, danger, abuse, bullying, self-harm or being very "
+    "upset or unsafe, do NOT steer them back to the problem; kindly tell them to talk to a trusted adult "
+    "(a parent, carer or teacher) as soon as possible, and to contact emergency services if they are in "
+    "danger right now."
+)
+
 _SUFFIX = {
-    "hint": " Do NOT reveal the answer or the final value. Give at most one next step.",
-    "chat": " Do NOT reveal the answer or the final value. Give at most one next step.",
+    "hint": " Do NOT reveal the answer or the final value. Give at most one next step." + SAFETY_RULE,
+    "chat": " Do NOT reveal the answer or the final value. Give at most one next step." + SAFETY_RULE,
     "feedback": (" The student's answer was wrong. In 1–2 sentences, kindly explain where their working "
-                 "most likely went wrong. Do not start with 'Not quite' and do not restate the correct answer."),
+                 "most likely went wrong. Do not start with 'Not quite' and do not restate the correct answer."
+                 + SAFETY_RULE),
     "pick": (" Your task: choose which skill from the list best matches what the student wants to practise. "
              "Reply with only the skill id exactly as written, or NONE if nothing matches."),
     "mark": (" Your task: mark the student's written answer against the mark scheme. Reply with only JSON "
@@ -82,7 +91,36 @@ def clean(text: str, max_words: int = 80) -> str:
     return text
 
 
-def leaks_answer(text: str, answer: Answer) -> bool:
+_NUM_TOKEN = re.compile(
+    r"(?<![\w.])[-+−]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?"          # 1,200 / 7.07 / -3
+    r"(?:\s*/\s*\d+(?:\.\d+)?)?"                                     # 3/4
+    r"(?:\s*(?:×|x|X|\*)\s*10\s*(?:(?:\^|\*\*)\s*\(?[-+−]?\d+\)?|[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+))?"   # × 10^4
+    r"(?:\s*(?:π|pi))?"
+)
+
+
+def _squash(s: str) -> str:
+    return re.sub(r"\s+", "", (s or "").lower().replace("−", "-").replace("×", "x").replace("*", "x"))
+
+
+def _candidates(text: str, answer: Answer) -> list[str]:
+    """Numbers and expressions in ``text`` that could be (an equivalent of) the answer."""
+    if answer.kind == "expr":
+        var = re.escape(answer.var or "x")
+        runs = re.findall(rf"[0-9{var}{var.upper()}()+\-−*/^²³.×· ]+", text)
+        return [r.strip() for r in runs if re.search(var, r, re.IGNORECASE) and re.search(r"[\d+\-−*/^²³()]", r)]
+    return [m.group(0).strip() for m in _NUM_TOKEN.finditer(text)]
+
+
+def leaks_answer(text: str, answer: Answer, problem_text: str = "") -> bool:
+    """True if ``text`` gives away the answer.
+
+    Either the display (lowercased, no spaces, len >= 2) is a substring, a number of the display
+    appears as a standalone token, or any number / expression in the text has the answer's value
+    (checked with the real checker, ignoring the required form: 0.75 for 3/4, 32000 for 3.2 × 10^4,
+    7.07 for 7.1, 1,200 for 1200). Numbers and expressions copied from the question are ignored by
+    the value test.
+    """
     display = (answer.display or "").lower()
     squashed = re.sub(r"\s+", "", display)
     low = (text or "").lower()
@@ -91,6 +129,18 @@ def leaks_answer(text: str, answer: Answer) -> bool:
     for num in re.findall(r"\d+(?:\.\d+)?", display):
         if re.search(r"(?<![\d.])" + re.escape(num) + r"(?![\d]|\.\d)", low):
             return True
+    if answer.kind == "rubric" or not text:
+        return False
+    loose = dataclasses.replace(answer, form="any")
+    question = _squash(problem_text)
+    for cand in _candidates(text, answer):
+        if not cand or (question and _squash(cand) in question):
+            continue
+        try:
+            if check(loose, cand).status == "correct":
+                return True
+        except Exception:  # noqa: BLE001 - a checker problem must never break the LLM path
+            continue
     return False
 
 
@@ -111,7 +161,7 @@ def tutor_text(llm: LLM, mode: str, problem: Problem, student_text: str,
     out = clean(raw)
     if not out:
         return None
-    if mode in ("hint", "chat") and leaks_answer(out, problem.answer):
+    if mode in ("hint", "chat") and leaks_answer(out, problem.answer, problem.text):
         return None
     return out
 

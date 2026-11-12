@@ -10,7 +10,7 @@ from helpers import CODE_RE, send, CODE_OK
 
 ROOT = helpers.ROOT
 SCRUB = ("BOT", "TELEGRAM_BOT_TOKEN", "TUTOR_OWNER_ID", "ANTHROPIC_API_KEY", "TUTOR_MODEL", "TUTOR_DB",
-         "TUTOR_LLM_DAILY_LIMIT", "TUTOR_ENV_FILE")
+         "TUTOR_LLM_DAILY_LIMIT", "TUTOR_LLM_GLOBAL_DAILY_LIMIT", "TUTOR_ENV_FILE")
 
 
 class CliCase(unittest.TestCase):
@@ -55,6 +55,26 @@ class TestCodesCommand(CliCase):
         self.assertEqual(send(engine, 5, codes[0].lower())[0].text, CODE_OK)
         self.assertEqual(send(engine, 6, codes[0])[0].text, helpers.CODE_BAD)
         self.assertEqual(send(engine, 6, codes[1])[0].text, CODE_OK)
+
+    def test_codes_wait_for_the_bot_s_write_lock(self):
+        # the bot holds BEGIN IMMEDIATE during an LLM call; the CLI must wait (busy_timeout >= 30 s), not fail
+        import threading
+        import time
+        from tutor import __main__ as cli
+        from tutor.db import Store
+        self.assertGreaterEqual(cli.CLI_BUSY_TIMEOUT, 30)
+        bot = Store(self.db)
+        self.addCleanup(bot.close)
+        bot.conn.execute("BEGIN IMMEDIATE")
+        bot.set_offset(1)
+        timer = threading.Timer(1.5, lambda: bot.conn.execute("COMMIT"))
+        timer.start()
+        self.addCleanup(timer.cancel)
+        t0 = time.time()
+        r = self.run_cli("codes", "2")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertGreaterEqual(time.time() - t0, 1.0)
+        self.assertEqual(len(r.stdout.split()), 2)
 
     def test_two_runs_give_different_codes(self):
         a = self.run_cli("codes", "5").stdout.split()

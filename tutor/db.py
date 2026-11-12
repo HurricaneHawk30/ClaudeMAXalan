@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import contextlib
+import logging
 import os
 import secrets
 import sqlite3
@@ -10,7 +11,9 @@ from typing import ContextManager, Iterable
 
 from .content import Problem, problem_from_json, problem_to_json
 
-CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+log = logging.getLogger(__name__)
+
+CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"     # no 0/O, 1/I/L
 CODE_LENGTH = 8
 
 SCHEMA = """
@@ -104,13 +107,13 @@ def _student(row) -> Student:
 
 
 class Store:
-    def __init__(self, path: str) -> None:
+    def __init__(self, path: str, busy_timeout: float = 15.0) -> None:
         self.path = path
         if path != ":memory:":
             parent = os.path.dirname(os.path.abspath(path))
             os.makedirs(parent, exist_ok=True)
-        self.conn = sqlite3.connect(path, isolation_level=None, check_same_thread=False, timeout=15)
-        self.conn.execute("PRAGMA busy_timeout = 15000")
+        self.conn = sqlite3.connect(path, isolation_level=None, check_same_thread=False, timeout=busy_timeout)
+        self.conn.execute(f"PRAGMA busy_timeout = {int(busy_timeout * 1000)}")
         if path != ":memory:":
             self.conn.execute("PRAGMA journal_mode = WAL")
         self.conn.executescript(SCHEMA)
@@ -122,16 +125,27 @@ class Store:
     def transaction(self) -> ContextManager:
         return self._transaction()
 
+    def _rollback(self) -> None:
+        if self.conn.in_transaction:
+            try:
+                self.conn.execute("ROLLBACK")
+            except sqlite3.Error as e:
+                log.error("rollback failed: %s", type(e).__name__)
+
     @contextlib.contextmanager
     def _transaction(self):
+        self._rollback()                    # never start inside a transaction left open by a failure
         self.conn.execute("BEGIN IMMEDIATE")
         try:
             yield self
         except BaseException:
-            self.conn.execute("ROLLBACK")
+            self._rollback()
             raise
-        else:
+        try:
             self.conn.execute("COMMIT")
+        except BaseException:
+            self._rollback()                # a failed COMMIT must not leave the transaction open
+            raise
 
     # offset
     def get_offset(self) -> int:
@@ -197,8 +211,11 @@ class Store:
         return [_student(r) for r in rows]
 
     def delete_student_data(self, chat_id: int) -> None:
-        for table in ("students", "progress", "pending", "attempts", "flags", "llm_usage"):
+        """Delete everything about a chat EXCEPT unreviewed safety flags: safeguarding records
+        stay (unchanged) until the owner has reviewed them with /flags done."""
+        for table in ("students", "progress", "pending", "attempts", "llm_usage"):
             self.conn.execute(f"DELETE FROM {table} WHERE chat_id = ?", (chat_id,))
+        self.conn.execute("DELETE FROM flags WHERE chat_id = ? AND reviewed = 1", (chat_id,))
         self.conn.execute("UPDATE codes SET used_by = NULL WHERE used_by = ?", (chat_id,))
 
     # progress
@@ -227,8 +244,15 @@ class Store:
             "hints_given, created_at FROM pending WHERE chat_id = ?", (chat_id,)).fetchone()
         if not row:
             return None
+        try:
+            problem = problem_from_json(row[8])
+        except Exception as e:  # noqa: BLE001 - any corruption (bad JSON, missing fields, wrong types)
+            # an unreadable stored problem must not break every message: drop it
+            log.warning("dropping unreadable pending problem for chat %s (%s)", chat_id, type(e).__name__)
+            self.clear_pending(chat_id)
+            return None
         return Pending(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7],
-                       problem_from_json(row[8]), row[9], row[10])
+                       problem, row[9], row[10])
 
     def set_pending(self, p: Pending) -> None:
         self.conn.execute(
@@ -278,6 +302,10 @@ class Store:
     def mark_flags_reviewed(self, ids: Iterable[int]) -> None:
         for i in ids:
             self.conn.execute("UPDATE flags SET reviewed = 1 WHERE id = ?", (i,))
+
+    def delete_reviewed_orphan_flags(self) -> None:
+        """Reviewed flags of students who deleted their data are removed for good."""
+        self.conn.execute("DELETE FROM flags WHERE reviewed = 1 AND chat_id NOT IN (SELECT chat_id FROM students)")
 
     # llm usage
     def llm_calls(self, chat_id: int, day: str) -> int:

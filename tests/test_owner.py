@@ -50,8 +50,8 @@ class TestCodes(OwnerCase):
         self.assertEqual(len(set(codes)), 50)
         for c in codes:
             self.assertEqual(len(c), 8)
-            self.assertLessEqual(set(c), set("ABCDEFGHJKLMNPQRSTUVWXYZ23456789"))   # literal alphabet of section 0.5
-            self.assertFalse(set(c) & set("01OI"))
+            self.assertLessEqual(set(c), set("ABCDEFGHJKMNPQRSTUVWXYZ23456789"))   # literal alphabet of section 0.5
+            self.assertFalse(set(c) & set("01OIL"))
 
     def test_codes_usage(self):
         for t in ("/codes 0", "/codes 51", "/codes abc", "/codes -1", "/codes 1.5", "/codes 1000"):
@@ -197,13 +197,36 @@ class TestFlags(OwnerCase):
     def test_none(self):
         self.assertEqual(self.own_text("/flags"), NO_FLAGS)
 
-    def test_flags_listed_then_reviewed(self):
+    def test_listing_does_not_mark_reviewed(self):
         send(self.engine, 5, "I want to die")
         text = self.own_text("/flags")
         d = stamp(self.clock())
-        self.assertEqual(text, f"🚩 1 new flag:\n#1 {d} distress · chat 5 (Zorblax): I want to die")
+        self.assertEqual(text, f"🚩 1 new flag:\n#1 {d} distress · chat 5 (Zorblax): I want to die\n"
+                               f"When you have dealt with them, send /flags done 1")
+        self.assertEqual(self.own_text("/flags"), text)               # still there: delivery may have failed
+        self.assertEqual(len(self.store.unreviewed_flags()), 1)
+
+    def test_flags_done_marks_reviewed(self):
+        send(self.engine, 5, "I want to die")
+        self.assertEqual(self.own_text("/flags done"), helpers.FLAGS_DONE(1))
         self.assertEqual(self.own_text("/flags"), NO_FLAGS)
         self.assertEqual(self.store.unreviewed_flags(), [])
+        self.assertEqual(self.own_text("/flags done"), NO_FLAGS)
+
+    def test_flags_done_up_to_id_keeps_newer_flags(self):
+        send(self.engine, 5, "I want to die")
+        send(self.engine, 6, "i cut myself", first_name="Bob", username="bb")
+        listing = self.own_text("/flags")
+        self.assertTrue(listing.endswith("send /flags done 2"), listing)
+        send(self.engine, 7, "my dad hits me")              # arrives after the owner read the list
+        self.assertEqual(self.own_text("/flags done 2"), helpers.FLAGS_DONE(2))
+        self.assertEqual([f.chat_id for f in self.store.unreviewed_flags()], [7])
+        self.assertEqual(self.own_text("/flags ok #3"), helpers.FLAGS_DONE(1))
+
+    def test_flags_usage(self):
+        for t in ("/flags all", "/flags done x", "/flags done 1 2"):
+            with self.subTest(text=t):
+                self.assertEqual(self.own_text(t), helpers.FLAGS_USAGE)
 
     def test_multiple_flags_plural_and_order(self):
         send(self.engine, 5, "I want to die")
@@ -213,11 +236,12 @@ class TestFlags(OwnerCase):
         self.assertTrue(lines[1].startswith("#1 "))
         self.assertTrue(lines[2].startswith("#2 "))
         self.assertTrue(lines[2].endswith("distress · chat 6 (Bob @bb): i cut myself"), lines[2])
+        self.own("/flags done")
         self.assertEqual(self.own_text("/flags"), NO_FLAGS)
 
     def test_new_flag_after_review_is_listed(self):
         send(self.engine, 5, "I want to die")
-        self.own("/flags")
+        self.own("/flags done")
         send(self.engine, 5, "thinking about suicide")
         text = self.own_text("/flags")
         self.assertTrue(text.startswith("🚩 1 new flag:\n#2 "), text)

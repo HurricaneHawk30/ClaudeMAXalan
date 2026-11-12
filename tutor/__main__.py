@@ -36,10 +36,13 @@ def _build_parser() -> argparse.ArgumentParser:
     return p
 
 
+CLI_BUSY_TIMEOUT = 60.0     # the bot may hold the write lock during an LLM call (up to ~20 s)
+
+
 def _cmd_codes(n: int) -> int:
     from .db import Store
     config = load_config()
-    store = Store(config.db_path)
+    store = Store(config.db_path, busy_timeout=CLI_BUSY_TIMEOUT)
     try:
         with store.transaction():
             codes = store.add_codes(n, time.time())
@@ -107,6 +110,26 @@ def _cmd_check() -> int:
     return 0
 
 
+def run_forever(run, *, sleep=time.sleep, max_restarts: int | None = None) -> None:
+    """Call ``run()`` again after an unexpected exception, with backoff 1, 2, 4 ... 60 s.
+
+    Returns when ``run()`` returns. KeyboardInterrupt / SystemExit are never caught.
+    """
+    backoff = 1
+    restarts = 0
+    while True:
+        try:
+            run()
+            return
+        except Exception as e:
+            restarts += 1
+            if max_restarts is not None and restarts > max_restarts:
+                raise
+            log.error("polling stopped unexpectedly (%s); restarting in %ss", type(e).__name__, backoff)
+            sleep(backoff)
+            backoff = min(60, backoff * 2)
+
+
 def _cmd_run() -> int:
     from .db import Store
     from .engine import Engine
@@ -122,8 +145,9 @@ def _cmd_run() -> int:
     store = Store(config.db_path)
     try:
         engine = Engine(store, config, llm=llm)
+        api = TelegramAPI(config.token)
         log.info("Polling started")
-        run_polling(TelegramAPI(config.token), engine, store)
+        run_forever(lambda: run_polling(api, engine, store))
     except KeyboardInterrupt:
         log.info("Stopped")
     finally:

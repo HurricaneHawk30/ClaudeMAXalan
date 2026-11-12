@@ -20,6 +20,7 @@ class Config:
     db_path: str = ":memory:"
     llm_daily_limit: int = 40
     flood_per_minute: int = 20
+    llm_global_daily_limit: int = 1000
 
 
 def _read_env_file(path: str) -> dict[str, str]:
@@ -78,12 +79,15 @@ def load_config(environ: Mapping[str, str] | None = None) -> Config:
     if db_path != ":memory:" and not os.path.isabs(db_path):
         db_path = os.path.join(REPO_ROOT, db_path)
 
-    try:
-        limit = int(get("TUTOR_LLM_DAILY_LIMIT") or 40)
-        if limit < 0:
-            limit = 40
-    except ValueError:
-        limit = 40
+    def int_setting(key: str, default: int) -> int:
+        try:
+            value = int(get(key) or default)
+        except ValueError:
+            return default
+        return value if value >= 0 else default
+
+    limit = int_setting("TUTOR_LLM_DAILY_LIMIT", 40)
+    global_limit = int_setting("TUTOR_LLM_GLOBAL_DAILY_LIMIT", 1000)
 
     return Config(
         token=token,
@@ -92,4 +96,5 @@ def load_config(environ: Mapping[str, str] | None = None) -> Config:
         model=get("TUTOR_MODEL") or "claude-haiku-5-5",
         db_path=db_path,
         llm_daily_limit=limit,
+        llm_global_daily_limit=global_limit,
     )

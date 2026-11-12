@@ -99,14 +99,31 @@ def handle_owner(cmd: str, args: list[str], *, store: Store, now: float, registr
         return [T.RESET_OK.format(chat_id=chat_id)]
 
     if cmd == "/flags":
+        # Listing never marks anything: delivery happens later, in the adapter, and may fail.
+        # The owner confirms with "/flags done [N]" once the flags have been dealt with.
         flags = store.unreviewed_flags()
-        if not flags:
+        if not args:
+            if not flags:
+                return [T.NO_FLAGS]
+            lines = [T.FLAGS_LINE.format(id=f.id, datetime=_date(f.ts), kind=f.kind, chat_id=f.chat_id,
+                                         name=_name(store.get_student(f.chat_id)), text=f.text)
+                     for f in flags]
+            return [T.FLAGS.format(n=len(flags), s=_plural(len(flags)), lines="\n".join(lines),
+                                   last=flags[-1].id)]
+        if args[0].lower() not in ("done", "ok") or len(args) > 2:
+            return [T.FLAGS_USAGE]
+        upto = None
+        if len(args) == 2:
+            try:
+                upto = int(args[1].lstrip("#"))
+            except ValueError:
+                return [T.FLAGS_USAGE]
+        done = [f.id for f in flags if upto is None or f.id <= upto]
+        if not done:
             return [T.NO_FLAGS]
-        lines = [T.FLAGS_LINE.format(id=f.id, datetime=_date(f.ts), kind=f.kind, chat_id=f.chat_id,
-                                     name=_name(store.get_student(f.chat_id)), text=f.text)
-                 for f in flags]
-        store.mark_flags_reviewed([f.id for f in flags])
-        return [T.FLAGS.format(n=len(flags), s=_plural(len(flags)), lines="\n".join(lines))]
+        store.mark_flags_reviewed(done)
+        store.delete_reviewed_orphan_flags()
+        return [T.FLAGS_DONE.format(n=len(done), s=_plural(len(done)))]
 
     if cmd == "/stats":
         students = store.list_students(1_000_000)

@@ -64,14 +64,16 @@ class TestCodeGate(FlowCase):
         self.assertEqual(st.year, 11)
 
     def test_wrong_code(self):
-        self.assertEqual(self.say(CH, "ZZZZZZZZ"), [S(CH, CODE_BAD)])
-        self.assertEqual(self.say(CH, "ABCDEF"), [S(CH, CODE_BAD)])          # 6 chars: shortest valid shape
-        self.assertEqual(self.say(CH, "ABCDEFGHJKLM"), [S(CH, CODE_BAD)])    # 12 chars: longest valid shape
+        self.assertEqual(self.say(CH, "ZZZZZZZZ"), [S(CH, CODE_BAD)])        # 8 chars from the code alphabet
+        self.assertEqual(self.say(CH, "ABCDE2"), [S(CH, CODE_BAD)])          # 6 chars with a digit: shortest
+        self.assertEqual(self.say(CH, "ABCDEFGHJK23"), [S(CH, CODE_BAD)])    # 12 chars with a digit: longest
+        self.assertEqual(self.say(CH, "Code: ZZZZ2345"), [S(CH, CODE_BAD)])
         self.assertFalse(self.student().verified)
 
     def test_not_code_shaped_repeats_request(self):
         for t in ("ABCDE", "ABCDEFGHJKLMN", "hello", "12", "Maths", "Year 7", CHANGE_YEAR, CHANGE_SUBJECT,
-                  "/codes 5", "/students", "/foo", "with space but long enough?"):
+                  "/codes 5", "/students", "/foo", "with space but long enough?",
+                  "ABCDEF", "ABCDEFGHJKLM", "thanks", "hello there", "homework", "LLLLLLLL", "please help"):
             with self.subTest(text=t):
                 self.assertEqual(self.say(CH, t), [S(CH, CODE_REQUEST)])
 
@@ -86,6 +88,28 @@ class TestCodeGate(FlowCase):
         st = self.student()
         self.assertTrue(st.verified)
         self.assertEqual((st.step, st.year), ("subject", 11))
+
+    def test_code_with_label_quotes_and_punctuation(self):
+        codes = get_codes(self.engine, 4)
+        for i, typed in enumerate((f"Code: {codes[0]}", f'"{codes[1]}"', f"{codes[2]}.",
+                                   f"my code is {codes[3].lower()}!")):
+            with self.subTest(typed=typed):
+                self.assertEqual(snap(send(self.engine, 20 + i, typed))[0], S(20 + i, CODE_OK))
+
+    def test_owner_alert_after_ten_bad_codes_once_per_hour(self):
+        for i in range(9):
+            self.assertEqual(self.say(CH, f"ZZZZ{2345 + i}"), [S(CH, CODE_BAD)])
+            self.clock.advance(10)
+        out = snap(send(self.engine, CH, "ZZZZ9999", first_name="Eve"))
+        self.assertEqual(out, [S(CH, CODE_BAD), S(999, helpers.CODE_ALERT(10, "Eve", CH))])
+        for _ in range(5):                                   # no second alert within the hour
+            self.assertEqual(self.say(CH, "ZZZZ9999"), [S(CH, CODE_BAD)])
+        self.clock.advance(3600)
+        self.assertEqual(self.say(CH, "ZZZZ9999"), [S(CH, CODE_BAD)])    # old attempts expired
+        for _ in range(9):
+            out = self.say(CH, "ZZZZ9999")
+        self.assertEqual(out[-1][0], 999)                     # a new burst after an hour alerts again
+        self.assertEqual(self.say(2, "ZZZZ9999"), [S(2, CODE_BAD)])        # per chat
 
     def test_code_is_one_time(self):
         code = get_codes(self.engine, 1)[0]

@@ -7,6 +7,7 @@ node whitelist.  See docs/ARCHITECTURE.md section 2.4.
 from __future__ import annotations
 
 import ast
+import functools
 import math
 
 MAX_CHARS = 200
@@ -160,6 +161,14 @@ def _check_tree(tree: ast.Expression, var: str) -> None:
 
 
 def parse(s: str, var: str = "x") -> ast.Expression:
+    """Parse ``s`` (results are cached: callers must not modify the returned tree)."""
+    if not isinstance(s, str) or not isinstance(var, str):
+        raise ExprError("expression must be text")
+    return _parse_cached(s, var)
+
+
+@functools.lru_cache(maxsize=4096)
+def _parse_cached(s: str, var: str) -> ast.Expression:
     src = _preprocess(s, var)
     try:
         tree = ast.parse(src, mode="eval")
@@ -254,12 +263,16 @@ def _values(tree: ast.Expression, var: str) -> list[float | None]:
     return res
 
 
+@functools.lru_cache(maxsize=4096)
+def _point_values(s: str, var: str) -> tuple:
+    return tuple(_values(parse(s, var), var))
+
+
 def equivalent(a: str, b: str, var: str = "x") -> bool | None:
     try:
-        ta, tb = parse(a, var), parse(b, var)
-    except ExprError:
+        va, vb = _point_values(a, var), _point_values(b, var)
+    except (ExprError, TypeError):
         return None
-    va, vb = _values(ta, var), _values(tb, var)
     valid = 0
     for x, y in zip(va, vb):
         if x is None or y is None:
@@ -296,7 +309,46 @@ def _factors(node: ast.AST) -> list[ast.AST]:
     return [node]
 
 
+def _degree(node: ast.AST, var: str) -> int | None:
+    """Polynomial degree of ``node`` in ``var``; None if it is not a polynomial."""
+    if isinstance(node, ast.Expression):
+        return _degree(node.body, var)
+    if isinstance(node, ast.Constant):
+        return 0
+    if isinstance(node, ast.Name):
+        return 1 if node.id == var else None
+    if isinstance(node, ast.UnaryOp):
+        return _degree(node.operand, var)
+    if isinstance(node, ast.BinOp):
+        if isinstance(node.op, (ast.Add, ast.Sub)):
+            a, b = _degree(node.left, var), _degree(node.right, var)
+            return None if a is None or b is None else max(a, b)
+        if isinstance(node.op, ast.Mult):
+            a, b = _degree(node.left, var), _degree(node.right, var)
+            return None if a is None or b is None else a + b
+        if isinstance(node.op, ast.Div):
+            return _degree(node.left, var) if not _contains_var(node.right, var) else None
+        if isinstance(node.op, ast.Pow):
+            e = _const_int(node.right)
+            d = _degree(node.left, var)
+            return None if e is None or e < 0 or d is None else d * e
+    return None
+
+
+def _const_int(node: ast.AST) -> int | None:
+    if _has_name(node):
+        return None
+    try:
+        v = _eval(node, {}, None)
+    except ExprError:
+        return None
+    return int(v) if float(v).is_integer() else None
+
+
 def is_factorised(s: str, var: str = "x") -> bool:
+    """A product with at least two factors containing ``var`` (a squared bracket counts twice),
+    at least one of them a bracket; or a number (not ±1) times one linear bracket, e.g. 2(x + 3).
+    '1(x² + 13x + 42)' and '2(x² + 5x + 6)' are not factorised."""
     node = parse(s, var).body
     while isinstance(node, ast.UnaryOp):
         node = node.operand
@@ -306,11 +358,68 @@ def is_factorised(s: str, var: str = "x") -> bool:
         factors = [node]
     else:
         return False
+    var_factors = 0
+    has_bracket = linear_bracket = number = False
     for f in factors:
         while isinstance(f, ast.UnaryOp):
             f = f.operand
+        times = 1
         if isinstance(f, ast.BinOp) and isinstance(f.op, ast.Pow):
+            times = _const_int(f.right) or 1
             f = f.left
+        if not _contains_var(f, var):
+            try:
+                number = number or abs(_eval(f, {}, None)) != 1
+            except ExprError:
+                pass
+            continue
+        var_factors += max(1, times)
         if _is_sum_with_var(f, var):
-            return True
-    return False
+            has_bracket = True
+            linear_bracket = linear_bracket or _degree(f, var) == 1
+    if not has_bracket:
+        return False
+    return var_factors >= 2 or (linear_bracket and number)
+
+
+def _terms(node: ast.AST) -> list[ast.AST]:
+    if isinstance(node, ast.BinOp) and isinstance(node.op, (ast.Add, ast.Sub)):
+        return _terms(node.left) + _terms(node.right)
+    while isinstance(node, ast.UnaryOp):
+        node = node.operand
+    return [node]
+
+
+def _monomial_power(node: ast.AST, var: str) -> int | None:
+    """Power of ``var`` in a single term (3x² -> 2, 5 -> 0); None if the term is not a monomial."""
+    while isinstance(node, ast.UnaryOp):
+        node = node.operand
+    if isinstance(node, ast.Constant):
+        return 0
+    if isinstance(node, ast.Name):
+        return 1
+    if isinstance(node, ast.BinOp):
+        if isinstance(node.op, ast.Mult):
+            a, b = _monomial_power(node.left, var), _monomial_power(node.right, var)
+            return None if a is None or b is None else a + b
+        if isinstance(node.op, ast.Div) and not _contains_var(node.right, var):
+            return _monomial_power(node.left, var)
+        if isinstance(node.op, ast.Pow):
+            e = _const_int(node.right)
+            base = _monomial_power(node.left, var)
+            return None if e is None or base is None else base * e
+    return None
+
+
+def is_simplified(s: str, var: str = "x") -> bool:
+    """Like terms collected: no two terms of the top-level sum have the same power of ``var``
+    ('x² + x + 8x + 8' is not simplified)."""
+    seen: set[int] = set()
+    for t in _terms(parse(s, var).body):
+        p = _monomial_power(t, var)
+        if p is None:
+            continue
+        if p in seen:
+            return False
+        seen.add(p)
+    return True

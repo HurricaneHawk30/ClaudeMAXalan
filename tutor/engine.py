@@ -21,6 +21,18 @@ log = logging.getLogger(__name__)
 
 EXAM_MARKS = {1: 1, 2: 2, 3: 2, 4: 3, 5: 4}
 MATH_CHARS = "=+-*/^²√π"
+BAD_CODE_ALERT_AFTER = 10       # wrong codes from one chat within BAD_CODE_WINDOW -> one owner alert
+BAD_CODE_WINDOW = 3600.0
+
+
+def where(e: BaseException) -> str:
+    """Exception type and the innermost code location, never the message (it may contain student text)."""
+    tb = e.__traceback__
+    loc = ""
+    while tb is not None:
+        loc = f"{tb.tb_frame.f_code.co_filename.rsplit('/', 1)[-1]}:{tb.tb_lineno}"
+        tb = tb.tb_next
+    return f"{type(e).__name__} at {loc}" if loc else type(e).__name__
 
 
 def _trim(s: str) -> str:
@@ -43,6 +55,8 @@ class Engine:
         self.clock = clock
         self.rng = rng if rng is not None else random.Random()
         self._flood: dict[int, collections.deque] = {}
+        self._bad_codes: dict[int, collections.deque] = {}
+        self._code_alerted: dict[int, float] = {}
         self._now = 0.0
 
     # ------------------------------------------------------------------ entry
@@ -52,9 +66,18 @@ class Engine:
         try:
             with self.store.transaction():
                 return self._handle(msg)
-        except Exception:
-            log.exception("error while handling a message from chat %s", msg.chat_id)
+        except Exception as e:
+            log.error("error while handling a message from chat %s: %s", msg.chat_id, where(e))
             return [Outgoing(msg.chat_id, T.ERROR)]
+
+    def on_delivery_failed(self, chat_id: int) -> None:
+        """The adapter could not deliver a reply to ``chat_id``: forget the pending problem so the
+        student's next answer is never marked against a problem they have not seen."""
+        try:
+            with self.store.transaction():
+                self.store.clear_pending(chat_id)
+        except Exception as e:
+            log.error("could not clear pending for chat %s: %s", chat_id, where(e))
 
     def _handle(self, msg: Incoming) -> list[Outgoing]:
         now = self._now = self.clock()
@@ -69,21 +92,25 @@ class Engine:
             replies = handle_owner(cmd, args, store=self.store, now=now, registry=self.registry)
             return [Outgoing(owner_id, r) for r in replies]
 
-        # 2. flood control
+        # 2. distress comes before flood control: it is always flagged, alerted and answered
+        if msg.text is not None and cmd not in ("/start", "/delete_my_data") and is_distress(text):
+            if not is_owner:
+                self._flooded(msg.chat_id, now)          # counts towards the window, never dropped
+            return self._distress(msg, text, now)
+
+        # 3. flood control
         if not is_owner and self._flooded(msg.chat_id, now):
             return []
 
-        # 3. register the student
-        st = self.store.upsert_seen(msg.chat_id, msg.first_name, msg.username, now)
-        if st.verified and st.step == "code":
-            st.step = "subject"
+        # 4. register the student
+        st = self._seen(msg, now)
 
-        # 4. delete data
+        # 5. delete data
         if cmd == "/delete_my_data":
             self.store.delete_student_data(msg.chat_id)
             return [Outgoing(msg.chat_id, T.DELETED, remove_keyboard=True)]
 
-        # 5. /start
+        # 6. /start
         if cmd == "/start":
             if not st.verified:
                 st.step = "code"
@@ -93,23 +120,13 @@ class Engine:
             st.step = "subject"
             return self._finish(st, self._subject_reply(st))
 
-        # 6. distress
-        if msg.text is not None and is_distress(text):
-            self.store.add_flag(msg.chat_id, "distress", text, now)
-            out = [Outgoing(msg.chat_id, T.DISTRESS, keyboard=self._current_kb(st))]
-            if owner_id is not None:
-                out.append(Outgoing(owner_id, T.FLAG_ALERT.format(
-                    kind="distress", name=self._name(st), chat_id=msg.chat_id, text=text[:300])))
-            self.store.save_student(st)
-            return out
-
         # 7. access code
         if not st.verified:
             code = normalize_code(text) if msg.text is not None else None
             if code is None:
                 return [Outgoing(msg.chat_id, T.CODE_REQUEST)]
             if not self.store.redeem_code(code, msg.chat_id, now):
-                return [Outgoing(msg.chat_id, T.CODE_BAD)]
+                return [Outgoing(msg.chat_id, T.CODE_BAD)] + self._bad_code_alert(st, now)
             st.verified = True
             st.step = "subject"
             out = [Outgoing(msg.chat_id, T.CODE_OK)] + self._subject_reply(st)
@@ -148,6 +165,37 @@ class Engine:
         return self._finish(st, self._by_step(st, text))
 
     # --------------------------------------------------------------- helpers
+    def _seen(self, msg: Incoming, now: float) -> Student:
+        st = self.store.upsert_seen(msg.chat_id, msg.first_name, msg.username, now)
+        if st.verified and st.step == "code":
+            st.step = "subject"
+        return st
+
+    def _distress(self, msg: Incoming, text: str, now: float) -> list[Outgoing]:
+        st = self._seen(msg, now)
+        self.store.add_flag(msg.chat_id, "distress", text, now)
+        out = [Outgoing(msg.chat_id, T.DISTRESS, keyboard=self._current_kb(st))]
+        owner_id = self.config.owner_id
+        if owner_id is not None:
+            out.append(Outgoing(owner_id, T.FLAG_ALERT.format(
+                kind="distress", name=self._name(st), chat_id=msg.chat_id, text=text[:300])))
+        self.store.save_student(st)
+        return out
+
+    def _bad_code_alert(self, st: Student, now: float) -> list[Outgoing]:
+        """One owner alert per chat per hour once a chat has sent 10 wrong codes within an hour."""
+        window = self._bad_codes.setdefault(st.chat_id, collections.deque())
+        while window and window[0] <= now - BAD_CODE_WINDOW:
+            window.popleft()
+        window.append(now)
+        owner_id = self.config.owner_id
+        if owner_id is None or len(window) < BAD_CODE_ALERT_AFTER:
+            return []
+        if now - self._code_alerted.get(st.chat_id, -BAD_CODE_WINDOW - 1) < BAD_CODE_WINDOW:
+            return []
+        self._code_alerted[st.chat_id] = now
+        return [Outgoing(owner_id, T.CODE_ALERT.format(n=len(window), name=self._name(st), chat_id=st.chat_id))]
+
     def _finish(self, st: Student, out: list[Outgoing]) -> list[Outgoing]:
         self.store.save_student(st)
         return out
@@ -166,8 +214,11 @@ class Engine:
         return (st.first_name or "?") + (f" @{st.username}" if st.username else "")
 
     def _llm_allowed(self, chat_id: int) -> bool:
-        return (self.llm is not None
-                and self.store.llm_calls(chat_id, _day(self._now)) < self.config.llm_daily_limit)
+        if self.llm is None:
+            return False
+        day = _day(self._now)
+        return (self.store.llm_calls(chat_id, day) < self.config.llm_daily_limit
+                and self.store.llm_calls_total(day) < self.config.llm_global_daily_limit)
 
     def _count_llm(self, chat_id: int) -> None:
         self.store.incr_llm_calls(chat_id, _day(self._now))

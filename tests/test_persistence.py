@@ -1,5 +1,6 @@
 import os
 import random
+import sqlite3
 import tempfile
 import unittest
 
@@ -70,6 +71,17 @@ class TestRestart(unittest.TestCase):
         store.close()
         engine2, store2 = self.reopen()
         self.assertEqual(send(engine2, 6, code)[0].text, helpers.CODE_BAD)
+
+    def test_corrupt_pending_does_not_loop_on_error(self):
+        engine, store, clock = make_engine(path=self.path)
+        to_topic(engine, 5)
+        store.conn.execute("UPDATE pending SET problem_json = '{broken' WHERE chat_id = 5")
+        out = send(engine, 5, "42")
+        self.assertNotEqual(out[0].text, helpers.ERROR)
+        self.assertEqual(out[0].text, helpers.TOPIC_ASK(11))
+        self.assertIsNone(store.get_pending(5))
+        out = send(engine, 5, helpers.HIGHER_ALGEBRA)          # and the lesson goes on
+        self.assertTrue(out[-1].text.startswith("Problem 1:"))
 
     def test_offset_roundtrip(self):
         s = Store(self.path)
@@ -238,6 +250,57 @@ class TestStorePendingAttemptsFlags(StoreCase):
         self.assertEqual(self.s.get_offset(), 10)
         self.assertEqual(self.s.unreviewed_flags(), [])
 
+    def test_commit_failure_rolls_back_and_next_transaction_works(self):
+        real = self.s.conn
+
+        class FailingCommit:
+            """Delegates to the real connection but fails the next COMMIT once."""
+            def __init__(self):
+                self.fail = True
+
+            def execute(self, sql, *args):
+                if sql.strip().upper() == "COMMIT" and self.fail:
+                    self.fail = False
+                    raise sqlite3.OperationalError("disk I/O error")
+                return real.execute(sql, *args)
+
+            def __getattr__(self, name):
+                return getattr(real, name)
+
+        self.s.conn = FailingCommit()
+        with self.assertRaises(sqlite3.OperationalError):
+            with self.s.transaction():
+                self.s.set_offset(42)
+        self.assertFalse(real.in_transaction)              # not left open
+        self.assertEqual(self.s.get_offset(), 0)           # rolled back
+        with self.s.transaction():                         # the next message works
+            self.s.set_offset(43)
+        self.assertEqual(self.s.get_offset(), 43)
+        self.s.conn = real
+
+    def test_stale_open_transaction_is_rolled_back_before_begin(self):
+        self.s.conn.execute("BEGIN")
+        self.s.set_offset(5)
+        with self.s.transaction():
+            self.s.set_offset(6)
+        self.assertEqual(self.s.get_offset(), 6)
+
+    def test_corrupt_pending_is_dropped(self):
+        self.s.set_pending(self.pending())
+        for bad in ("{not json", "{}", '{"skill_id": 1}', "null", "[]"):
+            with self.subTest(json=bad):
+                self.s.set_pending(self.pending())
+                self.s.conn.execute("UPDATE pending SET problem_json = ? WHERE chat_id = 5", (bad,))
+                with self.assertLogs("tutor.db", level="WARNING"):
+                    self.assertIsNone(self.s.get_pending(5))
+                self.assertEqual(self.s.conn.execute("SELECT COUNT(*) FROM pending").fetchone()[0], 0)
+
+    def test_busy_timeout_is_configurable(self):
+        s = Store(":memory:", busy_timeout=60)
+        self.addCleanup(s.close)
+        self.assertEqual(s.conn.execute("PRAGMA busy_timeout").fetchone()[0], 60000)
+        self.assertGreaterEqual(self.s.conn.execute("PRAGMA busy_timeout").fetchone()[0], 15000)
+
     def test_delete_student_data(self):
         st = self.s.upsert_seen(5, "Al", "", 1.0)
         self.s.upsert_seen(6, "Bo", "", 1.0)
@@ -245,6 +308,8 @@ class TestStorePendingAttemptsFlags(StoreCase):
         self.s.set_level(6, "maths", "t", 3)
         self.s.set_pending(self.pending())
         self.s.add_attempt(Attempt(5, "maths", "t", "maths.x", 1, 1, True, False, 1.0))
+        reviewed = self.s.add_flag(5, "distress", "old", 1.0)
+        self.s.mark_flags_reviewed([reviewed])
         self.s.add_flag(5, "distress", "x", 1.0)
         self.s.incr_llm_calls(5, "2024-01-01")
         self.s.add_flag(6, "distress", "keep", 1.0)
@@ -254,7 +319,12 @@ class TestStorePendingAttemptsFlags(StoreCase):
         self.assertEqual(self.s.levels(5), [])
         self.assertEqual(self.s.recent_attempts(5), [])
         self.assertEqual(self.s.llm_calls(5, "2024-01-01"), 0)
-        self.assertEqual([f.chat_id for f in self.s.unreviewed_flags()], [6])
+        # unreviewed safety flags stay unchanged until reviewed; reviewed ones are deleted
+        self.assertEqual([(f.chat_id, f.text) for f in self.s.unreviewed_flags()], [(5, "x"), (6, "keep")])
+        self.assertEqual(self.s.conn.execute("SELECT COUNT(*) FROM flags WHERE chat_id = 5").fetchone()[0], 1)
+        self.s.mark_flags_reviewed([f.id for f in self.s.unreviewed_flags() if f.chat_id == 5])
+        self.s.delete_reviewed_orphan_flags()
+        self.assertEqual(self.s.conn.execute("SELECT COUNT(*) FROM flags WHERE chat_id = 5").fetchone()[0], 0)
         self.assertIsNotNone(self.s.get_student(6))
         self.assertEqual(self.s.get_level(6, "maths", "t"), 3)
         self.s.delete_student_data(12345)      # unknown chat is fine

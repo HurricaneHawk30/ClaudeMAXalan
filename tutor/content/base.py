@@ -17,7 +17,7 @@ class Answer:
                                  # assign: dict[str, str] var->number str | expr: str in Python syntax ("x**2+5*x+6") | ratio: list[int] | rubric: None
     dp: int | None = None        # number / set elements: decimal places stated in the question (0..3)
     sf: int | None = None        # number: significant figures stated (>= 2)
-    form: str = "any"            # number: any|standard  fraction: any|simplest  expr: any|expanded|factorised  ratio: any|simplest
+    form: str = "any"            # number: any|standard  fraction: any|simplest|mixed  expr: any|expanded|factorised  ratio: any|simplest
     ordered: bool = False        # set: order matters (shares of a ratio)
     var: str = "x"               # expr: the single variable letter ("x" or "n")
     mark_scheme: str = ""        # rubric only (display = model answer)

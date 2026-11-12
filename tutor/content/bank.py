@@ -21,7 +21,7 @@ class BankError(ValueError):
 _ANSWER_KEYS = {f.name for f in fields(Answer)}
 _FORMS = {
     "number": ("any", "standard"),
-    "fraction": ("any", "simplest"),
+    "fraction": ("any", "simplest", "mixed"),
     "expr": ("any", "expanded", "factorised"),
     "ratio": ("any", "simplest"),
 }

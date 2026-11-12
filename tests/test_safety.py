@@ -10,18 +10,38 @@ OWNER = 999
 
 MUST_DETECT = ["I want to kill myself", "i want to die", "I'm going to hurt myself", "I cut myself",
                "thinking about suicide", "i self harm", "I don't want to live anymore",
-               "nobody would care if I disappeared", "I'm being bullied and I can't take it"]
-MUST_NOT = ["this homework is killing me", "I'm dying to know", "the angle is a right angle"]
-EXTRA_DETECT = ["kms", "KMS", "I want to kms", "wanna die", "end my life", "end it all", "suicidal", "self-harm",
+               "nobody would care if I disappeared", "I'm being bullied and I can't take it",
+               # critic findings (Nov 2026): every one of these must be flagged
+               "i want to unalive myself", "kill my self", "kys", "thinking about ending my life",
+               "i dont wanna live anymore", "i wish i was dead", "i'm getting bullied", "they bully me",
+               "my dad hits me", "my stepdad hurts me", "someone touched me", "an adult asked me to send pics",
+               "a man online wants to meet me", "i'm not safe", "i want 2 die", "sucide", "suicde"]
+MUST_NOT = ["this homework is killing me", "I'm dying to know", "the angle is a right angle", "20 kms",
+            "can I send it all", "can i send it all at once", "the car goes 5 kms", "the formula for kms per hour",
+            "the bully in the story was mean", "hit me with another question"]
+EXTRA_DETECT = ["I want to kms", "i wanna kms", "wanna die", "end my life", "end it all", "suicidal", "self-harm",
                 "selfharm", "hurting myself", "cutting myself", "dont want to live", "no reason to live",
                 "better off dead", "better off without me", "being bullied", "someone is abusing me", "abused",
-                "not safe at home", "scared to go home", "I WANT TO DIE", "i  want   to die", "I want to die!!!"]
-EXTRA_NOT = ["", "hello", "x = 3", "what is 5 + 5", "the vector is cut", "my kmsx", "ikmsx", "I did my homework"]
+                "not safe at home", "scared to go home", "I WANT TO DIE", "i  want   to die", "I want to die!!!",
+                "i wish i were dead", "i'm bullied", "people at school bully me", "my mum hits me",
+                "he touches me", "keep it a secret from my parents", "i am in danger", "i want to die lol",
+                "i don't wanna be alive", "send nudes", "my uncle hurt me", "i'm scared of my dad",
+                "im going to end it", "i cut my wrists", "i took pills", "life isn't worth living",
+                "i've been cutting", "i feel like dying", "i can't go on", "i don't want to be here anymore",
+                "i want to disappear", "nobody loves me", "i starve myself", "i make myself sick",
+                "someone is following me", "i want to hurt someone", "k.m.s"]
+EXTRA_NOT = ["", "hello", "x = 3", "what is 5 + 5", "the vector is cut", "my kmsx", "ikmsx", "I did my homework",
+             "kms", "KMS", "I'd love to meet the author", "my answer is 20 km/h", "succeed"]
 
 CHEATS = ["do my homework", "do my hw", "do my test", "do this test for me", "do it for me", "write my essay",
-          "write an essay for me", "write my coursework", "test answers", "exam answers", "answers to the test",
-          "answers to the exam", "answers for the test", "answers for the exam", "answer key", "give me the answers"]
-NOT_CHEATS = ["I did my homework", "can you check my answer", "x = 4", "hello", "", "what is the answer to 2 + 2"]
+          "write an essay for me", "write my coursework", "answers to the test",
+          "answers to the exam", "answers for the test", "answers for the exam", "answer key", "give me the answers",
+          "do my maths homework", "do my physics hw", "solve my homework", "give me the test answers",
+          "answers to my homework"]
+NOT_CHEATS = ["I did my homework", "can you check my answer", "x = 4", "hello", "", "what is the answer to 2 + 2",
+              "can you check my test answers", "my test answers were wrong", "i got my exam answers back",
+              "how do i do the homework on fractions", "help me answer the test questions myself",
+              "show me the answers to check my working"]
 
 
 class TestIntentsDistress(unittest.TestCase):
@@ -175,7 +195,7 @@ class TestCheat(SafetyCase):
 
 
 class TestDeleteMyData(SafetyCase):
-    def test_delete_everything(self):
+    def test_delete_everything_except_unreviewed_safety_flags(self):
         to_topic(self.engine, 5)
         send(self.engine, 5, answer_of(self.store, 5))
         send(self.engine, 5, "I want to die")
@@ -186,8 +206,19 @@ class TestDeleteMyData(SafetyCase):
         self.assertIsNone(self.store.get_pending(5))
         self.assertEqual(self.store.recent_attempts(5), [])
         self.assertEqual(self.store.levels(5), [])
-        self.assertEqual([f for f in self.store.unreviewed_flags() if f.chat_id == 5], [])
         self.assertEqual(self.store.llm_calls(5, helpers.day_of(self.clock)), 0)
+        # the safeguarding record stays, unchanged, until the owner has reviewed it
+        flags = [f for f in self.store.unreviewed_flags() if f.chat_id == 5]
+        self.assertEqual([(f.kind, f.text) for f in flags], [("distress", "I want to die")])
+        self.assertTrue(send(self.engine, OWNER, "/flags")[0].text.startswith("🚩 1 new flag:"))
+        send(self.engine, OWNER, "/flags done")
+        self.assertEqual(self.store.conn.execute("SELECT COUNT(*) FROM flags WHERE chat_id = 5").fetchone()[0], 0)
+
+    def test_reviewed_flags_are_deleted_with_the_data(self):
+        send(self.engine, 5, "I want to die")
+        send(self.engine, OWNER, "/flags done")
+        send(self.engine, 5, "/delete_my_data")
+        self.assertEqual(self.store.conn.execute("SELECT COUNT(*) FROM flags WHERE chat_id = 5").fetchone()[0], 0)
 
     def test_next_message_needs_a_code(self):
         to_topic(self.engine, 5)
@@ -245,10 +276,33 @@ class TestFlood(SafetyCase):
     def test_dropped_messages_have_no_side_effects(self):
         verify(self.engine, 5)
         for _ in range(25):
-            send(self.engine, 5, "I want to die")
-        # 19 messages passed (verify code used one slot, then flagged) - the rest dropped
-        self.assertLessEqual(len(self.store.unreviewed_flags()), 20)
-        self.assertEqual(send(self.engine, 5, "I want to die"), [])
+            send(self.engine, 5, "hello")
+        self.assertEqual(send(self.engine, 5, "hello"), [])
+        self.assertEqual(self.store.unreviewed_flags(), [])
+        self.assertEqual(self.store.recent_attempts(5), [])
+
+    def test_distress_is_never_dropped_by_flood_control(self):
+        verify(self.engine, 5)
+        for _ in range(25):
+            send(self.engine, 5, "hello")
+        self.assertEqual(send(self.engine, 5, "hello"), [])          # flooded
+        out = send(self.engine, 5, "I want to die")
+        self.assertEqual([o.text for o in out if o.chat_id == 5], [DISTRESS])
+        self.assertEqual([o.chat_id for o in out if o.chat_id == OWNER], [OWNER])
+        self.assertEqual(len(self.store.unreviewed_flags()), 1)
+        self.assertEqual(send(self.engine, 5, "hello"), [])          # still flooded for normal messages
+        for _ in range(5):
+            send(self.engine, 5, "kill my self")
+        self.assertEqual(len(self.store.unreviewed_flags()), 6)
+        self.assertEqual(self.llm.calls, [])
+
+    def test_distress_from_unverified_flooded_chat(self):
+        for _ in range(25):
+            send(self.engine, 9, "hello")
+        out = send(self.engine, 9, "my dad hits me")
+        self.assertEqual([o.text for o in out if o.chat_id == 9], [DISTRESS])
+        self.assertIsNone([o for o in out if o.chat_id == 9][0].keyboard)
+        self.assertEqual(len(self.store.unreviewed_flags()), 1)
 
     def test_configurable_limit(self):
         engine, store, clock = make_engine(flood=3)

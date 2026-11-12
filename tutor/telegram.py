@@ -132,20 +132,44 @@ def _send(api, params: dict, sleep: Callable[[float], None]) -> bool:
                 sleep(e.retry_after or 1)
             else:
                 sleep(2 ** attempt)
-        except OSError:
+        except Exception as e:  # network errors, http.client.HTTPException / IncompleteRead, ...
+            log.warning("send to chat %s failed: %s", params.get("chat_id"), type(e).__name__)
             sleep(2 ** attempt)
     log.warning("send to chat %s failed after 3 tries", params.get("chat_id"))
     return False
 
 
+def _deliver(api, engine, outgoing: list[Outgoing], sleep: Callable[[float], None]) -> None:
+    """Send every message in order; tell the engine about chats that could not be reached."""
+    failed: list[int] = []
+    for out in outgoing:
+        if out.chat_id in failed:
+            continue
+        for params in to_send_params(out):
+            if not _send(api, params, sleep):
+                failed.append(out.chat_id)
+                break
+    notify = getattr(engine, "on_delivery_failed", None)
+    for chat_id in failed:
+        if notify is not None:
+            notify(chat_id)
+
+
 def run_polling(api, engine, store, *, sleep: Callable[[float], None] = time.sleep,
                 should_stop: Callable[[], bool] = lambda: False) -> None:
-    offset = store.get_offset()
+    """Long-polling loop. It never raises: every failure is logged (type only) and retried."""
+    try:
+        offset = store.get_offset()
+    except Exception as e:
+        log.error("could not read the stored offset (%s); starting from 0", type(e).__name__)
+        offset = 0
     backoff = 1
     while not should_stop():
         try:
             updates = api.get_updates(offset, 30)
-        except (OSError, TimeoutError, TelegramError) as e:
+            if not isinstance(updates, list):
+                raise TelegramError("unexpected getUpdates result")
+        except Exception as e:  # OSError, TelegramError, http.client.HTTPException, IncompleteRead, ...
             if isinstance(e, TelegramError) and e.code == 409:
                 log.error("another getUpdates consumer is running for this token (409)")
             else:
@@ -155,16 +179,19 @@ def run_polling(api, engine, store, *, sleep: Callable[[float], None] = time.sle
             continue
         backoff = 1
         for update in updates:
-            update_id = update.get("update_id")
+            update_id = update.get("update_id") if isinstance(update, dict) else None
             try:
                 incoming = parse_update(update)
                 if incoming is not None:
                     log.info("message from chat %s", incoming.chat_id)
-                    for out in engine.handle(incoming):
-                        for params in to_send_params(out):
-                            _send(api, params, sleep)
-            except Exception:
-                log.exception("failed to process update %s", update_id)
+                    _deliver(api, engine, engine.handle(incoming), sleep)
+            except Exception as e:
+                log.error("failed to process update %s: %s", update_id, type(e).__name__)
+                sleep(1)
             if isinstance(update_id, int):
                 offset = update_id + 1
-                store.set_offset(offset)
+                try:
+                    store.set_offset(offset)
+                except Exception as e:  # e.g. database locked: the offset in memory still advances
+                    log.error("could not save offset %s: %s", offset, type(e).__name__)
+                    sleep(1)

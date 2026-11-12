@@ -41,6 +41,7 @@ class TestDefaults(ConfigCase):
         self.assertEqual(os.path.normpath(c.db_path), os.path.normpath(os.path.join(REPO_ROOT, "data", "tutor.db")))
         self.assertEqual(c.llm_daily_limit, 40)
         self.assertEqual(c.flood_per_minute, 20)
+        self.assertEqual(c.llm_global_daily_limit, 1000)
 
     def test_dataclass_defaults(self):
         c = Config()
@@ -148,6 +149,13 @@ class TestOwnerAndLimits(ConfigCase):
         self.assertEqual(self.load({"TUTOR_LLM_DAILY_LIMIT": "abc"}).llm_daily_limit, 40)
         self.assertEqual(self.load({"TUTOR_LLM_DAILY_LIMIT": ""}).llm_daily_limit, 40)
         self.assertEqual(self.load(file_text="TUTOR_LLM_DAILY_LIMIT=12\n").llm_daily_limit, 12)
+
+    def test_llm_global_limit(self):
+        self.assertEqual(self.load({"TUTOR_LLM_GLOBAL_DAILY_LIMIT": "250"}).llm_global_daily_limit, 250)
+        self.assertEqual(self.load({"TUTOR_LLM_GLOBAL_DAILY_LIMIT": "x"}).llm_global_daily_limit, 1000)
+        self.assertEqual(self.load({"TUTOR_LLM_GLOBAL_DAILY_LIMIT": "-5"}).llm_global_daily_limit, 1000)
+        self.assertEqual(self.load(file_text="TUTOR_LLM_GLOBAL_DAILY_LIMIT=7\n").llm_global_daily_limit, 7)
+        self.assertEqual(Config().llm_global_daily_limit, 1000)
 
     def test_model_override(self):
         self.assertEqual(self.load({"TUTOR_MODEL": "other-model"}).model, "other-model")

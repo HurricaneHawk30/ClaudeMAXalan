@@ -1,3 +1,4 @@
+import http.client
 import io
 import json
 import logging
@@ -228,8 +229,9 @@ class FakeAPI:
 
     def get_updates(self, offset, timeout=30):
         self.offsets.append(offset)
-        if len(self.offsets) > 60:
-            raise RuntimeError("runaway polling loop")
+        if len(self.offsets) > 60:          # runaway loop guard (the loop itself never raises)
+            self.stop = True
+            return []
         if not self.script:
             self.stop = True
             return []
@@ -253,12 +255,32 @@ class FakeEngine:
     def __init__(self, fail_on=()):
         self.handled = []
         self.fail_on = set(fail_on)
+        self.undelivered = []
 
     def handle(self, msg):
         self.handled.append(msg)
         if msg.text in self.fail_on:
             raise RuntimeError("engine blew up")
         return [Outgoing(msg.chat_id, f"re: {msg.text}")]
+
+    def on_delivery_failed(self, chat_id):
+        self.undelivered.append(chat_id)
+
+
+class FlakyStore:
+    """A store whose set_offset fails for the first ``fails`` calls (e.g. 'database is locked')."""
+
+    def __init__(self, real, fails):
+        self.real, self.fails = real, fails
+
+    def get_offset(self):
+        return self.real.get_offset()
+
+    def set_offset(self, offset):
+        if self.fails:
+            self.fails -= 1
+            raise Exception("database is locked")
+        self.real.set_offset(offset)
 
 
 class TestRunPolling(unittest.TestCase):
@@ -288,6 +310,70 @@ class TestRunPolling(unittest.TestCase):
         eng = self.run_loop(api)
         self.assertEqual(self.sleeps[:3], [1, 2, 4])
         self.assertEqual([m.text for m in eng.handled], ["ok"])
+
+    def test_any_get_updates_exception_backs_off_and_continues(self):
+        api = FakeAPI([http.client.IncompleteRead(b"partial"), http.client.RemoteDisconnected("bye"),
+                       ValueError("bad json"), RuntimeError("weird"), [upd(1, "ok")]])
+        eng = self.run_loop(api)
+        self.assertEqual(self.sleeps[:4], [1, 2, 4, 8])
+        self.assertEqual([m.text for m in eng.handled], ["ok"])
+        self.assertEqual(self.store.get_offset(), 2)
+
+    def test_incomplete_read_from_real_api_call(self):
+        class Resp(FakeResponse):
+            def read(self, *a):
+                raise http.client.IncompleteRead(b"{")
+        api = TelegramAPI("1:A", opener=lambda req, timeout=None: Resp(b""))
+        with self.assertRaises(http.client.IncompleteRead):
+            api.get_updates(0)
+
+        class Wrapper:
+            calls = 0
+
+            def get_updates(self, offset, timeout=30):
+                Wrapper.calls += 1
+                if Wrapper.calls == 1:
+                    return api.get_updates(offset, timeout)
+                return [upd(1, "after")]
+
+            def send_message(self, params):
+                pass
+        w = Wrapper()
+        eng = FakeEngine()
+        run_polling(w, eng, self.store, sleep=self.sleeps.append, should_stop=lambda: Wrapper.calls >= 2)
+        self.assertEqual(self.sleeps[:1], [1])
+        self.assertEqual([m.text for m in eng.handled], ["after"])
+
+    def test_failing_set_offset_does_not_stop_the_loop(self):
+        api = FakeAPI([[upd(1, "a")], [upd(2, "b")], [upd(3, "c")]])
+        eng = FakeEngine()
+        run_polling(api, eng, FlakyStore(self.store, 2), sleep=self.sleeps.append, should_stop=lambda: api.stop)
+        self.assertEqual([m.text for m in eng.handled], ["a", "b", "c"])
+        self.assertEqual(api.offsets, [0, 2, 3])        # the offset in memory advanced even when saving failed
+        self.assertEqual(self.store.get_offset(), 4)
+
+    def test_send_unexpected_exception_is_retried(self):
+        api = FakeAPI([[upd(1, "a")]], send_script=[http.client.IncompleteRead(b"x")])
+        self.run_loop(api)
+        self.assertEqual(api.send_attempts, 2)
+        self.assertEqual(len(api.sent), 1)
+
+    def test_delivery_failure_is_reported_to_the_engine(self):
+        api = FakeAPI([[upd(1, "a", chat=10), upd(2, "b", chat=11)]],
+                      send_script=[TelegramError("Forbidden: bot was blocked by the user", 403)])
+        eng = self.run_loop(api)
+        self.assertEqual(eng.undelivered, [10])
+        api = FakeAPI([[upd(3, "c", chat=12)]], send_script=[OSError("x")] * 3)
+        eng = self.run_loop(api)
+        self.assertEqual(eng.undelivered, [12])
+
+    def test_engine_without_delivery_hook_is_fine(self):
+        class Bare:
+            def handle(self, msg):
+                return [Outgoing(msg.chat_id, "x")]
+        api = FakeAPI([[upd(1, "a")]], send_script=[TelegramError("Forbidden", 403)])
+        self.run_loop(api, Bare())
+        self.assertEqual(self.store.get_offset(), 2)
 
     def test_backoff_caps_at_60(self):
         api = FakeAPI([OSError("net")] * 10 + [[]])
@@ -385,6 +471,27 @@ class TestRunPolling(unittest.TestCase):
             root.setLevel(old)
         self.assertFalse([r for r in records if secret in r], records)
 
+    def test_undelivered_problem_is_not_marked(self):
+        engine, store, clock = make_engine(flood=1000)
+        self.addCleanup(store.close)
+        helpers.to_topic(engine, 10)
+        self.assertIsNotNone(store.get_pending(10))
+        api = FakeAPI([[upd(1, "skip", chat=10)]], send_script=[OSError("down")] * 6)
+        run_polling(api, engine, store, sleep=self.sleeps.append, should_stop=lambda: api.stop)
+        self.assertIsNone(store.get_pending(10))         # the next problem never arrived: forget it
+        out = helpers.send(engine, 10, "42")
+        self.assertEqual(out[0].text, helpers.TOPIC_ASK(11))
+
+    def test_on_delivery_failed_clears_only_that_chat(self):
+        engine, store, clock = make_engine(flood=1000)
+        self.addCleanup(store.close)
+        helpers.to_topic(engine, 10)
+        helpers.to_topic(engine, 11)
+        engine.on_delivery_failed(10)
+        self.assertIsNone(store.get_pending(10))
+        self.assertIsNotNone(store.get_pending(11))
+        engine.on_delivery_failed(12345)                 # unknown chat: no error
+
     def test_real_engine_end_to_end(self):
         engine, store, clock = make_engine(flood=1000)
         self.addCleanup(store.close)
@@ -402,3 +509,55 @@ class TestRunPolling(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRunForever(unittest.TestCase):
+    def test_restarts_after_unexpected_exception_with_backoff(self):
+        from tutor.__main__ import run_forever
+        calls, sleeps = [], []
+
+        def run():
+            calls.append(1)
+            if len(calls) <= 3:
+                raise RuntimeError("polling crashed")
+        with self.assertLogs("tutor", level="ERROR"):
+            run_forever(run, sleep=sleeps.append)
+        self.assertEqual(len(calls), 4)
+        self.assertEqual(sleeps, [1, 2, 4])
+
+    def test_keyboard_interrupt_is_not_swallowed(self):
+        from tutor.__main__ import run_forever
+
+        def run():
+            raise KeyboardInterrupt
+        with self.assertRaises(KeyboardInterrupt):
+            run_forever(run, sleep=lambda s: None)
+
+    def test_max_restarts(self):
+        from tutor.__main__ import run_forever
+
+        def run():
+            raise ValueError("always")
+        with self.assertLogs("tutor", level="ERROR"):
+            with self.assertRaises(ValueError):
+                run_forever(run, sleep=lambda s: None, max_restarts=2)
+
+    def test_main_run_exits_0_on_ctrl_c(self):
+        import tutor.__main__ as m
+        import tutor.telegram as tg
+        from unittest import mock
+
+        def boom(*a, **kw):
+            raise KeyboardInterrupt
+        env = {"TELEGRAM_BOT_TOKEN": "1:A", "TUTOR_DB": ":memory:", "TUTOR_ENV_FILE": "/nonexistent/.env"}
+        root = logging.getLogger()
+        handlers, level = list(root.handlers), root.level
+        try:
+            with mock.patch.dict("os.environ", env), mock.patch.object(tg, "run_polling", boom):
+                with self.assertLogs("tutor", level="INFO"):
+                    self.assertEqual(m.main([]), 0)
+        finally:                                   # main() calls logging.basicConfig: undo it
+            for h in list(root.handlers):
+                if h not in handlers:
+                    root.removeHandler(h)
+            root.setLevel(level)

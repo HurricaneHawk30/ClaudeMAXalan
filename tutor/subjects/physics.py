@@ -3,18 +3,21 @@
 Shared ladder: L1 direct substitution (whole numbers), L2 rearranging, L3 one unit
 conversion, L4 rearranging plus a conversion, L5 two-step or standard form (2–3 s.f.).
 All arithmetic uses Fractions so answers are exact; g = 9.8 N/kg is stated whenever used.
-Exact answers with more than 3 significant figures ask for 3 s.f. instead.
+Every answer that is not a whole number (and every whole number with more than 4 significant
+figures) asks for 3 significant figures, so a correctly rounded answer is always accepted.
+Questions that ask for a time say which unit to use.
 """
 from __future__ import annotations
 
 import math
 import random
+from decimal import Decimal
 from fractions import Fraction
 from typing import Callable
 
 from ..content.base import Answer, Mistake, Problem, Skill, Subject, Topic, YearSpec
 from ..content.fmt import (
-    build, check_level, fmt_num, fmt_sf, fmt_std, near_half, num_answer, num_mistake,
+    build, check_level, dec, fmt_num, fmt_sf, fmt_std, near_half, num_answer, num_mistake,
     retry, sig_digits, std_answer, std_mistake, unit,
 )
 
@@ -27,21 +30,35 @@ Draft = dict
 
 # ================================================================ helpers
 
-MAX_EXACT_SF = 4      # exact answers with more significant figures ask for rounding
+MAX_EXACT_SF = 4      # whole-number answers with more significant figures ask for rounding
+SF = 3                # rounding asked for whenever an answer is not a whole number
+SF_TXT = f" Give your answer to {SF} significant figures."
+SECONDS_TXT = " Give your answer in seconds."
+
+
+def _needs_rounding(v) -> bool:
+    return not float(v).is_integer() or sig_digits(v) > MAX_EXACT_SF
 
 
 def _q(text: str, answer: Answer, solution: str, hint: str, mistakes=()) -> Draft:
-    """Assemble a draft; long exact answers (e.g. 22736 J) get an explicit s.f. instruction."""
+    """Assemble a draft. An exact answer that is not a whole number (1.125 N, 186.2 N) or a long
+    whole number (22736 J) gets "Give your answer to 3 significant figures." and sf=3."""
     if (answer.kind == "number" and answer.dp is None and answer.sf is None
-            and answer.form == "any" and sig_digits(answer.value) > MAX_EXACT_SF):
-        sf = next(k for k in (3, 4, 5, 6) if not near_half(answer.value, sf=k))
+            and answer.form == "any" and _needs_rounding(answer.value)):
         u = answer.display.split(" ", 1)[1] if " " in answer.display else ""
-        shown = unit(fmt_sf(answer.value, sf), u)
-        text = f"{text} Give your answer to {sf} significant figures."
-        solution = f"{solution} = {shown} ({sf} s.f.)"
-        answer = num_answer(answer.value, shown, sf=sf)
+        rounded = fmt_sf(answer.value, SF)
+        shown = unit(rounded, u)
+        text = text + SF_TXT
+        if Decimal(rounded) != dec(answer.value):
+            solution = f"{solution} = {shown} ({SF} s.f.)"
+        answer = num_answer(answer.value, shown, sf=SF)
     return {"text": text, "answer": answer, "solution": solution, "hint": hint,
             "mistakes": list(mistakes)}
+
+
+def _mins(m) -> str:
+    """'1 minute', '1.5 minutes', '3 minutes'."""
+    return f"{fmt_num(m)} minute" + ("" if m == 1 else "s")
 
 
 def F(x) -> Fraction:
@@ -67,13 +84,14 @@ def _is_short(v) -> bool:
             and sig_digits(Fraction(v)) <= MAX_EXACT_SF)
 
 
-def _final(v, u: str, sf: int = 3) -> tuple[Answer, str, str]:
+def _final(v, u: str, sf: int = SF) -> tuple[Answer, str, str]:
     """(answer, rounding sentence for the question, value text for the working)."""
-    if _is_short(v):
+    if not _needs_rounding(v):
         return num_answer(v, unit(n(v), u)), "", unit(n(v), u)
-    shown = unit(fmt_sf(v, sf), u)
-    return (num_answer(v, shown, sf=sf), f" Give your answer to {sf} significant figures.",
-            f"{_approx(v)} = {shown} ({sf} s.f.)")
+    rounded = fmt_sf(v, sf)
+    shown = unit(rounded, u)
+    working = f"{_approx(v)} = {shown} ({sf} s.f.)" if Decimal(rounded) != dec(v) else unit(n(v), u)
+    return num_answer(v, shown, sf=sf), f" Give your answer to {sf} significant figures.", working
 
 
 def _rounding_ok(v, sf: int = 3) -> bool:
@@ -149,7 +167,7 @@ def _speed_2(rng):
                   "distance = speed × time",
                   [_m(Fraction(v, t), "m", "distance = speed × time — multiply, don't divide"),
                    _m(Fraction(t, v), "m", "distance = speed × time — multiply, don't divide")])
-    return _q(f"{who.capitalize()} travels {d} m at a constant speed of {v} m/s. Calculate the time taken.",
+    return _q(f"{who.capitalize()} travels {d} m at a constant speed of {v} m/s. Calculate the time taken.{SECONDS_TXT}",
               num_answer(t, f"{t} s"), f"time = distance ÷ speed = {d} ÷ {v} = {t} s",
               "Rearrange speed = distance ÷ time to make time the subject",
               [_m(d * v, "s", "time = distance ÷ speed — divide, don't multiply"),
@@ -224,8 +242,8 @@ def _speed_5(rng):
                               ("Venus (at its closest)", F("4.2") * 10 ** 10), ("Mars (at its closest)", F("5.4") * 10 ** 10)))
     t = dist / c
     ans, tail, shown = _final(t, "s")
-    return _q(f"Light travels at 3.0 × 10^8 m/s. {place[0].upper() + place[1:]} is {fmt_std(dist)} m from the Earth. Calculate the time it takes light to travel from {place.split(' (')[0]} to the Earth.{tail}",
-              ans, f"time = distance ÷ speed = {fmt_std(dist)} ÷ 3.0 × 10^8 = {shown}",
+    return _q(f"Light travels at 3.0 × 10^8 m/s. {place[0].upper() + place[1:]} is {fmt_std(dist)} m from the Earth. Calculate the time it takes light to travel from {place.split(' (')[0]} to the Earth.{SECONDS_TXT}{tail}",
+              ans, f"time = distance ÷ speed = ({fmt_std(dist)}) ÷ (3.0 × 10^8) = {shown}",
               "time = distance ÷ speed",
               [_m(dist * c, "s", "time = distance ÷ speed — divide, don't multiply"),
                _m(c / dist, "s", "time = distance ÷ speed — you divided the wrong way round")])
@@ -261,7 +279,7 @@ def _acc_2(rng):
                   "Find the change in velocity (a × t), then add it to the starting velocity",
                   [_m(a * t, "m/s", f"That's the change in velocity — add on the starting velocity ({u} m/s)"),
                    _m(u * a * t if u != 1 else None, "m/s", "Add the change in velocity to the starting velocity: v = u + a × t")])
-    return _q(f"A car accelerates at {n(a)} m/s² from {u} m/s to {n(v)} m/s. How long does this take?",
+    return _q(f"A car accelerates at {n(a)} m/s² from {u} m/s to {n(v)} m/s. How long does this take?{SECONDS_TXT}",
               num_answer(t, f"{t} s"), f"t = change in velocity ÷ a = ({n(v)} − {u}) ÷ {n(a)} = {t} s",
               "Rearrange acceleration = change in velocity ÷ time to make time the subject",
               [_m((v - u) * a, "s", "time = change in velocity ÷ acceleration — divide, don't multiply"),
@@ -298,10 +316,10 @@ def _acc_4(rng):
     u = rng.randrange(2, 15)
     v = u + dv
     secs = 60 * mins
-    return _q(f"A train travelling at {u} m/s accelerates at {n(a)} m/s² for {n(mins)} minutes. Calculate its final velocity.",
-              num_answer(v, f"{n(v)} m/s"), f"{n(mins)} minutes = {n(secs)} s. Change in velocity = {n(a)} × {n(secs)} = {n(dv)} m/s, so v = {u} + {n(dv)} = {n(v)} m/s",
+    return _q(f"A train travelling at {u} m/s accelerates at {n(a)} m/s² for {_mins(mins)}. Calculate its final velocity.",
+              num_answer(v, f"{n(v)} m/s"), f"{_mins(mins)} = {n(secs)} s. Change in velocity = {n(a)} × {n(secs)} = {n(dv)} m/s, so v = {u} + {n(dv)} = {n(v)} m/s",
               "Convert the time into seconds, then use v = u + a × t",
-              [_m(u + a * mins, "m/s", f"Convert {n(mins)} minutes into seconds first: × 60"),
+              [_m(u + a * mins, "m/s", f"Convert {_mins(mins)} into seconds first: × 60"),
                _m(dv, "m/s", f"That's the change in velocity — add on the starting velocity ({u} m/s)")])
 
 
@@ -675,7 +693,7 @@ def _power_2(rng):
                    _m(Fraction(t, p), "J", "energy = power × time — multiply, don't divide")])
     p, t = rng.choice((500, 1000, 1200, 1500, 2000, 2500, 3000)), rng.randrange(5, 121)
     e = p * t
-    return _q(f"How long does it take a {p} W kettle to transfer {e} J of energy?",
+    return _q(f"How long does it take a {p} W kettle to transfer {e} J of energy?{SECONDS_TXT}",
               num_answer(t, f"{t} s"), f"t = E ÷ P = {e} ÷ {p} = {t} s",
               "Rearrange power = energy ÷ time to make time the subject",
               [_m(e * p, "s", "time = energy ÷ power — divide, don't multiply"),
@@ -900,7 +918,7 @@ def _charge_2(rng):
                   num_answer(i, f"{n(i)} A"), f"I = Q ÷ t = {n(q)} ÷ {t} = {n(i)} A", "Rearrange Q = I × t to make I the subject",
                   [_m(q * t, "A", "I = Q ÷ t — divide, don't multiply"),
                    _m(t / q, "A", "I = Q ÷ t — you divided the wrong way round")])
-    return _q(f"A current of {n(i)} A flows through a wire. How long does it take for {n(q)} C of charge to flow?",
+    return _q(f"A current of {n(i)} A flows through a wire. How long does it take for {n(q)} C of charge to flow?{SECONDS_TXT}",
               num_answer(t, f"{t} s"), f"t = Q ÷ I = {n(q)} ÷ {n(i)} = {t} s", "Rearrange Q = I × t to make t the subject",
               [_m(q * i, "s", "t = Q ÷ I — divide, don't multiply"),
                _m(i / q, "s", "t = Q ÷ I — you divided the wrong way round")])

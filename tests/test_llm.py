@@ -7,7 +7,8 @@ from unittest import mock
 import helpers
 from helpers import (S, snap, send, make_engine, verify, to_topic, to_demo_topic, demo_registry, day_of, FakeLLM,
                      DEMO_TOPIC_KB, TOPIC_KB_MATHS_11, CORRECT, WRONG, WHY_FALLBACK, HINT, HINT_AGAIN, OFFTOPIC,
-                     UNMARKABLE, OWN_TOPIC_NONE, TOPIC_START, BASE_PROMPT, SUFFIX_HINT, SUFFIX_FEEDBACK)
+                     UNMARKABLE, OWN_TOPIC_NONE, TOPIC_START, BASE_PROMPT, SUFFIX_HINT, SUFFIX_FEEDBACK,
+                     SAFETY_RULE)
 from tutor.content import Answer, Problem
 from tutor import llm as llm_mod
 from tutor.llm import ClaudeLLM, clean, leaks_answer, mark_rubric, pick_skill, system_prompt, tutor_text
@@ -21,10 +22,11 @@ def user_msg(p, student_text):
 
 
 class LLMEngineCase(unittest.TestCase):
-    def mk(self, responses=(), limit=40, registry=None):
+    def mk(self, responses=(), limit=40, registry=None, global_limit=1000):
         self.llm = FakeLLM(responses)
         self.engine, self.store, self.clock = make_engine(llm=self.llm, limit=limit,
-                                                          registry=registry or demo_registry(), flood=100000)
+                                                          registry=registry or demo_registry(), flood=100000,
+                                                          global_limit=global_limit)
         self.addCleanup(self.store.close)
 
     def adding(self, chat=CH):
@@ -229,6 +231,24 @@ class TestDailyLimit(LLMEngineCase):
         self.assertEqual(self.store.llm_calls_total(day_of(self.clock)), 2)
 
 
+    def test_global_daily_cap(self):
+        self.mk(["A", "B", "C", "D"], limit=40, global_limit=2)
+        self.adding(CH)
+        self.adding(77)
+        self.adding(78)
+        send(self.engine, CH, self.wrong_text(CH))
+        send(self.engine, 77, self.wrong_text(77))
+        p = self.store.get_pending(78).problem
+        out = send(self.engine, 78, self.wrong_text(78))       # third student: global cap reached
+        self.assertEqual(out[0].text, WRONG(WHY_FALLBACK(p.solution), p.answer.display))
+        self.assertEqual(len(self.llm.calls), 2)
+        self.assertEqual(self.store.llm_calls_total(day_of(self.clock)), 2)
+        self.clock.advance(86400)                                # a new UTC day resets it
+        p = self.store.get_pending(78).problem
+        out = send(self.engine, 78, self.wrong_text(78))
+        self.assertEqual(out[0].text, WRONG("C", p.answer.display))
+
+
 class TestRubricViaEngine(LLMEngineCase):
     def written(self):
         to_demo_topic(self.engine, CH, "Written")
@@ -399,6 +419,8 @@ class TestSystemPrompt(unittest.TestCase):
             self.assertIn(BASE_PROMPT.format(subject="Maths", year=11), s)
             self.assertIn(SUFFIX_HINT, s)
             self.assertNotIn(SUFFIX_FEEDBACK, s)
+            self.assertTrue(s.endswith(SAFETY_RULE), mode)
+        self.assertIn(SAFETY_RULE, system_prompt("Maths", 11, "feedback"))
         s = system_prompt("Physics", 9, "feedback")
         self.assertIn(BASE_PROMPT.format(subject="Physics", year=9), s)
         self.assertIn(SUFFIX_FEEDBACK, s)
@@ -458,6 +480,38 @@ class TestCleanAndLeaks(unittest.TestCase):
         self.assertFalse(leaks_answer("You have 20 apples", b))
         c = Answer("expr", "x² + 5x + 6", "x**2+5*x+6", form="expanded")
         self.assertFalse(leaks_answer("Multiply each term in the brackets", c))
+
+    def test_leaks_equivalent_values(self):
+        # the value test uses the real checker: equivalent forms of the answer are leaks too
+        frac = Answer("fraction", "3/4", "3/4")
+        self.assertTrue(leaks_answer("That leaves 0.75 of the pizza", frac))
+        self.assertTrue(leaks_answer("so it is 6/8", frac))
+        std = Answer("number", "3.2 × 10^4", 32000.0, form="standard")
+        self.assertTrue(leaks_answer("you should get 32000 first", std))
+        self.assertTrue(leaks_answer("that is 3.2x10^4", std))
+        dp = Answer("number", "7.1 cm", 7.0710678, dp=1)
+        self.assertTrue(leaks_answer("The square root is about 7.07", dp))
+        thousands = Answer("number", "1200 m", 1200.0)
+        self.assertTrue(leaks_answer("It comes to 1,200 metres", thousands))
+        expr = Answer("expr", "x² + 5x + 6", "x**2+5*x+6", form="expanded")
+        self.assertTrue(leaks_answer("you get x^2 + 6 + 5x", expr))
+        self.assertFalse(leaks_answer("compare with x^2 + 7x + 12", expr))
+        self.assertFalse(leaks_answer("Keep going: 0.7 is close", frac))
+
+    def test_numbers_from_the_question_are_not_leaks(self):
+        std = Answer("number", "3.2 × 10^4", 32000.0, form="standard")
+        q = "Write 32000 in standard form."
+        self.assertFalse(leaks_answer("Start with 32000 and move the decimal point", std, q))
+        self.assertTrue(leaks_answer("Start with 32000 and move the decimal point", std, "Work out 8000 × 4."))
+        expr = Answer("expr", "x² + 5x + 6", "x**2+5*x+6", form="expanded")
+        self.assertFalse(leaks_answer("Multiply out (x + 2)(x + 3) term by term", expr, "Expand (x + 2)(x + 3)."))
+
+    def test_tutor_text_filters_equivalent_leaks(self):
+        p = Problem("demo.f", 1, 1, "Work out 1/2 + 1/4.", Answer("fraction", "3/4", "3/4"), "1/2 + 1/4 = 3/4",
+                    "Use quarters")
+        self.assertIsNone(tutor_text(FakeLLM(["It makes 0.75"]), "hint", p, "help", "Maths", 9))
+        self.assertEqual(tutor_text(FakeLLM(["Write 1/2 as quarters"]), "hint", p, "help", "Maths", 9),
+                         "Write 1/2 as quarters")
 
 
 class FakeResp:

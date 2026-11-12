@@ -287,23 +287,6 @@ def atand(x: float) -> float:
 
 # ---------------------------------------------------------------- answers
 
-EXACT_QUANTUM = Decimal("0.00001")
-
-
-def safe_exact(value: Number) -> bool:
-    """True if an EXACT answer (no dp/sf) is safe under the checker's default tolerance.
-
-    With neither dp nor sf the checker accepts |v - exact| <= 1e-6 * max(1, |exact|),
-    which is an ABSOLUTE 1e-6 for |exact| < 1 (e.g. it would accept 4.5 × 10^-8 for
-    4.5 × 10^-7).  So exact answers below 1 must be multiples of 0.00001: then every
-    other value written to the same precision differs by at least 10x the tolerance.
-    """
-    d = dec(value)
-    if abs(d) >= 1:
-        return True
-    return (d / EXACT_QUANTUM) == (d / EXACT_QUANTUM).to_integral_value()
-
-
 def num_answer(value: Number, display: str, dp: int | None = None, sf: int | None = None,
                form: str = "any") -> Answer:
     v = float(value)

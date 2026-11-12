@@ -9,6 +9,7 @@ import random
 import re
 import sys
 import time
+from decimal import Decimal
 from fractions import Fraction
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -16,7 +17,7 @@ if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
 START = 1_700_000_000.0   # 2023-11-14 22:13:20 UTC
-CODE_RE = re.compile(r"^[A-HJ-NP-Z2-9]{8}$")
+CODE_RE = re.compile(r"^[A-HJKMNP-Z2-9]{8}$")       # alphabet without 0/O, 1/I/L
 FIXTURES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")
 
 # --------------------------------------------------------------------------
@@ -42,11 +43,27 @@ CODES_USAGE = "Usage: /codes N (N = 1–50)"
 STUDENT_USAGE = "Usage: /student CHAT_ID"
 RESET_USAGE = "Usage: /reset CHAT_ID"
 NO_FLAGS = "No new flags."
+FLAGS_USAGE = "Usage: /flags (list new flags), /flags done [N] (mark flags up to #N as reviewed)"
+
+
+def FLAGS_DONE(n):
+    return f"✅ {n} flag{'' if n == 1 else 's'} marked as reviewed."
+
+
+def CODE_ALERT(n, name, chat):
+    return (f"🚩 {n} wrong access codes from {name} (chat {chat}) in the last hour — "
+            f"someone may be guessing codes. Use /student {chat} for details.")
 
 FORM_STANDARD = "That's the right value, but it needs to be in standard form (a × 10^n, with 1 ≤ a < 10)"
 FORM_FACTORISED = "That's equivalent, but the question asks you to factorise — write it as brackets multiplied together"
 FORM_EXPANDED = "That's equivalent, but the question asks you to expand — multiply out all the brackets"
 FORM_SIMPLEST = "That's equivalent, but it isn't in its simplest form yet"
+FORM_MIXED = "That's equivalent, but the question asks for a mixed number (a whole number and a fraction, like 2 1/3)"
+FORM_FRACTION = "That's close, but the question asks for an exact fraction, not a rounded decimal"
+
+
+def FORM_UNIT(unit):
+    return f"Check your units — the answer should be in {unit}"
 
 CHANGE_YEAR = "🎓 Change year"
 CHANGE_SUBJECT = "📘 Change subject"
@@ -65,6 +82,10 @@ BASE_PROMPT = (
 SUFFIX_HINT = "Do NOT reveal the answer or the final value. Give at most one next step."
 SUFFIX_FEEDBACK = ("The student's answer was wrong. In 1–2 sentences, kindly explain where their working "
                    "most likely went wrong. Do not start with 'Not quite' and do not restate the correct answer.")
+SAFETY_RULE = ("Safety comes first: if the student mentions harm, danger, abuse, bullying, self-harm or being very "
+               "upset or unsafe, do NOT steer them back to the problem; kindly tell them to talk to a trusted adult "
+               "(a parent, carer or teacher) as soon as possible, and to contact emergency services if they are in "
+               "danger right now.")
 
 
 def SUBJECT_ASK(year):
@@ -195,13 +216,14 @@ def shared_registry():
     return _SHARED["reg"]
 
 
-def make_engine(llm=None, owner_id=999, limit=40, registry=None, path=":memory:", flood=20):
+def make_engine(llm=None, owner_id=999, limit=40, registry=None, path=":memory:", flood=20, global_limit=1000):
     from tutor.config import Config
     from tutor.db import Store
     from tutor.engine import Engine
     clock = FakeClock()
     store = Store(path)
-    cfg = Config(owner_id=owner_id, llm_daily_limit=limit, flood_per_minute=flood, db_path=path)
+    cfg = Config(owner_id=owner_id, llm_daily_limit=limit, flood_per_minute=flood, db_path=path,
+                 llm_global_daily_limit=global_limit)
     reg = registry if registry is not None else shared_registry()
     engine = Engine(store, cfg, registry=reg, llm=llm, clock=clock, rng=random.Random(7))
     return engine, store, clock
@@ -325,6 +347,37 @@ def perturb(answer):
         parts = list(answer.value)
         return ":".join(str(x) for x in [parts[0] + 1] + parts[1:])
     return ""
+
+
+def _dec_text(d, standard):
+    if standard:
+        e = d.adjusted()
+        m = d.scaleb(-e).normalize()
+        return f"{format(m, 'f')} × 10^{e}"
+    s = format(d.normalize(), "f")
+    return s
+
+
+def boundary_variants(answer):
+    """Near misses that must never be judged correct (section 6): the value × 10 and ÷ 10 and,
+    for exact answers (no dp / sf), ±1 in the last significant digit."""
+    if answer.kind != "number":
+        return []
+    v = float(answer.value)
+    if v == 0:
+        return []
+    std = answer.form == "standard"
+    exact = Decimal(repr(v))
+    out = []
+    if answer.dp is None or 0.9 * abs(v) > 10 ** (-answer.dp):
+        out += [_dec_text(exact * 10, std), _dec_text(exact / 10, std)]
+    if answer.dp is None and answer.sf is None:
+        n = exact.normalize()
+        step = Decimal(1).scaleb(n.as_tuple().exponent)
+        for d in (n + step, n - step):
+            if d != 0:
+                out.append(_dec_text(d, std))
+    return out
 
 
 # --------------------------------------------------------------------------

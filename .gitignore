@@ -3,3 +3,7 @@ __pycache__/
 relay/.codes*
 relay/state*.json
 data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite

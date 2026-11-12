@@ -1,7 +1,9 @@
+import os
+import re
 import unittest
 
 import helpers
-from helpers import perturb
+from helpers import boundary_variants, perturb
 from tutor.content import check, load_registry, problem_to_json, problem_from_json
 
 MATHS = [
@@ -14,9 +16,12 @@ PHYSICS = ["speed", "acceleration", "force", "weight", "kinetic_energy", "gpe", 
            "electrical_power", "charge", "density", "pressure"]
 REQUIRED = [f"maths.{n}" for n in MATHS] + [f"physics.{n}" for n in PHYSICS]
 KINDS = ("number", "fraction", "set", "assign", "expr", "ratio", "rubric")
-FORMS = {"number": ("any", "standard"), "fraction": ("any", "simplest"), "expr": ("any", "expanded", "factorised"),
-         "ratio": ("any", "simplest"), "set": ("any",), "assign": ("any",), "rubric": ("any",)}
-SEEDS = 200
+FORMS = {"number": ("any", "standard"), "fraction": ("any", "simplest", "mixed"),
+         "expr": ("any", "expanded", "factorised"), "ratio": ("any", "simplest"), "set": ("any",),
+         "assign": ("any",), "rubric": ("any",)}
+# 60 seeds per skill and level keep the whole suite under a minute; run with TUTOR_FULL_TESTS=1
+# (300 seeds) before every deploy.
+SEEDS = 300 if os.environ.get("TUTOR_FULL_TESTS") == "1" else 60
 
 
 def problems_for(skill):
@@ -83,6 +88,9 @@ def audit(skill):
                 v = check(a, pt, p.mistakes)
                 if v.status == "correct":
                     bad(level, seed, f"perturbed {pt!r} of {a.display!r} judged correct")
+                for near in boundary_variants(a):
+                    if check(a, near).status == "correct":
+                        bad(level, seed, f"near miss {near!r} of {a.display!r} judged correct")
                 if len(a.display) >= 3 and a.display in p.hint:
                     bad(level, seed, f"hint contains display {a.display!r}")
             for m in p.mistakes:
@@ -114,6 +122,48 @@ def rounding_audit(skill):
                 fails.append(f"{skill.id} L{level} seed={seed}: dp={a.dp} but text states no rounding: {p.text[:80]!r}")
             if a.sf is not None and "significant figure" not in t:
                 fails.append(f"{skill.id} L{level} seed={seed}: sf={a.sf} but text states no significant figures: {p.text[:80]!r}")
+    return fails
+
+
+_ONE_PLURAL = re.compile(r"(?<![\d.,])1 (?:parts|minutes|hours|seconds|terms)\b")
+_ORDINAL = re.compile(r"\b(\d+)(st|nd|rd|th)\b")
+_STD_DIVISION = re.compile(r"÷ [\d.]+ × 10\^")
+
+
+def _suffix(n):
+    return "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+
+
+def content_audit(skill):
+    """Critic findings (Nov 2026): wording bugs, physics rounding, time units, mixed-number form."""
+    from tutor.content.fmt import fmt_sf, fmt_std
+    fails = []
+    for level in range(1, 6):
+        for seed in range(SEEDS):
+            p = skill.generate(level, seed)
+            a = p.answer
+            where = f"{skill.id} L{level} seed={seed}"
+            for field in [p.text, p.solution, p.hint] + [m.feedback for m in p.mistakes]:
+                if _ONE_PLURAL.search(field):
+                    fails.append(f"{where}: '1 ...s' in {field[:80]!r}")
+                for m in _ORDINAL.finditer(field):
+                    if m.group(2) != _suffix(int(m.group(1))):
+                        fails.append(f"{where}: ordinal {m.group(0)!r}")
+                if _STD_DIVISION.search(field):
+                    fails.append(f"{where}: division by standard form without brackets in {field[:80]!r}")
+            if "mixed number" in p.text and a.form != "mixed":
+                fails.append(f"{where}: asks for a mixed number but form={a.form}")
+            if skill.subject != "physics" or a.kind != "number":
+                continue
+            if not float(a.value).is_integer():
+                if a.sf is None and a.dp is None:
+                    fails.append(f"{where}: non-integer exact answer {a.display!r} without rounding")
+                elif a.sf is not None:
+                    rounded = fmt_std(a.value, a.sf) if a.form == "standard" else fmt_sf(a.value, a.sf)
+                    if check(a, rounded).status != "correct":
+                        fails.append(f"{where}: correctly rounded {rounded!r} not accepted")
+            if a.display.endswith(" s") and "second" not in p.text:
+                fails.append(f"{where}: time answer but the question does not say 'seconds'")
     return fails
 
 
@@ -158,6 +208,18 @@ class TestSkills(unittest.TestCase):
 
     def test_physics_rounding_stated(self):
         self._run_rounding("physics")
+
+    def _run_content(self, subject_id):
+        fails = []
+        for sk in self.reg.skills_of(subject_id):
+            fails.extend(content_audit(sk))
+        self.assertEqual(len(fails), 0, f"{len(fails)} problem(s); first 10:\n" + "\n".join(fails[:10]))
+
+    def test_maths_content(self):
+        self._run_content("maths")
+
+    def test_physics_content(self):
+        self._run_content("physics")
 
     def test_maths_property(self):
         self._run_subject("maths")

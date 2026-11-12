@@ -4,7 +4,8 @@ import unittest
 
 import helpers  # noqa: F401  (puts the repo root on sys.path)
 from tutor.content import mathexpr as mx
-from tutor.content.mathexpr import ExprError, parse, evaluate, equivalent, is_expanded, is_factorised
+from tutor.content.mathexpr import (ExprError, parse, evaluate, equivalent, is_expanded, is_factorised,
+                                   is_simplified)
 
 
 def val(s, x=3.0, var="x"):
@@ -131,14 +132,33 @@ class TestForms(unittest.TestCase):
                 self.assertFalse(is_expanded(s))
 
     def test_is_factorised(self):
-        yes = ["(x+2)(x+3)", "x(x+1)", "(x+1)^2", "-(x+1)(x+2)", "2(x+1)", "(x-5)(x+5)"]
-        no = ["x^2+5x+6", "x^2", "3x", "x+1", "x^2-25"]
+        yes = ["(x+2)(x+3)", "x(x+1)", "(x+1)^2", "-(x+1)(x+2)", "2(x+1)", "(x-5)(x+5)", "(x+3)²",
+               "2(x+3)(x+4)", "(2x+3)(x-4)"]
+        no = ["x^2+5x+6", "x^2", "3x", "x+1", "x^2-25", "1(x^2+13x+42)", "2(x^2+5x+6)", "(x^2+13x+42)·1",
+              "-(x^2+5x+6)", "x·x"]
         for s in yes:
             with self.subTest(expr=s):
                 self.assertTrue(is_factorised(s))
         for s in no:
             with self.subTest(expr=s):
                 self.assertFalse(is_factorised(s))
+
+    def test_is_simplified(self):
+        yes = ["x^2+5x+6", "5x + x^2 + 6", "6+5x+x²", "x²", "3x", "(x+2)(x+3)", "2x² - 3x"]
+        no = ["x² + x + 8x + 8", "x^2+3x+2x+6", "x + x", "x² + 5x + 4 + 2", "2x·x + x²"]
+        for s in yes:
+            with self.subTest(expr=s):
+                self.assertTrue(is_simplified(s))
+        for s in no:
+            with self.subTest(expr=s):
+                self.assertFalse(is_simplified(s))
+
+    def test_parse_is_cached_and_still_safe(self):
+        self.assertIs(parse("x^2+1"), parse("x^2+1"))
+        for bad in (None, 5, ["x"]):
+            with self.assertRaises(ExprError):
+                parse(bad)
+        self.assertIsNone(equivalent(None, "x"))
 
     def test_forms_with_other_var(self):
         self.assertTrue(is_expanded("3n+2", "n"))

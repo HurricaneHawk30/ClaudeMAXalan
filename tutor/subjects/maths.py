@@ -15,7 +15,7 @@ from ..content.base import Answer, Mistake, Problem, Skill, Subject, Topic, Year
 from ..content.fmt import (
     acosd, asind, atand, build, check_level, coef_term, cosd, fmt_dp, fmt_num, frac_str, group,
     is_whole, lin_factor, mixed_str, money, money_text, near_half, num_answer,
-    num_mistake, poly, poly_mul, retry, safe_exact, sig_digits, signed, sind, std_answer,
+    num_mistake, poly, poly_mul, retry, sig_digits, signed, sind, std_answer,
     std_mistake, sup, tand, terms, unit,
 )
 
@@ -56,6 +56,13 @@ def _parts(k: int) -> str:
     return "1 part" if k == 1 else f"{k} parts"
 
 
+def _ordinal(n: int) -> str:
+    """1st, 2nd, 3rd, 4th, 11th, 12th, 13th, 21st, 22nd, 23rd, 42nd, 111th."""
+    if 10 <= n % 100 <= 20:
+        return f"{n}th"
+    return f"{n}" + {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+
+
 def _disp(v, u: str = "", dp: int | None = None) -> str:
     if u == "£":
         if dp is not None or not is_whole(v):
@@ -88,8 +95,8 @@ def _pick_coprime(rng: random.Random, lo: int, hi: int, d: int) -> int:
 
 def _frac_answer(f: Fraction, simplest: bool = True, mixed: bool = False, prefix: str = "") -> Answer:
     shown = mixed_str(f) if mixed else frac_str(f)
-    return Answer(kind="fraction", display=prefix + shown, value=frac_str(f),
-                  form="simplest" if simplest else "any")
+    form = "mixed" if mixed else "simplest" if simplest else "any"
+    return Answer(kind="fraction", display=prefix + shown, value=frac_str(f), form=form)
 
 
 def _frac_mis(num: int, den: int, fb: str, prefix: str = "") -> Mistake | None:
@@ -637,7 +644,7 @@ def _ratio_2(rng: random.Random) -> Draft:
     n1, n2 = rng.sample(NAMES, 2)
     sol = (f"{a} + {b} = {a + b} parts, so 1 part = {money(total)} ÷ {a + b} = {money(u)}. "
            f"{n1}: {a} × {money(u)} = {money(a * u)}, {n2}: {b} × {money(u)} = {money(b * u)}")
-    ms = [_shares_mis([b * u, a * u], f"Check the order: {n1} gets {a} parts, so give {n1}'s share first")]
+    ms = [_shares_mis([b * u, a * u], f"Check the order: {n1} gets {_parts(a)}, so give {n1}'s share first")]
     if total % a == 0 and total % b == 0:
         ms.append(_shares_mis([total // a, total // b],
                               f"Add the parts first: {a} + {b} = {a + b} parts, then find one part"))
@@ -660,7 +667,7 @@ def _ratio_3(rng: random.Random) -> Draft:
     ms = []
     if total % 3 == 0:
         ms.append(_shares_mis([total // 3] * 3, f"Share it in the ratio, not equally — add the parts first ({s} parts)"))
-    ms.append(_shares_mis(list(reversed(vals)), f"Keep the order of the ratio: {names[0]} gets {parts[0]} parts"))
+    ms.append(_shares_mis(list(reversed(vals)), f"Keep the order of the ratio: {names[0]} gets {_parts(parts[0])}"))
     return _q(f"{names[0]}, {names[1]} and {names[2]} share {money_text(total)} in the ratio "
               f"{parts[0]} : {parts[1]} : {parts[2]}. Work out how much each person gets, in that order.",
               _shares_answer(vals), sol, "Add the parts of the ratio to find the total number of parts", ms)
@@ -675,13 +682,13 @@ def _ratio_4(rng: random.Random) -> Draft:
     n1, n2 = rng.sample(NAMES, 2)
     known = a * u
     head = (f"{n1} and {n2} share some money in the ratio {a} : {b}. {n1} gets {money_text(known)}. ")
-    start = f"{a} parts = {money(known)}, so 1 part = {money(known)} ÷ {a} = {money(u)}. "
-    hint = f"{n1}'s {a} parts are worth {money_text(known)} — find the value of 1 part"
+    start = f"{_parts(a)} = {money(known)}, so 1 part = {money(known)} ÷ {a} = {money(u)}. "
+    hint = f"{n1}'s {_parts(a)} {'is' if a == 1 else 'are'} worth {money_text(known)} — find the value of 1 part"
     as_total = Fraction(known * b, a + b)
     if rng.random() < 0.6:
         return _q(head + f"How much does {n2} get?", _ans(b * u, "£"),
                   start + f"{n2} gets {b} × {money(u)} = {money(b * u)}", hint,
-                  [_mis(as_total, "£", f"{money(known)} is {n1}'s share, not the total — {a} parts are worth {money(known)}",
+                  [_mis(as_total, "£", f"{money(known)} is {n1}'s share, not the total — {_parts(a)} {'is' if a == 1 else 'are'} worth {money(known)}",
                         dp=2),
                    _mis(known + (b - a), "£", "Ratios work by multiplying, not adding — find the value of 1 part first")])
     total = (a + b) * u
@@ -714,7 +721,7 @@ def _ratio_5(rng: random.Random) -> Draft:
                             _mis(diff * (a + b), "£", one_part) if a - b > 1 else None])
     return _q(head + f"How much does {n2} get?", _ans(b * u, "£"),
               start + f"{n2} gets {b} × {money(u)} = {money(b * u)}", hint,
-              common + [_mis(a * u, "£", f"That's {n1}'s share — {n2} gets {b} parts"),
+              common + [_mis(a * u, "£", f"That's {n1}'s share — {n2} gets {_parts(b)}"),
                         _mis(diff * b, "£", one_part) if a - b > 1 else None])
 
 
@@ -896,10 +903,10 @@ def _sf_2(rng: random.Random) -> Draft:
     def pick(r):
         digits = r.choice((1, 2, 2, 3))
         m_int = _mantissa(r, digits)
-        e = r.randrange(-5, -1)
+        e = r.randrange(-7, -1)
         mant = Fraction(m_int, 10 ** (digits - 1))
         value = mant * Fraction(10) ** e
-        return (mant, e, value) if safe_exact(value) else None
+        return mant, e, value
     mant, e, value = retry(pick, rng)
     ans = std_answer(value)
     return _q(f"Write {fmt_num(value)} in standard form.", ans,
@@ -914,9 +921,9 @@ def _sf_3(rng: random.Random) -> Draft:
         digits = r.choice((2, 2, 3))
         m_int = _mantissa(r, digits)
         mant = Fraction(m_int, 10 ** (digits - 1))
-        e = r.randrange(2, 8) if r.random() < 0.5 else r.randrange(-4, 0)
+        e = r.randrange(2, 8) if r.random() < 0.5 else r.randrange(-5, 0)
         value = mant * Fraction(10) ** e
-        return (mant, e, value) if safe_exact(value) else None
+        return mant, e, value
     mant, e, value = retry(pick, rng)
     disp = group(value) if is_whole(value) else fmt_num(value)
     way = "right" if e > 0 else "left"
@@ -934,7 +941,7 @@ def _sf_4(rng: random.Random) -> Draft:
             e1, e2 = r.choice([e for e in range(-4, 9) if e]), r.choice([e for e in range(-4, 9) if e])
             prod, s = m1 * m2, e1 + e2
             value = prod * Fraction(10) ** s
-            return (m1, m2, e1, e2, prod, s, value) if safe_exact(value) else None
+            return m1, m2, e1, e2, prod, s, value
         m1, m2, e1, e2, prod, s, value = retry(pick_mul, rng)
         ans = std_answer(value)
         sol = (f"{fmt_num(m1)} × {fmt_num(m2)} = {fmt_num(prod)} and 10^{e1} × 10^{e2} = 10^{s}, "
@@ -957,7 +964,7 @@ def _sf_4(rng: random.Random) -> Draft:
     def pick_exp(r):
         e1, e2 = r.randrange(3, 10), r.choice([e for e in range(-3, 7) if e])
         val = q * Fraction(10) ** (e1 - e2)
-        return (e1, e2, val) if safe_exact(val) else None
+        return e1, e2, val
     e1, e2, value = retry(pick_exp, rng)
     s = e1 - e2
     ans = std_answer(value)
@@ -973,15 +980,13 @@ def _sf_4(rng: random.Random) -> Draft:
 def _sf_5(rng: random.Random) -> Draft:
     def pick(r):
         neg = r.random() < 0.25
-        e1 = r.randrange(-3, 0) if neg else r.randrange(3, 9)
+        e1 = r.randrange(-6, -1) if neg else r.randrange(3, 9)
         gap = r.choice((0, 1, 1, 2))
         e2 = e1 - gap
         m1, m2 = Fraction(_mantissa(r, 2), 10), Fraction(_mantissa(r, 2), 10)
         A, B = m1 * Fraction(10) ** e1, m2 * Fraction(10) ** e2
         op = r.choice("+-")
         if op == "-" and A <= B:
-            return None
-        if not safe_exact(A + B if op == "+" else A - B):
             return None
         return m1, e1, m2, e2, A, B, op
     m1, e1, m2, e2, A, B, op = retry(pick, rng)
@@ -1989,10 +1994,10 @@ def _nt_1(rng: random.Random) -> Draft:
     ans = a + (n - 1) * d
     way = f"goes up by {d}" if d > 0 else f"goes down by {-d}"
     jumps = f"{a} + {n - 1} × {d}" if d > 0 else f"{a} − {n - 1} × {-d}"
-    return _q(f"Here is a sequence: {_seq(lambda i: a + (i - 1) * d, 4)} Work out the {n}th term.", _ans(ans),
-              f"The sequence {way} each time. The {n}th term = {jumps} = {ans}",
-              f"Find the difference between the terms, then count the jumps from the 1st term to the {n}th",
-              [_mis(a + n * d, "", f"From the 1st term to the {n}th term there are {n - 1} jumps, not {n}"),
+    return _q(f"Here is a sequence: {_seq(lambda i: a + (i - 1) * d, 4)} Work out the {_ordinal(n)} term.", _ans(ans),
+              f"The sequence {way} each time. The {_ordinal(n)} term = {jumps} = {ans}",
+              f"Find the difference between the terms, then count the jumps from the 1st term to the {_ordinal(n)}",
+              [_mis(a + n * d, "", f"From the 1st term to the {_ordinal(n)} term there are {n - 1} jumps, not {n}"),
                _mis(n * d, "", f"Start from the first term ({a}) and add {n - 1} jumps of {d}")])
 
 
@@ -2031,11 +2036,11 @@ def _nt_4(rng: random.Random) -> Draft:
     fb2 = f"Undo the {signed(c)} first, then divide by {d}"
     if rng.random() < 0.5:
         text = f"The nth term of a sequence is {form}. Which term of the sequence is equal to {V}?"
-        sol = f"Solve {form} = {V}: {d}n = {V - c}, so n = {n}. It is the {n}th term"
+        sol = f"Solve {form} = {V}: {d}n = {V - c}, so n = {n}. It is the {_ordinal(n)} term"
         hint = f"Set {form} equal to {V} and solve for n"
     else:
         text = f"Here is a sequence: {_seq(lambda i: d * i + c, 4)} Which term of the sequence is equal to {V}?"
-        sol = f"The nth term is {form}. Solve {form} = {V}: {d}n = {V - c}, so n = {n}. It is the {n}th term"
+        sol = f"The nth term is {form}. Solve {form} = {V}: {d}n = {V - c}, so n = {n}. It is the {_ordinal(n)} term"
         hint = f"Find the nth term first, then set it equal to {V} and solve"
     return _q(text, num_answer(n, f"n = {n}"), sol, hint,
               [_x_mis(Fraction(V + c, d), fb2, var="n") if c else None,
