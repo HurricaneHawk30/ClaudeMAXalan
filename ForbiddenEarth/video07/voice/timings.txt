@@ -1,0 +1,16 @@
+Forbidden Earth - video07 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:31.775   31.775s
+01_kennecott     00:32.575  01:33.125   60.550s
+02_pyramiden     01:33.925  02:39.975   66.050s
+03_hashima       02:40.775  03:48.225   67.450s
+04_hallsands     03:49.025  04:50.625   61.600s
+05_tyneham       04:51.425  05:50.850   59.425s
+06_chaiten       05:51.650  06:51.725   60.075s
+07_times_beach   06:52.525  08:01.300   68.775s
+08_epecuen       08:02.100  09:10.225   68.125s
+09_futaba        09:11.025  10:12.425   61.400s
+10_pripyat       10:13.225  11:21.750   68.525s
+11_outro         11:22.550  11:40.600   18.050s
+
+TOTAL            11:40.600  (700.600s)

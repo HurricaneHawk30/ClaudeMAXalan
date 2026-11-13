@@ -1,0 +1,69 @@
+Forbidden Earth - video07 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+1900s      nineteen hundreds
+1911       nineteen eleven
+1938       nineteen thirty-eight
+1910       nineteen ten
+1927       nineteen twenty-seven
+1998       nineteen ninety-eight
+31st       thirty-first
+1959       nineteen fifty-nine
+1974       nineteen seventy-four
+20th       twentieth
+2009       two thousand and nine
+2015       twenty fifteen
+1897       eighteen ninety-seven
+26th       twenty-sixth
+1917       nineteen seventeen
+1943       nineteen forty-three
+225        two hundred and twenty-five
+1948       nineteen forty-eight
+2nd        second
+2008       two thousand and eight
+1970s      nineteen seventies
+1982       nineteen eighty-two
+1983       nineteen eighty-three
+1985       nineteen eighty-five
+66         sixty-six
+1990s      nineteen nineties
+11th       eleventh
+2011       twenty eleven
+2022       twenty twenty-two
+1970       nineteen seventy
+1986       nineteen eighty-six
+27th       twenty-seventh
+1st        first
+
+2) SYMBOLS AND ABBREVIATIONS
+Wrangell–St. Elias     -> Wrangell Saint Elias
+St. Louis              -> Saint Louis
+Route 66               -> Route sixty-six
+
+3) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Kennecott    /kˈɛnəkɑt/
+Wrangell     /ɹˈæŋɡəl/
+Elias        /əlˈIəs/
+Pyramiden    /pˌɪɹəmˈidən/
+Hashima      /hˈɑʃimə/
+Gunkanjima   /ɡˌunkɑnʤˈimə/
+Mitsubishi   /mˌɪtsubˈiʃi/
+Hallsands    /hˈɔlsændz/
+Devonport    /dˈɛvənpɔɹt/
+Tyneham      /tˈInəm/
+Chaitén      /ʧItˈɛn/
+Blanco       /blˈɑŋkO/
+Meramec      /mˈɛɹəmɛk/
+Louis        /lˈuɪs/
+Epecuén      /ˌɛpəkwˈɛn/
+pampas       /pˈæmpəz/
+Futaba       /futˈɑbə/
+Fukushima    /fˌukuʃˈimə/
+Daiichi      /dˈIiʧi/
+Pripyat      /pɹˈɪpjət/
+Chernobyl    /ʧəɹnˈObəl/
+
+4) WHISPER CHECK (faster-whisper small.en): numbers, years and dates recognised correctly.
+Doubtful spots re-checked with clips ('a The railway', '2022, to', 'beach. beach.', 'ruthless shells') - the narration is correct ('roofless' is pronounced /ɹˈufləs/); those were Whisper errors.
+Names heard as: Rangel (Wrangell), Kennicott, Halsens / Hall sends (Hallsands), Tynum (Tyneham), Chaiten / Chitin (Chaitén), Epiquen (Epecuén).
