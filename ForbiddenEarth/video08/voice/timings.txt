@@ -1,0 +1,16 @@
+Forbidden Earth - video08 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:29.800   29.800s
+01_crooked       00:30.600  01:30.025   59.425s
+02_fingal        01:30.825  02:34.800   63.975s
+03_hillier       02:35.600  03:34.450   58.850s
+04_kelimutu      03:35.250  04:29.225   53.975s
+05_marble        04:30.025  05:25.825   55.800s
+06_jellyfish     05:26.625  06:25.200   58.575s
+07_hidden_beach  06:26.000  07:22.375   56.375s
+08_mosquito_bay  07:23.175  08:22.600   59.425s
+09_cano_cristales 08:23.400  09:20.325   56.925s
+10_son_doong     09:21.125  10:30.175   69.050s
+11_outro         10:30.975  10:44.100   13.125s
+
+TOTAL            10:44.100  (644.100s)

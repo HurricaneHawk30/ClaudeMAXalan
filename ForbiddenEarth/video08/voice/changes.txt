@@ -1,0 +1,45 @@
+Forbidden Earth - video08 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+1930       nineteen thirty
+1772       seventeen seventy-two
+1829       eighteen twenty-nine
+1802       eighteen oh two
+2016       twenty sixteen
+2019       twenty nineteen
+1900s      nineteen hundreds
+2003       two thousand and three
+2000s      two thousands
+1990       nineteen ninety
+2008       two thousand and eight
+2009       two thousand and nine
+(six hundred meters, six thousand years, seven hundred thousand are already written as words in the script)
+
+2) SYMBOLS AND ABBREVIATIONS
+US Navy      -> U S Navy
+
+3) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Gryfino      /ɡɹɪfˈinO/
+Fingal       /fˈɪŋɡəl/
+Felix        /fˈilɪks/
+Mendelssohn  /mˈɛndəlsən/
+Dunaliella   /dˌunəliˈɛlə/
+Kelimutu     /kˌɛlimˈutu/
+Flores       /flˈɔɹɛs/
+Lio          /lˈiO/
+General      /hˌAnəɹˈɑl/
+Carrera      /kəɹˈɛɹə/
+Niño         /nˈinjO/
+Marieta      /mˌɑɹiˈɛtə/
+Vieques      /viˈAkɛs/
+Caño         /kˈɑnjO/
+Cristales    /kɹɪstˈɑlɛs/
+Hang         /hˈɑŋ/
+Doong        /dˈuŋ/
+Khanh        /kˈɑn/
+(General Carrera is read the Spanish way: heh-neh-RAHL ka-REH-ra; El Niño: el NEEN-yo)
+
+4) WHISPER CHECK (faster-whisper small.en): numbers and years recognised correctly.
+Doubtful spots re-checked with clips ('north. earth.', 'Dunaliella Ela Selina', 'clouds of Today', the run-on Kelimutu paragraph) - the narration is correct; those were Whisper errors.
+Names heard as: Grafino (Gryfino), Stapha (Staffa), Mendelsohn, Kalimutu (Kelimutu), Leo (Lio), Haenoral Carrera, Marietta, Hong Son Doong, Ho Kahn (Ho Khanh).
