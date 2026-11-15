@@ -1,0 +1,44 @@
+Forbidden Earth - video09 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+1999       nineteen ninety-nine
+1521       fifteen twenty-one
+2014       twenty fourteen
+1970       nineteen seventy
+2017       twenty seventeen
+2024       twenty twenty-four      ("August 2024")
+12         twelfth                 ("August 12, 1997")
+1997       nineteen ninety-seven
+1980       nineteen eighty
+(sixty degrees, two miles, eighty, thirty, two thousand meters, thirty centimeters, seven hundred years,
+ five hundred million liters, a hundred meters, fifty-five meters, twenty-six meters, forty are already
+ written as words in the script)
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+manchineel     /mˈænʧɪnˌil/
+Juan           /hwˈɑn/
+Ponce          /pˈɑnsA/
+de             /dA/          (only in "Ponce de León")
+León           /lAˈOn/
+Natron         /nˈAtɹɑn/
+Hanakapiai     /hˌɑnəkəpˈiI/
+Kauai          /kWˈI/
+Na Pali        /nˌɑ pˈɑli/
+Hua            /hwˈɑ/
+Taoist         /dˈWɪst/
+Zambezi        /zæmbˈizi/
+Vatnajökull    /vˈɑtnəjˌʌkʊtəl/
+Wimberley      /wˈɪmbəɹli/
+Dahab          /dəhˈɑb/
+tours / Tours  /tˈʊɹz/       (Kokoro read "tours" as "tour" - fixed after the Whisper check)
+Kokoro's own reading was kept for: Tobago, Tanzania, Zambia, Zimbabwe, Livingstone, Navajo,
+Yellowstone, Prismatic, Sinai, narcosis, Celsius.
+
+3) WHISPER CHECK (faster-whisper small.en)
+Numbers and dates are heard correctly. Doubtful places re-checked on short clips:
+- "Hanakapiai" is transcribed as "Hanukkah Pia" / "Hanakapia" - Whisper does not know the word;
+  the reading is ha-na-ka-PEE-eye as planned. Listen at 2:35.
+- "Vatnajökull" is transcribed as "Vatniakurul" - expected for an Icelandic name. Listen at 5:49.
+- "deep blue. blue." at 10:14 - Whisper artefact, the clip has "deep blue. The Blue Hole".
+- "tours" was heard as "tour" three times -> phoneme fix above, narration rebuilt, re-checked: OK.
