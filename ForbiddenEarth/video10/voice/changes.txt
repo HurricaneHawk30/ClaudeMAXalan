@@ -1,0 +1,29 @@
+Forbidden Earth - video10 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+1739 seventeen thirty-nine · 1776 seventeen seventy-six · 1900s nineteen hundreds · 1917 nineteen seventeen
+1918 nineteen eighteen · 1946 nineteen forty-six · 1950s nineteen fifties · 1964 nineteen sixty-four
+1968 nineteen sixty-eight · 1969 nineteen sixty-nine · 1970 nineteen seventy · 1982 nineteen eighty-two
+1992 nineteen ninety-two · 2001 two thousand and one · 2002 two thousand and two · 2004 two thousand and four
+2014 twenty fourteen · 2015 twenty fifteen · 2018 twenty eighteen · 2025 twenty twenty-five ("April 2025", "2025")
+(other numbers are already written as words in the script)
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Poveglia       /pOvˈɛljə/        po-VEL-ya
+Farallon       /fˈɛɹəlɑn/        FAIR-a-lon
+Bouvet         /buvˈA/           boo-VAY
+Vozrozhdeniya  /vˌɑzɹəʒdˈɛnijə/  voz-rozh-DEN-ee-ya
+Sentinelese    /sˌɛntɪnəlˈiz/    sen-ti-nel-EEZ
+Bengal         /bɛŋɡˈɔl/         ben-GAWL
+tours          /tˈʊɹz/           (Kokoro drops the s otherwise; kept from video09)
+Kokoro's own reading was kept for: Skellig, Pitcairn, Henderson, Lord Howe, Tasman, Heard (HURD), Perth,
+Clipperton, scurvy, Aral, Kazakhstan, Uzbekistan, anthrax, Sentinel, Andaman, Polynesians, McDonald.
+Checked: no plural word loses its final s.
+
+3) WHISPER CHECK (faster-whisper small.en)
+Numbers and dates are heard correctly ("2004" is written by Whisper as "2000 and 4" - that is how it is read).
+- "Skellig" -> "Skeleg", "Poveglia" -> "Povellia", "Vozrozhdeniya" -> "Vazryzdeniya": Whisper does not know
+  these names; the readings follow the plan. Listen at 0:31, 3:37, 8:54.
+- "the ships stopped coming" at 8:13 is heard as "the ship stopped" - the s merges with "stopped"; the
+  phonemes are /ʃˈɪps stˈɑpt/, so it is read correctly.

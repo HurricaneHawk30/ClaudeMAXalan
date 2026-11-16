@@ -1,0 +1,16 @@
+Forbidden Earth - video10 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:28.375   28.375s
+01_skellig       00:29.175  01:25.150   55.975s
+02_henderson     01:25.950  02:28.300   62.350s
+03_balls_pyramid 02:29.100  03:34.950   65.850s
+04_poveglia      03:35.750  04:40.725   64.975s
+05_farallon      04:41.525  05:38.125   56.600s
+06_heard         05:38.925  06:38.075   59.150s
+07_bouvet        06:38.875  07:40.050   61.175s
+08_clipperton    07:40.850  08:51.300   70.450s
+09_vozrozhdeniya 08:52.100  09:53.000   60.900s
+10_north_sentinel 09:53.800  11:07.125   73.325s
+11_outro         11:07.925  11:20.900   12.975s
+
+TOTAL            11:20.900  (680.900s)
