@@ -1,0 +1,14 @@
+{
+ "key": "run_02",
+ "source": "Wikimedia Commons",
+ "title": "Enewetak Atoll - 2014-02-10 - Landsat 8 - 15m.png",
+ "author": "NASA",
+ "credit": "NASA/USGS Landsat satellite image GeoTIFF archive, http://glovis.usgs.gov",
+ "license": "Public domain",
+ "license_url": "",
+ "url": "https://commons.wikimedia.org/wiki/File:Enewetak_Atoll_-_2014-02-10_-_Landsat_8_-_15m.png",
+ "description": "Composite \"true color\" multispectral satellite image of Enewetak Atoll. NASA Landsat 8 OLI bands used were 4 (red), 3 (green), 2 (blue). Pan-sharpened with band 8. Manual color balance. Projection: UTM (zone 57), WGS84. Imagery courtesy NASA/USGS.",
+ "restrictions": "",
+ "size": "2841x2876",
+ "license_ok": true
+}

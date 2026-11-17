@@ -1,0 +1,30 @@
+Forbidden Earth - video11 - changes for Kokoro narration
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+1750s seventeen fifties · late 1930s nineteen thirties · 1936 nineteen thirty-six · 1940 nineteen forty
+1946 nineteen forty-six · 1958 nineteen fifty-eight · 1977 nineteen seventy-seven · 1980 nineteen eighty
+1986 nineteen eighty-six · 1994 nineteen ninety-four · 1998 nineteen ninety-eight · 2012 twenty twelve
+2017 twenty seventeen · 2019 twenty nineteen · 2023 twenty twenty-three · 2026 twenty twenty-six
+the year 79 -> the year seventy-nine · May 28 -> May twenty-eighth · 8113 -> eighty-one thirteen
+(other numbers are already written as words in the script)
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Oglethorpe  /ˈOɡəlθˌɔɹp/   OH-gul-thorp
+Gutzon      /ɡˈʌtsən/      GUT-sun
+Svalbard    /svˈɑlbɑɹ/     SVAHL-bar
+Movile      /mOvˈilA/      moh-VEE-leh
+Chauvet     /ʃOvˈA/        sho-VAY
+Ardèche     /ɑɹdˈɛʃ/       ar-DESH
+Enewetak    /ɛnˈiwətɑk/    eh-NEE-weh-tok
+Vostok      /vɑstˈɑk/      vos-TOK
+tours       /tˈʊɹz/        (kept from video09)
+Kokoro's own reading was kept for: Thornwell, Rushmore, Borglum, Aleppo, permafrost, sulfide, Lascaux,
+Runit, Marshall, Ontario, kerosene, Onkalo (ON-ka-lo), Vesuvius, Herculaneum, Giza, muons (MYOO-onz).
+Checked: no plural word loses its final s ("debris" is read without s, which is correct).
+
+3) WHISPER CHECK (faster-whisper small.en)
+Numbers and dates are heard correctly (8113 -> "8113", May 28 -> "May 28").
+- "Gutzon" -> "Gutsen", "Enewetak" -> "Eniwetok": Whisper's spelling, the reading follows the plan.
+- "Now engineers years face" at 9:32 is a Whisper artefact; the clip reads "Now engineers face".
+- "Unusually, warm weather" at 4:00 - only Whisper's comma; the reading is normal.

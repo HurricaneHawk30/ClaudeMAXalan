@@ -1,0 +1,16 @@
+Forbidden Earth - video11 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:29.675   29.675s
+01_crypt         00:30.475  01:46.300   75.825s
+02_hall_of_records 01:47.100  02:57.700   70.600s
+03_seed_vault    02:58.500  04:09.700   71.200s
+04_movile        04:10.500  05:16.450   65.950s
+05_chauvet       05:17.250  06:15.675   58.425s
+06_runit         06:16.475  07:26.150   69.675s
+07_vostok        07:26.950  08:36.375   69.425s
+08_onkalo        08:37.175  09:43.200   66.025s
+09_papyri        09:44.000  10:56.775   72.775s
+10_great_pyramid 10:57.575  12:06.750   69.175s
+11_outro         12:07.550  12:19.400   11.850s
+
+TOTAL            12:19.400  (739.400s)

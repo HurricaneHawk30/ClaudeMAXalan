@@ -1,0 +1,14 @@
+{
+ "key": "run_06",
+ "source": "Wikimedia Commons",
+ "title": "Enewetak Atoll 2005-09-01, EO-1 bands 10-8-2-1, 15m resolution, no annotations.png",
+ "author": "NASA",
+ "credit": "NASA EO-1 satellite image GeoTIFF archive, http://glovis.usgs.gov",
+ "license": "Public domain",
+ "license_url": "",
+ "url": "https://commons.wikimedia.org/wiki/File:Enewetak_Atoll_2005-09-01,_EO-1_bands_10-8-2-1,_15m_resolution,_no_annotations.png",
+ "description": "Composite \"false color\" multispectral satellite image of Enewetak Atoll, Marshall Islands. NASA EO-1 ALI bands used were 10 (SWIR), 8 (SWIR) and 2 (blue). The image was pan-sharpened and resampled to 15m resolution. Imagery courtesy of NASA/USGS.",
+ "restrictions": "",
+ "size": "3126x3138",
+ "license_ok": true
+}
