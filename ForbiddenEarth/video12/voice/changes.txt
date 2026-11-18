@@ -1,0 +1,35 @@
+Forbidden Earth - video12 - changes for Kokoro narration (am_michael, speed 0.95)
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS -> WORDS
+1957 nineteen fifty-seven · 1958 nineteen fifty-eight · 1980s nineteen eighties · 1991 nineteen ninety-one
+1994 nineteen ninety-four · 2001 two thousand and one · 2003 two thousand and three · 2007 two thousand and seven
+2016 twenty sixteen · 2019 twenty nineteen · 2020 twenty twenty · 2021 twenty twenty-one
+2022 twenty twenty-two · 2023 twenty twenty-three · 2025 twenty twenty-five
+(other numbers are already written as words in the script)
+"Taam Ja'" -> "Taam Ja" (apostrophe removed so the name is read as one word)
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Hranice      /hɹˈɑnjɪtsə/     HRAH-nyi-tseh
+Krzysztof    /kʃˈɪʃtɔf/       KSHISH-tof
+Starnawski   /stɑɹnˈɑvski/    star-NAHV-ski
+Machapuchare /mˌɑʧəpuʧˈɑɹA/   mah-cha-poo-CHAH-ray
+Pokhara      /pˈOkəɹə/        POH-ka-ra
+Ja (Taam Ja) /hˈɑ/            HAH
+Kawagarbo    /kˌɑwəɡˈɑɹbO/    kah-wa-GAR-bo
+Zacatón      /zˌɑkətˈOn/      sah-ka-TONE
+Exley        /ˈɛksli/         EKS-lee
+Gamburtsev   /ɡæmbˈʊɹtsɛv/    gam-BOOR-tsev
+Puensum      /pˈunsəm/        POON-sum
+tours        /tˈʊɹz/          (kept from video09)
+Kokoro's own reading was kept for: Thwaites, Icefin, Yunnan, Tibetan, Denman, Sheck, Europa, Gangkhar,
+Bhutan, Rhode Island, Noyce, Wilfrid, Shiva, Belize, Mayan.
+
+3) WHISPER CHECK (faster-whisper small.en)
+Numbers and dates are heard correctly.
+- "Caribbean coast of close to" (Taam Ja') is a Whisper artefact; the clip re-checked alone reads
+  "coast of Mexico, close to".
+- Whisper writes "Hranjica" for Hranice and "Starnovsky" for Starnawski, "Gamborsev" for Gamburtsev: its own spelling, the reading follows the plan.
+  Kawagarbo, Machapuchare and Pokhara are recognised exactly.
+- "7 ,500 and 70 meters" (Gangkhar Puensum, 8:44) is Whisper's way of writing "seven thousand five hundred
+  and seventy"; the reading is correct. Whisper writes "Gankar Punsam" for Gangkhar Puensum.

@@ -1,0 +1,16 @@
+Forbidden Earth - video12 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:25.675   25.675s
+01_hranice       00:26.475  01:35.275   68.800s
+02_machapuchare  01:36.075  02:35.775   59.700s
+03_taam_ja       02:36.575  03:36.350   59.775s
+04_thwaites      03:37.150  04:37.600   60.450s
+05_kawagarbo     04:38.400  05:36.300   57.900s
+06_denman        05:37.100  06:28.900   51.800s
+07_zacaton       06:29.700  07:31.125   61.425s
+08_gamburtsev    07:31.925  08:32.325   60.400s
+09_gangkhar      08:33.125  09:34.075   60.950s
+10_deep_seafloor 09:34.875  10:36.650   61.775s
+11_outro         10:37.450  10:52.100   14.650s
+
+TOTAL            10:52.100  (652.100s)
