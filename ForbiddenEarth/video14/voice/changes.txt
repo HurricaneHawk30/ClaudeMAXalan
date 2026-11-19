@@ -1,0 +1,40 @@
+Forbidden Earth - video14 - changes for Kokoro narration (am_michael, speed 0.95)
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+"4800 and 3500 BC" -> forty-eight hundred and thirty-five hundred B C
+"1240 to 660 BC"   -> twelve forty to six sixty B C
+"1200 and 1500 AD" -> twelve hundred and fifteen hundred A D
+1628 sixteen twenty-eight · 1986 nineteen eighty-six · 1992 nineteen ninety-two · 1995 nineteen ninety-five
+2014 twenty fourteen · 2021 twenty twenty-one · 2024 twenty twenty-four · July 2025 July twenty twenty-five
+("fifteenth century" and other numbers are already written as words in the script)
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Longyou      /lˌɔŋjˈO/        lohng-YOH
+Anai         /ɑnˈI/           ah-NYE (Wu Anai)
+Carnac       /kɑɹnˈæk/        kar-NAK
+Morbihan     /mˌɔɹbiˈɑn/      mor-bee-AHN
+Sacsayhuamán /sˌæksIwəmˈɑn/   sak-sy-wah-MAHN
+Cusco        /kˈuskO/         KOOS-koh
+Laos         /lˈɑOs/          LAH-ohs
+Yonaguni     /jˌOnəɡˈuni/     yoh-nah-GOO-nee
+Nan Madol    /nˈɑn mədˈOl/    nahn mah-DOHL
+Pohnpei      /pˈOnpA/         POHN-pay
+Saudeleur    /sˈWdəlˌɜɹ/      SOW-deh-lur
+Nazca        /nˈɑzkə/         NAHZ-kah
+Baalbek      /bˈɑlbɛk/        BAHL-bek
+Bekaa        /bəkˈɑ/          beh-KAH
+Trilithon    /tɹˈIlɪθˌɑn/     TRY-lith-on
+Salisbury    /sˈɔlzbɹi/       SAWLZ-bree
+Göbekli Tepe /ɡəbˌɛklˈi tˈɛpə/ guh-bek-LEE TEH-peh
+tours        /tˈʊɹz/          (kept from video09)
+Kokoro's own reading was kept for: Wu, Brittany, Neolithic, Inca, basalt, sarsen, bluestones, megaliths,
+UNESCO, mortar, boars, vultures (checked with g2p, plural endings intact).
+
+3) WHISPER CHECK (faster-whisper small.en)
+Numbers and dates are heard correctly (4800 and 3500 BC, 1240 to 660 BC, 1200 and 1500 AD, 1628, 303).
+- Whisper skipped a few sentences in the long transcript (Saudeleur dynasty 6:00, "Number one. Göbekli Tepe"
+  9:53, "We still don't know" 11:00); each clip was re-checked alone and is read in full.
+- "too big to move. move." (8:43) is a Whisper repeat; the clip re-checked alone reads "too big to move. How the Romans".
+- Whisper spellings: "Karnak" (Carnac), "Morbian" (Morbihan), "Saxoaman" (Sacsayhuamán), "Pompay" (Pohnpei),
+  "Non-Midal" (Nan Madol), "Balbec", "Bikah" (Bekaa), "Sarson", "Gebekli Tepe"; the reading follows the plan.

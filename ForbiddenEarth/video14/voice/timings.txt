@@ -1,0 +1,16 @@
+Forbidden Earth - video14 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:25.975   25.975s
+01_longyou       00:26.775  01:31.625   64.850s
+02_carnac        01:32.425  02:34.125   61.700s
+03_sacsayhuaman  02:34.925  03:32.575   57.650s
+04_plain_of_jars 03:33.375  04:33.725   60.350s
+05_yonaguni      04:34.525  05:35.100   60.575s
+06_nan_madol     05:35.900  06:39.075   63.175s
+07_nazca         06:39.875  07:43.000   63.125s
+08_baalbek       07:43.800  08:50.275   66.475s
+09_stonehenge    08:51.075  09:52.125   61.050s
+10_gobekli_tepe  09:52.925  11:01.375   68.450s
+11_outro         11:02.175  11:15.600   13.425s
+
+TOTAL            11:15.600  (675.600s)
