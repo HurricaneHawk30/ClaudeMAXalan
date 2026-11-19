@@ -1,0 +1,16 @@
+Forbidden Earth - video13 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:26.725   26.725s
+01_caracoles     00:27.525  01:26.000   58.475s
+02_ice_road      01:26.800  02:26.875   60.075s
+03_sani_pass     02:27.675  03:19.200   51.525s
+04_dalton        03:20.000  04:21.350   61.350s
+05_skippers      04:22.150  05:12.725   50.575s
+06_zoji_la       05:13.525  06:09.425   55.900s
+07_guoliang      06:10.225  07:12.050   61.825s
+08_kolyma        07:12.850  08:06.175   53.325s
+09_fairy_meadows 08:06.975  09:01.100   54.125s
+10_yungas        09:01.900  10:10.475   68.575s
+11_outro         10:11.275  10:22.775   11.500s
+
+TOTAL            10:22.775  (622.775s)

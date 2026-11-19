@@ -1,0 +1,44 @@
+Forbidden Earth - video13 - changes for Kokoro narration (am_michael, speed 0.95)
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+1883 eighteen eighty-three · 1890 eighteen ninety · 1930s nineteen thirties · 1932 nineteen thirty-two
+1953 nineteen fifty-three · 1972 nineteen seventy-two · 1974 nineteen seventy-four · 1995 nineteen ninety-five
+2000s two thousands · September 2013 September twenty thirteen · June 2026 June twenty twenty-six
+"May 1, 1977" -> May first, nineteen seventy-seven
+(other numbers are already written as words in the script)
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Caracoles    /kˌɑɹəkˈOlɛs/    kah-rah-KOH-les
+Tibbitt      /tˈɪbɪt/         TIB-it
+Contwoyto    /kɑntwˈYtO/      kon-TWOY-toh
+Sani         /sˈɑni/          SAH-nee
+Drakensberg  /dɹˈɑkənzbˌɜɹɡ/  DRAH-kenz-berg
+Lesotho      /ləsˈutu/        le-SOO-too
+Prudhoe      /pɹˈʌdO/         PRUD-oh
+Atigun       /ˈætɪɡən/        AT-ih-gun
+Coldfoot     /kˈOldfˌʊt/      COLD-foot
+Queenstown   /kwˈinztˌWn/     QUEENS-town
+Shotover     /ʃˈɑtˌOvəɹ/      SHOT-oh-ver
+Zoji La      /zˈOʤi lˈɑ/      ZOH-jee LAH
+Kashmir      /kæʃmˈɪɹ/        kash-MEER
+Guoliang     /ɡwˌOliˈɑŋ/      gwoh-lee-AHNG
+Taihang      /tˌIhˈɑŋ/        tie-HAHNG
+Kolyma       /kˌOlɪmˈɑ/       koh-lih-MAH
+Magadan      /mˌɑɡədˈɑn/      mah-gah-DAHN
+Yakutsk      /jəkˈutsk/       yah-KOOTSK
+Nanga Parbat /nˈʌŋɡə pˈʌɹbət/ NUN-gah PUR-but
+Raikot       /ɹˈIkɑt/         RYE-kot
+Tato         /tˈɑtO/          TAH-toh
+Yungas       /jˈuŋɡɑs/        YOON-gahs
+Chaco        /ʧˈɑkO/          CHAH-koh
+tours        /tˈʊɹz/          (kept from video09)
+Kokoro's own reading was kept for: Mendoza, Santiago, Yellowknife, Ladakh, Brooks, Fairbanks, gulag,
+Karakoram, Paraguayan, Snails, diggings, chisels, convoys (checked with g2p, plural endings intact).
+
+3) WHISPER CHECK (faster-whisper small.en)
+Numbers and dates are heard correctly ("May 1, 1977", "September 2013", "June 2026").
+- "After the trucks stop at Coldfoot" (4:01) is a Whisper artefact; the phonemes are "truck stop" without s.
+- "between 4 and 600 kilometers" is how Whisper writes "four and six hundred"; the reading follows the script.
+- Whisper spellings: "Carcolez" (Caracoles), "Tibit to Contoito", "Saunee" (Sani), "Attigan" (Atigun),
+  "Chateauver" (Shotover), "Zojilah", "Kolomah/Kolima", "Nunga Parbat", "Raikat"; the reading follows the plan.
