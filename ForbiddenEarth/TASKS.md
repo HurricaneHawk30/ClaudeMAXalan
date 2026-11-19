@@ -925,3 +925,89 @@
 - 3:04–3:20 — вставки рисунков из статьи про Taam Ja' (небольшие и мягкие по резкости).
 - 6:52–7:32 — Сакатон: схема глубины, DEPTHX, Европа.
 - 9:35–10:37 — раздел дна со схемами.
+
+**Порядок.** Задачи 19 и 20 делай подряд: сначала 19 (видео 13, выход 1 декабря), сразу после неё — 20 (видео 14, выход 3 декабря). После каждой отправь Алану видео и обложку и коротко отчитайся.
+
+## 19. Полное видео video13 + обложка — TODO
+
+Тринадцатое видео: **10 Most Dangerous Roads on Earth**. Выход во вторник, 1 декабря; видео нужно Алану к 30 ноября. Задача одна на всё видео, без остановок: кадры → озвучка → монтаж → обложка → файлы Алану.
+
+Текст: `ForbiddenEarth/video13/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, плашки, обложка и произношение: `ForbiddenEarth/video13/script/visuals_plan.md`.
+
+**Деликатные места** (подробно — в `visuals_plan.md`):
+- Никаких аварий, разбитых машин и пострадавших.
+- Колыма — без исторических фото заключённых и останков; только дорога, пейзаж, руины общим планом.
+- Юнгас — кресты только издалека; люди и велосипедисты мелко, со спины.
+- Без портретов и крупных лиц, без водяных знаков, как всегда.
+
+**1. Кадры** — как в задаче 18:
+| Папка | Место | Что найти |
+| --- | --- | --- |
+| `caracoles` | Los Caracoles, Чили | Серпантин сверху, Анды, грузовики, снег на перевале |
+| `ice_road` | Tibbitt to Contwoyto Winter Road, Канада | Ледовая дорога по озеру, грузовики на льду, тундра |
+| `sani_pass` | Sani Pass, ЮАР / Лесото | Петли сверху, внедорожник на гравии, Дракенсберг, паб на вершине |
+| `dalton` | Dalton Highway, США | Гравий вдоль трубопровода, перевал Атиган, хребет Брукс, тундра, зима |
+| `skippers` | Skippers Canyon Road, Новая Зеландия | Дорога на стене каньона, река Шотовер, мост, архив приисков (PD) |
+| `zoji_la` | Zoji La, Индия | Перевал, узкая дорога над обрывом, снег, грузовики, Ладакх |
+| `guoliang` | Guoliang Tunnel, Китай | Тоннель с «окнами» снаружи, вид из окна, деревня на скале |
+| `kolyma` | Kolyma Highway, Россия | Трасса зимой и летом, Магадан, Якутск, руины посёлков общим планом |
+| `fairy_meadows` | Fairy Meadows Road, Пакистан | Гравийная дорога над ущельем, джип далеко, Нанга-Парбат |
+| `yungas` | Yungas Road, Боливия | Карниз над пропастью, туман, водопады, велосипедисты далеко, новая дорога |
+
+Лицензии — как в README: Wikimedia Commons (PD, CC0, CC BY, CC BY-SA, OGL v3.0), Geograph (CC BY-SA), NASA, ESA (Copernicus Sentinel — с указанием), NOAA, USGS, NPS, научные статьи только под CC BY / CC BY-SA; без NC/ND, без водяных знаков. Карты для 10 мест. Если кадров по месту мало — бери ближайшие подходящие и напиши об этом в отчёте. Wikimedia может ограничивать скачивание с облачного IP — не обходи лимит, просто подожди.
+
+**Место на диске.** Алан разрешил удалять промежуточные сегменты старых видео (`videoNN/visuals/work/seg`). Перед стартом удали `video12/visuals/work/seg`, если он ещё есть. Исходные кадры (`visuals/src`), озвучку, `render/*.mp4`, обложки, credits и скрипты старых видео не трогай. В отчёте — сколько места свободно до и после рендера.
+
+**2. Озвучка** — как в задаче 18: `voice_build.py` со словарями под этот текст (годы → слова: «1883», «1890», «1930s», «1932», «1953», «1972», «1974», «1977», «1995», «2000s», «2013», «2026», «May 1, 1977»), фонемы по списку из `visuals_plan.md` (Caracoles, Contwoyto, Sani, Drakensberg, Lesotho, Prudhoe, Atigun, Zoji La, Ladakh, Guoliang, Taihang, Kolyma, Magadan, Yakutsk, Nanga Parbat, Karakoram, Raikot, Yungas, Chaco — проверить на слух), Kokoro `am_michael`, 0.95, проверка Whisper. Результат в `video13/voice/`.
+
+**3. Видео** — как в задаче 18: плашки по таблице `visuals_plan.md` (появляются с «Number …», держатся ~6 с). Результат:
+- полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS — Алану файлом в чат (до 400 МиБ);
+- `video13/render/review_720p.mp4` (до 45 МБ), `video13/render/contact_sheet_full.jpg`;
+- `video13/visuals/credits.txt` и `video13/visuals/credits_youtube.txt` (не больше 3800 символов; без HTML-сущностей; без хвостов в именах авторов; в конце — «Images were cropped and color graded.»);
+- `video13/youtube/chapters.txt`: `0:00 Intro`, `#10 Los Caracoles, Chile`, `#9 Tibbitt to Contwoyto Ice Road, Canada`, `#8 Sani Pass, South Africa`, `#7 Dalton Highway, USA`, `#6 Skippers Canyon Road, New Zealand`, `#5 Zoji La, India`, `#4 Guoliang Tunnel, China`, `#3 Kolyma Highway, Russia`, `#2 Fairy Meadows Road, Pakistan`, `#1 Yungas Road (Death Road), Bolivia`, `Outro`.
+
+**4. Обложка** — по разделу «Обложка» в `visuals_plan.md`, скриптом `tools/thumbnail/make_thumbnail.js` → `video13/youtube/thumbnail.jpg`; отправь её Алану файлом вместе с видео.
+
+В отчёте — длина, что послушать и проверить глазами, где кадров было мало, какой кадр взят на обложку, сколько места на диске.
+
+## 20. Полное видео video14 + обложка — TODO
+
+Четырнадцатое видео: **10 Ancient Places Scientists Still Can't Explain**. Выход в четверг, 3 декабря; видео нужно Алану к 2 декабря. Задача одна на всё видео, без остановок: кадры → озвучка → монтаж → обложка → файлы Алану.
+
+Текст: `ForbiddenEarth/video14/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, плашки, обложка и произношение: `ForbiddenEarth/video14/script/visuals_plan.md`.
+
+**Деликатные места** (подробно — в `visuals_plan.md`):
+- Долина кувшинов — без фото пострадавших от бомб; маркеры разминирования и воронки — общим планом.
+- Без псевдонаучных картинок (пришельцы, «Атлантида») — только реальные места, музеи и схемы из статей под CC BY.
+- Туристы мелко и со спины.
+- Без портретов и крупных лиц, без водяных знаков, как всегда.
+
+**1. Кадры** — как в задаче 18:
+| Папка | Место | Что найти |
+| --- | --- | --- |
+| `longyou` | Longyou Caves, Китай | Пруды, спуск, огромный зал с колоннами, следы резца крупно |
+| `carnac` | Carnac, Франция | Ряды менгиров Ménec/Kermario сверху и с земли, туман или закат |
+| `sacsayhuaman` | Sacsayhuamán, Перу | Зигзаг-стены, самый большой камень, стыки крупно, вид на Куско |
+| `plain_of_jars` | Plain of Jars, Лаос | Кувшины на холмах, самый большой кувшин, маркеры MAG, воронки |
+| `yonaguni` | Yonaguni Monument, Япония | Подводные террасы и «ступени», остров, береговые скалы с трещинами |
+| `nan_madol` | Nan Madol, Микронезия | Стены из базальтовых столбов, каналы, островки сверху, мангры |
+| `nazca` | Nazca Lines, Перу | Колибри, обезьяна, паук, косатка с воздуха, прямые линии, рисунки PNAS 2024 (CC BY) |
+| `baalbek` | Baalbek, Ливан | Храм Юпитера, Трилитон, Камень беременной женщины, блок 2014 года |
+| `stonehenge` | Stonehenge, Англия | Рассвет и вид сверху, сарсены, голубые камни, Алтарный камень, холмы Пресели |
+| `gobekli_tepe` | Göbekli Tepe, Турция | Круги Т-образных столбов, резьба крупно, холм сверху, музей Шанлыурфы |
+
+Лицензии — как в README: Wikimedia Commons (PD, CC0, CC BY, CC BY-SA, OGL v3.0), Geograph (CC BY-SA), NASA, ESA (Copernicus Sentinel — с указанием), NOAA, USGS, NPS, научные статьи только под CC BY / CC BY-SA; без NC/ND, без водяных знаков. Карты для 10 мест. Если кадров по месту мало — бери ближайшие подходящие и напиши об этом в отчёте. Wikimedia может ограничивать скачивание с облачного IP — не обходи лимит, просто подожди.
+
+**Место на диске.** Алан разрешил удалять промежуточные сегменты старых видео (`videoNN/visuals/work/seg`). Перед стартом удали `video12/visuals/work/seg`, если он ещё есть. Исходные кадры (`visuals/src`), озвучку, `render/*.mp4`, обложки, credits и скрипты старых видео не трогай. В отчёте — сколько места свободно до и после рендера.
+
+**2. Озвучка** — как в задаче 18: `voice_build.py` со словарями под этот текст (годы → слова: «4800 and 3500 BC» — «forty-eight hundred and thirty-five hundred B C», «1240 to 660 BC» — «twelve forty to six sixty B C», «1200 and 1500 AD», «1628», «1986», «1992», «1995», «2014», «2021», «2024», «July 2025», «fifteenth century»), фонемы по списку из `visuals_plan.md` (Longyou, Wu Anai, Carnac, Morbihan, Sacsayhuamán, Cusco, Laos, Yonaguni, Nan Madol, Pohnpei, Saudeleur, Nazca, Baalbek, Bekaa, Trilithon, sarsen, Salisbury, Göbekli Tepe — проверить на слух), Kokoro `am_michael`, 0.95, проверка Whisper. Результат в `video14/voice/`.
+
+**3. Видео** — как в задаче 18: плашки по таблице `visuals_plan.md` (появляются с «Number …», держатся ~6 с). Результат:
+- полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS — Алану файлом в чат (до 400 МиБ);
+- `video14/render/review_720p.mp4` (до 45 МБ), `video14/render/contact_sheet_full.jpg`;
+- `video14/visuals/credits.txt` и `video14/visuals/credits_youtube.txt` (не больше 3800 символов; без HTML-сущностей; без хвостов в именах авторов; в конце — «Images were cropped and color graded.»);
+- `video14/youtube/chapters.txt`: `0:00 Intro`, `#10 Longyou Caves, China`, `#9 Carnac Stones, France`, `#8 Sacsayhuamán, Peru`, `#7 Plain of Jars, Laos`, `#6 Yonaguni Monument, Japan`, `#5 Nan Madol, Micronesia`, `#4 Nazca Lines, Peru`, `#3 Baalbek, Lebanon`, `#2 Stonehenge, England`, `#1 Göbekli Tepe, Turkey`, `Outro`.
+
+**4. Обложка** — по разделу «Обложка» в `visuals_plan.md`, скриптом `tools/thumbnail/make_thumbnail.js` → `video14/youtube/thumbnail.jpg`; отправь её Алану файлом вместе с видео.
+
+В отчёте — длина, что послушать и проверить глазами, где кадров было мало, какой кадр взят на обложку, сколько места на диске.
