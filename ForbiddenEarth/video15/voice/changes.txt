@@ -1,0 +1,51 @@
+Forbidden Earth - video15 - changes for Kokoro narration (am_michael, speed 0.95)
+The script text was not changed. Only these spellings were replaced for TTS.
+
+1) NUMBERS, YEARS, DATES -> WORDS
+1538 fifteen thirty-eight · 1707 seventeen oh seven · 1911 nineteen eleven · 1914 nineteen fourteen
+1977 nineteen seventy-seven · 1994 nineteen ninety-four · 1998 nineteen ninety-eight · 2002 two thousand two
+2005 two thousand five · 2010 twenty ten · 2018 twenty eighteen · 2020 twenty twenty (January 2020, November 2020)
+2021 twenty twenty-one (2021, May 2021) · 2023 twenty twenty-three (2023, November 2023, December 2023)
+2024 twenty twenty-four (January 2024) · 2025 twenty twenty-five · 2026 twenty twenty-six (August, February, through 2026)
+"July 31, 2026" -> July thirty-first, twenty twenty-six
+(other numbers are already written as words in the script)
+
+2) PRONUNCIATION FIXED WITH KOKORO PHONEMES
+Fuji          /fˈuʤi/              FOO-jee
+Edo           /ˈɛdO/               EH-doh
+Rainier       /ɹAnˈɪɹ/             ray-NEER
+Orting        /ˈɔɹtɪŋ/             OR-ting
+lahar(s)      /lˈɑhɑɹ(z)/          LAH-har
+Taal          /tɑˈɑl/              tah-AHL
+Luzon         /luzˈɑn/             loo-ZON
+Etna          /ˈɛtnə/              ET-nah
+Catania('s)   /kətˈɑnjə(z)/        kah-TAHN-yah
+Voragine      /vOɹˈɑʤinA/          voh-RAH-jee-neh
+Nyiragongo    /nˌɪɹəɡˈɔŋɡO/        neer-ah-GONG-goh
+Goma          /ɡˈOmə/              GOH-mah
+Sakurajima    /sˌɑkuɹəʤˈimə/       sah-koo-rah-JEE-mah
+Kagoshima     /kˌɑɡOʃˈimə/         kah-goh-SHEE-mah
+Reykjanes     /ɹˈAkjənˌɛs/         RAKE-yah-ness
+Grindavík('s) /ɡɹˈɪndəvˌik(s)/     GRIN-dah-veek
+Svartsengi    /svˈɑɹtsɛnɡi/        SVART-sen-gee
+Merapi('s)    /məɹˈɑpi(z)/         meh-RAH-pee
+Yogyakarta    /jˌɑɡjəkˈɑɹtə/       yog-yah-KAR-tah
+pyroclastic   /pˌIɹOklˈæstɪk/      py-roh-KLAS-tik
+Popocatépetl  /pˌOpOkətˈɛpətəl/    poh-poh-kah-TEH-peh-tul
+El Popo       /ɛl pˈOpO/           el POH-poh
+Puebla        /pwˈɛblə/            PWEB-lah
+Campi Flegrei /kˈɑmpi flɛɡɹˈA/     KAHM-pee fleh-GRAY
+Pozzuoli      /pɑtswˈOli/          pot-SWOH-lee
+Monte Nuovo   /mˈɑntA nwˈOvO/      MON-teh NWOH-voh
+caldera       /kældˈɛɹə/           kal-DEH-rah
+tours         /tˈʊɹz/              (kept from video09)
+Kokoro's own reading was kept for: Vesuvius, Pompeii, Aztec, Sicily, Java, Manila, Malta, Libya,
+Electron Mudflow, glaciers, avalanches (checked with g2p, plural endings intact).
+
+3) WHISPER CHECK (faster-whisper small.en)
+Numbers and dates are heard correctly (1707, 3,776, 4,392, July 31, 2026, 4.7).
+- "Today, the volcano is on Scientists..." (7:07) - Whisper skipped words; the clip re-checked alone reads
+  "on alert level three, which means, do not approach. And scientists...".
+- "Most Most of Grindavík's" (8:34) - Whisper repeat; the clip alone reads "Most of Grindevik's".
+- Whisper spellings: "Tawal" (Taal), "Aetna", "Virajine" (Voragine), "Katanya", "Renier", "Raikines", "Grindevik",
+  "Svartzingi", "Marape", "Patzwole"/"Potswolle" (Pozzuoli), "Monte Nuevo", "Campi Flegre"; the reading follows the plan.

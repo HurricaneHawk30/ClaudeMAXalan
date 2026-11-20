@@ -1,0 +1,16 @@
+Forbidden Earth - video15 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:26.850   26.850s
+01_fuji          00:27.650  01:43.000   75.350s
+02_rainier       01:43.800  02:56.125   72.325s
+03_taal          02:56.925  04:03.075   66.150s
+04_etna          04:03.875  05:06.425   62.550s
+05_nyiragongo    05:07.225  06:14.125   66.900s
+06_sakurajima    06:14.925  07:19.875   64.950s
+07_reykjanes     07:20.675  08:37.750   77.075s
+08_merapi        08:38.550  09:45.800   67.250s
+09_popocatepetl  09:46.600  10:54.625   68.025s
+10_campi_flegrei 10:55.425  12:37.525  102.100s
+11_outro         12:38.325  12:50.750   12.425s
+
+TOTAL            12:50.750  (770.750s)
