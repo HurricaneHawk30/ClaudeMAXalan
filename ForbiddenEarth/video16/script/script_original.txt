@@ -1,0 +1,95 @@
+=== 00_hook ===
+Maps are supposed to tell the truth. These ten places prove they don't always. Some of them never existed, yet stayed on maps for centuries. One island fooled sailors, scientists and Google until 2012. One town was invented to catch thieves, and then it came to life. And some places were very real, but someone worked very hard to make sure you'd never find them. At number one: a base so secret that, for almost sixty years, the government wouldn't even say its name.
+
+=== 01_argleton ===
+Number ten. Argleton, England.
+
+In 2008, people in West Lancashire noticed something odd on Google Maps. Between the village of Aughton and the town of Ormskirk sat a place called Argleton. It even had a postcode. Websites listed jobs in Argleton, homes to rent in Argleton, even the weather in Argleton.
+
+There was just one problem. Argleton didn't exist. At that spot on the map, there was nothing but an empty field next to a main road.
+
+In 2009, the story went around the world, and people drove out to visit a town that wasn't there. Was it a typing mistake? A trap to catch anyone copying the map? Some noticed that the letters of "Argleton" can be rearranged into "Not Large" and "Not Real G." The mapping company never fully explained it. By May 2010, Argleton had quietly vanished from Google Maps.
+
+=== 02_agloe ===
+Number nine. Agloe, USA.
+
+Almost a hundred years ago, two mapmakers in New York, Otto G. Lindberg and Ernest Alpers, had a problem. Rivals kept copying their road maps. So they set a trap. At an empty dirt-road crossing in the Catskill Mountains, they added a tiny town that didn't exist, and named it Agloe, from the letters of their initials.
+
+If Agloe ever showed up on someone else's map, they'd know it had been copied. A few years later, it did. Agloe appeared on a map by Rand McNally, one of the biggest map publishers in America. Case closed? Not quite.
+
+According to the famous story, someone had built a general store at that very crossing. They saw the name on an Esso road map and called it the Agloe General Store. So, in a way, Agloe was real. The fake town had come to life. The store is long gone, but Agloe stayed on maps for decades and even made it onto Google Maps. It was finally removed in 2014, after reporters started asking about it.
+
+=== 03_hy_brasil ===
+Number eight. Hy-Brasil, Atlantic Ocean.
+
+Long before Google, sailors' charts showed a round island off the west coast of Ireland, often with a river or a strait cutting it in two. Its name was Brasil, or Hy-Brasil. It first appeared on a chart in 1325, and for more than five hundred years, mapmakers kept drawing it.
+
+Irish legend said the island was hidden by mist and could be seen only one day in every seven years. Explorers went looking for it. In 1480, a ship sailed from Bristol, in England, to find it, and came back with nothing.
+
+The island was never found, but mapmakers were slow to give it up. Instead of disappearing, it simply shrank. On British charts in the 1800s, it had become a tiny "Brasil Rock." By the 1870s, it was gone from the charts for good.
+
+=== 04_sannikov_land ===
+Number seven. Sannikov Land, Arctic Ocean.
+
+In 1811, a Russian hunter named Yakov Sannikov, exploring the New Siberian Islands in the Arctic, said he had seen high land far to the north, across the ice. It became known as Sannikov Land, and maps showed it with a dashed line, waiting to be found.
+
+In 1886, a young geologist named Eduard Toll saw it too, or thought he did: the outline of mountains on the horizon. He became obsessed. In 1900, Baron Toll led a Russian polar expedition to find it. After two brutal winters in the ice, he set out by sled and kayak with three companions toward Bennett Island. They were never seen again.
+
+In 1937 and 1938, Soviet icebreakers searched the sea where Sannikov Land should have been. They found only frozen ocean. The land that cost Toll his life was never there. Some think he saw a mirage. Others think it was an island made of ice and frozen soil that has since melted away.
+
+=== 05_sandy_island ===
+Number six. Sandy Island, Coral Sea.
+
+For more than a hundred years, maps showed an island in the Coral Sea, between Australia and New Caledonia. It was about twenty-five kilometers long, bigger than Manhattan. It was in world atlases, in scientific databases, and on Google Earth, where it looked like a strange dark shape in the middle of the blue ocean.
+
+In November 2012, an Australian research ship, the Southern Surveyor, sailed to the spot. The depth sounder showed about fourteen hundred meters of water. There was no island. There had never been an island.
+
+The scientists on board had "undiscovered" it. The story spread around the world, and within days, Sandy Island was deleted from Google's maps. Researchers later traced it back to the 1800s, possibly to a whaling ship that saw something, maybe floating pumice, and reported it as land. The mistake was copied from chart to chart, and then into computers.
+
+=== 06_bermeja ===
+Number five. Bermeja, Gulf of Mexico.
+
+In the 1500s, Spanish mapmakers marked a small island called Bermeja off the north coast of Mexico's Yucatán Peninsula. For centuries, it stayed on the maps. Nobody thought much about it, until it turned out to be worth a fortune.
+
+The Gulf of Mexico holds huge amounts of oil, and borders at sea depend on islands. If Bermeja existed, Mexico's waters would stretch much farther north, and the country could claim a bigger share of the oil under the seabed. Some reports put that oil at billions of barrels.
+
+So Mexico went looking. In 1997, a survey found nothing. In 2009, scientists from Mexico's national university searched again, with ships, aircraft and underwater sensors. No island. Not even a sunken one. Rumors spread that it had been secretly blown up. Scientists think the answer is simpler: it was probably never there at all, a mistake on an old map that survived for almost five hundred years.
+
+=== 07_camp_century ===
+Number four. Camp Century, Greenland.
+
+In 1959, the U.S. Army built a town inside the Greenland ice sheet, about two hundred kilometers from the coast. Camp Century had twenty-one tunnels, about three kilometers in total, with living quarters, labs, a chapel and a theater, all powered by a portable nuclear reactor. Officially, it was a research station.
+
+Secretly, it was a test for Project Iceworm: a plan to hide hundreds of nuclear missiles in tunnels under the ice, within striking distance of the Soviet Union. Denmark, which controlled Greenland, was never told about the missiles. The plan failed because the ice kept moving, slowly crushing the tunnels. The camp was abandoned in 1967.
+
+The Army took the reactor away but left almost everything else behind, including fuel, waste water and low-level radioactive waste, expecting the snow to bury it forever. The world only learned the full story in 1997. And in 2024, a NASA radar flight over Greenland picked up the abandoned city, still there, under about thirty meters of ice.
+
+=== 08_duga ===
+Number three. Duga radar, Ukraine.
+
+In 1976, radio listeners all over the world started hearing a strange sound on the shortwave bands: a fast, sharp tapping, like a bird pecking at a tree. They called it the Russian Woodpecker. It drowned out radio stations and even disturbed air traffic channels, and no one would admit where it came from.
+
+It came from a forest in Soviet Ukraine, near the town of Chernobyl. There, the Soviets had built Duga, a giant over-the-horizon radar designed to spot American missiles thousands of kilometers away. Its receiving antenna was a wall of steel about a hundred and fifty meters high and around seven hundred meters long.
+
+To hide something that huge, the Soviets used a simple trick. On maps, the military town next to it was marked as a children's summer camp. On the road in, there's still a bus stop painted with a smiling bear. Duga was switched off in 1989, three years after the nuclear disaster nearby. The giant steel wall still stands in the Chernobyl Exclusion Zone, with the forest growing back around it.
+
+=== 09_sarov ===
+Number two. Sarov, Russia.
+
+Sarov was once known for a famous monastery deep in the forests east of Moscow. Then, in 1946, it simply vanished. The town was removed from all public maps, and its name disappeared. Instead, it got code names, like Arzamas-16, after a town that was actually dozens of kilometers away.
+
+Behind barbed wire, scientists were building the first Soviet atomic bomb. It was tested in 1949. Later, scientists here also worked on the Soviet hydrogen bomb, among them Andrei Sakharov, who would go on to become a famous dissident and win the Nobel Peace Prize. People who lived inside were not allowed to talk about where they lived or what they did.
+
+The town got its old name back only in 1995. But Sarov is still a closed city today, home to Russia's main nuclear weapons research center. Around ninety thousand people live there, and you still can't get in without a special pass.
+
+=== 10_area_51 ===
+Number one. Area 51, USA.
+
+In the Nevada desert, about a hundred and thirty kilometers northwest of Las Vegas, there's a dry lake bed called Groom Lake. Next to it sits the most famous secret base in the world.
+
+In 1955, the CIA chose this spot to test a new spy plane, the U-2, far from curious eyes. Later came other secret aircraft, like the A-12 Oxcart and the F-117 stealth fighter. Strange lights in the sky and endless secrecy turned Area 51 into the center of UFO stories. The CIA later admitted that many UFO reports from the 1950s and 1960s were actually its own spy planes.
+
+For decades, the U.S. government wouldn't even confirm that the base existed. Public government maps showed empty desert. Guards and warning signs stopped anyone who came close, and the sky above was closed to other planes. Then, in 2013, after a request filed eight years earlier under the Freedom of Information Act, the CIA released a history of its U-2 program. For the first time, it named Area 51, and even showed it on a map. There was no mention of aliens. And what's tested at Area 51 today is still secret.
+
+=== 11_outro ===
+Ten places that were erased from maps, by mistake or on purpose. Which one surprised you most? Tell us in the comments. And subscribe, so you don't miss the next story from Forbidden Earth.

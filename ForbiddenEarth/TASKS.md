@@ -1104,3 +1104,90 @@
 - 6:46–6:52 — Наска, быстрые кадры по ~1 с (колибри, обезьяна, паук).
 - 9:29–9:36 — повтор карты Шотландия → Стоунхендж на словах про 700 км.
 - 4:25–4:30 — воронка общим планом.
+
+
+**Порядок.** Задачи 21 и 22 делай подряд: сначала 21 (видео 15, выход 5 декабря), сразу после неё — 22 (видео 16, выход 6 декабря). После каждой отправь Алану видео и обложку и коротко отчитайся. Видео 13 и 14 уже готовы — их не трогай.
+
+## 21. Полное видео video15 + обложка — TODO
+
+Пятнадцатое видео: **10 Volcanoes That Could Erupt Any Day**. Выход в субботу, 5 декабря; видео нужно Алану к 4 декабря. Задача одна на всё видео, без остановок: кадры → озвучка → монтаж → обложка → файлы Алану.
+
+Текст: `ForbiddenEarth/video15/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, плашки, обложка и произношение: `ForbiddenEarth/video15/script/visuals_plan.md`.
+
+**Деликатные места** (подробно — в `visuals_plan.md`):
+- Никаких погибших, раненых и тел; эвакуация и пострадавшие улицы — только общим планом.
+- Ньирагонго / Гома — без военных, оружия и лагерей беженцев; лава в городе — общим планом.
+- Без компьютерных симуляций и ИИ-видео извержений — только реальные снимки.
+- Без портретов и крупных лиц, без водяных знаков, как всегда.
+
+**1. Кадры** — как в задаче 18:
+| Папка | Место | Что найти |
+| --- | --- | --- |
+| `fuji` | Mount Fuji, Япония | Конус со снегом, гора за небоскрёбами Токио, кратер Хоэй, Синкансэн на фоне |
+| `rainier` | Mount Rainier, США | Гора над Сиэтлом, ледники, долина Пуйаллап, Ортинг, знаки lahar evacuation route |
+| `taal` | Taal Volcano, Филиппины | Остров в озере сверху, кратер, извержение января 2020 с молниями, пепел на улицах |
+| `etna` | Mount Etna, Италия | Этна над Катанией, лавовые фонтаны ночью, кратер Voragine, пепел, аэропорт Катании |
+| `nyiragongo` | Nyiragongo, ДР Конго | Лавовое озеро, кратер сверху, застывшая лава в Гоме общим планом, озеро Киву |
+| `sakurajima` | Sakurajima, Япония | Извержение над заливом, Кагосима с вулканом, мешки для пепла, паром, укрытия |
+| `reykjanes` | Reykjanes Peninsula, Исландия | Трещинные извержения, лава у валов, трещины в Гриндавике, Голубая лагуна, Svartsengi |
+| `merapi` | Mount Merapi, Индонезия | Гора над полями, раскалённые лавины ночью, лавовый купол, Джокьякарта с горой |
+| `popocatepetl` | Popocatépetl, Мексика | Шлейф пепла, вид из Пуэблы и Мехико, ночное свечение кратера, пепел на машинах |
+| `campi_flegrei` | Campi Flegrei, Италия | Залив Поццуоли сверху, Сольфатара, Монте-Нуово, храм Сераписа, Неаполь с Везувием |
+
+Лицензии — как в README: Wikimedia Commons (PD, CC0, CC BY, CC BY-SA, OGL v3.0), Geograph (CC BY-SA), NASA, ESA (Copernicus Sentinel — с указанием), NOAA, USGS, NPS, научные статьи только под CC BY / CC BY-SA; без NC/ND, без водяных знаков. Карты для 10 мест. Если кадров по месту мало — бери ближайшие подходящие и напиши об этом в отчёте. Wikimedia может ограничивать скачивание с облачного IP — не обходи лимит, просто подожди.
+
+**Место на диске.** Алан разрешил удалять промежуточные сегменты старых видео (`videoNN/visuals/work/seg`). Перед стартом проверь, что `video13/visuals/work/seg` и `video14/visuals/work/seg` удалены (если остались — удали). Исходные кадры (`visuals/src`), озвучку, `render/*.mp4`, обложки, credits и скрипты старых видео не трогай. Если перед рендером свободно меньше 1,5 ГБ — ничего другого не удаляй, остановись и напиши Алану. В отчёте — сколько места свободно до и после рендера.
+
+**2. Озвучка** — как в задаче 18: `voice_build.py` со словарями под этот текст (годы → слова: «1707», «1914», «1911», «1977», «1994», «1998», «2002», «2005», «2010», «2018», «2021», «May 2021», «January 2020», «November 2020», «2023», «November 2023», «December 2023», «January 2024», «2025», «2026», «August 2026», «February 2026», «July 31, 2026» → «July thirty-first, twenty twenty-six», «1538»), фонемы по списку из `visuals_plan.md` (Fuji, Edo, Rainier, Orting, lahar, Taal, Luzon, Catania, Voragine, Nyiragongo, Goma, Sakurajima, Kagoshima, Reykjanes, Grindavík, Svartsengi, Merapi, Yogyakarta, pyroclastic, Popocatépetl, Puebla, Campi Flegrei, Pozzuoli, Monte Nuovo, caldera — проверить на слух), Kokoro `am_michael`, 0.95, проверка Whisper. Результат в `video15/voice/`.
+
+**3. Видео** — как в задаче 18: плашки по таблице `visuals_plan.md` (появляются с «Number …», держатся ~6 с). Результат:
+- полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS — Алану файлом в чат (до 400 МиБ);
+- `video15/render/review_720p.mp4` (до 45 МБ), `video15/render/contact_sheet_full.jpg`;
+- `video15/visuals/credits.txt` и `video15/visuals/credits_youtube.txt` (не больше 3800 символов; без HTML-сущностей; без хвостов в именах авторов; в конце — «Images were cropped and color graded.»);
+- `video15/youtube/chapters.txt`: `0:00 Intro`, `#10 Mount Fuji, Japan`, `#9 Mount Rainier, USA`, `#8 Taal Volcano, Philippines`, `#7 Mount Etna, Italy`, `#6 Nyiragongo, DR Congo`, `#5 Sakurajima, Japan`, `#4 Reykjanes Peninsula, Iceland`, `#3 Mount Merapi, Indonesia`, `#2 Popocatépetl, Mexico`, `#1 Campi Flegrei, Italy`, `Outro`.
+
+**4. Обложка** — по разделу «Обложка» в `visuals_plan.md`, скриптом `tools/thumbnail/make_thumbnail.js` → `video15/youtube/thumbnail.jpg`; отправь её Алану файлом вместе с видео.
+
+В отчёте — длина, что послушать и проверить глазами, где кадров было мало, какой кадр взят на обложку, сколько места на диске.
+
+## 22. Полное видео video16 + обложка — TODO
+
+Шестнадцатое видео: **10 Places That Were Erased From Maps**. Выход в воскресенье, 6 декабря; видео нужно Алану к 5 декабря. Задача одна на всё видео, без остановок: кадры → озвучка → монтаж → обложка → файлы Алану.
+
+Текст: `ForbiddenEarth/video16/script/script_original.txt` (12 разделов `00_hook` … `11_outro`). План кадров, плашки, обложка и произношение: `ForbiddenEarth/video16/script/visuals_plan.md`.
+
+**Деликатные места** (подробно — в `visuals_plan.md`):
+- Никаких скриншотов Google Maps / Google Earth и коммерческих карт — только свои карты и снимки NASA/USGS/ESA; старые карты — только PD.
+- Без фото людей из истории (Толль, Сахаров, Линдберг и др.) — только места и предметы.
+- Area 51 — без НЛО, пришельцев и фантазийных рисунков; Дуга — без военной техники и последствий 2022 года; Саров — без людей на КПП.
+- Без портретов и крупных лиц, без водяных знаков, как всегда.
+
+**1. Кадры** — как в задаче 18:
+| Папка | Место | Что найти |
+| --- | --- | --- |
+| `argleton` | Argleton, Англия | Пустое поле у A59 (Commons, 2009), Aughton, станция Town Green, Ormskirk |
+| `agloe` | Agloe, США | Перекрёсток NY 206 / Morton Hill Road, горы Катскилл, Roscoe, старые дорожные карты (PD) |
+| `hy_brasil` | Hy-Brasil, Атлантика | Карты Ортелия и Каталонский атлас с островом Brasil, туман над океаном, острова Аран |
+| `sannikov` | Sannikov Land, Арктика | Новосибирские острова, остров Беннетта, паковый лёд, шхуна «Заря» (PD), старая карта |
+| `sandy_island` | Sandy Island, Коралловое море | Коралловое море из космоса, рифы Шестерфилд, судно Southern Surveyor, старая карта (PD) |
+| `bermeja` | Bermeja, Мексиканский залив | Залив из космоса, риф Аларканес, Юкатан, нефтяные платформы (PD), карта 1846 года |
+| `camp_century` | Camp Century, Гренландия | Архив US Army (PD): тоннели, домики в траншеях, реактор; ледяной щит; радар NASA 2024 |
+| `duga` | Duga radar, Украина | Решётка антенны снизу и издали, излучатели, лес, остановка с медведем, знаки зоны |
+| `sarov` | Sarov, Россия | Саровский монастырь (старые фото PD и новые), панорама города, музей с корпусом РДС-1 |
+| `area51` | Area 51, США | Знаки у границы, озеро Грум сверху (Landsat), U-2, A-12, F-117 (PD), Extraterrestrial Highway, карта ЦРУ 2013 |
+
+Лицензии — как в README: Wikimedia Commons (PD, CC0, CC BY, CC BY-SA, OGL v3.0), Geograph (CC BY-SA), NASA, ESA (Copernicus Sentinel — с указанием), NOAA, USGS, NPS, научные статьи только под CC BY / CC BY-SA; без NC/ND, без водяных знаков. Карты для 10 мест. Если кадров по месту мало — бери ближайшие подходящие и напиши об этом в отчёте. Wikimedia может ограничивать скачивание с облачного IP — не обходи лимит, просто подожди.
+
+**Место на диске.** Перед стартом удали `video15/visuals/work/seg` (видео 15 к этому моменту уже отправлено Алану). Исходные кадры (`visuals/src`), озвучку, `render/*.mp4`, обложки, credits и скрипты старых видео не трогай. Если перед рендером свободно меньше 1,5 ГБ — ничего другого не удаляй, остановись и напиши Алану. В отчёте — сколько места свободно до и после рендера.
+
+**2. Озвучка** — как в задаче 18: `voice_build.py` со словарями под этот текст (годы → слова: «1325», «1480», «1500s», «1800s», «1870s», «1811», «1886», «1900», «1937 and 1938», «1946», «1949», «1955», «1950s and 1960s», «1959», «1967», «1976», «1989», «1995», «1997», «2008», «2009», «May 2010», «November 2012», «2013», «2014», «2024»; а также «Arzamas-16» → «Arzamas sixteen», «Area 51» → «Area fifty-one», «U-2» → «U two», «A-12» → «A twelve», «F-117» → «F one seventeen», «Otto G. Lindberg» без точки после G), фонемы по списку из `visuals_plan.md` (Argleton, Aughton, Ormskirk, Lancashire, Agloe, Alpers, Catskill, Esso, Hy-Brasil, Sannikov, Yakov, Eduard Toll, Caledonia, pumice, Bermeja, Yucatán, Duga, Chernobyl, Sarov, Arzamas, Sakharov — проверить на слух), Kokoro `am_michael`, 0.95, проверка Whisper. Результат в `video16/voice/`.
+
+**3. Видео** — как в задаче 18: плашки по таблице `visuals_plan.md` (появляются с «Number …», держатся ~6 с). Результат:
+- полное видео 1920×1080, 30 fps, H.264 + AAC, −16 LUFS — Алану файлом в чат (до 400 МиБ);
+- `video16/render/review_720p.mp4` (до 45 МБ), `video16/render/contact_sheet_full.jpg`;
+- `video16/visuals/credits.txt` и `video16/visuals/credits_youtube.txt` (не больше 3800 символов; без HTML-сущностей; без хвостов в именах авторов; в конце — «Images were cropped and color graded.»);
+- `video16/youtube/chapters.txt`: `0:00 Intro`, `#10 Argleton, England`, `#9 Agloe, USA`, `#8 Hy-Brasil, Atlantic Ocean`, `#7 Sannikov Land, Arctic`, `#6 Sandy Island, Coral Sea`, `#5 Bermeja, Gulf of Mexico`, `#4 Camp Century, Greenland`, `#3 Duga Radar, Ukraine`, `#2 Sarov, Russia`, `#1 Area 51, USA`, `Outro`.
+
+**4. Обложка** — по разделу «Обложка» в `visuals_plan.md`, скриптом `tools/thumbnail/make_thumbnail.js` → `video16/youtube/thumbnail.jpg`; отправь её Алану файлом вместе с видео.
+
+В отчёте — длина, что послушать и проверить глазами, где кадров было мало, какой кадр взят на обложку, сколько места на диске.
