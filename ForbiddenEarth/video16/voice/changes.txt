@@ -1,0 +1,10 @@
+video16 voice changes (task 22)
+- Years spelled out as words in the TTS text (e.g. 1325 -> "thirteen twenty-five", 2012 -> "twenty twelve").
+- Area 51 -> "Area fifty-one"; Arzamas-16 -> "Arzamas sixteen"; U-2 -> "U two"; F-117 -> "F one seventeen".
+- A-12 -> "A twelve" with an explicit phoneme for the letter A ("ay"); without it Kokoro read "a twelve".
+- "Oxcart" given an explicit phoneme (was not in the dictionary).
+- "Otto G. Lindberg" -> "Otto G Lindberg" (no dot after G, so no sentence break).
+- Phonemes set for: Argleton, Aughton, Ormskirk, Lancashire, Agloe, Lindberg, Alpers, Catskill, Esso, Hy-Brasil, Sannikov,
+  Yakov, Eduard, Toll, Caledonia, pumice, Bermeja, Yucatán, Duga, Chernobyl, Sarov, Arzamas, Sakharov.
+- Whisper check of full.mp3: names, numbers and dates are read as written. Doubled words in the transcript
+  ("Some One", "Some Some") were re-checked on short clips: the narration reads them once.
