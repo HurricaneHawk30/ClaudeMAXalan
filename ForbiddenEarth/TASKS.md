@@ -1467,7 +1467,7 @@
 
 В отчёте — длина, что послушать и проверить глазами, где кадров было мало, какой кадр взят на обложку, сколько места на диске.
 
-## 27. Три новые обложки для Lost Cities (video02) — A/B-тест
+## 27. Три новые обложки для Lost Cities (video02) — A/B-тест — DONE
 
 Зачем: у видео 2 «10 Lost Cities That Were Found Again (And One That Never Was)» хорошее удержание, но низкий CTR. Нынешняя обложка (Петра, FOUND AGAIN) повторяет название. Нужны три новых варианта для теста в YouTube Studio (Test & Compare). Делается в любой момент, лучше до задачи 23 — это быстро.
 
@@ -1486,6 +1486,15 @@
 Отправь Алану файлом три обложки и лист. `thumbnail.jpg` не трогай. Если взял кадр, которого нет в `credits.txt`, — допиши его в `credits.txt` и `credits_youtube.txt` и напиши об этом.
 
 В отчёте — какие кадры взяты, `--pos`, `--size`, были ли предупреждения о ширине.
+
+**Отчёт.**
+
+Сделано скриптом `tools/thumbnail/make_thumbnail.js`, 1280×720, `--size` по умолчанию (168), предупреждений о ширине текста не было:
+- `video02/youtube/thumb_b_derinkuyu.jpg` (194 КБ) — `der_stairs` (лестница в тоннель с подсветкой, TobyJ, CC BY-SA 4.0), `--pos "50% 30%"`, UNDERGROUND / A CITY BEHIND A BASEMENT WALL. Выбрал лестницу: свет в арке читается даже в маленьком размере, `der_9781` слишком тёмный, `der_tr` (колодец) — центр уходит под текст.
+- `video02/youtube/thumb_c_pompeii.jpg` (375 КБ) — `pom_aerial` (Помпеи сверху, Везувий наверху, Carsten Steger, CC BY-SA 4.0), `--pos "50% 30%"`, BURIED / A CITY UNDER THE ASH.
+- `video02/youtube/thumb_d_atlantis.jpg` (145 КБ) — `atl_neakameni` (кальдера Санторини, остров Неа-Камени, Norbert Nagel, CC BY-SA 3.0), `--pos "50% 75%"` — остров в верхней половине, текст на воде, ATLANTIS? / THE CITY THAT NEVER WAS.
+- `video02/youtube/thumb_test_sheet.jpg` — A (нынешняя, FOUND AGAIN), B, C, D по 320×180 с подписями. Текст читается во всех четырёх; лучше всего — B и D (тёмный фон).
+- Все три кадра уже есть в `credits.txt` и `credits_youtube.txt` — ничего не дописывал. `thumbnail.jpg` не трогал.
 
 ## 28. Shorts: 6 вертикальных роликов из опубликованных видео
 
