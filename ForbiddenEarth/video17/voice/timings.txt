@@ -1,0 +1,16 @@
+Forbidden Earth - video17 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:22.700   22.700s
+01_glacier_np    00:23.500  01:19.525   56.025s
+02_kilimanjaro   01:20.325  02:12.375   52.050s
+03_aral_sea      02:13.175  03:10.500   57.325s
+04_dead_sea      03:11.300  04:09.250   57.950s
+05_venice        04:10.050  05:09.175   59.125s
+06_great_barrier_reef 05:09.975  06:11.775   61.800s
+07_isle_de_jean_charles 06:12.575  07:15.750   63.175s
+08_jakarta       07:16.550  08:12.025   55.475s
+09_blatten       08:12.825  09:10.400   57.575s
+10_tuvalu        09:11.200  10:15.150   63.950s
+11_outro         10:15.950  10:28.650   12.700s
+
+TOTAL            10:28.650  (628.650s)

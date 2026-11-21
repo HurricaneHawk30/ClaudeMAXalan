@@ -1,0 +1,7 @@
+video17 voice changes (task 23)
+- Years spelled out as words (1850 -> "eighteen fifty", 1950s -> "nineteen fifties", 2040 -> "twenty forty" ...).
+- "May 19" -> "May nineteenth", "May 28" -> "May twenty-eighth"; "U.S." -> "U S"; "St. Mark's" -> "Saint Mark's".
+- Phonemes set for: Grinnell, Kilimanjaro, Aral, Aralkum, MOSE, Basilica, Queensland, Isle de Jean Charles, Jakarta, Nusantara,
+  Borneo, Blatten, Tuvalu, Tuvaluans, Funafuti, Kazakhstan, Uzbekistan, bayou, Birch.
+- Whisper check: numbers and dates are read as written. Doubled words in the transcript ("glaciers. glaciers", "The The")
+  and "began to crack, back" were re-checked on short clips: the narration reads each once, as in the script.
