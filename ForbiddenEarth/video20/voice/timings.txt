@@ -1,0 +1,16 @@
+Forbidden Earth - video20 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:18.850   18.850s
+01_bannerman     00:19.650  01:22.200   62.550s
+02_ayrfield      01:23.000  02:19.100   56.100s
+03_kayakoy       02:19.900  03:22.075   62.175s
+04_city_methodist 03:22.875  04:19.875   57.000s
+05_ross_island   04:20.675  05:26.550   65.875s
+06_fordlandia    05:27.350  06:34.150   66.800s
+07_craco         06:34.950  07:32.400   57.450s
+08_kolmanskop    07:33.200  08:31.975   58.775s
+09_ta_prohm      08:32.775  09:32.675   59.900s
+10_houtouwan     09:33.475  10:37.350   63.875s
+11_outro         10:38.150  10:50.500   12.350s
+
+TOTAL            10:50.500  (650.500s)

@@ -1,0 +1,11 @@
+video20 voice changes (task 26)
+- Years spelled out as words: 1800s "eighteen hundreds", 1900, 1908 "nineteen oh eight", 1911, 1920, 1923, 1926, 1928,
+  1930s "nineteen thirties", 1941, 1942, 1945, 1956, 1957, 1963, 1969, 1972, 1975, 1990s "nineteen nineties",
+  "early 2000s" -> "early two thousands", 2018, 2026.
+- "SS Ayrfield" -> "S S Ayrfield"; "King Jayavarman the Seventh" read as written.
+- Phonemes set for: Bannerman, Ayrfield, Homebush, Kayaköy, Levissi, Gary, Andaman, Netaji Subhas Chandra Bose,
+  Fordlândia, Craco, Kolmanskop, Namib, Ta Prohm, Angkor, Jayavarman, Houtouwan, Shengshan.
+- Whisper check: numbers and dates are read as written. Gaps in the long transcript (2:35 "Muslim Turkish neighbors",
+  3:48 "the congregation shrank. The church closed in 1975", 7:49 "ballroom ... X-ray machine") and the double
+  "People still People live" (6:28) were re-checked on short clips: read once and in full. Whisper spells the names
+  its own way ("Airfield", "Kalako", "Croco", "Toprom", "Houtuan"); the voice follows the phonemes above.
