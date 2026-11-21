@@ -1,0 +1,21 @@
+Forbidden Earth - video18 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:29.050   29.050s
+01_athos         00:29.850  01:27.400   57.550s
+02_daisen        01:28.200  02:26.250   58.050s
+03_lop_nur       02:27.050  03:28.250   61.200s
+04_porton_down   03:29.050  04:31.950   62.900s
+05_menwith_hill  04:32.750  05:30.400   57.650s
+06_pine_gap      05:31.200  06:26.275   55.075s
+07_diego_garcia  06:27.075  07:30.675   63.600s
+08_great_taboo   07:31.475  08:28.550   57.075s
+09_metro2        08:29.350  09:30.875   61.525s
+10_yamantau      09:31.675  10:27.750   56.075s
+11_vatican_archive 10:28.550  11:29.400   60.850s
+12_bank_of_england 11:30.200  12:26.050   55.850s
+13_chapel_of_the_tablet 12:26.850  13:22.100   55.250s
+14_korean_dmz    13:22.900  14:19.650   56.750s
+15_fort_knox     14:20.450  15:36.025   75.575s
+16_outro         15:36.825  15:49.500   12.675s
+
+TOTAL            15:49.500  (949.500s)

@@ -1,0 +1,7 @@
+video18 voice changes (task 24)
+- Years spelled out as words; "October 16, 1964" -> "October sixteenth, nineteen sixty-four".
+- "Metro-2" -> "Metro two", "Area 51" -> "Area fifty-one", "RAF" -> "R A F", "U.S." -> "U S", "UNESCO" -> "Unesco" (said as a word).
+- Phonemes set for: Athos, Aegean, Daisen, Kofun, Sakai, Nintoku, Lop Nur, Porton, Gruinard, Menwith, Diego Garcia, Chagos, Mauritius,
+  Genghis, Burkhan Khaldun, Ikh Khorig, Yamantau, Mezhgorye, Threadneedle, Aksum, Panmunjom.
+- Whisper check: numbers and dates are read as written. Gaps and doubles in the transcript ("by the ... and look" 2:17,
+  "between between" 6:56, "zone, zone" 13:43, the vault-door sentence at 15:00) were re-checked on short clips: read once and in full.
