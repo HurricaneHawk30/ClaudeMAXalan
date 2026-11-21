@@ -1,0 +1,9 @@
+video19 voice changes (task 25)
+- Years spelled out as words: 1216 "twelve sixteen", 1511, 1700s "seventeen hundreds", 1795, 1820, 1870s, 1880s, 1891, 1900,
+  1907 "nineteen oh seven", 1941, 1945, 1959, 1963, 2003, 2015, 2016.
+- "July 6, 1907" -> "July sixth, nineteen oh seven"; "U.S." -> "U S".
+- Phonemes set for: the Wash, Magna Carta, Kruger, Pretoria, Lowveld, Toplitz, Superstition, Waltz, Flor de la Mar, Afonso,
+  Albuquerque, Malacca, Sumatra, Wałbrzych, Riese, Lima, Cocos, McGinnis, Nova Scotia, Königsberg.
+- Whisper check: numbers and dates are read as written ("1216", "July 6, 1907", "Edward VII", "55 square meters", "6 tons",
+  "36 hours", "80 years"). Whisper writes the names its own way ("Lofeld", "Valbzic", "Riesa", "Mary Deer", "Fleur de la Mar") -
+  these are spelling guesses of the recogniser; the voice follows the phonemes above.

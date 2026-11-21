@@ -1,0 +1,16 @@
+Forbidden Earth - video19 - full.mp3 (Kokoro am_michael, speed 0.95)
+section          start        end          length
+00_hook          00:00.000  00:22.425   22.425s
+01_king_john     00:23.225  01:20.975   57.750s
+02_kruger        01:21.775  02:23.200   61.425s
+03_toplitz       02:24.000  03:29.825   65.825s
+04_lost_dutchman 03:30.625  04:36.275   65.650s
+05_irish_crown_jewels 04:37.075  05:38.975   61.900s
+06_flor_de_la_mar 05:39.775  06:43.550   63.775s
+07_gold_train    06:44.350  07:46.350   62.000s
+08_treasure_of_lima 07:47.150  08:50.725   63.575s
+09_oak_island    08:51.525  09:54.925   63.400s
+10_amber_room    09:55.725  11:05.025   69.300s
+11_outro         11:05.825  11:18.600   12.775s
+
+TOTAL            11:18.600  (678.600s)
