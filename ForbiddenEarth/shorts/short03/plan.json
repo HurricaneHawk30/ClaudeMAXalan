@@ -1,0 +1,22 @@
+{
+ "video": "video03",
+ "hook": "NO VISITORS ALLOWED",
+ "hook_key": [
+  "NO"
+ ],
+ "frames": [
+  "snake_island/snk_02",
+  "snake_island/snk_01",
+  "snake_island/snk_03",
+  "snake_island/snk_07",
+  "snake_island/snk_06",
+  "snake_island/snk_09",
+  "snake_island/snk_10",
+  "snake_island/snk_11",
+  "snake_island/snk_13",
+  "snake_island/snk_08",
+  "snake_island/snk_05",
+  "snake_island/snk_04",
+  "snake_island/snk_02"
+ ]
+}

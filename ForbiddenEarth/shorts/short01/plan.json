@@ -1,0 +1,22 @@
+{
+ "video": "video01",
+ "hook": "BURNING SINCE 1962",
+ "hook_key": [
+  "1962"
+ ],
+ "frames": [
+  "cen_smokehole",
+  "cen_wafting",
+  "centralia_fire",
+  "cen_oldmap",
+  "cen_aster",
+  "cen_smokehole",
+  "centralia_road",
+  "cen_pa61",
+  "cen_rowhouse",
+  "cen_municipal",
+  "cen_wafting",
+  "centralia_sky",
+  "centralia_road"
+ ]
+}

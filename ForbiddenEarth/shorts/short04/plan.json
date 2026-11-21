@@ -1,0 +1,22 @@
+{
+ "video": "video04",
+ "hook": "NEAREST HUMANS: IN SPACE",
+ "hook_key": [
+  "SPACE"
+ ],
+ "frames": [
+  "nemo/nem_n_issoverpac",
+  "nemo/nem_05",
+  "nemo/nem_04",
+  "nemo/nem_02",
+  "nemo/nem_06",
+  "nemo/nem_07",
+  "nemo/nem_n_sunrise",
+  "nemo/nem_08",
+  "nemo/nem_n_atvundock",
+  "nemo/nem_n_atvreentry",
+  "nemo/nem_n_mir",
+  "nemo/nem_n_mir2",
+  "nemo/nem_n_issoverpac"
+ ]
+}

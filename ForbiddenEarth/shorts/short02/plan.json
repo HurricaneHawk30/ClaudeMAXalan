@@ -1,0 +1,22 @@
+{
+ "video": "video02",
+ "hook": "HE KNOCKED DOWN A WALL...",
+ "hook_key": [
+  "WALL"
+ ],
+ "frames": [
+  "der_stairs",
+  "der_9781",
+  "der_9807",
+  "der_pano",
+  "der_chamber",
+  "der_9781",
+  "der_pano",
+  "der_door",
+  "der_vent",
+  "der_tr",
+  "der_9807",
+  "der_vent",
+  "der_stairs"
+ ]
+}
